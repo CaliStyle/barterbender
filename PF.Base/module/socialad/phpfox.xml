@@ -1,0 +1,497 @@
+<module>
+	<data>
+		<module_id>socialad</module_id>
+		<product_id>younet_socialad4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:12:{s:39:"socialad.admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:8:"socialad";i:1;s:19:"user-group-settings";}}s:31:"socialad.admin_menu_add_package";a:1:{s:3:"url";a:3:{i:0;s:8:"socialad";i:1;s:7:"package";i:2;s:3:"add";}}s:35:"socialad.admin_menu_manage_packages";a:1:{s:3:"url";a:2:{i:0;s:8:"socialad";i:1;s:7:"package";}}s:38:"socialad.admin_menu_pay_later_requests";a:1:{s:3:"url";a:3:{i:0;s:8:"socialad";i:1;s:7:"payment";i:2;s:8:"paylater";}}s:38:"socialad.admin_menu_custom_information";a:1:{s:3:"url";a:2:{i:0;s:8:"socialad";i:1;s:11:"custominfor";}}s:30:"socialad.admin_menu_manage_ads";a:1:{s:3:"url";a:2:{i:0;s:8:"socialad";i:1;s:2:"ad";}}s:36:"socialad.admin_menu_manage_campaigns";a:1:{s:3:"url";a:2:{i:0;s:8:"socialad";i:1;s:8:"campaign";}}s:39:"socialad.admin_menu_manage_transactions";a:1:{s:3:"url";a:2:{i:0;s:8:"socialad";i:1;s:7:"payment";}}s:42:"socialad.admin_menu_pending_credit_request";a:1:{s:3:"url";a:3:{i:0;s:8:"socialad";i:1;s:6:"credit";i:2;s:7:"pending";}}s:33:"socialad.admin_menu_manage_credit";a:1:{s:3:"url";a:2:{i:0;s:8:"socialad";i:1;s:6:"credit";}}s:32:"socialad.admin_menu_add_new_faqs";a:1:{s:3:"url";a:3:{i:0;s:8:"socialad";i:1;s:3:"faq";i:2;s:3:"add";}}s:31:"socialad.admin_menu_manage_faqs";a:1:{s:3:"url";a:2:{i:0;s:8:"socialad";i:1;s:3:"faq";}}}]]></menu>
+		<phrase_var_name>module_socialads</phrase_var_name>
+		<version>4.02p3</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/ads.png</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="socialad" parent_var_name="" m_connection="socialad" var_name="menu_socialad_create_an_ad_d731c85d2381dbc0ecc1ab183515b055" ordering="136" url_value="socialad.ad.add" version_id="3.6.0" disallow_access="" module="socialad" />
+		<menu module_id="socialad" parent_var_name="" m_connection="main" var_name="menu_socialad_social_ad_fad58de7366495db4650cfefac2fcd61" ordering="12" url_value="socialad.ad" version_id="3.6.0" disallow_access="" module="socialad" mobile_icon="bullhorn" />
+	</menus>
+	<settings>
+		<setting group="" module_id="socialad" is_hidden="0" type="integer" var_name="number_ads_shown_per_view_on_feed" phrase_var_name="setting_number_ads_shown_per_view_on_feed" ordering="1" version_id="3.6.0">2</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="integer" var_name="number_user_view_to_display_ad" phrase_var_name="setting_number_user_view_to_display_ad" ordering="1" version_id="3.6.0">0</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="integer" var_name="position_of_feed_ad" phrase_var_name="setting_position_of_feed_ad" ordering="1" version_id="3.6.0">0</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="integer" var_name="maxium_number_of_html_ads" phrase_var_name="setting_maxium_number_of_html_ads" ordering="1" version_id="3.6.0">3</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="integer" var_name="maxium_number_of_banner_ads" phrase_var_name="setting_maxium_number_of_banner_ads" ordering="1" version_id="3.6.0">2</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="integer" var_name="html_ad_ajax_refresh_time" phrase_var_name="setting_html_ad_ajax_refresh_time" ordering="1" version_id="3.6.0">300</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="integer" var_name="number_user_view_to_display_html_ads" phrase_var_name="setting_number_user_view_to_display_html_ads" ordering="1" version_id="3.6.0">0</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="integer" var_name="number_user_view_to_display_banner_ads" phrase_var_name="setting_number_user_view_to_display_banner_ads" ordering="1" version_id="3.6.0">0</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="integer" var_name="number_of_ad_updated_by_cron" phrase_var_name="setting_number_of_ad_updated_by_cron" ordering="1" version_id="3.6.0">20</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="integer" var_name="pay_later_request_expired_time" phrase_var_name="setting_pay_later_request_expired_time" ordering="1" version_id="3.6.0">5</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="boolean" var_name="activate_pay_later" phrase_var_name="setting_activate_pay_later" ordering="1" version_id="3.6.0">1</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="boolean" var_name="allow_to_hide_ad_permanently" phrase_var_name="setting_allow_to_hide_ad_permanently" ordering="1" version_id="3.6.0">1</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="string" var_name="banner_image_width_height_block_3" phrase_var_name="setting_banner_image_width_height_block_3" ordering="1" version_id="3.7.5">0|0</setting>
+		<setting group="" module_id="socialad" is_hidden="0" type="boolean" var_name="activate_activity_points" phrase_var_name="setting_activate_activity_points" ordering="1" version_id="3.7.7">1</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="core.index-member" module_id="socialad" component="attract" location="3" is_active="1" ordering="28" disallow_access="" can_move="0">
+			<title>Attract</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="socialad" component="socialad_index" m_connection="socialad.index" module="socialad" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="socialad" component="socialad_ad_index" m_connection="socialad.ad.index" module="socialad" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="socialad" component="attract" m_connection="" module="socialad" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="admin_menu_add_package" added="1564656090">Add Package</phrase>
+		<phrase var_name="admin_menu_manage_packages" added="1564656090">Manage Packages</phrase>
+		<phrase var_name="create_new_package" added="1564656090">Create New Package</phrase>
+		<phrase var_name="package_name" added="1564656090">Package Name</phrase>
+		<phrase var_name="package_price" added="1564656090">Package Price</phrase>
+		<phrase var_name="package_description" added="1564656090">Package Description</phrase>
+		<phrase var_name="click" added="1564656090">Click</phrase>
+		<phrase var_name="impression" added="1564656090">Impression</phrase>
+		<phrase var_name="day" added="1564656090">Day</phrase>
+		<phrase var_name="clicks" added="1564656090">Clicks</phrase>
+		<phrase var_name="days" added="1564656090">Days</phrase>
+		<phrase var_name="impressions" added="1564656090">Impressions</phrase>
+		<phrase var_name="currency" added="1564656090">Currency</phrase>
+		<phrase var_name="submit" added="1564656090">Submit</phrase>
+		<phrase var_name="packages" added="1564656090">Packages</phrase>
+		<phrase var_name="id" added="1564656090">ID</phrase>
+		<phrase var_name="name" added="1564656090">Name</phrase>
+		<phrase var_name="price" added="1564656090">Price</phrase>
+		<phrase var_name="active" added="1564656090">Active</phrase>
+		<phrase var_name="manage" added="1564656090">Manage</phrase>
+		<phrase var_name="add_new_package" added="1564656090">Add New Package</phrase>
+		<phrase var_name="edit_package" added="1564656090">Edit Package</phrase>
+		<phrase var_name="manage_packages" added="1564656090">Manage Packages</phrase>
+		<phrase var_name="create_new_ads" added="1564656090">Create New Ads</phrase>
+		<phrase var_name="your_ad" added="1564656090">Your Ad</phrase>
+		<phrase var_name="title" added="1564656090">Title</phrase>
+		<phrase var_name="text" added="1564656090">Text</phrase>
+		<phrase var_name="select" added="1564656090">Select</phrase>
+		<phrase var_name="html" added="1564656090">HTML</phrase>
+		<phrase var_name="banner" added="1564656090">Banner</phrase>
+		<phrase var_name="ad_type" added="1564656090">Ad Type</phrase>
+		<phrase var_name="your_audience" added="1564656090">Your Audience</phrase>
+		<phrase var_name="placement" added="1564656090">Placement</phrase>
+		<phrase var_name="select_campaign" added="1564656090">Select Campaign</phrase>
+		<phrase var_name="create_a_new_campaign" added="1564656090">Create a New Campaign</phrase>
+		<phrase var_name="campaign_name" added="1564656090">Campaign Name</phrase>
+		<phrase var_name="all_modules" added="1564656090">All Modules</phrase>
+		<phrase var_name="module_placment" added="1564656090">Module Placement</phrase>
+		<phrase var_name="block" added="1564656090">Block</phrase>
+		<phrase var_name="block_sa" added="1564656090">Block</phrase>
+		<phrase var_name="module_placement" added="1564656090">Module Placement</phrase>
+		<phrase var_name="user_groups" added="1564656090">User Groups</phrase>
+		<phrase var_name="review_ad" added="1564656090">Review Ad</phrase>
+		<phrase var_name="item_type" added="1564656090">Item Type</phrase>
+		<phrase var_name="external_url" added="1564656090">External URL</phrase>
+		<phrase var_name="url" added="1564656090">URL</phrase>
+		<phrase var_name="blog" added="1564656090">Blog</phrase>
+		<phrase var_name="event" added="1564656090">Event</phrase>
+		<phrase var_name="page" added="1564656090">Page</phrase>
+		<phrase var_name="your_item" added="1564656090">Your Item</phrase>
+		<phrase var_name="you_have_no_item_of_this_type" added="1564656090">You have no item of this type. Please choose another one.</phrase>
+		<phrase var_name="example_ad_title" added="1564656090">Example Ad Title</phrase>
+		<phrase var_name="image" added="1564656090">Image</phrase>
+		<phrase var_name="choose_image" added="1564656090">Choose Image</phrase>
+		<phrase var_name="example_ad_text" added="1564656090">Example Ad Text</phrase>
+		<phrase var_name="edit_ad" added="1564656090">Edit Ad</phrase>
+		<phrase var_name="place_order" added="1564656090">Place Order</phrase>
+		<phrase var_name="pay_with_paypal" added="1564656090">Pay with Paypal</phrase>
+		<phrase var_name="pay_with_2checkout" added="1564656090">Pay with 2Checkout</phrase>
+		<phrase var_name="pay_later" added="1564656090">Pay Later</phrase>
+		<phrase var_name="status" added="1564656090">Status</phrase>
+		<phrase var_name="no_ads_found" added="1564656090">No Ads Found</phrase>
+		<phrase var_name="draft" added="1564656090">Draft</phrase>
+		<phrase var_name="unpaid" added="1564656090">Unpaid</phrase>
+		<phrase var_name="pending" added="1564656090">Pending</phrase>
+		<phrase var_name="denied" added="1564656090">Denied</phrase>
+		<phrase var_name="running" added="1564656090">Running</phrase>
+		<phrase var_name="paused" added="1564656090">Paused</phrase>
+		<phrase var_name="completed" added="1564656090">Completed</phrase>
+		<phrase var_name="deleted" added="1564656090">Deleted</phrase>
+		<phrase var_name="view" added="1564656090">View</phrase>
+		<phrase var_name="date" added="1564656090">Date</phrase>
+		<phrase var_name="no_statistics_found" added="1564656090">No Statistics Found</phrase>
+		<phrase var_name="location" added="1564656090">Location</phrase>
+		<phrase var_name="choose_a_location" added="1564656090">Choose a Location</phrase>
+		<phrase var_name="gender" added="1564656090">Gender</phrase>
+		<phrase var_name="age_between" added="1564656090">Age between</phrase>
+		<phrase var_name="feed" added="1564656090">Feed</phrase>
+		<phrase var_name="view_site_layout" added="1564656090">View Site Layout</phrase>
+		<phrase var_name="all_locations" added="1564656090">All Locations</phrase>
+		<phrase var_name="and" added="1564656090">And</phrase>
+		<phrase var_name="allowed_modules" added="1564656090">Select Modules To Display Ads</phrase>
+		<phrase var_name="allowed_blocks" added="1564656090">Select Blocks To Display Ads As Banners</phrase>
+		<phrase var_name="allowed_item_types" added="1564656090">Select Item Types To View Ad Details</phrase>
+		<phrase var_name="allowed_ad_types" added="1564656090">Select Ad Types</phrase>
+		<phrase var_name="all_blocks" added="1564656090">All Blocks</phrase>
+		<phrase var_name="all_item_types" added="1564656090">All Item Types</phrase>
+		<phrase var_name="all_ad_types" added="1564656090">All Ad Types</phrase>
+		<phrase var_name="edit" added="1564656090">Edit</phrase>
+		<phrase var_name="delete" added="1564656090">Delete</phrase>
+		<phrase var_name="package_successfully_deleted" added="1564656090">Package successfully deleted</phrase>
+		<phrase var_name="choose_your_item" added="1564656090">Choose Your Item</phrase>
+		<phrase var_name="this_field_is_required" added="1564656090">This field is required</phrase>
+		<phrase var_name="number_character_over_limit" added="1564656090">{number} character(s) over limit</phrase>
+		<phrase var_name="number_character_left" added="1564656090">{number} character(s) left</phrase>
+		<phrase var_name="initialized" added="1564656090">Initialized</phrase>
+		<phrase var_name="expired" added="1564656090">Expired</phrase>
+		<phrase var_name="failed" added="1564656090">Failed</phrase>
+		<phrase var_name="paypal" added="1564656090">Paypal</phrase>
+		<phrase var_name="2checkout" added="1564656090">2checkout</phrase>
+		<phrase var_name="transaction_id" added="1564656090">Transaction ID</phrase>
+		<phrase var_name="start_date" added="1564656090">Start Date</phrase>
+		<phrase var_name="pay_date" added="1564656090">Pay Date</phrase>
+		<phrase var_name="description" added="1564656090">Description</phrase>
+		<phrase var_name="payment_method" added="1564656090">Payment Method</phrase>
+		<phrase var_name="amount" added="1564656090">Amount</phrase>
+		<phrase var_name="no_transaction_found" added="1564656090">No Transaction Found</phrase>
+		<phrase var_name="admin_menu_pay_later_requests" added="1564656090">Pay Later Requests</phrase>
+		<phrase var_name="action" added="1564656090">Action</phrase>
+		<phrase var_name="confirm" added="1564656090">Confirm</phrase>
+		<phrase var_name="are_you_sure_confirm_request" added="1564656090">Are you sure you want to confirm that this transaction is completed?</phrase>
+		<phrase var_name="transaction_was_confirmed_successfully" added="1564656090">Transaction was confirmed successfully</phrase>
+		<phrase var_name="my_ads" added="1564656090">My Ads</phrase>
+		<phrase var_name="my_campaigns" added="1564656090">My Campaigns</phrase>
+		<phrase var_name="menu_socialad_create_an_ad_d731c85d2381dbc0ecc1ab183515b055" added="1564656090">Create an Ad</phrase>
+		<phrase var_name="ad" added="1564656090">Ads</phrase>
+		<phrase var_name="social_ad" added="1564656090">Social Ads</phrase>
+		<phrase var_name="payments" added="1564656090">Payments</phrase>
+		<phrase var_name="reports" added="1564656090">Reports</phrase>
+		<phrase var_name="characters_limit" added="1564656090">characters limit</phrase>
+		<phrase var_name="validator_minlength" added="1564656090">Please enter at least {0} characters.</phrase>
+		<phrase var_name="free_package" added="1564656090">FREE package</phrase>
+		<phrase var_name="benefit" added="1564656090">Benefit</phrase>
+		<phrase var_name="unlimited" added="1564656090">UNLIMITED</phrase>
+		<phrase var_name="validator_min" added="1564656090">Please enter a value greater than or equal to {0}</phrase>
+		<phrase var_name="validator_number" added="1564656090">Please enter a valid number.</phrase>
+		<phrase var_name="what_do_you_want_to_advertise" added="1564656090">What do you want to advertise?</phrase>
+		<phrase var_name="what_type_of_ad_do_you_want_to_create" added="1564656090">What type of ad do you want to create?</phrase>
+		<phrase var_name="preview_and_edit" added="1564656090">Preview and Edit</phrase>
+		<phrase var_name="campaign_schedule_and_placement" added="1564656090">Campaign, Schedule, and Placement</phrase>
+		<phrase var_name="schedule" added="1564656090">Schedule</phrase>
+		<phrase var_name="run_ad_continously_when_approved" added="1564656090">Run ad continuously when approved</phrase>
+		<phrase var_name="specify_start_and_end_date" added="1564656090">Specify start and end date</phrase>
+		<phrase var_name="start" added="1564656090">Start</phrase>
+		<phrase var_name="end" added="1564656090">End</phrase>
+		<phrase var_name="user_setting_approve_ad" added="1564656090">Approve ads of this user group before they are publicly displayed?</phrase>
+		<phrase var_name="review" added="1564656090">Review</phrase>
+		<phrase var_name="save" added="1564656090">Save</phrase>
+		<phrase var_name="approved" added="1564656090">Approved</phrase>
+		<phrase var_name="admin_menu_custom_information" added="1564656090">Custom Information</phrase>
+		<phrase var_name="manual_payment_instruction" added="1564656090">Manual payment instructions</phrase>
+		<phrase var_name="terms_and_conditions" added="1564656090">Terms and Conditions</phrase>
+		<phrase var_name="update_successfully" added="1564656090">Update successfully</phrase>
+		<phrase var_name="this_section_currently_has_no_content_please_click_edit_to_edit_it" added="1564656090">section_no_content</phrase>
+		<phrase var_name="manual_payment_instructions" added="1564656090">Manual payment instructions</phrase>
+		<phrase var_name="by_clicking_place_order_you_agree_to_the_following_terms_and_conditions" added="1564656090"><![CDATA[By clicking &#039;Place Order&#039;, you agree to the following terms and conditions]]></phrase>
+		<phrase var_name="instructions" added="1564656090">Instructions</phrase>
+		<phrase var_name="manual_payment_notice" added="1564656090">By clicking confirm, your pay later request will go to admin, then you should follow the instructions to finish your payment.</phrase>
+		<phrase var_name="manual_payment" added="1564656090">Manual Payment</phrase>
+		<phrase var_name="total_clicks" added="1564656090">Total Clicks</phrase>
+		<phrase var_name="pay_later_instructions" added="1564656090">Pay Later Instructions</phrase>
+		<phrase var_name="section_no_content" added="1564656090"><![CDATA[This section currently has no content, please click &#039;Edit&#039; to edit it.]]></phrase>
+		<phrase var_name="free_upper" added="1564656090">FREE</phrase>
+		<phrase var_name="unlimited_upper" added="1564656090">UNLIMITED</phrase>
+		<phrase var_name="ad_preview" added="1564656090">Ad Preview</phrase>
+		<phrase var_name="campaign" added="1564656090">Campaign</phrase>
+		<phrase var_name="package" added="1564656090">Package</phrase>
+		<phrase var_name="please_enter_a_valid_url" added="1564656090">Please enter a valid url, for example http://example.com</phrase>
+		<phrase var_name="validator_maxlength" added="1564656090">Please enter no more than {0} characters.</phrase>
+		<phrase var_name="like" added="1564656090">Like</phrase>
+		<phrase var_name="one_person_likes_item_name" added="1564656090">1 person likes {item_name}</phrase>
+		<phrase var_name="number_people_likes_item_name" added="1564656090">{number} people like {item_name}</phrase>
+		<phrase var_name="unlike" added="1564656090">Unlike</phrase>
+		<phrase var_name="this" added="1564656090">this</phrase>
+		<phrase var_name="leave" added="1564656090">Leave</phrase>
+		<phrase var_name="join" added="1564656090">Join</phrase>
+		<phrase var_name="number_people_like_item_name" added="1564656090">{number} people like {item_name}</phrase>
+		<phrase var_name="number_people_attend_item_name" added="1564656090">{number} people attend {item_name}</phrase>
+		<phrase var_name="one_person_attends_item_name" added="1564656090">1 person attends {item_name}</phrase>
+		<phrase var_name="attend" added="1564656090">Attend</phrase>
+		<phrase var_name="be_the_first_to_attend" added="1564656090">Be the first to attend</phrase>
+		<phrase var_name="end_date" added="1564656090">End Date</phrase>
+		<phrase var_name="total_impressions" added="1564656090">Total Impressions</phrase>
+		<phrase var_name="total_days" added="1564656090">Total Days</phrase>
+		<phrase var_name="remaining" added="1564656090">Remaining</phrase>
+		<phrase var_name="type" added="1564656090">Type</phrase>
+		<phrase var_name="actions" added="1564656090">Actions</phrase>
+		<phrase var_name="create_a_similar_ad" added="1564656090">Create a Similar Ad</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_ad" added="1564656090">Are you sure you want to delete this ad?</phrase>
+		<phrase var_name="delete_ad_title_successfully" added="1564656090"><![CDATA[Delete &#039;{title}&#039; successfully!]]></phrase>
+		<phrase var_name="for_lower" added="1564656090">for</phrase>
+		<phrase var_name="you_can_advertise" added="1564656090">You can advertise</phrase>
+		<phrase var_name="on_block_3" added="1564656090">on Block 3</phrase>
+		<phrase var_name="on_newsfeed" added="1564656090">on Newsfeed</phrase>
+		<phrase var_name="on" added="1564656090">on</phrase>
+		<phrase var_name="as" added="1564656090">as</phrase>
+		<phrase var_name="creating_an_ad" added="1564656090">Creating an Ad</phrase>
+		<phrase var_name="your_package" added="1564656090">Your Package</phrase>
+		<phrase var_name="upload_image" added="1564656090">Upload Image</phrase>
+		<phrase var_name="choose_proper_size" added="1564656090">Choose Proper Size</phrase>
+		<phrase var_name="recommended_image_size_for_html_ad" added="1564656090">Recommended Image Size for HTML Ad</phrase>
+		<phrase var_name="pixels" added="1564656090">pixels</phrase>
+		<phrase var_name="recommended_image_size_for_feed_ad" added="1564656090">Recommended Image Size for Feed Ad</phrase>
+		<phrase var_name="getting_started" added="1564656090">Getting Started</phrase>
+		<phrase var_name="getting_started_intro" added="1564656090">Choose what you want to advertise by clicking on an item type then select your item from the item list. If your item is an external URL, you must type your URL, for example: http://example.com</phrase>
+		<phrase var_name="ad_banner_preview_warning" added="1564656090"><![CDATA[The preview of banner ad is relative in both position and size, it does not show exactly what ad will look like under audience&#039;s view]]></phrase>
+		<phrase var_name="preview" added="1564656090">Preview</phrase>
+		<phrase var_name="statistics" added="1564656090">Statistics</phrase>
+		<phrase var_name="view_full_report" added="1564656090">View Full Report</phrase>
+		<phrase var_name="no_ad" added="1564656090">No Ad</phrase>
+		<phrase var_name="no_ad_found" added="1564656090">No Ad Found</phrase>
+		<phrase var_name="all_days" added="1564656090">All Days</phrase>
+		<phrase var_name="day_per_row" added="1564656090">day per row</phrase>
+		<phrase var_name="days_per_row" added="1564656090">days per row</phrase>
+		<phrase var_name="all_ads" added="1564656090">All Ads</phrase>
+		<phrase var_name="all_campaigns" added="1564656090">All Campaigns</phrase>
+		<phrase var_name="report" added="1564656090">Report</phrase>
+		<phrase var_name="unique_clicks" added="1564656090">Unique Clicks</phrase>
+		<phrase var_name="reach" added="1564656090">Reach</phrase>
+		<phrase var_name="no_data_found" added="1564656090">No Data Found</phrase>
+		<phrase var_name="all_methods" added="1564656090">All Methods</phrase>
+		<phrase var_name="all_except_deleted" added="1564656090">All Except Deleted</phrase>
+		<phrase var_name="all" added="1564656090">All</phrase>
+		<phrase var_name="paging_result" added="1564656090">{start}-{end} of {total} Result(s)</phrase>
+		<phrase var_name="no_campaigns_found" added="1564656090">No Campaigns Found</phrase>
+		<phrase var_name="want_more_attention" added="1564656090">Want More Attention</phrase>
+		<phrase var_name="create_an_ad" added="1564656090">Create An Ad</phrase>
+		<phrase var_name="attract_title" added="1564656090">Advertisement on {site_name}</phrase>
+		<phrase var_name="attract_text" added="1564656090"><![CDATA[<b>{full_name}</b>, advertisement on {site_name} enables you to easily get more likes, joins or attentions for your pages, blogs, events or your external web sites, <b>let&#039;s create an ad now!</b>]]></phrase>
+		<phrase var_name="pricing_model" added="1564656090">Pricing Model</phrase>
+		<phrase var_name="cost_per_click" added="1564656090">Cost per Click</phrase>
+		<phrase var_name="pricing" added="1564656090">Pricing</phrase>
+		<phrase var_name="how_many_benefit_do_you_want" added="1564656090">How Many {benefit} Do You Want ?</phrase>
+		<phrase var_name="pricing_notice" added="1564656090">This package costs {price_text} for {benefit_text}</phrase>
+		<phrase var_name="affected_audience" added="1564656090">Affected Audience</phrase>
+		<phrase var_name="people" added="1564656090">People</phrase>
+		<phrase var_name="affected_audiences" added="1564656090">Affected Audiences</phrase>
+		<phrase var_name="audiences" added="1564656090">Audiences</phrase>
+		<phrase var_name="cancel" added="1564656090">Cancel</phrase>
+		<phrase var_name="are_you_sure_cancel_request" added="1564656090">Are you sure you want to cancel this request?</phrase>
+		<phrase var_name="canceled" added="1564656090">Canceled</phrase>
+		<phrase var_name="admin_menu_manage_ads" added="1564656090">Manage Ads</phrase>
+		<phrase var_name="admin_menu_manage_campaigns" added="1564656090">Manage Campaigns</phrase>
+		<phrase var_name="admin_menu_manage_transactions" added="1564656090">Manage Transactions</phrase>
+		<phrase var_name="admin_menu_pending_ads" added="1564656090">Pending Ads</phrase>
+		<phrase var_name="are_you_sure_you_want_to_approve_this_ad" added="1564656090">Are you sure you want to approve this ad?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_deny_this_ad" added="1564656090">Are you sure you want to deny this ad?</phrase>
+		<phrase var_name="approve" added="1564656090">Approve</phrase>
+		<phrase var_name="deny" added="1564656090">Deny</phrase>
+		<phrase var_name="deny_ad_successfully" added="1564656090">Deny Ad Successfully</phrase>
+		<phrase var_name="approve_ad_successfully" added="1564656090">Approve Ad Successfully</phrase>
+		<phrase var_name="setting_number_ads_shown_per_view_on_feed" added="1564656090"><![CDATA[<title>Number of Ads Shown On Feed</title><info>Number of ads shown on feeds. For example, if this setting is 2, 2 ads will be displayed at once each time user views his feeds.</info>]]></phrase>
+		<phrase var_name="setting_number_user_view_to_display_ad" added="1564656090"><![CDATA[<title>Number of User Views Before Display Ads on Feed</title><info>How many user views do you want before ads on feed display? 
+
+If this setting is 5, it means ads will appear on feed at the sixth time user views feeds.</info>]]></phrase>
+		<phrase var_name="setting_position_of_feed_ad" added="1564656090"><![CDATA[<title>Position of Feed Ads on Feed List When It displays</title><info>0 means ads are at the first place, 1 means second place, etc.</info>]]></phrase>
+		<phrase var_name="setting_maxium_number_of_html_ads" added="1564656090"><![CDATA[<title>Maximum number of HTML ads shown on block 3</title><info>If this setting is 3, maximum 3 HTML ads will be shown on block 3 at once.</info>]]></phrase>
+		<phrase var_name="setting_maxium_number_of_banner_ads" added="1564656090"><![CDATA[<title>Maximum Number of Banner Ads on Each Block</title><info>If this setting is 1, on each block, maximum 1 banner ads is displayed at once</info>]]></phrase>
+		<phrase var_name="setting_html_ad_ajax_refresh_time" added="1564656090"><![CDATA[<title>HTML Ad Refresh Time (Seconds)</title><info>Define how many seconds to wait before the HTML ads refresh. if this setting is 0, HTML ads will not refresh by AJAX</info>]]></phrase>
+		<phrase var_name="setting_number_user_view_to_display_html_ads" added="1564656090"><![CDATA[<title>Number of User Views Before Display HTML Ads</title><info>If this setting is 5, it means HTML ads will appear  at the sixth time user views feeds
+
+If this setting is 0, it means HTML ads will appear  every time user views.</info>]]></phrase>
+		<phrase var_name="setting_number_user_view_to_display_banner_ads" added="1564656090"><![CDATA[<title>Number of User Views Before Display Banner Ads</title><info>If this setting is 5, it means banner ads will appear at the sixth time user views feeds 
+
+If this setting is 0, it means banner ads will appear every time user views.</info>]]></phrase>
+		<phrase var_name="reaches" added="1564656090">Reaches</phrase>
+		<phrase var_name="user_setting_can_create_ad" added="1564656090">Can Create Ad ?</phrase>
+		<phrase var_name="user_setting_can_approve_deny_ad" added="1564656090">Can approve or deny ads of other users?</phrase>
+		<phrase var_name="pause" added="1564656090">Pause</phrase>
+		<phrase var_name="are_you_sure_you_want_to_pause_this_ad" added="1564656090">Are you sure you want to pause this ad?</phrase>
+		<phrase var_name="pause_ad_successfully" added="1564656090">Pause Ad Successfully</phrase>
+		<phrase var_name="resume_ad_successfully" added="1564656090">Resume Ad Successfully</phrase>
+		<phrase var_name="are_you_sure_you_want_to_resume_this_ad" added="1564656090">Are you sure you want to resume this ad:</phrase>
+		<phrase var_name="resume" added="1564656090">Resume</phrase>
+		<phrase var_name="user_setting_can_view_ad_detail_of_others" added="1564656090">Can View Ad Detail of Other Users?</phrase>
+		<phrase var_name="ad_approved" added="1564656090">Ad Approved</phrase>
+		<phrase var_name="your_ad_on_site_name_has_been_approved" added="1564656090"><![CDATA[Your ad on {site_name} has been approved:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="the_ad_title_has_been_approved" added="1564656090"><![CDATA[The ad <b>&#039;{title}&#039;</b> has been approved]]></phrase>
+		<phrase var_name="the_ad_title_has_been_denied" added="1564656090"><![CDATA[The ad <b>&#039;{title}&#039;</b> has been denied]]></phrase>
+		<phrase var_name="ad_denied" added="1564656090">Ad Denied</phrase>
+		<phrase var_name="your_ad_on_site_name_has_been_denied" added="1564656090"><![CDATA[Your ad on {site_name} has been denied:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="order_confirmed" added="1564656090">Order Confirmed</phrase>
+		<phrase var_name="your_pay_later_request_for_ad_title_on_site_name_has_been_confirmed" added="1564656090"><![CDATA[Your pay later request for ad &#039;{ad_title}&#039; on {site_name} has been confirmed:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="the_pay_later_request_for_ad_title_has_been_confirmed" added="1564656090"><![CDATA[The pay later request for ad <b>&#039;{title}&#039;</b> has been confirmed]]></phrase>
+		<phrase var_name="last_number_day" added="1564656090">Last {number} Days</phrase>
+		<phrase var_name="last_number_days" added="1564656090">Last {number} Days</phrase>
+		<phrase var_name="unique_click" added="1564656090">Unique Click</phrase>
+		<phrase var_name="the_end_time_must_be_greater_than_the_start_time" added="1564656090">The end time must be greater than the start time</phrase>
+		<phrase var_name="the_start_time_must_be_greater_than_current_time" added="1564656090">The start time must be greater than current time</phrase>
+		<phrase var_name="ad_runned" added="1564656090">Ad runned</phrase>
+		<phrase var_name="your_ad_is_running" added="1564656090"><![CDATA[Your ad &#039;{ad_title}&#039; on {site_name} is running:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="ad_is_running" added="1564656090">Ad is running</phrase>
+		<phrase var_name="your_ad_title_is_running" added="1564656090"><![CDATA[Your ad <b>&#039;{title}&#039;</b> is running]]></phrase>
+		<phrase var_name="setting_number_of_ad_updated_by_cron" added="1564656090"><![CDATA[<title>Number of Ad Updated by Cron</title><info>Number of ad updated each time cronjob runs</info>]]></phrase>
+		<phrase var_name="supported_extensions_gif_jpg_and_png" added="1564656090">Supported extensions: GIF, JPG and PNG</phrase>
+		<phrase var_name="submit_for_approval" added="1564656090">Submit for Approval</phrase>
+		<phrase var_name="pay_later_request" added="1564656090">Pay Later Request</phrase>
+		<phrase var_name="pay_later_requests" added="1564656090">Pay Later Requests</phrase>
+		<phrase var_name="setting_pay_later_request_expired_time" added="1564656090"><![CDATA[<title>Pay Later Request Expire Time (Days)</title><info>Specific how long before a pay later request expires</info>]]></phrase>
+		<phrase var_name="ctr" added="1564656090">CTR</phrase>
+		<phrase var_name="edit_name" added="1564656090">Edit Name</phrase>
+		<phrase var_name="are_you_sure_delete_campaign" added="1564656090">All ads of this campaign will also be deleted. Are you sure you want to delete this campaign?</phrase>
+		<phrase var_name="delete_campaign_successfully" added="1564656090">Delete Campaign Successfully</phrase>
+		<phrase var_name="edit_campaign" added="1564656090">Edit Campaign</phrase>
+		<phrase var_name="edit_campaign_successfully" added="1564656090">Edit Campaign Successfully</phrase>
+		<phrase var_name="no_packages_found" added="1564656090">No Packages Found</phrase>
+		<phrase var_name="none" added="1564656090">None</phrase>
+		<phrase var_name="reminder_not_pay" added="1564656090"><![CDATA[You have not completed the payment for this ad. <a href="{link}">Pay it now</a>]]></phrase>
+		<phrase var_name="reminder_pending_pay_later" added="1564656090"><![CDATA[You have a pending pay later request. It is <b> {num_day} day(s) </b> before it is expired. Please follow the <b> <a href="#" onclick="{onclick}"> instructions </a> </b>to pay it!]]></phrase>
+		<phrase var_name="reminder_ad_pending" added="1564656090">Your ad is pending for admin approval</phrase>
+		<phrase var_name="reminder_ad_denied" added="1564656090"><![CDATA[Your ad has been denied. You can re-edit it <b> <a href="{link}">here</a> </b>]]></phrase>
+		<phrase var_name="html_description" added="1564656090">HTML Ad displays at block 3, it even alllows audiences to like, join your items.</phrase>
+		<phrase var_name="banner_description" added="1564656090">Banner Ad displays as an image, it can be placed on the block which you can specific.</phrase>
+		<phrase var_name="feed_description" added="1564656090"><![CDATA[Feed ad displays as a normal feed under audiences&#039; eyes, it is a completely new way to get attention.]]></phrase>
+		<phrase var_name="choose_your_package" added="1564656090">Choose Your Package</phrase>
+		<phrase var_name="validator_accept" added="1564656090">Please enter a value with a valid extension</phrase>
+		<phrase var_name="sponsored" added="1564656090">Sponsored</phrase>
+		<phrase var_name="menu_socialad_social_ad_fad58de7366495db4650cfefac2fcd61" added="1564656090">Social Ads</phrase>
+		<phrase var_name="ads_list" added="1564656090">Ads List</phrase>
+		<phrase var_name="click_tooltip_description" added="1564656090">Total number of clicks this ad received, including clicks from one person.</phrase>
+		<phrase var_name="ad_status" added="1564656090">Ad Status</phrase>
+		<phrase var_name="ad_status_tooltip_description" added="1564656090">Show the current status of ad. Only running ads are currently showing for audiences.</phrase>
+		<phrase var_name="ad_start_date" added="1564656090">Start Date</phrase>
+		<phrase var_name="ad_start_date_tooltip_description" added="1564656090">The date ad starts running.</phrase>
+		<phrase var_name="ad_end_date" added="1564656090">End Date</phrase>
+		<phrase var_name="ad_end_date_tooltip_description" added="1564656090">The date ad will end or ended. None if ad has no specific end date and it is still running.</phrase>
+		<phrase var_name="impression_tooltip_description" added="1564656090">The total number of views on an ad.</phrase>
+		<phrase var_name="unique_click_tooltip_description" added="1564656090">Total number of unique clicks an ad received. If an audience clicks an ad twice, it counts as one.</phrase>
+		<phrase var_name="reach_description_tooltip" added="1564656090">The total number of users viewed on an ad, count on User ID or IP if guest.</phrase>
+		<phrase var_name="reach_tooltip_description" added="1564656090">The total number of users viewed on an ad, count on User ID or IP if guest.</phrase>
+		<phrase var_name="running_day" added="1564656090">Running Day</phrase>
+		<phrase var_name="running_day_tooltip_description" added="1564656090">Total days an ad ran.</phrase>
+		<phrase var_name="remaining_tooltip_description" added="1564656090">Number of clicks, impressions or days left until an ad ends.</phrase>
+		<phrase var_name="ad_type_tooltip_description" added="1564656090">There are 3 types of ad, HTML, banner or feed.</phrase>
+		<phrase var_name="click_through_rate" added="1564656090">Click-Through Rate</phrase>
+		<phrase var_name="click_through_rate_tooltip_description" added="1564656090">Number of clicks you received divided by the number of impressions.</phrase>
+		<phrase var_name="add_package_successfully" added="1564656090">Add Package Successfully</phrase>
+		<phrase var_name="edit_package_successfully" added="1564656090">Edit Package Successfully</phrase>
+		<phrase var_name="custom_information" added="1564656090">Custom Information</phrase>
+		<phrase var_name="manage_ads" added="1564656090">Manage Ads</phrase>
+		<phrase var_name="manage_campaigns" added="1564656090">Manage Campaigns</phrase>
+		<phrase var_name="manage_transactions" added="1564656090">Manage Transactions</phrase>
+		<phrase var_name="pending_ads" added="1564656090">Pending Ads</phrase>
+		<phrase var_name="social_ads" added="1564656090">Social Ads</phrase>
+		<phrase var_name="setting_activate_pay_later" added="1564656090"><![CDATA[<title>Activate Pay Later Payment Method</title><info>If this setting is true, users can use pay later method to pay for their ads. In this case, you should add instructions for pay later method in custom information section.</info>]]></phrase>
+		<phrase var_name="do_you_want_to_hide_the_ad_title_permanently" added="1564656090"><![CDATA[Do you want to hide the ad &#039;{title}&#039; permanently?]]></phrase>
+		<phrase var_name="yes" added="1564656090">Yes</phrase>
+		<phrase var_name="no" added="1564656090">No</phrase>
+		<phrase var_name="setting_allow_to_hide_ad_permanently" added="1564656090"><![CDATA[<title>Allow User to Hide Ads permanently</title><info>If this setting is true, user can hide an ads permanently.</info>]]></phrase>
+		<phrase var_name="export" added="1564656090">Export</phrase>
+		<phrase var_name="export_report" added="1564656090">Export Report</phrase>
+		<phrase var_name="dot_xls" added="1564656090">.xls</phrase>
+		<phrase var_name="dot_csv" added="1564656090">.csv</phrase>
+		<phrase var_name="drag_and_drop_to_arrange_package_display_order" added="1564656090">Drag and drop to arrange package display order</phrase>
+		<phrase var_name="module_socialad" added="1564656090">Social Ads</phrase>
+		<phrase var_name="module_socialads" added="1564656090">Social Ads</phrase>
+		<phrase var_name="currently_there_is_no_package_to_select" added="1564656090">Currently there is no package to select.</phrase>
+		<phrase var_name="you_must_accept_term_and_condition_before_finishing_creating_the_ads_so_that_the_legal_problem_will_be_limited_for_site_s_owner" added="1564656090"><![CDATA[You must accept term and condition before finishing creating the ads so that the legal problem will be limited for site&#039;s owner.]]></phrase>
+		<phrase var_name="you_must_accept_term_and_condition_before_finishing_creating_the_ads" added="1564656090">You must accept term and condition before finishing creating the ads.</phrase>
+		<phrase var_name="show_ads_to_guests" added="1564656090">Show ads to guests</phrase>
+		<phrase var_name="how_many_packages_do_you_want" added="1564656090">How Many Packages Do You Want ?</phrase>
+		<phrase var_name="how_many_package_s_do_you_want" added="1564656090">Update your goal</phrase>
+		<phrase var_name="total" added="1564656090">Total</phrase>
+		<phrase var_name="manage_credit" added="1564656090">Manage Credit</phrase>
+		<phrase var_name="rejected" added="1564656090">Rejected</phrase>
+		<phrase var_name="no_request_found" added="1564656090">No Request Found</phrase>
+		<phrase var_name="request_date" added="1564656090">Request Date</phrase>
+		<phrase var_name="update_date" added="1564656090">Update Date</phrase>
+		<phrase var_name="add_request" added="1564656090">Add Request</phrase>
+		<phrase var_name="please_enter_valid_amount" added="1564656090">Please enter valid amount.</phrase>
+		<phrase var_name="this_field_cannot_be_empty" added="1564656090">This field cannot be empty.</phrase>
+		<phrase var_name="amount_cannot_be_greater_than_remaining_amount" added="1564656090">Amount cannot be greater than remaining amount.</phrase>
+		<phrase var_name="admin_menu_pending_credit_request" added="1564656090">Pending Credit Request</phrase>
+		<phrase var_name="pending_credit_request" added="1564656090">Pending Credit Request</phrase>
+		<phrase var_name="user" added="1564656090">User</phrase>
+		<phrase var_name="accept" added="1564656090">Accept</phrase>
+		<phrase var_name="reject" added="1564656090">Reject</phrase>
+		<phrase var_name="add_new_request_successfully" added="1564656090">Add new request successfully.</phrase>
+		<phrase var_name="accept_request_successfully" added="1564656090">Accept request successfully.</phrase>
+		<phrase var_name="reject_request_successfully" added="1564656090">Reject request successfully.</phrase>
+		<phrase var_name="details" added="1564656090">Details</phrase>
+		<phrase var_name="admin_menu_manage_credit" added="1564656090">Manage Credit</phrase>
+		<phrase var_name="no_credit_found" added="1564656090">No Credit Found</phrase>
+		<phrase var_name="total_amount" added="1564656090">Total Amount</phrase>
+		<phrase var_name="remaining_amount" added="1564656090">Remaining Amount</phrase>
+		<phrase var_name="updated_date" added="1564656090">Updated Date</phrase>
+		<phrase var_name="add_transaction" added="1564656090">Add Transaction</phrase>
+		<phrase var_name="search_by_user" added="1564656090">Search by User</phrase>
+		<phrase var_name="credit_details_of" added="1564656090">Credit Details Of</phrase>
+		<phrase var_name="pay_by_your_credit" added="1564656090">Pay By Your Credit</phrase>
+		<phrase var_name="payment_by_credit_for_ad" added="1564656090">Payment by Credit for ad</phrase>
+		<phrase var_name="payment_by_credit_is_successfully" added="1564656090">Payment by Credit is successfully.</phrase>
+		<phrase var_name="select_a_sub_faq" added="1564656090">Select a sub FAQ</phrase>
+		<phrase var_name="provide_question_content" added="1564656090">Provide question content.</phrase>
+		<phrase var_name="faq_success_updated" added="1564656090">FAQ successfully updated.</phrase>
+		<phrase var_name="faq_success_added" added="1564656090">FAQ successfully added.</phrase>
+		<phrase var_name="faq_edit_title" added="1564656090">Edit FAQ</phrase>
+		<phrase var_name="add_new_faq" added="1564656090">Add new FAQ</phrase>
+		<phrase var_name="faq_order_success_updated" added="1564656090">FAQ order successfully updated.</phrase>
+		<phrase var_name="faq_success_deleted" added="1564656090">FAQ successfully deleted.</phrase>
+		<phrase var_name="admincp_manage_faqs" added="1564656090">Manage FAQs</phrase>
+		<phrase var_name="editing_faq_s" added="1564656090">Editing FAQs</phrase>
+		<phrase var_name="add_faq_s" added="1564656090">Add FAQs</phrase>
+		<phrase var_name="question" added="1564656090">Question</phrase>
+		<phrase var_name="answer" added="1564656090">Answer</phrase>
+		<phrase var_name="faqs" added="1564656090">FAQs</phrase>
+		<phrase var_name="update_order" added="1564656090">Update Order</phrase>
+		<phrase var_name="admin_menu_add_new_faqs" added="1564656090">Add New FAQs</phrase>
+		<phrase var_name="admin_menu_manage_faqs" added="1564656090">Manage FAQs</phrase>
+		<phrase var_name="no_faq_available" added="1564656090">No FAQ available.</phrase>
+		<phrase var_name="add_new_faq_successfully_please_waiting_approval_from_administrator" added="1564656090">Add new FAQ successfully. Please waiting approval from Administrator.</phrase>
+		<phrase var_name="chart_today" added="1564656090">Today</phrase>
+		<phrase var_name="chart_yesterday" added="1564656090">Yesterday</phrase>
+		<phrase var_name="chart_last_week" added="1564656090">Last week</phrase>
+		<phrase var_name="chart_rangeofdates" added="1564656090">Range of dates</phrase>
+		<phrase var_name="provide_answer_content" added="1564656090">Provide answer content.</phrase>
+		<phrase var_name="please_input_valid_name" added="1564656090">Please input valid name.</phrase>
+		<phrase var_name="setting_banner_image_width_height_block_3" added="1564656090"><![CDATA[<title>Width and Height of Banner Image Block 3</title><info>Width and Height of Banner Image Block 3. Using "|" to separate width and height.
+
+Note: height is 0: unlimited height; width is 0: use default width of block 3</info>]]></phrase>
+		<phrase var_name="pay_credit" added="1564656090">Pay Credit</phrase>
+		<phrase var_name="your_ad_b_title_b_is_deleted" added="1564656090"><![CDATA[Your ad <b>&#039;{title}&#039;</b> is deleted]]></phrase>
+		<phrase var_name="total_credit" added="1564656090">Total Credit</phrase>
+		<phrase var_name="no_available_payment_methods" added="1564656090">No available payment methods</phrase>
+		<phrase var_name="purchase_with_activity_points" added="1564656090">Purchase with Activity Points</phrase>
+		<phrase var_name="pay_activity_points" added="1564656090">Pay Activity Points</phrase>
+		<phrase var_name="pay_by_activity_points_successfully" added="1564656090">Pay by activity points successfully</phrase>
+		<phrase var_name="you_have_itotalpoints_activity_point_s_this_will_cost_icostpoints_activity_point_s_do_you_want_to_purchase" added="1564656090">You have {iTotalPoints} activity point(s). This will cost {iCostPoints} activity point(s). Do you want to purchase ?</phrase>
+		<phrase var_name="purchase" added="1564656090">Purchase</phrase>
+		<phrase var_name="setting_activate_activity_points" added="1564656090"><![CDATA[<title>Activate Activity Points Method</title><info>If this setting is true, users can use activity points to pay for their ads.</info>]]></phrase>
+		<phrase var_name="objective" added="1564656090">Objective</phrase>
+		<phrase var_name="objective_description" added="1564656090"><![CDATA[You can choose to bid for your objective, "Clicks" or "Impressions"; and your choice determines how you pay. "Clicks" mean you pay only when your ad is clicked, not each time an ad is shown. "Impressions" mean you pay for the number of times an ad is shown regardless of whether it is clicked on or not.]]></phrase>
+		<phrase var_name="by_clicking_submitphrase_you_agree_to_the_following_terms_and_conditions" added="1564656090"><![CDATA[By clicking &#039;{SubmitPhrase}&#039;, you agree to the following terms and conditions]]></phrase>
+		<phrase var_name="you_have_to_choose_other_package_cause_package_of_ad_you_clone_has_been_deleted" added="1564656090">You have to choose other package cause package of ad you clone has been deleted</phrase>
+		<phrase var_name="ads_filter" added="1564656090">Ads Filter</phrase>
+		<phrase var_name="&quot;Number of Ads Shown On Feed&quot; must be greater than or equal to 0" added="1564656090" />
+		<phrase var_name="&quot;Number of User Views Before Display Ads on Feed&quot; must be greater than or equal to 0" added="1564656090" />
+		<phrase var_name="&quot;Position of Feed Ads on Feed List When It displays&quot; must be greater than or equal to 0" added="1564656090" />
+		<phrase var_name="&quot;Maximum number of HTML ads shown on block 3&quot; must be greater than or equal to 0" added="1564656090" />
+		<phrase var_name="&quot;Maximum Number of Banner Ads on Each Block&quot; must be greater than or equal to 0" added="1564656090" />
+		<phrase var_name="&quot;HTML Ad Refresh Time (Seconds)&quot; must be greater than or equal to 0" added="1564656090" />
+		<phrase var_name="&quot;Number of User Views Before Display HTML Ads&quot; must be greater than or equal to 0" added="1564656090" />
+		<phrase var_name="&quot;Number of User Views Before Display Banner Ads&quot; must be greater than or equal to 0" added="1564656090" />
+		<phrase var_name="&quot;Number of Ad Updated by Cron&quot; must be greater than or equal to 0" added="1564656090" />
+		<phrase var_name="&quot;Pay Later Request Expire Time (Days)&quot; must be greater than 0" added="1564656090" />
+		<phrase var_name="translate_module_socialad" added="1564656090">Social Ads</phrase>
+		<phrase var_name="admin_menu_user_group_settings" added="1564656090">User Group Settings</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="socialad" type="boolean" admin="false" user="true" guest="true" staff="true" module="socialad" ordering="0">approve_ad</setting>
+		<setting is_admin_setting="0" module_id="socialad" type="boolean" admin="true" user="true" guest="false" staff="true" module="socialad" ordering="0">can_create_ad</setting>
+		<setting is_admin_setting="0" module_id="socialad" type="boolean" admin="true" user="false" guest="false" staff="false" module="socialad" ordering="0">can_approve_deny_ad</setting>
+		<setting is_admin_setting="0" module_id="socialad" type="boolean" admin="true" user="false" guest="false" staff="false" module="socialad" ordering="0">can_view_ad_detail_of_others</setting>
+	</user_group_settings>
+</module>

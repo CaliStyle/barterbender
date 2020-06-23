@@ -1,0 +1,9 @@
+<?php
+defined('PHPFOX') or exit('NO DICE!');
+
+//Update menu in admin
+db()->update(':module',['menu' => 'a:12:{s:37:"resume.admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:19:"user-group-settings";}}s:32:"resume.admin_menu_manage_resumes";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:7:"resumes";}}s:30:"resume.admin_menu_add_category";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:11:"addcategory";}}s:35:"resume.admin_menu_manage_categories";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:10:"categories";}}s:27:"resume.admin_menu_add_level";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:8:"addlevel";}}s:31:"resume.admin_menu_manage_levels";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:6:"levels";}}s:50:"resume.admin_menu_manage_view_service_registration";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:13:"registrations";}}s:27:"resume.admin_menu_statistic";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:9:"statistic";}}s:33:"resume.admin_menu_weight_settings";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:14:"weightsettings";}}s:33:"resume.admin_menu_global_settings";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:14:"globalsettings";}}s:34:"resume.admin_menu_add_custom_field";a:1:{s:3:"url";a:3:{i:0;s:6:"resume";i:1;s:6:"custom";i:2;s:3:"add";}}s:38:"resume.admin_menu_manage_custom_fields";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:6:"custom";}}}'],'module_id = \'resume\' AND product_id = \'younet_resume4\'');
+
+Phpfox::getService('language.phrase.process')->updatePhrases([
+    'contact_mail_to_who_view' => '{full_name} has just contact to you. Please visit the following link to check it.\r\n<a href="{link}" target="_blank">{link}</a>\r\n\r\n{message}'
+]);

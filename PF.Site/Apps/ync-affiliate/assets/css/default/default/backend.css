@@ -1,0 +1,109 @@
+/*----------  statistics  ----------*/
+label{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+.yncaffiliate_statistics{
+    background-color: #fff;
+    border-bottom: 1px #dfdfdf solid;
+}
+.yncaffiliate_statistics .nopadding{
+    padding: 0;
+}
+.yncaffiliate_statistics .nomargin{
+    margin: 0;
+}
+.yncaffiliate_statistics .statistics_select label.label_title{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    .text-overflow();
+}
+.yncaffiliate_statistics .statistics_select ul li label{
+    padding-left: 2px;
+}
+.yncaffiliate_statistics .statistics_select label.fw-400{
+    .text-overflow();
+}
+.yncaffiliate_statistics .statistics_select label.fw-400 input{
+    margin-top: 0;
+    margin-right: 5px;
+}
+.yncaffiliate_statistics .statistics_select .form-group{
+    margin-bottom: 28px;
+}
+.yncaffiliate_statistics .yncaffiliate_search_form{
+    clear: both;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+/*----------  search form  ----------*/
+.yncaffiliate_search_form{
+    background-color: #f0f3f4;
+    padding: 20px;
+}
+.yncaffiliate_search_form select, .yncaffiliate_search_form input[type="text"]{
+    width: 100% !important;
+}
+.yncaffiliate_search_form .pos-r{
+    position: relative;
+}
+.yncaffiliate_search_form .padding{
+    padding: 0 10px;
+}
+.yncaffiliate_search_form .padding button{
+    border-radius: 0;
+}
+.yncaffiliate_search_form .flexone{
+    flex: 1;
+}
+.yncaffiliate_search_form .yncaffiliate_search_form_inner{
+    margin: 0 -10px;
+    display: flex;
+}
+.yncaffiliate_search_form .sm_padding_parent{
+    margin: 0 -5px;
+}
+.yncaffiliate_search_form .sm_padding_parent .sm_padding{
+    padding: 0 5px;
+}
+.yncaffiliate_search_form .md_padding_parent{
+    margin: 0 -10px;
+}
+.yncaffiliate_search_form .md_padding_parent .md_padding{
+    padding: 0 10px;
+}
+.yncaffiliate_search_form label.notext{
+    width: 100%;
+    min-height: 13px;
+}
+.yncaffiliate_search_form .yncaffiliate_datetime_picker_parent input{
+    padding-right: 40px;
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #fff;
+    color: #555;
+}
+
+.page_section_menu table{
+    width: auto;
+    background-color: transparent;
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.page_section_menu table tbody tr td{
+    padding: 0;
+    padding-right: 5px;
+    border-left: 0;
+    background-color: transparent;
+}
+.yncaffiliate_contact_detail > div {
+    padding: 4px;
+}

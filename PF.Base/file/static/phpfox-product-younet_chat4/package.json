@@ -1,0 +1,11 @@
+{
+    "id": "younet_chat4",
+    "type": "product",
+    "name": "YNC Chat",
+    "description": "by YouNetCo",
+    "version": "4.02p3",
+    "is_core": 0,
+    "icon": "http:\/\/phpfox.younetco.com\/files\/2015\/09\/chat-icon.png",
+    "vendor": "YouNetCo",
+    "store_id": ""
+}

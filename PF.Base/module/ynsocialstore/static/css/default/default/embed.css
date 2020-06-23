@@ -1,0 +1,479 @@
+body{
+	padding: 0;
+	font-family: Arial;
+}
+a{
+	text-decoration: none;
+	color: #297fc7;
+}
+.yn-rating .ico {
+	color: #ffa800;
+	margin-left: 2px;
+	cursor: pointer;
+	transition: all 300ms linear
+}
+
+.rating{
+	color: #ffa800;
+	font-weight: bold;
+}
+
+.yn-rating .ico.hover {
+	color: #ffa800 !important
+}
+
+.yn-rating .ico.yn-rating-disable {
+	color: #ccc
+}
+
+.yn-rating.yn-rating-small .ico {
+	font-size: 12px
+}
+
+.yn-rating.yn-rating-normal .ico {
+	font-size: 16px
+}
+
+.yn-rating.yn-rating-large .ico {
+	font-size: 24px
+}
+
+.ynstore-tips {
+	padding: 15px
+}
+.ynstore-store-logo-info{
+	width: 480px;
+	padding: 10px;
+    border: 1px solid #ddd;
+} 
+
+.ynstore-store-logo-info .ynstore-store-logo-block {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 10px
+}
+
+.ynstore-store-logo-info .ynstore-store-logo-block>a {
+	height: 480px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.ynstore-store-logo-info .ynstore-store-logo-block>a img {
+	max-width: 100%;
+	max-height: 100%
+}
+
+.ynstore-store-logo-info .ynstore-store-logo-block:hover form label {
+	bottom: 0;
+	opacity: 1
+}
+
+.ynstore-store-logo-info .ynstore-store-logo-block form {
+	padding: 0
+}
+
+.ynstore-store-logo-info .ynstore-store-logo-block form input[type="file"] {
+	display: block;
+	width: 0;
+	height: 0;
+	text-indent: -999999px
+}
+
+.ynstore-store-logo-info .ynstore-store-logo-block form label {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.7);
+	margin-bottom: 0;
+	color: #FFF;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+	cursor: pointer;
+	transition: all 200ms ease-in-out;
+	bottom: -40px;
+	opacity: 0
+}
+
+.ynstore-store-logo-info .ynstore-store-logo-block form label .ico {
+	margin-right: 7px
+}
+
+@media (max-width:768px) {
+	.ynstore-store-logo-info .ynstore-store-logo-block form label {
+		text-indent: 9999px;
+		width: 38px;
+		height: 36px;
+		border-radius: 3px;
+		right: 5px;
+		bottom: 5px !important;
+		opacity: 1
+	}
+
+	.ynstore-store-logo-info .ynstore-store-logo-block form label .ico {
+		margin-right: 0;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -7px;
+		margin-top: -7px;
+		text-indent: 0
+	}
+
+}
+
+.ynstore-store-logo-info .ynstore-title {
+	font-size: 18px;
+	font-weight: 700;
+	color: #555;
+	margin-bottom: 5px
+}
+
+.ynstore-store-logo-info .ynstore-ratings-reviews-block>div {
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-right: 8px
+}
+
+.ynstore-store-logo-info .ynstore-review-count {
+	border: 1px solid #297fc7;
+	color: #297fc7;
+	border-radius: 2px;
+	font-size: 12px;
+	padding: 2px 5px
+}
+
+.ynstore-store-logo-info .ynstore-rating {
+	margin-bottom: 7px
+}
+
+.ynstore-store-logo-info .ynstore-rating>span {
+	color: #ffa800;
+	font-size: 18px;
+	font-weight: 700;
+	margin-right: 5px
+}
+
+.ynstore-store-logo-info .ynstore-rating .ico {
+	margin-left: 2px
+}
+
+.ynstore-store-logo-info .ynstore-location {
+	color: #999;
+	margin-bottom: 7px;
+	font-size: 14px;
+}
+
+.ynstore-store-logo-info .ynstore-description {
+	color: #555;
+	line-height: 20px;
+	margin-bottom: 10px;
+	word-break: break-word;
+	word-wrap: break-word;
+	font-size: 14px;
+}
+
+.ynstore-store-logo-info .ynstore-description .newline {
+	padding: 0
+}
+
+.ynstore-store-logo-info .ynstore-btn-fw {
+	width: 100%;
+	color: #555;
+	border: 1px solid #555;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 40px;
+	margin-bottom: 10px;
+	transition: all 300ms linear
+}
+
+.ynstore-store-logo-info .ynstore-btn-fw:last-of-type{
+	margin-bottom: 0;
+}
+
+.ynstore-store-logo-info .ynstore-btn-fw .ico {
+	margin-right: 6px
+}
+
+.ynstore-store-logo-info .ynstore-btn-fw:hover {
+	color: #FFF;
+	background-color: #297fc7;
+	border-color: #297fc7
+}
+
+/*Product Embed*/
+.ynstore-product-detail-block.ynstore-product-embed{
+	width: 520px;
+	border: 1px solid #ddd;
+	padding: 15px 20px;
+}
+.ynstore-product-detail-block.ynstore-product-embed *{
+	box-sizing: border-box;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #555;
+  line-height: 26px;
+  margin-bottom: 7px;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-title .ynstore-featured {
+  font-size: 11px;
+  color: #FFF;
+  background-color: #ffa800;
+  padding: 4px 6px;
+  border-radius: 3px;
+  font-weight: normal;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+  position: relative;
+  top: -4px;
+  border: 1px solid #f19d25;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-title .ynstore-featured .ico {
+  font-size: 11px;
+  margin-right: 5px;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-timestamp-from {
+  color: #999;
+  margin-bottom: 5px;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-timestamp-from span.ynstore-from a {
+  font-weight: 700;
+  color: #555;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-timestamp-from span.ynstore-from a:hover {
+  color: #297fc7;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-location {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  color: #999;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.ynstore-price-old{
+	color: #999;
+	text-decoration: line-through;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-img{
+	text-align: center;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-img img{
+	max-width: 100%;
+	max-height: 500px;
+	margin-bottom: 15px;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-ratings-reviews-block{
+	display: flex;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-ratings-reviews-block .ynstore-review-count{
+	margin-left: 10px;
+	text-transform: lowercase;
+    border: 1px solid #297fc7;
+    border-radius: 3px;
+    font-size: 11px;
+    padding: 1px 6px;
+    margin-top: 1px;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block {
+  float: left;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-discount-block {
+  overflow: hidden;
+  margin: -1px;
+  float: left;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-discount-block .ynstore-discount {
+  height: 62px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffa800;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  flex-direction: column;
+  padding-left: 12.5px;
+  position: relative;
+  line-height: 24px;
+  margin-right: 30px;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-discount-block .ynstore-discount:after,
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-discount-block .ynstore-discount:before {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-discount-block .ynstore-discount:after {
+  border: 30px solid transparent;
+  border-left: 15px solid #ffa800;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-discount-block .ynstore-discount:before {
+  border: 40px solid transparent;
+  border-left: 20px solid #f19d25;
+  margin-left: 0px;
+  top: -10px;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-meta-block {
+  overflow: hidden;
+  min-height: 60px;
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-price-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-price-block .ynstore-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #555;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-price-block .ynstore-price span {
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 14px;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-price-block .ynstore-price span i {
+  font-size: 18px;
+}
+@media (max-width: 600px) {
+  .ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block {
+    position: static;
+    width: 100%;
+    text-align: center;
+    text-align: left;
+  }
+  .ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block:before,
+  .ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block:after {
+    display: none;
+  }
+  .ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-price-block {
+    margin-bottom: 5px;
+  }
+  .ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-price-block .ynstore-meta-block {
+    padding: 10px 15px;
+    flex-direction: column;
+  }
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-statistic {
+  display: flex;
+  padding: 5px 0;
+  float: right;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-statistic .ynstore-statistic-item {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  padding-left: 15px;
+  margin-left: 20px;
+  border-left: 1px solid #ddd;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-statistic .ynstore-statistic-item:first-of-type {
+  border-left: 0;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-statistic .ynstore-statistic-item span {
+  font-weight: 700;
+  display: block;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 3px;
+  line-height: 18px;
+  text-align: right;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-statistic .ynstore-statistic-item .ico {
+  position: relative;
+  top: 1px;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-statistic .ynstore-statistic-item.ynstore-hover {
+  cursor: pointer;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-statistic .ynstore-statistic-item.ynstore-hover:hover {
+  color: #297fc7;
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-statistic .ynstore-statistic-item.ynstore-hover:hover span {
+  color: #297fc7;
+}
+@media (max-width: 600px) {
+  .ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-statistic {
+    margin: auto;
+  }
+  .ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-statistic .ynstore-statistic-item {
+    margin-left: 10px;
+  }
+  .ynstore-product-detail-block.ynstore-product-embed .ynstore-info .ynstore-product-statistic .ynstore-statistic-item:first-of-type {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+.ynstore-product-detail-block.ynstore-product-embed .ynstore-ratings-btn-block {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  margin-bottom: 10px;
+}
+.yn-rating .ico {
+  color: #ffa800;
+  margin-left: 2px;
+}
+.yn-rating .ico.hover {
+  color: #ffa800!important;
+}
+.yn-rating .ico.yn-rating-disable {
+  color: #ccc;
+}
+.yn-rating.yn-rating-small .ico {
+  font-size: 12px;
+}
+.yn-rating.yn-rating-normal .ico {
+  font-size: 16px;
+}
+.yn-rating.yn-rating-large .ico {
+  font-size: 24px;
+}

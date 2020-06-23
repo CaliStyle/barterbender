@@ -1,0 +1,11 @@
+.admin_feedback_description,
+.yn_feed_back_inlinePopup{
+	white-space: nowrap;
+}
+.ynfeed_back{
+	overflow-x: auto;
+
+	.last_td{
+		white-space: nowrap;
+	}
+}

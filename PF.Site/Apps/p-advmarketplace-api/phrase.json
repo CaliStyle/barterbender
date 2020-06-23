@@ -1,0 +1,14 @@
+{
+  "advancedmarketplace_set_expiry_date_description" : "Select expired date for the listing.",
+  "instant_payment_description" : "If you enable this option, buyers can make a payment to one of the payment gateways you have on file with us.",
+  "advancedmarketplace_save_as_draft_tips": "Tips: After this listing was published, you can upload more photos and send invitations to reach more buyers.",
+  "expired_listings": "Expired Listings",
+  "low_high_price": "Low to high price",
+  "high_low_price": "High to low price",
+  "advancedmarketplace_listing_successfully_updated" : "Listing successfully updated.",
+  "advancedmarketplace_api_added_to_wishlist" : "Added to Wishlist.",
+  "advancedmarketplace_api_removed_from_wishlist" : "Removed from Wishlist.",
+  "payment_method_is_required" : "This option is required if you enable Instant Payment.",
+  "my_wishlist" : "My Wishlist",
+  "advancedmarketplace_api_cannot_delete_default_photo" : "Cannot delete default photo!"
+}

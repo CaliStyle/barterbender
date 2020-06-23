@@ -1,0 +1,586 @@
+<module>
+	<data>
+		<module_id>videochannel</module_id>
+		<product_id>younet_videochannel4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:2:{s:36:"videochannel.admin_menu_add_category";a:1:{s:3:"url";a:2:{i:0;s:12:"videochannel";i:1;s:3:"add";}}s:41:"videochannel.admin_menu_manage_categories";a:1:{s:3:"url";a:1:{i:0;s:12:"videochannel";}}}]]></menu>
+		<phrase_var_name>module_videochannel</phrase_var_name>
+		<version>4.02p3</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/09/video_channel.png</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="videochannel" parent_var_name="" m_connection="main" var_name="menu_videochannel_video_channel_551714af75bcdfed97b5f25442ff6f31" ordering="113" url_value="videochannel" version_id="4.0.1" disallow_access="" module="videochannel" mobile_icon="file-video-o" />
+		<menu module_id="videochannel" parent_var_name="" m_connection="videochannel.index" var_name="menu_videochannel_add_a_channel_e31644c1c9d16431153ea5ef5ed06c3d" ordering="115" url_value="videochannel.channel.add" version_id="3.0.0" disallow_access="a:1:{i:0;s:1:&quot;3&quot;;}" module="videochannel" />
+		<menu module_id="videochannel" parent_var_name="" m_connection="videochannel.index" var_name="menu_videochannel_upload_share_a_video_e31644c1c9d16431153ea5ef5ed06c3d" ordering="114" url_value="videochannel.add" version_id="3.0.0" disallow_access="a:1:{i:0;s:1:&quot;3&quot;;}" module="videochannel" />
+		<menu module_id="videochannel" parent_var_name="" m_connection="mobile" var_name="menu_videochannel_videos_channel_532c28d5412dd75bf975fb951c740a30" ordering="130" url_value="videochannel" version_id="3.5.0rc1" disallow_access="" module="videochannel" mobile_icon="small_videos.png" />
+	</menus>
+	<settings>
+		<setting group="" module_id="videochannel" is_hidden="0" type="boolean" var_name="allow_youtube_iframe" phrase_var_name="setting_allow_youtube_iframe" ordering="1" version_id="3.01">1</setting>
+		<setting group="" module_id="videochannel" is_hidden="0" type="boolean" var_name="close_sql_connection_while_converting" phrase_var_name="setting_close_sql_connection_while_converting" ordering="1" version_id="3.01">0</setting>
+		<setting group="" module_id="videochannel" is_hidden="0" type="boolean" var_name="full_screen_with_youtube" phrase_var_name="setting_full_screen_with_youtube" ordering="6" version_id="3.01">1</setting>
+		<setting group="" module_id="videochannel" is_hidden="0" type="large_string" var_name="video_meta_keywords" phrase_var_name="setting_video_meta_keywords" ordering="11" version_id="3.01">video, sharing, free, upload</setting>
+		<setting group="" module_id="videochannel" is_hidden="0" type="large_string" var_name="video_meta_description" phrase_var_name="setting_video_meta_description" ordering="17" version_id="3.01">Share your videos with friends, family, and the world on Site Name.</setting>
+		<setting group="" module_id="videochannel" is_hidden="0" type="integer" var_name="total_related_videos" phrase_var_name="setting_total_related_videos" ordering="9" version_id="3.01">2</setting>
+		<setting group="time_stamps" module_id="videochannel" is_hidden="0" type="string" var_name="video_time_stamp" phrase_var_name="setting_video_time_stamp" ordering="4" version_id="3.01">F j, Y</setting>
+		<setting group="" module_id="videochannel" is_hidden="0" type="integer" var_name="subcategories_to_show_at_first" phrase_var_name="setting_subcategories_to_show_at_first" ordering="1" version_id="3.3.0">6</setting>
+		<setting group="" module_id="videochannel" is_hidden="1" type="boolean" var_name="embed_auto_play" phrase_var_name="setting_embed_auto_play" ordering="5" version_id="3.01">0</setting>
+		<setting group="" module_id="videochannel" is_hidden="1" type="boolean" var_name="allow_using_youtube_iframe" phrase_var_name="setting_allow_using_youtube_iframe" ordering="1" version_id="3.5.0">0</setting>
+		<setting group="" module_id="videochannel" is_hidden="1" type="integer" var_name="total_my_videos" phrase_var_name="setting_total_my_videos" ordering="8" version_id="3.01">10</setting>
+		<setting group="" module_id="videochannel" is_hidden="1" type="drop" var_name="show_share_and_upload_video_on_dashboard" phrase_var_name="setting_show_share_and_upload_video_on_dashboard" ordering="10" version_id="3.01"><![CDATA[a:2:{s:7:"default";s:5:"share";s:6:"values";a:3:{i:0;s:5:"share";i:1;s:6:"upload";i:2;s:4:"both";}}]]></setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="videochannel.index" module_id="videochannel" component="featured" location="3" is_active="0" ordering="4" disallow_access="" can_move="0">
+			<title>featured</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="videochannel.index" module_id="videochannel" component="sponsored" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Video Channel</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="videochannel.index" module_id="videochannel" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Video Channel</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="videochannel.view" module_id="videochannel" component="related" location="3" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>View</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="videochannel.channel" module_id="videochannel" component="mostviewed" location="3" is_active="0" ordering="1" disallow_access="" can_move="0">
+			<title>Most viewed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="core.index-member" module_id="videochannel" component="mostviewed" location="3" is_active="0" ordering="17" disallow_access="" can_move="0">
+			<title>Top Viewed Videos</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="core.index-member" module_id="videochannel" component="featured" location="3" is_active="0" ordering="19" disallow_access="" can_move="0">
+			<title>Featured Videos</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="pages.view" module_id="videochannel" component="featured" location="3" is_active="0" ordering="8" disallow_access="" can_move="0">
+			<title>Featured Videos</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="videochannel.index" module_id="videochannel" component="mostviewed" location="3" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Top Viewed Videos</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="pages.view" module_id="videochannel" component="mostviewed" location="3" is_active="0" ordering="10" disallow_access="" can_move="0">
+			<title>Top Viewed Videos</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="videochannel.profile" module_id="videochannel" component="pic" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title><![CDATA[Profile Photo &amp; Menu]]></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="videochannel.index" module_id="videochannel" component="mostdiscussed" location="3" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>Most Discussed Videos</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="pages.view" module_id="videochannel" component="categoryinpage" location="1" is_active="1" ordering="2" disallow_access="" can_move="1">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="videochannel" component="parent" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="profile" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="category" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="detail" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="view" m_connection="videochannel.view" module="videochannel" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="videochannel" component="index" m_connection="videochannel.index" module="videochannel" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="videochannel" component="add_channel" m_connection="videochannel.channel.add" module="videochannel" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="videochannel" component="featured" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="channel" m_connection="videochannel.channel" module="videochannel" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="videochannel" component="filter" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="my" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="related" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="sponsored" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="profile" m_connection="videochannel.profile" module="videochannel" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="videochannel" component="share" m_connection="videochannel.share" module="videochannel" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="videochannel" component="mostviewed" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="pic" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="mostdiscussed" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="suggestions" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="videochannel" component="categoryinpage" m_connection="" module="videochannel" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="admin_menu_add_category" added="1565238841">Add Category</phrase>
+		<phrase var_name="admin_menu_manage_categories" added="1565238841">Manage Categories</phrase>
+		<phrase var_name="module_videochannel" added="1565238841">Video Channel</phrase>
+		<phrase var_name="translate_module_videochannel" added="1565238841">Video Channel</phrase>
+		<phrase var_name="menu_videochannel_video_channel_551714af75bcdfed97b5f25442ff6f31" added="1565238841">Video Channel</phrase>
+		<phrase var_name="1_view" added="1565238841">1 view</phrase>
+		<phrase var_name="actions" added="1565238841">Actions</phrase>
+		<phrase var_name="add" added="1565238841">Add</phrase>
+		<phrase var_name="added" added="1565238841">Added</phrase>
+		<phrase var_name="added_by" added="1565238841">Added By</phrase>
+		<phrase var_name="add_a_new_video" added="1565238841">Add a New Video</phrase>
+		<phrase var_name="add_a_video" added="1565238841">Add a Video</phrase>
+		<phrase var_name="add_to_favorites" added="1565238841">Add to Favorites</phrase>
+		<phrase var_name="add_to_your_favorites" added="1565238841">Add to your Favorites</phrase>
+		<phrase var_name="afooter" added="1565238841">aFooter</phrase>
+		<phrase var_name="all_videos" added="1565238841">All Videos</phrase>
+		<phrase var_name="approve" added="1565238841">Approve</phrase>
+		<phrase var_name="approved" added="1565238841">Approved</phrase>
+		<phrase var_name="approve_this_video" added="1565238841">Approve this video.</phrase>
+		<phrase var_name="are_you_sure" added="1565238841">Are you sure?</phrase>
+		<phrase var_name="are_you_sure_this_will_delete_all_videos_that_belong_to_this_category_and_cannot_be_undone" added="1565238841">Are you sure? This will delete all videos that belong to this category and cannot be undone.</phrase>
+		<phrase var_name="awesome" added="1565238841">Awesome</phrase>
+		<phrase var_name="a_href_user_link_full_name_a_added_a_new_comment_on_a_href_item_user_link_item_user_name_s_a_a_href_title_link_video_a" added="1565238841"><![CDATA[<a href="{user_link}">{full_name}</a> added a new comment on <a href="{item_user_link}">{item_user_name}'s</a> <a href="{title_link}">video</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_added_a_new_comment_on_their_own_a_href_title_link_video_a" added="1565238841"><![CDATA[<a href="{user_link}">{full_name}</a> added a new comment on their own <a href="{title_link}">video</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_added_a_new_comment_on_your_a_href_title_link_video_a" added="1565238841"><![CDATA[<a href="{user_link}">{full_name}</a> added a new comment on your <a href="{title_link}">video</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_a_href_view_user_link_view_full_name_a_s_a_href_link_video_a" added="1565238841"><![CDATA[<a href="{user_link}">{full_name}</a> likes <a href="{view_user_link}">{view_full_name}</a>'s <a href="{link}">video</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_their_own_a_href_link_video_a" added="1565238841"><![CDATA[<a href="{user_link}">{full_name}</a> likes {gender} own <a href="{link}">video</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_your_a_href_link_video_a" added="1565238841"><![CDATA[<a href="{user_link}">{full_name}</a> likes your <a href="{link}">video</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_owner_full_name_a_added_a_new_video_a_href_title_link_title_a" added="1565238841"><![CDATA[<a href="{user_link}">{owner_full_name}</a> added a new video "<a href="{title_link}">{title}</a>".]]></phrase>
+		<phrase var_name="be_the_first_to_add_a_video" added="1565238841">Be the First to Add a Video.</phrase>
+		<phrase var_name="browse_filter" added="1565238841">Browse Filter</phrase>
+		<phrase var_name="browse_other_videos" added="1565238841">Browse Other Videos</phrase>
+		<phrase var_name="by" added="1565238841">By</phrase>
+		<phrase var_name="by_full_name" added="1565238841">by {full_name}</phrase>
+		<phrase var_name="by_lowercase" added="1565238841">by</phrase>
+		<phrase var_name="cancel" added="1565238841">cancel</phrase>
+		<phrase var_name="cancel_uppercase" added="1565238841">Cancel</phrase>
+		<phrase var_name="cant_convert_ssource" added="1565238841">Cant convert: {sSource}</phrase>
+		<phrase var_name="can_feature_videos" added="1565238841">Can feature videos?</phrase>
+		<phrase var_name="categories" added="1565238841">Categories</phrase>
+		<phrase var_name="category" added="1565238841">Category</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1565238841">Category order successfully updated.</phrase>
+		<phrase var_name="category_successfully_added" added="1565238841">Category successfully added.</phrase>
+		<phrase var_name="category_successfully_deleted" added="1565238841">Category successfully deleted.</phrase>
+		<phrase var_name="category_successfully_updated" added="1565238841">Category successfully updated.</phrase>
+		<phrase var_name="click_here_to_approve_videos" added="1565238841"><![CDATA[Click <a href="{sLinkPendingVideos}">here</a> to approve videos.]]></phrase>
+		<phrase var_name="click_to_delete_this_image" added="1565238841"><![CDATA[Click <a href="#" onclick="{on_delete_image}">here</a> to delete this image and upload a new one in its place.]]></phrase>
+		<phrase var_name="comments" added="1565238841">Comments</phrase>
+		<phrase var_name="comments_total_comment" added="1565238841">Comments ({total_comment})</phrase>
+		<phrase var_name="comment_privacy" added="1565238841">Comment Privacy</phrase>
+		<phrase var_name="completed_image_simagelocation" added="1565238841">Completed Image: {sImageLocation}</phrase>
+		<phrase var_name="completed_sdestination" added="1565238841">Completed: {sDestination}</phrase>
+		<phrase var_name="control_who_can_comment_on_this_video" added="1565238841">Control who can comment on this video.</phrase>
+		<phrase var_name="control_who_can_see_this_video" added="1565238841">Control who can see this video.</phrase>
+		<phrase var_name="converting_completed_sdestination" added="1565238841">Converting completed: {sDestination}</phrase>
+		<phrase var_name="converting_ssource" added="1565238841">Converting: {sSource}</phrase>
+		<phrase var_name="converting_store_in_cache_video_id" added="1565238841">Converting (store in cache): {video_id}</phrase>
+		<phrase var_name="copyright_consequences_notice" added="1565238841">Uploading copyrighted videos without the explicit consent of the copyright owner will result in your profile being cancelled.</phrase>
+		<phrase var_name="create_a_new_category" added="1565238841">Create a New Category</phrase>
+		<phrase var_name="date_added" added="1565238841">Date Added</phrase>
+		<phrase var_name="delete" added="1565238841">Delete</phrase>
+		<phrase var_name="delete_this_video" added="1565238841">Delete this video.</phrase>
+		<phrase var_name="delete_this_video_menu" added="1565238841">Delete this Video</phrase>
+		<phrase var_name="description" added="1565238841">Description</phrase>
+		<phrase var_name="done" added="1565238841">Done!</phrase>
+		<phrase var_name="edit" added="1565238841">Edit</phrase>
+		<phrase var_name="editing_video" added="1565238841">Editing Video</phrase>
+		<phrase var_name="edit_a_category" added="1565238841">Edit a Category</phrase>
+		<phrase var_name="edit_a_video" added="1565238841">Edit a Video</phrase>
+		<phrase var_name="edit_this_video" added="1565238841">Edit this video.</phrase>
+		<phrase var_name="edit_this_video_menu" added="1565238841">Edit this Video</phrase>
+		<phrase var_name="embed" added="1565238841">Embed</phrase>
+		<phrase var_name="embedding_this_video_is_not_allowed_try_another_video" added="1565238841">Embedding this video is not allowed. Try another video.</phrase>
+		<phrase var_name="encourage_sponsor" added="1565238841">Sponsor your Videos</phrase>
+		<phrase var_name="favourite" added="1565238841">Favorite</phrase>
+		<phrase var_name="feature" added="1565238841">Feature</phrase>
+		<phrase var_name="featured" added="1565238841">Featured</phrase>
+		<phrase var_name="featured_videos" added="1565238841">Featured Videos</phrase>
+		<phrase var_name="feature_this_video" added="1565238841">Feature this video.</phrase>
+		<phrase var_name="file_exists_sdestination" added="1565238841">File exists: {sDestination}</phrase>
+		<phrase var_name="file_upload" added="1565238841">File Upload</phrase>
+		<phrase var_name="friends_videos" added="1565238841"><![CDATA[Friends' Videos]]></phrase>
+		<phrase var_name="full_name_commented_on_gender_video" added="1565238841">{full_name} commented on {gender} video.</phrase>
+		<phrase var_name="full_name_commented_on_gender_video_a_href_link_title_a_to_see_the_comment_thread_follow_the_link_below_a_href_link_link_a" added="1565238841"><![CDATA[{full_name} commented on {gender} video "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_other_full_name_s_video" added="1565238841"><![CDATA[{full_name} commented on {other_full_name}'s video.]]></phrase>
+		<phrase var_name="full_name_commented_on_other_full_name_s_video_a_href_link_title_a_to_see_the_comment_thread_follow_the_link_below_a_href_link_link_a" added="1565238841"><![CDATA[{full_name} commented on {other_full_name}'s video "<a href="{link}">{title}</a>.
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_your_video_a_href_link_title_a_to_see_the_comment_thread_follow_the_link_below_a_href_link_link_a" added="1565238841"><![CDATA[{full_name} commented on your video "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_your_video_title" added="1565238841"><![CDATA[{full_name} commented on your video "{title}".]]></phrase>
+		<phrase var_name="full_name_liked_your_video_message" added="1565238841"><![CDATA[{full_name} liked your video "<a href="{link}">{title}</a>"
+To view this video follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_liked_your_video_title" added="1565238841"><![CDATA[{full_name} liked your video "{title}"]]></phrase>
+		<phrase var_name="full_name_s_videos" added="1565238841"><![CDATA[{full_name}'s Videos]]></phrase>
+		<phrase var_name="full_name_s_videos_full_name_has_total_video_s" added="1565238841"><![CDATA[{full_name}'s videos. {full_name} has {total} video(s).]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_video" added="1565238841"><![CDATA[<a href="{user_link}">{full_name}</a> wrote a comment on your video "<a href="{link}">{title}</a>".]]></phrase>
+		<phrase var_name="go_advanced" added="1565238841">go advanced</phrase>
+		<phrase var_name="go_advanced_uppercase" added="1565238841">Go Advanced</phrase>
+		<phrase var_name="here" added="1565238841">here</phrase>
+		<phrase var_name="id_must_be_defined" added="1565238841">ID must be defined.</phrase>
+		<phrase var_name="invalid_permissions" added="1565238841">Invalid Permissions.</phrase>
+		<phrase var_name="in_sorting_order" added="1565238841">in</phrase>
+		<phrase var_name="keywords" added="1565238841">Keywords</phrase>
+		<phrase var_name="latest" added="1565238841">Latest</phrase>
+		<phrase var_name="link" added="1565238841">Link</phrase>
+		<phrase var_name="load_more_suggestions" added="1565238841">Load More Suggestions</phrase>
+		<phrase var_name="manage_categories" added="1565238841">Manage Categories</phrase>
+		<phrase var_name="manage_videos" added="1565238841">Manage Videos</phrase>
+		<phrase var_name="max_file_size_iuploadlimit" added="1565238841">Max file size: {iUploadLimit}</phrase>
+		<phrase var_name="menu_upload_a_new_video" added="1565238841">Upload/Share a Video</phrase>
+		<phrase var_name="menu_videos" added="1565238841">Videos</phrase>
+		<phrase var_name="moderate" added="1565238841">Moderate</phrase>
+		<phrase var_name="module_video" added="1565238841">Videos</phrase>
+		<phrase var_name="more_from" added="1565238841">More From:</phrase>
+		<phrase var_name="most_discussed" added="1565238841">Most Discussed</phrase>
+		<phrase var_name="most_liked" added="1565238841">Most Liked</phrase>
+		<phrase var_name="most_viewed" added="1565238841">Most Viewed</phrase>
+		<phrase var_name="my_videos" added="1565238841">My Videos</phrase>
+		<phrase var_name="name" added="1565238841">Name</phrase>
+		<phrase var_name="nothing_special" added="1565238841">Nothing Special</phrase>
+		<phrase var_name="nothing_to_convert" added="1565238841">Nothing to convert.</phrase>
+		<phrase var_name="not_a_valid_file_we_only_allow_sallow" added="1565238841">Not a valid file. We only allow: {sAllow}</phrase>
+		<phrase var_name="not_a_valid_site_valid_sites_asites" added="1565238841">Not a valid site. Valid sites: {aSites}</phrase>
+		<phrase var_name="not_a_valid_video_to_display" added="1565238841">Not a valid video to display.</phrase>
+		<phrase var_name="no_videos_added_yet" added="1565238841">No videos added yet.</phrase>
+		<phrase var_name="no_videos_added_yet_link_to_add" added="1565238841"><![CDATA[No videos added yet. Click <a href="{sAddNewVideoLink}"> here</a> to add a new video.]]></phrase>
+		<phrase var_name="no_videos_found" added="1565238841">No videos found.</phrase>
+		<phrase var_name="no_videos_have_been_added" added="1565238841">No videos have been added.</phrase>
+		<phrase var_name="no_videos_have_been_added_yet" added="1565238841">No videos have been added yet.</phrase>
+		<phrase var_name="on_name_s_video" added="1565238841"><![CDATA[On {name}'s video.]]></phrase>
+		<phrase var_name="parent_category" added="1565238841">Parent Category</phrase>
+		<phrase var_name="paste_url" added="1565238841">Paste URL</phrase>
+		<phrase var_name="pending" added="1565238841">Pending</phrase>
+		<phrase var_name="photo" added="1565238841">Photo</phrase>
+		<phrase var_name="please_provide_a_valid_url_for_your_video" added="1565238841">Please provide a valid URL for your video.</phrase>
+		<phrase var_name="poor" added="1565238841">Poor</phrase>
+		<phrase var_name="popular" added="1565238841">Popular</phrase>
+		<phrase var_name="posted_a_comment_on_gender_video" added="1565238841">posted a comment on {gender} video</phrase>
+		<phrase var_name="posted_a_comment_on_user_name_s_video" added="1565238841"><![CDATA[posted a comment on {user_name}'s video]]></phrase>
+		<phrase var_name="pretty_cool" added="1565238841">Pretty Cool</phrase>
+		<phrase var_name="privacy" added="1565238841">Privacy</phrase>
+		<phrase var_name="provide_a_category_this_video_will_belong_to" added="1565238841">Provide a category this video will belong to.</phrase>
+		<phrase var_name="provide_a_title_for_this_video" added="1565238841">Provide a title for this video.</phrase>
+		<phrase var_name="rating" added="1565238841">Rating</phrase>
+		<phrase var_name="recent_videos" added="1565238841">Recent Videos</phrase>
+		<phrase var_name="related_videos" added="1565238841">Related Videos</phrase>
+		<phrase var_name="removed_source_file" added="1565238841">Removed source file.</phrase>
+		<phrase var_name="remove_spotlight" added="1565238841">Remove Spotlight</phrase>
+		<phrase var_name="remove_the_spotlight_from_this_video" added="1565238841">Remove the spotlight from this video.</phrase>
+		<phrase var_name="report" added="1565238841">Report</phrase>
+		<phrase var_name="report_a_video" added="1565238841">Report a Video</phrase>
+		<phrase var_name="report_this_video" added="1565238841">Report this video</phrase>
+		<phrase var_name="reset" added="1565238841">Reset</phrase>
+		<phrase var_name="rss_description_5" added="1565238841">List of all the latest videos.</phrase>
+		<phrase var_name="rss_group_name_4" added="1565238841">Videos</phrase>
+		<phrase var_name="rss_title_5" added="1565238841">Latest Videos</phrase>
+		<phrase var_name="save" added="1565238841">Save</phrase>
+		<phrase var_name="say_something_about_this_video" added="1565238841">Say something about this video...</phrase>
+		<phrase var_name="search_videos" added="1565238841">Search Videos...</phrase>
+		<phrase var_name="select" added="1565238841">Select</phrase>
+		<phrase var_name="select_a_sub_category" added="1565238841">Select a Sub-Category</phrase>
+		<phrase var_name="select_a_video" added="1565238841">Select a video.</phrase>
+		<phrase var_name="select_a_video_to_attach" added="1565238841">Select a video to attach.</phrase>
+		<phrase var_name="select_a_video_to_upload" added="1565238841">Select a video to upload.</phrase>
+		<phrase var_name="select_form_select" added="1565238841">Select</phrase>
+		<phrase var_name="select_video" added="1565238841">Select Video</phrase>
+		<phrase var_name="setting_allow_youtube_iframe" added="1565238841"><![CDATA[<title>Allow iFrame From Youtube</title><info>iFrames pose a security risk and are disabled by default in the script. 
+If you want to allow users to embed videos from youtube you can enable iframes only for youtube here.</info>]]></phrase>
+		<phrase var_name="setting_close_sql_connection_while_converting" added="1565238841"><![CDATA[<title>Close SQL Connection During Conversion</title><info>Enable this option to close the SQL connection while converting videos.</info>]]></phrase>
+		<phrase var_name="setting_embed_auto_play" added="1565238841"><![CDATA[<title>Auto Play (Shared Videos)</title><info>If enabled this setting will attempt to auto play shared videos (eg. Youtube). 
+
+Note: This will only work on new videos being added.</info>]]></phrase>
+		<phrase var_name="setting_full_screen_with_youtube" added="1565238841"><![CDATA[<title>Enable Full Screen for YouTube</title><info>Enable this option to enable the "Full Screen" feature for YouTube videos.</info>]]></phrase>
+		<phrase var_name="setting_show_share_and_upload_video_on_dashboard" added="1565238841"><![CDATA[<title>Show upload and share on Dashboard</title><info>Here you can choose whether to show just the "upload video" link, just the "share video" link or both on the dashboard.</info>]]></phrase>
+		<phrase var_name="setting_total_my_videos" added="1565238841"><![CDATA[<title>Total "More From" Videos to Display</title><info>When viewing a video we list more videos that belong to the owner of the video. Define how many videos should be displayed within this block.</info>]]></phrase>
+		<phrase var_name="setting_total_related_videos" added="1565238841"><![CDATA[<title>Total Related Videos to Display</title><info>Define how many related videos should be displayed when viewing a video.</info>]]></phrase>
+		<phrase var_name="setting_video_file_size_limit" added="1565238841"><![CDATA[<title>Video File Size Limit</title><info>File size limit in megabytes.</info>]]></phrase>
+		<phrase var_name="setting_video_meta_description" added="1565238841"><![CDATA[<title>Video Meta Description</title><info>Meta description used within the video section.</info>]]></phrase>
+		<phrase var_name="setting_video_meta_keywords" added="1565238841"><![CDATA[<title>Video Meta Keywords</title><info>Meta keywords used within the video section.</info>]]></phrase>
+		<phrase var_name="setting_video_time_stamp" added="1565238841"><![CDATA[<title>Video Time Stamp</title><info>Video Time Stamp</info>]]></phrase>
+		<phrase var_name="share_a_video" added="1565238841">Share a Video</phrase>
+		<phrase var_name="show_less" added="1565238841">Show Less</phrase>
+		<phrase var_name="show_more" added="1565238841">Show More</phrase>
+		<phrase var_name="sort" added="1565238841">Sort</phrase>
+		<phrase var_name="span_no_more_suggestions_found_span" added="1565238841"><![CDATA[<span>No more suggestions found</span>]]></phrase>
+		<phrase var_name="sponsor" added="1565238841">Sponsor</phrase>
+		<phrase var_name="sponsored" added="1565238841">Sponsored</phrase>
+		<phrase var_name="sponsored_video" added="1565238841">Sponsored Video</phrase>
+		<phrase var_name="sponsor_error_not_found" added="1565238841">The video you are trying to sponsor cannot be found.</phrase>
+		<phrase var_name="sponsor_help" added="1565238841"><![CDATA[To purchase sponsor space for your video, view your video by clicking on it and then click on "Sponsor" on the right hand side menu]]></phrase>
+		<phrase var_name="sponsor_paypal_message" added="1565238841">Payment for the sponsor space of video: {sVideoTitle}</phrase>
+		<phrase var_name="sponsor_this_video" added="1565238841">Sponsor this video</phrase>
+		<phrase var_name="sponsor_title" added="1565238841">Video: {sVideoTitle}</phrase>
+		<phrase var_name="spotlight" added="1565238841">Spotlight</phrase>
+		<phrase var_name="spotlight_this_video" added="1565238841">Spotlight this video.</phrase>
+		<phrase var_name="started_converting_process" added="1565238841">Started converting process.</phrase>
+		<phrase var_name="start_converting_process_video_id" added="1565238841">Start converting process: {video_id}</phrase>
+		<phrase var_name="step_1" added="1565238841">Step 1</phrase>
+		<phrase var_name="step_2" added="1565238841">Step 2</phrase>
+		<phrase var_name="submit" added="1565238841">Submit</phrase>
+		<phrase var_name="sub_categories" added="1565238841">Sub-Categories</phrase>
+		<phrase var_name="suggestions" added="1565238841">Suggestions</phrase>
+		<phrase var_name="supported_sites" added="1565238841">Supported sites</phrase>
+		<phrase var_name="tags" added="1565238841">Tags</phrase>
+		<phrase var_name="there_are_ivideoapprovecnt_videos_that_are_pending_approval" added="1565238841">There are {iVideoApproveCnt} videos that are pending approval.</phrase>
+		<phrase var_name="there_is_one_video_that_is_pending_approval" added="1565238841">There is one video that is pending approval.</phrase>
+		<phrase var_name="the_file_size_limit_is" added="1565238841">The file size limit is {iMaxFileSize_filesize}. If your upload does not work, try uploading a smaller picture.</phrase>
+		<phrase var_name="the_video_you_are_looking_for_does_not_exist_or_has_been_removed" added="1565238841">The video you are looking for does not exist or has been removed.</phrase>
+		<phrase var_name="title" added="1565238841">Title</phrase>
+		<phrase var_name="topic" added="1565238841">Topic</phrase>
+		<phrase var_name="total_rating_out_of_10" added="1565238841">{total_rating} out of 10</phrase>
+		<phrase var_name="total_rating_ratings" added="1565238841">{total_rating} Ratings</phrase>
+		<phrase var_name="total_score_out_of_10" added="1565238841">{total_score} out of 10</phrase>
+		<phrase var_name="total_views" added="1565238841">{total} views</phrase>
+		<phrase var_name="total_views_views" added="1565238841">{total_views} views</phrase>
+		<phrase var_name="unable_to_convert_video" added="1565238841">Unable to convert video.</phrase>
+		<phrase var_name="unable_to_edit_this_video" added="1565238841">Unable to edit this video</phrase>
+		<phrase var_name="unable_to_edit_this_video_as_there_is_no_video_id" added="1565238841">Unable to edit this video as there is no video ID#</phrase>
+		<phrase var_name="unable_to_embed_this_video_due_to_privacy_settings" added="1565238841">Unable to embed this video due to privacy settings.</phrase>
+		<phrase var_name="unable_to_find_the_video_image_you_plan_to_delete" added="1565238841">Unable to find the video image you plan to delete.</phrase>
+		<phrase var_name="unable_to_find_the_video_you_plan_to_delete" added="1565238841">Unable to find the video you plan to delete.</phrase>
+		<phrase var_name="unable_to_find_the_video_you_plan_to_edit" added="1565238841">Unable to find the video you plan to edit.</phrase>
+		<phrase var_name="unable_to_find_the_video_you_want_to_approve" added="1565238841">Unable to find the video you want to approve.</phrase>
+		<phrase var_name="unable_to_post_a_comment_on_this_item_due_to_privacy_settings" added="1565238841">Unable to post a comment on this item due to privacy settings.</phrase>
+		<phrase var_name="unable_to_process_this_video" added="1565238841">Unable to process this video.</phrase>
+		<phrase var_name="unable_to_view_this_item_due_to_privacy_settings" added="1565238841">Unable to view this item due to privacy settings.</phrase>
+		<phrase var_name="unfeature" added="1565238841">Unfeature</phrase>
+		<phrase var_name="unsponsor_this_video" added="1565238841">Unsponsor this video</phrase>
+		<phrase var_name="un_feature" added="1565238841">Un-Feature</phrase>
+		<phrase var_name="un_feature_this_video" added="1565238841">Un-Feature this video.</phrase>
+		<phrase var_name="un_sponsor" added="1565238841">Un-Sponsor</phrase>
+		<phrase var_name="update" added="1565238841">Update</phrase>
+		<phrase var_name="updated_database_video_table" added="1565238841">Updated database video table.</phrase>
+		<phrase var_name="updated_process_id" added="1565238841">Updated process ID#</phrase>
+		<phrase var_name="updated_user_points" added="1565238841">Updated user points.</phrase>
+		<phrase var_name="update_order" added="1565238841">Update Order</phrase>
+		<phrase var_name="update_tags_videos" added="1565238841">Update Tags (Videos)</phrase>
+		<phrase var_name="update_user_video_count" added="1565238841">Update User Video Count</phrase>
+		<phrase var_name="update_video_view_count" added="1565238841"><![CDATA[Update video "view" count (Only for those that upgraded from v1.6.21).]]></phrase>
+		<phrase var_name="upload" added="1565238841">Upload</phrase>
+		<phrase var_name="uploading" added="1565238841">Uploading</phrase>
+		<phrase var_name="upload_a_video" added="1565238841">Upload a Video</phrase>
+		<phrase var_name="upload_copyrights_notice" added="1565238841">You retain all rights in your video that you upload. You must only upload videos in which you own all the rights. If you upload any videos in which you do not own all the rights, you may be violating copyright law.</phrase>
+		<phrase var_name="upload_failed_file_is_too_large" added="1565238841">Upload failed. File is too large.</phrase>
+		<phrase var_name="upload_more_videos" added="1565238841">Upload More Videos</phrase>
+		<phrase var_name="upload_problems_try_the_basic_uploader" added="1565238841"><![CDATA[Upload problems? Try the <a href="{link}">basic uploader</a> (works on older computers and web browsers).]]></phrase>
+		<phrase var_name="upload_share_a_video" added="1565238841">Share a Video</phrase>
+		<phrase var_name="upload_videos" added="1565238841">Upload Videos</phrase>
+		<phrase var_name="url" added="1565238841">URL</phrase>
+		<phrase var_name="user_link_has_not_added_any_videos" added="1565238841">{user_link} has not added any videos.</phrase>
+		<phrase var_name="user_name_commented_on_gender_video_title" added="1565238841"><![CDATA[{user_name} commented on {gender} video "{title}"]]></phrase>
+		<phrase var_name="user_name_commented_on_span_class_drop_data_user_full_name_s_span_video_title" added="1565238841"><![CDATA[{user_name} commented on <span class="drop_data_user">{full_name}'s</span> video "{title}"]]></phrase>
+		<phrase var_name="user_name_commented_on_your_video_title" added="1565238841"><![CDATA[{user_name} commented on your video "{title}"]]></phrase>
+		<phrase var_name="user_name_left_you_a_comment_on_site_title" added="1565238841">{user_name} left you a comment on {site_title}.</phrase>
+		<phrase var_name="user_name_left_you_a_comment_on_your_video_title" added="1565238841"><![CDATA[{user_name} left you a comment on your video "{title}".
+
+To view this comment, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="user_name_liked_gender_own_video_title" added="1565238841"><![CDATA[{user_name} liked {gender} own video "{title}"]]></phrase>
+		<phrase var_name="user_name_liked_span_class_drop_data_user_full_name_s_span_video_title" added="1565238841"><![CDATA[{user_name} liked <span class="drop_data_user">{full_name}'s</span> video "{title}"]]></phrase>
+		<phrase var_name="user_name_liked_your_video_title" added="1565238841"><![CDATA[{user_name} liked your video "{title}"]]></phrase>
+		<phrase var_name="user_setting_approve_video_before_display" added="1565238841">Should videos added by this user group be approved before they are displayed publicly?</phrase>
+		<phrase var_name="user_setting_auto_publish_sponsored_item" added="1565238841">After the user has purchased a sponsored space, should the video be published right away?
+If set to false, the admin will have to approve each new purchased sponsored video space before it is shown in the site.</phrase>
+		<phrase var_name="user_setting_can_access_videos" added="1565238841">Can browse and view the video channel module?</phrase>
+		<phrase var_name="user_setting_can_add_comment_on_video" added="1565238841">Can add comments on videos?</phrase>
+		<phrase var_name="user_setting_can_approve_videos" added="1565238841">Can approve videos?</phrase>
+		<phrase var_name="user_setting_can_delete_other_video" added="1565238841">Can delete videos added by other users?</phrase>
+		<phrase var_name="user_setting_can_delete_own_video" added="1565238841">Can delete own video?</phrase>
+		<phrase var_name="user_setting_can_edit_other_video" added="1565238841">Can edit videos added by other users?</phrase>
+		<phrase var_name="user_setting_can_edit_own_video" added="1565238841">Can edit own video?</phrase>
+		<phrase var_name="user_setting_can_feature_videos" added="1565238841">Can feature videos?</phrase>
+		<phrase var_name="user_setting_can_feature_videos_" added="1565238841">Can feature videos?</phrase>
+		<phrase var_name="user_setting_can_purchase_sponsor" added="1565238841">Can members of this user group purchase a sponsored ad space?</phrase>
+		<phrase var_name="user_setting_can_sponsor_video" added="1565238841">Can members of this user group mark videos as sponsor?</phrase>
+		<phrase var_name="user_setting_can_spotlight_videos" added="1565238841">Can spotlight videos?</phrase>
+		<phrase var_name="user_setting_can_upload_videos" added="1565238841">Can upload videos?</phrase>
+		<phrase var_name="user_setting_flood_control_videos" added="1565238841"><![CDATA[How many minutes should a user wait before they can share/upload another video?
+
+Note: Setting it to "0" (without quotes) is default and users will not have to wait.]]></phrase>
+		<phrase var_name="user_setting_max_size_for_video_photos" added="1565238841"><![CDATA[Max file size for photos upload in kilobits (kb).
+(1000 kb = 1 mb)
+For unlimited add "0" without quotes. 
+
+<b>Notice:</b> Photos are only uploaded if we were unable to convert/import photos.]]></phrase>
+		<phrase var_name="user_setting_points_videochannel" added="1565238841">Points received when adding a video.</phrase>
+		<phrase var_name="user_setting_video_file_size_limit" added="1565238841">File size limit in megabytes.</phrase>
+		<phrase var_name="user_setting_video_sponsor_price" added="1565238841">How much is the sponsor space worth?
+This works in a CPM basis.</phrase>
+		<phrase var_name="use_mass_uploader" added="1565238841">Use mass uploader</phrase>
+		<phrase var_name="use_simple_uploader" added="1565238841">Use simple uploader</phrase>
+		<phrase var_name="video" added="1565238841">Video</phrase>
+		<phrase var_name="videochannel" added="1565238841">Video Channel</phrase>
+		<phrase var_name="videos_for_this_profile_is_set_to_private" added="1565238841">Videos for this profile is set to private.</phrase>
+		<phrase var_name="video_added_on_time_stamp_by_full_name" added="1565238841"><![CDATA[<a href="{link}">Video</a> added on {time_stamp} by <a href="{user_link}">{full_name}</a>.]]></phrase>
+		<phrase var_name="video_approved" added="1565238841">Video Approved</phrase>
+		<phrase var_name="video_category_details" added="1565238841">Video Category Details</phrase>
+		<phrase var_name="video_details" added="1565238841">Video Details</phrase>
+		<phrase var_name="video_has_been_approved" added="1565238841">Video has been approved.</phrase>
+		<phrase var_name="video_is_being_processed" added="1565238841">Video is being processed.</phrase>
+		<phrase var_name="video_is_pending_approval" added="1565238841">Video is pending approval.</phrase>
+		<phrase var_name="video_photo" added="1565238841">Video Photo</phrase>
+		<phrase var_name="video_section_is_closed" added="1565238841">Video section is closed.</phrase>
+		<phrase var_name="video_successfully_added" added="1565238841">Video successfully added.</phrase>
+		<phrase var_name="video_successfully_deleted" added="1565238841">Video successfully deleted.</phrase>
+		<phrase var_name="video_successfully_sponsored" added="1565238841">Video successfully sponsored.</phrase>
+		<phrase var_name="video_successfully_un_sponsored" added="1565238841">Video successfully unsponsored.</phrase>
+		<phrase var_name="video_successfully_updated" added="1565238841">Video successfully updated.</phrase>
+		<phrase var_name="video_successfully_uploaded" added="1565238841">Video successfully uploaded.</phrase>
+		<phrase var_name="video_successfull_added_however_you_will_have_to_manually_upload_a_photo_for_it" added="1565238841">Video successfull added, however you will have to manually upload a photo for it.</phrase>
+		<phrase var_name="video_s_successfully_approved" added="1565238841">Video(s) successfully approved.</phrase>
+		<phrase var_name="video_s_successfully_deleted" added="1565238841">Video(s) successfully deleted.</phrase>
+		<phrase var_name="video_text" added="1565238841">Video Text</phrase>
+		<phrase var_name="video_title" added="1565238841">Video Title</phrase>
+		<phrase var_name="video_url" added="1565238841">Video URL</phrase>
+		<phrase var_name="view" added="1565238841">View</phrase>
+		<phrase var_name="viewing_video" added="1565238841">Viewing Video</phrase>
+		<phrase var_name="views" added="1565238841">views</phrase>
+		<phrase var_name="view_more" added="1565238841">View More</phrase>
+		<phrase var_name="view_more_videos" added="1565238841">View More Videos</phrase>
+		<phrase var_name="view_this_video" added="1565238841">View This Video</phrase>
+		<phrase var_name="view_videos" added="1565238841">View Videos</phrase>
+		<phrase var_name="view_your_videos" added="1565238841">View Your Videos</phrase>
+		<phrase var_name="who_can_share_videos" added="1565238841">Who can share videos (video channel)?</phrase>
+		<phrase var_name="who_can_view_browse_videos" added="1565238841">Who can view/browse videos (video channel)?</phrase>
+		<phrase var_name="worth_watching" added="1565238841">Worth Watching</phrase>
+		<phrase var_name="your_video_has_been_approved_on_site_title" added="1565238841">Your video has been approved on {site_title}</phrase>
+		<phrase var_name="your_video_has_been_approved_on_site_title_n_nto_view_this_video_follow_the_link_below_n_a_href" added="1565238841"><![CDATA[Your video has been approved on {site_title}.nnTo view this video, follow the link below:n<a href="{sLink}"> {sLink} </a>]]></phrase>
+		<phrase var_name="your_video_has_successfully_been_uploaded_please_standby_while_we_convert_your_video" added="1565238841">Your video has successfully been uploaded. Please standby while we convert your video.</phrase>
+		<phrase var_name="your_video_title_has_been_approved" added="1565238841"><![CDATA[Your video "{title}" has been approved.]]></phrase>
+		<phrase var_name="you_are_sharing_a_video_a_little_too_soon" added="1565238841">You are sharing a video a little too soon.</phrase>
+		<phrase var_name="you_are_uploading_a_video_a_little_too_soon" added="1565238841">You are uploading a video a little too soon.</phrase>
+		<phrase var_name="you_cannot_rate_your_own_video" added="1565238841">You cannot rate your own video.</phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1565238841">You can upload a JPG, GIF or PNG file.</phrase>
+		<phrase var_name="you_can_upload_a_sfileext_file" added="1565238841">You can upload a {sFileExt} file.</phrase>
+		<phrase var_name="you_have_already_voted" added="1565238841">You have already voted.</phrase>
+		<phrase var_name="you_have_not_added_any_videos" added="1565238841">You have not added any videos.</phrase>
+		<phrase var_name="videochannel_popular" added="1565238841">Popular</phrase>
+		<phrase var_name="videochannel_featured" added="1565238841">Featured</phrase>
+		<phrase var_name="user_setting_can_add_channels" added="1565238841">Can add and edit channels?</phrase>
+		<phrase var_name="my_channels" added="1565238841">My Channels</phrase>
+		<phrase var_name="add_a_channel" added="1565238841">Add a Channel</phrase>
+		<phrase var_name="enter_keywords_to_search_channels" added="1565238841">Enter keywords to search channels</phrase>
+		<phrase var_name="find_channels" added="1565238841">Find Channels</phrase>
+		<phrase var_name="user_setting_channel_search_results" added="1565238841"><![CDATA[How many channels will be shown after clicking "Find Channels"? (Recommend value < 50)]]></phrase>
+		<phrase var_name="invalid_channel_information" added="1565238841">Invalid channel information</phrase>
+		<phrase var_name="invalid_channel_link" added="1565238841">Invalid channel link</phrase>
+		<phrase var_name="user_setting_channel_add_videos_limit" added="1565238841">How many videos will be grabbed when adding a channel?</phrase>
+		<phrase var_name="videos_list" added="1565238841">Videos list</phrase>
+		<phrase var_name="summary" added="1565238841">Summary</phrase>
+		<phrase var_name="control_who_can_view_this_channel" added="1565238841">Control who can view this channel</phrase>
+		<phrase var_name="add_channel_failed" added="1565238841">Could not add this channel.</phrase>
+		<phrase var_name="provide_a_category_channels_will_belong_to" added="1565238841">Provide a category channels will belong to</phrase>
+		<phrase var_name="channel_added" added="1565238841">Channel successfully added.</phrase>
+		<phrase var_name="can_not_add_this_channel" added="1565238841">Can not add this channel.</phrase>
+		<phrase var_name="please_select_a_videos_to_add" added="1565238841">Please select a video(s) to add.</phrase>
+		<phrase var_name="control_who_can_comment_all_videos_on_this_channel" added="1565238841">Control who can comment all videos on this channel</phrase>
+		<phrase var_name="add_more_videos" added="1565238841">Add more videos</phrase>
+		<phrase var_name="this_channel_is_already_added" added="1565238841">This channel is already added.</phrase>
+		<phrase var_name="could_not_delete_this_channel" added="1565238841">Could not delete this channel.</phrase>
+		<phrase var_name="the_channel_successfully_deleted" added="1565238841">The channel successfully deleted.</phrase>
+		<phrase var_name="channel_successfully_updated" added="1565238841">Channel successfully updated.</phrase>
+		<phrase var_name="user_setting_can_set_allow_list_on_videos" added="1565238841"><![CDATA[Can set an "Allow List" when adding a new channel?
+
+Note: This setting will give the user the feature to add a list of users that can view their video.]]></phrase>
+		<phrase var_name="searching_channels" added="1565238841">Searching channels</phrase>
+		<phrase var_name="no_channels_found" added="1565238841">No channels found.</phrase>
+		<phrase var_name="edit_channel" added="1565238841">Edit channel</phrase>
+		<phrase var_name="delete_all" added="1565238841">Delete All</phrase>
+		<phrase var_name="delete_all_videos_belong_to_this_channel" added="1565238841">Are you sure? It will delete all videos that belong to this channel and cannot be undone.</phrase>
+		<phrase var_name="processing" added="1565238841">Processing...</phrase>
+		<phrase var_name="search_channels" added="1565238841">Search Channels...</phrase>
+		<phrase var_name="auto_update" added="1565238841">Auto update</phrase>
+		<phrase var_name="user_setting_channel_get_videos_limit" added="1565238841">How many videos will be get automatically when updating a channel? </phrase>
+		<phrase var_name="no_new_videos_found" added="1565238841">No new videos found.</phrase>
+		<phrase var_name="featured_this_video_successfully" added="1565238841">Featured this video successfully</phrase>
+		<phrase var_name="un_featured_this_video_successfully" added="1565238841">Un-Featured this video successfully</phrase>
+		<phrase var_name="added_channels_already_reached_the_limit" added="1565238841">Added channels already reached the limit.</phrase>
+		<phrase var_name="user_setting_channels_limit" added="1565238841">How many channels can a user add?</phrase>
+		<phrase var_name="menu_videochannel_upload_share_a_video_e31644c1c9d16431153ea5ef5ed06c3d" added="1565238841">Share a Video</phrase>
+		<phrase var_name="menu_videochannel_add_a_channel_e31644c1c9d16431153ea5ef5ed06c3d" added="1565238841">Add a channel</phrase>
+		<phrase var_name="0_view" added="1565238841">0 view</phrase>
+		<phrase var_name="enter_channel_title" added="1565238841">Provide a title for this channel.</phrase>
+		<phrase var_name="videos_in_channels" added="1565238841">Videos in channels</phrase>
+		<phrase var_name="total_x_videos_successfully_added" added="1565238841">Total {iTotal} Video(s) successfully added.</phrase>
+		<phrase var_name="total_about_x_videos" added="1565238841">Total about {iCount} videos</phrase>
+		<phrase var_name="user_name_tagged_you_in_a_comment_in_a_video" added="1565238841">{user_name} tagged you in a comment on a video</phrase>
+		<phrase var_name="videos" added="1565238841">videos</phrase>
+		<phrase var_name="who_can_add_channels" added="1565238841">who can add channels on page</phrase>
+		<phrase var_name="all_channels" added="1565238841">All Channels</phrase>
+		<phrase var_name="channels" added="1565238841">Channels</phrase>
+		<phrase var_name="most_rated" added="1565238841">Most Rated Videos</phrase>
+		<phrase var_name="top_rated" added="1565238841">Top Rated</phrase>
+		<phrase var_name="channel_url" added="1565238841">Channel URL</phrase>
+		<phrase var_name="favourite_succeed" added="1565238841">Add to favorite successfully</phrase>
+		<phrase var_name="favourite_unsucceed" added="1565238841">Add to favorite unsuccessfully</phrase>
+		<phrase var_name="favourited_a_video" added="1565238841">favorited a video</phrase>
+		<phrase var_name="nolonger_favourited_a_video" added="1565238841">no longer favorited a video</phrase>
+		<phrase var_name="unfavourite" added="1565238841">Unfavorite</phrase>
+		<phrase var_name="unfavourite_succeed" added="1565238841">Unfavorite successfully</phrase>
+		<phrase var_name="unfavourite_unsucceed" added="1565238841">Unfavorite unsuccessfully</phrase>
+		<phrase var_name="user_name_favourited_gender_own_video_title" added="1565238841"><![CDATA[{user_name} favorited {gender} own video "{title}"]]></phrase>
+		<phrase var_name="user_name_favourited_your_video_title" added="1565238841"><![CDATA[{user_name} favorited your video "{title}"]]></phrase>
+		<phrase var_name="please_provide_a_valid_url_for_your_channel" added="1565238841">Please provide a valid URL for your channel.</phrase>
+		<phrase var_name="user_setting_can_upload_video_on_page" added="1565238841">Can upload video on pages?</phrase>
+		<phrase var_name="user_setting_can_add_channel_on_page" added="1565238841">Can page owner add channel on pages?</phrase>
+		<phrase var_name="my_favorites" added="1565238841">My Favorites</phrase>
+		<phrase var_name="view_all" added="1565238841">View All</phrase>
+		<phrase var_name="enter_url_to_add_channel" added="1565238841">Enter URL to add channel</phrase>
+		<phrase var_name="setting_subcategories_to_show_at_first" added="1565238841"><![CDATA[<title>How many subcategories to show at first</title><info>This setting tells how many subcategories are to be shown at first. If the list of subcategories is longer than this value the extra ones will be hidden and a "View More" option will be shown instead, allowing the user to display the hidden subcategories. 
+
+a "View Less" option will be available to provide the full "accordion" effect. 
+
+If you set it to zero ("0" without quotes) it will hide every subcategory and a plus sign will show next to the category name, clicking the plus sign will show that category&#039;s subcategories.</info>]]></phrase>
+		<phrase var_name="setting_use_youtube_iframe" added="1565238841"><![CDATA[<title>Use Youtube iFrame</title><info>Use Youtube iFrame to display the video on Video Channel module.</info>]]></phrase>
+		<phrase var_name="menu_videochannel_videos_channel_532c28d5412dd75bf975fb951c740a30" added="1565238841">Videos Channel</phrase>
+		<phrase var_name="setting_allow_using_youtube_iframe" added="1565238841"><![CDATA[<title>Allow Using Youtube Iframe</title><info>Allow using Youtube iframe to display video on Video Channel.</info>]]></phrase>
+		<phrase var_name="menu_add_new_videochannel" added="1565238841">Add/Upload Video Channel</phrase>
+		<phrase var_name="provide_a_language_name_name" added="1565238841"><![CDATA[Provide a "{language_name}" name]]></phrase>
+		<phrase var_name="category_language_name_name_must_beLess_than_limit" added="1565238841"><![CDATA[Category "{language_name}" name must be less than {limit}]]></phrase>
+		<phrase var_name="added_x_videos_to_user_channel" added="1565238841"><![CDATA[Added {total_videos} Video(s) to {gender} channel <a href="{channel_url}">{channel_title}</a>.]]></phrase>
+		<phrase var_name="this_channel_does_not_exist" added="1565238841">This channel does not exist.</phrase>
+		<phrase var_name="video_s" added="1565238841">video (s)</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_video_permanently" added="1565238841">Are you sure you want to delete this video permanently?</phrase>
+		<phrase var_name="videochannel_admin_menu_user_group_settings" added="1565238841">User Group Settings</phrase>
+		<phrase var_name="controller_videochannel.channel" added="1565238841">Video Channel Home Page</phrase>
+		<phrase var_name="controller_videochannel.index" added="1565238841">Video Home Page</phrase>
+		<phrase var_name="controller_videochannel.profile" added="1565238841">User Video Home Page</phrase>
+		<phrase var_name="controller_videochannel.view" added="1565238841">Video Detail</phrase>
+		<phrase var_name="video_channel" added="1565238841">Video Channel</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="videochannel" type="integer" admin="0" user="0" guest="0" staff="0" module="videochannel" ordering="0">flood_control_videos</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="integer" admin="1" user="1" guest="0" staff="1" module="videochannel" ordering="0">points_videochannel</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="integer" admin="500" user="500" guest="500" staff="500" module="videochannel" ordering="0">max_size_for_video_photos</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="1" user="0" guest="0" staff="1" module="videochannel" ordering="0">can_approve_videos</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="0" user="0" guest="0" staff="0" module="videochannel" ordering="0">approve_video_before_display</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="1" user="0" guest="0" staff="1" module="videochannel" ordering="0">can_feature_videos_</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="1" user="1" guest="0" staff="1" module="videochannel" ordering="0">can_upload_videos</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="integer" admin="75" user="75" guest="0" staff="75" module="videochannel" ordering="0">video_file_size_limit</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="1" user="0" guest="0" staff="1" module="videochannel" ordering="0">can_delete_other_video</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="1" user="0" guest="0" staff="1" module="videochannel" ordering="0">can_edit_other_video</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="1" user="1" guest="0" staff="1" module="videochannel" ordering="0">can_delete_own_video</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="1" user="1" guest="0" staff="1" module="videochannel" ordering="0">can_edit_own_video</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="1" user="1" guest="0" staff="1" module="videochannel" ordering="0">can_add_comment_on_video</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="1" user="0" guest="0" staff="0" module="videochannel" ordering="0">can_set_allow_list_on_videos</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="integer" admin="9" user="6" guest="0" staff="0" module="videochannel" ordering="0">channel_get_videos_limit</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="1" user="1" guest="1" staff="1" module="videochannel" ordering="0">can_access_videos</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="1" user="0" guest="0" staff="0" module="videochannel" ordering="0">can_add_channels</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="integer" admin="10" user="10" guest="0" staff="0" module="videochannel" ordering="0">channel_search_results</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="integer" admin="12" user="12" guest="0" staff="0" module="videochannel" ordering="0">channel_add_videos_limit</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="integer" admin="20" user="10" guest="0" staff="0" module="videochannel" ordering="0">channels_limit</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="true" user="true" guest="false" staff="false" module="videochannel" ordering="0">can_upload_video_on_page</setting>
+		<setting is_admin_setting="0" module_id="videochannel" type="boolean" admin="true" user="true" guest="false" staff="false" module="videochannel" ordering="0">can_add_channel_on_page</setting>
+	</user_group_settings>
+</module>

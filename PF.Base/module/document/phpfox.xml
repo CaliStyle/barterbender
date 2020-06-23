@@ -1,0 +1,436 @@
+<module>
+	<data>
+		<module_id>document</module_id>
+		<product_id>younet_document4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:6:{s:39:"document_admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:8:"document";i:1;s:19:"user-group-settings";}}s:36:"document.admin_menu_manage_documents";a:1:{s:3:"url";a:2:{i:0;s:8:"document";i:1;s:6:"manage";}}s:32:"document.admin_menu_add_category";a:1:{s:3:"url";a:2:{i:0;s:8:"document";i:1;s:3:"add";}}s:37:"document.admin_menu_manage_categories";a:1:{s:3:"url";a:1:{i:0;s:8:"document";}}s:31:"document.admin_menu_add_license";a:1:{s:3:"url";a:2:{i:0;s:8:"document";i:1;s:10:"addlicense";}}s:34:"document.admin_menu_manage_license";a:1:{s:3:"url";a:2:{i:0;s:8:"document";i:1;s:13:"managelicense";}}}]]></menu>
+		<phrase_var_name>module_documents</phrase_var_name>
+		<version>4.02p3</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/User-Document.jpg</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="document" parent_var_name="" m_connection="profile" var_name="menu_document_documents_7d97481b1fe66f4b51db90da7e794d9f" ordering="105" url_value="profile.document" version_id="4.6.0" disallow_access="" module="document" />
+		<menu module_id="document" parent_var_name="" m_connection="document.index" var_name="menu_document_create_new_document_95b9fd21d87914592a2338a43ea2ef2a" ordering="107" url_value="document.add" version_id="4.6.0" disallow_access="" module="document" />
+		<menu module_id="document" parent_var_name="" m_connection="document.view" var_name="menu_document_create_new_document_95b9fd21d87914592a2338a43ea2ef2a" ordering="107" url_value="document.add" version_id="4.6.0" disallow_access="" module="document" />
+		<menu module_id="document" parent_var_name="" m_connection="main" var_name="menu_document_document_fad58de7366495db4650cfefac2fcd61" ordering="101" url_value="document" version_id="4.6.0" disallow_access="" module="document" mobile_icon="book" />
+	</menus>
+	<settings>
+		<setting group="" module_id="document" is_hidden="0" type="drop" var_name="document_paging_mode" phrase_var_name="setting_document_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:8:"loadmore";s:6:"values";a:3:{i:0;s:8:"loadmore";i:1;s:9:"next_prev";i:2;s:10:"pagination";}}]]></setting>
+		<setting group="" module_id="document" is_hidden="0" type="boolean" var_name="api_viewer" phrase_var_name="doc_setting_api_viewer" ordering="2" version_id="2.1.0">0</setting>
+		<setting group="" module_id="document" is_hidden="0" type="string" var_name="api_key" phrase_var_name="doc_setting_api_key" ordering="3" version_id="2.1.0">6d7xgro4jhjw61zqq61zu1234 dsafdsafdsaf</setting>
+		<setting group="" module_id="document" is_hidden="0" type="string" var_name="secret_key" phrase_var_name="setting_secret_key" ordering="4" version_id="2.1.0">sec-97f8ucsi13vvohzqgk3qy49ooy</setting>
+		<setting group="" module_id="document" is_hidden="0" type="boolean" var_name="document_access" phrase_var_name="setting_document_access" ordering="5" version_id="2.1.0">0</setting>
+		<setting group="" module_id="document" is_hidden="0" type="integer" var_name="new_documents_period" phrase_var_name="setting_new_documents_period" ordering="6" version_id="3.0.0beta3">2</setting>
+		<setting group="" module_id="document" is_hidden="0" type="boolean" var_name="document_access_show" phrase_var_name="setting_document_access_show" ordering="7" version_id="2.1.0">1</setting>
+		<setting group="" module_id="document" is_hidden="0" type="boolean" var_name="display_document_created_in_group" phrase_var_name="setting_display_document_created_in_group" ordering="10" version_id="4.6.0">1</setting>
+		<setting group="" module_id="document" is_hidden="0" type="boolean" var_name="display_document_created_in_page" phrase_var_name="setting_display_document_created_in_page" ordering="11" version_id="4.6.0">1</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="document.index" module_id="document" component="topview" location="3" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Top View</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="document.index" module_id="document" component="statistic" location="3" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Statistics</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="document.index" module_id="document" component="category" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Category</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="document.index" module_id="document" component="topusers" location="3" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title>Top Users</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="document.index" module_id="document" component="featured" location="3" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Featured</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="document.index" module_id="document" component="mostdiscussed" location="3" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title>Most Discussed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="document" component="filter" m_connection="" module="document" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="document" component="topview" m_connection="" module="document" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="document" component="detail" m_connection="" module="document" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="document" component="statistic" m_connection="" module="document" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="document" component="document_view" m_connection="document.view" module="document" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="document" component="document_index" m_connection="document.index" module="document" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="document" component="document_add" m_connection="document.add" module="document" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="document" component="menu" m_connection="" module="document" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="document" component="category" m_connection="" module="document" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="document" component="document.profile" m_connection="document.profile" module="document" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="document" component="topusers" m_connection="" module="document" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="document" component="featured" m_connection="" module="document" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="document" component="mostdiscussed" m_connection="" module="document" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="document" component="socialshare" m_connection="" module="document" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_document" added="1565346883">Document</phrase>
+		<phrase var_name="module_documents" added="1565346883">Document</phrase>
+		<phrase var_name="search_filter" added="1565346883">Search Filter</phrase>
+		<phrase var_name="menu_documents" added="1565346883">Documents</phrase>
+		<phrase var_name="add_document_link_title" added="1565346883">Create New Document</phrase>
+		<phrase var_name="all_documents_link_title" added="1565346883">All Documents</phrase>
+		<phrase var_name="my_documents_link_title" added="1565346883">My Documents</phrase>
+		<phrase var_name="edit_document_link_title" added="1565346883">Edit this Document</phrase>
+		<phrase var_name="delete_document_link_title" added="1565346883">Delete this Document</phrase>
+		<phrase var_name="select" added="1565346883">Select</phrase>
+		<phrase var_name="select_a_sub_category" added="1565346883">Select a Sub-Category</phrase>
+		<phrase var_name="category_successfully_updated" added="1565346883">Category successfully updated.</phrase>
+		<phrase var_name="edit_a_category" added="1565346883">Edit a Category</phrase>
+		<phrase var_name="create_a_new_category" added="1565346883">Create a New Category</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1565346883">Category order successfully updated.</phrase>
+		<phrase var_name="category_successfully_deleted" added="1565346883">Category successfully deleted.</phrase>
+		<phrase var_name="manage_categories" added="1565346883">Manage Categories</phrase>
+		<phrase var_name="are_you_sure_this_will_delete_all_documents_that_belong_to_this_category_and_cannot_be_undone" added="1565346883">Are you sure? This will delete all documents that belong to this category and cannot be undone.</phrase>
+		<phrase var_name="document_category_details" added="1565346883">Document Category Details</phrase>
+		<phrase var_name="name" added="1565346883">Name</phrase>
+		<phrase var_name="parent_category" added="1565346883">Parent Category</phrase>
+		<phrase var_name="submit" added="1565346883">Submit</phrase>
+		<phrase var_name="edit" added="1565346883">Edit</phrase>
+		<phrase var_name="delete" added="1565346883">Delete</phrase>
+		<phrase var_name="categories" added="1565346883">Categories</phrase>
+		<phrase var_name="update_order" added="1565346883">Update Order</phrase>
+		<phrase var_name="documents" added="1565346883">Documents</phrase>
+		<phrase var_name="editing_document" added="1565346883">Editing Document</phrase>
+		<phrase var_name="title" added="1565346883">Title</phrase>
+		<phrase var_name="description" added="1565346883">Description</phrase>
+		<phrase var_name="publish" added="1565346883">Publish</phrase>
+		<phrase var_name="update" added="1565346883">Update</phrase>
+		<phrase var_name="save_as_draft" added="1565346883">Save as Draft</phrase>
+		<phrase var_name="additional_options" added="1565346883">Additional Options</phrase>
+		<phrase var_name="unable_to_edit_this_document" added="1565346883">Unable to edit this document.</phrase>
+		<phrase var_name="user_setting_add_new_document" added="1565346883">Can create a new document?</phrase>
+		<phrase var_name="fill_title_for_document" added="1565346883">Fill in a title for your document</phrase>
+		<phrase var_name="add_description_to_document" added="1565346883">Add description to your document</phrase>
+		<phrase var_name="document_successfully_saved" added="1565346883">Document successfully saved.</phrase>
+		<phrase var_name="your_document_has_been_added" added="1565346883">Your document has been added.</phrase>
+		<phrase var_name="document_file" added="1565346883">Document File</phrase>
+		<phrase var_name="allow_document_download" added="1565346883">Allow Download</phrase>
+		<phrase var_name="could_download_document" added="1565346883">Yes, allow document download.</phrase>
+		<phrase var_name="not_allow_download_document" added="1565346883">No, do not allow document download.</phrase>
+		<phrase var_name="allow_email_attachment" added="1565346883">Email Attachment</phrase>
+		<phrase var_name="could_attach_email" added="1565346883">Yes, allow document to be emailed as attachment.</phrase>
+		<phrase var_name="not_allow_attach_email" added="1565346883">No, do not allow document to be emailed as attachment.</phrase>
+		<phrase var_name="privacy" added="1565346883">Privacy</phrase>
+		<phrase var_name="public_document_added_public_document_section" added="1565346883">Public (Document will be added to our public document section)</phrase>
+		<phrase var_name="personal_document_displayed_profile" added="1565346883">Personal (Document will only be displayed on your profile)</phrase>
+		<phrase var_name="friends_view_this_document" added="1565346883">Friends (Only you and your friends can view this document)</phrase>
+		<phrase var_name="preferred_list" added="1565346883">Preferred List (Only you and the members you select can view this document)</phrase>
+		<phrase var_name="comments" added="1565346883">Comments</phrase>
+		<phrase var_name="allow_comments" added="1565346883">Allow Comments</phrase>
+		<phrase var_name="moderate_comments_first" added="1565346883">Moderate Comments First</phrase>
+		<phrase var_name="no_comments" added="1565346883">No Comments</phrase>
+		<phrase var_name="user_setting_document_max_file_size" added="1565346883"><![CDATA[Maximum file size of documents uploaded (Unit: MBytes).
+For unlimited add "0" without quotes. ]]></phrase>
+		<phrase var_name="click_here_to_upload" added="1565346883">Click here to upload.</phrase>
+		<phrase var_name="browse_filter" added="1565346883">Browse Filter</phrase>
+		<phrase var_name="in_sorting_order" added="1565346883">in</phrase>
+		<phrase var_name="sort" added="1565346883">Sort</phrase>
+		<phrase var_name="keywords" added="1565346883">Keywords</phrase>
+		<phrase var_name="reset" added="1565346883">Reset</phrase>
+		<phrase var_name="add_to_your_favorites" added="1565346883">Add to your Favorites</phrase>
+		<phrase var_name="favorite" added="1565346883">Favorite</phrase>
+		<phrase var_name="report_a_document" added="1565346883">Report a Document</phrase>
+		<phrase var_name="report" added="1565346883">Report</phrase>
+		<phrase var_name="total_rating_ratings" added="1565346883">{total_rating} Ratings</phrase>
+		<phrase var_name="poor" added="1565346883">Poor</phrase>
+		<phrase var_name="nothing_special" added="1565346883">Nothing Special</phrase>
+		<phrase var_name="worth_watching" added="1565346883">Worth Watching</phrase>
+		<phrase var_name="pretty_cool" added="1565346883">Pretty Cool</phrase>
+		<phrase var_name="awesome" added="1565346883">Awesome</phrase>
+		<phrase var_name="document_details" added="1565346883">Document Details</phrase>
+		<phrase var_name="added" added="1565346883">Added</phrase>
+		<phrase var_name="view" added="1565346883">View</phrase>
+		<phrase var_name="added_by" added="1565346883">Added By</phrase>
+		<phrase var_name="rating" added="1565346883">Rating</phrase>
+		<phrase var_name="category" added="1565346883">Category</phrase>
+		<phrase var_name="tags" added="1565346883">Topics</phrase>
+		<phrase var_name="url" added="1565346883">URL</phrase>
+		<phrase var_name="embed" added="1565346883">Embed</phrase>
+		<phrase var_name="you_have_already_voted" added="1565346883">You have already voted.</phrase>
+		<phrase var_name="you_cannot_rate_your_own_document" added="1565346883">You cannot rate own document.</phrase>
+		<phrase var_name="user_setting_can_add_comment_on_document" added="1565346883">Can add comments on documents?</phrase>
+		<phrase var_name="user_name_left_you_a_comment_on_site_title" added="1565346883">{user_name} left you a comment on {site_title}.</phrase>
+		<phrase var_name="user_name_left_you_a_comment_on_your_document_title" added="1565346883"><![CDATA[{user_name} left you a comment on your document "{title}".
+
+To view this comment, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_added_a_new_comment_on_their_own_a_href_title_link_document_a" added="1565346883"><![CDATA[<a href="{user_link}">{full_name}</a> added a new comment on their own <a href="{title_link}">document</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_added_a_new_comment_on_your_a_href_title_link_document_a" added="1565346883"><![CDATA[<a href="{user_link}">{full_name}</a> added a new comment on your <a href="{title_link}">document</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_added_a_new_comment_on_a_href_item_user_link_item_user_name" added="1565346883"><![CDATA[<a href="{user_link}">{full_name}</a> added a new comment on <a href="{item_user_link}">{item_user_name}'s</a> <a href="{title_link}">document</a>.]]></phrase>
+		<phrase var_name="on_name_s_document" added="1565346883"><![CDATA[On {name}'s document.]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_document" added="1565346883"><![CDATA[<a href="{user_link}">{full_name}</a> wrote a comment on your document "<a href="{link}">{title}</a>".]]></phrase>
+		<phrase var_name="admin_menu_add_category" added="1565346883">Add Category</phrase>
+		<phrase var_name="admin_menu_manage_categories" added="1565346883">Manage Categories</phrase>
+		<phrase var_name="user_setting_document_per_page" added="1565346883">How many documents per page will be shown?</phrase>
+		<phrase var_name="date_added" added="1565346883">Date Added</phrase>
+		<phrase var_name="popular" added="1565346883">Popular</phrase>
+		<phrase var_name="most_discussed" added="1565346883">Most Discussed</phrase>
+		<phrase var_name="most_viewed" added="1565346883">Most Viewed</phrase>
+		<phrase var_name="user_setting_can_approve_documents" added="1565346883">Can approve documents?</phrase>
+		<phrase var_name="recent_documents" added="1565346883">Recent Documents</phrase>
+		<phrase var_name="featured" added="1565346883">Featured</phrase>
+		<phrase var_name="pending" added="1565346883">Pending</phrase>
+		<phrase var_name="full_name_s_documents" added="1565346883"><![CDATA[{full_name}'s Documents]]></phrase>
+		<phrase var_name="setting_document_access_show" added="1565346883"><![CDATA[<title>Visibility options for users</title><info>Allow users to choose whether their documents will be public on Scribd.com or private only on your site.</info>]]></phrase>
+		<phrase var_name="yes" added="1565346883">Yes</phrase>
+		<phrase var_name="no" added="1565346883">No</phrase>
+		<phrase var_name="doc_setting_api_viewer" added="1565346883"><![CDATA[<title>Scribd API Viewer</title><info>Do you want to enable Scribd to view document? If set [false] document will be viewed with Google Viewer.</info>]]></phrase>
+		<phrase var_name="doc_setting_api_key" added="1565346883"><![CDATA[<title>Scribd API Key</title><info>The Scribd API Key for your website. [Please visit the FAQ section to see how to obtain this credential]</info>]]></phrase>
+		<phrase var_name="setting_secret_key" added="1565346883"><![CDATA[<title>Scribd Secret Key</title><info>The Scribd Secret Key for your website. [Please visit the FAQ section to see how to obtain this credential]</info>]]></phrase>
+		<phrase var_name="setting_document_access" added="1565346883"><![CDATA[<title>Default Visibility of Documents</title><info>Enable this option if you want uploaded documents become public on Scribd.com. Public documents could be accessed or searched by everyone on Scribd.com</info>]]></phrase>
+		<phrase var_name="public_rating" added="1565346883">Public Rating</phrase>
+		<phrase var_name="download_enabled" added="1565346883">Download Enabled</phrase>
+		<phrase var_name="enabling_this_option_will_allow_others_the_rights_to_rate_this_document" added="1565346883">Enabling this option will allow others the rights to rate this document.</phrase>
+		<phrase var_name="enabling_this_option_will_allow_others_the_rights_to_attach_this_document" added="1565346883">Enabling this option will allow others emailed this document as attachment.</phrase>
+		<phrase var_name="enabling_this_option_will_allow_others_the_rights_to_download_this_document" added="1565346883">Enabling this option will allow others the rights to download this document.</phrase>
+		<phrase var_name="visibility" added="1565346883">Visibility</phrase>
+		<phrase var_name="private_on_this_site" added="1565346883">Private on this site</phrase>
+		<phrase var_name="public_on_scribd" added="1565346883">Public on Scribd</phrase>
+		<phrase var_name="unable_to_find_the_document_you_plan_to_edit" added="1565346883">Unable to find the document you plan to edit.</phrase>
+		<phrase var_name="created_x_by_x" added="1565346883"><![CDATA[by <a href="{link}">{full_name}</a> {date}]]></phrase>
+		<phrase var_name="user_setting_can_edit_own_document" added="1565346883">Can edit own document?</phrase>
+		<phrase var_name="user_setting_can_edit_other_document" added="1565346883">Can edit documents of all users?</phrase>
+		<phrase var_name="click_here_to_approve_documents" added="1565346883"><![CDATA[Click <a href="{sLinkPendingDocuments}">here</a> to approve documents.]]></phrase>
+		<phrase var_name="there_are_idocumentapprovecnt_documents_that_are_pending_approval" added="1565346883">There are {iDocumentApproveCnt} documents that are pending approval.</phrase>
+		<phrase var_name="user_setting_can_feature_documents" added="1565346883">Can feature documents?</phrase>
+		<phrase var_name="feature" added="1565346883">Feature</phrase>
+		<phrase var_name="are_you_sure" added="1565346883">Are you sure?</phrase>
+		<phrase var_name="approved" added="1565346883">Approved</phrase>
+		<phrase var_name="not_approved" added="1565346883">Not Approved</phrase>
+		<phrase var_name="admin_menu_manage_documents" added="1565346883">Manage Documents</phrase>
+		<phrase var_name="manage_documents" added="1565346883">Manage Documents</phrase>
+		<phrase var_name="user_setting_can_delele_own_document" added="1565346883">Can delete own document?</phrase>
+		<phrase var_name="user_setting_can_delete_other_document" added="1565346883">Can delete documents of all users?</phrase>
+		<phrase var_name="owner_full_name_added_a_new_document_a_href_title_link_title_a" added="1565346883"><![CDATA[<a href="{user_link}">{owner_full_name}</a> added a new document "<a href="{title_link}">{title}</a>".]]></phrase>
+		<phrase var_name="your_document_document_title_has_been_approved" added="1565346883"><![CDATA[Your document "{document_title}" has been approved.]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_document_document_title" added="1565346883"><![CDATA[<a href="{user_link}">{full_name}</a> wrote a comment on your document "<a href="{document_link}">{document_title}</a>"]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_their_own_a_href_link_document_a" added="1565346883"><![CDATA[<a href="{user_link}">{full_name}</a> likes {gender} own <a href="{link}">document</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_a_href_view_user_link_view_full_name_a_s_a_href_link_document_a" added="1565346883"><![CDATA[<a href="{user_link}">{full_name}</a> likes <a href="{view_user_link}">{view_full_name}</a>''s <a href="{link}">document</a>.]]></phrase>
+		<phrase var_name="your_document_has_been_approved_on_site_title_n_nto_view_this_video_follow_the_link_below_n_a_href" added="1565346883"><![CDATA[Your document has been approved on {site_title}.nnTo view this document, follow the link below:n<a href="{sLink}"> {sLink} </a>]]></phrase>
+		<phrase var_name="your_document_has_been_approved_on_site_title" added="1565346883">Your document has been approved on {site_title}</phrase>
+		<phrase var_name="could_not_rate_on_this_document" added="1565346883">Could not rate on this document</phrase>
+		<phrase var_name="invalid_document" added="1565346883">Invalid Document</phrase>
+		<phrase var_name="unfeature" added="1565346883">Unfeature</phrase>
+		<phrase var_name="owner" added="1565346883">Owner</phrase>
+		<phrase var_name="your_document_has_been_updated" added="1565346883">Your document has been updated.</phrase>
+		<phrase var_name="user_setting_can_add_tags_on_documents" added="1565346883">Can add topics on documents?</phrase>
+		<phrase var_name="license_details" added="1565346883">License Details</phrase>
+		<phrase var_name="reference_link" added="1565346883">Reference link</phrase>
+		<phrase var_name="license_name" added="1565346883">Name</phrase>
+		<phrase var_name="admin_menu_add_license" added="1565346883">Add License</phrase>
+		<phrase var_name="provide_license_name" added="1565346883">Provide a license name.</phrase>
+		<phrase var_name="license_successfully_added" added="1565346883">License successfully added.</phrase>
+		<phrase var_name="add_license" added="1565346883">Add a License</phrase>
+		<phrase var_name="licenses_successfully_deleted" added="1565346883">License(s) successfully deleted.</phrase>
+		<phrase var_name="manage_licenses" added="1565346883">Manage Licenses</phrase>
+		<phrase var_name="tip_delete_license" added="1565346883"><![CDATA[Deleting a license will not delete the document that be assigned to that license, it will only remove the specific license and any documents that belong to that license will be set under "Unlicensed".]]></phrase>
+		<phrase var_name="delete_selected" added="1565346883">Delete Selected</phrase>
+		<phrase var_name="no_document_licenses_have_been_created" added="1565346883">No document licenses have been created.</phrase>
+		<phrase var_name="create_one_now" added="1565346883">Create one now</phrase>
+		<phrase var_name="admin_menu_manage_license" added="1565346883">Manage Licenses</phrase>
+		<phrase var_name="created" added="1565346883">Created</phrase>
+		<phrase var_name="license_successfully_updated" added="1565346883">License successfully updated.</phrase>
+		<phrase var_name="document_successfully_deleted" added="1565346883">Document(s) successfully deleted.</phrase>
+		<phrase var_name="license_associated" added="1565346883">License Associated</phrase>
+		<phrase var_name="unspecified" added="1565346883">Unspecified - no licensing information is associated</phrase>
+		<phrase var_name="license_icon" added="1565346883">License Icon</phrase>
+		<phrase var_name="document_file_format_support" added="1565346883">File types support: (doc, docx, ppt, pptx, pps, xls, xlsx, pdf, ps, odt, odp, sxw, sxi, txt, rtf)</phrase>
+		<phrase var_name="email_s" added="1565346883">Email(s)</phrase>
+		<phrase var_name="provide_an_e_mail_address" added="1565346883">Provide an email address.</phrase>
+		<phrase var_name="separate_multiple_emails_with_a_comma" added="1565346883">Separate multiple emails with a comma.</phrase>
+		<phrase var_name="subject" added="1565346883">Subject</phrase>
+		<phrase var_name="check_out" added="1565346883">Check out</phrase>
+		<phrase var_name="message" added="1565346883">Message</phrase>
+		<phrase var_name="attachment" added="1565346883">Attachment</phrase>
+		<phrase var_name="hi_check_this_out_url" added="1565346883">Hi,
+
+			Check this out...
+
+			{url}</phrase>
+		<phrase var_name="invalid_file_type" added="1565346883">Invalid document file type.</phrase>
+		<phrase var_name="select_a_document_file_to_upload" added="1565346883">Select a document file to upload.</phrase>
+		<phrase var_name="user_setting_approve_document_before_display" added="1565346883">Are documents added by this user group automatically approved?</phrase>
+		<phrase var_name="user_setting_can_delete_own_document" added="1565346883">Can delete own documents?</phrase>
+		<phrase var_name="there_is_one_document_that_is_pending_approval" added="1565346883">There is one document that is pending approval.</phrase>
+		<phrase var_name="document_is_approved" added="1565346883">Your document is approved</phrase>
+		<phrase var_name="document_has_been_approved" added="1565346883">The document has been approved</phrase>
+		<phrase var_name="user_setting_can_view_documents" added="1565346883">Can view documents?</phrase>
+		<phrase var_name="category_successfully_added" added="1565346883">Category successfully added.</phrase>
+		<phrase var_name="unable_to_find_the_document_you_plan_to_delete" added="1565346883">Unable to find the document you plan to delete.</phrase>
+		<phrase var_name="menu_documents_add_new_document" added="1565346883">Add New Document</phrase>
+		<phrase var_name="user_setting_points_document" added="1565346883">Points received when creating new document.</phrase>
+		<phrase var_name="setting_document_height" added="1565346883"><![CDATA[<title>Viewer Height</title><info>Set the height of the document viewer (unit: pixel)</info>]]></phrase>
+		<phrase var_name="setting_document_width" added="1565346883"><![CDATA[<title>Viewer Width</title><info>Set the width of the document viewer (unit: pixel)</info>]]></phrase>
+		<phrase var_name="edit_license" added="1565346883">Edit this license</phrase>
+		<phrase var_name="document_statistic" added="1565346883">Statistics</phrase>
+		<phrase var_name="unable_to_find_the_document_you_want_to_approve" added="1565346883">Unable to find the document you want to approve.</phrase>
+		<phrase var_name="top_viewed_documents" added="1565346883">Top Viewed</phrase>
+		<phrase var_name="top_activity_members" added="1565346883">Top Active Members</phrase>
+		<phrase var_name="user_setting_top_view_documents" added="1565346883">Specify number of documents on Top Viewed Documents block.</phrase>
+		<phrase var_name="user_setting_top_users_document" added="1565346883">Specify number of users on Top Active Members or Top Active Friends.</phrase>
+		<phrase var_name="setting_new_documents_period" added="1565346883"><![CDATA[<title>New Document Criteria</title><info>The uploaded documents will be set as new within this number of days from the creation date.</info>]]></phrase>
+		<phrase var_name="top_active_friends" added="1565346883">Top Active Friends</phrase>
+		<phrase var_name="document_successfully_approved" added="1565346883">Document(s) successfully approved.</phrase>
+		<phrase var_name="un_feature" added="1565346883">Un-Feature</phrase>
+		<phrase var_name="approve" added="1565346883">Approve</phrase>
+		<phrase var_name="this_is_not_an_image_file_please_choose_another_image_file" added="1565346883">This is not an image file, please choose another image file.</phrase>
+		<phrase var_name="there_were_errors_when_uploading_files" added="1565346883">There were errors when uploading file(s), please try again.</phrase>
+		<phrase var_name="choose_an_image_file_to_upload" added="1565346883">Choose an image file to upload.</phrase>
+		<phrase var_name="the_document_you_are_looking_for_can_not_be_found" added="1565346883">The document you are looking for can not be found.</phrase>
+		<phrase var_name="unable_to_view_this_item_due_to_privacy_settings" added="1565346883">Unable to view this item due to privacy settings.</phrase>
+		<phrase var_name="who_can_create_documents" added="1565346883">Who can create documents?</phrase>
+		<phrase var_name="who_can_view_browse_documents" added="1565346883">Who can view/browse documents?</phrase>
+		<phrase var_name="views" added="1565346883">Views</phrase>
+		<phrase var_name="status" added="1565346883">Status</phrase>
+		<phrase var_name="likes" added="1565346883">Likes</phrase>
+		<phrase var_name="manage" added="1565346883">Manage</phrase>
+		<phrase var_name="no_documents_found" added="1565346883">No documents found.</phrase>
+		<phrase var_name="unspecified_no_licensing_information_is_associated" added="1565346883">Unspecified - no licensing information is associated</phrase>
+		<phrase var_name="this_document_is_licensed_under" added="1565346883">This document is licensed under</phrase>
+		<phrase var_name="date" added="1565346883">: {date}</phrase>
+		<phrase var_name="please_fill_the_name_of_category" added="1565346883">Please fill the name of category.</phrase>
+		<phrase var_name="say_something_about_this_document" added="1565346883">Say something about this document.</phrase>
+		<phrase var_name="quick_share_document" added="1565346883">Document</phrase>
+		<phrase var_name="document_file_type_is_not_valid" added="1565346883">Document file type is not valid</phrase>
+		<phrase var_name="document_not_found" added="1565346883">The document you are looking for cannot be found.</phrase>
+		<phrase var_name="search_documents" added="1565346883">Search Documents...</phrase>
+		<phrase var_name="latest" added="1565346883">Latest</phrase>
+		<phrase var_name="friend_documents" added="1565346883"><![CDATA[Friends' Documents]]></phrase>
+		<phrase var_name="show_more" added="1565346883">Show More</phrase>
+		<phrase var_name="show_less" added="1565346883">Show Less</phrase>
+		<phrase var_name="link" added="1565346883">Link</phrase>
+		<phrase var_name="by" added="1565346883">by</phrase>
+		<phrase var_name="view_s" added="1565346883">view(s)</phrase>
+		<phrase var_name="like_s" added="1565346883">like(s)</phrase>
+		<phrase var_name="choose_category_for_your_document" added="1565346883">Choose category for your document</phrase>
+		<phrase var_name="download" added="1565346883">Download</phrase>
+		<phrase var_name="email_as_attachment" added="1565346883">Email as Attachment</phrase>
+		<phrase var_name="shared_a_document" added="1565346883">shared a document.</phrase>
+		<phrase var_name="commented_on" added="1565346883">commented on</phrase>
+		<phrase var_name="commented_on_your_document" added="1565346883">commented on your document</phrase>
+		<phrase var_name="liked_your_document" added="1565346883">liked your document</phrase>
+		<phrase var_name="to_view_this_document_follow_the_link_below" added="1565346883">To view this document follow the link below:</phrase>
+		<phrase var_name="liked" added="1565346883">liked</phrase>
+		<phrase var_name="own_document" added="1565346883">own document</phrase>
+		<phrase var_name="control_who_can_see_this_document" added="1565346883">Control who can see this document.</phrase>
+		<phrase var_name="control_who_can_comment_on_this_document" added="1565346883">Control who can comment on this document.</phrase>
+		<phrase var_name="comment_privacy" added="1565346883">Comment Privacy:</phrase>
+		<phrase var_name="backup_database" added="1565346883">BACKUP DATABASE</phrase>
+		<phrase var_name="before_run_the_import_from_older_version_of_younet_document" added="1565346883">
+			before running the import from database of older YouNet Document version (version 2.x) to current YouNet Document version (version 3.x)
+		</phrase>
+		<phrase var_name="document_does_not_import_activity_feeds_notifications" added="1565346883">Document does not import activity feeds, notifications from older YouNet Document version (version 2.x)</phrase>
+		<phrase var_name="following_the_instruction_below_to_import" added="1565346883">Following the instruction below to import document from older YouNet Document version (version 2.x) to current YouNet Document version (version 3.x)</phrase>
+		<phrase var_name="backup_database_lower" added="1565346883">Backup Database</phrase>
+		<phrase var_name="click_import_button" added="1565346883">Click Import button</phrase>
+		<phrase var_name="import_details" added="1565346883">Import Details</phrase>
+		<phrase var_name="process" added="1565346883">Process</phrase>
+		<phrase var_name="details" added="1565346883">Details</phrase>
+		<phrase var_name="admin_menu_migrate_data" added="1565346883">Migrate Data</phrase>
+		<phrase var_name="migrate_data" added="1565346883">Migragte Data</phrase>
+		<phrase var_name="sub_categories" added="1565346883">Sub categories</phrase>
+		<phrase var_name="user_name_tagged_you_in_a_comment_in_a_document" added="1565346883">{user_name} tagged you in a comment in a document</phrase>
+		<phrase var_name="favored_a_document" added="1565346883">favored a document.</phrase>
+		<phrase var_name="user_favored_your_document_title" added="1565346883"><![CDATA[{users} favored your document "{title}"]]></phrase>
+		<phrase var_name="document" added="1565346883">Document</phrase>
+		<phrase var_name="document_text" added="1565346883">Document Text</phrase>
+		<phrase var_name="full_name_commented_on_your_document_title" added="1565346883"><![CDATA[{full_name} commented on your document "{title}"]]></phrase>
+		<phrase var_name="full_name_commented_on_your_document_message" added="1565346883"><![CDATA[{full_name} commented on your document <a href="{link}">{title}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_gender_document" added="1565346883">{full_name} commented on {gender} document</phrase>
+		<phrase var_name="full_name_commented_on_document_full_name_s_document" added="1565346883"><![CDATA[{full_name} commented on {document_full_name}&#039;s document]]></phrase>
+		<phrase var_name="full_name_commented_on_document_full_name_s_document_message" added="1565346883"><![CDATA[{full_name} commented on {document_full_name}&#039;s document "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="posted_a_comment_on_gender_document_a_href_link_title_a" added="1565346883"><![CDATA[posted a comment on {gender} document <a href="{link}"> {title}</a>]]></phrase>
+		<phrase var_name="posted_a_comment_on_user_name_s_document_a_href_link_title_a" added="1565346883"><![CDATA[posted a comment on {user_name}&#039;s document "<a href="{link}">{title}</a>"]]></phrase>
+		<phrase var_name="id" added="1565346883">ID</phrase>
+		<phrase var_name="cancel" added="1565346883">Cancel</phrase>
+		<phrase var_name="action" added="1565346883">Action</phrase>
+		<phrase var_name="actions" added="1565346883">Actions</phrase>
+		<phrase var_name="full_name_commented_on_gender_document_message" added="1565346883"><![CDATA[{full_name} commented on {gender} document "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="your_document_title_has_been_approved" added="1565346883"><![CDATA[Your document "{title}" has been approved.]]></phrase>
+		<phrase var_name="report_this_document" added="1565346883">Report this document</phrase>
+		<phrase var_name="max_file_sie_maxsize_mb" added="1565346883">Max file size: {maxsize} Mb</phrase>
+		<phrase var_name="disapprove" added="1565346883">Disapprove</phrase>
+		<phrase var_name="pending_approved" added="1565346883">Pending Approved</phrase>
+		<phrase var_name="approve_selected" added="1565346883">Approve Selected</phrase>
+		<phrase var_name="feature_selected" added="1565346883">Feature Selected</phrase>
+		<phrase var_name="documents_successfully_featured" added="1565346883">Documents successfully featured.</phrase>
+		<phrase var_name="documents_successfully_approved" added="1565346883">Documents successfully approved.</phrase>
+		<phrase var_name="user_setting_can_set_allow_download" added="1565346883">Can set allow download document?</phrase>
+		<phrase var_name="dont_allow_download" added="1565346883"><![CDATA[Don&#039;t allow download]]></phrase>
+		<phrase var_name="allow_download" added="1565346883">Allow download</phrase>
+		<phrase var_name="allow_br_download" added="1565346883"><![CDATA[Allow<br />Download]]></phrase>
+		<phrase var_name="this_document_is_pending_for_approved" added="1565346883">This document is pending for approved.</phrase>
+		<phrase var_name="featured_documents" added="1565346883">Featured Documents</phrase>
+		<phrase var_name="view_all" added="1565346883">View all</phrase>
+		<phrase var_name="most_discussed_documents" added="1565346883">Most Discussed</phrase>
+		<phrase var_name="comment" added="1565346883">Comment</phrase>
+		<phrase var_name="like" added="1565346883">Like</phrase>
+		<phrase var_name="unable_to_create_this_item_due_to_privacy_settings" added="1565346883">Unable to create this item due to privacy settings.</phrase>
+		<phrase var_name="please_set_up_scribd_account" added="1565346883">Please set up Scribd account.</phrase>
+		<phrase var_name="the_uploaded_file_exceeds_the_maximum_file_size_size_mbytes" added="1565346883">The uploaded file exceeds the maximum file size ({size} MBytes).</phrase>
+		<phrase var_name="item_phrase" added="1565346883">document</phrase>
+		<phrase var_name="menu_add_new_document" added="1565346883">Create New Document</phrase>
+		<phrase var_name="pages" added="1565346883">Pages</phrase>
+		<phrase var_name="approve_successfully" added="1565346883">Approve successfully!</phrase>
+		<phrase var_name="disapprove_successfully" added="1565346883">Disapprove successfully!</phrase>
+		<phrase var_name="feature_successfully" added="1565346883">Feature successfully!</phrase>
+		<phrase var_name="un_feature_successfully" added="1565346883">Un-feature successfully</phrase>
+		<phrase var_name="user_setting_document_max_image_size" added="1565346883"><![CDATA[Maximum file size of image uploaded (Unit: Kb).
+For unlimited add "0" without quotes.]]></phrase>
+		<phrase var_name="cover_photo" added="1565346883">Cover photo</phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1565346883">You can upload a jpg , gif or png file</phrase>
+		<phrase var_name="limit" added="1565346883">Limit</phrase>
+		<phrase var_name="max_file_size_maxsize_kb" added="1565346883">Max file size: {maxsize} Kb</phrase>
+		<phrase var_name="there_were_errors_when_uploading_cover_photo_please_try_again" added="1565346883">There were errors when uploading cover photo, please try again.</phrase>
+		<phrase var_name="you_can_not_delete_this_category_because_there_are_many_items_related_to_it" added="1565346883">You can not delete this category because there are many items related to it</phrase>
+		<phrase var_name="view_more_documents" added="1565346883">View more documents</phrase>
+		<phrase var_name="document_is_pending_approval" added="1565346883">Document is pending approval</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_document_permanently" added="1565346883">Are you sure you want to delete this document permanently?</phrase>
+		<phrase var_name="document_admin_menu_user_group_settings" added="1565346883">User Group Settings</phrase>
+		<phrase var_name="setting_document_paging_mode" added="1565346883"><![CDATA[<title>Pagination Style</title><info>Select Pagination Style at Search Documents Page.</info>]]></phrase>
+		<phrase var_name="setting_display_document_created_in_group" added="1565346883"><![CDATA[<title>Display documents which created in Group to Documents app</title><info>Enable to display all public documents created in Group to Documents app. Disable to hide them.</info>]]></phrase>
+		<phrase var_name="setting_display_document_created_in_page" added="1565346883"><![CDATA[<title>Display documents which created in Page to Documents app</title><info>Enable to display all public documents created in Page to Documents app. Disable to hide them.</info>]]></phrase>
+		<phrase var_name="menu_document_create_new_document_95b9fd21d87914592a2338a43ea2ef2a" added="1565346883">Add New Document</phrase>
+		<phrase var_name="menu_document_document_fad58de7366495db4650cfefac2fcd61" added="1565346883">Documents</phrase>
+		<phrase var_name="you_have_total_pending_documents" added="1565346883">You have {total} pending documents</phrase>
+		<phrase var_name="controller_document.index" added="1565346883">Document Home Page</phrase>
+		<phrase var_name="controller_document.profile" added="1565346883">Document Profile</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="document" type="integer" admin="1" user="1" guest="0" staff="1" module="document" ordering="0">points_document</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="true" guest="false" staff="true" module="document" ordering="0">can_edit_own_document</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="true" guest="false" staff="true" module="document" ordering="0">can_add_tags_on_documents</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="true" guest="true" staff="true" module="document" ordering="0">can_view_documents</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="false" guest="false" staff="false" module="document" ordering="0">can_delete_other_document</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="false" guest="false" staff="false" module="document" ordering="0">can_feature_documents</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="true" guest="false" staff="true" module="document" ordering="0">can_delete_own_document</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="true" guest="false" staff="true" module="document" ordering="0">add_new_document</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="true" guest="false" staff="true" module="document" ordering="0">can_add_comment_on_document</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="false" guest="false" staff="true" module="document" ordering="0">approve_document_before_display</setting>
+		<setting is_admin_setting="0" module_id="document" type="integer" admin="10" user="8" guest="0" staff="10" module="document" ordering="0">document_max_file_size</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="false" guest="false" staff="false" module="document" ordering="0">can_approve_documents</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="false" guest="false" staff="true" module="document" ordering="0">can_edit_other_document</setting>
+		<setting is_admin_setting="0" module_id="document" type="boolean" admin="true" user="false" guest="false" staff="false" module="document" ordering="0">can_set_allow_download</setting>
+		<setting is_admin_setting="0" module_id="document" type="integer" admin="500" user="500" guest="0" staff="500" module="document" ordering="0">document_max_image_size</setting>
+	</user_group_settings>
+</module>

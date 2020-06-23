@@ -1,0 +1,37 @@
+<module>
+	<data>
+		<module_id>fanot</module_id>
+		<product_id>younet_notification4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>0</is_menu>
+		<menu />
+		<phrase_var_name>module_fanot</phrase_var_name>
+		<version>4.02p1</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNet Company</description>
+		<apps_icon>https://phpfox.younetco.com/files/2015/11/Advanced-Notification.png</apps_icon>
+	</data>
+	<settings>
+		<setting group="" module_id="fanot" is_hidden="0" type="integer" var_name="display_notification_seconds" phrase_var_name="setting_display_notification_seconds" ordering="1" version_id="3.2.0">100000</setting>
+		<setting group="" module_id="fanot" is_hidden="0" type="boolean" var_name="enable_advanced_feed_notification_for_friend_request" phrase_var_name="setting_enable_advanced_feed_notification_for_friend_request" ordering="3" version_id="3.2.0">1</setting>
+		<setting group="" module_id="fanot" is_hidden="0" type="integer" var_name="notification_refresh_time" phrase_var_name="setting_notification_refresh_time" ordering="1" version_id="3.3.0rc1">10</setting>
+		<setting group="" module_id="fanot" is_hidden="0" type="string" var_name="notification_bgcolor" phrase_var_name="setting_notification_bgcolor" ordering="1" version_id="3.5.0">#9E6613</setting>
+		<setting group="" module_id="fanot" is_hidden="0" type="boolean" var_name="show_photo_in_notification" phrase_var_name="setting_show_photo_in_notification" ordering="1" version_id="3.5.0">1</setting>
+		<setting group="" module_id="fanot" is_hidden="1" type="integer" var_name="how_many_notifications_to_show" phrase_var_name="setting_how_many_notifications_to_show" ordering="2" version_id="3.3.0rc1">5</setting>
+	</settings>
+	<phrases>
+		<phrase var_name="module_fanot" added="1534316761">Advanced Feed Notification</phrase>
+		<phrase var_name="user_want_to_add_you_as_gender_friends" added="1534316761">{full_name} want to add you as {gender} friends.</phrase>
+		<phrase var_name="setting_display_notification_seconds" added="1534316761"><![CDATA[<title>Display notification (Seconds)</title><info>Define in seconds when the Advanced Feed Notification box should hide.</info>]]></phrase>
+		<phrase var_name="setting_enable_advanced_feed_notification_for_friend_request" added="1534316761"><![CDATA[<title>Enable Friend Request</title><info>Enable Advanced Feed Notification for Friend Request?</info>]]></phrase>
+		<phrase var_name="setting_how_many_notifications_to_show" added="1534316761"><![CDATA[<title>How many notifications to show</title><info>Maximum number of notifications will be displayed per time.</info>]]></phrase>
+		<phrase var_name="setting_notification_refresh_time" added="1534316761"><![CDATA[<title>Notification Refresh Time (Seconds)</title><info>Define how many seconds before the notifications refresh.</info>]]></phrase>
+		<phrase var_name="full_name_wants_to_list_you_both_as_relationship" added="1534316761">{full_name} wants to list you both as {relationship}</phrase>
+		<phrase var_name="full_name_wants_to_list_you_in_a_relationship" added="1534316761">{full_name} wants to list you in a relationship</phrase>
+		<phrase var_name="setting_notification_bgcolor" added="1534316761"><![CDATA[<title>Background Color</title><info>Background color of notification message box (Hex code value)</info>]]></phrase>
+		<phrase var_name="setting_show_photo_in_notification" added="1534316761"><![CDATA[<title>Show photo in notification</title><info>Show user profile photo in notification message box.</info>]]></phrase>
+		<phrase var_name="sound_alert_for_notification" added="1534316761">Sound alert for notification</phrase>
+	</phrases>
+</module>

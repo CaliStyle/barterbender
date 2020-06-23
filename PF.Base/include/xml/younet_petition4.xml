@@ -1,0 +1,192 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_petition4</product_id>
+		<is_core>0</is_core>
+		<title>YouNet Petition</title>
+		<description>by YouNet Company</description>
+		<version>4.01p7</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>https://phpfox.younetco.com</url>
+		<url_version_check></url_version_check>
+		<icon>http://phpfox.younetco.com/files/2015/10/Petition.jpg</icon>
+		<vendor>YouNet Company</vendor>
+	</data>
+	<installs>
+		<install>
+			<version>3.01</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('petition') ."` (
+  `petition_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `module_id` varchar(75) NOT NULL DEFAULT 'petition',
+  `item_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `title` varchar(255) NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  `start_time` int(10) unsigned NOT NULL,
+  `end_time` int(10) unsigned NOT NULL,
+  `image_path` varchar(75) DEFAULT NULL,
+  `server_id` tinyint(1) NOT NULL DEFAULT '0',
+  `is_approved` tinyint(1) NOT NULL,
+  `is_featured` tinyint(1) NOT NULL DEFAULT '0',
+  `is_send_thank` tinyint(1) NOT NULL DEFAULT '0',
+  `is_send_online` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `is_directsign` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `privacy` tinyint(1) NOT NULL DEFAULT '0',
+  `privacy_comment` tinyint(1) NOT NULL DEFAULT '0',
+  `privacy_sign` tinyint(1) NOT NULL DEFAULT '0',
+  `petition_status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1:closed| 2: on_going | 3: victory',
+  `total_sign` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_comment` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_attachment` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_view` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_like` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`petition_id`),
+  KEY `public_view` (`is_approved`,`privacy`,`petition_status`),
+  KEY `user_id_2` (`user_id`,`is_approved`,`privacy`,`petition_status`),
+  KEY `time_stamp` (`time_stamp`,`is_approved`,`privacy`,`petition_status`),
+  KEY `user_id` (`user_id`,`time_stamp`,`is_approved`,`privacy`,`petition_status`),
+  KEY `title` (`title`,`is_approved`,`privacy`,`petition_status`)
+) ENGINE=MyISAM   AUTO_INCREMENT=1 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('petition_category') ."` (
+  `category_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `user_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `added` int(10) unsigned NOT NULL,
+  `used` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`category_id`),
+  KEY `user_id` (`user_id`),
+  KEY `category_id` (`category_id`,`user_id`),
+  KEY `name_url` (`user_id`)
+) ENGINE=MyISAM   AUTO_INCREMENT=12 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('petition_category_data') ."` (
+  `petition_id` int(10) unsigned NOT NULL,
+  `category_id` int(10) unsigned NOT NULL,
+  KEY `blog_id` (`petition_id`),
+  KEY `category_id` (`category_id`)
+) ENGINE=MyISAM ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('petition_help') ."` (
+  `help_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `image_path` varchar(75) NOT NULL,
+  `server_id` tinyint(1) unsigned NOT NULL,
+  `content` mediumtext NOT NULL,
+  `content_parsed` mediumtext NOT NULL,
+  `ordering` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`help_id`)
+) ENGINE=InnoDB   AUTO_INCREMENT=47 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('petition_image') ."` (
+  `image_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `petition_id` int(10) unsigned NOT NULL,
+  `image_path` varchar(75) NOT NULL,
+  `server_id` tinyint(1) NOT NULL,
+  `ordering` tinyint(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`image_id`),
+  KEY `listing_id` (`petition_id`)
+) ENGINE=InnoDB   AUTO_INCREMENT=79 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('petition_invite') ."` (
+  `invite_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `petition_id` int(10) unsigned NOT NULL,
+  `type_id` tinyint(1) NOT NULL DEFAULT '0',
+  `signed_id` tinyint(1) NOT NULL DEFAULT '0',
+  `user_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `invited_user_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `invited_email` varchar(100) DEFAULT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`invite_id`),
+  KEY `event_id` (`petition_id`),
+  KEY `event_id_2` (`petition_id`,`invited_user_id`),
+  KEY `invited_user_id` (`invited_user_id`),
+  KEY `event_id_3` (`petition_id`,`signed_id`,`invited_user_id`),
+  KEY `rsvp_id` (`signed_id`,`invited_user_id`)
+) ENGINE=InnoDB   AUTO_INCREMENT=13 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('petition_news') ."` (
+  `news_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `petition_id` int(10) unsigned NOT NULL,
+  `headline` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `content` mediumtext NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`news_id`)
+) ENGINE=MyISAM   AUTO_INCREMENT=80 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('petition_sign') ."` (
+  `sign_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `petition_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `location` varchar(255) NOT NULL,
+  `signature` mediumtext,
+  `signature_parse` mediumtext,
+  `time_stamp` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`sign_id`),
+  KEY `petition_id` (`petition_id`,`user_id`)
+) ENGINE=MyISAM   AUTO_INCREMENT=77 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('petition_text') ."` (
+  `petition_id` int(10) unsigned NOT NULL,
+  `target` varchar(255) NOT NULL,
+  `target_email` varchar(255) DEFAULT NULL,
+  `petition_goal` varchar(255) DEFAULT NULL,
+  `signature_goal` int(10) unsigned NOT NULL DEFAULT '0',
+  `short_description` mediumtext NOT NULL,
+  `short_description_parsed` mediumtext NOT NULL,
+  `description` LONGTEXT,
+  `description_parsed` LONGTEXT,
+  `letter` LONGTEXT,
+  `letter_parsed` LONGTEXT,
+  `letter_subject` varchar(255) NOT NULL,
+  PRIMARY KEY (`petition_id`)
+) ENGINE=MyISAM ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('petition_track') ."` (
+  `item_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  KEY `item_id` (`item_id`,`user_id`)
+) ENGINE=MyISAM ;");
+                         
+$this->database()->query("INSERT IGNORE INTO `". Phpfox::getT('petition_category') ."` (`category_id`, `name`, `user_id`, `added`, `used`) VALUES
+(11, 'Sustainable Food', 0, UNIX_TIMESTAMP(), 0),
+(10, 'Immigrant Rights', 0, UNIX_TIMESTAMP(), 0),
+(9, 'Human Trafficking', 0, UNIX_TIMESTAMP(), 0),
+(8, 'Human Rights', 0, UNIX_TIMESTAMP(), 0),
+(7, 'Health', 0, UNIX_TIMESTAMP(), 0),
+(6, 'Gay Rights', 0, UNIX_TIMESTAMP(), 0),
+(5, 'Environment', 0, UNIX_TIMESTAMP(), 0),
+(4, 'Education', 0, UNIX_TIMESTAMP(), 0),
+(3, 'Economic Justice', 0, UNIX_TIMESTAMP(), 0),
+(2, 'Criminal Justice', 0, UNIX_TIMESTAMP(), 0),
+(1, 'Animals', 0, UNIX_TIMESTAMP(), 0);");
+
+if(!$this->database()->isField(Phpfox::getT('user_activity'),'activity_petition'))
+{
+   $this->database()->query("ALTER TABLE `".Phpfox::getT('user_activity')."` ADD `activity_petition` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0'");  
+}
+
+if(!$this->database()->isField(Phpfox::getT('user_field'),'total_petition'))
+{
+   $this->database()->query("ALTER TABLE `".Phpfox::getT('user_field')."` ADD `total_petition` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('user_space'),'space_petition'))
+{
+ $this->database()->query("ALTER TABLE `".Phpfox::getT('user_space')."` ADD `space_petition` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0'");
+}
+
+include (PHPFOX_DIR_MODULE . 'petition/install/v3.01.php');
+	
+]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+	</installs>
+	<modules>
+		<module_id>petition</module_id>
+	</modules>
+</product>

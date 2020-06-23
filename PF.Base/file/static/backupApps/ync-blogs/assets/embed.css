@@ -1,0 +1,210 @@
+.ynadvblog_item{
+	width: 33.33%;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.big_view{
+	display: none;
+}
+
+.ynadvblog_info .ynadvblog_feature_icon{
+	display: none;
+}
+
+.text-lowercase{
+	text-transform: lowercase;
+}
+
+.yn_dots{
+    font-style: normal;
+}
+
+.overflow-hi{
+	display: inline-block;
+	overflow: hidden;
+}
+
+.fw-bold{
+	font-weight: bold;
+}
+
+.fw-300{
+	font-weight: 300;
+}
+
+.ynadvblog_avatar{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+.ynadvblog_avatar:before{
+	display: block;
+    content: "";
+    padding-bottom: 56%;
+}
+
+.ynadvblog_avatar > a{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ynadvblog_avatar .ynadvblog_feature_icon{
+	left: 10px;
+    bottom: 10px;
+    z-index: 1;
+	width: 22px;
+	height: 22px;
+	color: #fff;
+	font-size: 11px;
+	background-color: #ffa800;
+	border: 1px solid #f7931e;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+}
+
+.ynadvblog_info{
+	position: relative;
+    padding-top: 15px;
+}
+
+.ynadvblog_info .ynadvblog_author.grid_view{
+	text-align: center;
+	display: block;
+	line-height: 18px;
+	height: 18px;
+	margin-bottom: 1px;
+	position: relative;
+	color: #888;
+}
+
+.ynadvblog_info .ynadvblog_author.grid_view > span:first-of-type .user_profile_link_span{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 155px;
+    color: #297fc7 !important;
+    font-weight: normal !important;
+}
+.ynadvblog_info .ynadvblog_author.grid_view > span:first-of-type .user_profile_link_span a{
+    font-weight: normal !important;
+    color: #297fc7 !important;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.ynadvblog_info .ynadvblog_author.grid_view > span:first-of-type .user_profile_link_span a:hover{
+    color: #1c5788 !important;
+}
+
+.ynadvblog_info .ynadvblog_post_title{
+	position: relative;
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    line-height: 23px;
+    max-height: 23px;
+    white-space: nowrap;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-weight: bold;
+    color: #555555;
+    text-align: center;
+    padding: 0 60px;
+    transition: all 0.3s;
+	text-decoration: none;
+}
+
+.ynadvblog_info .ynadvblog_post_title:hover{
+	color: #297fc7;
+}
+
+.ynadvblog_info .ynadvblog_desc{
+	position: relative;
+    text-align: center;
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    line-height: 18px;
+    height: 72px;
+    white-space: normal;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    margin-top: 9px;
+    word-break: break-word;
+    padding: 0 20px;
+}
+
+.show_on_grid{
+	position: relative;
+	margin-top: 16px;
+	border-top: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.show_on_grid:before{
+	content: "";
+	left: 50%;
+	top: 50%;
+	margin-top: -7.5px;
+	margin-left: -0.5px;
+	width: 1px;
+	height: 15px;
+	background-color: #eeeeee;
+	position: absolute;
+}
+
+.show_on_grid .ynadvblog-total_favorite{
+	display: block;
+	min-height: 30px;
+	line-height: 28px;
+	z-index: 1;
+	font-size: 16px;
+	color: #555555;
+	width: 100%;
+}
+
+.show_on_grid .ynadvblog-total_favorite > span{
+	display: inline-block;
+	float: left;
+	width: 50%;
+}
+
+.show_on_grid .ynadvblog-total_favorite > span.text-right{
+	padding-right: 20px;
+	text-align: right;
+}
+
+.show_on_grid .ynadvblog-total_favorite > span.text-left{
+	padding-left: 20px;	
+	text-align: left;
+}
+
+.show_on_grid .ynadvblog-total_favorite > span span{
+	color: #888888;
+}

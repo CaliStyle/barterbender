@@ -1,0 +1,66 @@
+if(!window.calendar_languages) {
+    window.calendar_languages = {};
+}
+window.calendar_languages['en'] = {
+    error_noview: oTranslations['fevent_calendar_error_noview'],
+    error_dateformat: oTranslations['fevent_calendar_error_dateformat'],
+    error_loadurl: oTranslations['fevent_calendar_error_loadurl'],
+    error_where: oTranslations['fevent_calendar_error_where'],
+    error_timedevide: oTranslations['fevent_calendar_error_timedevide'],
+
+    no_events_in_day: oTranslations['fevent_calendar_no_events_in_day'],
+
+    title_year: oTranslations['fevent_calendar_title_year'],
+    title_month: oTranslations['fevent_calendar_title_month'],
+    title_week: oTranslations['fevent_calendar_title_week'],
+    title_day: oTranslations['fevent_calendar_title_day'],
+
+    week: oTranslations['fevent_calendar_week'],
+    all_day: oTranslations['fevent_calendar_all_day'],
+    time: oTranslations['fevent_calendar_time'],
+    events: oTranslations['fevent_calendar_events'],
+    before_time: oTranslations['fevent_calendar_before_time'],
+    after_time: oTranslations['fevent_calendar_after_time'],
+
+    m0: oTranslations['january'],
+    m1: oTranslations['february'],
+    m2: oTranslations['march'],
+    m3: oTranslations['april'],
+    m4: oTranslations['may'],
+    m5: oTranslations['june'],
+    m6: oTranslations['july'],
+    m7: oTranslations['august'],
+    m8: oTranslations['september'],
+    m9: oTranslations['october'],
+    m10: oTranslations['november'],
+    m11: oTranslations['december'],
+
+    ms0: oTranslations['jan'],
+    ms1: oTranslations['feb'],
+    ms2: oTranslations['mar'],
+    ms3: oTranslations['apr'],
+    ms4: oTranslations['may'],
+    ms5: oTranslations['jun'],
+    ms6: oTranslations['jul'],
+    ms7: oTranslations['aug'],
+    ms8: oTranslations['sep'],
+    ms9: oTranslations['oct'],
+    ms10: oTranslations['nov'],
+    ms11: oTranslations['dec'],
+
+    d0: oTranslations['sunday'],
+    d1: oTranslations['monday'],
+    d2: oTranslations['tuesday'],
+    d3: oTranslations['wednesday'],
+    d4: oTranslations['thursday'],
+    d5: oTranslations['friday'],
+    d6: oTranslations['saturday'],
+
+    ds0: oTranslations['sun'],
+    ds1: oTranslations['mon'],
+    ds2: oTranslations['tue'],
+    ds3: oTranslations['wed'],
+    ds4: oTranslations['thu'],
+    ds5: oTranslations['fri'],
+    ds6: oTranslations['sat'],
+};

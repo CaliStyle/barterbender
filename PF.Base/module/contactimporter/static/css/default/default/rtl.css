@@ -1,0 +1,97 @@
+/*
+ * Invite Friends
+ */
+[dir="rtl"] div.mail_list a.usingapi span.title{
+	padding-left:0;
+	padding-right:14px;
+}
+[dir="rtl"] #js_block_border_contactimporter_statistics .action li a span{
+	display: inline-block;
+}
+[dir="rtl"] .global_form .button{
+	float: right;
+	
+}
+[dir="rtl"] .global_form.yncontact_manual_form .button{
+	margin-right: 21px;
+}
+[dir="rtl"] #get_contact_email.global_form .button{
+	margin-right:0;
+} 
+[dir="rtl"] .js_box_title{
+	text-align: right;
+	padding-right: 4px;
+}
+[dir="rtl"] .js_box_close a, 
+[dir="rtl"] .js_box_close a:hover{
+	right:auto;
+	left:0;
+}
+/*
+ * Pending Invitations
+ */
+[dir="rtl"] .yncotact_form_invitations .go_left{
+	float: right;
+	padding-right: 0;
+	padding-left: 10px;
+}
+[dir="rtl"] .yncontact_invitations_action{
+	float:left;
+}
+[dir="rtl"] .yncontact_invitations_action li{
+	float: left;
+	margin-left: 0px;
+	margin-right:4px;
+}
+[dir="rtl"] a.pager_previous_link, 
+[dir="rtl"] a.pager_next_link{
+	font-size:0;
+}
+[dir="rtl"] .pager_links{
+	right:auto;
+	left:0;
+}
+[dir="rtl"] .pager_links_holder > span.extra_info{
+	float:right;
+}
+[dir="rtl"] a.moderation_action, 
+[dir="rtl"] a.moderation_action:hover{
+	right:auto;
+	left:5px;
+}
+[dir="rtl"] a.moderation_drop, 
+[dir="rtl"] a.moderation_drop:hover{
+	text-align: left;
+}
+[dir="rtl"] .moderation_holder ul{
+	left: auto;
+	right: 8px;
+}
+[dir="rtl"] .moderation_holder ul li a, 
+[dir="rtl"] .moderation_holder ul li a:hover{
+	padding-left:0;
+	padding-right:6px;
+}
+[dir="rtl"] #section_menu{
+	right:auto;
+	left:0;
+}
+[dir="rtl"] .yncontact_form_send .yncontact_sending{
+	float:left;
+}
+[dir="rtl"] .yncontact_form_send ul li{
+	text-align: right;
+}
+[dir="rtl"] .yncontact_close_sending{
+	float:left;
+}
+[dir="rtl"] #div_list_view .thTableOddRow td{
+    text-align:right;
+}
+[dir="rtl"] .global_form .yncontact_custom_message .button{
+	margin-right:0;
+	margin-left:10px;
+}
+
+
+

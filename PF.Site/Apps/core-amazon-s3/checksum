@@ -1,0 +1,15 @@
+85fffa41a9801d153875063486aaaa3d PF.Site/Apps/core-amazon-s3/views/controller/admincp/manage.html.php
+21e3642a3761b8878b4ea72297876f67 PF.Site/Apps/core-amazon-s3/views/block/createBucket.html.php
+dc23db086c36f48d3929d0bb4fb79cac PF.Site/Apps/core-amazon-s3/Block/CreateBucket.php
+b02cabef4c434a327a8060fa0a300001 PF.Site/Apps/core-amazon-s3/Ajax/Ajax.php
+d0d9d821f0e8bbfe9fff4993f7d877b4 PF.Site/Apps/core-amazon-s3/Controller/Admin/ManageController.php
+29c950341e4dd5bfebb99ee7aff888ab PF.Site/Apps/core-amazon-s3/hooks/admincp.service_maintain_delete_files_get_list.php
+01c00c164f1df385b0bf43bc2f651f69 PF.Site/Apps/core-amazon-s3/Model/AmazonS3.php
+a0f8c342e441c521a47d56b95d2d9b1c PF.Site/Apps/core-amazon-s3/Model/CDN.php
+090dd27928e72a450e089e96c5dec850 PF.Site/Apps/core-amazon-s3/README.md
+377163bd26584e4a47c6a90df5608006 PF.Site/Apps/core-amazon-s3/change-log.md
+70e97ca26b7b336140b321338b823cdc PF.Site/Apps/core-amazon-s3/icon.png
+5aa193416a111efcc4f2fc08cc8976e0 PF.Site/Apps/core-amazon-s3/phrase.json
+45e33e47ad2b249a6c5792c5784ef4e3 PF.Site/Apps/core-amazon-s3/start.php
+5f9643045dd2c72a64c994ce214aad5b PF.Site/Apps/core-amazon-s3/Install.php
+56b09db3a3ed50612109709c72bed263 PF.Site/Apps/core-amazon-s3/installer.php

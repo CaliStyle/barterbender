@@ -1,0 +1,152 @@
+<module>
+	<data>
+		<module_id>socialpublishers</module_id>
+		<product_id>younet_socialpublisher</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:3:{s:42:"socialpublishers.admin_menu_manage_modules";a:1:{s:3:"url";a:2:{i:0;s:16:"socialpublishers";i:1;s:7:"modules";}}s:45:"socialpublishers.admin_menu_statistic_by_date";a:1:{s:3:"url";a:2:{i:0;s:16:"socialpublishers";i:1;s:13:"statisticdate";}}s:45:"socialpublishers.admin_menu_statistic_by_user";a:1:{s:3:"url";a:2:{i:0;s:16:"socialpublishers";i:1;s:13:"statisticuser";}}}]]></menu>
+		<phrase_var_name>module_socialpublishers</phrase_var_name>
+		<version>4.02p1</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/07/Social-Publisher.png</apps_icon>
+	</data>
+	<components>
+		<component module_id="socialpublishers" component="socialpublishers.setting" m_connection="socialpublishers.setting" module="socialpublishers" is_controller="1" is_block="0" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="admin_menu_manage_providers" added="1539664388">Manage Providers</phrase>
+		<phrase var_name="module_socialpublishers" added="1539664388">Social Publisher</phrase>
+		<phrase var_name="translate_module_socialpublishers" added="1539664388">Social Publisher</phrase>
+		<phrase var_name="mange_social_providers" added="1539664388">Manage Social Providers</phrase>
+		<phrase var_name="setting" added="1539664388">Settings</phrase>
+		<phrase var_name="facebook_secret" added="1539664388">Facebook Secret</phrase>
+		<phrase var_name="application_id" added="1539664388">Application ID</phrase>
+		<phrase var_name="enable_facebook_connect" added="1539664388">Enable Facebook Connect:</phrase>
+		<phrase var_name="consumer_key" added="1539664388">Consumer Key</phrase>
+		<phrase var_name="consumer_secret" added="1539664388">Consumer Secret</phrase>
+		<phrase var_name="enable_twitter_connect" added="1539664388">Enable Twitter Connect:</phrase>
+		<phrase var_name="api_key" added="1539664388">API Key</phrase>
+		<phrase var_name="secret_key" added="1539664388">Secret Key</phrase>
+		<phrase var_name="enable_linkedin_connect" added="1539664388">Enable Linkedin Connect</phrase>
+		<phrase var_name="update_successfully" added="1539664388">Update Successfully</phrase>
+		<phrase var_name="menu_socialpublishers_social_publishers_settings_a0665c4da3a57e7b66f0e23dc705b53b" added="1539664388">Social Publishers Settings</phrase>
+		<phrase var_name="unable_to_edit_this_account" added="1539664388">Unable to edit this account.</phrase>
+		<phrase var_name="mange_social_publishers_connect" added="1539664388">Manage Social Publisher Connections</phrase>
+		<phrase var_name="there_are_no_publisher_providers_were_enable_please_contact_to_admin_site_to_get_more_information" added="1539664388">There are no publisher providers were enable. Please contact to admin site to get more information.</phrase>
+		<phrase var_name="disconnect" added="1539664388">disconnect</phrase>
+		<phrase var_name="connected_as" added="1539664388">Connected as {full_name}</phrase>
+		<phrase var_name="click_here" added="1539664388">Click here</phrase>
+		<phrase var_name="to" added="1539664388">to</phrase>
+		<phrase var_name="connect" added="1539664388">connect</phrase>
+		<phrase var_name="share_content" added="1539664388">Share Content</phrase>
+		<phrase var_name="share" added="1539664388">Share</phrase>
+		<phrase var_name="auto_publish_next_time" added="1539664388">Auto publish next time</phrase>
+		<phrase var_name="don_t_ask_me_again" added="1539664388"><![CDATA[Don&#039;t ask me again]]></phrase>
+		<phrase var_name="publish" added="1539664388">Publish</phrase>
+		<phrase var_name="post_on" added="1539664388">posted on</phrase>
+		<phrase var_name="post_a_blog_title_on" added="1539664388">{full_name} posted a blog{title} on {site_name}</phrase>
+		<phrase var_name="facebook" added="1539664388">Facebook</phrase>
+		<phrase var_name="twitter" added="1539664388">Twitter</phrase>
+		<phrase var_name="linkedin" added="1539664388">Linkedin</phrase>
+		<phrase var_name="view_your_setting" added="1539664388">View your setting</phrase>
+		<phrase var_name="connections" added="1539664388">Connections</phrase>
+		<phrase var_name="admin_menu_manage_modules" added="1539664388">Manage Modules</phrase>
+		<phrase var_name="mange_modules" added="1539664388">Manage Modules</phrase>
+		<phrase var_name="event" added="1539664388">Event</phrase>
+		<phrase var_name="marketplace" added="1539664388">Marketplace</phrase>
+		<phrase var_name="quiz" added="1539664388">Quiz</phrase>
+		<phrase var_name="active" added="1539664388">Active</phrase>
+		<phrase var_name="publish_provides" added="1539664388">Publish providers</phrase>
+		<phrase var_name="activity_management" added="1539664388">Activity Management</phrase>
+		<phrase var_name="share_a_link_title_on" added="1539664388">{full_name} shared a link{link} on {site_name}</phrase>
+		<phrase var_name="post_a_song_title_on" added="1539664388">{full_name} posted a song{title} on {site_name}</phrase>
+		<phrase var_name="post_a_photo_title_on" added="1539664388">{full_name} posted a photo{title} on {site_name}</phrase>
+		<phrase var_name="post_a_poll_title_on" added="1539664388">{full_name} posted a question{title} on {site_name}</phrase>
+		<phrase var_name="status" added="1539664388">User Status</phrase>
+		<phrase var_name="post_a_status_title_on" added="1539664388">{full_name} posted a status{title} on {site_name}</phrase>
+		<phrase var_name="post_a_video_title_on" added="1539664388">{full_name} posted a video{title} on {site_name}</phrase>
+		<phrase var_name="post_a_quiz_title_on" added="1539664388">{full_name} posted a quiz{title} on {site_name}</phrase>
+		<phrase var_name="post_a_event_title_on" added="1539664388">{full_name} posted an event{title} on {site_name}</phrase>
+		<phrase var_name="post_a_marketplace_title_on" added="1539664388">{full_name} posted a listing{title} on {site_name}</phrase>
+		<phrase var_name="post_a_album_title_on" added="1539664388">{full_name} posted an album{title} on {site_name}</phrase>
+		<phrase var_name="post_a_playlist_title_on" added="1539664388">{full_name} posted a playlist{title} on {site_name}</phrase>
+		<phrase var_name="post_a_karaoke_title_on" added="1539664388">{full_name} posted a karaoke song{title} on {site_name}</phrase>
+		<phrase var_name="post_a_record_title_on" added="1539664388">{full_name} posted a karaoke recordding{title} on {site_name}</phrase>
+		<phrase var_name="post_a_petition_title_on" added="1539664388">{full_name} posted a petition{title} on {site_name}</phrase>
+		<phrase var_name="not_connected" added="1539664388">Not connected</phrase>
+		<phrase var_name="error" added="1539664388">Error</phrase>
+		<phrase var_name="view" added="1539664388">View</phrase>
+		<phrase var_name="hide" added="1539664388">Hide</phrase>
+		<phrase var_name="tutorial_how_to_get_facebook_api_key" added="1539664388"><![CDATA[tutorial "How to get Facebook Api Key"]]></phrase>
+		<phrase var_name="to_get_your_facebook_api_id" added="1539664388"><![CDATA[<li>To get your <strong>"Facebook API ID"</strong> and <strong>"Facebook App Secret"</strong> strings, go to the following URL:
+    				<div class="p_4"><a href="http://developers.facebook.com/setup/" target="_blank">Make application</a></div>
+    			</li>]]></phrase>
+		<phrase var_name="for_site_url_you_should_use_this_url" added="1539664388"><![CDATA[For "Site URL" you should use this URL:]]></phrase>
+		<phrase var_name="do_follow_facebook_steps_to_complete_create_new_application" added="1539664388">Do follow Facebook steps to complete create new application.</phrase>
+		<phrase var_name="tutorial_how_to_get_twitter_api_key" added="1539664388"><![CDATA[tutorial "How to get Twitter Api Key"]]></phrase>
+		<phrase var_name="to_get_your_twitter_api" added="1539664388"><![CDATA[<li>To get your <strong>"Twitter Consumer Key"</strong> and <strong>"Twitter Consumer Secret"</strong> strings, go to the following URL:
+    				<div class="p_4"><a href="https://dev.twitter.com/apps" target="_blank">Make application</a></div>
+    			</li>
+    			<li>
+    				Click to "Create new application" button.
+    			</li>]]></phrase>
+		<phrase var_name="for_website_you_should_use_this_url" added="1539664388"><![CDATA[For "WebSite" you should use this URL:]]></phrase>
+		<phrase var_name="for_callback_url_must_use" added="1539664388"><![CDATA[For "Callback URL" must use:]]></phrase>
+		<phrase var_name="do_follow_twitter_steps_to_complete_create_new_application" added="1539664388"><![CDATA[<li>Do follow Twitter steps to complete create new application.</li>
+    			<li>Go to tab "Settings" of your application.</li>
+    			<li>Change "Access level" to <strong>"Read and write"</strong></li>]]></phrase>
+		<phrase var_name="tutorial_how_to_get_linkedin_api_key" added="1539664388"><![CDATA[tutorial "How to get Linkedin Api Key"]]></phrase>
+		<phrase var_name="to_get_your_linkedin_api_key" added="1539664388"><![CDATA[<li>To get your <strong>"Linkedin API Key"</strong> and <strong>"Linkedin Secret Key"</strong> strings, go to the following URL:
+    				<div class="p_4"><a href="https://www.linkedin.com/secure/developer?newapp=" target="_blank">Make application</a></div>
+    			</li>]]></phrase>
+		<phrase var_name="do_follow_linkedin_steps_to_complete_create_new_application" added="1539664388"><![CDATA[<li>
+    				<div class="p_4">For "Application Type" you should use this URL: <strong>Web Application</strong></div>
+    				<div class="p_4">For "Live Status" should be: <strong style="color:red;">Live</strong></div>
+    				
+    			</li>
+    			<li>Do follow Linkedin steps to complete create new application.</li>]]></phrase>
+		<phrase var_name="post_on_site" added="1539664388">{full_name} post{title} on {site_name}</phrase>
+		<phrase var_name="comment_on_friends_wall" added="1539664388">Post on Friends Wall</phrase>
+		<phrase var_name="post_on_pages_wall" added="1539664388">Post on pages Wall</phrase>
+		<phrase var_name="all_your_socials_api_keys_will_be_stored_in" added="1539664388">All social API Keys Configuration was setup in:</phrase>
+		<phrase var_name="please_install_social_bridge_plugin_first" added="1539664388">Please install Social Bridge plugin first</phrase>
+		<phrase var_name="social_publishers" added="1539664388">Social Publishers</phrase>
+		<phrase var_name="admin_menu_statistic_by_date" added="1539664388">Statistic By Date</phrase>
+		<phrase var_name="admin_menu_statistic_by_user" added="1539664388">Statistic By User</phrase>
+		<phrase var_name="statistic_by_date" added="1539664388">Statistic By Date</phrase>
+		<phrase var_name="statistic_by_user" added="1539664388">Statistic By User</phrase>
+		<phrase var_name="id" added="1539664388">Id</phrase>
+		<phrase var_name="date" added="1539664388">Date</phrase>
+		<phrase var_name="are_you_sure" added="1539664388">Are you sure?</phrase>
+		<phrase var_name="search_filter" added="1539664388">Search Filter</phrase>
+		<phrase var_name="search_for_statistic_date" added="1539664388">Search for statistic date</phrase>
+		<phrase var_name="limit_per_page" added="1539664388">Limit per page</phrase>
+		<phrase var_name="sort" added="1539664388">Sort</phrase>
+		<phrase var_name="delete_all" added="1539664388">Delete all</phrase>
+		<phrase var_name="no_statistic_date_has_been_created" added="1539664388">No statistic date has been created.</phrase>
+		<phrase var_name="statistic_by_date_successfully_deleted" added="1539664388">Statistic by date successfully deleted!</phrase>
+		<phrase var_name="delete_statistic_by_date_fail" added="1539664388">Delete statistic by date fail!</phrase>
+		<phrase var_name="statistic_by_user_successfully_deleted" added="1539664388">Statistic by user successfully deleted!</phrase>
+		<phrase var_name="delete_statistic_by_user_fail" added="1539664388">Delete statistic by user fail!</phrase>
+		<phrase var_name="full_name" added="1539664388">Full Name</phrase>
+		<phrase var_name="search_for_full_name" added="1539664388">Search for full name</phrase>
+		<phrase var_name="no_statistic_user_has_been_created" added="1539664388">No statistic user has been created!</phrase>
+		<phrase var_name="publishers_contest" added="1539664388">Contest</phrase>
+		<phrase var_name="publishers_jobposting" added="1539664388">Job Posting</phrase>
+		<phrase var_name="publishers_coupon" added="1539664388">Coupon</phrase>
+		<phrase var_name="publishers_fundraising" added="1539664388">Fund Raising</phrase>
+		<phrase var_name="publishers_document" added="1539664388">Document</phrase>
+		<phrase var_name="publishers_resume" added="1539664388">Resume</phrase>
+		<phrase var_name="post_a_document_title_on" added="1539664388">{full_name} posted a document{title} on {site_name}</phrase>
+		<phrase var_name="please_re_connect_your_account_facebook" added="1539664388">Please re-connect your account Facebook</phrase>
+		<phrase var_name="what_s_on_your_mind" added="1539664388"><![CDATA[What&#039;s on your mind?]]></phrase>
+		<phrase var_name="publishers_directory" added="1539664388">Business Directory</phrase>
+		<phrase var_name="publishers_ultimatevideo" added="1539664388">Ultimate Videos</phrase>
+		<phrase var_name="publishers_ynsocialstore" added="1539664388">Social Store</phrase>
+		<phrase var_name="publishers_ynblog" added="1539664388">Advanced Blog</phrase>
+		<phrase var_name="publishers_videochannel" added="1539664388">Video Channel</phrase>
+	</phrases>
+</module>

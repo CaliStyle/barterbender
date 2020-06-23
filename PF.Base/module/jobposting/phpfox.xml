@@ -1,0 +1,892 @@
+<module>
+	<data>
+		<module_id>jobposting</module_id>
+		<product_id>younet_jobposting4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:13:{s:41:"jobposting_admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:10:"jobposting";i:1;s:19:"user-group-settings";}}s:38:"jobposting.admin_menu_add_new_industry";a:1:{s:3:"url";a:3:{i:0;s:10:"jobposting";i:1;s:8:"category";i:2;s:3:"add";}}s:39:"jobposting.admin_menu_manage_industries";a:1:{s:3:"url";a:2:{i:0;s:10:"jobposting";i:1;s:8:"category";}}s:37:"jobposting.admin_menu_add_new_package";a:1:{s:3:"url";a:3:{i:0;s:10:"jobposting";i:1;s:7:"package";i:2;s:3:"add";}}s:37:"jobposting.admin_menu_manage_packages";a:1:{s:3:"url";a:2:{i:0;s:10:"jobposting";i:1;s:7:"package";}}s:33:"jobposting.admin_menu_manage_jobs";a:1:{s:3:"url";a:1:{i:0;s:10:"jobposting";}}s:28:"jobposting.admin_menu_sdfsdf";a:1:{s:3:"url";a:2:{i:0;s:10:"jobposting";i:1;s:3:"job";}}s:27:"jobposting.admin_menu_sdfsd";a:1:{s:3:"url";a:2:{i:0;s:10:"jobposting";i:1;s:11:"transaction";}}s:42:"jobposting.admin_menu_add_new_job_category";a:1:{s:3:"url";a:2:{i:0;s:10:"jobposting";i:1;s:9:"addcatjob";}}s:41:"jobposting.admin_menu_manage_job_category";a:1:{s:3:"url";a:2:{i:0;s:10:"jobposting";i:1;s:12:"managecatjob";}}s:47:"jobposting.admin_menu_add_new_apply_job_package";a:1:{s:3:"url";a:3:{i:0;s:10:"jobposting";i:1;s:15:"applyjobpackage";i:2;s:3:"add";}}s:47:"jobposting.admin_menu_manage_apply_job_packages";a:1:{s:3:"url";a:2:{i:0;s:10:"jobposting";i:1;s:15:"applyjobpackage";}}s:41:"jobposting.admin_menu_manage_custom_field";a:1:{s:3:"url";a:2:{i:0;s:10:"jobposting";i:1;s:17:"managecustomfield";}}}]]></menu>
+		<phrase_var_name>module_jobpostings</phrase_var_name>
+		<version>4.02p2</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/job_posting.jpg</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="jobposting" parent_var_name="" m_connection="main" var_name="menu_jobposting_jobposting_fad58de7366495db4650cfefac2fcd61" ordering="131" url_value="jobposting" version_id="3.3.0" disallow_access="" module="jobposting" mobile_icon="briefcase" />
+		<menu module_id="jobposting" parent_var_name="" m_connection="mobile" var_name="menu_jobposting_job_posting_532c28d5412dd75bf975fb951c740a30" ordering="145" url_value="jobposting" version_id="3.7.5" disallow_access="" module="jobposting" mobile_icon="small-jobposting.png" />
+		<menu module_id="jobposting" parent_var_name="" m_connection="jobposting" var_name="create_your_company" ordering="150" url_value="jobposting.company.add" version_id="4.01p2" disallow_access="" module="jobposting" />
+		<menu module_id="jobposting" parent_var_name="" m_connection="jobposting" var_name="create_a_new_job" ordering="151" url_value="jobposting.add" version_id="4.01p2" disallow_access="" module="jobposting" />
+	</menus>
+	<settings>
+		<setting group="" module_id="jobposting" is_hidden="0" type="drop" var_name="jobposting_job_paging_mode" phrase_var_name="setting_jobposting_job_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:10:"pagination";s:6:"values";a:3:{i:0;s:10:"pagination";i:1;s:9:"next_prev";i:2;s:8:"loadmore";}}]]></setting>
+		<setting group="" module_id="jobposting" is_hidden="0" type="drop" var_name="jobposting_company_paging_mode" phrase_var_name="setting_jobposting_company_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:10:"pagination";s:6:"values";a:3:{i:0;s:10:"pagination";i:1;s:8:"loadmore";i:2;s:9:"next_prev";}}]]></setting>
+		<setting group="" module_id="jobposting" is_hidden="0" type="integer" var_name="fee_feature_job" phrase_var_name="setting_fee_feature_job" ordering="4" version_id="3.5.0">10</setting>
+		<setting group="" module_id="jobposting" is_hidden="0" type="drop" var_name="company_job_view" phrase_var_name="setting_company_job_view" ordering="6" version_id="3.5.0"><![CDATA[a:2:{s:7:"default";s:9:"Thumbnail";s:6:"values";a:2:{i:0;s:9:"Thumbnail";i:1;s:4:"List";}}]]></setting>
+		<setting group="" module_id="jobposting" is_hidden="0" type="integer" var_name="jobposting_maximum_upload_size_photo" phrase_var_name="setting_jobposting_maximum_upload_size_photo" ordering="1" version_id="3.5.0">2048</setting>
+		<setting group="" module_id="jobposting" is_hidden="0" type="integer" var_name="jobposting_fee_to_sponsor_company" phrase_var_name="setting_jobposting_fee_to_sponsor_company" ordering="1" version_id="3.5.0">15</setting>
+		<setting group="" module_id="jobposting" is_hidden="0" type="integer" var_name="jobposting_maximum_upload_size_resume" phrase_var_name="setting_jobposting_maximum_upload_size_resume" ordering="1" version_id="3.7.4">50</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection=" " module_id="jobposting" component=" " location="0" is_active="0" ordering="0" disallow_access=" " can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.index" module_id="jobposting" component="job.recent" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Recent Job Posting</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.index" module_id="jobposting" component="job.maybeinterested" location="3" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Jobs You May Be Interested In</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.company" module_id="jobposting" component="company.topemployer" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Top Employers</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.company" module_id="jobposting" component="company.mostfollow" location="3" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Most Followed Employers</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.index" module_id="jobposting" component="category" location="1" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.company" module_id="jobposting" component="category" location="1" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.index" module_id="jobposting" component="job.hotposting" location="3" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.index" module_id="jobposting" component="job.subscribe" location="3" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.company.view" module_id="jobposting" component="company.image" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.view" module_id="jobposting" component="company.image" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.view" module_id="jobposting" component="job.buttonapply" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="jobposting.company.view" module_id="jobposting" component="company.employee" location="1" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="jobposting" component="index" m_connection="jobposting.index" module="jobposting" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="jobposting" component="job.recent" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="job.maybeinterested" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="job.search" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="company" m_connection="jobposting.company" module="jobposting" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="jobposting" component="company.topemployer" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="company.mostfollow" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="company.search" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="category" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="job.hotposting" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="job.subscribe" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="company.image" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="view" m_connection="jobposting.company.view" module="jobposting" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="jobposting" component="view" m_connection="jobposting.view" module="jobposting" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="jobposting" component="job.buttonapply" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="company.employee" m_connection="" module="jobposting" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="jobposting" component="profile" m_connection="jobposting.profile" module="jobposting" is_controller="1" is_block="0" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_jobposting" added="1554100921">Job Posting</phrase>
+		<phrase var_name="module_jobpostings" added="1554100921">Job Posting</phrase>
+		<phrase var_name="menu_jobposting_jobposting_fad58de7366495db4650cfefac2fcd61" added="1554100921">Job Posting</phrase>
+		<phrase var_name="remember_to_clear_cache_to_see_effect" added="1554100921">Remember to clear cache to see the updates.</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1554100921">Category order successfully updated</phrase>
+		<phrase var_name="category_successfully_deleted" added="1554100921">Industry successfully deleted</phrase>
+		<phrase var_name="manage_categories" added="1554100921">Manage Categories</phrase>
+		<phrase var_name="manage_companies" added="1554100921">Manage Companies</phrase>
+		<phrase var_name="are_you_sure_this_will_delete_all_item_that_belong_to_this_category_and_cannot_be_undone" added="1554100921">Are you sure? This will delete all items that belong to this category and cannot be undone.</phrase>
+		<phrase var_name="edit" added="1554100921">Edit</phrase>
+		<phrase var_name="delete" added="1554100921">Delete</phrase>
+		<phrase var_name="categories" added="1554100921">Categories</phrase>
+		<phrase var_name="category_successfully_updated" added="1554100921">Category successfully updated</phrase>
+		<phrase var_name="category_successfully_added" added="1554100921">Category successfully added</phrase>
+		<phrase var_name="industry_successfully_updated" added="1554100921">Industry successfully updated</phrase>
+		<phrase var_name="industry_successfully_added" added="1554100921">Industry successfully added</phrase>
+		<phrase var_name="edit_a_category" added="1554100921">Edit a Category</phrase>
+		<phrase var_name="create_a_new_category" added="1554100921">Create a New Category</phrase>
+		<phrase var_name="campaign_category_details" added="1554100921">Industry Detail</phrase>
+		<phrase var_name="name" added="1554100921">Name</phrase>
+		<phrase var_name="parent_category" added="1554100921">Parent Category</phrase>
+		<phrase var_name="select_form_select" added="1554100921">Select</phrase>
+		<phrase var_name="submit" added="1554100921">Submit</phrase>
+		<phrase var_name="select" added="1554100921">Select</phrase>
+		<phrase var_name="select_a_sub_category" added="1554100921">Select a Sub-Category</phrase>
+		<phrase var_name="update_order" added="1554100921">Update Order</phrase>
+		<phrase var_name="admin_menu_add_new_industry" added="1554100921">Add New Industry</phrase>
+		<phrase var_name="admin_menu_manage_industries" added="1554100921">Manage Industries</phrase>
+		<phrase var_name="are_you_sure_this_will_delete_all_items_that_belong_to_this_category_and_cannot_be_undone" added="1554100921">Are you sure?</phrase>
+		<phrase var_name="all_jobs" added="1554100921">All Jobs</phrase>
+		<phrase var_name="all_companies" added="1554100921">All Companies</phrase>
+		<phrase var_name="job_posting" added="1554100921">Job Posting</phrase>
+		<phrase var_name="search_companies" added="1554100921">Search Companies</phrase>
+		<phrase var_name="latest" added="1554100921">Latest</phrase>
+		<phrase var_name="most_viewed" added="1554100921">Most Viewed</phrase>
+		<phrase var_name="most_favorited" added="1554100921">Most Favorited</phrase>
+		<phrase var_name="recent_job_posting" added="1554100921">Recent Job Posting</phrase>
+		<phrase var_name="jobs_you_may_be_interested_in" added="1554100921">Jobs You May Be Interested In</phrase>
+		<phrase var_name="search" added="1554100921">Advanced Search</phrase>
+		<phrase var_name="keyword" added="1554100921">Keyword</phrase>
+		<phrase var_name="large_text_area" added="1554100921">Large text area</phrase>
+		<phrase var_name="small_text_area_255_characters_max" added="1554100921">Small text area 255 characters max</phrase>
+		<phrase var_name="selection" added="1554100921">Selection</phrase>
+		<phrase var_name="multiple_selection" added="1554100921">Multiple selection</phrase>
+		<phrase var_name="checkbox" added="1554100921">Checkbox</phrase>
+		<phrase var_name="radio" added="1554100921">Radio</phrase>
+		<phrase var_name="company" added="1554100921">Company</phrase>
+		<phrase var_name="location" added="1554100921">Location</phrase>
+		<phrase var_name="industry" added="1554100921">Industry</phrase>
+		<phrase var_name="language_prefer" added="1554100921">Language Prefer</phrase>
+		<phrase var_name="education_prefer" added="1554100921">Education Prefer</phrase>
+		<phrase var_name="working_place" added="1554100921">Working Place</phrase>
+		<phrase var_name="expire_before" added="1554100921">Expire Before</phrase>
+		<phrase var_name="top_employers" added="1554100921">Top Companies</phrase>
+		<phrase var_name="most_followed_employers" added="1554100921">Most Followed Companies</phrase>
+		<phrase var_name="company_name" added="1554100921">Company Name</phrase>
+		<phrase var_name="company_size" added="1554100921">Company Size</phrase>
+		<phrase var_name="my_favorite_jobs" added="1554100921">My Favorite Jobs</phrase>
+		<phrase var_name="my_following_jobs" added="1554100921">My Following Jobs</phrase>
+		<phrase var_name="my_favorite_companies" added="1554100921">My Favorite Companies</phrase>
+		<phrase var_name="my_following_companies" added="1554100921">My Following Companies</phrase>
+		<phrase var_name="my_applied_jobs" added="1554100921">My Applied Jobs</phrase>
+		<phrase var_name="my_company" added="1554100921">My Company</phrase>
+		<phrase var_name="setting_subindustries_to_show_at_first" added="1554100921"><![CDATA[<title>How many sub-industry to show at first</title><info>This setting tells how many sub-industry are to be shown at first. If the list of sub-industry is longer than this value the extra ones will be hidden and a "View More" option will be shown instead, allowing the user to display the hidden sub-industry.
+
+a "View Less" option will be available to provide the full "accordion" effect.
+
+If you set it to zero ("0" without quotes) it will hide every sub-industry and a plus sign will show next to the industry name, clicking the plus sign will show that industry&#039;s sub-industry.</info>]]></phrase>
+		<phrase var_name="setting_number_of_items_block_top_mostfollowed_employers" added="1554100921"><![CDATA[<title>Number of items on Block "Top Companies", "Most Followed Companies"</title><info>Number of items on Block "Top Companies", "Most Followed Companies"</info>]]></phrase>
+		<phrase var_name="setting_number_of_items_block_recent_youmay" added="1554100921"><![CDATA[<title>Number of items on block "Recent Job Posting", "Job You May Be Interested In", "Hot Job Posting"</title><info>Number of items on block "Recent Job Posting", "Job You May Be Interested In", "Hot Job Posting"</info>]]></phrase>
+		<phrase var_name="setting_fee_feature_job" added="1554100921"><![CDATA[<title>Fee to feature Job</title><info>Fee to feature Job</info>]]></phrase>
+		<phrase var_name="setting_company_job_view" added="1554100921"><![CDATA[<title>Company and job view</title><info>Company and job view</info>]]></phrase>
+		<phrase var_name="setting_jobposting_maximum_upload_size" added="1554100921"><![CDATA[<title>Maximum upload size (KB)</title><info>Maximum upload size (KB)</info>]]></phrase>
+		<phrase var_name="create_your_company" added="1554100921">Create Your Company</phrase>
+		<phrase var_name="create_a_new_job" added="1554100921">Create a New Job</phrase>
+		<phrase var_name="publish_job" added="1554100921">Publish Job</phrase>
+		<phrase var_name="create_new_job" added="1554100921">Create New Job</phrase>
+		<phrase var_name="job_title" added="1554100921">Job title</phrase>
+		<phrase var_name="job_description" added="1554100921">Job Description</phrase>
+		<phrase var_name="desired_skills_experience" added="1554100921"><![CDATA[Desired Skills & Experience]]></phrase>
+		<phrase var_name="time" added="1554100921">Time</phrase>
+		<phrase var_name="expired_on" added="1554100921">Expired on</phrase>
+		<phrase var_name="job_privacy" added="1554100921">Job Privacy</phrase>
+		<phrase var_name="save_as_draft" added="1554100921">Save as Draft</phrase>
+		<phrase var_name="publish" added="1554100921">Publish</phrase>
+		<phrase var_name="job_successfully_added" added="1554100921">Job successfully added.</phrase>
+		<phrase var_name="job_successfully_updated" added="1554100921">Job successfully updated.</phrase>
+		<phrase var_name="actions" added="1554100921">Actions</phrase>
+		<phrase var_name="company_name_is_required" added="1554100921">Company name is required.</phrase>
+		<phrase var_name="description_is_required" added="1554100921">Description is required.</phrase>
+		<phrase var_name="headquaters_location_is_required" added="1554100921">Headquaters location is required.</phrase>
+		<phrase var_name="industry_is_required" added="1554100921">Industry is required.</phrase>
+		<phrase var_name="contact_name_is_required" added="1554100921">Contact name is required.</phrase>
+		<phrase var_name="contact_phone_is_required" added="1554100921">Contact phone is required.</phrase>
+		<phrase var_name="contact_email_is_required" added="1554100921">Contact email is required.</phrase>
+		<phrase var_name="managing_company" added="1554100921">Managing Company</phrase>
+		<phrase var_name="add_company" added="1554100921">Add Company</phrase>
+		<phrase var_name="description" added="1554100921">Description</phrase>
+		<phrase var_name="headquaters_location" added="1554100921">Headquaters Location</phrase>
+		<phrase var_name="city" added="1554100921">City</phrase>
+		<phrase var_name="zip_postal_code" added="1554100921">Zip/Postal Code</phrase>
+		<phrase var_name="country" added="1554100921">Country</phrase>
+		<phrase var_name="refresh_map" added="1554100921">Refresh Map</phrase>
+		<phrase var_name="website" added="1554100921">Website</phrase>
+		<phrase var_name="from" added="1554100921">From</phrase>
+		<phrase var_name="to" added="1554100921">To</phrase>
+		<phrase var_name="contact_information" added="1554100921">Contact Information</phrase>
+		<phrase var_name="phone" added="1554100921">Phone</phrase>
+		<phrase var_name="email" added="1554100921">Email</phrase>
+		<phrase var_name="fax" added="1554100921">Fax</phrase>
+		<phrase var_name="company_privacy" added="1554100921">Company Privacy</phrase>
+		<phrase var_name="share_privacy" added="1554100921">Share Privacy</phrase>
+		<phrase var_name="save" added="1554100921">Save</phrase>
+		<phrase var_name="sponsor_company" added="1554100921">Sponsor Company</phrase>
+		<phrase var_name="add_city_zip_country" added="1554100921">Add city/zip/country</phrase>
+		<phrase var_name="hide_city_zip_country" added="1554100921">Hide city/zip/country</phrase>
+		<phrase var_name="control_who_can_see_your_company_information" added="1554100921">Control who can see your company information.</phrase>
+		<phrase var_name="control_who_can_share_on_your_company" added="1554100921">Control who can share on your company.</phrase>
+		<phrase var_name="employees" added="1554100921">Employees</phrase>
+		<phrase var_name="admin_menu_add_new_package" added="1554100921">Add New Package</phrase>
+		<phrase var_name="admin_menu_manage_packages" added="1554100921">Manage Packages</phrase>
+		<phrase var_name="edit_a_package" added="1554100921">Edit a Package</phrase>
+		<phrase var_name="from_field_of_company_size_is_required" added="1554100921"><![CDATA["From" field of Company size is required.]]></phrase>
+		<phrase var_name="to_field_of_company_size_is_required" added="1554100921"><![CDATA["To" field of Company size is required.]]></phrase>
+		<phrase var_name="create_a_new_package" added="1554100921">Create a New Package</phrase>
+		<phrase var_name="package_successfully_added" added="1554100921">Package successfully added.</phrase>
+		<phrase var_name="package_successfully_updated" added="1554100921">Package successfully updated.</phrase>
+		<phrase var_name="name_of_package_cannot_be_empty" added="1554100921">Name of package cannot be empty.</phrase>
+		<phrase var_name="select_a_sub_industry" added="1554100921">Select a Sub-Industry</phrase>
+		<phrase var_name="you_can_add_up_to_3_industries" added="1554100921">You can add up to 3 industries.</phrase>
+		<phrase var_name="website_format_is_not_valid" added="1554100921">Website format is not valid.</phrase>
+		<phrase var_name="company_size_is_not_valid" added="1554100921"><![CDATA[Company size is not valid. "From" field must be greater than 0 and "To" field must be greater than "From" field.]]></phrase>
+		<phrase var_name="two_industries_must_be_different" added="1554100921">Two industries must be different.</phrase>
+		<phrase var_name="email_format_is_not_valid" added="1554100921">Email format is not valid.</phrase>
+		<phrase var_name="hot_job_posting" added="1554100921">Hot Job Posting</phrase>
+		<phrase var_name="setting_jobposting_maximum_upload_size_photo" added="1554100921"><![CDATA[<title>Maximum upload size for photos (KB)</title><info>Maximum upload size for company photos and form logo.</info>]]></phrase>
+		<phrase var_name="select_images" added="1554100921">Select Image(s)</phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1554100921">You can upload a JPG, GIF or PNG file.</phrase>
+		<phrase var_name="the_file_size_limit_is_filesize_if_your_upload_does_not_work_try_uploading_a_smaller_picture" added="1554100921">The file size limit is {filesize}. If your upload does not work, try uploading a smaller picture.</phrase>
+		<phrase var_name="upload_photos" added="1554100921">Upload Photo(s)</phrase>
+		<phrase var_name="user_setting_can_add_company" added="1554100921">Can add a company?</phrase>
+		<phrase var_name="photos" added="1554100921">Photos</phrase>
+		<phrase var_name="delete_this_image" added="1554100921">Delete this image</phrase>
+		<phrase var_name="are_you_sure" added="1554100921">Are you sure?</phrase>
+		<phrase var_name="click_to_set_as_default_image" added="1554100921">Click to set as default image</phrase>
+		<phrase var_name="company_successfully_added" added="1554100921">Company successfully added.</phrase>
+		<phrase var_name="company_information_successfully_updated" added="1554100921">Company information successfully updated.</phrase>
+		<phrase var_name="view_company" added="1554100921">View Company</phrase>
+		<phrase var_name="company_information" added="1554100921">Company Information</phrase>
+		<phrase var_name="my_bought_packages" added="1554100921">My Bought Packages</phrase>
+		<phrase var_name="submission_form" added="1554100921">Submission Form</phrase>
+		<phrase var_name="manage_job_posted" added="1554100921">Manage Job Posted</phrase>
+		<phrase var_name="admins" added="1554100921">Admins</phrase>
+		<phrase var_name="unable_to_find_the_image" added="1554100921">Unable to find the image.</phrase>
+		<phrase var_name="upload_photos_process_has_finished" added="1554100921">Upload photo(s) process has finished.</phrase>
+		<phrase var_name="view_more" added="1554100921">more</phrase>
+		<phrase var_name="form_title" added="1554100921">Form Title</phrase>
+		<phrase var_name="enter_the_title_for_the_submission_form" added="1554100921">Enter the title for the submission form.</phrase>
+		<phrase var_name="form_description" added="1554100921">Form Description</phrase>
+		<phrase var_name="enter_the_description_for_the_form_this_will_appear_below_the_form_title" added="1554100921">Enter the description for the form. This will appear below the form title.</phrase>
+		<phrase var_name="company_logo" added="1554100921">Company Logo</phrase>
+		<phrase var_name="show_job_title" added="1554100921">Show job title</phrase>
+		<phrase var_name="enable_your_name_field" added="1554100921"><![CDATA[Enable "Your Name" field. System will get Full Name of the candidate to fill to. Candidate can change value for this field.]]></phrase>
+		<phrase var_name="required_field" added="1554100921">Required field</phrase>
+		<phrase var_name="candidate_name" added="1554100921">Candidate Name</phrase>
+		<phrase var_name="enable_your_photo_field" added="1554100921"><![CDATA[Enable "Your Photo" field]]></phrase>
+		<phrase var_name="candidate_photo" added="1554100921">Candidate Photo</phrase>
+		<phrase var_name="candidate_email" added="1554100921">Candidate Email</phrase>
+		<phrase var_name="candidate_telephone" added="1554100921">Candidate Telephone</phrase>
+		<phrase var_name="enable_your_email_field" added="1554100921"><![CDATA[Enable "Your Email" field]]></phrase>
+		<phrase var_name="enable_your_telephone_field" added="1554100921"><![CDATA[Enable "Your Telephone" field]]></phrase>
+		<phrase var_name="resume" added="1554100921">Resume</phrase>
+		<phrase var_name="allow_candidate_to_apply_this_job_by_using_his_her_resume_on_module_resume" added="1554100921">Allow candidate to apply this job by using his/her resume on module Resume</phrase>
+		<phrase var_name="ms_word_pdf_zip_size_maximum" added="1554100921">Ms Word, PDF, ZIP ({size} maximum)</phrase>
+		<phrase var_name="resume_format" added="1554100921">Resume Format</phrase>
+		<phrase var_name="subscribe_job" added="1554100921">Subscribe Job</phrase>
+		<phrase var_name="submission_form_successfully_updated" added="1554100921">Submission form successfully updated.</phrase>
+		<phrase var_name="form_title_is_required" added="1554100921">Form title is required.</phrase>
+		<phrase var_name="company_logo_is_not_valid" added="1554100921">Company logo is not valid. You can upload a maximum {size} JPG, GIF or PNG file.</phrase>
+		<phrase var_name="type" added="1554100921">Type</phrase>
+		<phrase var_name="values" added="1554100921">Values</phrase>
+		<phrase var_name="add_new_option" added="1554100921">Add new option</phrase>
+		<phrase var_name="add" added="1554100921">Add</phrase>
+		<phrase var_name="search_jobs" added="1554100921">Search Jobs</phrase>
+		<phrase var_name="admin_menu_manage_jobs" added="1554100921">Manage Companies</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_custom_option" added="1554100921">Are you sure you want to delete this custom option?
+
+Note that anyone using this option will revert to using the default option set for this custom field.</phrase>
+		<phrase var_name="could_not_delete" added="1554100921">Could not delete</phrase>
+		<phrase var_name="result_s" added="1554100921">Result(s)</phrase>
+		<phrase var_name="unable_to_find_the_custom_field_you_want_to_delete" added="1554100921">Unable to find the custom field you want to delete.</phrase>
+		<phrase var_name="unable_to_find_the_custom_option_you_plan_on_deleting" added="1554100921">Unable to find the custom option you plan on deleting.</phrase>
+		<phrase var_name="total_upper" added="1554100921">Total</phrase>
+		<phrase var_name="admin_menu_sdfsdf" added="1554100921">Manage Jobs</phrase>
+		<phrase var_name="admin_menu_sdfsd" added="1554100921">Manage Transactions</phrase>
+		<phrase var_name="this_field_will_be_hidden_until_it_has_at_least_one_option" added="1554100921">This field will be hidden until it has at least one option!</phrase>
+		<phrase var_name="company_admins_successfully_updated" added="1554100921">Company admins successfully updated.</phrase>
+		<phrase var_name="you_can_not_create_more_than_one_company" added="1554100921">You can not create more companies.</phrase>
+		<phrase var_name="setting_jobposting_fee_to_sponsor_company" added="1554100921"><![CDATA[<title>Fee to sponsor company</title><info>Fee to sponsor company</info>]]></phrase>
+		<phrase var_name="setting_jobposting_admin_paypal_email" added="1554100921"><![CDATA[<title>Admin Paypal email</title><info>Paypal email of admin to receive money from member</info>]]></phrase>
+		<phrase var_name="invite_friends" added="1554100921">Invite Friends</phrase>
+		<phrase var_name="follow" added="1554100921">Follow</phrase>
+		<phrase var_name="favorite" added="1554100921">Favorite</phrase>
+		<phrase var_name="promote_job" added="1554100921">Promote Job</phrase>
+		<phrase var_name="apply_job" added="1554100921">Apply Job</phrase>
+		<phrase var_name="pay_packages" added="1554100921">Pay Packages</phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_jobposting_name" added="1554100921"><![CDATA[{full_name} wrote a comment on your company "{title}".]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_jobposting_message" added="1554100921"><![CDATA[{full_name} wrote a comment on your company "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_liked_a_comment_you_posted_on_the_jobposting_title" added="1554100921"><![CDATA[{full_name} liked a comment you posted on the company "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_comment_message_jobposting" added="1554100921"><![CDATA[{full_name} liked your comment "<a href="{link}">{content}</a>" that you posted on the company "<a href="{item_link}">{title}</a>".
+To view this company follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_liked_your_company_title" added="1554100921"><![CDATA[{full_name} liked your company "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_company_message" added="1554100921"><![CDATA[{full_name} liked your company "<a href="{link}">{title}</a>"
+To view this company follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_liked_gender_own_company_title" added="1554100921"><![CDATA[{users} liked {gender} own company "{title}"]]></phrase>
+		<phrase var_name="users_liked_your_company_title" added="1554100921"><![CDATA[{users} liked your company "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_company_title" added="1554100921"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> company "{title}"]]></phrase>
+		<phrase var_name="created_an_company" added="1554100921">created an company.</phrase>
+		<phrase var_name="unable_to_post_a_comment_on_this_item_due_to_privacy_settings" added="1554100921">Unable to post a comment on this item due to privacy settings.</phrase>
+		<phrase var_name="full_name_commented_on_a_comment_posted_on_the_company_title" added="1554100921"><![CDATA[{full_name} commented on a comment posted on the company "{title}".]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_your_comments_you_posted_on_the_company" added="1554100921"><![CDATA[{full_name} commented on one of your comments you posted on the company "<a href="{item_link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_gender_company_comments" added="1554100921">{full_name} commented on one of {gender} company comments.</phrase>
+		<phrase var_name="full_name_commented_on_one_of_gender_own_comments_on_the_company" added="1554100921"><![CDATA[{full_name} commented on one of {gender} own comments on the company "<a href="{item_link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name_s_span_comment_on_the_company_title" added="1554100921"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}&#039;s</span> comment on the company "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_gender_own_comment_on_the_company_title" added="1554100921"><![CDATA[{users} commented on {gender} own comment on the company "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_one_of_your_comments_on_the_company_title" added="1554100921"><![CDATA[{users} commented on one of your comments on the company "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_one_of_span_class_drop_data_user_row_full_name_s_span_comments_on_the_company_tit" added="1554100921"><![CDATA[{users} commented on one of <span class="drop_data_user">{row_full_name}&#039;s</span> comments on the company "{title}"]]></phrase>
+		<phrase var_name="item_phrase" added="1554100921">jobposting</phrase>
+		<phrase var_name="initialized" added="1554100921">Initialized</phrase>
+		<phrase var_name="pending" added="1554100921">Pending</phrase>
+		<phrase var_name="completed" added="1554100921">Completed</phrase>
+		<phrase var_name="denied" added="1554100921">Denied</phrase>
+		<phrase var_name="passed" added="1554100921">Passed</phrase>
+		<phrase var_name="rejected" added="1554100921">Rejected</phrase>
+		<phrase var_name="users_liked_one_of_your_comments_on_the_company_title" added="1554100921"><![CDATA[{users} liked one of your comments on the company "{title}"]]></phrase>
+		<phrase var_name="users_liked_one_on_span_class_drop_data_user_row_full_name_s_span_comments_on_the_company_title" added="1554100921"><![CDATA[{users} liked one on <span class="drop_data_user">{row_full_name}&#039;s</span> comments on the company "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_comment_on_the_company_title" added="1554100921"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> comment on the company "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_your_company_title" added="1554100921"><![CDATA[{users} commented on your company "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name_s_span_company_title" added="1554100921"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}&#039;s</span> company "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_gender_own_company_title" added="1554100921"><![CDATA[{users} commented on {gender} own company "{title}"]]></phrase>
+		<phrase var_name="users_liked_gender_own_comment_on_the_company_title" added="1554100921"><![CDATA[{users} liked {gender} own comment on the company "{title}"]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_row_full_name_s_company_comments" added="1554100921"><![CDATA[{full_name} commented on one of {row_full_name}&#039;s company comments.]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_row_full_name_s" added="1554100921"><![CDATA[{full_name} commented on one of {row_full_name}&#039;s comments on the company "<a href="{item_link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="report_this_job" added="1554100921">Report this job</phrase>
+		<phrase var_name="posted_a_comment_on_gender_job_a_href_link_title_a" added="1554100921"><![CDATA[posted a comment on {gender} job <a href="{link}"> {title}</a>]]></phrase>
+		<phrase var_name="posted_a_comment_on_user_name_s_job_a_href_link_title_a" added="1554100921"><![CDATA[posted a comment on {user_name}&#039;s job "<a href="{link}">{title}</a>"]]></phrase>
+		<phrase var_name="posted_a_job" added="1554100921">posted a job.</phrase>
+		<phrase var_name="full_name_liked_your_job_title" added="1554100921"><![CDATA[{full_name} liked your blog "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_job_link_title" added="1554100921"><![CDATA[{full_name} liked your job "<a href="{link}">{title}</a>"
+To view this job follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_liked_gender_own_event_title" added="1554100921"><![CDATA[{users} liked {gender} own job "{title}"]]></phrase>
+		<phrase var_name="users_liked_your_event_title" added="1554100921"><![CDATA[{users} liked your job "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_job_title" added="1554100921"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> job "{title}"]]></phrase>
+		<phrase var_name="full_name_commented_on_gender_job" added="1554100921">{full_name} commented on {gender} job.</phrase>
+		<phrase var_name="full_name_commented_on_gender_job_message" added="1554100921"><![CDATA[{full_name} commented on {gender} job "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_job_full_name_s_job" added="1554100921"><![CDATA[{full_name} commented on {blog_full_name}&#039;s job.]]></phrase>
+		<phrase var_name="full_name_commented_on_job_full_name_s_job_message" added="1554100921"><![CDATA[{full_name} commented on {blog_full_name}&#039;s job "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_your_job_title" added="1554100921"><![CDATA[{full_name} commented on your job "{title}".]]></phrase>
+		<phrase var_name="full_name_commented_on_your_job_message" added="1554100921"><![CDATA[{full_name} commented on your job "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_commented_on_gender_job_title" added="1554100921"><![CDATA[{users} commented on {gender} blog "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_your_job_title" added="1554100921"><![CDATA[{users} commented on your job "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name" added="1554100921"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}&#039;s</span> job "{title}"]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_job_job_title" added="1554100921"><![CDATA[<a href="{user_link}">{full_name}</a> wrote a comment on your job "<a href="{job_link}">{job_title}</a>".]]></phrase>
+		<phrase var_name="user_name_tagged_you_in_a_comment_in_a_job" added="1554100921">{user_name} tagged you in a comment in a job</phrase>
+		<phrase var_name="custom_field_is_required" added="1554100921"><![CDATA["{custom_field}" is required.]]></phrase>
+		<phrase var_name="enable_company_photo" added="1554100921">Enable company photo</phrase>
+		<phrase var_name="enable_description" added="1554100921">Enable description</phrase>
+		<phrase var_name="embed_code" added="1554100921">Embed code</phrase>
+		<phrase var_name="user_setting_can_edit_company_information" added="1554100921">Can edit own company?</phrase>
+		<phrase var_name="user_setting_can_delete_company_other_user" added="1554100921">Can delete company information created by other users?</phrase>
+		<phrase var_name="user_setting_approved_company_before_displayed" added="1554100921">Approved company before displayed?</phrase>
+		<phrase var_name="user_setting_can_add_job" added="1554100921">Can add job?</phrase>
+		<phrase var_name="user_setting_can_edit_own_job" added="1554100921">Can edit own job?</phrase>
+		<phrase var_name="user_setting_can_edit_job_created_by_other_users" added="1554100921">Can edit job created by other users?</phrase>
+		<phrase var_name="user_setting_can_browse_view_job" added="1554100921">Can view jobs?</phrase>
+		<phrase var_name="user_setting_can_feature_jobs" added="1554100921">Can feature jobs?</phrase>
+		<phrase var_name="user_setting_can_sponsor_jobs" added="1554100921">Can sponsor company?</phrase>
+		<phrase var_name="user_setting_approved_job_before_displayed" added="1554100921">Approve jobs before publish displayed.</phrase>
+		<phrase var_name="user_setting_point_add_job" added="1554100921">How many points do the users get when they add new job?</phrase>
+		<phrase var_name="pending_jobs" added="1554100921">Pending Jobs</phrase>
+		<phrase var_name="pending_company" added="1554100921">Pending Companies</phrase>
+		<phrase var_name="you_can_not_perform_this_action" added="1554100921">You can not perform this action!</phrase>
+		<phrase var_name="company_successfully_deleted" added="1554100921">Company successfully deleted</phrase>
+		<phrase var_name="delete_this_company" added="1554100921">Delete This Company</phrase>
+		<phrase var_name="invite_people_via_email" added="1554100921">Invite People via Email</phrase>
+		<phrase var_name="separate_multiple_emails_with_a_comma" added="1554100921">Separate multiple emails with a comma.</phrase>
+		<phrase var_name="add_a_personal_message" added="1554100921">Add a personal message</phrase>
+		<phrase var_name="send_invitations" added="1554100921">Send Invitations</phrase>
+		<phrase var_name="new_guest_list" added="1554100921">New Guest List</phrase>
+		<phrase var_name="full_name_invited_you_to_the_type_title" added="1554100921"><![CDATA[{full_name} invited you to the {type} &#039;{title}&#039;]]></phrase>
+		<phrase var_name="full_name_invited_you_to_the_type_title_link" added="1554100921"><![CDATA[{full_name} invited you to the {type} "{title}".
+
+To check out this {type}, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="user_setting_can_delete_job_other_user" added="1554100921">Can delete job created by other users?</phrase>
+		<phrase var_name="job_successfully_deleted" added="1554100921">Job successfully deleted</phrase>
+		<phrase var_name="user_setting_can_edit_company_created_by_other_users" added="1554100921">Can edit company created by other users?</phrase>
+		<phrase var_name="company_successfully_approved" added="1554100921">Company successfully approved</phrase>
+		<phrase var_name="job_successfully_approved" added="1554100921">Job successfully approved</phrase>
+		<phrase var_name="unfavorite" added="1554100921">Unfavorite</phrase>
+		<phrase var_name="unfollow" added="1554100921">Unfollow</phrase>
+		<phrase var_name="update" added="1554100921">Update</phrase>
+		<phrase var_name="company_successfully_saved" added="1554100921">Company successfully saved.</phrase>
+		<phrase var_name="company_successfully_published" added="1554100921">Company successfully published.</phrase>
+		<phrase var_name="user_setting_approve_company_before_displayed" added="1554100921">Approve companies before they are publicly displayed.</phrase>
+		<phrase var_name="user_setting_can_approve_company" added="1554100921">Can approve companies?</phrase>
+		<phrase var_name="user_setting_can_view_company" added="1554100921">Can view companies?</phrase>
+		<phrase var_name="user_setting_can_edit_user_company" added="1554100921">Can edit companies added by other users?</phrase>
+		<phrase var_name="user_setting_can_delete_own_company" added="1554100921">Can delete own company?</phrase>
+		<phrase var_name="user_setting_can_sponsor_company" added="1554100921">Can sponsor company?</phrase>
+		<phrase var_name="user_setting_can_edit_own_company" added="1554100921">Can edit own company?</phrase>
+		<phrase var_name="user_setting_can_approve_job" added="1554100921">Can approve jobs?</phrase>
+		<phrase var_name="post_job_number" added="1554100921">Post Job Number (Number of Job this user can post. 0 means unlimited)</phrase>
+		<phrase var_name="valid_period" added="1554100921">Valid period</phrase>
+		<phrase var_name="day" added="1554100921">Day</phrase>
+		<phrase var_name="week" added="1554100921">Week</phrase>
+		<phrase var_name="month" added="1554100921">Month</phrase>
+		<phrase var_name="never_expires" added="1554100921">Never Expires</phrase>
+		<phrase var_name="package_fee" added="1554100921">Package Fee</phrase>
+		<phrase var_name="search_filter" added="1554100921">Search Filter</phrase>
+		<phrase var_name="employer" added="1554100921">Company</phrase>
+		<phrase var_name="representative" added="1554100921">Representative</phrase>
+		<phrase var_name="sponsor" added="1554100921">Sponsor</phrase>
+		<phrase var_name="pay_to_sponsor" added="1554100921">Pay to Sponsor</phrase>
+		<phrase var_name="valid_packages" added="1554100921">Valid Packages</phrase>
+		<phrase var_name="action" added="1554100921">Action</phrase>
+		<phrase var_name="n_a" added="1554100921">N/A</phrase>
+		<phrase var_name="no_companies_found" added="1554100921">No Companies found</phrase>
+		<phrase var_name="view_jobs" added="1554100921">View Jobs</phrase>
+		<phrase var_name="job" added="1554100921">Job</phrase>
+		<phrase var_name="pay_to_feature" added="1554100921">Pay to Feature</phrase>
+		<phrase var_name="feature" added="1554100921">Feature</phrase>
+		<phrase var_name="number_of_application" added="1554100921">Number of Application</phrase>
+		<phrase var_name="no_jobs_found" added="1554100921">No Jobs found</phrase>
+		<phrase var_name="paid" added="1554100921">Paid</phrase>
+		<phrase var_name="package" added="1554100921">Package</phrase>
+		<phrase var_name="fee" added="1554100921">Fee</phrase>
+		<phrase var_name="payment_status" added="1554100921">Payment Status</phrase>
+		<phrase var_name="purchased_date" added="1554100921">Purchased Date</phrase>
+		<phrase var_name="total_fee" added="1554100921">Total Fee</phrase>
+		<phrase var_name="no_transaction_found" added="1554100921">No Transaction found</phrase>
+		<phrase var_name="jobs" added="1554100921">Jobs</phrase>
+		<phrase var_name="package_name" added="1554100921">Package Name</phrase>
+		<phrase var_name="remaining_job_posts" added="1554100921">Remaining Job Posts</phrase>
+		<phrase var_name="valid_time" added="1554100921">Valid Time</phrase>
+		<phrase var_name="no_package_found" added="1554100921">No package found</phrase>
+		<phrase var_name="your_can_purchase_additional_packages" added="1554100921">Your can purchase additional packages</phrase>
+		<phrase var_name="posted_from" added="1554100921">Posted From</phrase>
+		<phrase var_name="status" added="1554100921">Status</phrase>
+		<phrase var_name="all" added="1554100921">All</phrase>
+		<phrase var_name="show" added="1554100921">Show</phrase>
+		<phrase var_name="hide" added="1554100921">Hide</phrase>
+		<phrase var_name="posted_date" added="1554100921">Posted Date</phrase>
+		<phrase var_name="expired_date" added="1554100921">Expired Date</phrase>
+		<phrase var_name="option" added="1554100921">Option</phrase>
+		<phrase var_name="view_applications" added="1554100921">View Applications</phrase>
+		<phrase var_name="download_all_resumes" added="1554100921">Download All Resumes</phrase>
+		<phrase var_name="no_job_found" added="1554100921">No job found</phrase>
+		<phrase var_name="candidate" added="1554100921">Candidate</phrase>
+		<phrase var_name="submitted_date" added="1554100921">Submitted Date</phrase>
+		<phrase var_name="no_application_found" added="1554100921">No application found</phrase>
+		<phrase var_name="reject" added="1554100921">Reject</phrase>
+		<phrase var_name="pass" added="1554100921">Pass</phrase>
+		<phrase var_name="view" added="1554100921">View</phrase>
+		<phrase var_name="download" added="1554100921">Download</phrase>
+		<phrase var_name="general_information" added="1554100921">General Information</phrase>
+		<phrase var_name="headquaters" added="1554100921">Headquaters</phrase>
+		<phrase var_name="addition_information" added="1554100921">Addition Information</phrase>
+		<phrase var_name="subject" added="1554100921">Subject</phrase>
+		<phrase var_name="message" added="1554100921">Message</phrase>
+		<phrase var_name="approve" added="1554100921">Approve</phrase>
+		<phrase var_name="your_name" added="1554100921">Your Name</phrase>
+		<phrase var_name="your_photo" added="1554100921">Your Photo</phrase>
+		<phrase var_name="your_email" added="1554100921">Your Email</phrase>
+		<phrase var_name="your_telephone" added="1554100921">Your Telephone</phrase>
+		<phrase var_name="use_my_resume" added="1554100921">Use My Resume</phrase>
+		<phrase var_name="format_ms_word_pdf_zip_500kb_maximum" added="1554100921">Format: Ms Word, PDF, Zip (500KB maximum)</phrase>
+		<phrase var_name="sorry_you_don_t_have_any_resume_click" added="1554100921"><![CDATA[Sorry, you don&#039;t have any Resume, Click <a href="{link}">here</a> to create new Resume.]]></phrase>
+		<phrase var_name="apply" added="1554100921">Apply</phrase>
+		<phrase var_name="posted" added="1554100921">Posted</phrase>
+		<phrase var_name="view_job" added="1554100921">View Job</phrase>
+		<phrase var_name="expire_on" added="1554100921">Expire on</phrase>
+		<phrase var_name="previous" added="1554100921">Previous</phrase>
+		<phrase var_name="next" added="1554100921">Next</phrase>
+		<phrase var_name="moderate" added="1554100921">Moderate</phrase>
+		<phrase var_name="view_application" added="1554100921">View Application</phrase>
+		<phrase var_name="edit_job" added="1554100921">Edit Job</phrase>
+		<phrase var_name="delete_job" added="1554100921">Delete Job</phrase>
+		<phrase var_name="delete_blog" added="1554100921">Delete Blog</phrase>
+		<phrase var_name="review" added="1554100921">Review</phrase>
+		<phrase var_name="select_you_existing_packages" added="1554100921">Select you existing packages</phrase>
+		<phrase var_name="select_your_existing_packages" added="1554100921">Select your existing packages</phrase>
+		<phrase var_name="or_select_the_one_of_following_packages" added="1554100921">Or select the one of following packages</phrase>
+		<phrase var_name="feature_this_job_with" added="1554100921">Feature this Job with ${featurefee}</phrase>
+		<phrase var_name="job_s" added="1554100921">Job(s)</phrase>
+		<phrase var_name="follower_s" added="1554100921">follower(s)</phrase>
+		<phrase var_name="followers" added="1554100921">followers</phrase>
+		<phrase var_name="sponsored" added="1554100921">Sponsored</phrase>
+		<phrase var_name="n_a_industry" added="1554100921">N/A (Industry)</phrase>
+		<phrase var_name="working_at_this_company" added="1554100921">Working at this company</phrase>
+		<phrase var_name="leave_this_company" added="1554100921">Leave this company</phrase>
+		<phrase var_name="no_employees_found" added="1554100921">No Employees found</phrase>
+		<phrase var_name="telephone" added="1554100921">Telephone</phrase>
+		<phrase var_name="created_a_company" added="1554100921">created a company.</phrase>
+		<phrase var_name="users_favorited_your_job_title" added="1554100921"><![CDATA[{users} favorited your job "{title}"]]></phrase>
+		<phrase var_name="users_favorited_your_followed_job_title" added="1554100921"><![CDATA[{users} favorited your followed job "{title}"]]></phrase>
+		<phrase var_name="users_favorited_your_company_name" added="1554100921"><![CDATA[{users} favorited your company "{name}"]]></phrase>
+		<phrase var_name="users_favorited_your_followed_company_name" added="1554100921"><![CDATA[{users} favorited your followed company "{name}"]]></phrase>
+		<phrase var_name="users_followed_your_job_title" added="1554100921"><![CDATA[{users} followed your job "{title}"]]></phrase>
+		<phrase var_name="users_followed_your_company_name" added="1554100921"><![CDATA[{users} followed your company "{name}"]]></phrase>
+		<phrase var_name="users_applied_your_job_title" added="1554100921"><![CDATA[{users} applied your job "{title}"]]></phrase>
+		<phrase var_name="users_joined_your_company_name" added="1554100921"><![CDATA[{users} joined your company "{name}"]]></phrase>
+		<phrase var_name="users_joined_your_followed_company_name" added="1554100921"><![CDATA[{users} joined your followed company "{name}"]]></phrase>
+		<phrase var_name="your_followed_job_title_has_been_featured" added="1554100921"><![CDATA[Your followed job "{title}" has been featured]]></phrase>
+		<phrase var_name="your_followed_company_name_has_been_sponsored" added="1554100921"><![CDATA[Your followed company "{name}" has been sponsored]]></phrase>
+		<phrase var_name="your_followed_company_name_posted_a_job_title" added="1554100921"><![CDATA[Your followed company "{name}" posted a job "{title}"]]></phrase>
+		<phrase var_name="your_followed_job_title_has_been_deleted" added="1554100921"><![CDATA[Your followed job "{title}" has been deleted]]></phrase>
+		<phrase var_name="your_applied_job_title_has_been_deleted" added="1554100921"><![CDATA[Your applied job "{title}" has been deleted]]></phrase>
+		<phrase var_name="your_followed_company_name_has_been_deleted" added="1554100921"><![CDATA[Your followed company "{name}" has been deleted]]></phrase>
+		<phrase var_name="your_applied_company_name_has_been_deleted" added="1554100921"><![CDATA[Your applied company "{name}" has been deleted]]></phrase>
+		<phrase var_name="the_company_of_your_followed_job_name_has_been_deleted" added="1554100921"><![CDATA[The company of your followed job "{name}" has been deleted]]></phrase>
+		<phrase var_name="your_job_title_is_expired" added="1554100921"><![CDATA[Your job "{title}" is expired]]></phrase>
+		<phrase var_name="your_followed_job_title_is_expired" added="1554100921"><![CDATA[Your followed job "{title}" is expired]]></phrase>
+		<phrase var_name="your_applied_job_title_is_expired" added="1554100921"><![CDATA[Your applied job "{title}" is expired]]></phrase>
+		<phrase var_name="your_job_title_has_been_approved" added="1554100921"><![CDATA[Your job "{title}" has been approved]]></phrase>
+		<phrase var_name="your_company_name_has_been_approved" added="1554100921"><![CDATA[Your company "{name}" has been approved]]></phrase>
+		<phrase var_name="apply_job_email_subject" added="1554100921"><![CDATA[Thanks for applying the job at "{site_title}"]]></phrase>
+		<phrase var_name="apply_job_email_message" added="1554100921"><![CDATA[Thanks for applying the job "{title}" at "{site_title}". For more information, please visit our website: <a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="subcriber_new_job_email_subject" added="1554100921">Job Posting - New Job</phrase>
+		<phrase var_name="subcriber_new_job_email_message_replacement" added="1554100921"><![CDATA[New Job is waiting for you. To view this job follow the link below: <br />{link}.<br />To unsubscribe jobs, follow the link below: <br />{unsubscribe_link}.]]></phrase>
+		<phrase var_name="sponsor_company_email_subject" added="1554100921">Your company has been successfully sponsored</phrase>
+		<phrase var_name="sponsor_company_email_message" added="1554100921"><![CDATA[Your company "<a href="{link}">{title}</a>" has been successfully sponsored.]]></phrase>
+		<phrase var_name="feature_job_email_subject" added="1554100921">Your job has been successfully featured</phrase>
+		<phrase var_name="feature_job_email_message" added="1554100921"><![CDATA[Your job "<a href="{link}">{title}</a>" has been successfully featured.]]></phrase>
+		<phrase var_name="add_job_email_subject" added="1554100921">A job has been successfully posted</phrase>
+		<phrase var_name="add_job_email_message" added="1554100921"><![CDATA[Your job "{title}" has been successfully posted. The job details are in the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="add_company_email_subject" added="1554100921">Your company has been successfully created</phrase>
+		<phrase var_name="add_company_email_message" added="1554100921"><![CDATA[Your company "{title}" has been successfully created. Please find all information at the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="delete_company_email_subject" added="1554100921">Your company has been successfully deleted</phrase>
+		<phrase var_name="delete_company_email_message" added="1554100921"><![CDATA[Your company "{title}" has been successfully deleted.]]></phrase>
+		<phrase var_name="delete_job_email_subject" added="1554100921">A job has been successfully deleted</phrase>
+		<phrase var_name="delete_job_email_message" added="1554100921"><![CDATA[The job "{title}" has been successfully deleted.]]></phrase>
+		<phrase var_name="expire_job_email_subject" added="1554100921">A job is expired</phrase>
+		<phrase var_name="expire_job_email_message" added="1554100921"><![CDATA[The job "<a href="{link}">{title}</a>" is expired.]]></phrase>
+		<phrase var_name="do_you_want_to_sponsor_your_company_width" added="1554100921">Do you want to sponsor your company with {fee}?</phrase>
+		<phrase var_name="you_can_only_delete_empty_industry" added="1554100921">You can only delete empty industry!</phrase>
+		<phrase var_name="pay_fee_to_sponsor_this_company" added="1554100921">Pay {fee} to sponsor this company?</phrase>
+		<phrase var_name="processing" added="1554100921">Processing</phrase>
+		<phrase var_name="save_and_pay_fee_for_selected_package" added="1554100921">Save and pay {fee} for selected packages?</phrase>
+		<phrase var_name="pay_fee_for_selected_packages" added="1554100921">Pay {fee} for selected packages?</phrase>
+		<phrase var_name="updating" added="1554100921">Updating</phrase>
+		<phrase var_name="adding" added="1554100921">Adding</phrase>
+		<phrase var_name="category" added="1554100921">Category</phrase>
+		<phrase var_name="edit_company_info" added="1554100921">Edit Company Info</phrase>
+		<phrase var_name="view_bought_packages" added="1554100921">View Bought Packages</phrase>
+		<phrase var_name="edit_submission_form" added="1554100921">Edit Submission Form</phrase>
+		<phrase var_name="job_s_successfully_approved" added="1554100921">Job(s) successfully approved.</phrase>
+		<phrase var_name="job_s_successfully_deleted" added="1554100921">Job(s) successfully deleted.</phrase>
+		<phrase var_name="company_s_successfully_approved" added="1554100921">Company(s) successfully approved.</phrase>
+		<phrase var_name="company_s_successfully_deleted" added="1554100921">Company(s) successfully deleted.</phrase>
+		<phrase var_name="the_company_you_are_looking_for_cannot_be_found" added="1554100921">The company you are looking for cannot be found.</phrase>
+		<phrase var_name="the_job_you_are_looking_for_cannot_be_found" added="1554100921">The job you are looking for cannot be found.</phrase>
+		<phrase var_name="user_setting_can_view_job" added="1554100921">Can view jobs?</phrase>
+		<phrase var_name="un_feature" added="1554100921">Un-feature</phrase>
+		<phrase var_name="un_sponsor" added="1554100921">Un-sponsor</phrase>
+		<phrase var_name="you_have_not_created_a_company" added="1554100921">You have not created a company.</phrase>
+		<phrase var_name="unable_to_find_any_package" added="1554100921">Unable to find any package. Please contact site administrator to add some packages first.</phrase>
+		<phrase var_name="unable_to_find_any_industry" added="1554100921">Unable to find any industry. Please contact site administrator to add some industries first.</phrase>
+		<phrase var_name="company_size_is_not_valid_adding" added="1554100921"><![CDATA[Company size is not valid. "From" field and "To" field must be a numeric.]]></phrase>
+		<phrase var_name="unable_to_find_the_job_you_want_to_publish" added="1554100921">Unable to find the job you want to publish.</phrase>
+		<phrase var_name="please_select_a_package_to_publish_this_job" added="1554100921">Please select a package to publish this job.</phrase>
+		<phrase var_name="redirecting_to_paypal" added="1554100921">Redirecting to Paypal</phrase>
+		<phrase var_name="you_do_not_have_permission_to_sponsor_company" added="1554100921">You do not have permission to sponsor company.</phrase>
+		<phrase var_name="unable_to_find_the_company_you_want_to_sponsor" added="1554100921">Unable to find the company you want to sponsor.</phrase>
+		<phrase var_name="this_company_is_pending_for_approve" added="1554100921">This company is pending for approve.</phrase>
+		<phrase var_name="this_company_has_been_sponsored" added="1554100921">This company has been sponsored.</phrase>
+		<phrase var_name="company_successfully_sponsored" added="1554100921">Company successfully sponsored.</phrase>
+		<phrase var_name="you_do_not_have_permission_to_un_sponsor_company" added="1554100921">You do not have permission to Un-sponsor company.</phrase>
+		<phrase var_name="this_company_has_been_un_sponsored" added="1554100921">This company has been Un-sponsored.</phrase>
+		<phrase var_name="company_successfully_un_sponsore" added="1554100921">Company successfully Un-sponsore.</phrase>
+		<phrase var_name="un_sponsor_company" added="1554100921">Un-sponsor Company</phrase>
+		<phrase var_name="pay_packages_successfully" added="1554100921">Pay packages successfully.</phrase>
+		<phrase var_name="application_successfully_deleted" added="1554100921">Application successfully deleted.</phrase>
+		<phrase var_name="you_have_favorited_this" added="1554100921">You have favorited this</phrase>
+		<phrase var_name="favorite_successfully" added="1554100921">Favorite successfully.</phrase>
+		<phrase var_name="unfavorite_successfully" added="1554100921">Unfavorite successfully.</phrase>
+		<phrase var_name="you_have_followed_this" added="1554100921">You have followed this</phrase>
+		<phrase var_name="follow_successfully" added="1554100921">Follow successfully.</phrase>
+		<phrase var_name="unfollow_successfully" added="1554100921">Unfollow successfully.</phrase>
+		<phrase var_name="you_have_left_to_the_compnay_successfully" added="1554100921">You have left to the company successfully</phrase>
+		<phrase var_name="you_have_joined_to_the_compnay_successfully" added="1554100921">You have joined to the company successfully</phrase>
+		<phrase var_name="delete_company" added="1554100921">Delete Company</phrase>
+		<phrase var_name="this_job_has_been_featured" added="1554100921">This job has been featured.</phrase>
+		<phrase var_name="feature_job" added="1554100921">Feature Job</phrase>
+		<phrase var_name="job_successfully_featured" added="1554100921">Job successfully featured.</phrase>
+		<phrase var_name="this_job_has_been_un_featured" added="1554100921">This job has been un-featured.</phrase>
+		<phrase var_name="un_feature_job" added="1554100921">Un-Feature Job</phrase>
+		<phrase var_name="job_successfully_un_feature" added="1554100921">Job successfully un-feature.</phrase>
+		<phrase var_name="approve_company" added="1554100921">Approve Company</phrase>
+		<phrase var_name="approve_job" added="1554100921">Approve Job</phrase>
+		<phrase var_name="moderation" added="1554100921">Moderation</phrase>
+		<phrase var_name="job_not_found" added="1554100921">Job not found.</phrase>
+		<phrase var_name="post_job_number_have_to_be_a_number" added="1554100921">Post Job Number have to be a number</phrase>
+		<phrase var_name="valid_peried_have_to_be_a_number" added="1554100921">Valid period have to be a number</phrase>
+		<phrase var_name="package_fee_have_to_be_a_number" added="1554100921">Package Fee have to be a number</phrase>
+		<phrase var_name="manage_package" added="1554100921">Manage Package</phrase>
+		<phrase var_name="not_sponsor" added="1554100921">Not Sponsor</phrase>
+		<phrase var_name="fill_in_a_title_for_your_job" added="1554100921">Fill in a title for your job</phrase>
+		<phrase var_name="add_some_content_to_your_description" added="1554100921">Add some content to your description</phrase>
+		<phrase var_name="add_some_content_to_your_skills" added="1554100921">Add some content to your skills</phrase>
+		<phrase var_name="apply_job_successfully" added="1554100921">Apply Job successfully</phrase>
+		<phrase var_name="your_name_is_required" added="1554100921">Your name is required</phrase>
+		<phrase var_name="your_email_is_required" added="1554100921">Your email is required</phrase>
+		<phrase var_name="your_telephone_is_required" added="1554100921">Your telephone is required</phrase>
+		<phrase var_name="your_photo_is_required" added="1554100921">Your photo is required</phrase>
+		<phrase var_name="update_subscribe_job_successfully" added="1554100921">Update Subscribe Job successfully</phrase>
+		<phrase var_name="name_isn_t_allowed_empty" added="1554100921"><![CDATA[Name isn&#039;t allowed empty]]></phrase>
+		<phrase var_name="unable_to_find_the_application_you_want_to_delete" added="1554100921">Unable to find the application you want to delete.</phrase>
+		<phrase var_name="administrator_does_not_have_paypal_email_please_contact_him_her_to_update_it" added="1554100921">Administrator does not have paypal email. Please contact him (her) to update it.</phrase>
+		<phrase var_name="can_not_load_payment_gateways_please_try_again_later" added="1554100921">Can not load Payment Gateways. Please try again later.</phrase>
+		<phrase var_name="view_applications_0_download_all_resumes" added="1554100921">View Applications (0) | Download All Resumes</phrase>
+		<phrase var_name="unlimited" added="1554100921">Unlimited</phrase>
+		<phrase var_name="remaining" added="1554100921">Remaining </phrase>
+		<phrase var_name="add_new_package" added="1554100921">Add New Package</phrase>
+		<phrase var_name="job_posting_package_name" added="1554100921">Job Posting Package Name</phrase>
+		<phrase var_name="week_s" added="1554100921">week(s)</phrase>
+		<phrase var_name="month_s" added="1554100921">month(s)</phrase>
+		<phrase var_name="never_expired" added="1554100921">Never Expired</phrase>
+		<phrase var_name="day_s" added="1554100921">day(s)</phrase>
+		<phrase var_name="manage_packages" added="1554100921">Manage Packages</phrase>
+		<phrase var_name="link" added="1554100921">Link</phrase>
+		<phrase var_name="to_use_this_option_please_install_module_a_href_link_resume_a" added="1554100921"><![CDATA[(To use this option, please install module <a href="{link}">Resume</a>)]]></phrase>
+		<phrase var_name="manage_transactions" added="1554100921">Manage Transactions</phrase>
+		<phrase var_name="search_from" added="1554100921">From Date</phrase>
+		<phrase var_name="post_job_number_admincp" added="1554100921">Post Job Number</phrase>
+		<phrase var_name="to_date" added="1554100921">To Date</phrase>
+		<phrase var_name="title" added="1554100921">Title</phrase>
+		<phrase var_name="parent_industry" added="1554100921">Parent Industry</phrase>
+		<phrase var_name="feature_package" added="1554100921">Feature + Package</phrase>
+		<phrase var_name="your_existing_packages" added="1554100921">Your existing packages</phrase>
+		<phrase var_name="upload_file" added="1554100921">Upload File</phrase>
+		<phrase var_name="published" added="1554100921">Published</phrase>
+		<phrase var_name="draft" added="1554100921">Draft</phrase>
+		<phrase var_name="job_posts" added="1554100921"> job posts</phrase>
+		<phrase var_name="period" added="1554100921">Period</phrase>
+		<phrase var_name="day_singular" added="1554100921">day</phrase>
+		<phrase var_name="day_plural" added="1554100921">days</phrase>
+		<phrase var_name="week_singular" added="1554100921">week</phrase>
+		<phrase var_name="week_plural" added="1554100921">weeks</phrase>
+		<phrase var_name="month_singular" added="1554100921">month</phrase>
+		<phrase var_name="month_plural" added="1554100921">months</phrase>
+		<phrase var_name="add_field_question" added="1554100921">Add field/question</phrase>
+		<phrase var_name="require_field" added="1554100921">Require field</phrase>
+		<phrase var_name="edit_field_question" added="1554100921">Edit field/question</phrase>
+		<phrase var_name="you_have_already_applied_this_job" added="1554100921">You have already applied this job.</phrase>
+		<phrase var_name="resume_is_required" added="1554100921">Resume is required.</phrase>
+		<phrase var_name="you_can_not_create_a_job_your_company_has_not_been_published" added="1554100921">You can not create a job. Your company has not been published</phrase>
+		<phrase var_name="not_feature" added="1554100921">Not Feature</phrase>
+		<phrase var_name="expired" added="1554100921">Expired</phrase>
+		<phrase var_name="working_at" added="1554100921">Working at</phrase>
+		<phrase var_name="pay_fee_to_feature_this_job" added="1554100921">Pay {fee}$ to feature this job?</phrase>
+		<phrase var_name="created_by" added="1554100921">Created by:</phrase>
+		<phrase var_name="unable_to_find_the_resume_you_want_to_download" added="1554100921">Unable to find the resume you want to download.</phrase>
+		<phrase var_name="unable_to_find_the_job_you_want_to_download_resumes" added="1554100921">Unable to find the job you want to download resumes.</phrase>
+		<phrase var_name="this_job_does_not_have_application" added="1554100921">This job does not have application.</phrase>
+		<phrase var_name="unable_to_find_any_resume_for_download" added="1554100921">Unable to find any resume for download.</phrase>
+		<phrase var_name="comment_privacy" added="1554100921">Comment Privacy</phrase>
+		<phrase var_name="control_who_can_comment_on_this_job" added="1554100921">Control who can comment on this job.</phrase>
+		<phrase var_name="add_new_industry" added="1554100921">Add New Industry</phrase>
+		<phrase var_name="edit_an_industry" added="1554100921">Edit an Industry</phrase>
+		<phrase var_name="manage_industries" added="1554100921">Manage Industries</phrase>
+		<phrase var_name="company_description" added="1554100921">Company Information</phrase>
+		<phrase var_name="language_preference" added="1554100921">Language Preference</phrase>
+		<phrase var_name="education_preference" added="1554100921">Education Preference</phrase>
+		<phrase var_name="apply_job_email_owner_subject" added="1554100921"><![CDATA[New candidate applied to "{job_title}"]]></phrase>
+		<phrase var_name="apply_job_email_owner_message" added="1554100921"><![CDATA[Hello {company_owner},
+
+There&#039;s a new candidate apply to "{job_title}" from your company. Please check his/her profile at <a href="{applicant_profile_url}">{applicant_name}</a>.
+
+Regards,
+{site_title}]]></phrase>
+		<phrase var_name="apply_job_email_owner_body" added="1554100921"><![CDATA[There&#039;s a new candidate apply to "{job_title}" from your company. Please check his/her profile at <a href="{applicant_profile_url}">{applicant_name}</a>.]]></phrase>
+		<phrase var_name="add_cat_job" added="1554100921">Add New Category For Job</phrase>
+		<phrase var_name="edit_cat_job" added="1554100921">Edit a Job Category</phrase>
+		<phrase var_name="add_new_cat_job" added="1554100921">Add New Job Category</phrase>
+		<phrase var_name="you_can_only_delete_empty_cat" added="1554100921">You can only delete empty category!</phrase>
+		<phrase var_name="select_a_sub_cat" added="1554100921">Select a Sub-Category</phrase>
+		<phrase var_name="admin_menu_add_new_job_category" added="1554100921">Add New Job Category</phrase>
+		<phrase var_name="admin_menu_manage_job_category" added="1554100921">Manage Job Category</phrase>
+		<phrase var_name="manage_job_cat" added="1554100921">Manage Job Categories</phrase>
+		<phrase var_name="parent_cat_job" added="1554100921">Parent Category</phrase>
+		<phrase var_name="cat_detail" added="1554100921">Category Detail</phrase>
+		<phrase var_name="catjob_successfully_deleted" added="1554100921">Category successfully deleted</phrase>
+		<phrase var_name="catjob_cat" added="1554100921">Category</phrase>
+		<phrase var_name="you_can_add_up_to_3_catjob" added="1554100921">You can add up to 3 categories.</phrase>
+		<phrase var_name="you_have_joined_to_the_compnay_approve" added="1554100921">You have joined to the company. Please waiting this company owner has approved this request.</phrase>
+		<phrase var_name="em_accept" added="1554100921">Accept</phrase>
+		<phrase var_name="em_reject" added="1554100921">Reject</phrase>
+		<phrase var_name="em_remove" added="1554100921">Remove</phrase>
+		<phrase var_name="no_accept_working" added="1554100921"><![CDATA[You have been accepted working on company "{name}"]]></phrase>
+		<phrase var_name="alert_accept_success" added="1554100921">Accept successfully</phrase>
+		<phrase var_name="alert_remove_success" added="1554100921">Remove successfully</phrase>
+		<phrase var_name="no_remove_working" added="1554100921"><![CDATA[You have been removed working on company "{name}"]]></phrase>
+		<phrase var_name="alert_deny_success" added="1554100921">Deny successfully</phrase>
+		<phrase var_name="alert_reject_success" added="1554100921">Reject successfully</phrase>
+		<phrase var_name="no_reject_working" added="1554100921"><![CDATA[You have been rejected working on company "{name}"]]></phrase>
+		<phrase var_name="user_setting_job_application_fee" added="1554100921">Job Application Fee (User will be moved to this group after payment completed)</phrase>
+		<phrase var_name="user_setting_can_apply_job" added="1554100921">Can apply job?</phrase>
+		<phrase var_name="setting_use_popup_upgrade_group" added="1554100921"><![CDATA[<title>Using popup when upgrade user group</title><info>Using popup when upgrade user group</info>]]></phrase>
+		<phrase var_name="title_job_apply_fee" added="1554100921">Job Application Fee</phrase>
+		<phrase var_name="txt_select_group_to_upgrade" added="1554100921">Select group to upgrade:</phrase>
+		<phrase var_name="no_group_apply_job_found" added="1554100921">No user group can apply job</phrase>
+		<phrase var_name="txt_select_group_to_upgrade_warning" added="1554100921">You does not have permission to apply this job. Please select one of group to upgrade:</phrase>
+		<phrase var_name="warning_group_cannot_apply_job" added="1554100921">Please select User Group which can apply job. Please try again.</phrase>
+		<phrase var_name="upgraded_to_groupname_group_successfully" added="1554100921"><![CDATA[Upgraded to "{groupname}" group successfully.]]></phrase>
+		<phrase var_name="inform_upgrade_group_success" added="1554100921"><![CDATA[Upgraded to "{groupname}" group successfully.]]></phrase>
+		<phrase var_name="updates" added="1554100921">Updates</phrase>
+		<phrase var_name="admin_menu_add_new_apply_job_package" added="1554100921">Add New Apply Job Package</phrase>
+		<phrase var_name="admin_menu_manage_apply_job_packages" added="1554100921">Manage Apply Job Packages</phrase>
+		<phrase var_name="edit_a_aj_package" added="1554100921">Edit a Apply Job Package</phrase>
+		<phrase var_name="create_a_new_aj_package" added="1554100921">Create a New Apply Job Package</phrase>
+		<phrase var_name="aj_package_successfully_updated" added="1554100921">Apply Job Package successfully updated.</phrase>
+		<phrase var_name="aj_package_successfully_added" added="1554100921">Apply Job Package successfully added.</phrase>
+		<phrase var_name="aj_package_name" added="1554100921">Apply Job Package Name</phrase>
+		<phrase var_name="apply_job_number" added="1554100921">Apply Job Number (Number of Job this user can apply. 0 means unlimited)</phrase>
+		<phrase var_name="apply_job_number_have_to_be_a_number" added="1554100921">Apply Job Number have to be a number</phrase>
+		<phrase var_name="manage_aj_package" added="1554100921">Manage Apply Job Package</phrase>
+		<phrase var_name="manage_aj_packages" added="1554100921">Manage Apply Job Packages</phrase>
+		<phrase var_name="apply_job_number_admincp" added="1554100921">Apply Job Number</phrase>
+		<phrase var_name="btn_apply" added="1554100921">Apply</phrase>
+		<phrase var_name="unable_to_find_the_job_you_want_to_apply" added="1554100921">Unable to find the job you want to apply.</phrase>
+		<phrase var_name="please_select_a_package_to_apply_this_job" added="1554100921">Please select a package to apply this job.</phrase>
+		<phrase var_name="invalid_package" added="1554100921">Invalid package.</phrase>
+		<phrase var_name="new_user_joined_to_your_company_company_title" added="1554100921"><![CDATA[New user joined to your company "{company_title}"]]></phrase>
+		<phrase var_name="join_user_fullname_joined_your_company_company_title_please_check_at_a_href_employees_link_employees_a_tab_on_your_company" added="1554100921"><![CDATA[{join_user_fullname} joined your company "{company_title}". Please check at <a href="{employees_link}">Employees</a> tab on your company.]]></phrase>
+		<phrase var_name="email_join_company_body" added="1554100921"><![CDATA[{join_user_fullname} joined your company "{company_title}". Please check at <a href="{employees_link}">Employees</a> tab on your company.]]></phrase>
+		<phrase var_name="notification_from_company_company_title" added="1554100921"><![CDATA[Notification from company "{company_title}"]]></phrase>
+		<phrase var_name="you_have_been_accepted_working_on_company_company_title_1_please_check_more_information_at_a_href_company_url_company_title_2_a" added="1554100921"><![CDATA[You have been accepted working on company "{company_title_1}". Please check more information at <a href="{company_url}">{company_title_2}</a>.]]></phrase>
+		<phrase var_name="setting_jobposting_maximum_upload_size_resume" added="1554100921"><![CDATA[<title>Maximum upload size for resume (KB)</title><info>Maximum upload size for resume when applying job.</info>]]></phrase>
+		<phrase var_name="format_ms_word_pdf_zip_size_kb_maximum" added="1554100921">Format: Ms Word, PDF, Zip ({size} KB maximum)</phrase>
+		<phrase var_name="user_setting_numbers_of_company" added="1554100921">How many companies can user own?</phrase>
+		<phrase var_name="admin_menu_manage_custom_field" added="1554100921">Manage Custom Field</phrase>
+		<phrase var_name="manage_custom_field" added="1554100921">Manage Custom Field</phrase>
+		<phrase var_name="custom_field_successful_deleted" added="1554100921">Custom Field Successfully Deleted.</phrase>
+		<phrase var_name="my_companies" added="1554100921">My Companies</phrase>
+		<phrase var_name="activate" added="1554100921">Activate</phrase>
+		<phrase var_name="deactivate" added="1554100921">Deactivate</phrase>
+		<phrase var_name="unable_to_find_the_company" added="1554100921">Unable to find this company.</phrase>
+		<phrase var_name="you_do_not_have_permission_to_active_this_company" added="1554100921">You do not have permission to active this company.</phrase>
+		<phrase var_name="company_successfully_activated" added="1554100921">Company successfully activated.</phrase>
+		<phrase var_name="activated_company" added="1554100921">Activated company</phrase>
+		<phrase var_name="activate_company_email_subject" added="1554100921">Your company has been successfully activated</phrase>
+		<phrase var_name="activate_company_email_message" added="1554100921"><![CDATA[Your company "<a href="{link}">{title}</a>" has been successfully activated.]]></phrase>
+		<phrase var_name="deactivate_company_email_message" added="1554100921"><![CDATA[Your company "<a href="{link}">{title}</a>" has been successfully deactivated.]]></phrase>
+		<phrase var_name="deactivate_company_email_subject" added="1554100921">Your company has been successfully deactivated</phrase>
+		<phrase var_name="you_do_not_have_permission_to_deactivate_this_company" added="1554100921">You do not have permission to deactivate this company.</phrase>
+		<phrase var_name="company_successfully_deactivated" added="1554100921">Company successfully deactivated.</phrase>
+		<phrase var_name="deactivated_company" added="1554100921">Deactivated company</phrase>
+		<phrase var_name="your_company_name_has_been_activated" added="1554100921"><![CDATA[Your company "{name}" has been activated]]></phrase>
+		<phrase var_name="your_company_name_has_been_deactivated" added="1554100921"><![CDATA[Your company "{name}" has been deactivated]]></phrase>
+		<phrase var_name="menu_jobposting_job_posting_532c28d5412dd75bf975fb951c740a30" added="1554100921">Job Posting</phrase>
+		<phrase var_name="owner_has_just_transferred_company_name_to_you" added="1554100921"><![CDATA[{owner} has just transferred company "{name}" to you.]]></phrase>
+		<phrase var_name="owner_has_just_transferred_company_company_title_to_you" added="1554100921"><![CDATA[{owner} has just transferred company "{company_title}" to you.]]></phrase>
+		<phrase var_name="owner_has_just_transferred_company_company_title_to_you_please_check_more_information_at_a_href_company_url_company_title_a" added="1554100921"><![CDATA[{owner} has just transferred company "{company_title}" to you. Please check more information at <a href="{company_url}">{company_title}</a>.]]></phrase>
+		<phrase var_name="permission_target" added="1554100921">Permission Target</phrase>
+		<phrase var_name="change_owner" added="1554100921">Change owner</phrase>
+		<phrase var_name="can_add_photos" added="1554100921">Can add photos?</phrase>
+		<phrase var_name="yes" added="1554100921">Yes</phrase>
+		<phrase var_name="no" added="1554100921">No</phrase>
+		<phrase var_name="can_delete_photos" added="1554100921">Can delete photos?</phrase>
+		<phrase var_name="can_buy_packages" added="1554100921">Can buy packages?</phrase>
+		<phrase var_name="can_edit_submission_form" added="1554100921">Can edit submission form?</phrase>
+		<phrase var_name="can_add_job" added="1554100921">Can add job?</phrase>
+		<phrase var_name="can_edit_job" added="1554100921">Can edit job?</phrase>
+		<phrase var_name="can_delete_job" added="1554100921">Can delete job?</phrase>
+		<phrase var_name="can_view_application" added="1554100921">Can view application?</phrase>
+		<phrase var_name="can_download_resumes" added="1554100921">Can download resumes?</phrase>
+		<phrase var_name="thumbnail" added="1554100921">Thumbnail</phrase>
+		<phrase var_name="Thumbnail" added="1554100921">Thumbnail</phrase>
+		<phrase var_name="List" added="1554100921">List</phrase>
+		<phrase var_name="do_you_want_to_change_owner_company" added="1554100921">Do you want to change owner company?</phrase>
+		<phrase var_name="list" added="1554100921">List</phrase>
+		<phrase var_name="you_can_not_change_owner_of_this_company_please_choose_another_person" added="1554100921">You cannot change owner of this company. Please choose another person.</phrase>
+		<phrase var_name="feature_this_job_with_featurefee" added="1554100921">Feature this Job with {featurefee}</phrase>
+		<phrase var_name="company_title" added="1554100921">Company Title</phrase>
+		<phrase var_name="you_can_not_create_a_job_please_create_a_company_first" added="1554100921"><![CDATA[You can not create a job. Please <a href="{link}" style="text-decoration: underline">create a company</a> first.]]></phrase>
+		<phrase var_name="manage_permission" added="1554100921">Manage Permission</phrase>
+		<phrase var_name="your_company_does_not_have_admin" added="1554100921">Your company does not have admin.</phrase>
+		<phrase var_name="permission_successfully_updated" added="1554100921">Permission successfully updated.</phrase>
+		<phrase var_name="company_admins_are_successfully_updated" added="1554100921">Company admins are successfully updated.</phrase>
+		<phrase var_name="notice" added="1554100921">Notice</phrase>
+		<phrase var_name="do_you_want_to_leave_this_company" added="1554100921">Do you want to leave this company?</phrase>
+		<phrase var_name="do_you_want_to_work_this_company" added="1554100921">Do you want to work this company?</phrase>
+		<phrase var_name="do_you_want_to_remove_this_user" added="1554100921">Do you want to remove this user?</phrase>
+		<phrase var_name="waiting_for_approve" added="1554100921">Waiting for approve!</phrase>
+		<phrase var_name="notification_when_company_deactivated" added="1554100921"><![CDATA[The company {name} has just been deactivated. You won&#039;t be received any updates about it anymore.]]></phrase>
+		<phrase var_name="notification_when_company_activated" added="1554100921">The company {name} has just been activated</phrase>
+		<phrase var_name="invitations_have_been_sent_successfully" added="1554100921">Invitations have been sent successfully.</phrase>
+		<phrase var_name="none" added="1554100921">None</phrase>
+		<phrase var_name="review_and_confirm_purchase" added="1554100921">Review and Confirm Purchase</phrase>
+		<phrase var_name="jobposting" added="1554100921">Jobposting</phrase>
+		<phrase var_name="payment_methods" added="1554100921">Payment Methods</phrase>
+		<phrase var_name="processing_transaction" added="1554100921">Processing transaction</phrase>
+		<phrase var_name="your_application_job_at_site_title_was_status" added="1554100921"><![CDATA[Your application for a job at "{site_title}" was {status}]]></phrase>
+		<phrase var_name="your_application_on_job_title_at_site_title_was_be_status_for_more_information_please_visit_our_website_a_href_link_link_a" added="1554100921"><![CDATA[Your application for the job "{title}" at "{site_title}" was {status}. For more information, please visit our website: <a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="your_application_for_the_job_title_was_status" added="1554100921"><![CDATA[Your application for the job "{title}" was {status}.]]></phrase>
+		<phrase var_name="deleted" added="1554100921">Deleted</phrase>
+		<phrase var_name="manage_jobs" added="1554100921">Manage Jobs</phrase>
+		<phrase var_name="list_custom_fields" added="1554100921">List Custom Fields</phrase>
+		<phrase var_name="Companies" added="1554100921" />
+		<phrase var_name="setting_jobposting_job_paging_mode" added="1554100921"><![CDATA[<title>Pagination Style (All Jobs)</title><info>Select Pagination Style at Search Jobs Page.</info>]]></phrase>
+		<phrase var_name="setting_jobposting_company_paging_mode" added="1554100921"><![CDATA[<title>Pagination Style (All Companies)</title><info>Select Pagination Style at Search Companies Page.</info>]]></phrase>
+		<phrase var_name="jobposting_admin_menu_user_group_settings" added="1554100921">User Group Settings</phrase>
+		<phrase var_name="view_this_company" added="1554100921">View this company</phrase>
+		<phrase var_name="&quot;Maximum upload size for photos (KB)&quot; must be greater than or equal to 0" added="1554100921" />
+		<phrase var_name="&quot;Fee to sponsor company&quot; must be greater than or equal to 0" added="1554100921" />
+		<phrase var_name="&quot;Maximum upload size for resume (KB)&quot; must be greater than or equal to 0" added="1554100921" />
+		<phrase var_name="&quot;Fee to feature Job&quot; must be greater than or equal to 0" added="1554100921" />
+		<phrase var_name="&quot;How many companies can user own?&quot; must be greater than or equal to 0" added="1554100921" />
+		<phrase var_name="jobposting_to_be_admin_of_company" added="1554100921"><![CDATA[You have been invited to become an admin of company <b>{name}</b>]]></phrase>
+		<phrase var_name="controller_jobposting.index" added="1554100921">Job Home Page</phrase>
+		<phrase var_name="controller_jobposting.view" added="1554100921">Job Detail</phrase>
+		<phrase var_name="controller_jobposting.company" added="1554100921">Company Home Page</phrase>
+		<phrase var_name="controller_jobposting.company.view" added="1554100921">Company Detail</phrase>
+		<phrase var_name="jobposting_photo_s" added="1554100921">Photo(s)</phrase>
+		<phrase var_name="user_setting_points_jobposting_job" added="1554100921">How many points do the users get when they add new job?</phrase>
+		<phrase var_name="jobposting_headquarters_location" added="1554100921">Headquarters Location</phrase>
+		<phrase var_name="user_setting_can_apply_job_without_fee" added="1554100921">Can apply job without fee?</phrase>
+		<phrase var_name="headquarters" added="1554100921">Headquarters</phrase>
+		<phrase var_name="unsubscribe_successfully" added="1554100921">Unsubscribe successfully.</phrase>
+		<phrase var_name="you_cannot_unsubscribe" added="1554100921">You can not do this action. Please check the link in your email.</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="true" user="true" guest="false" staff="true" module="jobposting" ordering="0">can_add_company</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="true" user="true" guest="false" staff="true" module="jobposting" ordering="0">can_edit_own_company</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="1" user="0" guest="0" staff="0" module="jobposting" ordering="0">can_delete_company_other_user</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="false" user="false" guest="false" staff="false" module="jobposting" ordering="0">approve_company_before_displayed</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="1" user="1" guest="0" staff="1" module="jobposting" ordering="0">can_add_job</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="1" user="1" guest="0" staff="1" module="jobposting" ordering="0">can_edit_own_job</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="1" user="0" guest="0" staff="0" module="jobposting" ordering="0">can_edit_job_created_by_other_users</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="1" user="1" guest="1" staff="1" module="jobposting" ordering="0">can_browse_view_job</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="1" user="1" guest="0" staff="1" module="jobposting" ordering="0">can_feature_jobs</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="true" user="true" guest="false" staff="true" module="jobposting" ordering="0">can_sponsor_company</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="1" user="0" guest="0" staff="0" module="jobposting" ordering="0">approved_job_before_displayed</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="integer" admin="1" user="1" guest="1" staff="1" module="jobposting" ordering="0">points_jobposting_job</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="1" user="0" guest="0" staff="0" module="jobposting" ordering="0">can_delete_job_other_user</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="true" user="false" guest="false" staff="false" module="jobposting" ordering="0">can_approve_company</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="true" user="true" guest="true" staff="true" module="jobposting" ordering="0">can_view_company</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="true" user="false" guest="false" staff="false" module="jobposting" ordering="0">can_edit_user_company</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="true" user="true" guest="false" staff="true" module="jobposting" ordering="0">can_delete_own_company</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="true" user="false" guest="false" staff="false" module="jobposting" ordering="0">can_approve_job</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="1" user="1" guest="0" staff="0" module="jobposting" ordering="0">can_apply_job</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="integer" admin="3" user="3" guest="0" staff="3" module="jobposting" ordering="0">numbers_of_company</setting>
+		<setting is_admin_setting="0" module_id="jobposting" type="boolean" admin="1" user="0" guest="0" staff="0" module="jobposting" ordering="0">can_apply_job_without_fee</setting>
+	</user_group_settings>
+</module>

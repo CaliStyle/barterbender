@@ -1,0 +1,10 @@
+{
+	"paths": {
+		"0": "PF.Base/theme/frontend/default/style/default/image/feed/petition.png",
+		"1": "PF.Base/theme/frontend/default/style/default/image/module/petition.png",
+		"2": "PF.Base/theme/frontend/default/style/default/image/mobile/petition.png",
+		"3": "PF.Base/theme/frontend/default/style/default/image/mobile/small_petition.png",
+		"4": "PF.Base/file/pic/petition/index.html",
+		"5": "PF.Base/module/petition"
+	}
+}

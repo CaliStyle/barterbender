@@ -1,0 +1,91 @@
+{
+    "id": "yncfbclone",
+    "name": "Facebook Clone",
+    "version": "4.01",
+    "vars": {
+        "body-bg": {
+            "title": "Body Background",
+            "id": "body",
+            "attr": "background"
+        },
+        "links-color": {
+            "title": "Links",
+            "id": "a",
+            "attr": "color"
+        },
+        "links-color-hover": {
+            "title": "Links Hover",
+            "id": "a:hover",
+            "attr": "color"
+        },
+        "header-bg": {
+            "title": "Header Background ",
+            "id": ".sticky-bar",
+            "attr": "background"
+        },
+        "content-bg": {
+            "title": "Content Background ",
+            "id": "#main #content-stage, .js_feed_view_more_entry_holder .feed-stream-content, .js_feed_comment_border .feed-stream-content, .header-filter-holder, div.comment_mini_content_border",
+            "attr": "background"
+        },
+        "content-width": {
+            "title": "Content Width",
+            "id": ".container",
+            "attr": "width"
+        },
+        "input-bg": {
+            "title": "Form Input Background",
+            "id": ".form-control, .js_box_holder .js_box .form-control, .js_box_holder .js_box input",
+            "attr": "background"
+        },
+        "input-color": {
+            "title": "Form Input Text Color",
+            "id": ".form-control, .js_box_holder .js_box .form-control, .js_box_holder .js_box input",
+            "attr": "color"
+        },
+        "block-bg": {
+            "title": "Block Background",
+            "id": "#main .layout-left .block, #main .layout-right .block",
+            "attr": "background"
+        },
+        "block-title-color": {
+            "title": "Block Title Text Color",
+            "id": "#main .layout-left .block > .title, #main .layout-right .block > .title",
+            "attr": "color"
+        },
+        "footer-bg": {
+            "title": "Footer Background",
+            "id": "#section-footer,#section-footer .footer-holder",
+            "attr": "background"
+        },
+        "footer-color": {
+            "title": "Footer Site Name Color",
+            "id": "#section-footer .footer-holder .footer-sitename",
+            "attr": "color"
+        },
+        "fixed-header": {
+            "title": "Fix the Site Header",
+            "type": "boolean",
+            "attr": "mass_class",
+            "mass_class": "fixed-preview"
+        },
+        "fixed-app-menu": {
+            "title": "Fix the App Menu on screen < 992",
+            "type": "boolean",
+            "attr": "mass_class",
+            "mass_class": "fixed-preview"
+        },
+        "fixed-profile-menu": {
+            "title": "Fix the Profile Menu",
+            "type": "boolean",
+            "attr": "mass_class",
+            "mass_class": "fixed-preview"
+        },
+        "fixed-right-left-columns": {
+            "title": "Fix the right and left columns",
+            "type": "boolean",
+            "attr": "mass_class",
+            "mass_class": "fixed-preview"
+        }
+    }
+}

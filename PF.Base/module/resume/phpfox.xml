@@ -1,0 +1,692 @@
+<module>
+	<data>
+		<module_id>resume</module_id>
+		<product_id>younet_resume4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:12:{s:37:"resume.admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:19:"user-group-settings";}}s:32:"resume.admin_menu_manage_resumes";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:7:"resumes";}}s:30:"resume.admin_menu_add_category";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:11:"addcategory";}}s:35:"resume.admin_menu_manage_categories";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:10:"categories";}}s:27:"resume.admin_menu_add_level";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:8:"addlevel";}}s:31:"resume.admin_menu_manage_levels";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:6:"levels";}}s:50:"resume.admin_menu_manage_view_service_registration";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:13:"registrations";}}s:27:"resume.admin_menu_statistic";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:9:"statistic";}}s:33:"resume.admin_menu_weight_settings";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:14:"weightsettings";}}s:33:"resume.admin_menu_global_settings";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:14:"globalsettings";}}s:34:"resume.admin_menu_add_custom_field";a:1:{s:3:"url";a:3:{i:0;s:6:"resume";i:1;s:6:"custom";i:2;s:3:"add";}}s:38:"resume.admin_menu_manage_custom_fields";a:1:{s:3:"url";a:2:{i:0;s:6:"resume";i:1;s:6:"custom";}}}]]></menu>
+		<phrase_var_name>module_resume</phrase_var_name>
+		<version>4.02p2</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/resume.jpg</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="resume" parent_var_name="" m_connection="resume" var_name="menu_resume_add_new_resume_69f2afc2390cec954f7c208b07212d39" ordering="132" url_value="resume.add" version_id="3.3.0" disallow_access="" module="resume" />
+		<menu module_id="resume" parent_var_name="" m_connection="" var_name="menu_resume_create_new_resume_d41d8cd98f00b204e9800998ecf8427e" ordering="130" url_value="resume.add" version_id="3.3.0" disallow_access="" module="resume" />
+		<menu module_id="resume" parent_var_name="" m_connection="main" var_name="menu_resume_resume_fad58de7366495db4650cfefac2fcd61" ordering="129" url_value="resume" version_id="3.3.0" disallow_access="" module="resume" mobile_icon="server" />
+	</menus>
+	<settings>
+		<setting group="" module_id="resume" is_hidden="0" type="string" var_name="total_resume_display" phrase_var_name="setting_total_resume_display" ordering="1" version_id="3.3.0">1,5,10,15,20,25</setting>
+		<setting group="" module_id="resume" is_hidden="0" type="array" var_name="required_fields" phrase_var_name="setting_required_fields" ordering="3" version_id="3.3.0"><![CDATA[s:78:"array(
+  0 => 'experience',
+  1 => 'education',
+  2 => 'skills',
+  3 => '',
+);";]]></setting>
+		<setting group="" module_id="resume" is_hidden="0" type="drop" var_name="resume_paging_mode" phrase_var_name="setting_resume_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:10:"pagination";s:6:"values";a:3:{i:0;s:10:"pagination";i:1;s:9:"next_prev";i:2;s:8:"loadmore";}}]]></setting>
+		<setting group="seo" module_id="resume" is_hidden="0" type="" var_name="resume_meta_keywords" phrase_var_name="setting_resume_meta_keywords" ordering="1" version_id="4.6.0"><![CDATA[{_p var='seo_resume_meta_keywords'}]]></setting>
+		<setting group="seo" module_id="resume" is_hidden="0" type="" var_name="resume_meta_description" phrase_var_name="setting_resume_meta_description" ordering="1" version_id="4.6.0"><![CDATA[{_p var='seo_resume_meta_description'}]]></setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="resume.view" module_id="resume" component="categories" location="1" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="resume.index" module_id="resume" component="categories" location="1" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="profile.index" module_id="resume" component="resume-completeness" location="3" is_active="1" ordering="8" disallow_access="" can_move="0">
+			<title>Resume Completeness</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="resume.add" module_id="resume" component="menu_add" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="resume.summary" module_id="resume" component="menu_add" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="resume.experience" module_id="resume" component="menu_add" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="resume.education" module_id="resume" component="menu_add" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="resume.skill" module_id="resume" component="menu_add" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="resume.certification" module_id="resume" component="menu_add" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="resume.language" module_id="resume" component="menu_add" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="resume.publication" module_id="resume" component="menu_add" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="resume.addition" module_id="resume" component="menu_add" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="resume.whoviewedme" module_id="resume" component="categories" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="resume" component="profile" m_connection="resume.profile" module="resume" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="resume" component="resume-completeness" m_connection="" module="resume" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="resume" component="index" m_connection="resume.index" module="resume" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="resume" component="categories" m_connection="" module="resume" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="resume" component="view" m_connection="resume.view" module="resume" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="resume" component="whoviewedme" m_connection="resume.whoviewedme" module="resume" is_controller="1" is_block="0" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_resume" added="1552378467">Resume</phrase>
+		<phrase var_name="translate_module_resume" added="1552378467">Resume</phrase>
+		<phrase var_name="menu_resume_resume_fad58de7366495db4650cfefac2fcd61" added="1552378467">Resume</phrase>
+		<phrase var_name="menu_resume_create_new_resume_d41d8cd98f00b204e9800998ecf8427e" added="1552378467">Create New Resume</phrase>
+		<phrase var_name="admin_menu_manage_resumes" added="1552378467">Manage Resumes</phrase>
+		<phrase var_name="admin_menu_add_category" added="1552378467">Add Category</phrase>
+		<phrase var_name="admin_menu_manage_categories" added="1552378467">Manage Categories</phrase>
+		<phrase var_name="admin_menu_add_level" added="1552378467">Add Level</phrase>
+		<phrase var_name="admin_menu_manage_levels" added="1552378467">Manage Levels</phrase>
+		<phrase var_name="provide_resume_category" added="1552378467">Provide a resume category name.</phrase>
+		<phrase var_name="category_successfully_updated" added="1552378467">Category Successfully Updated</phrase>
+		<phrase var_name="category_successfully_added" added="1552378467">Category successfully added.</phrase>
+		<phrase var_name="edit_category" added="1552378467">Edit Category</phrase>
+		<phrase var_name="add_category" added="1552378467">Add New Category</phrase>
+		<phrase var_name="category_details" added="1552378467">Category Details</phrase>
+		<phrase var_name="category_name" added="1552378467">Category Name</phrase>
+		<phrase var_name="please_insert_category_name" added="1552378467">Please insert category name.</phrase>
+		<phrase var_name="parent_category" added="1552378467">Parent Category</phrase>
+		<phrase var_name="select" added="1552378467">Select</phrase>
+		<phrase var_name="select_a_sub_category" added="1552378467">Select a Sub-Category</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1552378467">Category order successfully updated.</phrase>
+		<phrase var_name="category_successfully_deleted" added="1552378467">Category successfully deleted.</phrase>
+		<phrase var_name="manage_categories" added="1552378467">Manage Categories</phrase>
+		<phrase var_name="are_you_sure_this_will_remove_this_category_from_all_related_resumes_and_cannot_be_undone" added="1552378467">Are you sure? This will remove this category from all related resumes and cannot be undone.</phrase>
+		<phrase var_name="edit" added="1552378467">Edit</phrase>
+		<phrase var_name="delete" added="1552378467">Delete</phrase>
+		<phrase var_name="categories" added="1552378467">Categories</phrase>
+		<phrase var_name="update_order" added="1552378467">Update Order</phrase>
+		<phrase var_name="add_level" added="1552378467">Add Level</phrase>
+		<phrase var_name="level_title" added="1552378467">Level Title</phrase>
+		<phrase var_name="add_new_level" added="1552378467">Add New Level</phrase>
+		<phrase var_name="please_insert_level_title" added="1552378467">Please insert level title.</phrase>
+		<phrase var_name="level_details" added="1552378467">Level Details</phrase>
+		<phrase var_name="level_successfully_added" added="1552378467">Level successfully added.</phrase>
+		<phrase var_name="basic_information" added="1552378467">Basic Information</phrase>
+		<phrase var_name="summary" added="1552378467">Summary</phrase>
+		<phrase var_name="experience" added="1552378467">Experience</phrase>
+		<phrase var_name="education" added="1552378467">Education</phrase>
+		<phrase var_name="add_skill_expertise" added="1552378467"><![CDATA[Add Skill & Expertise]]></phrase>
+		<phrase var_name="certifications" added="1552378467">Certifications</phrase>
+		<phrase var_name="languages" added="1552378467">Languages</phrase>
+		<phrase var_name="publications" added="1552378467">Publications</phrase>
+		<phrase var_name="additional_information" added="1552378467">Additional Information</phrase>
+		<phrase var_name="view_my_resume" added="1552378467">View this resume</phrase>
+		<phrase var_name="basic_info" added="1552378467">Basic Info</phrase>
+		<phrase var_name="personal_information" added="1552378467">Personal Information</phrase>
+		<phrase var_name="full_name" added="1552378467">Full name</phrase>
+		<phrase var_name="date_of_birth" added="1552378467">Date of Birth</phrase>
+		<phrase var_name="gender" added="1552378467">Gender</phrase>
+		<phrase var_name="marital_status" added="1552378467">Marital Status</phrase>
+		<phrase var_name="single" added="1552378467">Single</phrase>
+		<phrase var_name="married" added="1552378467">Married</phrase>
+		<phrase var_name="others" added="1552378467">Others</phrase>
+		<phrase var_name="phone_number" added="1552378467">Phone number</phrase>
+		<phrase var_name="home" added="1552378467">Home</phrase>
+		<phrase var_name="work" added="1552378467">Work</phrase>
+		<phrase var_name="mobile" added="1552378467">Mobile</phrase>
+		<phrase var_name="add_phone" added="1552378467">Add Phone</phrase>
+		<phrase var_name="imail" added="1552378467">Imail</phrase>
+		<phrase var_name="aim" added="1552378467">AIM</phrase>
+		<phrase var_name="skype" added="1552378467">Skype</phrase>
+		<phrase var_name="windows_live_messenger" added="1552378467">Windows Live Messenger</phrase>
+		<phrase var_name="yahoo_messenger" added="1552378467">Yahoo Messenger</phrase>
+		<phrase var_name="icq" added="1552378467">ICQ</phrase>
+		<phrase var_name="gtalk" added="1552378467">GTalk</phrase>
+		<phrase var_name="add_im" added="1552378467">Add IM</phrase>
+		<phrase var_name="email_address" added="1552378467">Email Address</phrase>
+		<phrase var_name="add_address" added="1552378467">Add Address</phrase>
+		<phrase var_name="photo" added="1552378467">Photo</phrase>
+		<phrase var_name="update" added="1552378467">Update</phrase>
+		<phrase var_name="create_new_resume" added="1552378467">Create New Resume</phrase>
+		<phrase var_name="are_you_sure" added="1552378467">Are you sure?</phrase>
+		<phrase var_name="you_can_add_49_more_skill_s_to_your_profile" added="1552378467">You can add 49 more skill(s) to your profile.</phrase>
+		<phrase var_name="you_must_have_a_minimum_of_total_predefined" added="1552378467">You must have a minimum of {total} predefined</phrase>
+		<phrase var_name="you_reach_the_maximum_of_total_predefined" added="1552378467">You have reached your limit.</phrase>
+		<phrase var_name="delete_selected" added="1552378467">Delete Selected</phrase>
+		<phrase var_name="no_levels_had_been_added" added="1552378467">No levels had been added.</phrase>
+		<phrase var_name="websites" added="1552378467">Websites</phrase>
+		<phrase var_name="sport" added="1552378467">Sport</phrase>
+		<phrase var_name="movies" added="1552378467">Movies</phrase>
+		<phrase var_name="interests" added="1552378467">Interests</phrase>
+		<phrase var_name="music" added="1552378467">Music</phrase>
+		<phrase var_name="resume_name" added="1552378467"><![CDATA[Professional "Headline"]]></phrase>
+		<phrase var_name="location" added="1552378467">Location</phrase>
+		<phrase var_name="city" added="1552378467">City</phrase>
+		<phrase var_name="zip_code" added="1552378467">Zip code</phrase>
+		<phrase var_name="options" added="1552378467">Options</phrase>
+		<phrase var_name="highest_level" added="1552378467">Highest Level</phrase>
+		<phrase var_name="years_of_experience" added="1552378467">Years of Experience</phrase>
+		<phrase var_name="magazine" added="1552378467">Magazine</phrase>
+		<phrase var_name="year_of_publication" added="1552378467">Year of publication</phrase>
+		<phrase var_name="choose" added="1552378467">Choose...</phrase>
+		<phrase var_name="note" added="1552378467">Note</phrase>
+		<phrase var_name="levels" added="1552378467">Levels</phrase>
+		<phrase var_name="name" added="1552378467">Name</phrase>
+		<phrase var_name="level" added="1552378467">Level</phrase>
+		<phrase var_name="company_name" added="1552378467">Company Name</phrase>
+		<phrase var_name="title" added="1552378467">Title</phrase>
+		<phrase var_name="time_period" added="1552378467">Time Period</phrase>
+		<phrase var_name="i_currently_work_here" added="1552378467">I currently work here</phrase>
+		<phrase var_name="description" added="1552378467">Description</phrase>
+		<phrase var_name="please_enter_level_title" added="1552378467">Please enter level title!</phrase>
+		<phrase var_name="shool_name" added="1552378467">School Name</phrase>
+		<phrase var_name="degree" added="1552378467">Degree</phrase>
+		<phrase var_name="field_of_study" added="1552378467">Field of Study</phrase>
+		<phrase var_name="dates_attended" added="1552378467">Dates Attended</phrase>
+		<phrase var_name="tip_current_students_enter_your_expected_graduation_year" added="1552378467">Tip: Current students: enter your expected graduation year</phrase>
+		<phrase var_name="to" added="1552378467">to</phrase>
+		<phrase var_name="grade" added="1552378467">Grade</phrase>
+		<phrase var_name="activities_and_societies" added="1552378467">Activities and Societies</phrase>
+		<phrase var_name="tip_use_commas_to_separate_multiple_activities" added="1552378467">Tip: Use commas to separate multiple activities</phrase>
+		<phrase var_name="additional_notes" added="1552378467">Additional Notes</phrase>
+		<phrase var_name="year" added="1552378467">Year</phrase>
+		<phrase var_name="no_categories_had_been_added" added="1552378467">No categories had been added.</phrase>
+		<phrase var_name="admin_menu_manage_view_service_registration" added="1552378467">Manage Service</phrase>
+		<phrase var_name="setting_maximum_resumes" added="1552378467"><![CDATA[<title>Maximum Resumes</title><info>The maximum resume number that a member can create.</info>]]></phrase>
+		<phrase var_name="setting_maximum_resumes_search" added="1552378467"><![CDATA[<title>Maximum Resumes Search</title><info>The maximum resume number that can be shown on the search page.</info>]]></phrase>
+		<phrase var_name="setting_checking_approval_mode" added="1552378467"><![CDATA[<title>Checking Approval Mode</title><info>Setup the approval mode for manually approving the members&#039; resumes or automatically approving them.</info>]]></phrase>
+		<phrase var_name="setting_required_fields" added="1552378467"><![CDATA[<title>Required Fields</title><info>Setup the required section for a resume. Values that are available are: <b>experience</b>, <b>education</b>, <b>skills</b>, <b>certification</b>, <b>language</b>, <b>publication</b> and <b>addition</b>.</info>]]></phrase>
+		<phrase var_name="user_setting_can_approve_resume" added="1552378467">Can approve resumes created by users?</phrase>
+		<phrase var_name="user_setting_can_add_resume_sections" added="1552378467">Can add sections from resume profile?</phrase>
+		<phrase var_name="user_setting_can_edit_other_resume" added="1552378467">Can edit resumes of other users?</phrase>
+		<phrase var_name="user_setting_can_favorite_resumes" added="1552378467">Can favorite resumes ?</phrase>
+		<phrase var_name="user_setting_can_add_a_note_on_resumes" added="1552378467">Can add a note on resumes ?</phrase>
+		<phrase var_name="user_setting_can_delete_own_resumes" added="1552378467">Can delete own resumes?</phrase>
+		<phrase var_name="user_setting_can_delete_other_resumes" added="1552378467">Can delete resumes created by other users?</phrase>
+		<phrase var_name="user_setting_can_send_message_to_resume_owner" added="1552378467">Can send messages to resume owner? (This option is used for the viewer that views resumes).</phrase>
+		<phrase var_name="user_setting_can_send_message_to_resume_viewer" added="1552378467">Can send messages to the resume viewers? (This option is used for the resume owners that want to contact with the users who viewed their resumes).</phrase>
+		<phrase var_name="user_setting_can_vew_full_information_of_resumes" added="1552378467">Can view full information of resumes?</phrase>
+		<phrase var_name="user_setting_can_view_viewer_information" added="1552378467"><![CDATA[Can view information of viewer from "Who&#039;s viewed me" space?]]></phrase>
+		<phrase var_name="user_setting_resume_category_numbers" added="1552378467">Maximum number of categories that a resume can include?</phrase>
+		<phrase var_name="user_setting_resume_viewer_numbers" added="1552378467"><![CDATA[Maximum number of viewers that showed on "Who&#039;s viewed me" space (0 means "Unlimited")?]]></phrase>
+		<phrase var_name="user_setting_number_resumes_viewer_can_view" added="1552378467"><![CDATA[Number of resumes that member can view details ( 0 means "Unlimited").]]></phrase>
+		<phrase var_name="user_setting_can_create_resumes" added="1552378467">Can create resumes?</phrase>
+		<phrase var_name="training_in_place" added="1552378467">Training in place</phrase>
+		<phrase var_name="course_s_name" added="1552378467"><![CDATA[Course&#039;s Name]]></phrase>
+		<phrase var_name="certification_s_name" added="1552378467"><![CDATA[Certification&#039;s Name]]></phrase>
+		<phrase var_name="all_resumes" added="1552378467">All Resumes</phrase>
+		<phrase var_name="my_resumes" added="1552378467">My Resumes</phrase>
+		<phrase var_name="favorite_resumes" added="1552378467">Favorite Resumes</phrase>
+		<phrase var_name="who_viewed_me" added="1552378467"><![CDATA[Who&#039;s Viewed Me]]></phrase>
+		<phrase var_name="service_information" added="1552378467">Service Information</phrase>
+		<phrase var_name="resume" added="1552378467">Resume</phrase>
+		<phrase var_name="search_resumes" added="1552378467">Search Resumes</phrase>
+		<phrase var_name="latest" added="1552378467">Latest</phrase>
+		<phrase var_name="most_viewed" added="1552378467">Most Viewed</phrase>
+		<phrase var_name="most_favorited" added="1552378467">Most Favorited</phrase>
+		<phrase var_name="updated" added="1552378467">Updated</phrase>
+		<phrase var_name="created" added="1552378467">Created</phrase>
+		<phrase var_name="views" added="1552378467">view(s)</phrase>
+		<phrase var_name="favorites" added="1552378467">favorite(s)</phrase>
+		<phrase var_name="no_resumes_found" added="1552378467">No resumes found.</phrase>
+		<phrase var_name="your_basic_information_added_successfully" added="1552378467">Your basic information added successfully!</phrase>
+		<phrase var_name="your_basic_information_updated_successfully" added="1552378467">Your basic information updated successfully!</phrase>
+		<phrase var_name="view_detail" added="1552378467">View detail</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_resume" added="1552378467">Are you sure that you want to delete this resume? All related data will be also deleted and cannot be undone.</phrase>
+		<phrase var_name="publish" added="1552378467">Publish</phrase>
+		<phrase var_name="private" added="1552378467">Private</phrase>
+		<phrase var_name="resume_deleted_successfully" added="1552378467">Resume deleted successfully.</phrase>
+		<phrase var_name="cannot_find_the_related_resume_to_delete" added="1552378467">Cannot find the related resume to delete.</phrase>
+		<phrase var_name="publish_resume" added="1552378467">Publish Resume</phrase>
+		<phrase var_name="your_resume_will_be_shown_on_the_site" added="1552378467">Your resume will be shown on the site.</phrase>
+		<phrase var_name="show_image" added="1552378467">Show my image</phrase>
+		<phrase var_name="show_full_name" added="1552378467">Show my full name</phrase>
+		<phrase var_name="show_current_working" added="1552378467">Show my current working company name</phrase>
+		<phrase var_name="your_resume_had_been_published_successfully" added="1552378467">Your resume had been published successfully!</phrase>
+		<phrase var_name="are_you_sure_you_want_to_set_private_this_resume" added="1552378467">Are you sure that you want to set private this resume?</phrase>
+		<phrase var_name="cannot_found_the_related_resume" added="1552378467">Cannot find the related resume.</phrase>
+		<phrase var_name="your_resume_had_been_set_private_successfully" added="1552378467">Your resume had been set private successfully!</phrase>
+		<phrase var_name="published" added="1552378467">Published</phrase>
+		<phrase var_name="approved" added="1552378467">Approved</phrase>
+		<phrase var_name="incomplete" added="1552378467">Incomplete</phrase>
+		<phrase var_name="approving" added="1552378467">Approving</phrase>
+		<phrase var_name="denied" added="1552378467">Denied</phrase>
+		<phrase var_name="add_full_name_to_your_resume" added="1552378467">Add full name to your resume</phrase>
+		<phrase var_name="not_a_valid_file_extension_we_only_accept_jpg_gif_png_jpeg" added="1552378467">Not a valid file extension. We only accept: jpg, gif, png, jpeg</phrase>
+		<phrase var_name="male" added="1552378467">Male</phrase>
+		<phrase var_name="female" added="1552378467">Female</phrase>
+		<phrase var_name="email_address_is_invalid" added="1552378467">Email Address is invalid</phrase>
+		<phrase var_name="date_of_birth_is_invalid" added="1552378467">Date of Birth is invalid</phrase>
+		<phrase var_name="add_headline_to_your_resume" added="1552378467">Add headline to your resume</phrase>
+		<phrase var_name="add_summary_to_your_resume" added="1552378467">Add summary to your resume</phrase>
+		<phrase var_name="list_of_positions" added="1552378467">List of positions</phrase>
+		<phrase var_name="at" added="1552378467">at</phrase>
+		<phrase var_name="years" added="1552378467">years</phrase>
+		<phrase var_name="not_selected" added="1552378467">Not selected</phrase>
+		<phrase var_name="im" added="1552378467">IM</phrase>
+		<phrase var_name="email" added="1552378467">Email</phrase>
+		<phrase var_name="contact_info" added="1552378467">Contact Info</phrase>
+		<phrase var_name="skills_expertise" added="1552378467"><![CDATA[Skills & Expertise]]></phrase>
+		<phrase var_name="no_categories_added" added="1552378467">No categories added.</phrase>
+		<phrase var_name="present" added="1552378467">Present</phrase>
+		<phrase var_name="months" added="1552378467">months</phrase>
+		<phrase var_name="attended" added="1552378467">Attended</phrase>
+		<phrase var_name="category" added="1552378467">Categories</phrase>
+		<phrase var_name="tip_when_you_view_a_resume_owner_will_see_these_information" added="1552378467">Tip: When you view a resume, owner will see these information</phrase>
+		<phrase var_name="your_name" added="1552378467">Your Name</phrase>
+		<phrase var_name="hide_me" added="1552378467">Hide me</phrase>
+		<phrase var_name="tip_member_can_not_view_your_name_if_you_use_hide_me" added="1552378467"><![CDATA[Tip: Member can not view your name if you use "hide me"]]></phrase>
+		<phrase var_name="website" added="1552378467">Website</phrase>
+		<phrase var_name="tip_we_will_use_this_email_to_notificate_for_you_when_member_send_you_a_message" added="1552378467">Tip: We will use this email to notificate for you when member send you a message</phrase>
+		<phrase var_name="telephone" added="1552378467">Telephone</phrase>
+		<phrase var_name="type" added="1552378467">Type</phrase>
+		<phrase var_name="employee" added="1552378467">Employee</phrase>
+		<phrase var_name="employer" added="1552378467">Employer</phrase>
+		<phrase var_name="employee_employer" added="1552378467"><![CDATA[Employee & Employer]]></phrase>
+		<phrase var_name="submit" added="1552378467">Submit</phrase>
+		<phrase var_name="add_full_name_to_your_account" added="1552378467">Add Full name to your account</phrase>
+		<phrase var_name="add_company_name_to_your_account" added="1552378467">Add Company Name to your account</phrase>
+		<phrase var_name="add_email_to_your_account" added="1552378467">Add Email to your account</phrase>
+		<phrase var_name="your_account_added_successfullly" added="1552378467">Your account added successfully</phrase>
+		<phrase var_name="your_account_updated_successfully" added="1552378467">Your account updated successfully</phrase>
+		<phrase var_name="add_telephone_to_your_account" added="1552378467">Add Telephone to your account</phrase>
+		<phrase var_name="years_of_experience_is_invalid" added="1552378467">Years of Experience is invalid</phrase>
+		<phrase var_name="manage_view_service_registration" added="1552378467">Manage View Service Registration</phrase>
+		<phrase var_name="view_resume" added="1552378467">View Resume</phrase>
+		<phrase var_name="id" added="1552378467">Id</phrase>
+		<phrase var_name="owner" added="1552378467">Owner</phrase>
+		<phrase var_name="tel" added="1552378467">Tel</phrase>
+		<phrase var_name="registered_date" added="1552378467">Registered date</phrase>
+		<phrase var_name="approve_view" added="1552378467">View resume service</phrase>
+		<phrase var_name="approve_who_view" added="1552378467"><![CDATA[Who&#039;s viewed me service]]></phrase>
+		<phrase var_name="no_account_is_found" added="1552378467">No account is found</phrase>
+		<phrase var_name="view" added="1552378467">View</phrase>
+		<phrase var_name="yes" added="1552378467">Yes</phrase>
+		<phrase var_name="no" added="1552378467">No</phrase>
+		<phrase var_name="none" added="1552378467">None</phrase>
+		<phrase var_name="upgrade_to_view" added="1552378467">Upgrade to view</phrase>
+		<phrase var_name="complete" added="1552378467">Complete</phrase>
+		<phrase var_name="status" added="1552378467">Status</phrase>
+		<phrase var_name="likes" added="1552378467">Likes</phrase>
+		<phrase var_name="backend_views" added="1552378467">Views</phrase>
+		<phrase var_name="add" added="1552378467">Add</phrase>
+		<phrase var_name="add_a_photo" added="1552378467">Add a photo</phrase>
+		<phrase var_name="of_resume_complete" added="1552378467">of Resume Complete</phrase>
+		<phrase var_name="resume_completion_tips" added="1552378467">Resume Completion Tips</phrase>
+		<phrase var_name="add_another_position" added="1552378467">Add another position</phrase>
+		<phrase var_name="completed" added="1552378467">Completed</phrase>
+		<phrase var_name="add_your_skill_expertise" added="1552378467"><![CDATA[Add your skill & expertise]]></phrase>
+		<phrase var_name="add_your_education" added="1552378467">Add your education</phrase>
+		<phrase var_name="add_a_picture" added="1552378467">Add a picture</phrase>
+		<phrase var_name="all" added="1552378467">All</phrase>
+		<phrase var_name="headline" added="1552378467">Headline</phrase>
+		<phrase var_name="add_sections_to_refelct_archivement_and_experience_on_your_profile" added="1552378467"><![CDATA[<b>Add Sections</b> to reflect achievement and experience on your profile]]></phrase>
+		<phrase var_name="add_section" added="1552378467">Add Section</phrase>
+		<phrase var_name="add_a_summary" added="1552378467">Add a Summary</phrase>
+		<phrase var_name="add_experience" added="1552378467">Add Experience</phrase>
+		<phrase var_name="add_a_skill" added="1552378467">Add a Skill</phrase>
+		<phrase var_name="add_a_school" added="1552378467">Add a School</phrase>
+		<phrase var_name="reset" added="1552378467">Reset</phrase>
+		<phrase var_name="search" added="1552378467">Search</phrase>
+		<phrase var_name="filter_resumes" added="1552378467">Filter Resumes</phrase>
+		<phrase var_name="hide_name" added="1552378467">hide name</phrase>
+		<phrase var_name="hide_photo" added="1552378467">hide photo</phrase>
+		<phrase var_name="hide_lastest_company_name" added="1552378467">hide lastest company name</phrase>
+		<phrase var_name="keywords" added="1552378467">Keywords</phrase>
+		<phrase var_name="company" added="1552378467">Company</phrase>
+		<phrase var_name="school" added="1552378467">School</phrase>
+		<phrase var_name="skill" added="1552378467">Skill</phrase>
+		<phrase var_name="advanced_search" added="1552378467">Advanced Search</phrase>
+		<phrase var_name="import_from_linkedin" added="1552378467">Import from LinkedIn</phrase>
+		<phrase var_name="search_from" added="1552378467">Search from</phrase>
+		<phrase var_name="skip" added="1552378467">Skip</phrase>
+		<phrase var_name="add_a_position" added="1552378467">Add a position</phrase>
+		<phrase var_name="add_a_language" added="1552378467">Add a Language</phrase>
+		<phrase var_name="add_a_publication" added="1552378467">Add a Publication</phrase>
+		<phrase var_name="other" added="1552378467">Other</phrase>
+		<phrase var_name="start_year_is_invalid" added="1552378467">Start year is invalid</phrase>
+		<phrase var_name="end_year_is_invalid" added="1552378467">End year is invalid</phrase>
+		<phrase var_name="favorite" added="1552378467">Favorite</phrase>
+		<phrase var_name="send_message" added="1552378467">Send Message</phrase>
+		<phrase var_name="add_a_certification" added="1552378467">Add a Certification</phrase>
+		<phrase var_name="untitled_resume" added="1552378467">Untitled Resume</phrase>
+		<phrase var_name="add_current_work" added="1552378467">Add current work</phrase>
+		<phrase var_name="lowercase_year" added="1552378467">year</phrase>
+		<phrase var_name="month" added="1552378467">month</phrase>
+		<phrase var_name="add_language_name_to_your_resume" added="1552378467">Add language name to your resume</phrase>
+		<phrase var_name="add_magazine_name_to_your_resume" added="1552378467">Add magazine name to your resume</phrase>
+		<phrase var_name="add_certification_s_name_to_your_resume" added="1552378467"><![CDATA[Add Certification&#039;s name to your resume]]></phrase>
+		<phrase var_name="add_school_name_to_your_resume" added="1552378467">Add School name to your resume</phrase>
+		<phrase var_name="add_company_name_to_your_resume" added="1552378467">Add Company name to your resume</phrase>
+		<phrase var_name="editing_resume" added="1552378467">Managing Resume</phrase>
+		<phrase var_name="from" added="1552378467">From</phrase>
+		<phrase var_name="setting" added="1552378467">Setting</phrase>
+		<phrase var_name="edit_photo" added="1552378467">Edit Photo</phrase>
+		<phrase var_name="moderate" added="1552378467">Moderate</phrase>
+		<phrase var_name="resume_s_successfully_deleted" added="1552378467">Resume(s) was successfully deleted.</phrase>
+		<phrase var_name="unfavorite" added="1552378467">Unfavorite</phrase>
+		<phrase var_name="viewed_date" added="1552378467">Viewed date</phrase>
+		<phrase var_name="unnote" added="1552378467">Unnote</phrase>
+		<phrase var_name="view_more" added="1552378467">View More</phrase>
+		<phrase var_name="register_now" added="1552378467">Register Now</phrase>
+		<phrase var_name="add_note" added="1552378467">Add Note</phrase>
+		<phrase var_name="to_view_more_please_register_who_viewed_me_service" added="1552378467"><![CDATA[Upgrade to Premium Account to see full list of who&#039;s viewed your resume]]></phrase>
+		<phrase var_name="send" added="1552378467">Send</phrase>
+		<phrase var_name="your_message" added="1552378467">Your message</phrase>
+		<phrase var_name="title_is_not_allowed_empty" added="1552378467">Title is not allowed empty</phrase>
+		<phrase var_name="message_is_not_allowed_empty" added="1552378467">Message is not allowed empty</phrase>
+		<phrase var_name="no_message_is_found" added="1552378467">No message is found</phrase>
+		<phrase var_name="persons_viewed_your_resume" added="1552378467">{person} persons viewed your resume.</phrase>
+		<phrase var_name="approve" added="1552378467">Approve</phrase>
+		<phrase var_name="deny" added="1552378467">Deny</phrase>
+		<phrase var_name="admin_menu_statistic" added="1552378467">Statistics</phrase>
+		<phrase var_name="statistic" added="1552378467">Statistic</phrase>
+		<phrase var_name="users_approved_gender_own_resume_title" added="1552378467"><![CDATA[{users} approved {gender} own resume "{title}"]]></phrase>
+		<phrase var_name="users_approved_your_resume_title" added="1552378467"><![CDATA[{users} approved your resume "{title}"]]></phrase>
+		<phrase var_name="users_approved_span_class_drop_data_user_row_full_name_s_span_resume_title" added="1552378467"><![CDATA[{users} approved <span class="drop_data_user">{row_full_name}&#039;s</span> resume "{title}"]]></phrase>
+		<phrase var_name="users_denied_span_class_drop_data_user_row_full_name_s_span_resume_title" added="1552378467"><![CDATA[{users} denied <span class="drop_data_user">{row_full_name}&#039;s</span> resume "{title}"]]></phrase>
+		<phrase var_name="users_denied_your_resume_title" added="1552378467"><![CDATA[{users} denied your resume "{title}"]]></phrase>
+		<phrase var_name="users_denied_gender_own_resume_title" added="1552378467"><![CDATA[{users} denied {gender} own resume "{title}"]]></phrase>
+		<phrase var_name="users_added_your_resume_title_to_gender_favorite_list" added="1552378467"><![CDATA[{users} added your resume "{title}" to {gender} favorite list]]></phrase>
+		<phrase var_name="users_added_gender_own_resume_title_to_the_favorite_list" added="1552378467"><![CDATA[{users} added {gender} own resume "{title}" to the favorite list]]></phrase>
+		<phrase var_name="users_added_span_class_drop_data_user_row_full_name_s_span_resume_title_to_gender_favorite_list" added="1552378467"><![CDATA[{users} added <span class="drop_data_user">{row_full_name}&#039;s</span> resume "{title}" to {gender} favorite list]]></phrase>
+		<phrase var_name="viewed" added="1552378467">Viewed</phrase>
+		<phrase var_name="users_approved_gender_own_registration_to_have_a_full_view_on_resumes" added="1552378467">{users} approved {gender} own registration to have a  full view on resumes.</phrase>
+		<phrase var_name="users_approved_your_registration_to_have_a_full_view_on_resumes" added="1552378467">{users} approved your registration to have a full view on resumes</phrase>
+		<phrase var_name="users_approved_span_class_drop_data_user_row_full_name_s_span_registration_to_have_a_full_view_on_resumes" added="1552378467"><![CDATA[{users} approved <span class="drop_data_user">{row_full_name}&#039;s</span> registration to have a full view on resumes]]></phrase>
+		<phrase var_name="users_unapproved_gender_own_registration_to_have_a_full_view_on_resumes" added="1552378467">{users} unapproved {gender} own registration to have a  full view on resumes.</phrase>
+		<phrase var_name="users_unapproved_your_registration_to_have_a_full_view_on_resumes" added="1552378467">{users} unapproved your registration to have a full view on resumes</phrase>
+		<phrase var_name="users_unapproved_span_class_drop_data_user_row_full_name_s_span_registration_to_get_resume_full_view" added="1552378467"><![CDATA[{users} unapproved <span class="drop_data_user">{row_full_name}&#039;s</span> registration to have a full view on resumes]]></phrase>
+		<phrase var_name="users_approved_gender_own_registration_to_have_a_full_view_on_who_view_me_page" added="1552378467">{users} approved {gender} own registration to have a full view on who view me page</phrase>
+		<phrase var_name="users_approved_your_registration_to_have_a_full_view_on_who_view_me_page" added="1552378467"><![CDATA[{users} approved your registration to have a full view on "Who&#039;s Viewed Me" page]]></phrase>
+		<phrase var_name="users_approved_span_class_drop_data_user_row_full_name_s_span_registration_on_who_view_me" added="1552378467"><![CDATA[{users} approved <span class="drop_data_user">{row_full_name}&#039;s</span> registration to have a full view on "Who&#039;s Viewed Me" page]]></phrase>
+		<phrase var_name="users_unapproved_gender_own_registration_to_have_a_full_view_on_who_view_me_page" added="1552378467">{users} unapproved {gender} own registration to have a full view on who view me page</phrase>
+		<phrase var_name="users_unapproved_your_registration_to_have_a_full_view_on_who_view_me_page" added="1552378467"><![CDATA[{users} unapproved your registration to have a full view on "Who&#039;s Viewed Me" page]]></phrase>
+		<phrase var_name="users_unapproved_span_class_drop_data_user_row_full_name_s_span_registration_on_who_view_me" added="1552378467"><![CDATA[{users} unapproved <span class="drop_data_user">{row_full_name}&#039;s</span> registration to have a full view on "Who&#039;s Viewed Me" page]]></phrase>
+		<phrase var_name="view_details" added="1552378467">View Details</phrase>
+		<phrase var_name="add_category_to_your_resume" added="1552378467">Add category to your resume</phrase>
+		<phrase var_name="sent_messages" added="1552378467">Sent Messages</phrase>
+		<phrase var_name="your_summary_updated_successfully" added="1552378467">Your summary updated successfully!</phrase>
+		<phrase var_name="your_experience_added_successfully" added="1552378467">Your experience added successfully!</phrase>
+		<phrase var_name="your_experience_updated_successfully" added="1552378467">Your experience updated successfully!</phrase>
+		<phrase var_name="your_education_added_successfully" added="1552378467">Your education added successfully!</phrase>
+		<phrase var_name="your_education_updated_successfully" added="1552378467">Your education updated successfully!</phrase>
+		<phrase var_name="add_position_level_to_your_resume" added="1552378467">Add position level to your resume</phrase>
+		<phrase var_name="add_job_title_to_your_resume" added="1552378467">Add job title to your resume</phrase>
+		<phrase var_name="add_a_headline" added="1552378467">Add a headline</phrase>
+		<phrase var_name="add_working_time_period_to_your_resume" added="1552378467">Add working time period to your resume</phrase>
+		<phrase var_name="add_email_address" added="1552378467">Add email address</phrase>
+		<phrase var_name="add_marital_status" added="1552378467">Add marital status</phrase>
+		<phrase var_name="add_gender" added="1552378467">Add gender</phrase>
+		<phrase var_name="add_date_of_birth" added="1552378467">Add date of birth</phrase>
+		<phrase var_name="add_full_name" added="1552378467">Add full name</phrase>
+		<phrase var_name="add_location" added="1552378467">Add location</phrase>
+		<phrase var_name="add_city" added="1552378467">Add city</phrase>
+		<phrase var_name="add_zip_code" added="1552378467">Add zip code</phrase>
+		<phrase var_name="add_year_of_experience" added="1552378467">Add year of experience</phrase>
+		<phrase var_name="add_your_skills_expertise" added="1552378467"><![CDATA[Add your skills & expertise]]></phrase>
+		<phrase var_name="add_your_experience" added="1552378467">Add your experience</phrase>
+		<phrase var_name="add_your_language" added="1552378467">Add your language</phrase>
+		<phrase var_name="add_your_publication" added="1552378467">Add your publication</phrase>
+		<phrase var_name="add_your_certification" added="1552378467">Add your certification</phrase>
+		<phrase var_name="add_your_addition" added="1552378467">Add your addition</phrase>
+		<phrase var_name="add_education_degree_to_your_resume" added="1552378467">Add education degree to your resume</phrase>
+		<phrase var_name="add_education_field_to_your_resume" added="1552378467">Add education field to your resume</phrase>
+		<phrase var_name="add_start_study_time_to_your_resume" added="1552378467">Add start study time to your resume</phrase>
+		<phrase var_name="add_end_study_time_to_your_resume" added="1552378467">Add end study time to your resume</phrase>
+		<phrase var_name="your_skill_expertise_updated_successfully" added="1552378467"><![CDATA[Your Skill & Expertise updated successfully!]]></phrase>
+		<phrase var_name="your_certification_added_successfully" added="1552378467">Your certification added successfully!</phrase>
+		<phrase var_name="your_certification_updated_successfully" added="1552378467">Your certification updated successfully!</phrase>
+		<phrase var_name="list_of_certifications" added="1552378467">List of Certifications</phrase>
+		<phrase var_name="list_of_schools" added="1552378467">List of schools</phrase>
+		<phrase var_name="contacted" added="1552378467">Contacted</phrase>
+		<phrase var_name="no_name" added="1552378467">No name</phrase>
+		<phrase var_name="list_of_languages" added="1552378467">List of languages</phrase>
+		<phrase var_name="your_language_added_successfully" added="1552378467">Your language added successfully!</phrase>
+		<phrase var_name="your_language_updated_successfully" added="1552378467">Your language updated successfully!</phrase>
+		<phrase var_name="your_publication_added_successfully" added="1552378467">Your publication added successfully!</phrase>
+		<phrase var_name="your_publication_updated_successfully" added="1552378467">Your publication updated successfully!</phrase>
+		<phrase var_name="list_of_publication" added="1552378467">List of Publication</phrase>
+		<phrase var_name="your_addition_information_added_successfully" added="1552378467">Your addition information added successfully!</phrase>
+		<phrase var_name="your_addition_information_updated_successfully" added="1552378467">Your addition information updated successfully!</phrase>
+		<phrase var_name="admin_menu_weight_settings" added="1552378467">Weight Settings</phrase>
+		<phrase var_name="edit_weight_of_resume_fields" added="1552378467">Edit weight of resume fields</phrase>
+		<phrase var_name="savechangesresume" added="1552378467">SaveChangesResume</phrase>
+		<phrase var_name="save_changes" added="1552378467">Save Changes</phrase>
+		<phrase var_name="your_headline" added="1552378467">Your Headline</phrase>
+		<phrase var_name="resume_headline" added="1552378467">Resume Headline</phrase>
+		<phrase var_name="each_users_only_can_create_maximum_limit_resume" added="1552378467">You can just create maximum {limit} resume(s).</phrase>
+		<phrase var_name="maximum_resumes" added="1552378467">Maximum Resumes</phrase>
+		<phrase var_name="contact_information" added="1552378467">Contact Information</phrase>
+		<phrase var_name="or" added="1552378467">or</phrase>
+		<phrase var_name="cancel_service" added="1552378467">Cancel Service</phrase>
+		<phrase var_name="cancel" added="1552378467">Cancel</phrase>
+		<phrase var_name="you_are_using_the_services" added="1552378467">You are using the Services:</phrase>
+		<phrase var_name="cannot_delete_category_that_currently_has_related_data" added="1552378467">Cannot delete category that currently has related data.</phrase>
+		<phrase var_name="both" added="1552378467">Both</phrase>
+		<phrase var_name="backend_favorites" added="1552378467">Favorites</phrase>
+		<phrase var_name="used" added="1552378467">Used</phrase>
+		<phrase var_name="cannot_delete_level_that_already_has_related_data" added="1552378467">Cannot delete level that already has related data.</phrase>
+		<phrase var_name="allowviewedresume" added="1552378467"><![CDATA[You can just view maximum {count} resume. To view all, you have to upgrade account to "view resume" by clicking at <a href="{url}">here</a>]]></phrase>
+		<phrase var_name="uppercase_month" added="1552378467">Month</phrase>
+		<phrase var_name="maximum_note_length" added="1552378467">Maximum 500 characters</phrase>
+		<phrase var_name="resume_not_found" added="1552378467">Resume not found.</phrase>
+		<phrase var_name="private_name" added="1552378467">Private Name</phrase>
+		<phrase var_name="contact_mail_to_who_view" added="1552378467"><![CDATA[{full_name} has just contact to you. Please visit the following link to check it.
+<a href="{link}" target="_blank">{link}</a>
+
+{message}]]></phrase>
+		<phrase var_name="please_be_sure_the_start_year_is_not_the_end_year" added="1552378467">Please be sure the start year is not later than the end year.</phrase>
+		<phrase var_name="please_be_sure_the_start_date_is_not_after_the_end_date" added="1552378467">Please be sure the start date is not later than the end date.</phrase>
+		<phrase var_name="setting_total_resume_display" added="1552378467"><![CDATA[<title>Number of  Resumes Display</title><info>Define how many resume a user can view at once when searching on the public resume section?</info>]]></phrase>
+		<phrase var_name="delete_process_is_completed_note_that_some_levels_cannot_be_deleted_if_they_are_in_used" added="1552378467">Delete process is completed. Note that some levels cannot be deleted if they are in used.</phrase>
+		<phrase var_name="resumes" added="1552378467">Resumes</phrase>
+		<phrase var_name="register_view_resume" added="1552378467"><![CDATA[Register "View Resume"]]></phrase>
+		<phrase var_name="register_who_viewed_me" added="1552378467"><![CDATA[Register "Who&#039;s Viewed Me"]]></phrase>
+		<phrase var_name="statistics" added="1552378467">Statistics</phrase>
+		<phrase var_name="you_have_successfully_registered_it_is_pending_for_approving" added="1552378467">You have successfully registered. It is pending for approving.</phrase>
+		<phrase var_name="please_contact_admin_to_install_social_bridge" added="1552378467">Please contact admin to install Social Bridge</phrase>
+		<phrase var_name="n_a" added="1552378467">N/A</phrase>
+		<phrase var_name="maximum_selected_category_number_is_number" added="1552378467">Maximum selected category number is {number}.</phrase>
+		<phrase var_name="you_can_only_select_number_categories" added="1552378467">You can only select {number} categories.</phrase>
+		<phrase var_name="please_choose_the_service_which_you_want_to_use" added="1552378467">Please choose the service which you want to use</phrase>
+		<phrase var_name="tip_the_following_information_only_contact_to_admin" added="1552378467">Tip: The following information only contact to admin</phrase>
+		<phrase var_name="tip_who_view_me" added="1552378467"><![CDATA[<br/>
+Tip: You need to register using "who&#039;s viewed me" service to view alls]]></phrase>
+		<phrase var_name="import_resume_successfully" added="1552378467">Import resume successfully.</phrase>
+		<phrase var_name="cannot_import_resume_from_linkedin" added="1552378467">Cannot import resume from linkedIn</phrase>
+		<phrase var_name="cannot_import_resume_from_linkedIn" added="1552378467">Cannot import resume from linkedIn</phrase>
+		<phrase var_name="menu_resume_add_new_resume_69f2afc2390cec954f7c208b07212d39" added="1552378467">Create New Resume</phrase>
+		<phrase var_name="authorized_location" added="1552378467">Authorized to work on Location</phrase>
+		<phrase var_name="authorized_country_iso" added="1552378467">Authorized to work on Country</phrase>
+		<phrase var_name="authorized_level_id" added="1552378467">Authorized to work on Position</phrase>
+		<phrase var_name="publication_type" added="1552378467">Publication Type</phrase>
+		<phrase var_name="book" added="1552378467">Book</phrase>
+		<phrase var_name="publication_url" added="1552378467">Publication Url</phrase>
+		<phrase var_name="publisher" added="1552378467">Publisher</phrase>
+		<phrase var_name="uppercase_day" added="1552378467">Day</phrase>
+		<phrase var_name="author" added="1552378467">Author</phrase>
+		<phrase var_name="add_author" added="1552378467">Add Author</phrase>
+		<phrase var_name="add_publication_title_to_your_resume" added="1552378467">Please add publication title to your resume.</phrase>
+		<phrase var_name="add_publication_type_to_your_resume" added="1552378467">Please add publication type to your resume.</phrase>
+		<phrase var_name="resume_completeness" added="1552378467">Resume Completeness</phrase>
+		<phrase var_name="next" added="1552378467">Next</phrase>
+		<phrase var_name="view_resume_registration_message" added="1552378467"><![CDATA[You are not permited to view resume yet. Please register to use our "View Resume" service.]]></phrase>
+		<phrase var_name="view_all" added="1552378467">View all</phrase>
+		<phrase var_name="more" added="1552378467">More</phrase>
+		<phrase var_name="manage_resume" added="1552378467">Manage Resume</phrase>
+		<phrase var_name="no_created_resume" added="1552378467"><![CDATA[You have not created any resumes yet. Create a new one <a href="{link}">here</a>]]></phrase>
+		<phrase var_name="authorized_to_work_on" added="1552378467">Authorized to work in</phrase>
+		<phrase var_name="country" added="1552378467">Country</phrase>
+		<phrase var_name="position" added="1552378467">Position</phrase>
+		<phrase var_name="your_information" added="1552378467">Your Information</phrase>
+		<phrase var_name="who_s_viewed_me" added="1552378467"><![CDATA[Who&#039;s viewed me]]></phrase>
+		<phrase var_name="members" added="1552378467">members</phrase>
+		<phrase var_name="view_all_resumes" added="1552378467">View all Resumes</phrase>
+		<phrase var_name="upgrade_your_account_to_see_full_list_of_resumes" added="1552378467">Upgrade your account to see full list of resumes</phrase>
+		<phrase var_name="admin_menu_global_settings" added="1552378467">Global Settings</phrase>
+		<phrase var_name="who_s_viewed_me_group" added="1552378467"><![CDATA[Who&#039;s viewed me group]]></phrase>
+		<phrase var_name="view_all_resume_group" added="1552378467">View all Resumes group</phrase>
+		<phrase var_name="configure_the_group_for_using_who_s_viewed_me_service" added="1552378467"><![CDATA[Configure the group after registering "Who&#039;s viewed me" service]]></phrase>
+		<phrase var_name="configure_the_group_for_using_view_all_resume_service" added="1552378467"><![CDATA[Configure the group after registering "View all Resumes" service]]></phrase>
+		<phrase var_name="settings_successfully_updated" added="1552378467">Settings successfully updated</phrase>
+		<phrase var_name="please_chooose_default_group_for_who_s_view_me_service_and_view_all_resume_service_before_upgrading" added="1552378467"><![CDATA[Please chooose default group for Who&#039;s view me service and View all Resumes service before upgrading service.]]></phrase>
+		<phrase var_name="are_you_sure_you_want_to_publish_this_resume" added="1552378467">Are you sure you want to publish this resume?</phrase>
+		<phrase var_name="user_setting_maximum_resumes" added="1552378467">The maximum resume number that a member can create (0 means unlimited).</phrase>
+		<phrase var_name="user_setting_checking_approval_mode" added="1552378467">Set this to TRUE if the published resumes must be approved before they are visible to the public</phrase>
+		<phrase var_name="search_members" added="1552378467">Search Members</phrase>
+		<phrase var_name="upgrade_you_account_to_see_the_full_list_of_who_s_viewed_you_resume" added="1552378467"><![CDATA[Upgrade your account to see the full list of who&#039;s viewed you resume]]></phrase>
+		<phrase var_name="full_name_s_resumes" added="1552378467"><![CDATA[{full_name}&#039;s resumes]]></phrase>
+		<phrase var_name="full_name_s_resumes_on_site_title" added="1552378467"><![CDATA[{full_name}&#039;s resumes on {site_title}]]></phrase>
+		<phrase var_name="who_s_view_me" added="1552378467"><![CDATA[Who&#039;s view me]]></phrase>
+		<phrase var_name="upgrade_to_premium_account" added="1552378467">Upgrade to Premium Account</phrase>
+		<phrase var_name="your_request_has_been_sent_successfully" added="1552378467">Your request has been sent successfully</phrase>
+		<phrase var_name="no_viewer_is_found" added="1552378467">No viewer is found.</phrase>
+		<phrase var_name="your_profile_has_been_viewed_by_total_view_people_in_this_time_period" added="1552378467">Your Profile has been viewed by {total_view} people in this time period</phrase>
+		<phrase var_name="upgrade_to_premium_account_to_see_all_resume_as_well_as_use_who_s_viewed_me_service" added="1552378467"><![CDATA[Upgrade to Premium Account to see all resume as well as use "who&#039;s viewed me" service]]></phrase>
+		<phrase var_name="your_request_has_been_sent_please_wait_approve_from_administrator" added="1552378467">Your request has been sent. Please wait approve from Administrator!</phrase>
+		<phrase var_name="currently_you_can_only_view_your_friend_resumes" added="1552378467">Currently, you can only view your friend resumes.</phrase>
+		<phrase var_name="my_noted_resumes" added="1552378467">My Noted Resumes</phrase>
+		<phrase var_name="my_favorite_resumes" added="1552378467">My Favorite Resumes</phrase>
+		<phrase var_name="your_note_in_resume_of_full_name" added="1552378467">Your note in resume of {full_name}</phrase>
+		<phrase var_name="click_here" added="1552378467">Click here</phrase>
+		<phrase var_name="to_register_view_all_resume_service_to_view_full_list_of_resume" added="1552378467"><![CDATA[to register "View All Resumes" service to view full list of resume.]]></phrase>
+		<phrase var_name="phone" added="1552378467">Phone number</phrase>
+		<phrase var_name="level_id" added="1552378467">Highest Level</phrase>
+		<phrase var_name="admin_menu_add_custom_field" added="1552378467">Add Custom Field</phrase>
+		<phrase var_name="admin_menu_manage_custom_fields" added="1552378467">Manage Custom Fields</phrase>
+		<phrase var_name="field_details" added="1552378467">Field Details</phrase>
+		<phrase var_name="required" added="1552378467">Required</phrase>
+		<phrase var_name="field_name_amp_values" added="1552378467"><![CDATA[Field Name & Values]]></phrase>
+		<phrase var_name="values" added="1552378467">Values</phrase>
+		<phrase var_name="field_successfully_added" added="1552378467">Field successfully added!</phrase>
+		<phrase var_name="add_a_new_custom_field" added="1552378467">Add a new custom field</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_custom_option" added="1552378467">Are you sure you want to delete this custom option?</phrase>
+		<phrase var_name="select_what_type_of_custom_field_this_is" added="1552378467">Select what type of custom field this is.</phrase>
+		<phrase var_name="set_to_inactive" added="1552378467">Set to Inactive</phrase>
+		<phrase var_name="user_setting_view_all_resume" added="1552378467">View all Resumes?</phrase>
+		<phrase var_name="everyone" added="1552378467">Everyone</phrase>
+		<phrase var_name="registered_members" added="1552378467">Registered Members</phrase>
+		<phrase var_name="specific_user_groups" added="1552378467">Specific User Groups</phrase>
+		<phrase var_name="public_all_resumes_for_all_members_of_this_site" added="1552378467">Public all resumes for all members of this site</phrase>
+		<phrase var_name="group_is_transferred" added="1552378467">Group {title} is transferred</phrase>
+		<phrase var_name="the_field_field_name_is_required" added="1552378467">The field {field_name} is required!</phrase>
+		<phrase var_name="custom_fields" added="1552378467">Custom Fields</phrase>
+		<phrase var_name="was_set_permission_to_view_resume" added="1552378467"><![CDATA[- {group} was set "Permission to view all Resumes".]]></phrase>
+		<phrase var_name="cf_option_1_1" added="1552378467">dfasdf</phrase>
+		<phrase var_name="cf_option_1_2" added="1552378467">34234</phrase>
+		<phrase var_name="cf_option_1_3" added="1552378467">sdfsdf</phrase>
+		<phrase var_name="cf_option_1_4" added="1552378467">5234232</phrase>
+		<phrase var_name="cf_option_4_1" added="1552378467">sdf</phrase>
+		<phrase var_name="cf_option_4_2" added="1552378467">fsdfsdf</phrase>
+		<phrase var_name="cf_option_5_1" added="1552378467">fsdf</phrase>
+		<phrase var_name="cf_option_5_2" added="1552378467">sdfsdf</phrase>
+		<phrase var_name="control_who_can_see_this_resume" added="1552378467">Control who can see this resume.</phrase>
+		<phrase var_name="job_seeker_group" added="1552378467">Job seeker Group</phrase>
+		<phrase var_name="privacy" added="1552378467">Privacy</phrase>
+		<phrase var_name="unable_to_find_resume_file_to_download" added="1552378467">Unable to find resume file to download.</phrase>
+		<phrase var_name="pdf_printer" added="1552378467">PDF Printer</phrase>
+		<phrase var_name="user_setting_limit_maximum_resume_active" added="1552378467">Set up the maximum resumes that are active for each user group.</phrase>
+		<phrase var_name="show_in_profile_info" added="1552378467">Show in Profile Info</phrase>
+		<phrase var_name="resumes_in_profile_has_been_reached_limit" added="1552378467">Resumes in profile have been reached limit.</phrase>
+		<phrase var_name="resume_has_been_published_in_your_profile" added="1552378467">Resume has been published in your profile.</phrase>
+		<phrase var_name="resume_has_been_unpublished_in_your_profile" added="1552378467">Resume has been unpublished in your profile.</phrase>
+		<phrase var_name="display" added="1552378467">Display</phrase>
+		<phrase var_name="zip_postal_code" added="1552378467">ZIP/Postal Code</phrase>
+		<phrase var_name="multi_location" added="1552378467">Multi-Location</phrase>
+		<phrase var_name="country_child" added="1552378467">Country child</phrase>
+		<phrase var_name="configure_to_get_basic_information_from_profile" added="1552378467">Configure to get basic information from profile</phrase>
+		<phrase var_name="true" added="1552378467">True</phrase>
+		<phrase var_name="false" added="1552378467">False</phrase>
+		<phrase var_name="configure_to_display_basic_information_on_resume" added="1552378467">Configure to display basic information on Resume</phrase>
+		<phrase var_name="relation_status" added="1552378467">Relation Status</phrase>
+		<phrase var_name="configure_position_to_put_resume_in_basic_info_block_of_profile_page" added="1552378467">Configure position to put Resume in Basic Info block of Profile page</phrase>
+		<phrase var_name="the_beginning_of_basic_information_block" added="1552378467">The beginning of Basic Information block</phrase>
+		<phrase var_name="the_end_of_basic_information_block" added="1552378467">The end of Basic Information block</phrase>
+		<phrase var_name="previous" added="1552378467">Previous</phrase>
+		<phrase var_name="to_view_full_resume_visit_a_href_link_here_a" added="1552378467"><![CDATA[(to view full resume, visit <a href="{link}">here</a>)]]></phrase>
+		<phrase var_name="authorized_to_work_in" added="1552378467">Authorized to work in</phrase>
+		<phrase var_name="resume_is_not_valid" added="1552378467">Resume is not valid!</phrase>
+		<phrase var_name="public_resumes_of_this_user_has_been_reached_limit" added="1552378467">Public resumes of this user have been reached limit.</phrase>
+		<phrase var_name="public_resumes_have_been_reached_limit" added="1552378467">Public resumes have been reached limit.</phrase>
+		<phrase var_name="state_province" added="1552378467">State/Province</phrase>
+		<phrase var_name="synchronize_with_basic_information_in_profile" added="1552378467">Synchronize with Basic Information in Profile</phrase>
+		<phrase var_name="your_basic_information_will_be_changed_if_you_change_the_below" added="1552378467">(your basic information will be changed if you change the below)</phrase>
+		<phrase var_name="pending_resumes" added="1552378467">Pending Resumes</phrase>
+		<phrase var_name="user_setting_can_approve_resumes" added="1552378467">Can approve resumes?</phrase>
+		<phrase var_name="the_category_you_are_looking_for_cannot_be_found" added="1552378467">The categogy you are looking for cannot be found</phrase>
+		<phrase var_name="admin_menu_user_group_settings" added="1552378467">User Group Settings</phrase>
+		<phrase var_name="&quot;Maximum resumes that are active for each user group&quot; must be greater than or equal to 0" added="1552378467" />
+		<phrase var_name="&quot;Maximum number of categories that a resume can include&quot; must be greater than 0" added="1552378467" />
+		<phrase var_name="&quot;Maximum number of viewers that showed on &quot;Who's viewed me&quot;&quot; must be greater than or equal to 0" added="1552378467" />
+		<phrase var_name="&quot;Maximum resume&quot; must be greater than or equal to 0" added="1552378467" />
+		<phrase var_name="setting_resume_paging_mode" added="1552378467"><![CDATA[<title>Pagination Style</title><info>Select Pagination Style at Search Page.</info>]]></phrase>
+		<phrase var_name="setting_resume_meta_keywords" added="1552378467"><![CDATA[<title>Resume Meta Keywords</title><info>Meta keywords that will be displayed on sections related to the Resume app. To edit this setting, please go to <i>AdminCP > Globalization > Phrases</i>, search and edit phrase have var name is: "seo_resume_meta_keywords" ]]></phrase>
+		<phrase var_name="setting_resume_meta_description" added="1552378467"><![CDATA[<title>Resume Meta Description</title><info>Meta description added to pages related to the Resume app. To edit this setting, please go to <i>AdminCP > Globalization > Phrases</i>, search and edit phrase have var name is: "seo_resume_meta_description" ]]></phrase>
+		<phrase var_name="seo_resume_meta_keywords" added="1552378467">cv, skills, resume, experience, expertise</phrase>
+		<phrase var_name="seo_resume_meta_description" added="1552378467">Create your resume, find a job via social network</phrase>
+		<phrase var_name="this_resume_is_pending_an_admins_approval" added="1552378467">This resume is pending an Admins approval.</phrase>
+		<phrase var_name="provide_a_language_name_name" added="1552378467"><![CDATA[Provide a "{language_name}" name.]]></phrase>
+		<phrase var_name="category_language_name_name_must_be_less_than_limit" added="1552378467"><![CDATA[Category "{language_name}" name must be less than {limit}]]></phrase>
+		<phrase var_name="send_email" added="1552378467">Send Email</phrase>
+		<phrase var_name="resume_select" added="1552378467">Select:</phrase>
+		<phrase var_name="resume_activate" added="1552378467">Activate</phrase>
+		<phrase var_name="resume_deactivate" added="1552378467">Deactivate</phrase>
+		<phrase var_name="controller_resume.add" added="1552378467">Create/Edit Resume</phrase>
+		<phrase var_name="controller_resume.addition" added="1552378467">Edit Resume Additional Information</phrase>
+		<phrase var_name="controller_resume.certification" added="1552378467">Edit Resume Certification</phrase>
+		<phrase var_name="controller_resume.education" added="1552378467">Edit Resume Education</phrase>
+		<phrase var_name="controller_resume.experience" added="1552378467">Edit Resume Experience</phrase>
+		<phrase var_name="controller_resume.index" added="1552378467">Resume Home Page</phrase>
+		<phrase var_name="controller_resume.language" added="1552378467">Edit Resume Language</phrase>
+		<phrase var_name="controller_resume.profile" added="1552378467">User Resume Home Page</phrase>
+		<phrase var_name="controller_resume.publication" added="1552378467">Edit Resume Publication</phrase>
+		<phrase var_name="controller_resume.skill" added="1552378467">Edit Resume Skill</phrase>
+		<phrase var_name="controller_resume.summary" added="1552378467">Edit Resume Summary</phrase>
+		<phrase var_name="controller_resume.view" added="1552378467">Resume Detail</phrase>
+		<phrase var_name="controller_resume.whoviewedme" added="1552378467">Who Viewed Me</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="resume" type="boolean" admin="1" user="0" guest="0" staff="0" module="resume" ordering="1">can_approve_resumes</setting>
+		<setting is_admin_setting="0" module_id="resume" type="boolean" admin="1" user="1" guest="0" staff="1" module="resume" ordering="1">can_create_resumes</setting>
+		<setting is_admin_setting="0" module_id="resume" type="boolean" admin="1" user="1" guest="0" staff="1" module="resume" ordering="5">can_delete_own_resumes</setting>
+		<setting is_admin_setting="0" module_id="resume" type="integer" admin="10" user="3" guest="0" staff="3" module="resume" ordering="9">resume_viewer_numbers</setting>
+		<setting is_admin_setting="0" module_id="resume" type="integer" admin="10" user="5" guest="0" staff="5" module="resume" ordering="8">resume_category_numbers</setting>
+		<setting is_admin_setting="0" module_id="resume" type="boolean" admin="1" user="0" guest="0" staff="0" module="resume" ordering="6">can_delete_other_resumes</setting>
+		<setting is_admin_setting="0" module_id="resume" type="boolean" admin="1" user="1" guest="0" staff="1" module="resume" ordering="7">can_favorite_resumes</setting>
+		<setting is_admin_setting="0" module_id="resume" type="integer" admin="0" user="10" guest="1" staff="20" module="resume" ordering="10">maximum_resumes</setting>
+		<setting is_admin_setting="0" module_id="resume" type="boolean" admin="1" user="0" guest="0" staff="0" module="resume" ordering="4">can_edit_other_resume</setting>
+		<setting is_admin_setting="0" module_id="resume" type="boolean" admin="0" user="1" guest="1" staff="1" module="resume" ordering="0">checking_approval_mode</setting>
+		<setting is_admin_setting="0" module_id="resume" type="boolean" admin="1" user="0" guest="0" staff="0" module="resume" ordering="0">view_all_resume</setting>
+		<setting is_admin_setting="0" module_id="resume" type="integer" admin="10" user="10" guest="10" staff="10" module="resume" ordering="0">limit_maximum_resume_active</setting>
+	</user_group_settings>
+</module>

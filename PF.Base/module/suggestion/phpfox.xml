@@ -1,0 +1,260 @@
+<module>
+	<data>
+		<module_id>suggestion</module_id>
+		<product_id>younet_suggestion4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>0</is_menu>
+		<menu />
+		<phrase_var_name>module_suggestion_recommendation</phrase_var_name>
+		<version>4.02p1</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>https://phpfox.younetco.com/files/2015/11/Recommendation-Suggestion.jpg</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="suggestion" parent_var_name="" m_connection="mobile" var_name="menu_suggestion_537039d412c7e_532c28d5412dd75bf975fb951c740a30" ordering="146" url_value="suggestion" version_id="3.7.5" disallow_access="" module="suggestion" mobile_icon="suggestion.png" />
+		<menu module_id="suggestion" parent_var_name="" m_connection="main" var_name="menu_suggestion_suggestion_fad58de7366495db4650cfefac2fcd61" ordering="149" url_value="suggestion.view_friends" version_id="3.7.7" disallow_access="" module="suggestion" mobile_icon="thumbs-up" />
+	</menus>
+	<settings>
+		<setting group="" module_id="suggestion" is_hidden="0" type="integer" var_name="number_friend_suggestion_header_bar" phrase_var_name="setting_number_friend_suggestion_header_bar" ordering="1" version_id="3.7.5">3</setting>
+		<setting group="" module_id="suggestion" is_hidden="0" type="integer" var_name="number_people_may_you_know_header_bar" phrase_var_name="setting_number_people_may_you_know_header_bar" ordering="1" version_id="3.7.5">3</setting>
+		<setting group="" module_id="suggestion" is_hidden="0" type="integer" var_name="number_item_on_other_block" phrase_var_name="setting_number_item_on_other_block" ordering="1" version_id="3.7.5">2</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="core.index-member" module_id="suggestion" component="events" location="3" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title>Suggest events block</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="core.index-member" module_id="suggestion" component="lessfriends" location="3" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Friends suggestion</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="core.index-member" module_id="suggestion" component="pages" location="3" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>Recent Pages Block</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="suggestion.index" module_id="suggestion" component="advanced-menu" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="suggestion.index" module_id="suggestion" component="people-you-may-know" location="4" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="suggestion.index" module_id="suggestion" component="event-you-may-join" location="4" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Event You May Join</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="suggestion.index" module_id="suggestion" component="page-you-may-like" location="4" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="suggestion.index" module_id="suggestion" component="job-you-may-like" location="4" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="suggestion.reminder" module_id="suggestion" component="advanced-menu" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="suggestion" component="suggestion" m_connection="suggestion" module="suggestion" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="suggestion" component="reminder" m_connection="suggestion.reminder" module="suggestion" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="suggestion" component="index" m_connection="suggestion.index" module="suggestion" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="suggestion" component="events" m_connection="" module="suggestion" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="suggestion" component="pages" m_connection="" module="suggestion" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="suggestion" component="lessfriends" m_connection="" module="suggestion" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="suggestion" component="advanced-menu" m_connection="" module="suggestion" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="suggestion" component="people-you-may-know" m_connection="" module="suggestion" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="suggestion" component="event-you-may-join" m_connection="" module="suggestion" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="suggestion" component="page-you-may-like" m_connection="" module="suggestion" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="suggestion" component="job-you-may-like" m_connection="" module="suggestion" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="suggestion" component="reminder-block" m_connection="" module="suggestion" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_suggestion" added="1540975315">Suggestion and Recommendation</phrase>
+		<phrase var_name="module_suggestion_recommendation" added="1540975315">Suggestion and Recommendation</phrase>
+		<phrase var_name="send_friend_request_to_friend_of" added="1540975315">Send friend request to friend of</phrase>
+		<phrase var_name="suggest_friends_to" added="1540975315">Suggest friends to</phrase>
+		<phrase var_name="continue" added="1540975315">continue</phrase>
+		<phrase var_name="skip" added="1540975315">Skip</phrase>
+		<phrase var_name="you_are_now_friend_with_select_friend" added="1540975315">You are now friends with {{friend_name}}. You want to know friends of {{friend_name}}. Select friends will get a friend request from you</phrase>
+		<phrase var_name="add_friends" added="1540975315">Add friend(s)</phrase>
+		<phrase var_name="message_tip" added="1540975315">Send message to your friends...</phrase>
+		<phrase var_name="do_you_want_to_attach_a_message" added="1540975315">Do you want to attach a message.</phrase>
+		<phrase var_name="is_friend_of" added="1540975315">is friend of</phrase>
+		<phrase var_name="message" added="1540975315">Message</phrase>
+		<phrase var_name="completed_request" added="1540975315">Your request has been sent successfully.</phrase>
+		<phrase var_name="selected" added="1540975315">Selected</phrase>
+		<phrase var_name="would_you_like_to_suggest_friend_to" added="1540975315">Would you like to suggest your friend to</phrase>
+		<phrase var_name="agree" added="1540975315">agree</phrase>
+		<phrase var_name="user_setting_enable_friend_recommend_and_suggestion" added="1540975315">Enable/Disable Friend recommendation and suggestion</phrase>
+		<phrase var_name="select_all" added="1540975315">Select all</phrase>
+		<phrase var_name="you_are_now_friend_with_select_friend_suggestion" added="1540975315">You are now friends with {{friend_name}}. You can suggest {{friend_name}} to know your friends. Please choose your friends to suggest to {{friend_name}}.</phrase>
+		<phrase var_name="send_suggestion" added="1540975315">Send suggestion</phrase>
+		<phrase var_name="his" added="1540975315">his</phrase>
+		<phrase var_name="her" added="1540975315">her</phrase>
+		<phrase var_name="do_not_show_this" added="1540975315">Do not show this again</phrase>
+		<phrase var_name="suggest_friends" added="1540975315">Suggest Friends</phrase>
+		<phrase var_name="user_setting_random_friend_entries" added="1540975315">Total friends random appear in suggestion less friends block</phrase>
+		<phrase var_name="help_your_friends_find_more_friends" added="1540975315">Recommend Friends</phrase>
+		<phrase var_name="friends" added="1540975315">friend(s)</phrase>
+		<phrase var_name="no_friends" added="1540975315">There is no friends who has less friends.</phrase>
+		<phrase var_name="your_friends_have_only_a_few_friends" added="1540975315">Help your friends find friends.</phrase>
+		<phrase var_name="will_get_friends_suggestion_from" added="1540975315">{{friend_name}} will get friend suggestion from you to add your selected friends below as friends</phrase>
+		<phrase var_name="share_friends_with" added="1540975315">shares friends with</phrase>
+		<phrase var_name="you_has_been_sent_suggestion_to" added="1540975315">You has been sent suggestion to {{friend_name}}</phrase>
+		<phrase var_name="enable_system_suggestion" added="1540975315">Display suggestion popup after accepting a friend</phrase>
+		<phrase var_name="enable_system_recommendation" added="1540975315">Display recommendation popup after accepting a friend</phrase>
+		<phrase var_name="has_sent_you_a_friend_suggestion" added="1540975315">has sent you a Friend Suggestion</phrase>
+		<phrase var_name="you_has_sent_friend_a_friend_suggestion" added="1540975315">You has sent {{friend_name}} a friend suggestion.</phrase>
+		<phrase var_name="you_has_just_succeeded_sending_your_friend_suggestion_to_friend" added="1540975315">You have suggested your friends to {{friend_name}} successfully. You maybe know some friends of {{friend_name}}. You can select friends of {{friend_name}} to send Friend Request.</phrase>
+		<phrase var_name="you_might_also_want_to_know_friends_of_friend" added="1540975315">You might also want to know friends of {{friend_name}}</phrase>
+		<phrase var_name="selected_friend_will_get_a_friend_request_from_you" added="1540975315">Selected friend will get a friend request from you</phrase>
+		<phrase var_name="here_are_friend_select_member_to_get_from_you" added="1540975315">Here are friend of {{friend_name}}. You may also want to add them to your friend list. Select members will get a friend request from you.</phrase>
+		<phrase var_name="user_setting_enable_friend_suggestion" added="1540975315"><![CDATA[Enable Recommendation & Suggestion Module]]></phrase>
+		<phrase var_name="user_setting_max_message_chars" added="1540975315">Maxium characters of messages to be allowed in suggestion or recommendation popup</phrase>
+		<phrase var_name="chars_limit" added="1540975315">Message only content {{max_chars}} characters</phrase>
+		<phrase var_name="suggestion" added="1540975315">Suggestions</phrase>
+		<phrase var_name="view_more" added="1540975315">View More</phrase>
+		<phrase var_name="all_suggestions" added="1540975315">All Suggestions</phrase>
+		<phrase var_name="my_suggestions" added="1540975315">My Suggestions</phrase>
+		<phrase var_name="friend_suggestion" added="1540975315"><![CDATA[Friend's Suggestions]]></phrase>
+		<phrase var_name="incoming_suggestions" added="1540975315">Incoming Suggestions</phrase>
+		<phrase var_name="pending_suggestions" added="1540975315">Pending Suggestions</phrase>
+		<phrase var_name="search_suggestions" added="1540975315">Search fullname</phrase>
+		<phrase var_name="by" added="1540975315">By</phrase>
+		<phrase var_name="filter" added="1540975315">Filter</phrase>
+		<phrase var_name="no_suggestion_at_this_time" added="1540975315">No suggestion at this time.</phrase>
+		<phrase var_name="all" added="1540975315">All</phrase>
+		<phrase var_name="you_suggested_friend_to_friend" added="1540975315">You suggested {{friend_name}} to {{friend_friend_name}}</phrase>
+		<phrase var_name="suggestion_friend_has_suggested_you_to_view" added="1540975315">{{friend_name}} has suggested {{you}} to view {{data}}</phrase>
+		<phrase var_name="suggestion_friend_has_suggested_you_to_rate" added="1540975315">{{friend_name}} has suggested {{you}} to rate {{data}}</phrase>
+		<phrase var_name="suggestion_friend_has_suggested_you_to_take" added="1540975315">{{friend_name}} has suggested {{you}} to take {{data}}</phrase>
+		<phrase var_name="suggestion_friend_has_suggested_you_to_listen" added="1540975315">{{friend_name}} has suggested {{you}} to listen {{data}}</phrase>
+		<phrase var_name="you_have_been_suggested_to_friend" added="1540975315">You have been suggested to {{friend_name}}</phrase>
+		<phrase var_name="recommendation" added="1540975315">Recommendation</phrase>
+		<phrase var_name="accept" added="1540975315">Accept</phrase>
+		<phrase var_name="ignore" added="1540975315">Ignore</phrase>
+		<phrase var_name="view" added="1540975315">View</phrase>
+		<phrase var_name="rate" added="1540975315">Rate</phrase>
+		<phrase var_name="take" added="1540975315">Take</phrase>
+		<phrase var_name="join" added="1540975315">Join</phrase>
+		<phrase var_name="listen" added="1540975315">Listen</phrase>
+		<phrase var_name="latest" added="1540975315">latest</phrase>
+		<phrase var_name="photo" added="1540975315">Photo</phrase>
+		<phrase var_name="suggestion_friend_has_suggested_you_to_join" added="1540975315">{{friend_name}} has suggested {{you}} to join {{data}}</phrase>
+		<phrase var_name="you" added="1540975315">you</phrase>
+		<phrase var_name="need_to_select_some_friends_before_we_try_to_send_the_message" added="1540975315">Need to select some friends before we try to send the message.</phrase>
+		<phrase var_name="user_setting_number_of_entries_display_in_blocks" added="1540975315">Number of entries will display in Fewer Friends, Recent Events, Recent Pages blocks</phrase>
+		<phrase var_name="user_setting_display_recent_pages_block" added="1540975315">Display Recent Pages. 
+Member can re-order Recent Pages Block if it is placed on Member Profile Page.</phrase>
+		<phrase var_name="user_setting_display_member_profile_block" added="1540975315">Display Member profile block. 
+Member can re-order Member Profile Block if it is placed on Member Profile Page.</phrase>
+		<phrase var_name="recent_events" added="1540975315">Recent events</phrase>
+		<phrase var_name="created_by" added="1540975315">created by</phrase>
+		<phrase var_name="join_event" added="1540975315">Join event</phrase>
+		<phrase var_name="user_setting_display_fewer_friend_block" added="1540975315"><![CDATA[Display Fewer Friends block.<BR>
+Notice: Member can re-order Fewer Friend Block if it is placed on Member Profile Page.]]></phrase>
+		<phrase var_name="send_a_personal_message_to_user" added="1540975315">Send a personal message to {{user_name}}</phrase>
+		<phrase var_name="you_might_need_user_name_permission_to_join_data" added="1540975315"><![CDATA[You might need {{user_name}}'s permission to join {{data}}]]></phrase>
+		<phrase var_name="recent_pages" added="1540975315">Recent pages</phrase>
+		<phrase var_name="join_pages" added="1540975315">Join pages</phrase>
+		<phrase var_name="no_message" added="1540975315">No messages.</phrase>
+		<phrase var_name="add_friend" added="1540975315">Add friend</phrase>
+		<phrase var_name="user_setting_total_less_friends" added="1540975315">Friend limit number. Members who have number of friends less than limit number will be display in fewer friend block.</phrase>
+		<phrase var_name="suggestion_popup_message_viewing" added="1540975315">Suggest your friends who might be interested in viewing {{name}}. Selected friends will get a {{suggestion_name}} suggestion from you to view {{name}}</phrase>
+		<phrase var_name="suggestion_popup_message_voting" added="1540975315">Suggest your friends who might be interested in voting {{name}}. Selected friends will get a {{suggestion_name}} suggestion from you to vote {{name}}</phrase>
+		<phrase var_name="suggestion_popup_message_taking" added="1540975315">Suggest your friends who might be interested in taking {{name}}. Selected friends will get a {{suggestion_name}} suggestion from you to take {{name}}</phrase>
+		<phrase var_name="suggestion_popup_message_joining" added="1540975315">Suggest your friends who might be interested in joining {{name}}. Selected friends will get an  {{suggestion_name}} suggestion from you to join {{name}}</phrase>
+		<phrase var_name="suggestion_popup_message_listening" added="1540975315">Suggest your friends who might be interested in listening {{name}}. Selected friends will get a {{suggestion_name}} suggestion from you to listen {{name}}</phrase>
+		<phrase var_name="suggestion_popup_message_default" added="1540975315">Suggest your friends who might be interested in viewing {{name}}. Selected friends will get a suggestion from you to view {{name}}</phrase>
+		<phrase var_name="unable_to_send_a_private_message_to_this_user_at_the_moment" added="1540975315">Unable to send a private message to {{user_name}} at the moment.</phrase>
+		<phrase var_name="suggest_to_friends" added="1540975315">Suggest Friends</phrase>
+		<phrase var_name="user_setting_enable_friend_recommend" added="1540975315"><![CDATA[Enable System Recommendation popup.<BR>
+(If you disable System Recommendation popup, it will not be displayed to your member after they accept a friend request)]]></phrase>
+		<phrase var_name="user_setting_display_events_block" added="1540975315"><![CDATA[Display Recent Events block.<BR>
+Notice: Member can re-order Events Block if it is placed on Member Profile Page.]]></phrase>
+		<phrase var_name="privacy_notification_message" added="1540975315">Privacy Notification Message</phrase>
+		<phrase var_name="user_setting_enable_friend_suggestion_popup" added="1540975315"><![CDATA[Enable Friend Suggestion popup.<BR>
+(If you disable Friend Suggestion popup, it will not be displayed to your members right after they accept a friend request)]]></phrase>
+		<phrase var_name="user_setting_enable_suggestion_popup" added="1540975315"><![CDATA[Enable Content Suggestion popup.<BR>
+(If you disable Content Suggestion popup, it will not be displayed to you members right after they create a content)]]></phrase>
+		<phrase var_name="enable_content_suggestion_popup" added="1540975315">Display suggestion popup after creating a content</phrase>
+		<phrase var_name="user_setting_enable_content_suggestion_popup" added="1540975315"><![CDATA[Enable Content Suggestion popup.<BR>
+(If you disable Content Suggestion popup, it will not be displayed to your member right after they create a content)]]></phrase>
+		<phrase var_name="user_setting_support_module" added="1540975315"><![CDATA[Supported modules to be integrated with Recommendation & Suggestion module.<BR>
+Notice: If you want to support other modules, please input the module names into textbox beside and separate them with commas.<BR>
+Supported modules: friend, photo, blog, forum, pages, poll, video, quiz, event, music, marketplace, fevent, document, videochannel, musicsharing, advancedphoto, contest, fundraising, coupon, gettingstarted, jobposting, petition, ultimatevideo, ynsocialstore, ynblog.]]></phrase>
+		<phrase var_name="notification_for_suggestion_system" added="1540975315">Notification for suggestion system</phrase>
+		<phrase var_name="notification_for_recommendation_system" added="1540975315">Notification for recommendation system</phrase>
+		<phrase var_name="recommendation_and_suggestion_settings" added="1540975315">Recommendation and Suggestion settings</phrase>
+		<phrase var_name="save_changes" added="1540975315">Save Changes</phrase>
+		<phrase var_name="me" added="1540975315">me</phrase>
+		<phrase var_name="search_by_email_full_name" added="1540975315">Search by email, full name.</phrase>
+		<phrase var_name="don_t_ask_me_again" added="1540975315"><![CDATA[Don&#039;t show again.]]></phrase>
+		<phrase var_name="suggest_to_friends_2" added="1540975315">Suggest Friends</phrase>
+		<phrase var_name="help_your_friends_find_more_friends_2" added="1540975315">Recommend Friends</phrase>
+		<phrase var_name="setting_support_mobile" added="1540975315"><![CDATA[<title>Popup on Mobile</title><info>Turn off suggestion on mobile.</info>]]></phrase>
+		<phrase var_name="you_has_just_skipped_sending_your_friend_suggestion_to_friend" added="1540975315">You have skipped for suggesting your friends to {{friend_name}}. You maybe know some friends of {{friend_name}}. You can select friends of {{friend_name}} to send Friend Request.</phrase>
+		<phrase var_name="setting_number_friend_suggestion_header_bar" added="1540975315"><![CDATA[<title>Number of item on Friend Suggestions .</title><info>Number of item on Friend Suggestions block in Friend Request at header bar.</info>]]></phrase>
+		<phrase var_name="setting_number_people_may_you_know_header_bar" added="1540975315"><![CDATA[<title>Number of item on People You May Know.</title><info>Number of item on People You May Know in Friend Request at header bar.</info>]]></phrase>
+		<phrase var_name="setting_number_item_on_other_block" added="1540975315"><![CDATA[<title>Number of item on other blocks.</title><info>Number of item on other blocks.</info>]]></phrase>
+		<phrase var_name="mutual_friends" added="1540975315">{total} mutual friends</phrase>
+		<phrase var_name="friend_suggestions" added="1540975315">Friend Suggestions.</phrase>
+		<phrase var_name="people_may_you_know" added="1540975315">People May You Know</phrase>
+		<phrase var_name="friends_suggestions" added="1540975315"><![CDATA[Friends&#039; Suggestions]]></phrase>
+		<phrase var_name="no_new_suggest_friend" added="1540975315">No new suggest friend.</phrase>
+		<phrase var_name="no_recommend_to_you" added="1540975315">No recommend to you.</phrase>
+		<phrase var_name="suggest_to" added="1540975315">Suggest to</phrase>
+		<phrase var_name="suggested_by" added="1540975315">Suggested by</phrase>
+		<phrase var_name="delete" added="1540975315">Delete</phrase>
+		<phrase var_name="suggest_by" added="1540975315">Suggest by</phrase>
+		<phrase var_name="added_by" added="1540975315">Added by</phrase>
+		<phrase var_name="event_you_may_join" added="1540975315">Events you may like</phrase>
+		<phrase var_name="find_friends" added="1540975315">Find Friends</phrase>
+		<phrase var_name="llike" added="1540975315">Like</phrase>
+		<phrase var_name="pages_you_may_like" added="1540975315">Pages You May Like</phrase>
+		<phrase var_name="menu_suggestion_537039d412c7e_532c28d5412dd75bf975fb951c740a30" added="1540975315">Suggestion</phrase>
+		<phrase var_name="suggestion_setting" added="1540975315">Suggestion</phrase>
+		<phrase var_name="jobs_you_may_like" added="1540975315">Job You May Like</phrase>
+		<phrase var_name="apply_job" added="1540975315">Apply Job</phrase>
+		<phrase var_name="like" added="1540975315">Like</phrase>
+		<phrase var_name="added_by_name_on_time" added="1540975315">Added by {name} on {time}</phrase>
+		<phrase var_name="no_new_suggestion_at_this_time" added="1540975315">No new suggestion at this time.</phrase>
+		<phrase var_name="suggested_to" added="1540975315">Suggested to</phrase>
+		<phrase var_name="add_friend_header_block" added="1540975315">Add Friend</phrase>
+		<phrase var_name="mutual_friend" added="1540975315">{total} mutual friend</phrase>
+		<phrase var_name="reminder" added="1540975315">Reminder</phrase>
+		<phrase var_name="suggestion_reminder" added="1540975315">Suggestion Reminder</phrase>
+		<phrase var_name="add_header_block" added="1540975315">Add</phrase>
+		<phrase var_name="multual_friends_not_param" added="1540975315">multual friends</phrase>
+		<phrase var_name="menu_suggestion_suggestion_fad58de7366495db4650cfefac2fcd61" added="1540975315">Suggestion</phrase>
+		<phrase var_name="loading" added="1540975315">Loading</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="suggestion" type="boolean" admin="true" user="true" guest="true" staff="true" module="suggestion" ordering="1">enable_content_suggestion_popup</setting>
+		<setting is_admin_setting="0" module_id="suggestion" type="integer" admin="7" user="7" guest="7" staff="7" module="suggestion" ordering="3">total_less_friends</setting>
+		<setting is_admin_setting="0" module_id="suggestion" type="boolean" admin="1" user="1" guest="1" staff="1" module="suggestion" ordering="2">display_fewer_friend_block</setting>
+		<setting is_admin_setting="0" module_id="suggestion" type="boolean" admin="true" user="true" guest="true" staff="true" module="suggestion" ordering="1">enable_friend_suggestion_popup</setting>
+		<setting is_admin_setting="0" module_id="suggestion" type="boolean" admin="1" user="1" guest="1" staff="1" module="suggestion" ordering="1">enable_friend_recommend</setting>
+		<setting is_admin_setting="0" module_id="suggestion" type="string" admin="friend,photo,blog,forum,pages,poll,video,quiz,event,music,marketplace,fevent,document,videochannel,musicsharing,musicstore,advancedphoto,contest,fundraising,coupon,gettingstarted,jobposting,petition,ultimatevideo,ynsocialstore,ynblog" user="friend,photo,blog,forum,pages,poll,video,quiz,event,music,marketplace,fevent,document,videochannel,musicsharing,musicstore,advancedphoto,contest,fundraising,coupon,gettingstarted,jobposting,petition,ultimatevideo,ynsocialstore,ynblog" guest="friend,photo,blog,forum,pages,poll,video,quiz,event,music,marketplace,fevent,document,videochannel,musicsharing,musicstore,advancedphoto,contest,fundraising,coupon,gettingstarted,jobposting,petition,ultimatevideo,ynsocialstore,ynblog" staff="friend,photo,blog,forum,pages,poll,video,quiz,event,music,marketplace,fevent,document,videochannel,musicsharing,musicstore,advancedphoto,contest,fundraising,coupon,gettingstarted,jobposting,petition,ultimatevideo,ynsocialstore,ynblog" module="suggestion" ordering="3">support_module</setting>
+		<setting is_admin_setting="0" module_id="suggestion" type="boolean" admin="1" user="1" guest="1" staff="1" module="suggestion" ordering="2">display_events_block</setting>
+		<setting is_admin_setting="0" module_id="suggestion" type="integer" admin="7" user="7" guest="7" staff="7" module="suggestion" ordering="3">number_of_entries_display_in_blocks</setting>
+		<setting is_admin_setting="0" module_id="suggestion" type="integer" admin="250" user="250" guest="250" staff="250" module="suggestion" ordering="3">max_message_chars</setting>
+		<setting is_admin_setting="0" module_id="suggestion" type="boolean" admin="1" user="1" guest="1" staff="1" module="suggestion" ordering="2">display_recent_pages_block</setting>
+		<setting is_admin_setting="0" module_id="suggestion" type="boolean" admin="1" user="1" guest="1" staff="1" module="suggestion" ordering="0">enable_friend_suggestion</setting>
+	</user_group_settings>
+</module>

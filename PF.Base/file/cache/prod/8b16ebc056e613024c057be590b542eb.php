@@ -1,0 +1,1 @@
+<a href="https://get.google.com/apptips/apps/#!/all" ><img src="get-app-android-sz.png" alt="Google App"></a>

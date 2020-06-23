@@ -1,0 +1,188 @@
+@charset "utf-8";
+.fanotui
+{
+    z-index: 1000;
+}
+.fanotui .main {
+	/* style for the div with control button*/
+	font-size:15px;
+	width:670px;
+	margin:30px auto;
+	height:80%;
+	padding:15px;
+	font-weight:normal;
+	/*border-radius*/
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	background:white;
+	border:1px solid #E5E5E5;
+	/*box-shadow*/
+	-webkit-box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;
+	-moz-box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;
+	box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;
+}
+
+.fanotui .control {
+	color:#666;
+	width:150px;
+	font:bold 75% arial,sans-serif;
+	text-decoration:none;
+	padding:10px 10px 10px 10px;
+	display:inline-block;
+	text-align:center;
+	/*Background*/
+	background:#f3f3f3;
+	background:-webkit-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+	/*linear-gradient*/
+	background:-webkit-gradient(linear,left top,left bottom,from(from(#F5F5F5)),to(to(#F1F1F1)));
+	/*@@prefixmycss->No equivalent*/
+	background:-webkit-linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+	background:   -moz-linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+	background:     -o-linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+	background:        linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+	border:solid 1px #dcdcdc;
+	/*border-radius*/
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	margin:25px auto;
+}
+
+.fanotui .control:hover {
+	color:#333;
+	border-color:#999;
+	/*box-shadow*/
+	-webkit-box-shadow:0 2px 0 rgba(0,0,0,0.2);
+	-moz-box-shadow:   0 2px 0 rgba(0,0,0,0.2);
+	box-shadow:        0 2px 0 rgba(0,0,0,0.2);
+}
+
+.fanotui .default_icon{
+	background-image:url("@{module-folder}/fanot/static/images/notification.png");
+	background-repeat:no-repeat;
+	display:inline-block;
+	height:16px;
+	width:16px;
+}
+
+.fanotui .image2 {
+	/* icon within the beeper */
+	background-image:url("@{module-folder}/fanot/static/images/like.png");
+	background-repeat:no-repeat;
+	display:inline-block;
+	height:16px;
+	width:16px;
+}
+
+.fanotui {
+	width:230px;
+	left:15px;
+	bottom:30px;
+	position:fixed;
+ 
+	display:none;
+}
+
+.fanotui .fanot_item {
+    background-color: #EEEEEE;
+    margin: 0 0 10px 0;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4);
+}
+
+.fanotui .fanot_bottom {
+	border-bottom:none;
+}
+
+.fanotui .fanot_top {
+	padding-top:0;
+}
+
+.fanotui .fanot_bottom { 
+	padding-bottom:0;
+}
+
+.fanotui .fanot .fanot_x {
+	/* close button */
+	float:right;
+	height:16px;
+	width:16px;
+	text-align: center;
+	line-height: 16px;
+	visibility:hidden;
+	cursor: pointer;
+	position: relative;
+	top: -5px;
+	right: -5px;
+	z-index: 9999;
+}
+
+.fanot {
+	background:#E1E6EE;
+	border-bottom:1px solid #BFCADE;
+	clear:right;
+	color: #999;
+
+	&:hover{
+		color: #337ab7;
+	}
+}
+
+.fanot_content{
+	padding: 10px;
+	border-top: 3px solid #eee;
+	min-height: 70px;
+}
+
+.fanotui a, 
+.fanotui a:hover{
+	cursor:pointer;
+	color:#3B5998;
+	text-decoration:none;
+}
+
+.fanot_selected .fanot_icon{
+	float:left;
+	margin-right:2px;
+}
+
+.fanot_icon .beeper_icon{
+	float:left;
+	font-style: normal;
+	margin-right: 7px;
+	.img-wrapper,.no_image_user{
+		width: 50px;
+		height: 50px;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	img {
+		vertical-align: top;
+	}
+	a{
+		color: #FFF;
+	}
+}
+
+.fanot .fanot_x:hover{
+
+}
+
+.fanot_selected .fanot_x{
+	display:block !important;
+	visibility:visible !important;
+}
+
+.fanot_title{
+	color: #999;
+	position: relative;
+	top: -3px;
+	word-wrap: break-word;
+	word-break: break-word;
+
+	span{
+		color: #337ab7;
+	}
+}

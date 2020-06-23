@@ -1,0 +1,195 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_feedback4</product_id>
+		<is_core>0</is_core>
+		<title>YNC Feedback</title>
+		<description>by YouNetCo</description>
+		<version>4.02p4</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>http://phpfox.younetco.com/</url>
+		<url_version_check></url_version_check>
+		<icon>http://phpfox.younetco.com/files/2015/10/feedback.jpg</icon>
+		<vendor>YouNetCo</vendor>
+	</data>
+	<installs>
+		<install>
+			<version>2.01</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('feedback') . "` (
+  `feedback_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `feedback_category_id` int(10) unsigned DEFAULT '0',
+  `feedback_serverity_id` int(10) unsigned DEFAULT '0',
+  `feedback_status_id` int(10) unsigned DEFAULT '0',
+  `user_id` int(10) unsigned DEFAULT NULL,
+  `title` varchar(255) NOT NULL,
+  `title_url` varchar(255) NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  `privacy` tinyint(4) NOT NULL DEFAULT '1',
+  `is_approved` tinyint(4) NOT NULL DEFAULT '0',
+  `total_vote` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_comment` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_attachment` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_view` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_like` int(10)  unsigned NOT NULL DEFAULT '0',
+  `feedback_description` text NOT NULL,
+  `feedback_status` text,
+  `is_featured` tinyint(2) DEFAULT '0',
+  `full_name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `date_modify` INT( 11 ) DEFAULT NULL,
+  PRIMARY KEY (`feedback_id`),
+  KEY `title_url` (`title_url`)
+) ENGINE=MyISAM  AUTO_INCREMENT=1");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS  `" . Phpfox::getT('feedback_category') . "` (
+  `category_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `name_url` varchar(255) NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  `description` text,
+  PRIMARY KEY (`category_id`) 
+) ENGINE=MyISAM  AUTO_INCREMENT=1");
+
+$this->database()->query("INSERT IGNORE INTO `" .Phpfox::getT('feedback_category') . "`(`category_id`,`name`,`name_url`,`time_stamp`,`description`) values (1,'Idea','idea',1305714690,NULL),
+(2,'Question','question',1305714690,NULL),
+(3,'Problem','problem',1305714690,NULL),
+(4,'Praise','praise',1311405482,NULL) 
+");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('feedback_serverity') . "` (
+  `serverity_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `name_url` varchar(255) NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  `description` text,
+  PRIMARY KEY (`serverity_id`)
+) ENGINE=MyISAM  AUTO_INCREMENT=1");
+
+$this->database()->query("INSERT IGNORE INTO `" .Phpfox::getT('feedback_serverity') . "`(`serverity_id`,`name`,`name_url`,`time_stamp`) values  
+ (1,'Blocker','blocker',1305714690),
+ (2,'Critical','critical',1305714690),
+ (3,'Major','major',1305714690),
+ (4,'Minor','minor',1305714690),
+ (5,'Trivial','trivial',1305714690)
+");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('feedback_status') . "` (
+  `status_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  `description` text,
+  PRIMARY KEY (`status_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1");
+
+$this->database()->query("INSERT IGNORE INTO `" .Phpfox::getT('feedback_status') . "`(`status_id`,`name`,`time_stamp`) values  (1,'New',1305714690),
+ (2,'Opened',1305714690),
+(3,'Answered',1305714690),
+(4,'Closed',1305714690)");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('feedback_picture') . "` (
+  `picture_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `feedback_id` int(10) NOT NULL,
+  `file_name` varchar(100) NOT NULL,
+  `file_size` int(10) NOT NULL,
+  `picture_path` varchar(255) DEFAULT NULL,
+  `thumb_url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`picture_id`)
+) ENGINE=MyISAM  AUTO_INCREMENT=1");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('feedback_settings') . "` (
+  `settings_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `settings_type` varchar(100) NOT NULL,
+  `param_values` int(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`settings_id`),
+  UNIQUE KEY `settings_type` (`settings_type`)
+) ENGINE=MyISAM AUTO_INCREMENT=1");
+
+$this->database()->query("INSERT IGNORE INTO `" .Phpfox::getT('feedback_settings') . "`(`settings_id`,`settings_type`,`param_values`) values (NULL,'is_allowed',0)");
+if (!$this->database()->isField(Phpfox::getT('user_activity'), 'activity_feedback'))
+{
+     $this->database()->query("ALTER TABLE `" . Phpfox::getT('user_activity') . "` ADD COLUMN activity_feedback int(10) DEFAULT 0 ");
+}
+if (!$this->database()->isField(Phpfox::getT('feedback_status'), 'colour'))
+{
+    $this->database()->query("ALTER TABLE `" . Phpfox::getT('feedback_status') . "` ADD COLUMN colour varchar(10) DEFAULT '195B85' ");
+}
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('feedback_vote') . "` (
+  `vote_id` int(11) NOT NULL AUTO_INCREMENT,
+  `feedback_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `params` text NOT NULL,
+  PRIMARY KEY (`vote_id`),
+  KEY `feedback_id` (`feedback_id`,`user_id`)
+) ENGINE=MyISAM  AUTO_INCREMENT=1");]]></install_code>
+			<uninstall_code><![CDATA[$this->database()->query("ALTER  TABLE `" . Phpfox::getT('user_activity') . "` DROP activity_feedback");
+
+$this->database()->query("ALTER  TABLE `" . Phpfox::getT('feedback_status') . "` DROP colour");]]></uninstall_code>
+		</install>
+		<install>
+			<version>3.01</version>
+			<install_code><![CDATA[if (!$this->database()->isField(Phpfox::getT('feedback_serverity'), 'colour'))
+{                         
+    $this->database()->query("ALTER TABLE `" . Phpfox::getT('feedback_serverity') . "` ADD COLUMN colour varchar(10) DEFAULT '195B85' ");
+}
+$this->database()->query("UPDATE `".Phpfox::getT('feedback_serverity')."` SET colour = 'fe0000' WHERE name = 'Blocker'");
+$this->database()->query("UPDATE `".Phpfox::getT('feedback_serverity')."` SET colour = 'f56b00' WHERE name = 'Critical'");
+$this->database()->query("UPDATE `".Phpfox::getT('feedback_serverity')."` SET colour = '999903' WHERE name = 'Trivial'");
+$this->database()->query("UPDATE `".Phpfox::getT('feedback_serverity')."` SET colour = '32cb00' WHERE name = 'Minor'");
+$this->database()->query("UPDATE `".Phpfox::getT('feedback_serverity')."` SET colour = 'fe996b' WHERE name = 'Major'");
+		$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('feedback_track') . "` (
+ `item_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  KEY `item_id` (`item_id`,`user_id`)
+) ENGINE=MyISAM");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.01p12</version>
+			<install_code><![CDATA[if (!$this->database()->isField(Phpfox::getT('feedback_picture'), 'server_id'))
+{
+    $this->database()->query("ALTER TABLE `" . Phpfox::getT('feedback_picture') . "` ADD COLUMN server_id tinyint(3) DEFAULT 0 ");}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.01p15</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('feedback'),'votable'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('feedback') . "`
+	ADD `votable` tinyint(2) DEFAULT 1 ");
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.01p2</version>
+			<install_code><![CDATA[$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('product_dependency') . "`(`product_id`,`type_id`, `check_id`, `dependency_start`) VALUES
+('YouNetFeedBack','product', 'younetcore', '3.01')");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.01p5</version>
+			<install_code><![CDATA[$this->database()->query("UPDATE `" . Phpfox::getT('notification') . "` SET type_id= 'comment_feedfeedback' WHERE type_id='comment_feedback' ");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.01p6</version>
+			<install_code><![CDATA[$this->database()->query("UPDATE `" . Phpfox::getT('notification') . "` SET type_id= 'comment_feedfeedback_tag' WHERE type_id='comment_feedback_tag' ");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'feedback/install/v4.02.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02p4</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'feedback/install/version/v4.02p4.php');]]></install_code>
+			<uninstall_code />
+		</install>
+	</installs>
+	<modules>
+		<module_id>feedback</module_id>
+	</modules>
+</product>

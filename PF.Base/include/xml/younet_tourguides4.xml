@@ -1,0 +1,79 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_tourguides4</product_id>
+		<is_core>0</is_core>
+		<title>YNC Tour Guides</title>
+		<description>by YouNetCo</description>
+		<version>4.02p1</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>https://phpfox.younetco.com/</url>
+		<url_version_check></url_version_check>
+		<icon>https://phpfox.younetco.com/files/2015/11/tour_guide.png</icon>
+		<vendor>YouNetCo</vendor>
+	</data>
+	<installs>
+		<install>
+			<version>3.01</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('tourguides') . "` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `controller` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `is_active` tinyint(4) NOT NULL DEFAULT '1',
+  `is_auto` int(11) NOT NULL DEFAULT '0',
+  `is_member` int(11) NOT NULL DEFAULT '1',
+  `is_complete` int(11) NOT NULL DEFAULT '0',
+  `params` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('tourguides_usersetting') . "` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `no_ask` tinyint(4) NOT NULL DEFAULT '0',
+  `tour_id` INT NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('tourguides_steps') . "` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tourguide_id` int(11) NOT NULL,
+  `step_element` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `delay` int(11) NOT NULL DEFAULT '3000',
+  `bgcolor` varchar(55) NOT NULL,
+  `fcolor` varchar(55) NOT NULL,
+  `position` varchar(255) NOT NULL,
+  `is_active` int(11) NOT NULL DEFAULT '1',
+  `orderring` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.02</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('tourguides_steps'),'single_lang'))
+{
+   $this->database()->query("ALTER TABLE `".Phpfox::getT('tourguides_steps')."` ADD `single_lang` VARCHAR( 75 ) NULL");  
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.02p4</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'tourguides/install/v3.02p4.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'tourguides/install/v4.02.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+	</installs>
+	<modules>
+		<module_id>tourguides</module_id>
+	</modules>
+</product>

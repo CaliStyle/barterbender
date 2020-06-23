@@ -1,0 +1,253 @@
+/*=============================================
+=            CSS FOR BUTTON            =
+=============================================*/
+@btn-radius: 2px; 
+@btn-radius-lg: 2px; 
+@btn-radius-sm: 2px; 
+@btn-radius-xs: 2px; 
+
+.btn,
+.button{
+	border-radius: @btn-radius;
+	.transition(all 300ms ease);
+	.fz-lh(14px);
+	padding: 0px @grid-point+4 !important;
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	border: none !important;
+	.h-5;
+	&.btn-round{
+		border-width: 0;
+	}
+}
+
+.btn-lg{
+	border-radius: @btn-radius-lg;
+	.fz-lh(16px);
+	.h-6;
+}
+
+.btn-sm{
+	border-radius: @btn-radius-sm;
+	.fz-lh(12px);
+	.h-4;
+}
+
+.btn-xs{
+	border-radius: @btn-radius-xs;
+	.fz-lh(12px);
+	.h-3;
+	.px-1 !important;
+}
+
+//Round
+.btn.btn-round{
+	border-radius: 20px;
+	&.btn-sm{
+		border-radius: 16px;
+	}
+	&.btn-lg{
+		border-radius: 24px;
+	}
+	&.btn-xs{
+		border-radius: 24px;
+	}
+}
+
+//Disabled
+.btn.disabled, 
+.button.disabled, 
+.btn.button_not_active, 
+.button.button_not_active, 
+.btn[disabled], 
+.button[disabled], 
+fieldset[disabled] .btn, 
+fieldset[disabled] .button{
+	opacity: 0.35;
+	box-shadow:none;
+	pointer-events:none;
+	border: none;
+}
+
+.btn-default,
+.btn-default.btn-round{
+    color: @gray-darker;
+    background-color: #FFF;
+    border: 1px solid @gray-dark !important;
+
+	&:hover{
+		color: @gray-darker;
+   	 	background-color: @gray-lightest;
+		box-shadow: 0px 4px 12px 0px fade(@gray-light, 30%);
+	}
+
+	&:focus,&:active{
+		background-color:@gray-lighter !important;
+		color: @gray-darker !important;
+		box-shadow: 0px 2px 8px 0px fade(@gray-light, 50%);
+	}
+
+	&.disabled{
+		opacity: 1;	
+		border: none !important;
+		background: @gray-lighter;
+		color: @gray;
+
+		&:hover{
+			border: none !important;
+			background: @gray-lighter;
+			color: @gray;
+		}
+	}
+}
+
+.btn-primary,
+.btn-primary.btn-round{
+    box-shadow: 0px 1px 2px 0px fade(@brand-primary, 0.5);
+	&:focus,&:active{
+		background-color:@brand-primary-darker !important;
+		color: #fff !important;
+		box-shadow: 0px 2px 8px 0px fade(@brand-primary-darker, 40%),inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+	}
+	&.btn-gradient{
+		&:hover{
+			box-shadow: 0px 4px 12px 0px fade(@brand-primary, 50%);
+			&:before{
+				background-image: linear-gradient(-90deg, @brand-primary, @brand-primary-overlay);
+			}
+		}
+	
+	}
+	&.disabled{
+		opacity: 0.5;	
+		border: none !important;
+		background: @brand-primary !important;
+		color: #fff;
+
+		&:hover{
+			border: none !important;
+			background: @brand-primary !important;
+			color: #fff;
+		}
+	}
+}
+.btn-info,
+.btn-info.btn-round{
+    box-shadow: 0px 1px 2px 0px fade(@brand-info, 0.5);
+	&:focus,&:active{
+		background-color:@brand-info-darker !important;
+		color: #fff !important;
+		box-shadow: 0px 2px 8px 0px fade(@brand-info-darker, 40%),inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+	}
+	&.btn-gradient{
+		&:hover{
+			box-shadow: 0px 4px 12px 0px fade(@brand-info, 50%);
+			&:before{
+				background-image: linear-gradient(-90deg, @brand-info, @brand-info-overlay);
+			}
+		}
+	}
+	&.disabled{
+		opacity: 0.5;	
+		border: none !important;
+		background: @brand-info !important;
+		color: #fff;
+
+		&:hover{
+			border: none !important;
+			background: @brand-info !important;
+			color: #fff;
+		}
+	}
+}
+.btn-success,
+.btn-success.btn-round{
+    box-shadow: 0px 1px 2px 0px fade(@brand-success, 0.5);
+	&:focus,&:active{
+		background-color:@brand-success-darker !important;
+		color: #fff !important;
+		box-shadow: 0px 2px 8px 0px fade(@brand-success-darker, 40%),inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+	}
+	&.btn-gradient{
+		&:hover{
+			box-shadow: 0px 4px 12px 0px fade(@brand-success, 50%);
+			&:before{
+			    background-image: linear-gradient(-90deg, @brand-success, @brand-success-overlay);
+			}
+			
+		}
+	}
+	&.disabled{
+		opacity: 0.5;	
+		border: none !important;
+		background: @brand-success !important;
+		color: #fff;
+
+		&:hover{
+			border: none !important;
+			background: @brand-success !important;
+			color: #fff;
+		}
+	}
+}
+.btn-warning,
+.btn-warning.btn-round{
+    box-shadow: 0px 1px 2px 0px fade(@brand-warning, 0.5);
+	&:focus,&:active{
+		background-color:@brand-warning-darker !important;
+		color: #fff !important;
+		box-shadow: 0px 2px 8px 0px fade(@brand-warning-darker, 40%),inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+	}
+	&.btn-gradient{
+		&:hover{
+			box-shadow: 0px 4px 12px 0px fade(@brand-warning, 50%);
+			&:before{
+				background-image: linear-gradient(-90deg, @brand-warning, @brand-warning-overlay);
+			}
+		}
+	}
+	&.disabled{
+		opacity: 0.5;	
+		border: none !important;
+		background: @brand-warning !important;
+		color: #fff;
+
+		&:hover{
+			border: none !important;
+			background: @brand-warning !important;
+			color: #fff;
+		}
+	}
+}
+.btn-danger,
+.btn-danger.btn-round{
+    box-shadow: 0px 1px 2px 0px fade(@brand-danger, 0.5);
+	&:focus,&:active{
+		background-color:@brand-danger-darker !important;
+		color: #fff !important;
+		box-shadow: 0px 2px 8px 0px fade(@brand-danger-darker, 40%),inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+	}
+	&.btn-gradient{
+		&:hover{
+			box-shadow: 0px 4px 12px 0px fade(@brand-danger, 50%);
+			&:before{
+				background-image: linear-gradient(-90deg, @brand-danger, @brand-danger-overlay);
+			}
+		}
+	}
+	&.disabled{
+		opacity: 0.5;	
+		border: none !important;
+		background: @brand-danger !important;
+		color: #fff;
+
+		&:hover{
+			border: none !important;
+			background: @brand-danger !important;
+			color: #fff;
+		}
+	}
+}
+/*=====  End of CSS FOR BUTTON  ======*/
+

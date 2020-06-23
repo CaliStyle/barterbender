@@ -1,0 +1,8 @@
+{
+	"paths": {
+		"0": "PF.Base/theme/frontend/default/style/default/image/feed/coupon.png",
+		"1": "PF.Base/theme/frontend/default/style/default/image/module/coupon.png",
+		"2": "PF.Base/theme/frontend/default/style/default/image/mobile/coupon.png",
+		"3": "PF.Base/module/coupon"
+	}
+}

@@ -1,0 +1,414 @@
+<module>
+	<data>
+		<module_id>foxfeedspro</module_id>
+		<product_id>younet_foxfeedspro4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:8:{s:47:"foxfeedspro.admin_menu_featured_news_management";a:1:{s:3:"url";a:2:{i:0;s:11:"foxfeedspro";i:1;s:13:"featureditems";}}s:38:"foxfeedspro.admin_menu_news_management";a:1:{s:3:"url";a:2:{i:0;s:11:"foxfeedspro";i:1;s:5:"items";}}s:46:"foxfeedspro.admin_menu_rss_provider_management";a:1:{s:3:"url";a:2:{i:0;s:11:"foxfeedspro";i:1;s:5:"feeds";}}s:45:"foxfeedspro.admin_menu_add_a_new_rss_provider";a:1:{s:3:"url";a:2:{i:0;s:11:"foxfeedspro";i:1;s:7:"addfeed";}}s:40:"foxfeedspro.admin_menu_manage_categories";a:1:{s:3:"url";a:2:{i:0;s:11:"foxfeedspro";i:1;s:10:"categories";}}s:35:"foxfeedspro.admin_menu_add_category";a:1:{s:3:"url";a:2:{i:0;s:11:"foxfeedspro";i:1;s:11:"addcategory";}}s:35:"foxfeedspro.admin_menu_pending_news";a:1:{s:3:"url";a:2:{i:0;s:11:"foxfeedspro";i:1;s:13:"approvalitems";}}s:44:"foxfeedspro.admin_menu_pending_rss_providers";a:1:{s:3:"url";a:2:{i:0;s:11:"foxfeedspro";i:1;s:13:"approvalfeeds";}}}]]></menu>
+		<phrase_var_name>module_foxfeedspro</phrase_var_name>
+		<version>4.02p1</version>
+		<author>YouNet Company</author>
+		<vendor>http://phpfox.younetco.com/</vendor>
+		<description>by YouNet Company</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/09/FoxFeeds-Pro.png</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="foxfeedspro" parent_var_name="" m_connection="foxfeedspro" var_name="menu_foxfeedspro_add_new_rss_provider_e27fb9aa8592526fe0c5739b2030539d" ordering="130" url_value="foxfeedspro.addfeed" version_id="3.4.0" disallow_access="" module="foxfeedspro" />
+		<menu module_id="foxfeedspro" parent_var_name="" m_connection="main" var_name="menu_foxfeedspro_foxfeedspro_fad58de7366495db4650cfefac2fcd61" ordering="129" url_value="foxfeedspro" version_id="3.4.0" disallow_access="" module="foxfeedspro" mobile_icon="newspaper-o" />
+		<menu module_id="foxfeedspro" parent_var_name="" m_connection="foxfeedspro" var_name="menu_foxfeedspro_add_category_23d7d51ddfa4242fb96df022402e057a" ordering="142" url_value="foxfeedspro.add" version_id="3.5.0rc1" disallow_access="" module="foxfeedspro" />
+		<menu module_id="foxfeedspro" parent_var_name="" m_connection="foxfeedspro" var_name="add_news" ordering="150" url_value="foxfeedspro.addnews" version_id="4.01p2" disallow_access="" module="foxfeedspro" />
+	</menus>
+	<settings>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="integer" var_name="number_top_news" phrase_var_name="setting_number_top_news" ordering="1" version_id="3.4.0">5</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="integer" var_name="number_feed_display" phrase_var_name="setting_number_feed_display" ordering="0" version_id="3.4.0">5</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="integer" var_name="number_commented_news" phrase_var_name="setting_number_commented_news" ordering="4" version_id="3.4.0">5</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="integer" var_name="number_featured_news" phrase_var_name="setting_number_featured_news" ordering="3" version_id="3.4.0">10</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="integer" var_name="number_recent_news" phrase_var_name="setting_number_recent_news" ordering="2" version_id="3.4.0">6</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="integer" var_name="number_favorite_news" phrase_var_name="setting_number_favorite_news" ordering="5" version_id="3.4.0">5</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="string" var_name="number_day_delete" phrase_var_name="setting_number_day_delete" ordering="7" version_id="3.4.0">14</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="integer" var_name="number_related_news" phrase_var_name="setting_number_related_news" ordering="6" version_id="3.4.0">10</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="boolean" var_name="is_auto_delete" phrase_var_name="setting_is_auto_delete" ordering="8" version_id="3.4.0">1</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="boolean" var_name="is_display_popup" phrase_var_name="setting_is_display_popup" ordering="9" version_id="3.4.0">1</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="boolean" var_name="is_friendly_url" phrase_var_name="setting_is_friendly_url" ordering="10" version_id="3.4.0">1</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="boolean" var_name="is_random_featured" phrase_var_name="setting_is_random_featured" ordering="11" version_id="3.4.0">1</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="boolean" var_name="parse_news_directly" phrase_var_name="setting_parse_news_directly" ordering="13" version_id="3.4.0">1</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="boolean" var_name="is_image_downloaded" phrase_var_name="setting_is_image_downloaded" ordering="12" version_id="3.4.0">1</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="integer" var_name="setting_subcategories_to_show_at_first" phrase_var_name="setting_setting_subcategories_to_show_at_first" ordering="1" version_id="3.4.0">10</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="boolean" var_name="is_using_advanced_category" phrase_var_name="setting_is_using_advanced_category" ordering="1" version_id="3.5.0rc1">1</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="large_string" var_name="foxfeedspro_meta_keywords" phrase_var_name="setting_foxfeedspro_meta_keywords" ordering="1" version_id="3.7.7">foxfeedspro, news, hot, daily</setting>
+		<setting group="" module_id="foxfeedspro" is_hidden="0" type="large_string" var_name="foxfeedsprofoxfeedspro_meta_description" phrase_var_name="setting_foxfeedsprofoxfeedspro_meta_description" ordering="1" version_id="3.7.7">Read up on the latest news on Site Name.</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="foxfeedspro.index" module_id="foxfeedspro" component="top-news" location="3" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>Top News</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.index" module_id="foxfeedspro" component="favorite-news" location="1" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Favorited News</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.index" module_id="foxfeedspro" component="recent-news" location="3" is_active="1" ordering="8" disallow_access="" can_move="0">
+			<title>Recent News</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.index" module_id="foxfeedspro" component="category-news" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.index" module_id="foxfeedspro" component="commented-news" location="1" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Most Discussed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.index" module_id="foxfeedspro" component="featured-news" location="2" is_active="1" ordering="9" disallow_access="" can_move="0">
+			<title>Featured News</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.index" module_id="foxfeedspro" component="my-category-news" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>My Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.index" module_id="foxfeedspro" component="advanced-categories-block" location="1" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.feeddetails" module_id="foxfeedspro" component="my-category-news" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.feeddetails" module_id="foxfeedspro" component="advanced-categories-block" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.newsdetails" module_id="foxfeedspro" component="my-category-news" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>My Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.newsdetails" module_id="foxfeedspro" component="advanced-categories-block" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.profile" module_id="foxfeedspro" component="pic" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title><![CDATA[Profile Photo &amp; Menu]]></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfeedspro.index" module_id="foxfeedspro" component="cloud" location="3" is_active="1" ordering="10" disallow_access="" can_move="0">
+			<title>Cloud Tags</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="foxfeedspro" component="recent-news" m_connection="" module="foxfeedspro" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfeedspro" component="top-news" m_connection="" module="foxfeedspro" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfeedspro" component="favorite-news" m_connection="" module="foxfeedspro" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfeedspro" component="index" m_connection="foxfeedspro.index" module="foxfeedspro" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="foxfeedspro" component="commented-news" m_connection="" module="foxfeedspro" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfeedspro" component="category-news" m_connection="" module="foxfeedspro" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfeedspro" component="featured-news" m_connection="" module="foxfeedspro" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfeedspro" component="my-category-news" m_connection="" module="foxfeedspro" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfeedspro" component="advanced-categories-block" m_connection="" module="foxfeedspro" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfeedspro" component="feeddetails" m_connection="foxfeedspro.feeddetails" module="foxfeedspro" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="foxfeedspro" component="newsdetails" m_connection="foxfeedspro.newsdetails" module="foxfeedspro" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="foxfeedspro" component="profile" m_connection="foxfeedspro.profile" module="foxfeedspro" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="foxfeedspro" component="pic" m_connection="" module="foxfeedspro" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="admin_menu_featured_news_management" added="1541057009">Featured News Management</phrase>
+		<phrase var_name="admin_menu_news_management" added="1541057009">News Management</phrase>
+		<phrase var_name="admin_menu_rss_provider_management" added="1541057009">RSS Provider Management</phrase>
+		<phrase var_name="admin_menu_add_a_new_rss_provider" added="1541057009">Add a New RSS Provider</phrase>
+		<phrase var_name="admin_menu_manage_categories" added="1541057009">Manage Categories</phrase>
+		<phrase var_name="admin_menu_add_category" added="1541057009">Add Category</phrase>
+		<phrase var_name="admin_menu_pending_news" added="1541057009">Pending News</phrase>
+		<phrase var_name="admin_menu_pending_rss_providers" added="1541057009">Pending RSS Providers</phrase>
+		<phrase var_name="module_foxfeedspro" added="1541057009">FoxFeedsPro</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1541057009">Category order successfully updated.</phrase>
+		<phrase var_name="category_successfully_deleted" added="1541057009">Category successfully deleted.</phrase>
+		<phrase var_name="manage_categories" added="1541057009">Manage Categories</phrase>
+		<phrase var_name="are_you_sure" added="1541057009">Are you sure ?</phrase>
+		<phrase var_name="provide_a_category_name" added="1541057009">Provide a category name.</phrase>
+		<phrase var_name="cannot_delete_category_that_currently_has_related_data" added="1541057009">Cannot delete category that currently has related data.</phrase>
+		<phrase var_name="categories" added="1541057009">Categories</phrase>
+		<phrase var_name="delete" added="1541057009">Delete</phrase>
+		<phrase var_name="update_order" added="1541057009">Update Order</phrase>
+		<phrase var_name="no_categories_had_been_added" added="1541057009">No categories had been added.</phrase>
+		<phrase var_name="category_successfully_updated" added="1541057009">Category successfully updated.</phrase>
+		<phrase var_name="category_successfully_added" added="1541057009">Category successfully added.</phrase>
+		<phrase var_name="add_category" added="1541057009">Add Category</phrase>
+		<phrase var_name="select" added="1541057009">Select</phrase>
+		<phrase var_name="please_insert_category_name" added="1541057009">Please insert category name.</phrase>
+		<phrase var_name="category_details" added="1541057009">Category Details</phrase>
+		<phrase var_name="category_name" added="1541057009">Category Name</phrase>
+		<phrase var_name="parent_category" added="1541057009">Parent Category</phrase>
+		<phrase var_name="edit" added="1541057009">Edit</phrase>
+		<phrase var_name="edit_category" added="1541057009">Edit Category</phrase>
+		<phrase var_name="rss_provider_logo_url_is_not_valid" added="1541057009">The RSS Provider Logo URL is not valid.</phrase>
+		<phrase var_name="rss_provider_url_is_not_valid" added="1541057009">The RSS Provider URL is not valid.</phrase>
+		<phrase var_name="the_rss_provider_url_is_not_supported" added="1541057009">The RSS Provider URL is not supported.</phrase>
+		<phrase var_name="the_uploaded_logo_file_size_must_be_greater_than_zero" added="1541057009">The uploaded logo file size must be greater than zero.</phrase>
+		<phrase var_name="the_rss_provider_name_or_rss_provider_url_already_existed" added="1541057009">The RSS Provider Name or RSS Provider URL already existed.</phrase>
+		<phrase var_name="the_number_of_items_peer_rss_provider_is_invalid" added="1541057009">The number of items per RSS Provider is invalid.</phrase>
+		<phrase var_name="name_of_feed_cannot_be_empty" added="1541057009">Name of feed cannot be empty.</phrase>
+		<phrase var_name="feed_url_cannot_be_empty" added="1541057009">Feed URL cannot be empty.</phrase>
+		<phrase var_name="number_of_item_import_cannot_be_empty" added="1541057009">Number of item import cannot be empty.</phrase>
+		<phrase var_name="rss_provider_details" added="1541057009">RSS Provider Details</phrase>
+		<phrase var_name="rss_provider_name" added="1541057009">RSS Provider Name</phrase>
+		<phrase var_name="rss_provider_category" added="1541057009">RSS Provider Category</phrase>
+		<phrase var_name="rss_provider_logo_url" added="1541057009">RSS Provider Logo URL</phrase>
+		<phrase var_name="or_upload_logo_from_your_computer" added="1541057009">Or Upload Logo from Your Computer</phrase>
+		<phrase var_name="rss_provider_url" added="1541057009">RSS Provider URL</phrase>
+		<phrase var_name="language_package" added="1541057009">Language Package</phrase>
+		<phrase var_name="any" added="1541057009">Any</phrase>
+		<phrase var_name="items_per_feed_to_import" added="1541057009">Items Per Feed to Import</phrase>
+		<phrase var_name="display_order" added="1541057009">Display Order</phrase>
+		<phrase var_name="item_per_page" added="1541057009">Items per page</phrase>
+		<phrase var_name="number_of_item_full_description" added="1541057009">Number of Items full description</phrase>
+		<phrase var_name="is_active" added="1541057009">Is Active</phrase>
+		<phrase var_name="display_mini_logo" added="1541057009">Display Mini Logo</phrase>
+		<phrase var_name="display_logo" added="1541057009">Display Logo</phrase>
+		<phrase var_name="select_a_sub_category" added="1541057009">Select a sub category</phrase>
+		<phrase var_name="add_a_new_rss_provider" added="1541057009">Add a New RSS Provider</phrase>
+		<phrase var_name="the_feed_name_was_edited_successfully" added="1541057009"><![CDATA[The "{feed_name}" was edited successfully.]]></phrase>
+		<phrase var_name="setting_number_feed_display" added="1541057009"><![CDATA[<title>Number of RSS Providers displayed on homepage</title><info>Number of RSS Provider will be displayed on News HomePage</info>]]></phrase>
+		<phrase var_name="setting_number_top_news" added="1541057009"><![CDATA[<title>Number of News displayed on Top News</title><info>Number of news will be displayed on "Top News" block.</info>]]></phrase>
+		<phrase var_name="setting_number_recent_news" added="1541057009"><![CDATA[<title>Number of News displayed on Recent News</title><info>Number of news will be displayed on "Recent News" block.</info>]]></phrase>
+		<phrase var_name="setting_number_featured_news" added="1541057009"><![CDATA[<title>Number of News displayed on Featured News</title><info>Number of news will be displayed on "Featured News" block.</info>]]></phrase>
+		<phrase var_name="setting_number_commented_news" added="1541057009"><![CDATA[<title>Number of News displayed on Most Commented News</title><info>Number of News will be displayed on "Most Commented News" block.</info>]]></phrase>
+		<phrase var_name="setting_number_favorite_news" added="1541057009"><![CDATA[<title>Number of News displayed on Favorite News</title><info>Number of news will be displayed on "Favorite News" block.</info>]]></phrase>
+		<phrase var_name="setting_number_related_news" added="1541057009"><![CDATA[<title>Number of related news displayed on detail</title><info>Number of related news will be displayed on News Detail Page.</info>]]></phrase>
+		<phrase var_name="setting_number_day_delete" added="1541057009"><![CDATA[<title>Number of Day To Delete News</title><info>Number of days for the system to automatically delete the news that are older than that period.</info>]]></phrase>
+		<phrase var_name="setting_is_auto_delete" added="1541057009"><![CDATA[<title>Auto Delete News</title><info>Auto delete news that are older than a period of time.</info>]]></phrase>
+		<phrase var_name="setting_is_display_popup" added="1541057009"><![CDATA[<title>View News Detail on Popup</title><info>Allow view news detail on Popup?</info>]]></phrase>
+		<phrase var_name="setting_is_friendly_url" added="1541057009"><![CDATA[<title>Friendly URL</title><info>Enable friendly URL?</info>]]></phrase>
+		<phrase var_name="setting_is_random_featured" added="1541057009"><![CDATA[<title>Add Random Featured News</title><info>Allow to add random featured news ?</info>]]></phrase>
+		<phrase var_name="setting_is_image_downloaded" added="1541057009"><![CDATA[<title>Download The Images of News to Your Server</title><info>Allow to download news thumbnail to your server ?</info>]]></phrase>
+		<phrase var_name="user_setting_can_add_news_items" added="1541057009">Can add news items?</phrase>
+		<phrase var_name="user_setting_can_add_rss_provider" added="1541057009">Can add rss provider?</phrase>
+		<phrase var_name="user_setting_can_get_feed_data" added="1541057009">Can get data from feed?</phrase>
+		<phrase var_name="user_setting_auto_approve_posted_news" added="1541057009">Auto approved news posted by these users?</phrase>
+		<phrase var_name="user_setting_auto_approve_posted_rss_providers" added="1541057009">Auto approved rss provider added by these users?</phrase>
+		<phrase var_name="user_setting_can_post_comments_on_news_items" added="1541057009">Can post comments on news items?</phrase>
+		<phrase var_name="cannot_edit_rss_provider" added="1541057009">Cannot edit RSS provider</phrase>
+		<phrase var_name="the_feed_name_was_created_successfully" added="1541057009"><![CDATA[The "{feed_name}" was created successfully]]></phrase>
+		<phrase var_name="cannot_add_rss_provider" added="1541057009">Cannot add RSS provider</phrase>
+		<phrase var_name="edit_rss_provider" added="1541057009">Edit RSS Provider</phrase>
+		<phrase var_name="all" added="1541057009">All</phrase>
+		<phrase var_name="active" added="1541057009">Active</phrase>
+		<phrase var_name="inactive" added="1541057009">Inactive</phrase>
+		<phrase var_name="pending" added="1541057009">Pending</phrase>
+		<phrase var_name="save_display_order" added="1541057009">Save Display Order</phrase>
+		<phrase var_name="rss_providers_display_order_was_successfully_updated" added="1541057009">RSS providers display order was successfully updated</phrase>
+		<phrase var_name="delete_selected" added="1541057009">Delete Selected</phrase>
+		<phrase var_name="selected_feeds_were_deleted_successfully" added="1541057009">Selected feeds were deleted successfully</phrase>
+		<phrase var_name="search_filter" added="1541057009">Search Filter</phrase>
+		<phrase var_name="status" added="1541057009">Status</phrase>
+		<phrase var_name="headline_logo" added="1541057009">Logo</phrase>
+		<phrase var_name="headline_feed_url" added="1541057009">Feed Url</phrase>
+		<phrase var_name="category" added="1541057009">Category</phrase>
+		<phrase var_name="headline_last_update" added="1541057009">Last Update</phrase>
+		<phrase var_name="order" added="1541057009">Order</phrase>
+		<phrase var_name="headline_options" added="1541057009">Options</phrase>
+		<phrase var_name="headline_status" added="1541057009">Status</phrase>
+		<phrase var_name="rss_link" added="1541057009">RSS link</phrase>
+		<phrase var_name="get_data" added="1541057009">Get Data</phrase>
+		<phrase var_name="declined" added="1541057009">Declined</phrase>
+		<phrase var_name="inactive_active" added="1541057009">Inactive / Active</phrase>
+		<phrase var_name="no_rss_provider_found" added="1541057009">No Rss provider found.</phrase>
+		<phrase var_name="rss_provider_management" added="1541057009">RSS Provider Management</phrase>
+		<phrase var_name="selected_news_items_were_deleted_successfully" added="1541057009">Selected news items were deleted successfully</phrase>
+		<phrase var_name="news_management" added="1541057009">News Management</phrase>
+		<phrase var_name="keywords" added="1541057009">Keywords</phrase>
+		<phrase var_name="headline_featured" added="1541057009">Featured</phrase>
+		<phrase var_name="headline_title" added="1541057009">Title</phrase>
+		<phrase var_name="headline_posted_date" added="1541057009">Posted Date</phrase>
+		<phrase var_name="no_news_item_found" added="1541057009">No news item found.</phrase>
+		<phrase var_name="the_uploaded_image_file_size_must_be_greater_than_zero" added="1541057009">The uploaded image file size must be greater than zero</phrase>
+		<phrase var_name="the_news_name_or_news_url_has_already_existed" added="1541057009">The news name or news url had already existed</phrase>
+		<phrase var_name="news_title_cannot_be_empty" added="1541057009">News title cannot be empty</phrase>
+		<phrase var_name="news_url_cannot_be_empty" added="1541057009">News url cannot be empty</phrase>
+		<phrase var_name="news_description_cannot_be_empty" added="1541057009">News description cannot be empty</phrase>
+		<phrase var_name="edit_news" added="1541057009">Edit News</phrase>
+		<phrase var_name="the_news_news_name_was_edited_successfully" added="1541057009"><![CDATA[The news "{news_name}" was edited successfully]]></phrase>
+		<phrase var_name="cannot_edit_news" added="1541057009">Cannot edit news</phrase>
+		<phrase var_name="author" added="1541057009">Author</phrase>
+		<phrase var_name="title" added="1541057009">Title</phrase>
+		<phrase var_name="news_url_source" added="1541057009">News Url Source</phrase>
+		<phrase var_name="from_rss_provider" added="1541057009">From Rss Provider</phrase>
+		<phrase var_name="upload_news_thumbnail_image" added="1541057009">Upload News Thumbnail Image</phrase>
+		<phrase var_name="headline_description" added="1541057009">Description</phrase>
+		<phrase var_name="is_featured_news" added="1541057009">Is Featured News</phrase>
+		<phrase var_name="featured_news_management" added="1541057009">Featured News Management</phrase>
+		<phrase var_name="pending_news_management" added="1541057009">Pending News Management</phrase>
+		<phrase var_name="approve_selected" added="1541057009">Approved Selected</phrase>
+		<phrase var_name="decline_selected" added="1541057009">Decline Selected</phrase>
+		<phrase var_name="approve" added="1541057009">Approve</phrase>
+		<phrase var_name="the_news_had_been_approved" added="1541057009">The news had been approved.</phrase>
+		<phrase var_name="the_news_had_been_declined" added="1541057009">The news had been declined.</phrase>
+		<phrase var_name="the_rss_provider_had_been_approved" added="1541057009">The RSS provider had been approved.</phrase>
+		<phrase var_name="the_rss_provider_had_been_declined" added="1541057009">The Rss provider had been declined.</phrase>
+		<phrase var_name="pending_rss_provider_management" added="1541057009">Pending RSS Provider Management</phrase>
+		<phrase var_name="menu_foxfeedspro_foxfeedspro_fad58de7366495db4650cfefac2fcd61" added="1541057009">News</phrase>
+		<phrase var_name="latest" added="1541057009">Latest</phrase>
+		<phrase var_name="most_viewed" added="1541057009">Most Viewed</phrase>
+		<phrase var_name="most_discussed" added="1541057009">Most Discussed</phrase>
+		<phrase var_name="most_favorited" added="1541057009">Most Favorited</phrase>
+		<phrase var_name="search_news" added="1541057009">Search News</phrase>
+		<phrase var_name="most_viewed_news" added="1541057009">Most Viewed News</phrase>
+		<phrase var_name="most_commented_news" added="1541057009">Most Commented News</phrase>
+		<phrase var_name="most_favorited_news" added="1541057009">Most Favorited News</phrase>
+		<phrase var_name="latest_news" added="1541057009">Latest News</phrase>
+		<phrase var_name="search_result" added="1541057009">Search Result</phrase>
+		<phrase var_name="news" added="1541057009">News</phrase>
+		<phrase var_name="browse_all" added="1541057009">Browse All</phrase>
+		<phrase var_name="my_rss_providers" added="1541057009">My Rss Provider</phrase>
+		<phrase var_name="my_news" added="1541057009">My News</phrase>
+		<phrase var_name="my_favorited_news" added="1541057009">My Favorited News</phrase>
+		<phrase var_name="posted" added="1541057009">Posted</phrase>
+		<phrase var_name="comments" added="1541057009">Comments</phrase>
+		<phrase var_name="view_all" added="1541057009">View All</phrase>
+		<phrase var_name="favorited_news" added="1541057009">Favorited News</phrase>
+		<phrase var_name="favorites" added="1541057009">Favorites</phrase>
+		<phrase var_name="top_news" added="1541057009">Top News</phrase>
+		<phrase var_name="views" added="1541057009">Views</phrase>
+		<phrase var_name="recent_news" added="1541057009">Recent News</phrase>
+		<phrase var_name="no_news_found" added="1541057009">No news found.</phrase>
+		<phrase var_name="featured_news" added="1541057009">Featured News</phrase>
+		<phrase var_name="menu_foxfeedspro_add_new_rss_provider_e27fb9aa8592526fe0c5739b2030539d" added="1541057009">Add New RSS Provider</phrase>
+		<phrase var_name="add_rss_provider" added="1541057009">Add Rss Provider</phrase>
+		<phrase var_name="add_news" added="1541057009">Add News</phrase>
+		<phrase var_name="page_not_found" added="1541057009">Page not found.</phrase>
+		<phrase var_name="report_this_news" added="1541057009">Report this news</phrase>
+		<phrase var_name="add_to_your_favorite" added="1541057009">Add to your favorite</phrase>
+		<phrase var_name="remove_from_your_favorite" added="1541057009">Remove from your favorite</phrase>
+		<phrase var_name="favorite" added="1541057009">Favorite</phrase>
+		<phrase var_name="unfavorite" added="1541057009">Unfavorite</phrase>
+		<phrase var_name="read_on" added="1541057009">Read On</phrase>
+		<phrase var_name="the_news_had_been_added_to_your_favorite_list" added="1541057009">The news had been added to your favorite list</phrase>
+		<phrase var_name="the_news_had_been_removed_from_your_favorite_list" added="1541057009">The news had been removed from your favorite list</phrase>
+		<phrase var_name="full_name_commented_on_your_news_title" added="1541057009"><![CDATA[{full_name} commented on your news "{title}".]]></phrase>
+		<phrase var_name="full_name_commented_on_your_news_message" added="1541057009"><![CDATA[{full_name} commented on your news "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_gender_news" added="1541057009">{full_name} commented on {gender} news.</phrase>
+		<phrase var_name="full_name_commented_on_news_full_name_s_news" added="1541057009"><![CDATA[{full_name} commented on {news_full_name}&#039;s news.]]></phrase>
+		<phrase var_name="full_name_commented_on_gender_news_message" added="1541057009"><![CDATA[{full_name} commented on {gender} news "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_news_full_name_s_news_message" added="1541057009"><![CDATA[{full_name} commented on {news_full_name}&#039;s news "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="unable_to_post_a_comment_on_this_item_due_to_privacy_settings" added="1541057009">Unable to post a comment on this item due to privacy settings.</phrase>
+		<phrase var_name="user_added_a_new_comment_on_their_own_news" added="1541057009"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on their own <a href="{title_link}">news</a>.]]></phrase>
+		<phrase var_name="user_added_a_new_comment_on_your_news" added="1541057009"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on your <a href="{title_link}">news</a>.]]></phrase>
+		<phrase var_name="user_name_added_a_new_comment_on_item_user_name_news" added="1541057009"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on <a href="{item_user_link}">{item_user_name}&#039;s</a> <a href="{title_link}">news</a>.]]></phrase>
+		<phrase var_name="posted_a_comment_on_gender_news_a_href_link_title_a" added="1541057009"><![CDATA[posted a comment on {gender} news <a href="{link}"> {title}</a>]]></phrase>
+		<phrase var_name="posted_a_comment_on_user_name_s_news_a_href_link_title_a" added="1541057009"><![CDATA[posted a comment on {user_name}&#039;s news "<a href="{link}">{title}</a>"]]></phrase>
+		<phrase var_name="users_commented_on_gender_news_title" added="1541057009"><![CDATA[{users} commented on {gender} news "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_your_news_title" added="1541057009"><![CDATA[{users} commented on your news "{title}"]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_news_news_title" added="1541057009"><![CDATA[<a href="{user_link}">{full_name}</a> wrote a comment on your news "<a href="{news_link}">{news_title}</a>".]]></phrase>
+		<phrase var_name="full_name_liked_your_news_title" added="1541057009"><![CDATA[{full_name} liked your news "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_news_link_title" added="1541057009"><![CDATA[{full_name} liked your news "<a href="{link}">{title}</a>"
+To view this news follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_their_own_a_href_link_blog_a" added="1541057009"><![CDATA[<a href="{user_link}">{full_name}</a> likes {gender} own <a href="{link}">news</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_a_href_view_user_link_view_full_name_a_s_a_href_link_news_a" added="1541057009"><![CDATA[<a href="{user_link}">{full_name}</a> likes <a href="{view_user_link}">{view_full_name}</a>&#039;s <a href="{link}">news</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_your_a_href_link_news_a" added="1541057009"><![CDATA[<a href="{user_link}">{full_name}</a> likes your <a href="{link}">news</a>.]]></phrase>
+		<phrase var_name="users_liked_gender_own_news_title" added="1541057009"><![CDATA[{users} liked {gender} own news "{title}"]]></phrase>
+		<phrase var_name="users_liked_your_news_title" added="1541057009"><![CDATA[{users} liked your news "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_news_title" added="1541057009"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> news "{title}"]]></phrase>
+		<phrase var_name="admin_approved_your_rss_link" added="1541057009"><![CDATA[Admin approved your RSS link "{feed_name}"]]></phrase>
+		<phrase var_name="admin_declined_your_rss_link" added="1541057009"><![CDATA[Admin declined your RSS link "{feed_name}"]]></phrase>
+		<phrase var_name="admin_approved_your_news" added="1541057009"><![CDATA[Admin approved your news "{news_title}"]]></phrase>
+		<phrase var_name="admin_declined_your_news" added="1541057009"><![CDATA[Admin declined your news "{news_title}"]]></phrase>
+		<phrase var_name="cannot_find_the_related_rss_provider" added="1541057009">Cannot find the related rss provider.</phrase>
+		<phrase var_name="the_news_url_is_not_valid" added="1541057009">The news url is not valid.</phrase>
+		<phrase var_name="the_news_news_name_was_created_successfully" added="1541057009"><![CDATA[The news "{news_name}" was created successfully.]]></phrase>
+		<phrase var_name="cannot_add_news" added="1541057009">Cannot add news</phrase>
+		<phrase var_name="you_must_have_a_least_one_rss_provider_before_you_can_add_a_news" added="1541057009">You must have at least one rss provider before you can add a news.</phrase>
+		<phrase var_name="cannot_find_the_related_news" added="1541057009">Cannot find the related news.</phrase>
+		<phrase var_name="user_setting_can_view_news" added="1541057009">Can view news items?</phrase>
+		<phrase var_name="subscribe" added="1541057009">Subscribe</phrase>
+		<phrase var_name="unsubscribe" added="1541057009">Unsubscribe</phrase>
+		<phrase var_name="subscribe_this_feed" added="1541057009">Subscribe this feed</phrase>
+		<phrase var_name="unsubscribe_this_feed" added="1541057009">Unsubscribe this feed</phrase>
+		<phrase var_name="you_had_subscribed_this_feed" added="1541057009">You had subscribed this feed.</phrase>
+		<phrase var_name="you_had_unsubscribed_this_feed" added="1541057009">You had unsubscribed this feed.</phrase>
+		<phrase var_name="some_latest_news_had_been_updated_on_the_feed_feed_name" added="1541057009"><![CDATA[Some latest news had been updated on the feed "{feed_name}"]]></phrase>
+		<phrase var_name="setting_parse_news_directly" added="1541057009"><![CDATA[<title>Parse News Directly On Site</title><info>If set YES, the module will parse news using the parser integrated in the module. If not the module will parse news through YouNet news service server. (Recommend to set NO if your site is slow and cannot execute large resource).</info>]]></phrase>
+		<phrase var_name="setting_parse_full_news_content" added="1541057009"><![CDATA[<title>Parse Full News Content</title><info>If set TRUE, the parser will get full news content.</info>]]></phrase>
+		<phrase var_name="setting_display_full_news_content" added="1541057009"><![CDATA[<title>Display Full News Content</title><info>If set FALSE, the plugin will display the news description instead of it &#039;s full content.</info>]]></phrase>
+		<phrase var_name="headline_content" added="1541057009">Content</phrase>
+		<phrase var_name="posted_a_news" added="1541057009">posted a news</phrase>
+		<phrase var_name="original_link" added="1541057009">Original link</phrase>
+		<phrase var_name="rss_feed_parse" added="1541057009">RSS Feed Parse</phrase>
+		<phrase var_name="rss_feed_only" added="1541057009">RSS Feed Only</phrase>
+		<phrase var_name="get_news_content_0_to_display_whole_news_other_numbers_to_display_limited_characters" added="1541057009">Get News Content (0 to display whole News, other numbers to display limited characters)</phrase>
+		<phrase var_name="parse_rss_feed_to_get_full_content" added="1541057009">Parse RSS Feed to get full content</phrase>
+		<phrase var_name="setting_setting_subcategories_to_show_at_first" added="1541057009"><![CDATA[<title>How many subcategories to show at first</title><info>This setting tells how many subcategories are to be shown at first. If the list of subcategories is longer than this value the extra ones will be hidden and a "View More" option will be shown instead, allowing the user to display the hidden subcategories. 
+
+a "View Less" option will be available to provide the full "accordion" effect. 
+
+If you set it to zero ("0" without quotes) it will hide every subcategory and a plus sign will show next to the category name, clicking the plus sign will show that category&#039;s subcategories.</info>]]></phrase>
+		<phrase var_name="menu_foxfeedspro_add_category_23d7d51ddfa4242fb96df022402e057a" added="1541057009">Add Category</phrase>
+		<phrase var_name="submit" added="1541057009">Submit</phrase>
+		<phrase var_name="my_categories" added="1541057009">My Categories</phrase>
+		<phrase var_name="add_to_your_category" added="1541057009">Add To Your Category</phrase>
+		<phrase var_name="setting_is_using_advanced_category" added="1541057009"><![CDATA[<title>Using advanced category feature</title><info>When this setting is true, an advanced category system will be applied for your site. All old categories are kept intact. There will be changed in category layout; moreover, each user can have their own category.</info>]]></phrase>
+		<phrase var_name="user_setting_approve_feed_before_display" added="1541057009">Should feeds added by this user group be approved before they are displayed publicly?</phrase>
+		<phrase var_name="decline" added="1541057009">Decline</phrase>
+		<phrase var_name="actions" added="1541057009">Actions</phrase>
+		<phrase var_name="approved" added="1541057009">Approved</phrase>
+		<phrase var_name="user_setting_can_edit_approved_feed" added="1541057009">Can an user edit his own feed after it is approved?</phrase>
+		<phrase var_name="user_setting_can_delete_approved_feed" added="1541057009">Can a user delete a feed after it is approved?</phrase>
+		<phrase var_name="view_more" added="1541057009">View More</phrase>
+		<phrase var_name="comment_s" added="1541057009">Comment(s)</phrase>
+		<phrase var_name="user_setting_can_add_rss_provider_in_profile" added="1541057009">Can add RSS provider in profile?</phrase>
+		<phrase var_name="manage_rss_provider" added="1541057009">Manage RSS Provider</phrase>
+		<phrase var_name="rss" added="1541057009">RSS</phrase>
+		<phrase var_name="add_rss_provider_uppercase" added="1541057009">Add RSS Provider</phrase>
+		<phrase var_name="delete_news_after_every_x_days" added="1541057009">Delete news after every (X) days</phrase>
+		<phrase var_name="day_s" added="1541057009">day(s)</phrase>
+		<phrase var_name="the_number_of_delete_news_after_every_x_days_is_invalid" added="1541057009"><![CDATA[The number of "Delete news after every (X) days" is invalid.]]></phrase>
+		<phrase var_name="posted_a_new_entry" added="1541057009">posted a new entry</phrase>
+		<phrase var_name="setting_foxfeedspro_meta_keywords" added="1541057009"><![CDATA[<title>Foxfeedspro Meta Keywords</title><info>Meta keywords that will be displayed on sections related to the Foxfeedspro module.</info>]]></phrase>
+		<phrase var_name="setting_foxfeedsprofoxfeedspro_meta_description" added="1541057009"><![CDATA[<title>Foxfeedspro Meta Description</title><info>Meta description added to pages related to the Foxfeedspro module.</info>]]></phrase>
+		<phrase var_name="you_cannot_edit_item_of_other_user" added="1541057009">You cannot edit item of other user.</phrase>
+		<phrase var_name="tags" added="1541057009">Tags</phrase>
+		<phrase var_name="separate_multiple_topics_with_commas" added="1541057009">Separate multiple topics with commas.</phrase>
+		<phrase var_name="cloud_tags" added="1541057009">Cloud Tags</phrase>
+		<phrase var_name="the_uploaded_favicon_file_size_must_be_greater_than_zero" added="1541057009">The uploaded favicon file size must be greater than zero.</phrase>
+		<phrase var_name="current_favicon" added="1541057009">Current Favicon</phrase>
+		<phrase var_name="favicon" added="1541057009">Favicon</phrase>
+		<phrase var_name="setting_public_id_addthis_news" added="1541057009"><![CDATA[<title>Addthis Public Id</title><info>Addthis Public Id</info>]]></phrase>
+		<phrase var_name="get_data_of_feed_successfully" added="1541057009">Get data of {feed} successfully!</phrase>
+		<phrase var_name="add_provider_to_category_successfully" added="1541057009">Add provider to category Successfully!</phrase>
+		<phrase var_name="posted_few_entries" added="1541057009"><![CDATA[posted {total} new entries in <a href="{rssLink}">{rssTitle}</a>]]></phrase>
+		<phrase var_name="multiple_view" added="1541057009">Views</phrase>
+		<phrase var_name="one_view" added="1541057009">View</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="foxfeedspro" type="boolean" admin="1" user="1" guest="0" staff="1" module="foxfeedspro" ordering="1">can_add_rss_provider</setting>
+		<setting is_admin_setting="0" module_id="foxfeedspro" type="boolean" admin="1" user="1" guest="0" staff="1" module="foxfeedspro" ordering="0">can_add_news_items</setting>
+		<setting is_admin_setting="0" module_id="foxfeedspro" type="boolean" admin="1" user="0" guest="0" staff="0" module="foxfeedspro" ordering="3">auto_approve_posted_news</setting>
+		<setting is_admin_setting="0" module_id="foxfeedspro" type="boolean" admin="1" user="1" guest="0" staff="1" module="foxfeedspro" ordering="2">can_get_feed_data</setting>
+		<setting is_admin_setting="0" module_id="foxfeedspro" type="boolean" admin="1" user="1" guest="0" staff="1" module="foxfeedspro" ordering="5">can_post_comments_on_news_items</setting>
+		<setting is_admin_setting="0" module_id="foxfeedspro" type="boolean" admin="1" user="0" guest="0" staff="0" module="foxfeedspro" ordering="4">auto_approve_posted_rss_providers</setting>
+		<setting is_admin_setting="0" module_id="foxfeedspro" type="boolean" admin="1" user="1" guest="0" staff="1" module="foxfeedspro" ordering="6">can_view_news</setting>
+		<setting is_admin_setting="0" module_id="foxfeedspro" type="boolean" admin="true" user="true" guest="false" staff="false" module="foxfeedspro" ordering="0">can_delete_approved_feed</setting>
+		<setting is_admin_setting="0" module_id="foxfeedspro" type="boolean" admin="1" user="0" guest="0" staff="0" module="foxfeedspro" ordering="0">can_add_rss_provider_in_profile</setting>
+	</user_group_settings>
+</module>

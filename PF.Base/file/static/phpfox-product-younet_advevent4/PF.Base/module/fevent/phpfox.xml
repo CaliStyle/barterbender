@@ -1,0 +1,1055 @@
+<module>
+	<data>
+		<module_id>fevent</module_id>
+		<product_id>younet_advevent4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:9:{s:37:"fevent.admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:19:"user-group-settings";}}s:30:"fevent.admin_menu_add_category";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:3:"add";}}s:35:"fevent.admin_menu_manage_categories";a:1:{s:3:"url";a:1:{i:0;s:6:"fevent";}}s:34:"fevent.admin_menu_add_custom_field";a:1:{s:3:"url";a:3:{i:0;s:6:"fevent";i:1;s:6:"custom";i:2;s:3:"add";}}s:38:"fevent.admin_menu_manage_custom_fields";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:6:"custom";}}s:33:"fevent.admin_menu_manage_location";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:8:"location";}}s:37:"fevent.admin_menu_google_api_settings";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:11:"settinggapi";}}s:34:"fevent.admin_menu_migration_events";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:10:"migrations";}}s:31:"fevent.admin_menu_manage_events";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:12:"manageevents";}}}a:9:{s:37:"fevent.admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:19:"user-group-settings";}}s:30:"fevent.admin_menu_add_category";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:3:"add";}}s:35:"fevent.admin_menu_manage_categories";a:1:{s:3:"url";a:1:{i:0;s:6:"fevent";}}s:34:"fevent.admin_menu_add_custom_field";a:1:{s:3:"url";a:3:{i:0;s:6:"fevent";i:1;s:6:"custom";i:2;s:3:"add";}}s:38:"fevent.admin_menu_manage_custom_fields";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:6:"custom";}}s:33:"fevent.admin_menu_manage_location";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:8:"location";}}s:37:"fevent.admin_menu_google_api_settings";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:11:"settinggapi";}}s:34:"fevent.admin_menu_migration_events";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:10:"migrations";}}s:31:"fevent.admin_menu_manage_events";a:1:{s:3:"url";a:2:{i:0;s:6:"fevent";i:1;s:12:"manageevents";}}}]]></menu>
+		<phrase_var_name>module_fevent</phrase_var_name>
+		<version>4.02p2</version>
+		<author>YouNetCo</author>
+		<vendor>http://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>https://phpfox.younetco.com/files/2015/12/adv_event.png</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="fevent" parent_var_name="" m_connection="main" var_name="menu_fevent_events" ordering="113" url_value="fevent" version_id="3.0.0" disallow_access="" module="fevent" mobile_icon="calendar-o" />
+		<menu module_id="fevent" parent_var_name="" m_connection="fevent.index" var_name="menu_fevent_add_new_event" ordering="114" url_value="fevent.add" version_id="3.0.0" disallow_access="" module="fevent" />
+		<menu module_id="fevent" parent_var_name="" m_connection="mobile" var_name="menu_event" ordering="29" url_value="fevent" version_id="2.0.0alpha1" disallow_access="" module="fevent" mobile_icon="small_events.png" />
+		<menu module_id="fevent" parent_var_name="" m_connection="fevent.pagecalendar" var_name="menu_fevent_add_new_event" ordering="150" url_value="fevent.add" version_id="3.7.7" disallow_access="" module="fevent" />
+	</menus>
+	<settings>
+		<setting group="" module_id="fevent" is_hidden="0" type="drop" var_name="fevent_paging_mode" phrase_var_name="setting_fevent_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:8:"loadmore";s:6:"values";a:3:{i:0;s:8:"loadmore";i:1;s:9:"next_prev";i:2;s:10:"pagination";}}]]></setting>
+		<setting group="seo" module_id="fevent" is_hidden="0" type="" var_name="fevent_meta_keywords" phrase_var_name="setting_fevent_meta_keywords" ordering="1" version_id="4.6.0"><![CDATA[{_p var='seo_fevent_meta_keywords'}]]></setting>
+		<setting group="seo" module_id="fevent" is_hidden="0" type="" var_name="fevent_meta_description" phrase_var_name="setting_fevent_meta_description" ordering="1" version_id="4.6.0"><![CDATA[{_p var='seo_fevent_meta_description'}]]></setting>
+		<setting group="" module_id="fevent" is_hidden="0" type="boolean" var_name="fevent_display_event_created_in_group" phrase_var_name="setting_fevent_display_event_created_in_group" ordering="1" version_id="4.6.0">0</setting>
+		<setting group="" module_id="fevent" is_hidden="0" type="boolean" var_name="fevent_display_event_created_in_page" phrase_var_name="setting_fevent_display_event_created_in_page" ordering="1" version_id="4.6.0">0</setting>
+		<setting group="" module_id="fevent" is_hidden="0" type="string" var_name="fevent_browse_time_stamp" phrase_var_name="setting_fevent_browse_time_stamp" ordering="2" version_id="3.0.0">F j, Y</setting>
+		<setting group="" module_id="fevent" is_hidden="0" type="string" var_name="fevent_basic_information_time_short" phrase_var_name="setting_fevent_basic_information_time_short" ordering="4" version_id="3.0.0">g:i a</setting>
+		<setting group="" module_id="fevent" is_hidden="0" type="integer" var_name="fevent_number_of_event_upcoming_ongoing_block_home_page" phrase_var_name="setting_fevent_number_of_event_upcoming_ongoing_block_home_page" ordering="1" version_id="3.5.0rc1">6</setting>
+		<setting group="" module_id="fevent" is_hidden="0" type="string" var_name="fevent_basic_information_time" phrase_var_name="setting_fevent_basic_information_time" ordering="3" version_id="3.0.0">l, F j, Y g:i a</setting>
+		<setting group="" module_id="fevent" is_hidden="0" type="integer" var_name="fevent_max_instance_repeat_event" phrase_var_name="setting_fevent_max_instance_repeat_event" ordering="1" version_id="3.7.7">50</setting>
+		<setting group="" module_id="fevent" is_hidden="0" type="integer" var_name="subscribe_within_day" phrase_var_name="setting_subscribe_within_day" ordering="1" version_id="3.7.7">10</setting>
+		<setting group="" module_id="fevent" is_hidden="0" type="boolean" var_name="allow_change_date_recurrent_event" phrase_var_name="setting_allow_change_date_recurrent_event" ordering="1" version_id="3.8.0">1</setting>
+		<setting group="" module_id="fevent" is_hidden="0" type="boolean" var_name="allow_change_time_recurrent_event" phrase_var_name="setting_allow_change_time_recurrent_event" ordering="1" version_id="3.8.0">1</setting>
+		<setting group="" module_id="fevent" is_hidden="0" type="drop" var_name="fevent_start_week" phrase_var_name="setting_fevent_start_week" ordering="1" version_id="3.8.0"><![CDATA[a:2:{s:7:"default";s:6:"sunday";s:6:"values";a:7:{i:0;s:6:"sunday";i:1;s:9:"wednesday";i:2;s:6:"monday";i:3;s:7:"tuesday";i:4;s:8:"thursday";i:5;s:6:"friday";i:6;s:8:"saturday";}}]]></setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="past" location="3" is_active="1" ordering="8" disallow_access="" can_move="0">
+			<title>Past events</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="calendar" location="3" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>Calendar</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="invite" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Event Invites</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.profile" module_id="fevent" component="sponsored" location="3" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Sponsored</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.profile" module_id="fevent" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title><![CDATA[Profile Photo &amp; Menu]]></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="sponsored" location="3" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Sponsored</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="category" location="1" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Category</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.view" module_id="fevent" component="map" location="1" is_active="1" ordering="8" disallow_access="" can_move="0">
+			<title>Map</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.view" module_id="fevent" component="display" location="4" is_active="0" ordering="2" disallow_access="" can_move="0">
+			<title>Activity Feed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.view" module_id="fevent" component="info" location="4" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Event Information</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="mostdiscussed" location="3" is_active="1" ordering="12" disallow_access="" can_move="0">
+			<title>Most Discussed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="mostviewed" location="3" is_active="1" ordering="11" disallow_access="" can_move="0">
+			<title>Most Viewed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="birthday" location="3" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Birthdays</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="mostliked" location="3" is_active="1" ordering="10" disallow_access="" can_move="0">
+			<title>Most Liked</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.view" module_id="fevent" component="attending" location="1" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title>Attending</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.view" module_id="fevent" component="category" location="1" is_active="1" ordering="10" disallow_access="" can_move="0">
+			<title>Category</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.pagecalendar" module_id="fevent" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Category</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.view" module_id="fevent" component="status-time-event" location="1" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Status Time Event</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="subscribe-event" location="1" is_active="1" ordering="14" disallow_access="" can_move="0">
+			<title>Subscribe Events</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="homepage.featured" location="4" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Featured</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="homepage.upcoming" location="4" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Upcoming</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.index" module_id="fevent" component="homepage.ongoing" location="4" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Ongoing</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.view" module_id="fevent" component="maybeattending" location="1" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>Maybe Attending</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.view" module_id="fevent" component="awaitingreply" location="1" is_active="1" ordering="8" disallow_access="" can_move="0">
+			<title>Awaiting Reply</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.view" module_id="fevent" component="notattending" location="1" is_active="1" ordering="9" disallow_access="" can_move="0">
+			<title>Not Attending</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="fevent" component="image" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="view" m_connection="fevent.view" module="fevent" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="fevent" component="index" m_connection="fevent.index" module="fevent" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="fevent" component="rsvp" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="profile" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="category" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="info" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="parent" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="filter" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="sponsored" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="list" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="attending" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="map" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="map" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="invite" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="profile" m_connection="fevent.profile" module="fevent" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="fevent" component="calendar" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="birthday" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="mostdiscussed" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="mostviewed" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="mostliked" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="menu" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="display" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="past" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="pic" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="extramenuinview" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="pagecalendar" m_connection="fevent.pagecalendar" module="fevent" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="fevent" component="status-time-event" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="subscribe-event" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="add" m_connection="fevent.add" module="fevent" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="fevent" component="managemenus" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="applyforrepeatevent" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="homepage.featured" m_connection="fevent.index" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="homepage.ongoing" m_connection="fevent.index" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="homepage.upcoming" m_connection="fevent.index" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="maybeattending" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="awaitingreply" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fevent" component="notattending" m_connection="" module="fevent" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_fevent" added="1540527339">Advanced Event</phrase>
+		<phrase var_name="translate_module_fevent" added="1540527339">Advanced Event</phrase>
+		<phrase var_name="advanced_events" added="1540527339">Advanced Events</phrase>
+		<phrase var_name="admin_menu_add_category" added="1540527339">Add Category</phrase>
+		<phrase var_name="admin_menu_manage_categories" added="1540527339">Manage Categories</phrase>
+		<phrase var_name="menu_event" added="1540527339">Events</phrase>
+		<phrase var_name="menu_fevent_events" added="1540527339">Adv. Events</phrase>
+		<phrase var_name="menu_create_new_event" added="1540527339">Create New Event</phrase>
+		<phrase var_name="rss_group_name_2" added="1540527339">Events</phrase>
+		<phrase var_name="rss_title_3" added="1540527339">Latest Events</phrase>
+		<phrase var_name="rss_description_3" added="1540527339">List of all the upcoming events.</phrase>
+		<phrase var_name="done" added="1540527339">Done!</phrase>
+		<phrase var_name="not_attending" added="1540527339">Not Attending</phrase>
+		<phrase var_name="maybe" added="1540527339">Maybe</phrase>
+		<phrase var_name="attending" added="1540527339">Attending</phrase>
+		<phrase var_name="successfully_deleted_event" added="1540527339">Successfully deleted event.</phrase>
+		<phrase var_name="you_are_unable_to_send_out_any_mass_emails_at_the_moment" added="1540527339">You are unable to send out any mass emails at the moment.</phrase>
+		<phrase var_name="fill_in_both_a_subject_and_text_for_your_mass_email" added="1540527339">Fill in both a subject and text for your mass email.</phrase>
+		<phrase var_name="you_are_unable_to_send_a_mass_email_for_this_event" added="1540527339">You are unable to send a mass email for this event.</phrase>
+		<phrase var_name="email_progress_page_total" added="1540527339">Email Progress: {page}/{total}</phrase>
+		<phrase var_name="categories" added="1540527339">Categories</phrase>
+		<phrase var_name="sub_categories" added="1540527339">Sub-Categories</phrase>
+		<phrase var_name="browse_filter" added="1540527339">Browse Filter</phrase>
+		<phrase var_name="basic_information" added="1540527339">Basic Information</phrase>
+		<phrase var_name="event_guests" added="1540527339">Event Guests</phrase>
+		<phrase var_name="can_t_make_it" added="1540527339"><![CDATA[Can't Make It]]></phrase>
+		<phrase var_name="not_responded" added="1540527339">Not Responded</phrase>
+		<phrase var_name="upcoming_events" added="1540527339">Upcoming Events</phrase>
+		<phrase var_name="events_i_m_attending" added="1540527339"><![CDATA[Events I'm Attending]]></phrase>
+		<phrase var_name="your_rsvp" added="1540527339">Your RSVP</phrase>
+		<phrase var_name="category_successfully_updated" added="1540527339">Category successfully updated.</phrase>
+		<phrase var_name="category_successfully_added" added="1540527339">Category successfully added.</phrase>
+		<phrase var_name="edit_a_category" added="1540527339">Edit a Category</phrase>
+		<phrase var_name="create_a_new_category" added="1540527339">Create a New Category</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1540527339">Category order successfully updated.</phrase>
+		<phrase var_name="category_successfully_deleted" added="1540527339">Category successfully deleted.</phrase>
+		<phrase var_name="manage_categories" added="1540527339">Manage Categories</phrase>
+		<phrase var_name="provide_a_name_for_this_event" added="1540527339">Provide a name for this event.</phrase>
+		<phrase var_name="provide_a_location_for_this_event" added="1540527339">Provide a location for this event.</phrase>
+		<phrase var_name="provide_a_country_location_for_this_event" added="1540527339">Provide a country location for this event.</phrase>
+		<phrase var_name="provide_a_host_for_this_event" added="1540527339">Provide a host for this event.</phrase>
+		<phrase var_name="successfully_invited_guests_to_this_event" added="1540527339">Successfully invited guests to this event.</phrase>
+		<phrase var_name="successfully_customized_this_event" added="1540527339">Successfully customized this event.</phrase>
+		<phrase var_name="event_successfully_updated" added="1540527339">Event successfully updated.</phrase>
+		<phrase var_name="event_successfully_added" added="1540527339">Event successfully added.</phrase>
+		<phrase var_name="note_that_events_must_first_be_approved_by_a_site_admin_before_it_is_displayed_publicly" added="1540527339">Note that events must first be approved by a site admin before it is displayed publicly.</phrase>
+		<phrase var_name="edit_event" added="1540527339">Edit Event</phrase>
+		<phrase var_name="create_new_event" added="1540527339">Create New Event</phrase>
+		<phrase var_name="events" added="1540527339">Events</phrase>
+		<phrase var_name="the_events_section_is_closed" added="1540527339">The events section is closed.</phrase>
+		<phrase var_name="event_successfully_deleted" added="1540527339">Event successfully deleted.</phrase>
+		<phrase var_name="date_added" added="1540527339">Date Added</phrase>
+		<phrase var_name="name" added="1540527339">Name</phrase>
+		<phrase var_name="recent_events" added="1540527339">Recent Events</phrase>
+		<phrase var_name="today" added="1540527339">Today</phrase>
+		<phrase var_name="tomorrow" added="1540527339">Tomorrow</phrase>
+		<phrase var_name="this_week" added="1540527339">This Week</phrase>
+		<phrase var_name="this_weekend" added="1540527339">This Weekend</phrase>
+		<phrase var_name="pending" added="1540527339">Pending</phrase>
+		<phrase var_name="the_event_you_are_looking_for_does_not_exist_or_has_been_removed" added="1540527339">The event you are looking for does not exist or has been removed.</phrase>
+		<phrase var_name="this_event_is_private" added="1540527339">This event is private.</phrase>
+		<phrase var_name="provide_a_category_name" added="1540527339">Provide a category name.</phrase>
+		<phrase var_name="user_name_left_you_a_comment_on_site_title" added="1540527339">{user_name} left you a comment on {site_title}.</phrase>
+		<phrase var_name="user_name_left_you_a_comment_on_your_event_title" added="1540527339"><![CDATA[{user_name} left you a comment on your event "{title}".
+
+To view this comment, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="user_name_added_a_new_comment_on_their_own_event" added="1540527339"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on their own <a href="{title_link}">event</a>.]]></phrase>
+		<phrase var_name="user_name_added_a_new_comment_on_your_event" added="1540527339"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on your <a href="{title_link}">event</a>.]]></phrase>
+		<phrase var_name="user_name_added_a_new_comment_on_item_user_name" added="1540527339"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on <a href="{item_user_link}">{item_user_name}'s</a> <a href="{title_link}">event</a>.]]></phrase>
+		<phrase var_name="owner_full_name_added_a_new_event_title" added="1540527339"><![CDATA[<a href="{user_link}">{owner_full_name}</a> added a new event "<a href="{title_link}">{title}</a>"]]></phrase>
+		<phrase var_name="create_an_event" added="1540527339">Create an Event</phrase>
+		<phrase var_name="manage_events" added="1540527339">Manage Events</phrase>
+		<phrase var_name="view_events" added="1540527339">View Events</phrase>
+		<phrase var_name="your_event_title_has_been_approved" added="1540527339"><![CDATA[Your event "{title}" has been approved.]]></phrase>
+		<phrase var_name="full_name_invited_you_to_an_event" added="1540527339"><![CDATA[<a href="{user_link}">{full_name}</a> invited you to an event.]]></phrase>
+		<phrase var_name="no_event_invites" added="1540527339">No event invites.</phrase>
+		<phrase var_name="event_invites_total" added="1540527339"><![CDATA[Event Invites (<span id="js_request_event_count_total">{total}</span>)]]></phrase>
+		<phrase var_name="event_text" added="1540527339">Event Text</phrase>
+		<phrase var_name="are_you_sure_this_will_delete_all_events_that_belong_to_this_category_and_cannot_be_undone" added="1540527339">Are you sure? This will delete all events that belong to this category and cannot be undone.</phrase>
+		<phrase var_name="keywords" added="1540527339">Keywords</phrase>
+		<phrase var_name="location" added="1540527339">Location</phrase>
+		<phrase var_name="city" added="1540527339">City</phrase>
+		<phrase var_name="zip_postal_code" added="1540527339">Zip/Postal Code</phrase>
+		<phrase var_name="sort" added="1540527339">Sort</phrase>
+		<phrase var_name="submit" added="1540527339">Submit</phrase>
+		<phrase var_name="reset" added="1540527339">Reset</phrase>
+		<phrase var_name="host" added="1540527339">Host</phrase>
+		<phrase var_name="date" added="1540527339">Date</phrase>
+		<phrase var_name="remove_this_person_from_the_guest_list" added="1540527339">Remove this person from the guest list.</phrase>
+		<phrase var_name="report_an_event" added="1540527339">Report an Event</phrase>
+		<phrase var_name="report" added="1540527339">Report</phrase>
+		<phrase var_name="invite_people_to_come" added="1540527339">Invite People to Come</phrase>
+		<phrase var_name="mass_email_guests" added="1540527339">Mass Email Guests</phrase>
+		<phrase var_name="manage_guest_list" added="1540527339">Manage Guest List</phrase>
+		<phrase var_name="contact_full_name_creator" added="1540527339">Contact {full_name} (Creator)</phrase>
+		<phrase var_name="delete_event" added="1540527339">Delete Event</phrase>
+		<phrase var_name="no_upcoming_events" added="1540527339">No upcoming events.</phrase>
+		<phrase var_name="add_an_event" added="1540527339">Add an Event</phrase>
+		<phrase var_name="time_stamp_at_location" added="1540527339">{time_stamp} at {location}</phrase>
+		<phrase var_name="maybe_attending" added="1540527339">Maybe Attending</phrase>
+		<phrase var_name="update_your_rsvp" added="1540527339">Update Your RSVP</phrase>
+		<phrase var_name="submit_your_rsvp" added="1540527339">Submit Your RSVP</phrase>
+		<phrase var_name="event_category_details" added="1540527339">Event Category Details</phrase>
+		<phrase var_name="parent_category" added="1540527339">Parent Category</phrase>
+		<phrase var_name="select" added="1540527339">Select</phrase>
+		<phrase var_name="edit" added="1540527339">Edit</phrase>
+		<phrase var_name="delete" added="1540527339">Delete</phrase>
+		<phrase var_name="update_order" added="1540527339">Update Order</phrase>
+		<phrase var_name="view_this_event" added="1540527339">View This Event</phrase>
+		<phrase var_name="skip_amp_view_this_event" added="1540527339"><![CDATA[Skip &amp; View This Event]]></phrase>
+		<phrase var_name="step_1" added="1540527339">Step 1</phrase>
+		<phrase var_name="event_details" added="1540527339">Event Details</phrase>
+		<phrase var_name="step_2" added="1540527339">Step 2</phrase>
+		<phrase var_name="customize" added="1540527339">Customize</phrase>
+		<phrase var_name="step_3" added="1540527339">Step 3</phrase>
+		<phrase var_name="invite_guests" added="1540527339">Invite Guests</phrase>
+		<phrase var_name="mass_email" added="1540527339">Mass Email</phrase>
+		<phrase var_name="category" added="1540527339">Category</phrase>
+		<phrase var_name="tagline" added="1540527339">Tagline</phrase>
+		<phrase var_name="description" added="1540527339">Description</phrase>
+		<phrase var_name="public_everyone_can_join" added="1540527339">Public (Everyone can join)</phrase>
+		<phrase var_name="privacy" added="1540527339">Privacy</phrase>
+		<phrase var_name="private_does_not_show_up_anywhere_and_only_invited_users_can_rsvp" added="1540527339">Private (Does not show up anywhere and only invited users can RSVP)</phrase>
+		<phrase var_name="start_time" added="1540527339">Start Time</phrase>
+		<phrase var_name="end_time" added="1540527339">End Time</phrase>
+		<phrase var_name="country" added="1540527339">Country</phrase>
+		<phrase var_name="location_venue" added="1540527339">Location/Venue</phrase>
+		<phrase var_name="save" added="1540527339">Save</phrase>
+		<phrase var_name="create_event" added="1540527339">Create Event</phrase>
+		<phrase var_name="select_images" added="1540527339">Select Image(s): </phrase>
+		<phrase var_name="are_you_sure" added="1540527339">Are you sure?</phrase>
+		<phrase var_name="click_here_to_delete_this_image_and_upload_a_new_one_in_its" added="1540527339"><![CDATA[Click <a href="#" onclick="{java_script}">here</a> to delete this image and upload a new one in its place.]]></phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1540527339">You can upload a JPG, GIF or PNG file.</phrase>
+		<phrase var_name="the_file_size_limit_is_filesize_if_your_upload_does_not_work_try_uploading_a_smaller_picture" added="1540527339">The file size limit is {filesize}. If your upload does not work, try uploading a smaller picture.</phrase>
+		<phrase var_name="invite_friends" added="1540527339">Invite Friends</phrase>
+		<phrase var_name="invite_people_via_email" added="1540527339">Invite People via Email</phrase>
+		<phrase var_name="separate_multiple_emails_with_a_comma" added="1540527339">Separate multiple emails with a comma.</phrase>
+		<phrase var_name="add_a_personal_message" added="1540527339">Add a Personal Message</phrase>
+		<phrase var_name="send_invitations" added="1540527339">Send Invitations</phrase>
+		<phrase var_name="new_guest_list" added="1540527339">New Guest List</phrase>
+		<phrase var_name="send_out_an_email_to_all_the_guests_that_are_joining_this_event" added="1540527339">Send out an email to all the guests that are joining this event.</phrase>
+		<phrase var_name="last_mass_email" added="1540527339">Last Mass Email</phrase>
+		<phrase var_name="subject" added="1540527339">Subject</phrase>
+		<phrase var_name="text" added="1540527339">Text</phrase>
+		<phrase var_name="sending_emails" added="1540527339">Sending Emails</phrase>
+		<phrase var_name="send" added="1540527339">Send</phrase>
+		<phrase var_name="please_wait_till" added="1540527339">Please wait till</phrase>
+		<phrase var_name="you_have_not_been_invited_to_any_events_yet" added="1540527339">You have not been invited to any events yet.</phrase>
+		<phrase var_name="browse_events" added="1540527339">Browse events.</phrase>
+		<phrase var_name="you_are_not_attending_any_events" added="1540527339">You are not attending any events.</phrase>
+		<phrase var_name="no_events_found_where_you_might_attend" added="1540527339">No events found where you might attend.</phrase>
+		<phrase var_name="no_events_found_where_you_are_not_attending" added="1540527339">No events found where you are not attending.</phrase>
+		<phrase var_name="no_past_events_were_found" added="1540527339">No past events were found.</phrase>
+		<phrase var_name="no_events_have_been_created" added="1540527339">No events have been created.</phrase>
+		<phrase var_name="be_the_first_to_create_an_event" added="1540527339">Be the first to create an event.</phrase>
+		<phrase var_name="there_is_one_event_that_is_pending_approval" added="1540527339">There is one event that is pending approval.</phrase>
+		<phrase var_name="there_are_total_events_that_are_pending_approval" added="1540527339">There are {total} events that are pending approval.</phrase>
+		<phrase var_name="click_here_to_approve_events" added="1540527339"><![CDATA[Click <a href="{link}">here</a> to approve events.]]></phrase>
+		<phrase var_name="private" added="1540527339">Private</phrase>
+		<phrase var_name="featured" added="1540527339">Featured</phrase>
+		<phrase var_name="start_time_at_location" added="1540527339">{start_time} at {location}</phrase>
+		<phrase var_name="posted_by_user_name_on_time_stamp" added="1540527339">Posted by {user_name} on {time_stamp}</phrase>
+		<phrase var_name="rsvp" added="1540527339">RSVP</phrase>
+		<phrase var_name="no_response" added="1540527339">No Response</phrase>
+		<phrase var_name="edit_lowercase" added="1540527339">edit</phrase>
+		<phrase var_name="approve_this_event" added="1540527339">Approve this event.</phrase>
+		<phrase var_name="approve" added="1540527339">Approve</phrase>
+		<phrase var_name="approved" added="1540527339">Approved</phrase>
+		<phrase var_name="feature_this_event" added="1540527339">Feature this event.</phrase>
+		<phrase var_name="feature" added="1540527339">Feature</phrase>
+		<phrase var_name="un_feature_this_event" added="1540527339">Un-Feature this event.</phrase>
+		<phrase var_name="unfeature" added="1540527339">Unfeature</phrase>
+		<phrase var_name="event_is_pending_approval" added="1540527339">Event is pending approval.</phrase>
+		<phrase var_name="full_name_has_closed_their_favorites_section" added="1540527339"><![CDATA[<a href="{user_link}">{full_name}</a> has closed their favorites section.]]></phrase>
+		<phrase var_name="a_href_user_link_user_name_a_added_a_comment_on_the_event_a_href_title_link_title_a" added="1540527339"><![CDATA[<a href="{user_link}">{user_name}</a> added a comment on the event "<a href="{title_link}">{title}</a>".]]></phrase>
+		<phrase var_name="your_event_is_ending_before_it_starts" added="1540527339">Your event is ending before it starts.</phrase>
+		<phrase var_name="your_event_is_starting_in_the_past" added="1540527339">Your event is starting in the past.</phrase>
+		<phrase var_name="full_name_invited_you_to_the_title" added="1540527339"><![CDATA[{full_name} invited you to "{title}".
+
+To check out this event, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_added_the_following_personal_message" added="1540527339">
+
+{full_name} added the following personal message
+</phrase>
+		<phrase var_name="full_name_invited_you_to_the_event_title" added="1540527339"><![CDATA[{full_name} invited you to the event "{title}".]]></phrase>
+		<phrase var_name="provide_a_category_this_event_will_belong_to" added="1540527339">Provide a category this event will belong to.</phrase>
+		<phrase var_name="unable_to_find_the_event_you_want_to_approve" added="1540527339">Unable to find the event you want to approve.</phrase>
+		<phrase var_name="you_do_not_have_sufficient_permission_to_modify_this_event" added="1540527339">You do not have sufficient permission to modify this event.</phrase>
+		<phrase var_name="unable_to_find_the_event" added="1540527339">Unable to find the event.</phrase>
+		<phrase var_name="unable_to_find_the_event_you_want_to_delete" added="1540527339">Unable to find the event you want to delete.</phrase>
+		<phrase var_name="you_do_not_have_sufficient_permission_to_delete_this_listing" added="1540527339">You do not have sufficient permission to delete this listing.</phrase>
+		<phrase var_name="your_event_has_been_approved_on_site_title" added="1540527339">Your event has been approved on {site_title}.</phrase>
+		<phrase var_name="your_event_has_been_approved_on_site_title_link" added="1540527339"><![CDATA[Your event has been approved on {site_title}.
+
+To view this event, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="notice_this_is_a_newsletter_sent_from_the_event" added="1540527339">Notice: This is a newsletter sent from the event</phrase>
+		<phrase var_name="a_href_user_link_full_name_a_liked_a_href_view_user_link_view_full_name_a_s_a_href_link_event_a" added="1540527339"><![CDATA[<a href="{user_link}">{full_name}</a> liked <a href="{view_user_link}">{view_full_name}</a>'s <a href="{link}">event</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_liked_their_own_a_href_link_event_a" added="1540527339"><![CDATA[<a href="{user_link}">{full_name}</a> liked their own <a href="{link}">event</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_liked_your_a_href_link_event_a" added="1540527339"><![CDATA[<a href="{user_link}">{full_name}</a> liked your <a href="{link}">event</a>.]]></phrase>
+		<phrase var_name="can_create_event" added="1540527339">Create Event</phrase>
+		<phrase var_name="select_a_sub_category" added="1540527339">Select a Sub-Category</phrase>
+		<phrase var_name="remove_invite" added="1540527339">Remove Invite</phrase>
+		<phrase var_name="no_attendees" added="1540527339">No attendees.</phrase>
+		<phrase var_name="no_results" added="1540527339">No results.</phrase>
+		<phrase var_name="unsponsor_this_event" added="1540527339">Unsponsor this event</phrase>
+		<phrase var_name="sponsor_this_event" added="1540527339">Sponsor this Event</phrase>
+		<phrase var_name="sponsored_event" added="1540527339">Sponsored Event</phrase>
+		<phrase var_name="event_successfully_un_sponsored" added="1540527339">Event successfully unsponsored</phrase>
+		<phrase var_name="event_successfully_sponsored" added="1540527339">Event successfully sponsored</phrase>
+		<phrase var_name="sponsor_help" added="1540527339">To purchase sponsor space for your events click on your event and then click on Sponsor in the right hand side menu.</phrase>
+		<phrase var_name="encourage_sponsor" added="1540527339">Sponsor your Events</phrase>
+		<phrase var_name="sponsor_error_not_found" added="1540527339">That event is no longer available.</phrase>
+		<phrase var_name="sponsor_error_privacy" added="1540527339">This event is set to private, sponsoring it conflicts with this setting.</phrase>
+		<phrase var_name="sponsor_title" added="1540527339">Event: {sEventTitle}</phrase>
+		<phrase var_name="sponsor_paypal_message" added="1540527339">Sponsor of event {sEventTitle}</phrase>
+		<phrase var_name="you_are_creating_an_event_a_little_too_soon" added="1540527339">You are creating an event a little too soon.</phrase>
+		<phrase var_name="time_separator" added="1540527339">at</phrase>
+		<phrase var_name="updating" added="1540527339">Updating</phrase>
+		<phrase var_name="event_invite_count" added="1540527339">Event Invite Count</phrase>
+		<phrase var_name="address" added="1540527339">Address</phrase>
+		<phrase var_name="find_on_map" added="1540527339">Find On Map</phrase>
+		<phrase var_name="what_s_the_event" added="1540527339"><![CDATA[What's the event?]]></phrase>
+		<phrase var_name="where" added="1540527339">Where?</phrase>
+		<phrase var_name="and" added="1540527339">and</phrase>
+		<phrase var_name="guest_list" added="1540527339">Guest List</phrase>
+		<phrase var_name="event_has_been_approved" added="1540527339">Event has been approved.</phrase>
+		<phrase var_name="event_approved" added="1540527339">Event Approved</phrase>
+		<phrase var_name="event_s_successfully_approved" added="1540527339">Event(s) successfully approved.</phrase>
+		<phrase var_name="event_s_successfully_deleted" added="1540527339">Event(s) successfully deleted.</phrase>
+		<phrase var_name="unable_to_find_the_event_you_are_trying_to_comment_on" added="1540527339">Unable to find the event you are trying to comment on.</phrase>
+		<phrase var_name="no_events_found" added="1540527339">No events found.</phrase>
+		<phrase var_name="no_events_found_on_map" added="1540527339">No events found on map.</phrase>
+		<phrase var_name="sponsored" added="1540527339">Sponsored</phrase>
+		<phrase var_name="actions" added="1540527339">Actions</phrase>
+		<phrase var_name="moderate" added="1540527339">Moderate</phrase>
+		<phrase var_name="at" added="1540527339">at</phrase>
+		<phrase var_name="search_events" added="1540527339">Search Events</phrase>
+		<phrase var_name="latest" added="1540527339">Latest</phrase>
+		<phrase var_name="most_viewed" added="1540527339">Most Viewed</phrase>
+		<phrase var_name="most_liked" added="1540527339">Most Liked</phrase>
+		<phrase var_name="most_discussed" added="1540527339">Most Discussed</phrase>
+		<phrase var_name="all_events" added="1540527339">All Events</phrase>
+		<phrase var_name="my_events" added="1540527339">My Events</phrase>
+		<phrase var_name="friends_events" added="1540527339"><![CDATA[Friends' Events]]></phrase>
+		<phrase var_name="featured_events" added="1540527339">Featured Events</phrase>
+		<phrase var_name="pending_events" added="1540527339">Pending Events</phrase>
+		<phrase var_name="events_i_may_attend" added="1540527339">Events I May Attend</phrase>
+		<phrase var_name="events_i_m_not_attending" added="1540527339"><![CDATA[Events I'm Not Attending]]></phrase>
+		<phrase var_name="event_invites" added="1540527339">Event Invites</phrase>
+		<phrase var_name="full_name_s_events" added="1540527339"><![CDATA[{full_name}'s Events]]></phrase>
+		<phrase var_name="what_are_you_planning" added="1540527339">What are you planning?</phrase>
+		<phrase var_name="add_end_time" added="1540527339">Add end time</phrase>
+		<phrase var_name="add_address_city_zip_country" added="1540527339">Add address/city/zip/range/country</phrase>
+		<phrase var_name="event_privacy" added="1540527339">Event Privacy</phrase>
+		<phrase var_name="control_who_can_see_this_event" added="1540527339">Control who can see this event.</phrase>
+		<phrase var_name="share_privacy" added="1540527339">Share Privacy</phrase>
+		<phrase var_name="control_who_can_share_on_this_event" added="1540527339">Control who can share on this event.</phrase>
+		<phrase var_name="update" added="1540527339">Update</phrase>
+		<phrase var_name="upload_photo" added="1540527339">Upload Photo</phrase>
+		<phrase var_name="unable_to_view_this_item_due_to_privacy_settings" added="1540527339">Unable to view this item due to privacy settings.</phrase>
+		<phrase var_name="photo" added="1540527339">Photo</phrase>
+		<phrase var_name="managing_event" added="1540527339">Managing Event</phrase>
+		<phrase var_name="time" added="1540527339">Time</phrase>
+		<phrase var_name="view_on_google_maps" added="1540527339">View on Google Maps</phrase>
+		<phrase var_name="view_this_on_google_maps" added="1540527339">View this on Google maps</phrase>
+		<phrase var_name="created_by" added="1540527339">Created By</phrase>
+		<phrase var_name="respond" added="1540527339">Respond</phrase>
+		<phrase var_name="awaiting_reply" added="1540527339">Awaiting Reply</phrase>
+		<phrase var_name="view_guest_list" added="1540527339">View Guest List</phrase>
+		<phrase var_name="full_name_liked_a_comment_you_posted_on_the_event_title" added="1540527339"><![CDATA[{full_name} liked a comment you posted on the event "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_comment_message_event" added="1540527339"><![CDATA[{full_name} liked your comment "<a href="{link}">{content}</a>" that you posted on the event "<a href="{item_link}">{title}</a>".
+To view this event follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_liked_your_event_title" added="1540527339"><![CDATA[{full_name} liked your event "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_event_message" added="1540527339"><![CDATA[{full_name} liked your event "<a href="{link}">{title}</a>"
+To view this event follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="unable_to_post_a_comment_on_this_item_due_to_privacy_settings" added="1540527339">Unable to post a comment on this item due to privacy settings.</phrase>
+		<phrase var_name="full_name_commented_on_a_comment_posted_on_the_event_title" added="1540527339"><![CDATA[{full_name} commented on a comment posted on the event "{title}".]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_your_comments_you_posted_on_the_event" added="1540527339"><![CDATA[{full_name} commented on one of your comments you posted on the event "<a href="{item_link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_gender_event_comments" added="1540527339">{full_name} commented on one of {gender} event comments.</phrase>
+		<phrase var_name="full_name_commented_on_one_of_row_full_name_s_event_comments" added="1540527339"><![CDATA[{full_name} commented on one of {row_full_name}'s event comments.]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_gender_own_comments_on_the_event" added="1540527339"><![CDATA[{full_name} commented on one of {gender} own comments on the event "<a href="{item_link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_row_full_name_s" added="1540527339"><![CDATA[{full_name} commented on one of {row_full_name}'s comments on the event "<a href="{item_link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name_s_span_comment_on_the_event_title" added="1540527339"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}'s</span> comment on the event "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_gender_own_comment_on_the_event_title" added="1540527339"><![CDATA[{users} commented on {gender} own comment on the event "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_one_of_your_comments_on_the_event_title" added="1540527339"><![CDATA[{users} commented on one of your comments on the event "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_one_of_span_class_drop_data_user_row_full_name_s_span_comments_on_the_event_title" added="1540527339"><![CDATA[{users} commented on one of <span class="drop_data_user">{row_full_name}'s</span> comments on the event "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name_s_span_event_title" added="1540527339"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}'s</span> event "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_gender_own_event_title" added="1540527339"><![CDATA[{users} commented on {gender} own event "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_your_event_title" added="1540527339"><![CDATA[{users} commented on your event "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_comment_on_the_event_title" added="1540527339"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}'s</span> comment on the event "{title}"]]></phrase>
+		<phrase var_name="users_liked_gender_own_comment_on_the_event_title" added="1540527339"><![CDATA[{users} liked {gender} own comment on the event "{title}"]]></phrase>
+		<phrase var_name="users_liked_one_of_your_comments_on_the_event_title" added="1540527339"><![CDATA[{users} liked one of your comments on the event "{title}"]]></phrase>
+		<phrase var_name="users_liked_one_on_span_class_drop_data_user_row_full_name_s_span_comments_on_the_event_title" added="1540527339"><![CDATA[{users} liked one on <span class="drop_data_user">{row_full_name}'s</span> comments on the event "{title}"]]></phrase>
+		<phrase var_name="users_liked_gender_own_event_title" added="1540527339"><![CDATA[{users} liked {gender} own event "{title}"]]></phrase>
+		<phrase var_name="users_liked_your_event_title" added="1540527339"><![CDATA[{users} liked your event "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_event_title" added="1540527339"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}'s</span> event "{title}"]]></phrase>
+		<phrase var_name="users_invited_you_to_the_event_title" added="1540527339"><![CDATA[{users} invited you to the event "{title}"]]></phrase>
+		<phrase var_name="in_the_event_a_href_link_title_a" added="1540527339"><![CDATA[In the event <a href="{link}">{title}</a>]]></phrase>
+		<phrase var_name="who_can_share_events" added="1540527339">Who can share events?</phrase>
+		<phrase var_name="who_can_view_browse_events" added="1540527339">Who can view/browse events?</phrase>
+		<phrase var_name="event" added="1540527339">Event</phrase>
+		<phrase var_name="responded" added="1540527339">Responded</phrase>
+		<phrase var_name="invited" added="1540527339">Invited</phrase>
+		<phrase var_name="invites" added="1540527339">Invites</phrase>
+		<phrase var_name="yes" added="1540527339">Yes</phrase>
+		<phrase var_name="no" added="1540527339">No</phrase>
+		<phrase var_name="by" added="1540527339">by</phrase>
+		<phrase var_name="user_setting_can_edit_own_event" added="1540527339">Can edit own event?</phrase>
+		<phrase var_name="user_setting_can_edit_other_event" added="1540527339">Can edit all events?</phrase>
+		<phrase var_name="user_setting_can_post_comment_on_event" added="1540527339">Can post comments on events?</phrase>
+		<phrase var_name="user_setting_can_delete_own_event" added="1540527339">Can delete own event?</phrase>
+		<phrase var_name="user_setting_can_delete_other_event" added="1540527339">Can delete all events?</phrase>
+		<phrase var_name="user_setting_max_upload_size_event" added="1540527339"><![CDATA[Max file size for event photos in kilobits (kb).
+(1000 kb = 1 mb)
+For unlimited add "0" without quotes.]]></phrase>
+		<phrase var_name="user_setting_can_view_pirvate_events" added="1540527339">Can view private events?</phrase>
+		<phrase var_name="user_setting_can_approve_events" added="1540527339">Can approve events?</phrase>
+		<phrase var_name="user_setting_event_can_feature_events" added="1540527339">Can feature events?</phrase>
+		<phrase var_name="user_setting_event_must_be_approved" added="1540527339">Events must be approved first before they are displayed publicly?</phrase>
+		<phrase var_name="user_setting_total_mass_emails_per_hour" added="1540527339">Define how long this user group must wait until they are allowed to send out another mass email.</phrase>
+		<phrase var_name="user_setting_can_mass_mail_own_members" added="1540527339">Can mass email own event guests?</phrase>
+		<phrase var_name="user_setting_can_access_event" added="1540527339">Can browse and view the event module?</phrase>
+		<phrase var_name="user_setting_can_create_event" added="1540527339">Can create an event?</phrase>
+		<phrase var_name="user_setting_can_sponsor_fevent" added="1540527339">Can members of this user group sponsor their events?</phrase>
+		<phrase var_name="user_setting_can_purchase_sponsor" added="1540527339">Can members of this user group purchase a sponsored ad space?</phrase>
+		<phrase var_name="user_setting_fevent_sponsor_price" added="1540527339">How much is the sponsor space worth for events?
+This works in a CPM basis.</phrase>
+		<phrase var_name="user_setting_auto_publish_sponsored_item" added="1540527339">After the user has purchased a sponsored space, should the event be published right away?
+If set to false, the admin will have to approve each new purchased sponsored event space before it is shown in the site.</phrase>
+		<phrase var_name="user_setting_flood_control_events" added="1540527339"><![CDATA[How many minutes should a user wait before they can create another event?
+
+Note: Setting it to "0" (without quotes) is default and users will not have to wait.]]></phrase>
+		<phrase var_name="user_setting_can_view_gmap" added="1540527339">Can members of this user group view a Google Map in the Events section?</phrase>
+		<phrase var_name="user_setting_can_add_gmap" added="1540527339">Can members of this user group add a Google Map to their events?</phrase>
+		<phrase var_name="user_setting_points_event" added="1540527339">How many points does the user get when they add a new event?</phrase>
+		<phrase var_name="menu_fevent_create_new_event_9822694605f530f9be21148853ef4566" added="1540527339">Create New Event</phrase>
+		<phrase var_name="setting_fevent_view_time_stamp_profile" added="1540527339"><![CDATA[<title>Event Profile Time Stamp</title><info>Time stamp used when displaying events on a users profile.</info>]]></phrase>
+		<phrase var_name="setting_fevent_browse_time_stamp" added="1540527339"><![CDATA[<title>Event Browsing Time Stamp</title><info>Time stamp displayed when browsing events.</info>]]></phrase>
+		<phrase var_name="setting_fevent_basic_information_time" added="1540527339"><![CDATA[<title>Event Basic Information Time Stamp</title><info>This is the time stamp that is used when viewing an event. It can be found in the "Basic Information" block.</info>]]></phrase>
+		<phrase var_name="setting_fevent_basic_information_time_short" added="1540527339"><![CDATA[<title>Event Basic Information Time Stamp (Short)</title><info>This is the short version of the time stamp that is used when viewing an event. It can be found in the "Basic Information" block.</info>]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_event_title" added="1540527339"><![CDATA[{full_name} wrote a comment on your event "{title}".]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_event_message" added="1540527339"><![CDATA[{full_name} wrote a comment on your event "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="photos" added="1540527339">Photos</phrase>
+		<phrase var_name="delete_this_image" added="1540527339">Delete this image</phrase>
+		<phrase var_name="click_to_set_as_default_image" added="1540527339">Click to set as default image</phrase>
+		<phrase var_name="user_setting_can_use_editor_on_event" added="1540527339">Can use editor on event?</phrase>
+		<phrase var_name="past" added="1540527339">Past</phrase>
+		<phrase var_name="refresh_map" added="1540527339">Refresh map</phrase>
+		<phrase var_name="admin_menu_add_custom_field" added="1540527339">Add Custom Field</phrase>
+		<phrase var_name="admin_menu_manage_custom_fields" added="1540527339">Manage Custom Fields</phrase>
+		<phrase var_name="user_setting_can_manage_custom_fields" added="1540527339">Can manage event custom fields?
+
+Notice: this setting only apply for members who have permission to go to AdminCP</phrase>
+		<phrase var_name="user_setting_can_add_custom_fields" added="1540527339">Can add event custom fields?
+
+Notice: this setting only apply for members who have permission to go to AdminCP</phrase>
+		<phrase var_name="select_a_category_this_custom_field_will_belong_to" added="1540527339">Select a category this custom field will belong to</phrase>
+		<phrase var_name="select_what_type_of_custom_field_this_is" added="1540527339">Select what type of custom field this is.</phrase>
+		<phrase var_name="field_successfully_updated" added="1540527339">Field successfully updated!</phrase>
+		<phrase var_name="field_successfully_added" added="1540527339">Field successfully added!</phrase>
+		<phrase var_name="add_a_new_custom_field" added="1540527339">Add a new custom field</phrase>
+		<phrase var_name="edit_custom_field" added="1540527339">Edit custom field</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_custom_option" added="1540527339">Are you sure you want to delete this custom option?</phrase>
+		<phrase var_name="field_details" added="1540527339">Field Details</phrase>
+		<phrase var_name="required" added="1540527339">Required</phrase>
+		<phrase var_name="field_name_amp_values" added="1540527339"><![CDATA[Field Name & Values]]></phrase>
+		<phrase var_name="event_category" added="1540527339">Event category</phrase>
+		<phrase var_name="add" added="1540527339">Add</phrase>
+		<phrase var_name="values" added="1540527339">Values</phrase>
+		<phrase var_name="manage_custom_fields" added="1540527339">Manage Custom Fields</phrase>
+		<phrase var_name="custom_fields" added="1540527339">Custom fields</phrase>
+		<phrase var_name="the_field_field_name_is_required" added="1540527339">The field {field_name} is required!</phrase>
+		<phrase var_name="show" added="1540527339">Show</phrase>
+		<phrase var_name="when" added="1540527339">When</phrase>
+		<phrase var_name="number_per_page" added="1540527339">{number} per page</phrase>
+		<phrase var_name="calendar" added="1540527339">Calendar</phrase>
+		<phrase var_name="past_events2" added="1540527339">Past Events</phrase>
+		<phrase var_name="user_setting_can_feature_events" added="1540527339">Can feature events?</phrase>
+		<phrase var_name="user_setting_points_fevent" added="1540527339">How many points does the user get when they add new event?</phrase>
+		<phrase var_name="january" added="1540527339">January</phrase>
+		<phrase var_name="february" added="1540527339">February</phrase>
+		<phrase var_name="march" added="1540527339">March</phrase>
+		<phrase var_name="april" added="1540527339">April</phrase>
+		<phrase var_name="may" added="1540527339">May</phrase>
+		<phrase var_name="june" added="1540527339">June</phrase>
+		<phrase var_name="july" added="1540527339">July</phrase>
+		<phrase var_name="august" added="1540527339">August</phrase>
+		<phrase var_name="september" added="1540527339">September</phrase>
+		<phrase var_name="october" added="1540527339">October</phrase>
+		<phrase var_name="november" added="1540527339">November</phrase>
+		<phrase var_name="december" added="1540527339">December</phrase>
+		<phrase var_name="jan" added="1540527339">Jan</phrase>
+		<phrase var_name="feb" added="1540527339">Feb</phrase>
+		<phrase var_name="mar" added="1540527339">Mar</phrase>
+		<phrase var_name="apr" added="1540527339">Apr</phrase>
+		<phrase var_name="jun" added="1540527339">Jun</phrase>
+		<phrase var_name="jul" added="1540527339">Jul</phrase>
+		<phrase var_name="aug" added="1540527339">Aug</phrase>
+		<phrase var_name="sep" added="1540527339">Sep</phrase>
+		<phrase var_name="oct" added="1540527339">Oct</phrase>
+		<phrase var_name="nov" added="1540527339">Nov</phrase>
+		<phrase var_name="dec" added="1540527339">Dec</phrase>
+		<phrase var_name="weekday_sunday" added="1540527339">S</phrase>
+		<phrase var_name="weekday_monday" added="1540527339">M</phrase>
+		<phrase var_name="weekday_tuesday" added="1540527339">T</phrase>
+		<phrase var_name="weekday_wednesday" added="1540527339">W</phrase>
+		<phrase var_name="weekday_thursday" added="1540527339">T</phrase>
+		<phrase var_name="weekday_friday" added="1540527339">F</phrase>
+		<phrase var_name="weekday_saturday" added="1540527339">S</phrase>
+		<phrase var_name="user_setting_can_attach_on_event" added="1540527339">Can the user attach file on their event?</phrase>
+		<phrase var_name="some_of_images_haven_t_been_uploaded" added="1540527339"><![CDATA[Some of images haven't been uploaded!]]></phrase>
+		<phrase var_name="google_map" added="1540527339">View on Google map</phrase>
+		<phrase var_name="radius" added="1540527339">Radius</phrase>
+		<phrase var_name="admin_menu_manage_location" added="1540527339">Set default location of Google Map</phrase>
+		<phrase var_name="repeats" added="1540527339">Repeats</phrase>
+		<phrase var_name="daily" added="1540527339">Daily</phrase>
+		<phrase var_name="weekly" added="1540527339">Weekly</phrase>
+		<phrase var_name="monthly" added="1540527339">Monthly</phrase>
+		<phrase var_name="end" added="1540527339">End</phrase>
+		<phrase var_name="never" added="1540527339">Never</phrase>
+		<phrase var_name="on" added="1540527339">On</phrase>
+		<phrase var_name="until" added="1540527339">until</phrase>
+		<phrase var_name="repeat" added="1540527339">Repeat</phrase>
+		<phrase var_name="cancel" added="1540527339">Cancel</phrase>
+		<phrase var_name="gmap_holder" added="1540527339">GMap holder</phrase>
+		<phrase var_name="daily_repeat_date_have_to_be_larger_or_equal_than_start_date" added="1540527339">Daily repeat date have to be larger or equal than start date</phrase>
+		<phrase var_name="weekly_repeat_date_have_to_be_larger_or_equal_than_start_date_in_about_1_week" added="1540527339">Weekly repeat date have to be larger or equal than start date in about 1 week</phrase>
+		<phrase var_name="monthly_repeat_date_have_to_be_larger_or_equal_than_start_date_in_about_1_month" added="1540527339">Monthly repeat date have to be larger or equal than start date in about 1 month</phrase>
+		<phrase var_name="user_name_tagged_you_in_a_comment_in_a_event" added="1540527339">{user_name} tagged you in a comment in a event</phrase>
+		<phrase var_name="miles" added="1540527339">miles</phrase>
+		<phrase var_name="km" added="1540527339">km</phrase>
+		<phrase var_name="range" added="1540527339">Range</phrase>
+		<phrase var_name="to" added="1540527339">To</phrase>
+		<phrase var_name="admin_menu_google_api_settings" added="1540527339">Google API Settings</phrase>
+		<phrase var_name="backup_database" added="1540527339">Backup Database</phrase>
+		<phrase var_name="before_run_the_import_from_original_event_default_event_of_phpfox_to_fevent_module" added="1540527339">before running the import from original event(default event of PHPFOX ) to Advanced Event Module</phrase>
+		<phrase var_name="fevent_does_not_import_activity_feeds_notifications_from_old_event" added="1540527339">Advanced Event does not import activity feeds, notifications and privacy from old events</phrase>
+		<phrase var_name="following_the_instruction_below_to_import_event_from_phpfox_event_module" added="1540527339">Follow the instruction below to import event from PHPFOX event module</phrase>
+		<phrase var_name="backup_database_lower" added="1540527339">Backup Database</phrase>
+		<phrase var_name="click_import_button" added="1540527339">Click Import button</phrase>
+		<phrase var_name="import_details" added="1540527339">Import Details</phrase>
+		<phrase var_name="process" added="1540527339">Process</phrase>
+		<phrase var_name="details" added="1540527339">Import Details</phrase>
+		<phrase var_name="successfully" added="1540527339">successfully</phrase>
+		<phrase var_name="imported_event" added="1540527339">Imported event</phrase>
+		<phrase var_name="import_successfully" added="1540527339">Import Successfully</phrase>
+		<phrase var_name="there_is_no_event_to_import" added="1540527339">There is no event to import</phrase>
+		<phrase var_name="cf_option_2_1" added="1540527339">Yes</phrase>
+		<phrase var_name="cf_option_2_2" added="1540527339">No</phrase>
+		<phrase var_name="google_api_details" added="1540527339">Google API details</phrase>
+		<phrase var_name="client_id" added="1540527339">Client ID</phrase>
+		<phrase var_name="client_secret" added="1540527339">Client secret</phrase>
+		<phrase var_name="api_key" added="1540527339">API key</phrase>
+		<phrase var_name="provide_client_id" added="1540527339">Provide Client ID</phrase>
+		<phrase var_name="provide_client_secret" added="1540527339">Provide Client secret</phrase>
+		<phrase var_name="provide_api_key" added="1540527339">Provide API key</phrase>
+		<phrase var_name="google_api_details_successfully_updated" added="1540527339">Google API details successfully updated</phrase>
+		<phrase var_name="google_api_details_successfully_added" added="1540527339">Google API details successfully added</phrase>
+		<phrase var_name="in_google_api_settings_you_must_change_redirect_uri_to" added="1540527339">In Google API settings, you must change Redirect URIs to:</phrase>
+		<phrase var_name="notice" added="1540527339">Notice</phrase>
+		<phrase var_name="setting_google_api" added="1540527339">Setting Google API</phrase>
+		<phrase var_name="admin_menu_migration_events" added="1540527339">Migrate Events</phrase>
+		<phrase var_name="setting_reminder_for_this_event" added="1540527339">Setting reminder for this event</phrase>
+		<phrase var_name="google_calendar" added="1540527339">Google Calendar</phrase>
+		<phrase var_name="use_default" added="1540527339">Use Default</phrase>
+		<phrase var_name="custom" added="1540527339">Custom</phrase>
+		<phrase var_name="email" added="1540527339">Email</phrase>
+		<phrase var_name="popup" added="1540527339">Popup</phrase>
+		<phrase var_name="minutes" added="1540527339">minutes</phrase>
+		<phrase var_name="ok" added="1540527339">OK</phrase>
+		<phrase var_name="days" added="1540527339">days</phrase>
+		<phrase var_name="seconds" added="1540527339">seconds</phrase>
+		<phrase var_name="hours" added="1540527339">hours</phrase>
+		<phrase var_name="time_left" added="1540527339">Time left</phrase>
+		<phrase var_name="year" added="1540527339">year</phrase>
+		<phrase var_name="month" added="1540527339">month</phrase>
+		<phrase var_name="day" added="1540527339">day</phrase>
+		<phrase var_name="hour" added="1540527339">hour</phrase>
+		<phrase var_name="minute" added="1540527339">minute</phrase>
+		<phrase var_name="years" added="1540527339">years</phrase>
+		<phrase var_name="months" added="1540527339">months</phrase>
+		<phrase var_name="add_to_google_calendar" added="1540527339">Add to Google Calendar</phrase>
+		<phrase var_name="do_you_want_to_add_this_event_into_your_google_calendar_to_get_reminder" added="1540527339">Do you want to add this event into your Google Calendar to get reminder?</phrase>
+		<phrase var_name="no_thanks" added="1540527339">No, Thanks</phrase>
+		<phrase var_name="event_has_been_successfully_added_to_your_google_calendar" added="1540527339">Event has been successfully added to your Google Calendar</phrase>
+		<phrase var_name="link_of_event_link" added="1540527339">Link of event: {link}</phrase>
+		<phrase var_name="publishers_advancedevent" added="1540527339">Advanced Event</phrase>
+		<phrase var_name="to_register_google_api_please_view_video_guide_link" added="1540527339"><![CDATA[To register Google API, please view video guide <a href="{link}" target="_blank" style="color:blue;">here</a>.]]></phrase>
+		<phrase var_name="save_changes" added="1540527339">Save Changes</phrase>
+		<phrase var_name="successfully_added_a_photo_to_your_event" added="1540527339">Successfully added a photo to your event.</phrase>
+		<phrase var_name="successfully_added_photo_s_to_your_event" added="1540527339">Successfully added photo(s) to your event.</phrase>
+		<phrase var_name="there_are_some_errors_when_update_event_please_try_again" added="1540527339">There are some errors when update event. Please try again.</phrase>
+		<phrase var_name="tutorial_how_to_register_google_api" added="1540527339"><![CDATA[tutorial "How to register Google API"]]></phrase>
+		<phrase var_name="view" added="1540527339">View</phrase>
+		<phrase var_name="hide" added="1540527339">Hide</phrase>
+		<phrase var_name="go_to_google_apis_console" added="1540527339"><![CDATA[Go to <a href="https://code.google.com/apis/console" target="_blank">https://code.google.com/apis/console</a>.]]></phrase>
+		<phrase var_name="create_a_project" added="1540527339">Create a Project.</phrase>
+		<phrase var_name="active_calendar_api_service" added="1540527339"><![CDATA[Active Calendar API service (Get API key)
+                <ul>
+                    <li>Open <strong>Services</strong> page</li>
+                    <li>On <strong>Calendar API</strong>, click on Status button to activate this service</li>
+                    <li>Check "I agree to these terms" and click Accept button twice time to accept 2 terms of service</li>
+                    <li>On Calendar API, Off button change to On button =&gt; Turn on successful</li>
+                </ul>]]></phrase>
+		<phrase var_name="create_an_oauth_client_id" added="1540527339"><![CDATA[Create an OAuth 2.0 client ID (Get Client ID and Client secret)
+                <ul>
+                    <li>Go to <strong>API Access</strong></li>
+                    <li>Click on Create an OAuth 2.0 client ID</li>
+                    <li>Input Product Name and click Next button </li>
+                    <li>Choose <strong>Web Application</strong> type</li>
+                    <li>At <strong>Your Site or hostname</strong> setting, click <span style="color:blue;">(more options)</span> link</li>
+                    <li>Copy and paste this link: <span style="color:blue;">{RedirectUri}</span> to <strong>Authorized Redirect URIs</strong></li>
+                    <li>Copy and paste this link: <span style="color:blue;">{CoreHost}</span> to <strong>Authorized JavaScript Origins</strong></li>
+                    <li>Click Create client ID to complete.</li>
+                </ul>]]></phrase>
+		<phrase var_name="get_google_api_detail" added="1540527339"><![CDATA[Get Google API detail
+                <ul>
+                    <li>Insert the <strong>Client ID</strong>, <strong>Client secret</strong> and <strong>API key</strong> values into this form.</li>
+                    <li>Click Submit button to complete.</li>
+                </ul>]]></phrase>
+		<phrase var_name="time_left_until_event" added="1540527339">Time left until event</phrase>
+		<phrase var_name="time_left_n_until_event" added="1540527339"><![CDATA[Time left<br />until event]]></phrase>
+		<phrase var_name="menu_add_new_fevent" added="1540527339">Create New Event</phrase>
+		<phrase var_name="search_items" added="1540527339">Events</phrase>
+		<phrase var_name="view_more_items" added="1540527339">View More Events</phrase>
+		<phrase var_name="item_created_on_time_stamp_by_full_name" added="1540527339"><![CDATA[<a href="{link}">Event</a> created on {time_stamp} by <a href="{user_link}">{full_name}</a>.]]></phrase>
+		<phrase var_name="setting_fevent_show_event_in_pages" added="1540527339"><![CDATA[<title>Show Events In Pages</title><info>Display events in pages which a member has joined/liked.</info>]]></phrase>
+		<phrase var_name="setting_fevent_number_of_event_upcoming_ongoing_block_home_page" added="1540527339"><![CDATA[<title>Number of Events on Upcoming Events, On Going Events Block</title><info>Number of Events on Upcoming Events, On Going Events Block.</info>]]></phrase>
+		<phrase var_name="setting_fevent_number_of_event_most_liked_viewed_discussed_block" added="1540527339"><![CDATA[<title>Number of Events on Most Liked Events, Most Viewed Events, Most Discussed Events Block</title><info>Number of Events on Most Liked Events, Most Viewed Events, Most Discussed Events Block.</info>]]></phrase>
+		<phrase var_name="pagesevents" added="1540527339"><![CDATA[Pages&#039; Events]]></phrase>
+		<phrase var_name="add_address_city_zip_country_no_range" added="1540527339">Add address/city/zip/country</phrase>
+		<phrase var_name="duration" added="1540527339">Duration</phrase>
+		<phrase var_name="day_s" added="1540527339">day(s)</phrase>
+		<phrase var_name="hour_s" added="1540527339">hour(s)</phrase>
+		<phrase var_name="recurrent_period" added="1540527339">Recurrent Period</phrase>
+		<phrase var_name="repeat_until" added="1540527339">Repeat Until</phrase>
+		<phrase var_name="select_repeat_until_date" added="1540527339">Please select Repeat Until date</phrase>
+		<phrase var_name="from_1_to_28" added="1540527339">From 1 to 28</phrase>
+		<phrase var_name="from_1_to_29" added="1540527339">From 1 to 29</phrase>
+		<phrase var_name="from_1_to_30" added="1540527339">From 1 to 30</phrase>
+		<phrase var_name="from_1_to_23" added="1540527339">From 1 to 23</phrase>
+		<phrase var_name="from_1_to_6" added="1540527339">From 1 to 6</phrase>
+		<phrase var_name="ru_greater_st" added="1540527339">Repeat Until has to be greater Start Time</phrase>
+		<phrase var_name="correct_hours" added="1540527339">Please correct hour(s)</phrase>
+		<phrase var_name="correct_ru_logic_st" added="1540527339">Please correct Repeat Until to be logical with Start Time</phrase>
+		<phrase var_name="correct_days" added="1540527339">Please correct day(s)</phrase>
+		<phrase var_name="h_from_1_to_27" added="1540527339">From 1 to 27</phrase>
+		<phrase var_name="h_from_1_to_28" added="1540527339">From 1 to 28</phrase>
+		<phrase var_name="h_from_1_to_29" added="1540527339">From 1 to 29</phrase>
+		<phrase var_name="h_from_1_to_30" added="1540527339">From 1 to 30</phrase>
+		<phrase var_name="h_from_1_to_number" added="1540527339">From 1 to {number}</phrase>
+		<phrase var_name="user_setting_allow_delete_attendees_of_past_repeat_event" added="1540527339">Allow owner to delete attendees of past event if it is recurrent event?</phrase>
+		<phrase var_name="del_attendees_past_event" added="1540527339">Delete all attendees of past event?</phrase>
+		<phrase var_name="at_lower" added="1540527339">at</phrase>
+		<phrase var_name="no_edit_permission_repeat" added="1540527339">You do not has permission to edit repeat time. Please contact Administrator.</phrase>
+		<phrase var_name="s_upcoming" added="1540527339">Upcoming</phrase>
+		<phrase var_name="s_ongoing" added="1540527339">On Going</phrase>
+		<phrase var_name="s_past" added="1540527339">Past</phrase>
+		<phrase var_name="ue_title" added="1540527339">Upcoming Events</phrase>
+		<phrase var_name="left" added="1540527339">left</phrase>
+		<phrase var_name="start_in" added="1540527339">start_in</phrase>
+		<phrase var_name="start_in_uppercase" added="1540527339">Start in</phrase>
+		<phrase var_name="oge_title" added="1540527339">On Going Events</phrase>
+		<phrase var_name="hover_repeat" added="1540527339">Repeat</phrase>
+		<phrase var_name="hover_starttime" added="1540527339">Start Time</phrase>
+		<phrase var_name="hover_nst" added="1540527339">Next Start Time</phrase>
+		<phrase var_name="hover_endtime" added="1540527339">End Time</phrase>
+		<phrase var_name="hover_frompage" added="1540527339">From Page</phrase>
+		<phrase var_name="hover_owner" added="1540527339">Owner</phrase>
+		<phrase var_name="link" added="1540527339">Link</phrase>
+		<phrase var_name="type_upcoming" added="1540527339">Upcoming</phrase>
+		<phrase var_name="type_ongoing" added="1540527339">On Going</phrase>
+		<phrase var_name="type_past" added="1540527339">End</phrase>
+		<phrase var_name="t_addadmins" added="1540527339">Admins</phrase>
+		<phrase var_name="event_admins_successfully_updated" added="1540527339">fevent_admins_successfully_updated</phrase>
+		<phrase var_name="admins_updated" added="1540527339">Event admins successfully updated.</phrase>
+		<phrase var_name="n_admins" added="1540527339"><![CDATA[You have been promoted to be the admin of event "{title}".]]></phrase>
+		<phrase var_name="adv_search" added="1540527339">Advanced Search</phrase>
+		<phrase var_name="advs_reset" added="1540527339">Reset</phrase>
+		<phrase var_name="advs_address" added="1540527339">Address</phrase>
+		<phrase var_name="advs_edit_location" added="1540527339">Edit your current location</phrase>
+		<phrase var_name="v_locationvenue" added="1540527339">Location/Venue</phrase>
+		<phrase var_name="v_country" added="1540527339">Country</phrase>
+		<phrase var_name="v_address" added="1540527339">Address</phrase>
+		<phrase var_name="v_city" added="1540527339">City</phrase>
+		<phrase var_name="v_zipcode" added="1540527339">Zip/Postal Code</phrase>
+		<phrase var_name="v_desc" added="1540527339">Description</phrase>
+		<phrase var_name="m_mypagesevents" added="1540527339"><![CDATA[My Pages&#039; Events]]></phrase>
+		<phrase var_name="v_getdirections" added="1540527339">Get Directions</phrase>
+		<phrase var_name="v_getdirection" added="1540527339">Get Direction</phrase>
+		<phrase var_name="setting_fevent_event_item_width" added="1540527339"><![CDATA[<title>Event - Item Width</title><info>The width of the item in pixels which are displayed in Advanced Event page.</info>]]></phrase>
+		<phrase var_name="setting_fevent_pages_item_width" added="1540527339"><![CDATA[<title>Pages - Item Width</title><info>The width of the item in pixels which are displayed in Pages page.</info>]]></phrase>
+		<phrase var_name="setting_fevent_profile_item_width" added="1540527339"><![CDATA[<title>Profile - Item Width</title><info>The width of the item in pixels which are displayed in Profile page.</info>]]></phrase>
+		<phrase var_name="setting_fevent_event_gap" added="1540527339"><![CDATA[<title>Event - Gap Between Items</title><info>The gap between items in pixels which are applied in Advanced Event page.</info>]]></phrase>
+		<phrase var_name="setting_fevent_pages_gap" added="1540527339"><![CDATA[<title>Pages - Gap Between Items</title><info>The gap between items in pixels which are applied in Pages page.</info>]]></phrase>
+		<phrase var_name="setting_fevent_profile_gap" added="1540527339"><![CDATA[<title>Profile - Gap Between Items</title><info>The gap between items in pixels which are applied in Profile page.</info>]]></phrase>
+		<phrase var_name="setting_fevent_event_number_of_items_on_row" added="1540527339"><![CDATA[<title>Event - Number of Items on Row</title><info>Number of items on row which are applied in Advanced Event page.</info>]]></phrase>
+		<phrase var_name="setting_fevent_pages_number_of_items_on_row" added="1540527339"><![CDATA[<title>Pages - Number of Items on Row</title><info>Number of items on row which are applied in Pages page.</info>]]></phrase>
+		<phrase var_name="setting_fevent_profile_number_of_items_on_row" added="1540527339"><![CDATA[<title>Profile - Number of Items on Row</title><info>Number of items on row which are applied in Profile page.</info>]]></phrase>
+		<phrase var_name="s_repeat" added="1540527339">Repeat</phrase>
+		<phrase var_name="n_repeattonormal" added="1540527339">Due to upgrading version of Advanced Event, all your existing recurring events were changed to normal events. Please go to My Events to re-edit if need.</phrase>
+		<phrase var_name="w_tooltip" added="1540527339">Change to recurring event</phrase>
+		<phrase var_name="w_warning" added="1540527339">Warning</phrase>
+		<phrase var_name="u_warning" added="1540527339">Advanced Event successfully upgraded. After upgrading, all existing recurring events will be changed to normal events because of data consistency.</phrase>
+		<phrase var_name="a_rce" added="1540527339">Recurrent Event</phrase>
+		<phrase var_name="a_done" added="1540527339">Done</phrase>
+		<phrase var_name="s_st" added="1540527339">Start Time</phrase>
+		<phrase var_name="s_et" added="1540527339">End Time</phrase>
+		<phrase var_name="u_from" added="1540527339">From</phrase>
+		<phrase var_name="u_to" added="1540527339">To</phrase>
+		<phrase var_name="from_0_to_23" added="1540527339">From 0 to 23</phrase>
+		<phrase var_name="h_from_0_to_29" added="1540527339">From 0 to 29</phrase>
+		<phrase var_name="from_0_to_6" added="1540527339">From 0 to 6</phrase>
+		<phrase var_name="h_from_0_to_number" added="1540527339">From 0 to {number}</phrase>
+		<phrase var_name="txt_hint_total" added="1540527339">The total duration is greater than 0 hour</phrase>
+		<phrase var_name="h_from_0_to_30" added="1540527339">From 0 to 30</phrase>
+		<phrase var_name="cf_option_2_3" added="1540527339">Choose 3</phrase>
+		<phrase var_name="cf_option_2_4" added="1540527339">Choose 4</phrase>
+		<phrase var_name="cf_option_1_1" added="1540527339">Vu</phrase>
+		<phrase var_name="cf_option_1_2" added="1540527339">Du</phrase>
+		<phrase var_name="cf_option_1_3" added="1540527339">My</phrase>
+		<phrase var_name="cf_option_1_4" added="1540527339">Huong</phrase>
+		<phrase var_name="start" added="1540527339">Start</phrase>
+		<phrase var_name="grid_view" added="1540527339">Grid View</phrase>
+		<phrase var_name="list_view" added="1540527339">List View</phrase>
+		<phrase var_name="map_view" added="1540527339">Map View</phrase>
+		<phrase var_name="one_time_event" added="1540527339">One time event</phrase>
+		<phrase var_name="repeat_event" added="1540527339">Repeat event</phrase>
+		<phrase var_name="setting_fevent_max_instance_repeat_event" added="1540527339"><![CDATA[<title>Maximum instances of each repeat events</title><info>Maximum instances of each repeat events</info>]]></phrase>
+		<phrase var_name="start_event" added="1540527339">Start Event</phrase>
+		<phrase var_name="end_event" added="1540527339">End Event</phrase>
+		<phrase var_name="end_repeat" added="1540527339">End Repeat</phrase>
+		<phrase var_name="after" added="1540527339">After</phrase>
+		<phrase var_name="allow_maximum" added="1540527339">Allow maximum</phrase>
+		<phrase var_name="event_s" added="1540527339">Event(s)</phrase>
+		<phrase var_name="at_uppercase" added="1540527339">At</phrase>
+		<phrase var_name="end_event_time_has_to_be_greater_start_event_time" added="1540527339">End Event time has to be greater Start Event time</phrase>
+		<phrase var_name="end_event_time_has_to_be_greater_than_start_event_time" added="1540527339">End Event time has to be greater than Start Event time</phrase>
+		<phrase var_name="end_repeat_allow_maximum_number_event_s" added="1540527339">End Repeat - Allow maximum {number} event(s)</phrase>
+		<phrase var_name="end_time_has_to_be_greater_than_start_time" added="1540527339">End Time has to be greater than Start Time</phrase>
+		<phrase var_name="edit_apply_for" added="1540527339">Edit apply for</phrase>
+		<phrase var_name="please_choose_the_type_of_event_to_edit" added="1540527339">Please choose the type of event to edit</phrase>
+		<phrase var_name="only_this_event" added="1540527339">Only this event</phrase>
+		<phrase var_name="all_events_uppercase" added="1540527339">All events</phrase>
+		<phrase var_name="following_events" added="1540527339">Following events</phrase>
+		<phrase var_name="confirm" added="1540527339">Confirm</phrase>
+		<phrase var_name="note_apply_only_data_in_event_details_tab" added="1540527339">Note: apply ONLY data in Event Details tab</phrase>
+		<phrase var_name="menu_fevent_create_new_event_4a0c1636dcb2e9487f90062037e5d6a1" added="1540527339">Create New Event</phrase>
+		<phrase var_name="view_more" added="1540527339">View More</phrase>
+		<phrase var_name="view_all" added="1540527339">View All</phrase>
+		<phrase var_name="this_event_repeats_everyday" added="1540527339">This event repeats everyday</phrase>
+		<phrase var_name="this_event_repeats_every_week_on" added="1540527339">This event repeats every week on</phrase>
+		<phrase var_name="this_event_repeats_every_month" added="1540527339">This event repeats every month</phrase>
+		<phrase var_name="how_would_you_want_to_submit_your_rsvp" added="1540527339">How would you want to submit your rsvp?</phrase>
+		<phrase var_name="please_choose_the_type_of_event_to_apply" added="1540527339">Please choose the type of event to apply</phrase>
+		<phrase var_name="recurring_events" added="1540527339">Recurring Events</phrase>
+		<phrase var_name="subscribe_businesses" added="1540527339">Subscribe Businesses</phrase>
+		<phrase var_name="radius_mile" added="1540527339">Radius Mile</phrase>
+		<phrase var_name="subscribe" added="1540527339">Subscribe</phrase>
+		<phrase var_name="you_have_to_fill_email_field" added="1540527339">You have to fill email field</phrase>
+		<phrase var_name="subscribe_successfully" added="1540527339">Subscribe successfully</phrase>
+		<phrase var_name="subscribe_event" added="1540527339">Subscribe Event</phrase>
+		<phrase var_name="event_you_may_interested_in_site_name" added="1540527339">Event you may interested in {site_name}</phrase>
+		<phrase var_name="dear_sir_or_madam_here_are_businesses_you_may_interested_in_site_name_data_event_regards_site_nam" added="1540527339">Dear Sir or Madam, 
+
+List of events will be started within {within_day} days:
+
+{data_event}
+
+Regards,
+{site_name}</phrase>
+		<phrase var_name="owner" added="1540527339">Owner</phrase>
+		<phrase var_name="setting_subscribe_within_day" added="1540527339"><![CDATA[<title>Send email to subscribers information of new events which happen within days</title><info>Send email to subscribers information of new events which happen within days</info>]]></phrase>
+		<phrase var_name="email_newsletter_events_will_be_started_within_within_day_days" added="1540527339">Email newsletter: events will be started within {within_day} days</phrase>
+		<phrase var_name="left_the_event" added="1540527339">left the event</phrase>
+		<phrase var_name="start_in_the_event" added="1540527339">start in the event</phrase>
+		<phrase var_name="active_calendar_api_service_new" added="1540527339"><![CDATA[Active Calendar API service (Get API key)
+ <ul>
+<li>In project Dashboard, click on <strong> Enable and manage APIs </strong>page</li>
+<li>Choose <strong>Google Apps APIs >> Calendar API</strong></li>
+<li>Click on Enable API button to activate this service</li>
+<li>Click on <strong>Credentials</strong> in left menu </li>
+<li>Under section <strong>APIs Credentials</strong>, click on Add credentials button and select API Key<div><img src={sCorePath}/image/apikey-1.png></div></li>
+<li>On the popup click the button Server Key and click Create
+	<div><img src={sCorePath}/image/apikey-2.png></div>
+	<div><img src={sCorePath}/image/apikey-3.png></div></li>
+  </ul>]]></phrase>
+		<phrase var_name="create_an_oauth_client_id_new" added="1540527339"><![CDATA[Create an OAuth 2.0 client ID (Get Client ID and Client secret)
+<ul>
+<li>Open <strong>Credentials >> OAuth consent screen</strong> page</li>
+<li>Input <i>Product name shown to users,Email</i> and click Save button</li>
+
+<li>Open <strong>Credentials</strong> page, under section <strong>APIs Credentials</strong>, click on <strong>Add credentials</strong> button and select <strong>OAuth 2.0 client ID</strong>
+ <br>
+ <div><img src={sCorePath}/image/clientkey-1.png></div></li>
+<li>Choose <strong>Web Application</strong> type</li>
+<li>Copy and paste this link: <span style="color:blue;">{CoreHost}</span> to <strong>Authorized JavaScript Origins</strong></li>
+<li>Copy and paste this link: <span style="color:blue;">{RedirectUri}</span> to <strong>Authorized Redirect URIs</strong></li>
+<li>Click Create client ID to complete
+ <div><img src={sCorePath}/image/clientkey-2.png></div></li>
+</ul>]]></phrase>
+		<phrase var_name="create_a_project_new" added="1540527339"><![CDATA[Create a Project.
+<div><img src={sCorePath}/image/create-project.png></div>]]></phrase>
+		<phrase var_name="setting_fevent_number_of_event_upcoming_past_block_right_side" added="1540527339"><![CDATA[<title>Number of Events For Upcoming Events, Past Events Block on Right Side.</title><info>Number of Events For Upcoming Events, Past Events Block on Right Side.</info>]]></phrase>
+		<phrase var_name="you_have_to_input_location" added="1540527339">You have to input location</phrase>
+		<phrase var_name="you_have_to_input_radius" added="1540527339">You have to input radius</phrase>
+		<phrase var_name="admin_menu_manage_events" added="1540527339">Manage Events</phrase>
+		<phrase var_name="search_filter" added="1540527339">Search Filter</phrase>
+		<phrase var_name="event_owner" added="1540527339">Event Owner</phrase>
+		<phrase var_name="any" added="1540527339">Any</phrase>
+		<phrase var_name="status" added="1540527339">Status</phrase>
+		<phrase var_name="not_featured" added="1540527339">Not Featured</phrase>
+		<phrase var_name="search" added="1540527339">Search</phrase>
+		<phrase var_name="sponsor" added="1540527339">Sponsor</phrase>
+		<phrase var_name="not_sponsor" added="1540527339">Not Sponsor</phrase>
+		<phrase var_name="rsv_only_this_event" added="1540527339">Only this event</phrase>
+		<phrase var_name="this_event_and_all_following_events" added="1540527339">This event and all following events</phrase>
+		<phrase var_name="monday" added="1540527339">Monday</phrase>
+		<phrase var_name="tuesday" added="1540527339">Tuesday</phrase>
+		<phrase var_name="wednesday" added="1540527339">Wednesday</phrase>
+		<phrase var_name="thursday" added="1540527339">Thursday</phrase>
+		<phrase var_name="friday" added="1540527339">Friday</phrase>
+		<phrase var_name="saturday" added="1540527339">Saturday</phrase>
+		<phrase var_name="only_this_event_tut" added="1540527339">This option will change this instance but not any other event in the series. This option is helpful when you want to change or delete just one event. When you use this option, this instance will now become an exception to the rest of the series, but will still be considered as part of the series. Therefore, keep in mind that if you change only one instance in a series, those changes might be overwritten if you later save a change across an entire series of repeated events.</phrase>
+		<phrase var_name="this_option_will_change_this_instance_as_well_as_all_future_events_in_the_series_if_you_don_t_change_date_or_time_following_events_change_will_not_overwrite_changes_you_previously_made_to_individual_instances_of_the_series_if_you_change_date_or_time_then_" added="1540527339"><![CDATA[This option will change this instance as well as all future events in the series. If you don&#8217;t change date or time, "Following events" change will not overwrite changes you previously made to individual instances of the series. If you change date or time, then previous changes to future instances of events will be overwritten. 
+Keep in mind, if you change date or time, the current and future events will essentially become a separate series from the past events. So if you later save a change to your future events using "All events," it won&#039;t affect those past events from your original series.]]></phrase>
+		<phrase var_name="following_events_tut" added="1540527339"><![CDATA[This option will change this instance as well as all future events in the series. If you don&#8217;t change date or time, "Following events" change will not overwrite changes you previously made to individual instances of the series. If you change date or time, then previous changes to future instances of events will be overwritten. 
+Keep in mind, if you change date or time, the current and future events will essentially become a separate series from the past events. So if you later save a change to your future events using "All events," it won&#039;t affect those past events from your original series.]]></phrase>
+		<phrase var_name="all_events_tut" added="1540527339"><![CDATA[This option will change this instance as well as all future and past events in the series. Please note that in some cases, "All events" change will overwrite changes you previously made to single events in the series. If you change date or time, your changes will be made to all events in the series (including any event that you made individual change to) and will overwrite that event&#039;s individual changes. If you don&#039;t change event&#039;s date or time, your changes will be made to all events in the series (including any event that you made individual changes to) and won&#039;t overwrite that event&#039;s individual changes.]]></phrase>
+		<phrase var_name="setting_allow_change_date_recurrent_event" added="1540527339"><![CDATA[<title>&#42; Allow to change date on recurring events</title><info>&#42; Allow to change date on recurring events</info>]]></phrase>
+		<phrase var_name="setting_allow_change_time_recurrent_event" added="1540527339"><![CDATA[<title>&#42; Allow to change time on recurring events</title><info>&#42; Allow to change time on recurring events</info>]]></phrase>
+		<phrase var_name="changes_to_an_event_s_start_end_date_or_time_will_require_guests" added="1540527339"><![CDATA[Changes to an event&#039;s start/end date or time will require guests to submit RSVP on the invitations again.]]></phrase>
+		<phrase var_name="the_event_title_has_moved_to_different_time" added="1540527339"><![CDATA[The event "{title}" has moved to different time.]]></phrase>
+		<phrase var_name="the_event_title_has_changed_it_s_time" added="1540527339"><![CDATA[The event "{title}" has changed it's time.]]></phrase>
+		<phrase var_name="the_event_title_has_changed_it_s_location" added="1540527339"><![CDATA[The event "{title}" has changed it's location.]]></phrase>
+		<phrase var_name="setting_fevent_start_week" added="1540527339"><![CDATA[<title>Start week for calendar</title><info>Start week for calendar</info>]]></phrase>
+		<phrase var_name="sunday" added="1540527339">Sunday</phrase>
+		<phrase var_name="update_a_custom_field" added="1540527339">Update a custom field</phrase>
+		<phrase var_name="event_successfully_featured" added="1540527339">Event successfully featured.</phrase>
+		<phrase var_name="event_successfully_un_featured" added="1540527339">Event successfully unfeatured.</phrase>
+		<phrase var_name="setting_google_api_keys_location" added="1540527339"><![CDATA[<title>Google API Key</title><info>Please refer to this guide to get Google API Key: 
+https://developers.google.com/places/web-service/get-api-key</info>]]></phrase>
+		<phrase var_name="select_form_select" added="1540527339">Select</phrase>
+		<phrase var_name="Most Liked Events Limits" added="1540527339" />
+		<phrase var_name="Define the limit of how many most liked events can be displayed when viewing the events section. Set 0 will hide this block." added="1540527339" />
+		<phrase var_name="&quot;Most Liked Events Limit&quot; must be greater than or equal to 0" added="1540527339" />
+		<phrase var_name="Most Viewed Events Limits" added="1540527339" />
+		<phrase var_name="Define the limit of how many most viewed events can be displayed when viewing the events section. Set 0 will hide this block." added="1540527339" />
+		<phrase var_name="&quot;Most Viewed Events Limit&quot; must be greater than or equal to 0" added="1540527339" />
+		<phrase var_name="Most Discussed Events Limits" added="1540527339" />
+		<phrase var_name="Define the limit of how many most discussed events can be displayed when viewing the events section. Set 0 will hide this block." added="1540527339" />
+		<phrase var_name="&quot;Most Discussed Events Limit&quot; must be greater than or equal to 0" added="1540527339" />
+		<phrase var_name="setting_fevent_paging_mode" added="1540527339"><![CDATA[<title>Pagination Style</title><info>Select Pagination Style at Search Page.</info>]]></phrase>
+		<phrase var_name="setting_fevent_meta_keywords" added="1540527339"><![CDATA[<title>Advanced Events Meta Keywords</title><info>Meta keywords that will be displayed on sections related to the Advanced Events app. To edit this setting, please go to <i>AdminCP > Globalization > Phrases</i>, search and edit phrase have var name is: "seo_fevent_meta_keywords" ]]></phrase>
+		<phrase var_name="setting_fevent_meta_description" added="1540527339"><![CDATA[<title>Advanced Events Meta Description</title><info>Meta description added to pages related to the Advanced Events app. To edit this setting, please go to <i>AdminCP > Globalization > Phrases</i>, search and edit phrase have var name is: "seo_fevent_meta_description" ]]></phrase>
+		<phrase var_name="setting_fevent_display_event_created_in_group" added="1540527339"><![CDATA[<title>Display events which created in Group to the All Events page at the Advanced Events app</title><info>Enable to display all public events to the both Advanced Events page in group detail and All Events page in Advanced Events app. Disable to display events created by an users to the both Advanced Events page in group detail and My Events page of this user in Advanced Events app and nobody can see these events in Advanced Events app but owner.</info>]]></phrase>
+		<phrase var_name="setting_fevent_display_event_created_in_page" added="1540527339"><![CDATA[<title>Display events which created in Page to the All Events page at the Advanced Events app</title><info>Enable to display all public events to the both Advanced Events page in page detail and All Events page in Advanced Events app. Disable to display events created by an users to the both Advanced Events page in page detail and My Events page of this user in Advanced Events app and nobody can see these events in Advanced Events app but owner.</info>]]></phrase>
+		<phrase var_name="Upcoming Events Limits" added="1540527339" />
+		<phrase var_name="Define the limit of how many upcoming events can be displayed when viewing the events section. Set 0 will hide this block." added="1540527339" />
+		<phrase var_name="&quot;Upcoming Events Limit&quot; must be greater than or equal to 0" added="1540527339" />
+		<phrase var_name="Past Events Limits" added="1540527339" />
+		<phrase var_name="Define the limit of how many past events can be displayed when viewing the events section. Set 0 will hide this block." added="1540527339" />
+		<phrase var_name="&quot;Past Events Limit&quot; must be greater than or equal to 0" added="1540527339" />
+		<phrase var_name="&quot;Points received when adding a events within the advanced event&quot; must be greater than or equal to 0" added="1540527339" />
+		<phrase var_name="&quot;Max file size for events photos&quot; must be greater than or equal to 0" added="1540527339" />
+		<phrase var_name="&quot;Time to wait until user are allowed to send out another mass email&quot; must be greater than or equal to 0" added="1540527339" />
+		<phrase var_name="&quot;Time to wait before user can add new event&quot; must be greater than or equal to 0" added="1540527339" />
+		<phrase var_name="&quot;Sponsor event price&quot; must be greater than or equal to 0" added="1540527339" />
+		<phrase var_name="fevent_default_photo" added="1540527339">Advanced Events Default Photo</phrase>
+		<phrase var_name="seo_fevent_meta_keywords" added="1540527339">event, party, arts, plan, repeat</phrase>
+		<phrase var_name="seo_fevent_meta_description" added="1540527339">Create your events and invite your friends to come</phrase>
+		<phrase var_name="event_s_successfully_featured" added="1540527339">Event(s) successfully featured</phrase>
+		<phrase var_name="event_s_successfully_unfeatured" added="1540527339">Event(s) successfully un-featured</phrase>
+		<phrase var_name="you_don_t_have_permission_to_action_this_item" added="1540527339"><![CDATA[You don't have permission to {action} this {item}.]]></phrase>
+		<phrase var_name="encourage_sponsor_fevents" added="1540527339">Sponsor Your Events</phrase>
+		<phrase var_name="menu_fevent_add_new_event" added="1540527339">Add New Event</phrase>
+		<phrase var_name="purchase_fevent_sponsor_completed" added="1540527339">Your purchase to sponsor your event has just been made successfully.</phrase>
+		<phrase var_name="purchase_fevent_sponsor_pending_approval" added="1540527339">Your purchase to sponsor your event has just been made successfully however it is pending an Admins approval.</phrase>
+		<phrase var_name="the_event_you_are_looking_for_either_does_not_exist_or_has_been_removed" added="1540527339">The event you are looking for either does not exist or has been removed</phrase>
+		<phrase var_name="cannot_find_the_uploaded_photo_please_try_again" added="1540527339">Cannot find the uploaded photo, please try again</phrase>
+		<phrase var_name="photo_s_uploaded_successfully" added="1540527339">Photo(s) uploaded successfully.</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_event_permanently" added="1540527339">Are you sure you want to delete this event permanently</phrase>
+		<phrase var_name="Feature Selected" added="1540527339" />
+		<phrase var_name="Un-Feature Selected" added="1540527339" />
+		<phrase var_name="event_s_successfully_sponsored" added="1540527339">Event(s) successfully sponsored</phrase>
+		<phrase var_name="event_s_successfully_unsponsored" added="1540527339">Event(s) successfully un-sponsored</phrase>
+		<phrase var_name="Sponsor Selected" added="1540527339" />
+		<phrase var_name="Un-Sponsor Selected" added="1540527339" />
+		<phrase var_name="admin_menu_user_group_settings" added="1540527339">User Group Settings</phrase>
+		<phrase var_name="user_setting_max_upload_image_event" added="1540527339">Maximum number of images per upload</phrase>
+		<phrase var_name="years_old" added="1540527339">years old</phrase>
+		<phrase var_name="apply_edits_for" added="1540527339">Apply edits for:</phrase>
+		<phrase var_name="is_birthday" added="1540527339">s Birthday</phrase>
+		<phrase var_name="event_on" added="1540527339">Events on</phrase>
+		<phrase var_name="categories_selected" added="1540527339"> categories selected</phrase>
+		<phrase var_name="birthday" added="1540527339">Birthday</phrase>
+		<phrase var_name="Repeated" added="1540527339" />
+		<phrase var_name="ago" added="1540527339">ago</phrase>
+		<phrase var_name="you_have_total_pending_events" added="1540527339">You have {total} pending events</phrase>
+		<phrase var_name="controller_fevent.index" added="1540527339">Adv. Event Home</phrase>
+		<phrase var_name="controller_fevent.pagecalendar" added="1540527339">Adv. Event Calendar</phrase>
+		<phrase var_name="controller_fevent.profile" added="1540527339">Adv. Event Profile</phrase>
+		<phrase var_name="controller_fevent.view" added="1540527339">Adv. Event View</phrase>
+		<phrase var_name="you_have_selected_that_this_field_is_a_select_custom_field_which_requires_at_least_one_option_s" added="1540527339"><![CDATA[You have selected that this field is a "{select}" custom field, which requires at least one option.]]></phrase>
+		<phrase var_name="attend_event" added="1540527339">is attending this event</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="true" guest="false" staff="true" module="fevent" ordering="0">allow_delete_attendees_of_past_repeat_event</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="true" guest="false" staff="true" module="fevent" ordering="0">can_view_gmap</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="false" guest="false" staff="false" module="fevent" ordering="0">can_add_gmap</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="false" guest="false" staff="false" module="fevent" ordering="0">can_add_custom_fields</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="false" guest="false" staff="false" module="fevent" ordering="0">can_manage_custom_fields</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="true" guest="true" staff="true" module="fevent" ordering="0">can_use_editor_on_event</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="true" guest="true" staff="true" module="fevent" ordering="0">can_edit_own_event</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="integer" admin="1" user="1" guest="0" staff="1" module="fevent" ordering="0">points_fevent</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="true" guest="true" staff="true" module="fevent" ordering="0">can_post_comment_on_event</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="false" guest="false" staff="false" module="fevent" ordering="0">can_edit_other_event</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="false" guest="false" staff="false" module="fevent" ordering="0">can_delete_other_event</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="true" guest="true" staff="true" module="fevent" ordering="0">can_delete_own_event</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="integer" admin="500" user="500" guest="500" staff="500" module="fevent" ordering="0">max_upload_size_event</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="false" guest="false" staff="false" module="fevent" ordering="0">can_feature_events</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="false" guest="false" staff="false" module="fevent" ordering="0">can_approve_events</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="false" guest="false" staff="false" module="fevent" ordering="0">can_view_pirvate_events</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="false" user="false" guest="false" staff="false" module="fevent" ordering="0">event_must_be_approved</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="integer" admin="0" user="60" guest="60" staff="60" module="fevent" ordering="0">total_mass_emails_per_hour</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="true" guest="true" staff="true" module="fevent" ordering="0">can_access_event</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="integer" admin="0" user="0" guest="0" staff="0" module="fevent" ordering="0">flood_control_events</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="true" guest="false" staff="true" module="fevent" ordering="0">can_mass_mail_own_members</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="true" guest="false" staff="true" module="fevent" ordering="0">can_create_event</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="false" user="false" guest="false" staff="false" module="fevent" ordering="2">can_purchase_sponsor</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="true" guest="false" staff="true" module="fevent" ordering="0">can_attach_on_event</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="false" user="false" guest="false" staff="false" module="fevent" ordering="1">can_sponsor_fevent</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="boolean" admin="true" user="false" guest="false" staff="false" module="fevent" ordering="3">auto_publish_sponsored_item</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="string" admin="null" user="null" guest="null" staff="null" module="fevent" ordering="4">fevent_sponsor_price</setting>
+		<setting is_admin_setting="0" module_id="fevent" type="integer" admin="6" user="6" guest="6" staff="6" module="fevent" ordering="0">max_upload_image_event</setting>
+	</user_group_settings>
+</module>

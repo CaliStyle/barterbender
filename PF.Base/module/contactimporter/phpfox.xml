@@ -1,0 +1,399 @@
+<module>
+	<data>
+		<module_id>contactimporter</module_id>
+		<product_id>younet_contactimporter</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:6:{s:46:"contactimporter.admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:15:"contactimporter";i:1;s:19:"user-group-settings";}}s:42:"contactimporter.admin_menu_global_settings";a:1:{s:3:"url";a:2:{i:0;s:15:"contactimporter";i:1;s:8:"settings";}}s:36:"contactimporter.admin_menu_providers";a:1:{s:3:"url";a:2:{i:0;s:15:"contactimporter";i:1;s:9:"providers";}}s:43:"contactimporter.admin_menu_invitations_list";a:1:{s:3:"url";a:2:{i:0;s:15:"contactimporter";i:1;s:11:"invitations";}}s:45:"contactimporter.admin_menu_statistics_by_date";a:1:{s:3:"url";a:2:{i:0;s:15:"contactimporter";i:1;s:16:"statisticsbydate";}}s:49:"contactimporter.admin_menu_statistics_by_provider";a:1:{s:3:"url";a:2:{i:0;s:15:"contactimporter";i:1;s:20:"statisticsbyprovider";}}}]]></menu>
+		<phrase_var_name>module_contactimporter</phrase_var_name>
+		<version>4.02p2</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/07/contact_importer_icon1.png</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="contactimporter" parent_var_name="" m_connection="main" var_name="menu_contactimporter_inviter_fad58de7366495db4650cfefac2fcd61" ordering="3" url_value="contactimporter" version_id="2.0.5" disallow_access="" module="contactimporter" mobile_icon="street-view" />
+		<menu module_id="contactimporter" parent_var_name="" m_connection="" var_name="menu_contactimporter_invite_friends_d41d8cd98f00b204e9800998ecf8427e" ordering="101" url_value="contactimporter" version_id="2.0.5" disallow_access="" module="contactimporter" />
+		<menu module_id="contactimporter" parent_var_name="" m_connection="invite" var_name="menu_invite_pending_invitations_f8f9a65ed8c3611b4ae9198b7c8a3702" ordering="130" url_value="contactimporter.invitations" version_id="3.3.0" disallow_access="" module="contactimporter" />
+		<menu module_id="contactimporter" parent_var_name="" m_connection="invite" var_name="menu_invite_invite_friends_f8f9a65ed8c3611b4ae9198b7c8a3702" ordering="129" url_value="contactimporter" version_id="3.3.0" disallow_access="" module="contactimporter" />
+		<menu module_id="contactimporter" parent_var_name="" m_connection="footer" var_name="menu_contactimporter_invite_251d164643533a527361dbe1a7b9235d" ordering="31" url_value="contactimporter" version_id="3.3.0" disallow_access="" module="contactimporter" />
+		<menu module_id="contactimporter" parent_var_name="" m_connection="invite" var_name="menu_contactimporter_export_contacts_f8f9a65ed8c3611b4ae9198b7c8a3702" ordering="131" url_value="contactimporter.export" version_id="3.3.0" disallow_access="" module="contactimporter" />
+	</menus>
+	<settings>
+		<setting group="" module_id="contactimporter" is_hidden="0" type="integer" var_name="cron_send_mail" phrase_var_name="setting_cron_send_mail" ordering="1" version_id="3.3.0rc1">1</setting>
+		<setting group="" module_id="contactimporter" is_hidden="0" type="drop" var_name="cron_send_invite" phrase_var_name="setting_cron_send_invite" ordering="1" version_id="3.3.0rc1"><![CDATA[a:2:{s:7:"default";s:2:"20";s:6:"values";a:4:{i:0;s:2:"20";i:1;s:1:"5";i:2;s:2:"10";i:3;s:2:"15";}}]]></setting>
+		<setting group="" module_id="contactimporter" is_hidden="0" type="integer" var_name="how_many_pendings_to_show_per_page" phrase_var_name="setting_how_many_pendings_to_show_per_page" ordering="1" version_id="3.3.0">20</setting>
+		<setting group="" module_id="contactimporter" is_hidden="0" type="drop" var_name="contactimporter_paging_mode" phrase_var_name="setting_contactimporter_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:8:"loadmore";s:6:"values";a:3:{i:0;s:8:"loadmore";i:1;s:9:"next_prev";i:2;s:10:"pagination";}}]]></setting>
+		<setting group="" module_id="contactimporter" is_hidden="1" type="boolean" var_name="require_invite" phrase_var_name="setting_require_invite" ordering="1" version_id="3.4.0">0</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="contactimporter" module_id="contactimporter" component="top-inviter" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Top Inviter</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="core.index-visitor" module_id="contactimporter" component="home_contact_visiter" location="2" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Import Your Contacts</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="core.index-member" module_id="contactimporter" component="home_contact" location="2" is_active="1" ordering="0" disallow_access="" can_move="1">
+			<title>Import Your Contacts</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contactimporter" module_id="contactimporter" component="statistics" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Statistics</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="contactimporter" component="Statistics" m_connection="" module="contactimporter" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contactimporter" component="top-inviter" m_connection="" module="contactimporter" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contactimporter" component="home_contact" m_connection="" module="contactimporter" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contactimporter" component="home_contact_visiter" m_connection="" module="contactimporter" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contactimporter" component="invitations" m_connection="contactimporter.invitations" module="contactimporter" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="contactimporter" component="invite" m_connection="contactimporter.invite" module="contactimporter" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="contactimporter" component="index" m_connection="contactimporter" module="contactimporter" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="contactimporter" component="statistics" m_connection="" module="contactimporter" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contactimporter" component="export" m_connection="contactimporter.export" module="contactimporter" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="contactimporter" component="import-statistic" m_connection="" module="contactimporter" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_contactimporter" added="1550649148">Contact Importer</phrase>
+		<phrase var_name="translate_module_contactimporter" added="1550649148">Contact Importer</phrase>
+		<phrase var_name="menu_contactimporter_inviter_fad58de7366495db4650cfefac2fcd61" added="1550649148">Friends Inviter</phrase>
+		<phrase var_name="menu_contactimporter_invite_friends_d41d8cd98f00b204e9800998ecf8427e" added="1550649148">Invite Friends</phrase>
+		<phrase var_name="menu_contactimporter_invite_friends_8025c944319ee8c718c53ec70d137890" added="1550649148">Invite Friends</phrase>
+		<phrase var_name="menu_contactimporter_pending_invitations_ec70f822ee6bbe43943e1fc631b277fd" added="1550649148">Pending Invitations</phrase>
+		<phrase var_name="homepage_contact" added="1550649148">Import Your Contacts</phrase>
+		<phrase var_name="admin_menu_global_settings" added="1550649148">Global Settings</phrase>
+		<phrase var_name="admin_menu_providers" added="1550649148">Providers</phrase>
+		<phrase var_name="default_invite_message" added="1550649148">Default invite message</phrase>
+		<phrase var_name="message_label" added="1550649148">Message Body</phrase>
+		<phrase var_name="save_change" added="1550649148">Save Changes</phrase>
+		<phrase var_name="member_lever_settings" added="1550649148">Member Level Settings</phrase>
+		<phrase var_name="member_lever_settings_description" added="1550649148">These settings are applied on a per member level basis. Start by selecting the member level you want to modify, then adjust the settings for that level below.</phrase>
+		<phrase var_name="member_level" added="1550649148">Member Level</phrase>
+		<phrase var_name="maximum_allowed_invitations" added="1550649148">Maximum Allowed Invitations</phrase>
+		<phrase var_name="default_invite_message_text" added="1550649148">You are being invited to join our social network.</phrase>
+		<phrase var_name="update_default_message" added="1550649148">The default message invitation was updated.</phrase>
+		<phrase var_name="maximum_allowed_invitations_update" added="1550649148">The Maximum Allowed Invitations for each group users was updated.</phrase>
+		<phrase var_name="contact_providers_name" added="1550649148">Provider Name</phrase>
+		<phrase var_name="contact_providers_title" added="1550649148">Title Name</phrase>
+		<phrase var_name="contact_providers_type" added="1550649148">Provider Type</phrase>
+		<phrase var_name="contact_providers_active" added="1550649148">Enable/Disable</phrase>
+		<phrase var_name="admincp_providers_name" added="1550649148">Providers</phrase>
+		<phrase var_name="admincp_providers_title" added="1550649148">Title</phrase>
+		<phrase var_name="admincp_providers_type" added="1550649148">Type</phrase>
+		<phrase var_name="admincp_providers_logo" added="1550649148">Logo</phrase>
+		<phrase var_name="admincp_providers_active" added="1550649148">Enabled/Disabled</phrase>
+		<phrase var_name="admincp_providers_order" added="1550649148">Order</phrase>
+		<phrase var_name="admincp_providers_avatar" added="1550649148">Avatar/Display</phrase>
+		<phrase var_name="admincp_providers_version" added="1550649148">Version</phrase>
+		<phrase var_name="admincp_providers_option" added="1550649148">Options</phrase>
+		<phrase var_name="contact_providers_edit" added="1550649148">Edit Provider Info</phrase>
+		<phrase var_name="import_email_contact_list" added="1550649148">Import Your E-mail Contact List</phrase>
+		<phrase var_name="get_contact_description_email" added="1550649148">Get contacts from mail services</phrase>
+		<phrase var_name="import_contact" added="1550649148">Import Contacts</phrase>
+		<phrase var_name="inviete_by_manually" added="1550649148">Invite by manually typing emails</phrase>
+		<phrase var_name="or" added="1550649148">Or</phrase>
+		<phrase var_name="upload_file_csv" added="1550649148">Upload File CSV</phrase>
+		<phrase var_name="read_contact" added="1550649148">Read Contacts</phrase>
+		<phrase var_name="import_your_socail_contact_list" added="1550649148">Import Your Social Contact List</phrase>
+		<phrase var_name="get_contact_description_social" added="1550649148">Get contacts from social network services.</phrase>
+		<phrase var_name="user" added="1550649148">User</phrase>
+		<phrase var_name="provider_text" added="1550649148">Provider</phrase>
+		<phrase var_name="your_contacts" added="1550649148">Your contacts</phrase>
+		<phrase var_name="the_following_people_are_not_your_friends" added="1550649148">The following people are not your friends yet, please select to add connections</phrase>
+		<phrase var_name="name" added="1550649148">Name</phrase>
+		<phrase var_name="avatar" added="1550649148">Avatar</phrase>
+		<phrase var_name="not_have_any_contacts" added="1550649148">You do not have any contacts in your address book</phrase>
+		<phrase var_name="custom_message_title" added="1550649148">Custom Message</phrase>
+		<phrase var_name="send_invites" added="1550649148">Send Invites</phrase>
+		<phrase var_name="are_not_joined_yet" added="1550649148">The following people are not joined yet, please select to send invitations</phrase>
+		<phrase var_name="you_can_send" added="1550649148">You can send</phrase>
+		<phrase var_name="invitations" added="1550649148">invitations</phrase>
+		<phrase var_name="admin_menu_invitations_list" added="1550649148">Invitations List</phrase>
+		<phrase var_name="total_contats_you_sent_the_invitations" added="1550649148">Total contacts you sent the invitations</phrase>
+		<phrase var_name="your_contacts_from_emails" added="1550649148">Your contacts from Emails</phrase>
+		<phrase var_name="your_contacts_from_socials" added="1550649148">Your contacts from Socials</phrase>
+		<phrase var_name="menu_contactimporter_export_csv_8025c944319ee8c718c53ec70d137890" added="1550649148">Export Contacts</phrase>
+		<phrase var_name="block_all_further_email_messages" added="1550649148"><![CDATA[<p>You were added in the Unsubscribe that mean you will block all further email messages. If at the first you visit, please <a href="{signup}">Sign Up</a> for getting more information Or <a href="{login}">Login</a></p>]]></phrase>
+		<phrase var_name="you_were_invited_by" added="1550649148"><![CDATA[<p>You were invited for visiting. If at the first you visit, please <a href="{signup}">Sign Up</a> for getting more information Or <a href="{login}">Login</a></p>]]></phrase>
+		<phrase var_name="facebook_settings" added="1550649148">Facebook Settings</phrase>
+		<phrase var_name="facebook_api_key" added="1550649148">Facebook API Key:</phrase>
+		<phrase var_name="facebook_secret" added="1550649148">Facebook Secret:</phrase>
+		<phrase var_name="application_id" added="1550649148">Application ID:</phrase>
+		<phrase var_name="default_domain" added="1550649148">Default Domain</phrase>
+		<phrase var_name="keywords" added="1550649148">Keywords</phrase>
+		<phrase var_name="global_settings" added="1550649148">Global Settings</phrase>
+		<phrase var_name="maximum_number_of_providers_per_home_page" added="1550649148">Maximum number of providers per home page</phrase>
+		<phrase var_name="number_provider_display" added="1550649148">number_provider_display</phrase>
+		<phrase var_name="unsubcribe" added="1550649148">Unsubcribe</phrase>
+		<phrase var_name="breadcrumb_contactimporter_title" added="1550649148">Contact Importer</phrase>
+		<phrase var_name="other_tools_title" added="1550649148">Other Tools</phrase>
+		<phrase var_name="statistics" added="1550649148">Statistics</phrase>
+		<phrase var_name="top_inviters" added="1550649148">Top inviters</phrase>
+		<phrase var_name="export_your_friend_contacts" added="1550649148">Export Your Friend Contacts</phrase>
+		<phrase var_name="if_you_have_posts_in_another_system_you_can_export_those_into_this_site_to_get_started_choose_a_s" added="1550649148">If you have contacts in this site, you can export those into another system</phrase>
+		<phrase var_name="export_contact_to_csv_file" added="1550649148">export contact to CSV file</phrase>
+		<phrase var_name="export_contacts" added="1550649148">Export Contacts</phrase>
+		<phrase var_name="export_your_friend_contacts_to_csv_file" added="1550649148">Export your friend contacts to CSV file</phrase>
+		<phrase var_name="need_to_be_logged_in_for_exporting_your_friend_contacts" added="1550649148">Need to be logged in for exporting your friend contacts</phrase>
+		<phrase var_name="your_friend_contact_is_empty" added="1550649148">Your friend contact is empty</phrase>
+		<phrase var_name="sending_request" added="1550649148">Sending request ...</phrase>
+		<phrase var_name="skip" added="1550649148">Skip</phrase>
+		<phrase var_name="invite_friends" added="1550649148">Invite Friends</phrase>
+		<phrase var_name="there_were_errors_when_you_send_the_invitation" added="1550649148">There were errors when you send the invitation!</phrase>
+		<phrase var_name="send_invitation_to_your_friends_successfully" added="1550649148"><![CDATA[Send invitation to your friends Successfully! You can continue to <a href="{contactimporter_link}" alt="Import Connection">Import Connection</a> or return to <a href="{homepage}" alt="Import Connection">Home Page</a>]]></phrase>
+		<phrase var_name="login_failed_please_check_the_email_and_password_you_have_provided_and_try_again_later" added="1550649148">Login failed. Please check the email and password you have provided and try again later !</phrase>
+		<phrase var_name="unable_to_get_contacts" added="1550649148">Unable to get contacts !</phrase>
+		<phrase var_name="there_s_no_contact_in_your_account_yet" added="1550649148"><![CDATA[There's no contact in your account yet.]]></phrase>
+		<phrase var_name="need_to_be_logged_in_for_getting_the_contact_importer_feature" added="1550649148">Need to be logged in for getting the Contact Importer feature.</phrase>
+		<phrase var_name="yahoo_contacts" added="1550649148">Yahoo Contacts</phrase>
+		<phrase var_name="login_to_access_and_get_yahoo_contacts_from_your_account" added="1550649148">Login to access and get yahoo contacts from your account</phrase>
+		<phrase var_name="email_is_subscribed_successfullly" added="1550649148">Email is subscribed successfullly.</phrase>
+		<phrase var_name="email_did_not_subscribe" added="1550649148">Email did not subscribe.</phrase>
+		<phrase var_name="the_invitation_message_was_resent_successfully" added="1550649148">The invitation message was resent successfully.</phrase>
+		<phrase var_name="the_invitaion_message_was_not_resent" added="1550649148">The invitation message was not resent.</phrase>
+		<phrase var_name="the_invitation_was_added_in_the_unsubscribe_please_do_not_send_anything_else" added="1550649148">The invitation was added in the unsubscribe. Please do not send anything else.</phrase>
+		<phrase var_name="twitter_authorization" added="1550649148">Twitter Authorization</phrase>
+		<phrase var_name="twitter_network_requires_the_authorization_to_access_and_get_contacts_from_your_account" added="1550649148">Twitter network requires the Authorization to access and get contacts from your account</phrase>
+		<phrase var_name="linkedin_authorization" added="1550649148">LinkedIn Authorization</phrase>
+		<phrase var_name="linkedin_network_requires_the_authorization_to_access_and_get_contacts_from_your_account" added="1550649148">LinkedIn network requires the Authorization to access and get contacts from your account</phrase>
+		<phrase var_name="need_to_be_logged_in" added="1550649148">Need to be logged in</phrase>
+		<phrase var_name="is_inviting_you_to" added="1550649148">is inviting you to</phrase>
+		<phrase var_name="to_join_please_follow_the_link" added="1550649148">To join,please follow the link</phrase>
+		<phrase var_name="message" added="1550649148">Message</phrase>
+		<phrase var_name="attached_message" added="1550649148">Attached message</phrase>
+		<phrase var_name="you_haven_t_selected_any_contacts_to_invite" added="1550649148"><![CDATA[You haven't selected any contacts to invite]]></phrase>
+		<phrase var_name="find_out_why_you_were_invited_by_clicking_here" added="1550649148">Find out why you were invited by clicking here</phrase>
+		<phrase var_name="block_all_further_email_mesages" added="1550649148">Block all further email mesages</phrase>
+		<phrase var_name="the_invitation_was_added_in_the_unsubscribe_please_do_not_send_to_this_email" added="1550649148">The invitation was added in the unsubscribe.Please do not send to this email.</phrase>
+		<phrase var_name="view_more" added="1550649148">View More</phrase>
+		<phrase var_name="view_all_of_providers" added="1550649148">View all of providers</phrase>
+		<phrase var_name="please_enter_your_facebook_api" added="1550649148">Please enter your facebook API.</phrase>
+		<phrase var_name="user_setting_hide_the_custom_invittation_message" added="1550649148">Hide the custom invitation message and use the default message admin set.</phrase>
+		<phrase var_name="user_setting_export_contact" added="1550649148">Allow users to export contact.</phrase>
+		<phrase var_name="there_is_not_contact_in_your_account" added="1550649148">There is not contact in your account.</phrase>
+		<phrase var_name="to_receive_the_further_email_messages" added="1550649148">to receive the further email messages.</phrase>
+		<phrase var_name="subscribe" added="1550649148">Subscribe</phrase>
+		<phrase var_name="you_can_click" added="1550649148">You can click</phrase>
+		<phrase var_name="contact_importer" added="1550649148">Contact Importer</phrase>
+		<phrase var_name="you_were_invited_by_p" added="1550649148">You were invited by</phrase>
+		<phrase var_name="import_your_contacts" added="1550649148">Import Your Contacts</phrase>
+		<phrase var_name="all_your_contacts_was_sent_the_invitation" added="1550649148">All your contacts was sent the invitation !</phrase>
+		<phrase var_name="and" added="1550649148">and</phrase>
+		<phrase var_name="resendall" added="1550649148">Resend All Selected</phrase>
+		<phrase var_name="resend_all_invitations" added="1550649148">Resend All Invitations</phrase>
+		<phrase var_name="you_are_invited_to_message_from_host" added="1550649148">You are invited to {host}. To join, please follow the link {link}</phrase>
+		<phrase var_name="there_is_no_contact_in_your_account" added="1550649148">There is no contact in your account.</phrase>
+		<phrase var_name="hotmail_authorization" added="1550649148">Hotmail Authorization</phrase>
+		<phrase var_name="login_to_access_and_get_hotmail_contacts_from_your_account" added="1550649148">Login to access and get hotmail contacts from your account</phrase>
+		<phrase var_name="you_can_send_max_invitations_per_time" added="1550649148"><![CDATA[You can send <span style="color:red;font-weight:bold">{max}</span> invitations per time]]></phrase>
+		<phrase var_name="you_are_not_owner_the_upload_file" added="1550649148">You are not owner the upload file</phrase>
+		<phrase var_name="invalid_file_type" added="1550649148">Invalid file type!</phrase>
+		<phrase var_name="invalid_file_format" added="1550649148">Invalid file format!</phrase>
+		<phrase var_name="there_s_some_error_in_your_contact_file" added="1550649148"><![CDATA[There&#039;s some error in your contact file]]></phrase>
+		<phrase var_name="unknown_file_type" added="1550649148">Unknown file type!</phrase>
+		<phrase var_name="there_is_no_contact_in_your_address_book" added="1550649148">There is no contact in your address book</phrase>
+		<phrase var_name="start_send_message_to" added="1550649148">Start send message to</phrase>
+		<phrase var_name="end_send_message_to" added="1550649148">End send message to</phrase>
+		<phrase var_name="start_send_to" added="1550649148">Start send to</phrase>
+		<phrase var_name="end_send_to" added="1550649148">End send to</phrase>
+		<phrase var_name="consumer_key" added="1550649148">Consumer key</phrase>
+		<phrase var_name="consumer_secret" added="1550649148">Consumer secret</phrase>
+		<phrase var_name="twitter_settings" added="1550649148">Twitter Settings</phrase>
+		<phrase var_name="for_twitter_api_settings_strong_must_change_callback_url_to_strong" added="1550649148"><![CDATA[For Twitter API settings, <strong>you must change Callback URL to</strong>]]></phrase>
+		<phrase var_name="send_all" added="1550649148">Send all ({contacts} contacts)</phrase>
+		<phrase var_name="sending" added="1550649148">Sending</phrase>
+		<phrase var_name="close" added="1550649148">Close</phrase>
+		<phrase var_name="message_sendall" added="1550649148">Website will automatically invite your contacts and it will send report via your email.</phrase>
+		<phrase var_name="agree" added="1550649148">Agree</phrase>
+		<phrase var_name="gmail_authorization" added="1550649148">Gmail Authorization</phrase>
+		<phrase var_name="login_to_access_and_get_gmail_contacts_from_your_account" added="1550649148">Login to access and get gmail contacts from your account</phrase>
+		<phrase var_name="please_enter_your_twitter_api" added="1550649148">Please enter your twitter api.</phrase>
+		<phrase var_name="user_setting_points_contactimporter_sentinvitations" added="1550649148">Specify how many points the user will receive when sent a invitation.</phrase>
+		<phrase var_name="user_setting_points_invite" added="1550649148">How many points the invitee and the inviter will receive upon a successfully request.</phrase>
+		<phrase var_name="your_invitations_successfully_sent" added="1550649148">Your invitations successfully sent.
+
+Total: {total}
+Success: {success}
+Fail: {fail}</phrase>
+		<phrase var_name="mail_body_of_invitations" added="1550649148">{success}/{total} invitations have been sent</phrase>
+		<phrase var_name="mail_subject_of_invitations" added="1550649148">Update status of invitations via {provider} from {site_title}</phrase>
+		<phrase var_name="view_number_contacts_previous" added="1550649148">View {number} contacts previous</phrase>
+		<phrase var_name="view_number_contacts_next" added="1550649148">View {number} contacts next</phrase>
+		<phrase var_name="x_y_for_social" added="1550649148"><![CDATA[<span style="color:red"><strong>{x}/{y}</strong></span> for {social}]]></phrase>
+		<phrase var_name="send_selected" added="1550649148">Send selected</phrase>
+		<phrase var_name="total_remain_contacts_will_be_sent" added="1550649148">Total remain contacts will be sent</phrase>
+		<phrase var_name="you_are_invited_to_message_from_host_for_youtube" added="1550649148">You are invited to {host}.
+To join, please follow the link 
+{link}
+{message}</phrase>
+		<phrase var_name="if_you_put_1_that_mean_all_of_providers_will_display_on_home_page" added="1550649148">If you put -1, that mean all of providers will display on home page.</phrase>
+		<phrase var_name="icon_size_on_homepage" added="1550649148">Icon size on homepage</phrase>
+		<phrase var_name="the_maximum_allowed_invitations_for_each_group_users_must_be_a_numberic" added="1550649148">The Maximum Allowed Invitations for each group users must be a numberic!</phrase>
+		<phrase var_name="the_maximum_allowed_invitations_for_each_group_users_must_be_more_than_zero" added="1550649148">The Maximum Allowed Invitations for each group users must be more than zero!</phrase>
+		<phrase var_name="twitter_settings_were_updated_successfully" added="1550649148">Twitter Settings were updated successfully</phrase>
+		<phrase var_name="facebook_settings_were_updated_successfully" added="1550649148">Facebook Settings were updated successfully.</phrase>
+		<phrase var_name="global_settings_were_updated_successfully" added="1550649148">Global Settings were updated successfully.</phrase>
+		<phrase var_name="maximum_of_providers_per_home_page_is_not_valid" added="1550649148">Maximum of providers per home page is not valid</phrase>
+		<phrase var_name="the_infomation_of_provider_name_provider_was_updated_successfully" added="1550649148">The Infomation of {provider_name} provider was updated successfully.</phrase>
+		<phrase var_name="you_must_select_provider_to_edit" added="1550649148">You must select provider to edit</phrase>
+		<phrase var_name="inviter" added="1550649148">Inviter</phrase>
+		<phrase var_name="full_name" added="1550649148">Full Name</phrase>
+		<phrase var_name="email" added="1550649148">Email</phrase>
+		<phrase var_name="options" added="1550649148">Options</phrase>
+		<phrase var_name="resend_invitation" added="1550649148">Resend Invitation</phrase>
+		<phrase var_name="enabled" added="1550649148">Enabled</phrase>
+		<phrase var_name="social" added="1550649148">Social</phrase>
+		<phrase var_name="all" added="1550649148">All</phrase>
+		<phrase var_name="disabled" added="1550649148">Disabled</phrase>
+		<phrase var_name="providers" added="1550649148">Providers</phrase>
+		<phrase var_name="invitations_list" added="1550649148">Invitations List</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete" added="1550649148">Are you sure you want to delete ?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_action_will_delete_all_feeds_belong_to" added="1550649148">Are you sure you want to delete ? This action will delete all feeds belong to.</phrase>
+		<phrase var_name="invitations_per_time" added="1550649148">invitations per time.</phrase>
+		<phrase var_name="you_have_selected" added="1550649148">You have selected</phrase>
+		<phrase var_name="contacts" added="1550649148">contacts</phrase>
+		<phrase var_name="select_current_page" added="1550649148">Select Current Page</phrase>
+		<phrase var_name="unselect_current_page" added="1550649148">Unselect Current Page</phrase>
+		<phrase var_name="your_email_is_empty" added="1550649148">Your email is empty!</phrase>
+		<phrase var_name="this_mail_domain_isn_t_supported" added="1550649148">This mail domain is not supported.</phrase>
+		<phrase var_name="this_mail_domain_is_not_supported" added="1550649148">This mail domain is not supported.</phrase>
+		<phrase var_name="email_should_not_be_left_blank" added="1550649148">Email should not be left blank!</phrase>
+		<phrase var_name="no_contacts_were_selected" added="1550649148">No contacts were selected.</phrase>
+		<phrase var_name="updating" added="1550649148">Updating...</phrase>
+		<phrase var_name="you_have_sent_invitations_to_all_of_your_friends" added="1550649148">You have sent invitations to all of your friends.</phrase>
+		<phrase var_name="setting_cron_send_mail" added="1550649148"><![CDATA[<title>Report Time (Hours)</title><info>Define in hours how long to wait until we need to send the report to users after sent invitations to their friends.</info>]]></phrase>
+		<phrase var_name="setting_cron_send_invite" added="1550649148"><![CDATA[<title>How many invitations will be sent when the cron job runs.</title><info>How many invitations will be sent when the cron job runs.</info>]]></phrase>
+		<phrase var_name="msg_your_invitations_successfully_sent" added="1550649148">Your invitations successfully sent.</phrase>
+		<phrase var_name="send_invitation_to_your_friends_successfully_1" added="1550649148"><![CDATA[Send invitation to your friends successfully! You can continue to <a href="{contactimporter_link}" alt="Import Contacts">Import Contacts</a> or return to <a href="{homepage}" alt="Import Connection">Home Page</a>]]></phrase>
+		<phrase var_name="the_invitations_is_not_found" added="1550649148">The invitations is not found</phrase>
+		<phrase var_name="please_enter_the_full_email_not_just_the_username" added="1550649148">Please enter the full email, not just the username</phrase>
+		<phrase var_name="strong_user_domain_strong_is_not_a_valid_domain_for_this_provider" added="1550649148"><![CDATA[<strong>{user_domain}</strong> is not a valid domain for this provider]]></phrase>
+		<phrase var_name="no_message_input" added="1550649148">No Message input</phrase>
+		<phrase var_name="you_have_resend_this_invitation_before" added="1550649148">You have resend this invitation before.</phrase>
+		<phrase var_name="you_have_sent_the_invitations_to_all_of_your_friends" added="1550649148">You have sent the invitations to all of your friends</phrase>
+		<phrase var_name="contactimporter_invite_congratulation" added="1550649148"><![CDATA[<strong>Congratulation!</strong><br/>
+You have already signed up successfully. <br/>
+Now you can invite your friends to join in PhpFox 3 Demo by selecting below providers
+<br/>]]></phrase>
+		<phrase var_name="all_social_api_keys_configuration_was_setup_in" added="1550649148">All social API Keys Configuration was setup in:</phrase>
+		<phrase var_name="anonymous_user" added="1550649148">Anonymous User</phrase>
+		<phrase var_name="cannot_send_invitation_messages_to_icount_because_you_do_not_have_permission_to_post_on_their_wall" added="1550649148">Cannot send invitation messages to {iCount} friend(s) because you do not have permission to post on their wall.</phrase>
+		<phrase var_name="delete_invitation" added="1550649148">Delete Invitation</phrase>
+		<phrase var_name="delete_selected" added="1550649148">Delete selected</phrase>
+		<phrase var_name="empty_file" added="1550649148">Empty file!</phrase>
+		<phrase var_name="facebook_authorization" added="1550649148">Facebook Authorization</phrase>
+		<phrase var_name="facebook_invitation" added="1550649148">Invitation from Facebook</phrase>
+		<phrase var_name="facebook_network_requires_the_authorization_to_access_and_get_contacts_from_your_account" added="1550649148">Facebook requires the Authorization to access and get contacts from your account.</phrase>
+		<phrase var_name="full_name_invites_you_to_site_title" added="1550649148">{full_name} invites you to {site_title}.</phrase>
+		<phrase var_name="full_name_invites_you_to_site_title_link" added="1550649148"><![CDATA[{full_name} invites you to {site_title}. To check out this invitation, follow the link below: <a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="gmail_contacts" added="1550649148">Gmail</phrase>
+		<phrase var_name="invitation_from_linkedin" added="1550649148">Invitation from LinkedIn</phrase>
+		<phrase var_name="invitation_from_provider" added="1550649148">Invitation from {provider}</phrase>
+		<phrase var_name="invitation_from_twitter" added="1550649148">Invitation from Twitter</phrase>
+		<phrase var_name="invitation_message" added="1550649148">Invitation Message</phrase>
+		<phrase var_name="max_invitations_per_time" added="1550649148">Maximum invitations per time:</phrase>
+		<phrase var_name="menu_contactimporter_export_contacts_f8f9a65ed8c3611b4ae9198b7c8a3702" added="1550649148">Export Contacts</phrase>
+		<phrase var_name="menu_contactimporter_invite_251d164643533a527361dbe1a7b9235d" added="1550649148">Invite</phrase>
+		<phrase var_name="menu_invite_invite_friends_f8f9a65ed8c3611b4ae9198b7c8a3702" added="1550649148">Invite Friends</phrase>
+		<phrase var_name="menu_invite_pending_invitations_f8f9a65ed8c3611b4ae9198b7c8a3702" added="1550649148">Pending Invitations</phrase>
+		<phrase var_name="need_to_be_logged_in_for_showing_your_invitations" added="1550649148">Need to be logged in for showing your invitations.</phrase>
+		<phrase var_name="people_who_you_may_know" added="1550649148">People who you may know</phrase>
+		<phrase var_name="picture_show_on_facebook" added="1550649148">Picture show on facebook (75 x 75px)</phrase>
+		<phrase var_name="please_enter_just_the_username_not_the_full_email" added="1550649148">Please enter just the user name, not the full email</phrase>
+		<phrase var_name="please_enter_the_full_email_not_just_the_user_name" added="1550649148">Please enter the full email, not just the user name</phrase>
+		<phrase var_name="remaining_invitations" added="1550649148">Remaining invitations:</phrase>
+		<phrase var_name="require_invite_your_friend_before_using" added="1550649148">To active your account, please invite your friends join to our network.</phrase>
+		<phrase var_name="select_all" added="1550649148">Select All</phrase>
+		<phrase var_name="select_deselect_all" added="1550649148">Select/Deselect all</phrase>
+		<phrase var_name="setting_how_many_pendings_to_show_per_page" added="1550649148"><![CDATA[<title>How Many Pendings To Show</title><info>This tells how many pending invites to show per page.</info>]]></phrase>
+		<phrase var_name="setting_require_invite" added="1550649148"><![CDATA[<title>Require Invitation</title><info>Users must invitation there friends before start using their account</info>]]></phrase>
+		<phrase var_name="total_sent_invitations" added="1550649148">Total sent invitations:</phrase>
+		<phrase var_name="un_select_all" added="1550649148">Un-Select All</phrase>
+		<phrase var_name="using_custom_invitation_link" added="1550649148">Using Custom Invitation Link</phrase>
+		<phrase var_name="you_have_already_been_a_friend_of_people" added="1550649148">You have already been a friend of people</phrase>
+		<phrase var_name="mmm_test_phrase_330rc1" added="1550649148">mmm_test_phrase_330rc1</phrase>
+		<phrase var_name="please_enter_your_api" added="1550649148">Please enter your API.</phrase>
+		<phrase var_name="please_enter_your_linkedin_api" added="1550649148">Please enter your Linkedin API</phrase>
+		<phrase var_name="notice_quota_total_remain" added="1550649148">Due to some limitations {total} invitation(s) of yours will be sent now. {remain} remaining invitation(s) will be sent automatically later.</phrase>
+		<phrase var_name="notice_manual_select_amount" added="1550649148">Please using Send All button if you want to send more than 200 invitations.</phrase>
+		<phrase var_name="successed" added="1550649148">Success</phrase>
+		<phrase var_name="failed" added="1550649148">Fail</phrase>
+		<phrase var_name="you_have_successfully_sent_sucess_invitations_and_fail_invitations_have_failed" added="1550649148">You have successfully sent {success} invitations, and {fail} invitations have failed</phrase>
+		<phrase var_name="number_of_contacts_view_on_each_page" added="1550649148">Number of contacts a user view on each page</phrase>
+		<phrase var_name="notice_quota_sending" added="1550649148">Notice: If you click on send all button or choosing amount of invitation larger than limitation of a social network, your invitation will wait for a period of time before being sent.</phrase>
+		<phrase var_name="remind_xmpp_subject" added="1550649148">We need your help to keep sending your queue!</phrase>
+		<phrase var_name="xmpp_reminder_body" added="1550649148">Due to some recent changes of Facebook. We need a permission to access your chat API to keep sending your queue in {site_name}. 
+
+Please follow the below link and accept new permission: 
+
+ {link}</phrase>
+		<phrase var_name="maximum_invitation_per_day_of_provider_number" added="1550649148">Number of remaining invitations on today of {provider}: {number}</phrase>
+		<phrase var_name="admin_menu_statistics_by_date" added="1550649148">Statistics By Date</phrase>
+		<phrase var_name="admin_menu_statistics_by_provider" added="1550649148">Statistics By Provider</phrase>
+		<phrase var_name="statisticsbydate" added="1550649148">Statistics By Date</phrase>
+		<phrase var_name="statisticsbyprovider" added="1550649148">Statistics By Providers</phrase>
+		<phrase var_name="from" added="1550649148">From</phrase>
+		<phrase var_name="to" added="1550649148">To</phrase>
+		<phrase var_name="admincp_providers_totalinvitations" added="1550649148">Total Invitations</phrase>
+		<phrase var_name="maximum_invitation_per_day" added="1550649148">Number of invitation allowed per day: {number}</phrase>
+		<phrase var_name="admincp_statistics_date" added="1550649148">Date</phrase>
+		<phrase var_name="there_is_not_email_valid_or_invited" added="1550649148">There is not email valid or you have sent the invitations to all.</phrase>
+		<phrase var_name="remove_remaining_invitations" added="1550649148">Remove Remaining Invitations</phrase>
+		<phrase var_name="remove_remaining_invitations_successfully" added="1550649148">Remove Remaining Invitations successfully</phrase>
+		<phrase var_name="there_are_no_invitations" added="1550649148">There are no invitations.</phrase>
+		<phrase var_name="menu_contactimporter_queue_emails_8025c944319ee8c718c53ec70d137890" added="1550649148">Queue Emails</phrase>
+		<phrase var_name="menu_contactimporter_queue_messages_8025c944319ee8c718c53ec70d137890" added="1550649148">Queue Messages</phrase>
+		<phrase var_name="need_to_be_logged_in_for_showing_your_queue_emails" added="1550649148">Need to be logged in for showing your queue emails.</phrase>
+		<phrase var_name="need_to_be_logged_in_for_showing_your_queue_mes" added="1550649148">Need to be logged in for showing your queue messages.</phrase>
+		<phrase var_name="delete_queue" added="1550649148">Delete Queue</phrase>
+		<phrase var_name="queue_messages" added="1550649148">Queue Messages</phrase>
+		<phrase var_name="queue_delete_succesful" added="1550649148">Queue deleted</phrase>
+		<phrase var_name="there_are_no_queue_messages" added="1550649148">There are no queue messages</phrase>
+		<phrase var_name="setting_maximum_allowed_invitations_email_per_day" added="1550649148"><![CDATA[<title>Maximum Allowed Invitations Per Day</title><info>Maximum Allowed Invitations Per Day</info>]]></phrase>
+		<phrase var_name="resend_invitation_successful" added="1550649148">Resend invitation successful.</phrase>
+		<phrase var_name="total_friends_joined_by_invitation" added="1550649148">Total friends joined by invitation:</phrase>
+		<phrase var_name="users_has_just_sent_numbers_invitation_s_by_provider" added="1550649148">{users} has just sent {numbers} invitation(s) by {provider}</phrase>
+		<phrase var_name="queue_emails" added="1550649148">Queue Emails</phrase>
+		<phrase var_name="5" added="1550649148">5</phrase>
+		<phrase var_name="10" added="1550649148">10</phrase>
+		<phrase var_name="15" added="1550649148">15</phrase>
+		<phrase var_name="20" added="1550649148">20</phrase>
+		<phrase var_name="user_setting_points_contactimporter" added="1550649148">Specify how many points the user will receive when your invitation join this site?</phrase>
+		<phrase var_name="you_are_being_invited_to_join_our_social_network" added="1550649148">You are being invited to join our social network.</phrase>
+		<phrase var_name="notice" added="1550649148">Notice</phrase>
+		<phrase var_name="visit_and_register" added="1550649148">visit and register</phrase>
+		<phrase var_name="name_invite_you_to_join_site" added="1550649148">{name} invite you to join {site}.</phrase>
+		<phrase var_name="name_invites_you_to_join_site" added="1550649148">{name} invites you to join {site}.</phrase>
+		<phrase var_name="you_have_invited_total_members" added="1550649148">You have invited {total} members.</phrase>
+		<phrase var_name="you_have_invited_total_member" added="1550649148">You have invited {total} member.</phrase>
+		<phrase var_name="you_do_not_have_permission_to_export_contact" added="1550649148">You do not have permission to export contact.</phrase>
+		<phrase var_name="admin_menu_user_group_settings" added="1550649148">User Group Settings</phrase>
+		<phrase var_name="Top Inviters Limit" added="1550649148" />
+		<phrase var_name="Define the limit of how many user can be displayed on this block. Set 0 will hide this block." added="1550649148" />
+		<phrase var_name="&quot;Top Inviters Limit&quot; must be greater than or equal to 0" added="1550649148" />
+		<phrase var_name="&quot;Report Time&quot; must be greater than 0" added="1550649148" />
+		<phrase var_name="&quot;How many invitations will be sent when the cron job runs&quot; must be greater than 0" added="1550649148" />
+		<phrase var_name="&quot;How Many Pendings To Show&quot; must be greater than 0" added="1550649148" />
+		<phrase var_name="&quot;Points the user will receive when sent a invitation&quot; must be greater than or equal to 0" added="1550649148" />
+		<phrase var_name="&quot;Points the invitee and the inviter will receive upon a successfully request&quot; must be greater than or equal to 0" added="1550649148" />
+		<phrase var_name="&quot;Points the user will receive when your invitation join this site&quot; must be greater than or equal to 0" added="1550649148" />
+		<phrase var_name="setting_contactimporter_paging_mode" added="1550649148"><![CDATA[<title>Pagination Style</title><info>Select Pagination Style at some pages: Queue Emails, Queue Messages, Pending Invitations.</info>]]></phrase>
+		<phrase var_name="typing_manual" added="1550649148">Typing manual</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="contactimporter" type="boolean" admin="false" user="false" guest="true" staff="false" module="contactimporter" ordering="0">hide_the_custom_invittation_message</setting>
+		<setting is_admin_setting="0" module_id="contactimporter" type="boolean" admin="true" user="true" guest="false" staff="true" module="contactimporter" ordering="1">export_contact</setting>
+		<setting is_admin_setting="0" module_id="contactimporter" type="integer" admin="1" user="1" guest="0" staff="1" module="contactimporter" ordering="2">points_contactimporter_sentinvitations</setting>
+		<setting is_admin_setting="0" module_id="contactimporter" type="integer" admin="1" user="1" guest="0" staff="1" module="contactimporter" ordering="3">points_invite</setting>
+		<setting is_admin_setting="0" module_id="contactimporter" type="integer" admin="1" user="1" guest="1" staff="1" module="contactimporter" ordering="4">points_contactimporter</setting>
+	</user_group_settings>
+</module>

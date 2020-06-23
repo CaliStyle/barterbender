@@ -1,0 +1,17 @@
+<module>
+	<data>
+		<module_id>attachment</module_id>
+		<product_id>phpfox</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:2:{s:34:"attachment.admin_menu_manage_types";a:1:{s:3:"url";a:1:{i:0;s:10:"attachment";}}s:34:"attachment.admin_menu_add_new_type";a:1:{s:3:"url";a:2:{i:0;s:10:"attachment";i:1;s:3:"add";}}}]]></menu>
+		<phrase_var_name>module_attachment</phrase_var_name>
+	</data>
+	<phrases>
+		<phrase module_id="attachment" version_id="3.0.0" var_name="user_setting_can_attach_on_event" added="1325041732">Can attach files on event?</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="attachment" type="boolean" admin="true" user="true" guest="false" staff="true" module="attachment" ordering="0">can_attach_on_event</setting>
+	</user_group_settings>
+</module>

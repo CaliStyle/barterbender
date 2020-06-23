@@ -1,0 +1,139 @@
+.ynsaBorder {
+    border: 1px solid #CCC;
+}
+
+.ynsaDisplayAdBlockWrapper {
+    padding: 10px;
+    background:#fff;
+}
+
+.ynsaAdExternalUrl {
+    color: #999;
+    font-size: 11px;
+    padding-left: 4px;
+    padding-bottom: 10px;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+.ynsaDisplayAdBlock {
+    margin: 2px 0 4px;
+    position: relative;
+}
+
+.ynsaAdClickZone {
+    cursor: pointer;
+}
+
+.ynsaAdTitle {
+    color: #3b5998;
+    font-size: 10pt;
+    line-height: 13px;
+    padding: 0px 0px 10px 3px;
+    font-weight: bold;
+
+}
+
+.ynsaAdImage {
+    float: left;
+    width: 100px;
+    padding: 0px 5px 0 0;
+    margin-right: 10px;
+}
+.ynsaAdImage img{max-width:100px;}
+.ynsaAdText {
+    width: 120px;
+    font-size: 11px;
+    float: left;
+    word-wrap: break-word;
+
+}
+
+.ynsaDisplayUserBorder{
+    border-bottom:1px #DFDFDF solid;
+}
+
+.ynsaLikeHolder {
+    padding-top:5px;
+    font-size: 9pt;
+}
+
+.ynsaDisplayAdHideButton  {
+    color: #333;
+    display: none;
+    float: right;
+    height: 18px;
+    line-height: 17px;
+    text-align: center;
+    width: 18px;
+}
+.ynsaDisplayAdHideButton span{font-size:0;}
+.ynsaDisplayAdHideButton span:before{font-family:fontAwesome;content:"\f00d";font-size:12px;color:#888;}
+.ynsaDisplayBannerAdHideButton  {
+    display: none;
+    color: #333;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    right: 0px;
+    font-size: 13pt;
+    top: 0px;
+    background-color: #EEE;
+}
+.ynsaDisplayBannerAdHideButton span:before{font-family:fontAwesome;content:"\f00d";font-size:12px;color:#888;}
+.ynsaDisplayBannerAdHideButton:hover  {
+    background-color: #ECECEC;
+}
+.ynsaDisplayAdHideButton:hover  {
+    background-color: #ECECEC;
+}
+
+.ynsaAdClickZone:hover .ynsaDisplayAdHideButton  {
+    display: inline-block;
+}
+
+.ynsaAdBannerClickZone:hover .ynsaDisplayBannerAdHideButton  {
+    display: inline-block;
+}
+
+.ynsaAdBannerClickZone {
+    display: block;
+    position: relative;
+    margin-bottom:10px;
+    background-color:#ddd;
+}
+.ynsaHiddenPermanently{
+    background: #FFF;
+    padding: 5px;
+}
+.ynsaHiddenPermanently .ynsaTitle {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ynsaHiddenPermanently .ynsaButton {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.ynsaHiddenPermanently .ynsaButton .button {
+    margin-right: 16px;
+}
+
+#js_ynsa_display_ad {
+    text-align: center;
+    margin-top:10px;
+}
+#js_ynsa_display_ad img{width:100%;vertical-align:bottom;}
+
+/*Thaotlh: Sponsor */
+#js_ynsa_display_html_ad .block{margin-bottom:0;}
+#js_ynsa_display_html_ad .block .title{background:#fff;padding:10px;}
+
+@media screen and (max-width: 768px){
+    div#js_ynsa_display_html_ad .block .title > span{
+        margin-right: 30px !important;
+    }
+}

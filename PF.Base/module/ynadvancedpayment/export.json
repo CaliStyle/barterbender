@@ -1,0 +1,15 @@
+{
+	"paths": {
+		"0": "PF.Base/include/library/phpfox/gateway/api/authorizenet.class.php",
+		"1": "PF.Base/include/library/phpfox/gateway/api/ccbill.class.php",
+		"2": "PF.Base/include/library/phpfox/gateway/api/gopay.class.php",
+		"3": "PF.Base/module/ynadvancedpayment",
+		"4": "PF.Base/include/library/phpfox/gateway/api/bitpay.class.php",
+		"5": "PF.Base/include/library/phpfox/gateway/api/braintree.class.php",
+		"6": "PF.Base/include/library/phpfox/gateway/api/heidelpay.class.php",
+		"7": "PF.Base/include/library/phpfox/gateway/api/itransact.class.php",
+		"8": "PF.Base/include/library/phpfox/gateway/api/skrill.class.php",
+		"9": "PF.Base/include/library/phpfox/gateway/api/stripe.class.php",
+		"10": "PF.Base/include/library/phpfox/gateway/api/webmoney.class.php"
+	}
+}

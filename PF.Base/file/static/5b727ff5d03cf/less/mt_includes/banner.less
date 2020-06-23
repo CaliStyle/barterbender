@@ -1,0 +1,412 @@
+.yncpw-banner{
+	position: relative;
+    min-height: 100vh;
+    background-color: #dcdcdc;
+    
+    @media screen and (min-width: @screen-md-min){
+        //fix ie scroll hori
+        overflow: hidden;
+    }
+    @media screen and (max-width: @screen-sm-max){
+        min-height: 480px;
+    }
+
+    @media screen and (max-width: @screen-xs-max){
+        min-height: 368px;
+    }
+
+	&__slider{
+		&-photo{
+			position: relative;
+
+			@media screen and (min-width: @screen-md-min){
+				padding-bottom: 100vh;
+			}
+
+            @media screen and (max-width: @screen-sm-max){
+                padding-bottom: 480px;
+            }
+
+            @media screen and (max-width: @screen-xs-max){
+                padding-bottom: 368px;
+            }
+
+			&:after{
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				.square(100%);
+                background: -webkit-repeating-radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) 1px, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0.5) 3px);
+                background: -moz-repeating-radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) 1px, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0.5) 3px);
+                background: -ms-repeating-radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) 1px, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0.5) 3px);
+                background: repeating-radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) 1px, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0.5) 3px);
+                background-size: 3px 3px;
+                opacity: 0.5;
+			}
+		}
+
+		&-thumb{
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			.square(100%);
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.owl-nav{
+            margin: 0 !important;
+            
+			[class^=owl]{
+				opacity: 1 !important;
+				.square(56px);
+				border: 2px solid rgba(0,0,0,0.2);
+				padding: 0 !important;
+				margin: 0 !important;
+				font-size: 24px !important;
+				border-radius: 100% !important;
+				background-color: rgba(0,0,0,0.5) !important;
+                .items-center() !important;
+                position: absolute;
+                .ver-center();
+                transition: all 0.3s ease-in-out;
+
+                @media screen and (min-width: 1025px){
+                    opacity: 0.5 !important;
+
+                    &:hover{
+                        opacity: 1 !important;
+                    }
+                }
+			}
+
+            .owl-next{
+                right: 96px;
+
+                @media screen and (max-width: @screen-sm-max){
+                    right: 24px;
+                }
+            }
+
+            .owl-prev{
+                left: 96px;
+
+                @media screen and (max-width: @screen-sm-max){
+                    left: 24px;
+                }
+            }
+		}
+
+        .owl-dots{
+            @media screen and (max-width: @screen-xs-max){
+                position: absolute;
+                width: 100%;
+                .items-center();
+                bottom: 108px;
+                margin-top: 0 !important;
+
+                .owl-dot{
+                    span{
+                        transition: all 0.3s ease-in-out;
+                        margin: 2px;
+                        background: rgba(0,0,0,0.5);
+                        .square(8px);
+                    }
+
+                    &.active{
+                        span{
+                            border: 2px solid #fff;
+                            background: @brand-primary;
+                            .square(12px);
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: @screen-xs-max){
+            &:not(.login){
+                .owl-dots{
+                    bottom: 60px !important;
+                }
+            }
+        }
+	}
+
+	&__content{
+		position: absolute;
+		z-index: 2;
+        width: 100%;
+        pointer-events: none;
+
+        .can-drag{
+            pointer-events: auto;
+        }
+
+        @media screen and (min-width: @screen-sm-min){
+            .px-2();
+            .ver-hoz-center();
+            max-width: ~'calc(100vw - 320px)';
+        }
+
+        @media screen and (max-width: @screen-sm-max) and (min-width: @screen-sm-min){
+            max-width: ~'calc(100vw - 166px)';
+            bottom: 124px;
+            top: 148px;
+            transform: translateX(-50%);
+
+            &-form{
+                position: absolute;
+                bottom: -124px;
+                transform: translateY(50%);
+                left: -19px;
+                right: -19px;
+            }
+        }
+
+        @media screen and (max-width: @screen-xs-max){
+            bottom: 124px;
+            left: 0;
+            top: 70px;
+
+            &-form{
+                position: absolute;
+                bottom: -124px;
+                width: 100%;
+
+                .form-control{
+                    border-radius: 0;
+                    border: 0;
+                }
+            }
+        }
+
+		.text{
+			color: #fff;
+			text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.2);
+		}
+
+        &-search{
+            margin: 0 auto;
+        }
+
+		&-title{
+			font-weight: lighter;
+			.fz-lh(72px);
+
+            @media screen and (max-width: @screen-sm-max){
+                .fz-lh(40px);                                
+            }
+
+            @media screen and (max-width: @screen-xs-max){
+                .fz-lh(32px);    
+                .px-2();                            
+            }
+		}
+
+		&-description{
+			.truncateLines(18px,24px,2,false);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media screen and (max-width: @screen-sm-max){
+                .truncateLines(14px,21px,2,false);
+                max-width: 484px;
+                .mt-1();
+            }
+
+            @media screen and (max-width: @screen-xs-max){
+                .truncateLines(14px,21px,3,false);
+                max-width: 400px;
+            }
+
+            @media screen and (max-width: 479px){
+                max-width: none;
+                .px-2();
+            }
+		}
+
+		&-btn{
+			border-radius: 24px;
+			font-size: 14px;
+			padding-left: @grid-point*5 !important;
+			padding-right: @grid-point*5 !important;
+			border-width: 2px !important;
+			border-color: #fff !important;
+			color: #fff;
+			background-color: transparent;
+
+            &:hover{
+                border-color: #fff !important;
+                color: #3f4e51 !important;
+                box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+            }
+
+            @media screen and (max-width: @screen-sm-max){
+                padding-left: @grid-point + 4 !important;
+                padding-right: @grid-point + 4 !important;
+            }
+
+            @media screen and (max-width: @screen-xs-max){
+                position: absolute;
+                left: 0;
+                width: 100%;
+                bottom: -76px;
+                font-weight: bold;
+                border-radius: 0;
+                border: 0 !important;
+                background-color: @gray-darker;
+
+                &:hover{
+                    background-color: @gray-darker;
+                    color: #fff;
+                }
+            }
+		}
+
+		&-icon{
+			position: absolute;
+			.r-0();
+			top: 0;
+			color: @gray-dark;
+			font-size: 18px;
+			.items-center();
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+			width: 48px;
+			bottom: 0;
+
+            html[dir='ltr'] &{
+                border-radius: 3px 3px 0 0;
+            }
+
+            html[dir='rtl'] &{
+                border-radius: 0 0 3px 3px;
+            }
+
+			@media screen and (min-width: 1025px){
+				&:hover{
+					color: @text-color;
+				}
+			}
+
+			&:before{
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				width: 1px;
+				top: 10px;
+				bottom: 10px;
+				background-color: @border-color;
+                transition: background-color 0.3s ease-in-out;
+                
+                html[dir='rtl'] &{
+                    left: auto;
+                    right: 0;
+                }
+			}
+
+            @media screen and (max-width: @screen-xs-max){
+                .ico{
+                    .ver-hoz-center();
+                    position: absolute;
+                }
+            }
+		}
+
+		&-search{
+			position: relative;
+
+            @media screen and (min-width: @screen-md-min){
+    			max-width: 608px;
+            }
+
+			input{
+				border-radius: 3px;
+                
+                @media screen and (min-width: @screen-md-min){
+                border: 0;
+                }
+
+				html[dir='ltr'] &{
+					padding-right: @grid-point*6;
+				}
+				html[dir='rtl'] &{
+					padding-left: @grid-point*6;
+				}
+
+                &:focus + .yncpw-banner__content-icon{
+                    color: @text-color;
+                }
+			}
+		}
+	}
+
+    &__next-section{
+        .items-center();
+        .square(56px);
+        border: 2px solid #fff;
+        border-radius: 100%;
+        font-size: 24px;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        bottom: 16px;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+        animation-name: hvr-icon-hang;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        cursor: pointer;
+        
+        @media screen and (min-width: 1025px){
+            &:hover{
+                background-color: #fff;
+                color: #3f4e51;
+                animation-duration: 0s;
+                transform: translate(-50%,0);
+            }
+        }
+    }
+
+    &__no-photo{
+        position: relative;
+        background-color: @gray-dark;
+
+        @media screen and (min-width: @screen-md-min){
+            padding-bottom: 100vh;
+        }
+
+        @media screen and (max-width: @screen-sm-max){
+            padding-bottom: 480px;
+        }
+
+        @media screen and (max-width: @screen-xs-max){
+            padding-bottom: 368px;
+        }
+
+        .help-block{
+            position: absolute;
+            .ver-hoz-center();
+            color: #fff;
+            z-index: 1;
+        }
+    }
+}
+
+@keyframes hvr-icon-hang {
+    0% {
+        transform: translate(-50%,-3px);
+    }
+
+    100% {
+        transform: translate(-50%,3px);
+    }
+}

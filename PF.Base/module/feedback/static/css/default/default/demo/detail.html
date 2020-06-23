@@ -1,0 +1,117 @@
+<div class="p-detail-container p-feedback-detail-container">
+    <div class="p-detail-main-content">
+        <div class="p-feedback-detail-header-custom-wrapper">
+            <div class="item-header-custom-total">
+                <div class="p-feedback-vote-counter-item">
+                    <span class="item-number">
+                        142
+                    </span>
+                    <span class="item-text">
+                        votes
+                    </span>
+                </div>
+                <div class="p-feedback-vote-action-item">
+                    <!-- normal -->
+                    <button class="btn btn-xs btn-default btn-icon"><i class="ico ico-star-circle-o"></i>Vote</button>
+                </div>
+            </div>
+            <div class="item-header-custom-inner">
+                <h1 class="p-detail-header-page-title header-page-title item-title {if isset($aTitleLabel.total_label) && $aTitleLabel.total_label > 0}header-has-label-{$aTitleLabel.total_label}{/if}">
+                    <a href="#" class="ajax_link"><span class="p-feedback-title-label p-label-status solid primary p-feedback-hidden-mini-style">Answered</span> Lorem ipsum </a>
+                    <div class="p-type-id-icon">
+                        <div class="sticky-label-icon sticky-pending-icon">
+                            <span class="flag-style-arrow"></span>
+                            <i class="ico ico-clock-o"></i>
+                        </div>
+                        <div class="sticky-label-icon sticky-sponsored-icon">
+                            <span class="flag-style-arrow"></span>
+                            <i class="ico ico-sponsor"></i>
+                        </div>
+                        <div class="sticky-label-icon sticky-featured-icon">
+                            <span class="flag-style-arrow"></span>
+                            <i class="ico ico-diamond"></i>
+                        </div>
+                    </div>
+                </h1>
+                <div class="p-detail-statistic-wrapper">
+                    <div class="p-detail-statistic-list">
+                        <span class="item-statistic">129,654 views</span>
+                        <span class="item-statistic">12 comments</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="p-detail-author-wrapper">
+            <div class="p-detail-author-image">{img user=$aItem suffix='_50_square'}</div>
+            <div class="p-detail-author-info">
+                <span class="item-author"><span class="item-text-label">by</span> {$aItem|user:'':'':50:'':'author'}</span>
+                <span class="item-time">Published <span class="p-text-lowercase">{_p var='on'}</span> {$aItem.time_stamp|convert_time:'core.global_update_time'}</span>
+            </div>
+            <div class="p-detail-option-manage">
+                <div class="dropdown">
+                    <a data-toggle="dropdown" class="p-option-button"><i class="ico ico-gear-o"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right" >
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="p-detail-content-wrapper ">
+            <div class="">
+                <div>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.
+                </div>
+                <div class="p-feedback-detail-response-container">
+                    <div class="item-response-outer">
+                        <div class="item-response-title">
+                            Response by <a href="">Admin</a>
+                        </div>
+                        <div class="item-response-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                        </div>
+                    </div>
+                </div>
+                <div class="p-detail-type-info">
+                        <div class="p-type-info-item">
+                            <div class="p-category">
+                                <span class="p-item-label">{_p var='posted_in'}:</span>
+                                <div class="p-item-content"><a href="">asd</a></div>
+                            </div>
+                        </div>
+                        <div class="p-type-info-item">
+                            <div class="p-category">
+                                <span class="p-item-label">Topic:</span>
+                                <div class="p-item-content"><a href="">asd</a></div>
+                            </div>
+                        </div>
+                    
+                </div>
+                <div class="p-feedback-detail-screenshot-container">
+                    <div class="item-custom-header">
+                        Screenshots
+                    </div>
+                    <div class="item-listing-image">
+                        {section name=foo loop=3}
+                        <div class="item-media">
+                            <span class="item-media-src" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9IBP65AMA5gQWyogZExx0DyaSihIf5ZztllZsRmONKlt8U2YavQsW1e4)"></span>
+                        </div>
+                        {/section}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-detail-bottom-content">
+        <div class="p-detail-addthis-wrapper">
+            <div class="p-detail-addthis">
+            {addthis url=$aItem.bookmark_url title=$aItem.title}
+            </div>    
+        </div>
+        {if $aItem.is_approved == 1}
+            <div class="item-detail-feedcomment p-detail-feedcomment">
+                {module name='feed.comment'}
+            </div>
+        {/if}
+    </div>
+</div>

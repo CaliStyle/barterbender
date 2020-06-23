@@ -1,0 +1,10 @@
+{
+	"paths": {
+		"0": "PF.Base/theme/frontend/default/style/default/image/feed/fundraising.png",
+		"1": "PF.Base/theme/frontend/default/style/default/image/module/fundraising.png",
+		"2": "PF.Base/theme/frontend/default/style/default/image/mobile/fundraising.png",
+		"3": "PF.Base/theme/frontend/default/style/default/image/mobile/small-fundraising.png",
+		"4": "PF.Base/module/fundraising",
+		"5": "PF.Base/file/pic/fundraising/index.html"
+	}
+}

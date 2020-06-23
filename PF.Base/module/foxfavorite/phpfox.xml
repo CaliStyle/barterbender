@@ -1,0 +1,254 @@
+<module>
+	<data>
+		<module_id>foxfavorite</module_id>
+		<product_id>younet_foxfavorite4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:2:{s:31:"foxfavorite.admin_menu_settings";a:1:{s:3:"url";a:2:{i:0;s:11:"foxfavorite";i:1;s:8:"settings";}}s:38:"foxfavorite.admin_menu_page_migrations";a:1:{s:3:"url";a:2:{i:0;s:11:"foxfavorite";s:8:"miration";s:4:"page";}}}]]></menu>
+		<phrase_var_name>module_foxfavorite</phrase_var_name>
+		<version>4.02p1</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>https://phpfox.younetco.com/files/2016/02/Fox-Favorite.jpg</apps_icon>
+	</data>
+	<blocks>
+		<block type_id="0" m_connection="event.view" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="7" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="profile" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="blog.view" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="2" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="marketplace.view" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="6" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="core.index-member" module_id="foxfavorite" component="recent-favorite" location="3" is_active="1" ordering="5" disallow_access="" can_move="1">
+			<title>Recent Favorite</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="video.view" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="5" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="music.view" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="3" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="core.index-member" module_id="foxfavorite" component="top-favorite-member" location="1" is_active="1" ordering="15" disallow_access="" can_move="1">
+			<title>Top Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="core.index-member" module_id="foxfavorite" component="top-favorite" location="3" is_active="1" ordering="9" disallow_access="" can_move="1">
+			<title>Top Favorite</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="core.index-member" module_id="foxfavorite" component="top-favorite-page" location="1" is_active="1" ordering="17" disallow_access="" can_move="1">
+			<title>Top Favorite Pages</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="profile.index" module_id="foxfavorite" component="favorite-profile" location="7" is_active="1" ordering="10" disallow_access="" can_move="0">
+			<title>favorite-profile</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="pages.view" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="pages.view" module_id="foxfavorite" component="favorite-page" location="7" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title>Favorite Page</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="quiz.view" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="foxfavorite.profile" module_id="foxfavorite" component="pic" location="1" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>pic</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fevent.view" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="20" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="videochannel.view" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="20" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="advancedphoto.view" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="20" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="advancedmarketplace.view" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="20" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="karaoke.songdetail" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="20" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="coupon.detail" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="20" disallow_access="" can_move="1">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.detail" module_id="foxfavorite" component="favorite-member" location="3" is_active="1" ordering="11" disallow_access="" can_move="0">
+			<title>Favorite Members</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="foxfavorite" component="foxfavorite.profile" m_connection="foxfavorite.profile" module="foxfavorite" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="foxfavorite" component="recent-favorite" m_connection="" module="foxfavorite" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfavorite" component="pic" m_connection="" module="foxfavorite" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfavorite" component="favorite-member" m_connection="" module="foxfavorite" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfavorite" component="top-favorite" m_connection="" module="foxfavorite" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfavorite" component="top-favorite-member" m_connection="" module="foxfavorite" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfavorite" component="top-favorite-page" m_connection="" module="foxfavorite" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfavorite" component="favorite-profile" m_connection="" module="foxfavorite" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="foxfavorite" component="favorite-page" m_connection="" module="foxfavorite" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="who_favorited_this_person" added="1566461184">Who favorited this?</phrase>
+		<phrase var_name="module_foxfavorite" added="1566461184">Fox Favorite</phrase>
+		<phrase var_name="admin_menu_settings" added="1566461184">Settings</phrase>
+		<phrase var_name="remove_from_your_favorite" added="1566461184">Remove from your favorite</phrase>
+		<phrase var_name="user_has_already_updated_status_content" added="1566461184"><![CDATA[{users} has already updated status "{content}"]]></phrase>
+		<phrase var_name="user_has_already_shared_a_link_title" added="1566461184"><![CDATA[{users} has already shared a link "{title}"]]></phrase>
+		<phrase var_name="user_favorited_your_blog_title" added="1566461184"><![CDATA[{users} favorited your blog "{title}"]]></phrase>
+		<phrase var_name="user_has_already_posted_a_blog" added="1566461184"><![CDATA[{users} has already posted a blog "{title}"]]></phrase>
+		<phrase var_name="user_favorited_your_profile" added="1566461184">{users} favorited your profile.</phrase>
+		<phrase var_name="user_favorited_your_listing_title" added="1566461184"><![CDATA[{users} favorited your listing "{title}".]]></phrase>
+		<phrase var_name="user_favorited_your_video_title" added="1566461184"><![CDATA[{users} favorited your video "{title}"]]></phrase>
+		<phrase var_name="user_favorited_your_song_title" added="1566461184"><![CDATA[{users} favorited your song "{title}"]]></phrase>
+		<phrase var_name="user_has_already_posted_a_photo_title" added="1566461184"><![CDATA[{users} has already posted a photo "{title}"]]></phrase>
+		<phrase var_name="user_favorited_your_photo_title" added="1566461184"><![CDATA[{users} favorited your photo "{title}"]]></phrase>
+		<phrase var_name="user_favorited_your_poll_title" added="1566461184"><![CDATA[{users} favorited your poll "{title}"]]></phrase>
+		<phrase var_name="user_favorited_your_event_title" added="1566461184"><![CDATA[{users} favorited your event "{title}"]]></phrase>
+		<phrase var_name="search_favorites" added="1566461184">Search Favorites...</phrase>
+		<phrase var_name="favorited_a_quiz" added="1566461184">favorited a quiz.</phrase>
+		<phrase var_name="user_favorited_your_quiz_title" added="1566461184"><![CDATA[{users} favorited your quiz "{title}"]]></phrase>
+		<phrase var_name="favorite" added="1566461184">Favorite</phrase>
+		<phrase var_name="unfavorite" added="1566461184">Unfavorite</phrase>
+		<phrase var_name="recent_favorites" added="1566461184">Recent Favorites</phrase>
+		<phrase var_name="top_favorite_members" added="1566461184">Top Favorite Members</phrase>
+		<phrase var_name="top_favorite_pages" added="1566461184">Top Favorite Pages</phrase>
+		<phrase var_name="successfully_added_to_your_favorites" added="1566461184">Successfully added to your favorites.</phrase>
+		<phrase var_name="view_your_favorites" added="1566461184">View your Favorites</phrase>
+		<phrase var_name="close" added="1566461184">Close</phrase>
+		<phrase var_name="favorited_a_video" added="1566461184">favorited a video.</phrase>
+		<phrase var_name="favorited_a_listing" added="1566461184">favorited a listing.</phrase>
+		<phrase var_name="favorited_an_event" added="1566461184">favorited an event.</phrase>
+		<phrase var_name="favorited_a_blog" added="1566461184">favorited a blog.</phrase>
+		<phrase var_name="notify_to_me_when_user_favorited_my_items" added="1566461184">Notify to me when user favorited my items</phrase>
+		<phrase var_name="who_favorited_this_item" added="1566461184">Who favorited this?</phrase>
+		<phrase var_name="admin_menu_page_migrations" added="1566461184">Page Migrations</phrase>
+		<phrase var_name="no_favorites_found" added="1566461184">No Favorites found.</phrase>
+		<phrase var_name="view_all" added="1566461184">View All</phrase>
+		<phrase var_name="latest" added="1566461184">Latest</phrase>
+		<phrase var_name="user_favorited_your_pages_title" added="1566461184"><![CDATA[{users} favorited your page "{title}"]]></phrase>
+		<phrase var_name="follow_user_whom_i_favorited_their_items" added="1566461184">Follow user whom I favorited their items</phrase>
+		<phrase var_name="favorited_a_poll" added="1566461184">favorited a poll.</phrase>
+		<phrase var_name="favorited_a_song" added="1566461184">favorited a song.</phrase>
+		<phrase var_name="favorited_a_photo" added="1566461184">favorited a photo.</phrase>
+		<phrase var_name="user_has_already_posted_a_song" added="1566461184"><![CDATA[{users} has already posted a song "{title}"]]></phrase>
+		<phrase var_name="user_has_already_posted_a_poll" added="1566461184"><![CDATA[{users} has already posted a poll "{title}"]]></phrase>
+		<phrase var_name="follow_user_whom_i_favorited_their_profile" added="1566461184">Follow user whom I favorited their profile</phrase>
+		<phrase var_name="notify_me_when_users_favorited_my_items" added="1566461184">Notify me when members favorited my items</phrase>
+		<phrase var_name="migration_data_from_pagesfavorite_to_foxfavorite" added="1566461184"><![CDATA[This tool is used to migrate favorites from Page Favorite plugin to Fox Favorite plugin.<br/>
+Notice:<br/>
+- Admin uses this tool only one time.]]></phrase>
+		<phrase var_name="favorites" added="1566461184">Favorites</phrase>
+		<phrase var_name="migration_succeed" added="1566461184">Migration succeed!</phrase>
+		<phrase var_name="follow_members_whose_profile_whose_i_favorited" added="1566461184">Follow members whose profiles I favorited</phrase>
+		<phrase var_name="add_to_your_favorites" added="1566461184">Add to your favorites</phrase>
+		<phrase var_name="user_has_already_posted_a_listing" added="1566461184"><![CDATA[{users} has already posted a listing "{title}"]]></phrase>
+		<phrase var_name="user_has_already_posted_a_video" added="1566461184"><![CDATA[{users} has already posted a video "{title}"]]></phrase>
+		<phrase var_name="user_has_already_posted_an_event" added="1566461184"><![CDATA[{users} has already posted an event "{title}"]]></phrase>
+		<phrase var_name="user_has_already_posted_a_quiz" added="1566461184"><![CDATA[{users} has already posted a quiz "{title}"]]></phrase>
+		<phrase var_name="user_has_already_posted_a_document" added="1566461184"><![CDATA[{users} has already posted a document "{title}"]]></phrase>
+		<phrase var_name="user_has_already_posted_a_karaoke_song" added="1566461184"><![CDATA[{users} has already posted a karaoke song "{title}"]]></phrase>
+		<phrase var_name="user_has_already_added_a_karaoke_recording" added="1566461184"><![CDATA[{users} has already added a karaoke recording "{title}"]]></phrase>
+		<phrase var_name="favorited_a_page" added="1566461184">favorited a page.</phrase>
+		<phrase var_name="settings" added="1566461184">Settings</phrase>
+		<phrase var_name="module" added="1566461184">Module</phrase>
+		<phrase var_name="active" added="1566461184">Active</phrase>
+		<phrase var_name="page_migration" added="1566461184">Page Migration</phrase>
+		<phrase var_name="confirm" added="1566461184">Confirm</phrase>
+		<phrase var_name="karaoke_songs" added="1566461184">Karaoke songs</phrase>
+		<phrase var_name="this_module_is_always_active" added="1566461184">This module is always active.</phrase>
+		<phrase var_name="video_channel" added="1566461184">Video Channel</phrase>
+		<phrase var_name="advanced_events" added="1566461184">Advanced Events</phrase>
+		<phrase var_name="advanced_marketplace" added="1566461184">Advanced Marketplace</phrase>
+		<phrase var_name="user_favorited_your_karaoke_song_title" added="1566461184"><![CDATA[{users} favorited your karaoke song "{title}"]]></phrase>
+		<phrase var_name="user_favorited_your_karaoke_recording_title" added="1566461184"><![CDATA[{users} favorited your karaoke recording "{title}"]]></phrase>
+		<phrase var_name="favorited_a_karaoke_song" added="1566461184">favorited a karaoke song.</phrase>
+		<phrase var_name="favorited_a_karaoke_recording" added="1566461184">favorited a karaoke recording.</phrase>
+		<phrase var_name="user_favorited_your_document_title" added="1566461184"><![CDATA[{users} favorited your document "{title}"]]></phrase>
+		<phrase var_name="favorited_a_document" added="1566461184">favorited a document.</phrase>
+		<phrase var_name="favorited_a_profile" added="1566461184">favorited a profile.</phrase>
+		<phrase var_name="advanced_photos" added="1566461184">Advanced Photos</phrase>
+		<phrase var_name="favorited_a_coupon" added="1566461184">favorited a coupon.</phrase>
+		<phrase var_name="user_favorited_your_coupon_title" added="1566461184"><![CDATA[{users} favorited your coupon "{title}"]]></phrase>
+		<phrase var_name="user_has_already_added_a_coupon_title" added="1566461184"><![CDATA[{users} has already added a coupon "{title}"]]></phrase>
+		<phrase var_name="coupons" added="1566461184">Coupons</phrase>
+		<phrase var_name="resumes" added="1566461184">Resumes</phrase>
+		<phrase var_name="users_has_already_added_a_resume_headline" added="1566461184"><![CDATA[{users} has already added a resume "{headline}"]]></phrase>
+		<phrase var_name="favorited_a_resume" added="1566461184">favorited a resume.</phrase>
+		<phrase var_name="users_has_already_posted_a_job_title" added="1566461184"><![CDATA[{users} has already posted a job "{title}"]]></phrase>
+		<phrase var_name="favorited_a_job" added="1566461184">favorited a job.</phrase>
+		<phrase var_name="jobs" added="1566461184">Jobs</phrase>
+		<phrase var_name="favorited_a_news" added="1566461184">favorited a news.</phrase>
+		<phrase var_name="users_favorited_your_news_title" added="1566461184"><![CDATA[{users} favorited your news "{title}"]]></phrase>
+		<phrase var_name="news" added="1566461184">News</phrase>
+		<phrase var_name="petitions" added="1566461184">Petitions</phrase>
+		<phrase var_name="users_favorited_your_petition_title" added="1566461184"><![CDATA[{users} favorited your petition "{title}"]]></phrase>
+		<phrase var_name="favorited_a_petition" added="1566461184">favorited a petition.</phrase>
+		<phrase var_name="users_has_already_posted_a_petition_title" added="1566461184"><![CDATA[{users} has already posted a petition "{title}"]]></phrase>
+		<phrase var_name="music_sharing" added="1566461184">Music Sharing</phrase>
+		<phrase var_name="users_has_already_posted_a_song_title" added="1566461184"><![CDATA[{users} has already posted a song "{title}"]]></phrase>
+		<phrase var_name="users_favorited_your_song_title" added="1566461184"><![CDATA[{users} favorited your song "{title}"]]></phrase>
+		<phrase var_name="plays" added="1566461184">plays</phrase>
+		<phrase var_name="play" added="1566461184">play</phrase>
+		<phrase var_name="favorited_a_contest" added="1566461184">favorited a contest.</phrase>
+		<phrase var_name="users_has_already_posted_a_contest_title" added="1566461184"><![CDATA[{users} has already posted a contest "{title}"]]></phrase>
+		<phrase var_name="businesses" added="1566461184">Businesses</phrase>
+		<phrase var_name="users_has_already_added_a_business_title" added="1566461184"><![CDATA[{users} has already added a business "{title}"]]></phrase>
+		<phrase var_name="users_favorited_your_business_title" added="1566461184"><![CDATA[{users} favorited your business "{title}"]]></phrase>
+		<phrase var_name="favorited_a_business" added="1566461184">favorited a business.</phrase>
+		<phrase var_name="users_has_already_added_a_product_title" added="1566461184"><![CDATA[{users} has already added a product "{title}"]]></phrase>
+		<phrase var_name="users_favorited_your_product_title" added="1566461184"><![CDATA[{users} favorited your product "{title}"]]></phrase>
+		<phrase var_name="auctions" added="1566461184">Auctions</phrase>
+		<phrase var_name="favorited_a_product" added="1566461184">favorited a product.</phrase>
+		<phrase var_name="full_name_s_favorites" added="1566461184"><![CDATA[{full_name}'s Favorites]]></phrase>
+		<phrase var_name="this_item_is_already_in_your_favorites_list" added="1566461184">This item is already in your favorites list</phrase>
+	</phrases>
+</module>

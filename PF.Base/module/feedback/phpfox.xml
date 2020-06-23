@@ -1,0 +1,419 @@
+<module>
+	<data>
+		<module_id>feedback</module_id>
+		<product_id>younet_feedback4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:5:{s:48:"feedback.admin_menu_feedback_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:8:"feedback";i:1;s:19:"user-group-settings";}}s:39:"feedback.admin_menu_feedback_management";a:1:{s:3:"url";a:2:{i:0;s:8:"feedback";i:1;s:9:"feedbacks";}}s:35:"feedback.admin_menu_global_seetings";a:1:{s:3:"url";a:2:{i:0;s:8:"feedback";i:1;s:8:"category";}}s:40:"feedback.admin_menu_serverity_management";a:1:{s:3:"url";a:2:{i:0;s:8:"feedback";i:1;s:6:"status";}}s:36:"feedback.admin_menu_manage_serverity";a:1:{s:3:"url";a:2:{i:0;s:8:"feedback";i:1;s:9:"serverity";}}}]]></menu>
+		<phrase_var_name>module_feedback</phrase_var_name>
+		<version>4.02p4</version>
+		<author>YouNetCo</author>
+		<vendor>http://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/feedback.jpg</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="feedback" parent_var_name="" m_connection="main" var_name="menu_feedback_feedback_fad58de7366495db4650cfefac2fcd61" ordering="12" url_value="feedback" version_id="4.0.7" disallow_access="" module="feedback" mobile_icon="exclamation-circle" />
+	</menus>
+	<settings>
+		<setting group="" module_id="feedback" is_hidden="0" type="boolean" var_name="is_allowed_creation" phrase_var_name="setting_is_allowed_creation" ordering="1" version_id="2.0.7">1</setting>
+		<setting group="" module_id="feedback" is_hidden="0" type="large_string" var_name="thank_you_message" phrase_var_name="setting_thank_you_message" ordering="1" version_id="3.0.0beta4">Thank you for leaving feedback on our website.</setting>
+		<setting group="" module_id="feedback" is_hidden="0" type="boolean" var_name="send_mail_to_visitor_when_someone_comment" phrase_var_name="setting_send_mail_to_visitor_when_someone_comment" ordering="1" version_id="2.1.0">1</setting>
+		<setting group="" module_id="feedback" is_hidden="0" type="boolean" var_name="is_send_mail" phrase_var_name="setting_is_send_mail" ordering="1" version_id="2.0.7">1</setting>
+		<setting group="" module_id="feedback" is_hidden="0" type="drop" var_name="feedback_paging_mode" phrase_var_name="setting_feedback_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:10:"pagination";s:6:"values";a:3:{i:0;s:10:"pagination";i:1;s:9:"next_prev";i:2;s:8:"loadmore";}}]]></setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="feedback.detail" module_id="feedback" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Category</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="feedback.index" module_id="feedback" component="search" location="1" is_active="0" ordering="2" disallow_access="" can_move="0">
+			<title>Search Feedback</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="feedback.index" module_id="feedback" component="votedfeedbacks" location="3" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Most Voted Feedback</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="feedback.index" module_id="feedback" component="category" location="1" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="feedback" module_id="feedback" component="quicklinks" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Create New Feedback</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="" module_id="feedback" component="feedbackbutton" location="12" is_active="1" ordering="4" disallow_access="" can_move="1">
+			<title>Feed Back Button</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="feedback.index" module_id="feedback" component="feedbackstatistics" location="3" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="feedback.detail" module_id="feedback" component="feedback_detail_status" location="3" is_active="1" ordering="2" disallow_access="" can_move="1">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="feedback" component="manage" m_connection="feedback.manage" module="feedback" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="feedback" component="category" m_connection="" module="feedback" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="feedback" component="detail" m_connection="feedback.detail" module="feedback" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="feedback" component="feedbackstatistics" m_connection="" module="feedback" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="feedback" component="feedback.index" m_connection="feedback.index" module="feedback" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="feedback" component="quicklinks" m_connection="" module="feedback" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="feedback" component="feedbackbutton" m_connection="" module="feedback" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="feedback" component="votedfeedbacks" m_connection="" module="feedback" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="feedback" component="search" m_connection="" module="feedback" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="feedback" component="feedback_detail_status" m_connection="" module="feedback" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_feedback" added="1565939860">Feedback</phrase>
+		<phrase var_name="translate_module_feedback" added="1565939860">Feedback</phrase>
+		<phrase var_name="can_you_post_on_feedback" added="1565939860">can you post on feedback?</phrase>
+		<phrase var_name="user_name_left_you_a_comment_on_site_title" added="1565939860">{user_name} left you a comment on {site_title}.</phrase>
+		<phrase var_name="user_name_left_you_a_comment_on_site_title_message" added="1565939860"><![CDATA[{user_name} left you a comment on {site_title}.
+
+To view this comment, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_wrote_a_comment_on_your_feedback" added="1565939860"><![CDATA[<a href="{user_link}">{full_name}</a> wrote a comment on your <a href="{feedback_link}">feedback</a>.]]></phrase>
+		<phrase var_name="on_name_s_feedback" added="1565939860"><![CDATA[On {name}'s feedback.]]></phrase>
+		<phrase var_name="user_name_left_you_a_comment_on_site_title_however_before_it_can_be_displayed_it" added="1565939860"><![CDATA[{user_name} left you a comment on {site_title}, however before it can be displayed it needs to be approved by you.
+
+You can approve or deny this comment by following the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="search_feedbacks" added="1565939860">Search Filters</phrase>
+		<phrase var_name="view_more_feedbacks" added="1565939860">view more...</phrase>
+		<phrase var_name="feedback_created_on_time_stamp_by_full_name" added="1565939860"><![CDATA[<a href="{link}">Feedback</a> posted by <a href="{user_link}">{full_name}</a> created on {time_stamp}.]]></phrase>
+		<phrase var_name="your_feedback_feedback_title_has_been_approved" added="1565939860"><![CDATA[Your FeedBack "{feedback_title}" has been approved.]]></phrase>
+		<phrase var_name="feedback" added="1565939860">Feedback</phrase>
+		<phrase var_name="title" added="1565939860">Title</phrase>
+		<phrase var_name="description" added="1565939860">Description</phrase>
+		<phrase var_name="category" added="1565939860">Category</phrase>
+		<phrase var_name="serverity" added="1565939860">Severity</phrase>
+		<phrase var_name="feedback_visibility" added="1565939860">Visibility</phrase>
+		<phrase var_name="post_a_feedback" added="1565939860"><![CDATA[<h3>Post a Feedback</h3>
+<p>Share with us your ideas, questions, problems and feedback.</p>]]></phrase>
+		<phrase var_name="post_feedback" added="1565939860">Post Feedback</phrase>
+		<phrase var_name="user_setting_can_you_post_on_feedback" added="1565939860">Can post comment on feedback?</phrase>
+		<phrase var_name="search" added="1565939860">Search</phrase>
+		<phrase var_name="no_feedbakcs_found" added="1565939860">No Feedbakcs Found.</phrase>
+		<phrase var_name="most_recent" added="1565939860">Latest</phrase>
+		<phrase var_name="most_voted" added="1565939860">Most Voted</phrase>
+		<phrase var_name="most_viewed" added="1565939860">Most Viewed</phrase>
+		<phrase var_name="most_comment" added="1565939860">Most Discussed</phrase>
+		<phrase var_name="go_to_feedback_forum" added="1565939860"><![CDATA[Go to Feedback Forum &#187;]]></phrase>
+		<phrase var_name="edit_a_feedback" added="1565939860">Edit a Feedback</phrase>
+		<phrase var_name="save_changes" added="1565939860">Save Changes</phrase>
+		<phrase var_name="add_new_category" added="1565939860">Create a New Categogry</phrase>
+		<phrase var_name="admin_menu_feedback_management" added="1565939860">Feedback</phrase>
+		<phrase var_name="status" added="1565939860">Status</phrase>
+		<phrase var_name="upload_feedback_pictures" added="1565939860">Upload Feedback Photos</phrase>
+		<phrase var_name="please_select_a_feedback_before_uploading_the_picture" added="1565939860">Please select a Feedback before uploading the picture.</phrase>
+		<phrase var_name="browse_the_pictures_on_your_computer_and_upload_them_to_your_feedback" added="1565939860">Browse the pictures on your computer and upload them to your feedback.</phrase>
+		<phrase var_name="you_can_upload_the_files_with_max_size_up_to" added="1565939860">You can upload the files with max size up to</phrase>
+		<phrase var_name="you_can_only_upload_the_files_with_types" added="1565939860">You can only upload the files with types:</phrase>
+		<phrase var_name="you_can_upload" added="1565939860">You can upload</phrase>
+		<phrase var_name="files_for_this_feedback" added="1565939860">file(s) for this Feedback</phrase>
+		<phrase var_name="featured" added="1565939860">Featured</phrase>
+		<phrase var_name="global_settings" added="1565939860">Global Settings</phrase>
+		<phrase var_name="allow_disallow_visitors_non_logged_in_users_from_posting_feedbacks" added="1565939860">Allow visitors (non-logged-in users) from posting feedback.</phrase>
+		<phrase var_name="admin_menu_global_seetings" added="1565939860">Categories</phrase>
+		<phrase var_name="full_name_post_a_feedback_to_your_site" added="1565939860">{full_name} post a feedback to {site_title}.</phrase>
+		<phrase var_name="full_name_post_a_feedback_to_your_site_link" added="1565939860"><![CDATA[{full_name} posted a feedback to {site_title}.
+To check out this feedback, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="admin_message" added="1565939860" />
+		<phrase var_name="email_notification" added="1565939860">Email Notification</phrase>
+		<phrase var_name="who_can_create_feedback" added="1565939860">Who can create feedback?</phrase>
+		<phrase var_name="send_email_alert_to_admin_for_every_new_feedback_creation" added="1565939860">Send email alert to Admin for every new feedback creation.</phrase>
+		<phrase var_name="email" added="1565939860">Email</phrase>
+		<phrase var_name="full_name" added="1565939860">Full Name</phrase>
+		<phrase var_name="keyword" added="1565939860">Keyword</phrase>
+		<phrase var_name="browse_by" added="1565939860">Browse By</phrase>
+		<phrase var_name="feedback_management" added="1565939860">Feedback</phrase>
+		<phrase var_name="admin_menu_serverity_management" added="1565939860">Statuses</phrase>
+		<phrase var_name="add_new_status" added="1565939860">Create a New Status</phrase>
+		<phrase var_name="public" added="1565939860">Public</phrase>
+		<phrase var_name="private" added="1565939860">Private</phrase>
+		<phrase var_name="no_feedback_found" added="1565939860">No feedback found.</phrase>
+		<phrase var_name="add_new_serverity" added="1565939860">Create a New Severity</phrase>
+		<phrase var_name="number_of_times_used" added="1565939860">Number of Times Used</phrase>
+		<phrase var_name="name" added="1565939860">Name</phrase>
+		<phrase var_name="options" added="1565939860">Options</phrase>
+		<phrase var_name="categories_management" added="1565939860">Categories</phrase>
+		<phrase var_name="status_management" added="1565939860">Statuses</phrase>
+		<phrase var_name="serverities_management" added="1565939860">Severities</phrase>
+		<phrase var_name="post_a_feedback_visitor" added="1565939860"><![CDATA[<h3>Post a Feedback</h3>
+<p>To be able to display your Feedback publicly, please <a href="{login}">login</a> first.</p>]]></phrase>
+		<phrase var_name="below_some_valuable_statistics_for_feedbacks_submitted_on_your_site" added="1565939860">Below are some valuable statistics for feedback submitted on the website:</phrase>
+		<phrase var_name="total_feedbacks" added="1565939860">Total Feedback:</phrase>
+		<phrase var_name="total_public_feedbacks" added="1565939860">Total Public Feedback:</phrase>
+		<phrase var_name="total_private_feedbacks" added="1565939860">Total Private Feedback:</phrase>
+		<phrase var_name="total_anonymous_feedbacks" added="1565939860">Total Anonymous Feedback:</phrase>
+		<phrase var_name="feedback_total_comments" added="1565939860">Total Comments:</phrase>
+		<phrase var_name="total_votes" added="1565939860">Total Votes:</phrase>
+		<phrase var_name="setting_group_feedback" added="1565939860"><![CDATA[<title>feedback</title><info>feedback</info>]]></phrase>
+		<phrase var_name="setting_is_email" added="1565939860"><![CDATA[<title>email</title><info>send email alert to admin</info>]]></phrase>
+		<phrase var_name="setting_is_allowed" added="1565939860"><![CDATA[<title>Who can create feedback</title><info>Allow / disallow visitors (non-logged-in users) from posting feedback.</info>]]></phrase>
+		<phrase var_name="feedbacks_title" added="1565939860">Feedback</phrase>
+		<phrase var_name="posted_on_post_time_by_user_link" added="1565939860">Posted on {post_time} by {user_link}.</phrase>
+		<phrase var_name="be_the_first_to_add_a_feedback" added="1565939860">Be the First  to Add a Feedback</phrase>
+		<phrase var_name="create_new_feedback" added="1565939860">Create a New Feedback</phrase>
+		<phrase var_name="manage_feedbacks" added="1565939860">Feedback</phrase>
+		<phrase var_name="feedbacks_activity" added="1565939860">Feedback</phrase>
+		<phrase var_name="a_href_user_link_owner_full_name_a_added_a_new_feedback_a_href_title_link_title_a" added="1565939860"><![CDATA[<a href="{user_link}">{owner_full_name}</a> added a new feedback "<a href="{title_link}">{title}</a>".]]></phrase>
+		<phrase var_name="feedback_tags" added="1565939860">Feedback Tags</phrase>
+		<phrase var_name="pick_a_colour" added="1565939860">Pick a Colour</phrase>
+		<phrase var_name="pending" added="1565939860">Pending</phrase>
+		<phrase var_name="setting_is_send_mail" added="1565939860"><![CDATA[<title>Email Notification</title><info>Send notification email to Admin when there is new feedback created.</info>]]></phrase>
+		<phrase var_name="setting_sadf_sfasdf" added="1565939860"><![CDATA[<title>asdf</title><info>asdf safd</info>]]></phrase>
+		<phrase var_name="setting_is_allowed_creation" added="1565939860"><![CDATA[<title>Who is allowed to leave feedback</title><info>Visitor (non logged-in users) is allowed to leave feedback.</info>]]></phrase>
+		<phrase var_name="send_mail_to_none_user" added="1565939860">Notice visitors</phrase>
+		<phrase var_name="send_mail_to_none_user_when_someone_comment" added="1565939860">Send email to none users when someone comment on their feedback</phrase>
+		<phrase var_name="user_name_added_a_new_comment_on_none_user" added="1565939860"><![CDATA[{user_name} left a new comment on your feedback. If you want to see it, following this link: <br/>
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="admin_approve_none_user_feedback" added="1565939860"><![CDATA[Admin has approved your feedback. Please view your feedback on this link: <br/>
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="setting_send_mail_to_visitor_when_someone_comment" added="1565939860"><![CDATA[<title>Send notification to visitor</title><info>Send email to visitor when there is new comment on their feedback.</info>]]></phrase>
+		<phrase var_name="user_setting_points_feedback" added="1565939860">Points received when post a new feedback. </phrase>
+		<phrase var_name="posted_on_post_time_by_visitor" added="1565939860">Posted on {post_time} by {visitor}.</phrase>
+		<phrase var_name="admin_menu_manage_serverity" added="1565939860">Severities</phrase>
+		<phrase var_name="uncategorized" added="1565939860">Uncategorized</phrase>
+		<phrase var_name="unstatus" added="1565939860">No Status</phrase>
+		<phrase var_name="no_feedbacks_found" added="1565939860">No search results found.</phrase>
+		<phrase var_name="no_categories_found" added="1565939860">No Categories found.</phrase>
+		<phrase var_name="you_have_not_added_any_feedbacks" added="1565939860">You have not added any feedback.</phrase>
+		<phrase var_name="feedback_vote" added="1565939860">vote</phrase>
+		<phrase var_name="category_name" added="1565939860">Name</phrase>
+		<phrase var_name="category_description" added="1565939860">Description</phrase>
+		<phrase var_name="view" added="1565939860">view</phrase>
+		<phrase var_name="views" added="1565939860">view(s)</phrase>
+		<phrase var_name="views_n" added="1565939860">views</phrase>
+		<phrase var_name="comment" added="1565939860">comment</phrase>
+		<phrase var_name="comments" added="1565939860">comment(s)</phrase>
+		<phrase var_name="comments_n" added="1565939860">comments</phrase>
+		<phrase var_name="no_status_found" added="1565939860">No statuses found.</phrase>
+		<phrase var_name="no_serveritties_found" added="1565939860">No Severity found.</phrase>
+		<phrase var_name="report_this_feedback" added="1565939860">Report this feedback</phrase>
+		<phrase var_name="edit_feedback" added="1565939860">Edit Feedback</phrase>
+		<phrase var_name="add_picture" added="1565939860">Add Pictures</phrase>
+		<phrase var_name="delete_feedback" added="1565939860">Delete Feedback</phrase>
+		<phrase var_name="vote_feedback" added="1565939860">Vote</phrase>
+		<phrase var_name="posted_time" added="1565939860">Posted Time</phrase>
+		<phrase var_name="posted_user" added="1565939860">Posted User</phrase>
+		<phrase var_name="status_description" added="1565939860">Status Description</phrase>
+		<phrase var_name="remove_feedback" added="1565939860">Remove</phrase>
+		<phrase var_name="feedback_private" added="1565939860">Private</phrase>
+		<phrase var_name="feedback_public" added="1565939860">Public</phrase>
+		<phrase var_name="feedback_pending" added="1565939860">Pending</phrase>
+		<phrase var_name="serverity_name" added="1565939860">Name</phrase>
+		<phrase var_name="edit" added="1565939860">Edit</phrase>
+		<phrase var_name="feedback_votes" added="1565939860">vote(s)</phrase>
+		<phrase var_name="feedback_votes_n" added="1565939860">votes</phrase>
+		<phrase var_name="title_cannot_be_empty" added="1565939860">Title cannot be empty</phrase>
+		<phrase var_name="description_of_feedback_cannot_be_empty" added="1565939860">Description of feedback cannot be empty</phrase>
+		<phrase var_name="your_full_name_cannot_be_empty" added="1565939860">Your full name cannot be empty</phrase>
+		<phrase var_name="invalid_email_address" added="1565939860">Invalid email address</phrase>
+		<phrase var_name="please_select_one_of_status_for_your_feedback" added="1565939860">Please select one of status for your feedback</phrase>
+		<phrase var_name="description_of_the_status_feedback_cannot_be_empty" added="1565939860">Description of the status feedback cannot be empty</phrase>
+		<phrase var_name="delete_the_category_fail" added="1565939860">Delete the Category fail</phrase>
+		<phrase var_name="you_have_already_voted_this_feedback" added="1565939860">You have already voted this feedback.</phrase>
+		<phrase var_name="delete_your_feedback_successfully" added="1565939860">Feedback has been deleted successfully</phrase>
+		<phrase var_name="delete_your_feedback_fail" added="1565939860">Delete Your Feedback fail</phrase>
+		<phrase var_name="the_feedback_title_was_deleted_successfully" added="1565939860">The Feedback {feedback_title} was deleted successfully</phrase>
+		<phrase var_name="the_feedback_title_was_deleted_fail" added="1565939860">The Feedback {feebback_title} was deleted fail</phrase>
+		<phrase var_name="delete_the_picture_successfully" added="1565939860">Delete the picture successfully</phrase>
+		<phrase var_name="delete_your_picture_fail" added="1565939860">Delete Your Picture fail</phrase>
+		<phrase var_name="picture" added="1565939860">picture</phrase>
+		<phrase var_name="pictures" added="1565939860">picture(s)</phrase>
+		<phrase var_name="pictures_n" added="1565939860">pictures</phrase>
+		<phrase var_name="feedback_pictures" added="1565939860">Feedback Pictures</phrase>
+		<phrase var_name="delete" added="1565939860">Delete</phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1565939860">You can upload a JPG, GIF or PNG file.</phrase>
+		<phrase var_name="select_picture_s" added="1565939860">Select Picture(s)</phrase>
+		<phrase var_name="the_file_size_limit_is_file_size_if_your_upload_does_not_work_try_uploading_a_smaller_picture" added="1565939860">The file size limit is {file_size}. If your upload does not work, try uploading a smaller picture.</phrase>
+		<phrase var_name="upload_feedback_picture" added="1565939860">Upload Feedback Photos</phrase>
+		<phrase var_name="click_here_to_upload_photos" added="1565939860">Click here to upload photos.</phrase>
+		<phrase var_name="user_setting_can_upload_pictures" added="1565939860">Can upload pictures to feedback.</phrase>
+		<phrase var_name="user_setting_picture_max_upload_size" added="1565939860"><![CDATA[Max file size for photos upload in kilobits (kb).
+(1000 kb = 1 mb)
+For unlimited add "0" without quotes.]]></phrase>
+		<phrase var_name="invalid_feedback_please_try_again" added="1565939860">Invalid Feedback. Please try again.</phrase>
+		<phrase var_name="user_setting_define_how_many_pictures_can_be_uploaded_per_feedback" added="1565939860">Define how many pictures can be uploaded per feedback</phrase>
+		<phrase var_name="you_have_reach_limit_uploaded_pictures_for_this_feedback" added="1565939860">You have reach limit uploaded pictures for this Feedback.</phrase>
+		<phrase var_name="back_to_this_feedback" added="1565939860">Back to this Feedback</phrase>
+		<phrase var_name="back_to_your_feedback" added="1565939860">Back to Your Feedback</phrase>
+		<phrase var_name="unfeatured" added="1565939860">Unfeatured</phrase>
+		<phrase var_name="search_filter" added="1565939860">Search Filter</phrase>
+		<phrase var_name="sort_by" added="1565939860">Sort By</phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_feedback_feedback_title" added="1565939860"><![CDATA[<a href="{user_link}">{full_name}</a> wrote a comment on your feedback "<a href="{feedback_link}">{feedback_title}</a>".]]></phrase>
+		<phrase var_name="user_setting_can_approve_feedbacks" added="1565939860">Can approve feedback?</phrase>
+		<phrase var_name="user_setting_limit_vote_feedback" added="1565939860">Limit vote for feedback.</phrase>
+		<phrase var_name="user_setting_can_delete_user_feedback" added="1565939860">Can delete feedback added by all users?</phrase>
+		<phrase var_name="feedback_this_feedback_is_pending_an_admins_approval" added="1565939860"><![CDATA[This feedback is pending and waiting for Admin's approval.]]></phrase>
+		<phrase var_name="all_feedbacks" added="1565939860">All Feedback</phrase>
+		<phrase var_name="my_feedbacks" added="1565939860">My Feedback</phrase>
+		<phrase var_name="friends_feedbacks" added="1565939860"><![CDATA[Friends' Feedback]]></phrase>
+		<phrase var_name="feedbacks" added="1565939860">Feedback</phrase>
+		<phrase var_name="feedback_has_been_approved" added="1565939860">Feedback has been approved.</phrase>
+		<phrase var_name="feedback_approved" added="1565939860">Feedback Approved</phrase>
+		<phrase var_name="feedback_s_successfully_deleted" added="1565939860">Feedback(s) successfully deleted.</phrase>
+		<phrase var_name="moderation" added="1565939860">Moderation</phrase>
+		<phrase var_name="setting_thank_you_message" added="1565939860"><![CDATA[<title>Default message</title><info>Default message send by Admin when there is user leave feedback on your site.</info>]]></phrase>
+		<phrase var_name="approve" added="1565939860">Approve</phrase>
+		<phrase var_name="user_setting_delete_own_feedback" added="1565939860">Can delete feedback by owner?</phrase>
+		<phrase var_name="invalid_feedback" added="1565939860">Invalid feedback</phrase>
+		<phrase var_name="user_setting_edit_user_feedback" added="1565939860">Can edit feedback added by all users?</phrase>
+		<phrase var_name="user_setting_edit_own_feedback" added="1565939860">Can edit their own feedback?</phrase>
+		<phrase var_name="user_setting_delete_user_feedback" added="1565939860">Can delete feedback added by all users?</phrase>
+		<phrase var_name="your_feedback_has_been_approved_on_site_title_message" added="1565939860"><![CDATA[Your feedback has been approved on {site_title}.
+
+To view this feedback, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="your_feedback_has_been_approved_on_site_title" added="1565939860">Your feedback has been approved on {site_title}.</phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_your_a_href_link_feedback_a" added="1565939860"><![CDATA[<a href="{user_link}">{full_name}</a> likes your <a href="{link}">feedback</a>.]]></phrase>
+		<phrase var_name="search_feedback_dot" added="1565939860">Search Feedback...</phrase>
+		<phrase var_name="setting_feedback_time_stamp" added="1565939860"><![CDATA[<title>Feedback Time Stamps</title><info>By using default settings and default template, Time Stamps will follow the format as
+Posted June 22, 2008 by admin 
+under feedback Title</info>]]></phrase>
+		<phrase var_name="latest" added="1565939860">Latest</phrase>
+		<phrase var_name="most_like" added="1565939860">Most Liked</phrase>
+		<phrase var_name="most_discussed" added="1565939860">Most Discussed</phrase>
+		<phrase var_name="the_feedback_you_are_trying_to_approve_is_not_valid" added="1565939860">The feedback you are trying to approve is not valid.</phrase>
+		<phrase var_name="your_feedback_title_was_updated_successfully" added="1565939860">Your feedback {title} was updated successfully.</phrase>
+		<phrase var_name="your_feedback_title_was_updated_fail" added="1565939860">Your feedback {title} was updated fail.</phrase>
+		<phrase var_name="your_feedback_title_was_created_successfully" added="1565939860">Your feedback {title} was created successfully.</phrase>
+		<phrase var_name="yes" added="1565939860">Yes</phrase>
+		<phrase var_name="no" added="1565939860">No</phrase>
+		<phrase var_name="feedback_delete" added="1565939860">Feedback Deleted.</phrase>
+		<phrase var_name="feedback_has_been_deleted" added="1565939860">Feedback has been deleted.</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_feedback" added="1565939860">Are you sure you want to delete this feedback?</phrase>
+		<phrase var_name="user_setting_approve_feedbacks" added="1565939860">Approve feedback automatically?</phrase>
+		<phrase var_name="feedback_not_found" added="1565939860">The feedback you are looking for cannot be found.</phrase>
+		<phrase var_name="feedback_statistics" added="1565939860">Feedback Statistics</phrase>
+		<phrase var_name="most_voted_feedbacks" added="1565939860">Most Voted Feedback</phrase>
+		<phrase var_name="all" added="1565939860">All</phrase>
+		<phrase var_name="pending_feedbacks" added="1565939860">Pending Feedback</phrase>
+		<phrase var_name="action" added="1565939860">Action</phrase>
+		<phrase var_name="cancel" added="1565939860">Cancel</phrase>
+		<phrase var_name="or" added="1565939860">or</phrase>
+		<phrase var_name="feedback_is_featured" added="1565939860">Feedback is featured</phrase>
+		<phrase var_name="select" added="1565939860">Select</phrase>
+		<phrase var_name="posted_a_feedback" added="1565939860">posted a feedback.</phrase>
+		<phrase var_name="select_photo_s" added="1565939860">Select Photo(s)</phrase>
+		<phrase var_name="visitor_posted_feedback" added="1565939860">Posted by {visitor}.</phrase>
+		<phrase var_name="user_posted_feedback" added="1565939860">Posted by {username}</phrase>
+		<phrase var_name="posted_by_link_full_name" added="1565939860"><![CDATA[Posted by <a href="{link}">{full_name}</a>]]></phrase>
+		<phrase var_name="posted_time_by_visitor" added="1565939860"><![CDATA[Posted {time_stamp} by <span title="{full_name}">{short_name}</span>]]></phrase>
+		<phrase var_name="span_class_feedback_by_user_posted_time_stamp_by_a_href_link_title_full_name_short_name_a_span" added="1565939860"><![CDATA[<span class="feedback_by_user">Posted {time_stamp} by <a href="{link}" title="{full_name}">{short_name}</a></span>]]></phrase>
+		<phrase var_name="posted_time_by_user" added="1565939860"><![CDATA[<span class="feedback_by_user">Posted {time_stamp} by <a href="{link}" title="{full_name}">{short_name}</a></span>]]></phrase>
+		<phrase var_name="see_more" added="1565939860">See More</phrase>
+		<phrase var_name="posted_time_link_by_user" added="1565939860"><![CDATA[Posted {time_stamp} by <a href="{link}">{full_name}</a>]]></phrase>
+		<phrase var_name="category_name_can_not_be_empty" added="1565939860">Category Name can not be empty.</phrase>
+		<phrase var_name="category_name_is_too_long" added="1565939860">Category Name is too long.</phrase>
+		<phrase var_name="category_name_was_updated_successfully" added="1565939860"><![CDATA[Category Name "{name}" was updated successfully.]]></phrase>
+		<phrase var_name="feedback_categories" added="1565939860">Feedback Categories</phrase>
+		<phrase var_name="feedback_statuses" added="1565939860">Feedback Statuses</phrase>
+		<phrase var_name="feedback_serverities" added="1565939860">Feedback Serverities</phrase>
+		<phrase var_name="thank_you_for_leaving_feedback_on_our_website" added="1565939860">Thank you for leaving feedback on our website.</phrase>
+		<phrase var_name="feedback_information" added="1565939860">Feedback Information</phrase>
+		<phrase var_name="severity" added="1565939860">Severity</phrase>
+		<phrase var_name="visibility" added="1565939860">Visibility</phrase>
+		<phrase var_name="delete_the_feedback" added="1565939860">Delete the feedback</phrase>
+		<phrase var_name="edit_the_feedback" added="1565939860">Edit the feedback</phrase>
+		<phrase var_name="categories" added="1565939860">Categories</phrase>
+		<phrase var_name="edit_status" added="1565939860">Edit Status</phrase>
+		<phrase var_name="delete_status" added="1565939860">Delete Status</phrase>
+		<phrase var_name="edit_serverity" added="1565939860">Edit Serverity</phrase>
+		<phrase var_name="delete_serverity" added="1565939860">Delete Serverity</phrase>
+		<phrase var_name="any" added="1565939860">Any</phrase>
+		<phrase var_name="the_feedback_title_was_update_successfully" added="1565939860"><![CDATA[The feedback "{title}" was updated successfully.]]></phrase>
+		<phrase var_name="the_feedback_title_already_exists" added="1565939860"><![CDATA[The feedback "{title}" already exists.]]></phrase>
+		<phrase var_name="the_feedback_was_deleted_successfully" added="1565939860">The feedback were deleted successfully.</phrase>
+		<phrase var_name="the_serverity_title_was_created_successfully" added="1565939860"><![CDATA[The serverity "{title}" was created successfully.]]></phrase>
+		<phrase var_name="serverity_name_canot_be_empty" added="1565939860">Serverity name can not be empty.</phrase>
+		<phrase var_name="serverity_name_is_too_long" added="1565939860">Serverity Name is too long.</phrase>
+		<phrase var_name="the_category_title_was_created_successfully" added="1565939860"><![CDATA[The category "{name}" was created successfully.]]></phrase>
+		<phrase var_name="the_status_name_was_created_successfully" added="1565939860"><![CDATA[The Status "{name}" was created successfully.]]></phrase>
+		<phrase var_name="status_name_cannot_be_empty" added="1565939860">Status Name cannot be empty.</phrase>
+		<phrase var_name="status_name_is_too_long" added="1565939860">Status Name is too long.</phrase>
+		<phrase var_name="status_name_was_updated_successfully" added="1565939860"><![CDATA[Status "{name}" was updated successfully.]]></phrase>
+		<phrase var_name="feedback_photo" added="1565939860">Feedback Photo</phrase>
+		<phrase var_name="edit_category" added="1565939860">Edit Category</phrase>
+		<phrase var_name="delete_category" added="1565939860">Delete Category</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_photo" added="1565939860">Are you sure you want to delete this photo?</phrase>
+		<phrase var_name="please_hold_while_your_images_are_being_processed" added="1565939860">Please hold while your images are being processed.</phrase>
+		<phrase var_name="update_status" added="1565939860">Update Status</phrase>
+		<phrase var_name="click_to_set_as_featured" added="1565939860">Click to set as featured</phrase>
+		<phrase var_name="click_to_clear_featured" added="1565939860">Click to clear featured</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_these_feedbacks" added="1565939860">Are you sure you want to delete these feedback?</phrase>
+		<phrase var_name="no_feedback_selected_to_delete" added="1565939860">No feedback selected to delete. Please choose feedback before deleting.</phrase>
+		<phrase var_name="are_you_sure" added="1565939860">Are you sure?</phrase>
+		<phrase var_name="user_name_tagged_you_in_a_comment_in_a_feedback" added="1565939860">{user_name} tagged you in a comment in a feedback</phrase>
+		<phrase var_name="user_name_tagged_you_in_a_feedback" added="1565939860">{user_name} tagged you in a feedback</phrase>
+		<phrase var_name="create_a_new_category" added="1565939860">Create a New Category</phrase>
+		<phrase var_name="edit_a_status" added="1565939860">Edit a Status</phrase>
+		<phrase var_name="friend_feedbacks" added="1565939860"><![CDATA[Friends&#039; Feedback]]></phrase>
+		<phrase var_name="critical" added="1565939860">Critical</phrase>
+		<phrase var_name="answered" added="1565939860">Answered</phrase>
+		<phrase var_name="votable" added="1565939860">Votable</phrase>
+		<phrase var_name="disabled" added="1565939860">Disabled</phrase>
+		<phrase var_name="enabled" added="1565939860">Enabled</phrase>
+		<phrase var_name="click_to_clear_votable" added="1565939860">Click to clear votable</phrase>
+		<phrase var_name="click_to_set_as_votable" added="1565939860">Click to set as votable</phrase>
+		<phrase var_name="vote_closed" added="1565939860">Vote closed</phrase>
+		<phrase var_name="upload" added="1565939860">Upload</phrase>
+		<phrase var_name="upload_image_s_successfully" added="1565939860">Upload image(s) successfully.</phrase>
+		<phrase var_name="there_are_some_errors_when_processing_please_check_again" added="1565939860">There are some errors when processing. Please check again.</phrase>
+		<phrase var_name="menu_feedback_feedback_fad58de7366495db4650cfefac2fcd61" added="1565939860">Feedback</phrase>
+		<phrase var_name="commented_on_your_feedback" added="1565939860">comment on your feedback</phrase>
+		<phrase var_name="commented_on" added="1565939860">commented on</phrase>
+		<phrase var_name="setting_addthis_public_id" added="1565939860"><![CDATA[<title>Insert your Addthis Profile ID</title><info>Insert your Addthis Profile ID</info>]]></phrase>
+		<phrase var_name="feedback_is_pending_approval" added="1565939860">Feedback is pending approval</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_feedback_permanently" added="1565939860">Are you sure you want to delete this feedback permanently?</phrase>
+		<phrase var_name="setting_feedback_paging_mode" added="1565939860"><![CDATA[<title>Pagination Style</title><info>Select Pagination Style at Search Page.</info>]]></phrase>
+		<phrase var_name="feedback_feature_successfully" added="1565939860">Feedback Featured Successfully</phrase>
+		<phrase var_name="feedback_unfeature_successfully" added="1565939860"> Feedback Unfeature Successfully</phrase>
+		<phrase var_name="admin_menu_feedback_user_group_settings" added="1565939860">User Group Settings</phrase>
+		<phrase var_name="provide_a_language_name_name" added="1565939860"><![CDATA[Provide a "{language_name}" name.]]></phrase>
+		<phrase var_name="category_language_name_name_must_be_less_than_limit" added="1565939860"><![CDATA[Category "{language_name}" name must be less than {limit}]]></phrase>
+		<phrase var_name="display_photo" added="1565939860">Display photo</phrase>
+		<phrase var_name="user_setting_can_view_feedback" added="1565939860">Can view feedback</phrase>
+		<phrase var_name="You do not have permission to upload photos for feedback" added="1565939860" />
+		<phrase var_name="The feedback you are looking for either does not exist or has been removed" added="1565939860" />
+		<phrase var_name="cannot_find_the_uploaded_photo_please_try_again" added="1565939860">Cannot find the uploaded photo, please try again</phrase>
+		<phrase var_name="photo_s_uploaded_successfully" added="1565939860">Photo(s) uploaded successfully.</phrase>
+		<phrase var_name="user_setting_can_feature_feedbacks" added="1565939860">Can feature feedback?</phrase>
+		<phrase var_name="you_have_total_pending_feedbacks" added="1565939860">You have {total} pending feedbacks</phrase>
+		<phrase var_name="controller_feedback" added="1565939860">Feedback</phrase>
+		<phrase var_name="controller_feedback.detail" added="1565939860">Feedback Detail</phrase>
+		<phrase var_name="controller_feedback.index" added="1565939860">Feedback Home Page</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="feedback" type="boolean" admin="1" user="0" guest="0" staff="0" module="feedback" ordering="0">edit_user_feedback</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="boolean" admin="true" user="true" guest="false" staff="true" module="feedback" ordering="0">delete_own_feedback</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="integer" admin="1" user="1" guest="0" staff="1" module="feedback" ordering="0">points_feedback</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="integer" admin="5000" user="5000" guest="100" staff="5000" module="feedback" ordering="0">picture_max_upload_size</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="boolean" admin="true" user="true" guest="false" staff="true" module="feedback" ordering="0">can_you_post_on_feedback</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="boolean" admin="true" user="true" guest="false" staff="true" module="feedback" ordering="0">can_upload_pictures</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="integer" admin="10" user="5" guest="0" staff="0" module="feedback" ordering="0">limit_vote_feedback</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="boolean" admin="1" user="0" guest="0" staff="0" module="feedback" ordering="0">delete_user_feedback</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="boolean" admin="1" user="0" guest="0" staff="0" module="feedback" ordering="0">can_approve_feedbacks</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="boolean" admin="1" user="1" guest="0" staff="0" module="feedback" ordering="0">edit_own_feedback</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="integer" admin="10" user="5" guest="0" staff="5" module="feedback" ordering="0">define_how_many_pictures_can_be_uploaded_per_feedback</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="boolean" admin="1" user="0" guest="0" staff="0" module="feedback" ordering="0">approve_feedbacks</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="boolean" admin="true" user="true" guest="true" staff="true" module="feedback" ordering="0">can_view_feedback</setting>
+		<setting is_admin_setting="0" module_id="feedback" type="boolean" admin="true" user="false" guest="false" staff="true" module="feedback" ordering="0">can_feature_feedbacks</setting>
+	</user_group_settings>
+</module>

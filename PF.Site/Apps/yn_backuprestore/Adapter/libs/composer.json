@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^5.2",
+        "google/apiclient": "^2.0",
+        "kunalvarma05/dropbox-php-sdk": "^0.1.5"
+    }
+}

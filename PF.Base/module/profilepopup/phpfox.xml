@@ -1,0 +1,160 @@
+<module>
+	<data>
+		<module_id>profilepopup</module_id>
+		<product_id>younet_profilepopup4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:5:{s:39:"profilepopup.admin_menu_global_settings";a:1:{s:3:"url";a:2:{i:0;s:12:"profilepopup";i:1;s:4:"user";}}s:45:"profilepopup.admin_menu_pages_global_settings";a:1:{s:3:"url";a:2:{i:0;s:12:"profilepopup";i:1;s:5:"pages";}}s:45:"profilepopup.admin_menu_event_global_settings";a:1:{s:3:"url";a:2:{i:0;s:12:"profilepopup";i:1;s:5:"event";}}s:46:"profilepopup.admin_menu_groups_global_settings";a:1:{s:3:"url";a:2:{i:0;s:12:"profilepopup";i:1;s:6:"groups";}}s:43:"profilepopup.admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:12:"profilepopup";i:1;s:19:"user-group-settings";}}}]]></menu>
+		<phrase_var_name>module_profilepopup</phrase_var_name>
+		<version>4.02p4</version>
+		<author>YouNet Company</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNet Company</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/Profile_Popup.jpg</apps_icon>
+	</data>
+	<settings>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="integer" var_name="opening_delay_time" phrase_var_name="setting_opening_delay_time" ordering="1" version_id="3.01">300</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="integer" var_name="closing_delay_time" phrase_var_name="setting_closing_delay_time" ordering="2" version_id="3.01">300</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="boolean" var_name="show_mutual_friend" phrase_var_name="setting_show_mutual_friend" ordering="8" version_id="3.01">1</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="integer" var_name="number_of_mutual_friend" phrase_var_name="setting_number_of_mutual_friend" ordering="9" version_id="3.01">5</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="boolean" var_name="show_joined_friend_in_pages" phrase_var_name="setting_show_joined_friend_in_pages" ordering="12" version_id="3.01">1</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="integer" var_name="number_of_joined_friend_in_pages" phrase_var_name="setting_number_of_joined_friend_in_pages" ordering="13" version_id="3.01">5</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="boolean" var_name="show_joined_friend_in_groups" phrase_var_name="setting_show_joined_friend_in_groups" ordering="12" version_id="4.02">1</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="integer" var_name="number_of_joined_friend_in_groups" phrase_var_name="setting_number_of_joined_friend_in_groups" ordering="13" version_id="4.02">5</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="integer" var_name="profilepopup_length_in_index" phrase_var_name="setting_profilepopup_length_in_index" ordering="18" version_id="3.01">50</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="boolean" var_name="enable_thumbnails" phrase_var_name="setting_enable_thumbnails" ordering="5" version_id="3.01">1</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="boolean" var_name="show_joined_friend_in_event" phrase_var_name="setting_show_joined_friend_in_event" ordering="16" version_id="3.01">1</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="boolean" var_name="enable_cache_popup" phrase_var_name="setting_enable_cache_popup" ordering="0" version_id="3.01">1</setting>
+		<setting group="" module_id="profilepopup" is_hidden="0" type="integer" var_name="number_of_joined_friend_in_event" phrase_var_name="setting_number_of_joined_friend_in_event" ordering="17" version_id="3.01">5</setting>
+	</settings>
+	<phrases>
+		<phrase var_name="module_profilepopup" added="1566902945">Profile Popup</phrase>
+		<phrase var_name="birth_date" added="1566902945">Birth Date</phrase>
+		<phrase var_name="age" added="1566902945">Age</phrase>
+		<phrase var_name="1_member" added="1566902945">1 member.</phrase>
+		<phrase var_name="total_members" added="1566902945">{total} members.</phrase>
+		<phrase var_name="1_person_likes_this" added="1566902945">1 person likes this.</phrase>
+		<phrase var_name="total_people_like_this" added="1566902945">{total} people like this.</phrase>
+		<phrase var_name="age_years_old" added="1566902945">{age} years old</phrase>
+		<phrase var_name="mutual_friends_total" added="1566902945">Mutual Friends ({total})</phrase>
+		<phrase var_name="add_to_friends" added="1566902945">Add to Friends</phrase>
+		<phrase var_name="add_as_friend" added="1566902945">Add as Friend</phrase>
+		<phrase var_name="send_message" added="1566902945">Send Message</phrase>
+		<phrase var_name="say_happy_birthday" added="1566902945">Say Happy Birthday</phrase>
+		<phrase var_name="setting_opening_delay_time" added="1566902945"><![CDATA[<title>Delay Time to Display Popup</title><info>Delay time to display popup (in millisecond).</info>]]></phrase>
+		<phrase var_name="setting_closing_delay_time" added="1566902945"><![CDATA[<title>Delay Time to Close Popup</title><info>Delay time to close popup (in millisecond).</info>]]></phrase>
+		<phrase var_name="setting_ignore_css_class" added="1566902945"><![CDATA[<title>Ignore CSS Class</title><info>Disable popup when mouse within element has following CSS class, separate by comma.</info>]]></phrase>
+		<phrase var_name="setting_max_height_of_popup" added="1566902945"><![CDATA[<title>Max Heigh Of Popup</title><info>Max height of popup content (pixel).</info>]]></phrase>
+		<phrase var_name="setting_enable_thumbnails" added="1566902945"><![CDATA[<title>Display Thumbnail</title><info>Display thumbnail in popup.</info>]]></phrase>
+		<phrase var_name="setting_show_user_status" added="1566902945"><![CDATA[<title>Show User Status</title><info>Show user status on popup.</info>]]></phrase>
+		<phrase var_name="setting_show_profiles_fields" added="1566902945"><![CDATA[<title>Show Profile Fields</title><info>Show profile fields on popup.</info>]]></phrase>
+		<phrase var_name="setting_number_of_profile_fields" added="1566902945"><![CDATA[<title>Number Of Profile Fields</title><info>How many profile fields will be shown on popup?</info>]]></phrase>
+		<phrase var_name="setting_show_mutual_friend" added="1566902945"><![CDATA[<title>Display Mutual Friends</title><info>Display mutual friends in popup.</info>]]></phrase>
+		<phrase var_name="setting_number_of_mutual_friend" added="1566902945"><![CDATA[<title>Limit Of Mutual Friends</title><info>Limit of mutual friends are displayed in popup.</info>]]></phrase>
+		<phrase var_name="setting_length_in_index" added="1566902945"><![CDATA[<title>How Long is the Preview</title><info>How much of the long text to show on the popup?
+
+Value is in characters, i.e.:
+15 would show something like:
+"Lorem ipsum dol..."
+
+0 = No limit</info>]]></phrase>
+		<phrase var_name="admin_menu_global_settings" added="1566902945">User Global Settings</phrase>
+		<phrase var_name="admin_menu_groups_global_settings" added="1566902945">Groups Global Settings</phrase>
+		<phrase var_name="admin_menu_user_group_settings" added="1566902945">User Group Settings</phrase>
+		<phrase var_name="pp_item_first_name" added="1566902945">First Name</phrase>
+		<phrase var_name="pp_item_last_name" added="1566902945">Last Name</phrase>
+		<phrase var_name="pp_item_gender" added="1566902945">Gender</phrase>
+		<phrase var_name="pp_item_birthday" added="1566902945">Birthday</phrase>
+		<phrase var_name="pp_item_relationship_status" added="1566902945">Relationship Status</phrase>
+		<phrase var_name="global_settings" added="1566902945">Global Settings</phrase>
+		<phrase var_name="global_settings_title" added="1566902945">Global Settings</phrase>
+		<phrase var_name="no_global_settings" added="1566902945">No global settings found.</phrase>
+		<phrase var_name="field_label" added="1566902945">Field Label</phrase>
+		<phrase var_name="global_settings_ordering" added="1566902945">Ordering</phrase>
+		<phrase var_name="global_settings_info" added="1566902945">Select field(s) to show on popup.</phrase>
+		<phrase var_name="global_settings_update" added="1566902945">Update</phrase>
+		<phrase var_name="global_setting_warning_ordering" added="1566902945">Ordering(s) must be numeric type and positive.</phrase>
+		<phrase var_name="item_s_successfully_updated" added="1566902945">Item(s) successfully updated.</phrase>
+		<phrase var_name="pp_item_status" added="1566902945">Status</phrase>
+		<phrase var_name="unfriend" added="1566902945">Unfriend</phrase>
+		<phrase var_name="setting_enable_cache_popup" added="1566902945"><![CDATA[<title>Apply Cache</title><info>Enable cache when showing popup on client side.
+
+True = data popup is refreshed after loading page
+False = data popup is always refreshed
+</info>]]></phrase>
+		<phrase var_name="profile_is_private" added="1566902945">Profile is private</phrase>
+		<phrase var_name="user_not_found" added="1566902945">User not found</phrase>
+		<phrase var_name="admin_menu_pages_global_settings" added="1566902945">Pages Global Settings</phrase>
+		<phrase var_name="admin_menu_event_global_settings" added="1566902945">Event Global Settings</phrase>
+		<phrase var_name="user_global_settings" added="1566902945">User Global Settings</phrase>
+		<phrase var_name="pages_global_settings" added="1566902945">Pages Global Settings</phrase>
+		<phrase var_name="groups_global_settings" added="1566902945">Groups Global Settings</phrase>
+		<phrase var_name="event_global_settings" added="1566902945">Event Global Settings</phrase>
+		<phrase var_name="setting_show_joined_friend_in_pages" added="1566902945"><![CDATA[<title>Display Joined Friends In Pages</title><info>Display joined friends in pages on popup.</info>]]></phrase>
+		<phrase var_name="setting_number_of_joined_friend_in_pages" added="1566902945"><![CDATA[<title>Limit Of Joined Friends In Pages</title><info>Limit of joined friends in pages are displayed in popup.</info>]]></phrase>
+		<phrase var_name="setting_show_joined_friend_in_groups" added="1566902945"><![CDATA[<title>Display Joined Friends In Groups</title><info>Display joined friends in groups on popup.</info>]]></phrase>
+		<phrase var_name="setting_number_of_joined_friend_in_groups" added="1566902945"><![CDATA[<title>Limit Of Joined Friends In Groups</title><info>Limit of joined friends in groups are displayed in popup.</info>]]></phrase>
+		<phrase var_name="setting_show_joined_friend_in_event" added="1566902945"><![CDATA[<title>Display Joined Friends In Event</title><info>Display joined friends in event on popup.</info>]]></phrase>
+		<phrase var_name="setting_number_of_joined_friend_in_event" added="1566902945"><![CDATA[<title>Limit Of Joined Friends In Event</title><info>Limit of joined friends in event are displayed in popup.</info>]]></phrase>
+		<phrase var_name="pp_item_category" added="1566902945">Category</phrase>
+		<phrase var_name="pp_item_total_of_likes" added="1566902945">Total of Likes</phrase>
+		<phrase var_name="pp_item_time" added="1566902945">Time</phrase>
+		<phrase var_name="pp_item_location" added="1566902945">Location</phrase>
+		<phrase var_name="pp_item_total_of_members" added="1566902945">Total of Members</phrase>
+		<phrase var_name="pp_item_total_members" added="1566902945">Total of Members</phrase>
+		<phrase var_name="no_user_global_settings" added="1566902945">No User global settings found.</phrase>
+		<phrase var_name="no_pages_global_settings" added="1566902945">No Pages global settings found.</phrase>
+		<phrase var_name="no_groups_global_settings" added="1566902945">No Groups global settings found.</phrase>
+		<phrase var_name="no_event_global_settings" added="1566902945">No Event global settings found.</phrase>
+		<phrase var_name="setting_show_pages_fields" added="1566902945"><![CDATA[<title>Show Pages Fields</title><info>Show pages fields on popup.</info>]]></phrase>
+		<phrase var_name="setting_number_of_pages_fields" added="1566902945"><![CDATA[<title>Number Of Pages Fields</title><info>How many pages fields will be shown on popup?</info>]]></phrase>
+		<phrase var_name="setting_show_event_fields" added="1566902945"><![CDATA[<title>Show Event Fields</title><info>Show event fields on popup.</info>]]></phrase>
+		<phrase var_name="setting_number_of_event_fields" added="1566902945"><![CDATA[<title>Number Of Event Fields</title><info>How many event fields will be shown on popup?</info>]]></phrase>
+		<phrase var_name="pages_global_settings_info" added="1566902945">Select field(s) to show on popup.</phrase>
+		<phrase var_name="groups_global_settings_info" added="1566902945">Select field(s) to show on popup.</phrase>
+		<phrase var_name="event_global_settings_info" added="1566902945">Select field(s) to show on popup.</phrase>
+		<phrase var_name="pages_not_found" added="1566902945">Pages not found</phrase>
+		<phrase var_name="joined_friends_total" added="1566902945">Joined Friends ({total})</phrase>
+		<phrase var_name="joined_friends_s" added="1566902945">Joined Friend(s)</phrase>
+		<phrase var_name="share" added="1566902945">Share</phrase>
+		<phrase var_name="like" added="1566902945">Like</phrase>
+		<phrase var_name="unlike" added="1566902945">Unlike</phrase>
+		<phrase var_name="event_not_found" added="1566902945">Event not found</phrase>
+		<phrase var_name="event_join" added="1566902945">Join</phrase>
+		<phrase var_name="event_leave" added="1566902945">Leave</phrase>
+		<phrase var_name="event_invite" added="1566902945">Invite</phrase>
+		<phrase var_name="event_inform_leave" added="1566902945">You are not longer a member of this event.</phrase>
+		<phrase var_name="event_join_successfully" added="1566902945">Join this event successfully.</phrase>
+		<phrase var_name="event_confirm_leave" added="1566902945">Are you sure you want to leave this event?</phrase>
+		<phrase var_name="event_join_title" added="1566902945">Join Event</phrase>
+		<phrase var_name="event_leave_title" added="1566902945">Leave Event</phrase>
+		<phrase var_name="setting_profilepopup_length_in_index" added="1566902945"><![CDATA[<title>Limit of Description In Popup</title><info>Limit of characters of description are displayed in popup
+
+0 = No limit</info>]]></phrase>
+		<phrase var_name="notice" added="1566902945">Notice</phrase>
+		<phrase var_name="pp_share" added="1566902945">Share</phrase>
+		<phrase var_name="pp_online" added="1566902945">Online</phrase>
+		<phrase var_name="favorite" added="1566902945">Favorite</phrase>
+		<phrase var_name="unfavorite" added="1566902945">Unfavorite</phrase>
+		<phrase var_name="loading" added="1566902945">Loading...</phrase>
+		<phrase var_name="loading_error" added="1566902945">There was an error during processing. Please try again.</phrase>
+		<phrase var_name="user_setting_can_view_profile_popup" added="1566902945">Can view Profile Popup?</phrase>
+		<phrase var_name="basic_information" added="1566902945">Basic Information</phrase>
+		<phrase var_name="resume_fields" added="1566902945">Resume Fields</phrase>
+		<phrase var_name="pp_item_r_currently_work" added="1566902945">Currently Work</phrase>
+		<phrase var_name="pp_item_r_highest_level" added="1566902945">Highest Level</phrase>
+		<phrase var_name="pp_item_r_phone_number" added="1566902945">Phone Number</phrase>
+		<phrase var_name="pp_item_r_im" added="1566902945">IM</phrase>
+		<phrase var_name="pp_item_r_email" added="1566902945">Email</phrase>
+		<phrase var_name="pp_item_r_categories" added="1566902945">Categories</phrase>
+		<phrase var_name="view_resume" added="1566902945">View Resume</phrase>
+		<phrase var_name="pp_item_cover_photo" added="1566902945">Cover Photo</phrase>
+		<phrase var_name="pp_item_r_highest_education" added="1566902945">Highest Education</phrase>
+		<phrase var_name="from" added="1566902945">Start</phrase>
+		<phrase var_name="to" added="1566902945">End</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="profilepopup" type="boolean" admin="1" user="1" guest="0" staff="1" module="profilepopup" ordering="0">can_view_profile_popup</setting>
+	</user_group_settings>
+</module>

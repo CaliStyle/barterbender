@@ -1,0 +1,112 @@
+/*=============================================
+=            CSS FOR BUTTON            =
+=============================================*/
+@btn-radius: 40px; 
+@btn-radius-lg: 48px; 
+@btn-radius-sm: 32px; 
+@btn-radius-xs: 24px; 
+
+.btn,
+.button{
+	border-radius: @btn-radius;
+	.transition(all 300ms ease);
+	.fz-lh(14px);
+	padding: 0px @grid-point+4 !important;
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	border: none !important;
+	.h-5;
+	&.btn-round{
+		border-width: 0;
+	}
+}
+
+.btn-lg{
+	border-radius: @btn-radius-lg;
+	.fz-lh(16px);
+	.h-6;
+}
+
+.btn-sm{
+	border-radius: @btn-radius-sm;
+	.fz-lh(12px);
+	.h-4;
+}
+
+.btn-xs{
+	border-radius: @btn-radius-xs;
+	.fz-lh(11px);
+	.h-3;
+	.px-1 !important;
+}
+
+//Round
+.btn.btn-round{
+	border-radius: 32px;
+}
+
+//Disabled
+.btn.disabled, 
+.button.disabled, 
+.btn.button_not_active, 
+.button.button_not_active, 
+.btn[disabled], 
+.button[disabled], 
+fieldset[disabled] .btn, 
+fieldset[disabled] .button{
+	opacity: 0.35;
+	box-shadow:none;
+	pointer-events:none;
+	border: none;
+}
+
+.btn-default,
+.btn-default.btn-round{
+    color: @brand-primary;
+    background-color: #FFF;
+    border: 1px solid @brand-primary !important;
+
+	&:hover{
+		color: @brand-primary-dark;
+   	 	background-color: #FFF;
+		border-color: @brand-primary-dark !important;
+		box-shadow: none;
+	}
+
+	&:focus,&:active{
+		background-color:#fff !important;
+		color: @brand-primary-dark !important;
+		border-color: @brand-primary-dark !important;
+		box-shadow: none;
+	}
+
+	&.disabled{
+		opacity: 1;	
+		border: none;
+		background: @gray-light;
+		color: #FFF;
+
+		&:hover{
+			border: none;
+			background: @gray-light;
+			color: #FFF;
+		}
+	}
+}
+//fix better ad overide css primary
+.btn-primary {
+  	color: #ffffff !important;
+    background-color: @brand-primary !important;
+    border-color: @brand-primary !important;
+    box-shadow: 0px 1px 2px 0px fade(@brand-primary, 50%) !important;
+    &:hover,&:focus{
+    	background-color: @brand-primary-dark !important;
+   	 	box-shadow: 0px 6px 12px 0px fade(@brand-primary, 40%) !important;
+    }
+    &.btn-gradient{
+    	.bg-gradient(@brand-primary) !important;
+    }
+}
+/*=====  End of CSS FOR BUTTON  ======*/
+

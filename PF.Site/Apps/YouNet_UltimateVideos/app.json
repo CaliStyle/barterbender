@@ -1,0 +1,622 @@
+{
+  "id": "YouNet_UltimateVideos",
+  "alias": "ultimatevideo",
+  "name": "YouNet Ultimate Videos",
+  "version": "4.01p1",
+  "icon": "http://static.demo.younetco.com/ynicons/fox4/ultimate_video.png",
+  "menu": {
+    "name": "Ultimate Videos",
+    "url": "/ultimatevideo",
+    "icon": "video-camera"
+  },
+  "admincp_menu": {
+    "Manage Categories": "ultimatevideo.category.index",
+    "Add New Category": "ultimatevideo.category.add",
+    "Add New Custom Field Groups": "ultimatevideo.customfield.add",
+    "Manage Custom Field Groups": "ultimatevideo.customfield.index",
+    "Video Ultilities": "ultimatevideo.ultilities",
+    "Manage Videos": "ultimatevideo.managevideos",
+    "Manage Playlists": "ultimatevideo.manageplaylists"
+  },
+  "settings": {
+    "ynuv_app_enabled": {
+      "info": "Ultimate Videos App Enabled",
+      "type": "input:radio",
+      "value": 1,
+      "js_variable": true
+    },
+    "ynuv_featured_videos": {
+      "info": "Maximum number of items on block \"Featured Videos\" ",
+      "value": 5
+    },
+    "ynuv_recommended_videos": {
+      "info": "Maximum number of items on block \"Recommended Videos\" ",
+      "value": 10
+    },
+    "ynuv_watch_it_again": {
+      "info": "Maximum number of items on block \"Watch It Again\" ",
+      "value": 10
+    },
+    "ynuv_most_recent_playlists": {
+      "info": "Maximum number of items on block \"Most Recent Playlists\" ",
+      "value": 10
+    },
+    "ynuv_most_viewed_videos": {
+      "info": "Maximum number of items on block \"Most Viewed Videos\" ",
+      "value": 3
+    },
+    "ynuv_most_liked_videos": {
+      "info": "Maximum number of items on block \"Most Liked Videos\" ",
+      "value": 3
+    },
+    "ynuv_most_commented_videos": {
+      "info": "Maximum number of items on block \"Most Commented Videos\" ",
+      "value": 3
+    },
+    "ynuv_tag_videos": {
+      "info": "Maximum number of items will be shown at first on block \"Tag Videos\" ",
+      "value": 10
+    },
+    "ynuv_related_videos": {
+      "info": "Maximum number of items on block \"Related Videos\" in video details page ",
+      "value": 3
+    },
+    "ynuv_more_from_owner_video": {
+      "info": "Maximum number of items on block \"More From Owner\" in video details page ",
+      "value": 3
+    },
+    "ynuv_featured_playlists": {
+      "info": "Maximum number of items on block \"Featured Playlists\" ",
+      "value": 5
+    },
+    "ynuv_recommended_playlists": {
+      "info": "Maximum number of items on block \"Recommended Playlists\" ",
+      "value": 10
+    },
+    "ynuv_most_viewed_playlists": {
+      "info": "Maximum number of items on block \"Most Viewed Playlists\" ",
+      "value": 3
+    },
+    "ynuv_most_liked_playlists": {
+      "info": "Maximum number of items on block \"Most Liked Playlists\" ",
+      "value": 3
+    },
+    "ynuv_most_commented_paylists": {
+      "info": "Maximum number of items on block \"Most Commented Playlist\" ",
+      "value": 3
+    },
+    "ynuv_related_playlists": {
+      "info": "Maximum number of items on block \"Related Playlists\" in playlist details page ",
+      "value": 3
+    },
+    "ynuv_more_from_owner_playlist": {
+      "info": "Maximum number of items on block \"More From Owner\" in playlist details page ",
+      "value": 3
+    },
+    "ynuv_cron_limit_per_time":{
+      "info": "How many videos you want to allow to run cronjob at the same time?",
+      "value": 5
+    },
+    "ynuv_item_per_page_in_playlist_detail":{
+      "info": "Number of videos per page will be displayed in Playlist detail listing",
+      "value": 9
+    },
+    "ynuv_addthis_pubid": {
+      "info": "Insert your Addthis Profile ID",
+      "value": "younet"
+    },
+    "ynuv_ffmpeg_path":{
+      "info": "Please enter the full path to your FFMPEG installation. (Environment variables are not present)",
+      "value": ""
+    },
+    "ynuv_youtube_api_key":{
+      "info": "YouTube Data API v3 key. Please fill in the api key for parsing youtube video (YouTube Data API v3)",
+      "value": "AIzaSyDpUPT_nafV_MFSAlc-8AH4e1Gy578iK0M"
+    },
+    "ynuv_allow_user_upload_video_to_yt":{
+      "info": "Allow to upload videos to YouTube? <br/> Settings up OAuth 2.0: <a target=\"_blank\" href= \"https://developers.google.com/identity/protocols/OpenIDConnect?hl=en#appsetup\">https://developers.google.com/identity/protocols/OpenIDConnect?hl=en#appsetup</a> <br/> Authorized redirect URIs: [your_domain]<b>/ultimatevideo/oauth2/</b>",
+      "type": "input:radio",
+      "value": 1
+    },
+    "ynuv_youtube_client_id":{
+      "info": "YouTube Client ID",
+      "value": ""
+    },
+    "ynuv_youtube_client_secret":{
+      "info": "YouTube Client Secret",
+      "value": ""
+    }
+  },
+  "user_group_settings": {
+    "ynuv_time_before_share_other_video": {
+      "info": "How many minutes should a user wait before they can share/upload another video? Note: Setting it to \"0\" (without quotes) is default and users will not have to wait.",
+      "type": "input:text",
+      "value": "0"
+    },
+    "ultimatevideo.points_ultimatevideo_video": {
+      "info": "Points received when adding a video.",
+      "type": "input:text",
+      "value": "1"
+    },
+    "ynuv_max_file_size_photos_upload": {
+      "info": "Max file size for photos upload in kilobits (kb).(1000 kb = 1 mb).For unlimited add \"0\" without quotes. Notice: Photos are only uploaded if we were unable to convert/import photos.",
+      "type": "input:text",
+      "value": "500"
+    },
+    "ynuv_can_approve_video": {
+      "info": "Can approve videos?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "0",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_should_be_approve_before_display_video": {
+      "info": "Should videos added by this user group be approved before they are displayed publicly?",
+      "type": "input:radio",
+      "value": {
+        "1": "0",
+        "2": "0",
+        "3": "1",
+        "4": "0",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_feature_video": {
+      "info": "Can feature videos?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "0",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_view_video": {
+      "info": "Can view videos?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },    
+    "ynuv_can_upload_video": {
+      "info": "Can upload videos?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_file_size_limit_in_megabytes": {
+      "info": "File size limit in megabytes.",
+      "type": "input:text",
+      "value": "100"
+    },
+    "ynuv_can_delete_video_of_other_user": {
+      "info": "Can delete videos added by other users?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "0",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_edit_video_of_other_user": {
+      "info": "Can edit videos added by other users?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "0",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_delete_own_video": {
+      "info": "Can delete own videos?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_edit_own_video": {
+      "info": "Can edit own videos?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_add_comment_on_video": {
+      "info": "Can add comments on videos?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_how_many_video_user_can_add": {
+      "info": "How many videos can a user add?",
+      "type": "input:text",
+      "value": "10"
+    },
+    "ultimatevideo.points_ultimatevideo_playlist": {
+      "info": "Points received when adding a playlist.",
+      "type": "input:text",
+      "value": "1"
+    },
+    "ynuv_can_approve_playlist": {
+      "info": "Can approve playlists?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "0",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_should_be_approve_before_display_playlist": {
+      "info": "Should playlist added by this user group be approved before they are displayed publicly?",
+      "type": "input:radio",
+      "value": {
+        "1": "0",
+        "2": "0",
+        "3": "1",
+        "4": "0",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_feature_playlist": {
+      "info": "Can feature playlists?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "0",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_view_playlist": {
+      "info": "Can view playlist?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },     
+    "ynuv_can_add_playlist": {
+      "info": "Can add new playlist?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_delete_playlist_of_other_user": {
+      "info": "Can delete playlists added by other users?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "0",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_edit_playlist_of_other_user": {
+      "info": "Can edit playlists added by other users?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "0",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_delete_own_playlists": {
+      "info": "Can delete own playlists?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_edit_own_playlists": {
+      "info": "Can edit own playlists?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_can_add_comment_on_playlist": {
+      "info": "Can add comments on playlists?",
+      "type": "input:radio",
+      "value": {
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "1",
+        "5": "0"
+      },
+      "options": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "ynuv_how_many_video_user_can_add_to_playlist": {
+      "info": "How many videos can a user add to playlist?",
+      "type": "input:text",
+      "value": "10"
+    }
+  },
+  "notifications": {
+  },
+  "component" : {
+    "block": {
+      "category" : "",
+      "tags_video" : "",
+      "tags_playlist" : "",
+      "most_liked_video" : "",
+      "most_liked_playlist" : "",
+      "most_viewed_video" : "",
+      "most_viewed_playlist" : "",
+      "most_commented_video" : "",
+      "most_commented_playlist" : "",
+      "recommended_video" : "",
+      "recommended_playlist" : "",
+      "featured_video" : "",
+      "featured_playlist" : "",
+      "watch_it_again" : "",
+      "recent_video" : "",
+      "recent_playlist" : "",
+      "slideshow_video" : "",
+      "slideshow_playlist" : "",
+      "user_posted_playlist": "",
+      "user_posted_video": "",
+      "related_video": "",
+      "related_playlist": ""
+    },
+    "controller" : {
+      "index" : "ultimatevideo.index",
+      "add" : "ultimatevideo.add",
+      "profile" : "ultimatevideo.profile",
+      "view" : "ultimatevideo.view",
+      "playlist" : "ultimatevideo.playlist",
+      "view_playlist" : "ultimatevideo.playlist"
+    }
+  },
+  "component_block": {
+    "Category": {
+      "type_id" : "0",
+      "m_connection" : "ultimatevideo.index",
+      "component" : "category",
+      "module_id": "ultimatevideo",
+      "location" : "1",
+      "is_active" : "1",
+      "ordering" : "1"
+    },
+    "Most Liked": {
+      "type_id" : "0",
+      "m_connection" : "ultimatevideo.index",
+      "component" : "most_liked_video",
+      "module_id": "ultimatevideo",
+      "location" : "1",
+      "is_active" : "1",
+      "ordering" : "2"
+    },
+    "Tags": {
+      "type_id" : "0",
+      "m_connection" : "ultimatevideo.index",
+      "component" : "tags_video",
+      "module_id": "ultimatevideo",
+      "location" : "1",
+      "is_active" : "1",
+      "ordering" : "3"
+    },
+    "Most Viewed": {
+      "type_id" : "0",
+      "m_connection" : "ultimatevideo.index",
+      "component" : "most_viewed_video",
+      "module_id": "ultimatevideo",
+      "location" : "3",
+      "is_active" : "1",
+      "ordering" : "1"
+    },
+    "Most Commented": {
+      "type_id" : "0",
+      "m_connection" : "ultimatevideo.index",
+      "component" : "most_commented_video",
+      "module_id": "ultimatevideo",
+      "location" : "3",
+      "is_active" : "1",
+      "ordering" : "2"
+    },
+    "User Videos":{
+      "type_id" :"0",
+      "m_connection": "ultimatevideo.view",
+      "component": "user_posted_video",
+      "module_id": "ultimatevideo",
+      "location": "3",
+      "is_active": "1",
+      "ordering": "1"
+    },
+    "Related Videos":{
+      "type_id" :"0",
+      "m_connection": "ultimatevideo.view",
+      "component": "related_video",
+      "module_id": "ultimatevideo",
+      "location": "3",
+      "is_active": "1",
+      "ordering": "2"
+    },
+    "Category ":{
+      "type_id" :"0",
+      "m_connection": "ultimatevideo.playlist",
+      "component": "category",
+      "module_id": "ultimatevideo",
+      "location": "1",
+      "is_active": "1",
+      "ordering": "1"
+    },
+    "Most Commented ":{
+      "type_id" :"0",
+      "m_connection": "ultimatevideo.playlist",
+      "component": "most_commented_playlist",
+      "module_id": "ultimatevideo",
+      "location": "3",
+      "is_active": "1",
+      "ordering": "1"
+    },
+    "Most Liked ":{
+      "type_id" :"0",
+      "m_connection": "ultimatevideo.playlist",
+      "component": "most_liked_playlist",
+      "module_id": "ultimatevideo",
+      "location": "3",
+      "is_active": "1",
+      "ordering": "2"
+    },
+    "Most Viewed ":{
+      "type_id" :"0",
+      "m_connection": "ultimatevideo.playlist",
+      "component": "most_viewed_playlist",
+      "module_id": "ultimatevideo",
+      "location": "3",
+      "is_active": "1",
+      "ordering": "3"
+    },
+    "From User ":{
+      "type_id" :"0",
+      "m_connection": "ultimatevideo.view_playlist",
+      "component": "user_posted_playlist",
+      "module_id": "ultimatevideo",
+      "location": "3",
+      "is_active": "1",
+      "ordering": "1"
+    },
+    "Related Playlist ":{
+      "type_id" :"0",
+      "m_connection": "ultimatevideo.view_playlist",
+      "component": "related_playlist",
+      "module_id": "ultimatevideo",
+      "location": "3",
+      "is_active": "1",
+      "ordering": "2"
+    }
+  }
+}

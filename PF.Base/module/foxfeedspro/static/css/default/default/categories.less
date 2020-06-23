@@ -1,0 +1,159 @@
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+div.sortable ul
+{
+	margin:0;
+	padding:0;
+}
+
+div.sortable ul li
+{
+	list-style-type:none;	
+	padding:0px;
+	margin:0px;
+}
+
+div.sortable ul li ul
+{
+	margin-left:20px;
+}
+
+
+div.sortable ul li
+{		
+	padding:10px 0px 10px 5px;
+	border-bottom:1px #dfdfdf solid;	
+	margin-bottom:2px;
+	font-weight:bold;
+}
+
+div.sortable ul li img
+{
+	cursor:move;
+}
+
+
+div.sortable ul li a,
+div.sortable ul li a:hover
+{
+	text-decoration:none;
+}
+
+div.sortable ul li:hover
+{
+	background:#3F3F3F;
+	color:#fff;
+	border-bottom:1px transparent solid;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+  	border-radius:4px;		
+}
+
+div.sortable ul li:hover a,
+div.sortable ul li:hover a:hover
+{
+	color:#fff;
+}
+
+div.sortable ul li:hover a:hover
+{
+	text-decoration:underline;
+}
+
+div.sortable ul li a img
+{
+	padding-right:5px;
+}
+
+div.sortable ul li ul li
+{
+	border-bottom:1px transparent solid;
+	font-weight:normal;
+	margin-right:5px;
+}
+
+div.sortable ul li ul li:hover
+{
+	background:#fff;
+}
+
+div.sortable ul li ul li:hover a,
+div.sortable ul li ul li:hover a:hover
+{
+	color:#333;
+}
+
+/*
+div.sortable ul li.odd
+{
+	background:#fff;
+}
+*/
+
+div.sortable ul li.first
+{
+	border-top:none;
+}
+
+div.sortable ul li span
+{
+	color:#0D8AE1;
+	cursor:pointer;
+}
+
+div.sortable ul li span:hover
+{
+	color:#0D8AE1;
+	cursor:pointer;
+	text-decoration:underline;
+}
+/** CSS for categories **/
+.ulLevelMenu .arrow-up,
+.ulLevelMenu .arrow-up:hover
+{
+	background-image:url("@{module-folder}foxfeedspro/static/image/arrow_up.png");
+	background-repeat: no-repeat;
+	background-position: 90% 50%;
+    padding-right: 27px;
+}
+.ulLevelMenu .arrow-down,
+.ulLevelMenu .arrow-down:hover
+{
+	background:url("@{module-folder}foxfeedspro/static/image/arrow_down.png");
+	background-repeat: no-repeat;
+	background-position: 90% 50%;
+	padding-right:27px;
+}
+div.foxfeedpro-categories ul li a,
+div.foxfeedpro-categories ul li a:hover{
+	padding-right:27px;
+}
+.delete_feed_button,.delete_feed_button:hover
+{
+	background:none!important;
+	//width: 20px!important;
+	float: right!important;
+	padding-right: 2px!important;
+	border: none!important;
+}
+body[id^=page_foxfeedspro] ul.action > li > a.ffpro_cat_link{
+  display: inline;
+}
+ul.ulLevelMenu.action li ul.ulLevelMenu.action li .ffpro_cat_link {
+    top: 5px;
+}
+ul.ulLevelMenu.action li ul.ulLevelMenu.action li .row_edit_bar_action {
+	top: -3px;
+}
+ul.ulLevelMenu.action li ul.ulLevelMenu.action li .ffpro_arrow_sub{
+	top: 13px !important;
+}
+ul.ulLevelMenu.action li ul.ulLevelMenu.action {
+	border-top: 0;
+}
+.ulLevelMenu.action >li >a{
+	width: 100%;
+}

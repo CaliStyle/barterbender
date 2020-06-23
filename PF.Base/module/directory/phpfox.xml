@@ -1,0 +1,1268 @@
+<module>
+	<data>
+		<module_id>directory</module_id>
+		<product_id>younet_directory4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:14:{s:40:"directory_admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:9:"directory";i:1;s:19:"user-group-settings";}}s:37:"directory_admin_menu_add_new_category";a:1:{s:3:"url";a:3:{i:0;s:9:"directory";i:1;s:8:"category";i:2;s:3:"add";}}s:38:"directory_admin_menu_manage_categories";a:1:{s:3:"url";a:2:{i:0;s:9:"directory";i:1;s:8:"category";}}s:41:"directory_admin_menu_add_new_custom_field";a:1:{s:3:"url";a:3:{i:0;s:9:"directory";i:1;s:11:"customfield";i:2;s:3:"add";}}s:41:"directory_admin_menu_manage_custom_fields";a:1:{s:3:"url";a:2:{i:0;s:9:"directory";i:1;s:11:"customfield";}}s:36:"directory_admin_menu_add_new_package";a:1:{s:3:"url";a:3:{i:0;s:9:"directory";i:1;s:7:"package";i:2;s:3:"add";}}s:35:"directory_admin_menu_manage_package";a:1:{s:3:"url";a:2:{i:0;s:9:"directory";i:1;s:7:"package";}}s:38:"directory_admin_menu_manage_businesses";a:1:{s:3:"url";a:2:{i:0;s:9:"directory";i:1;s:14:"managebusiness";}}s:47:"directory_admin_menu_manage_businesses_creators";a:1:{s:3:"url";a:2:{i:0;s:9:"directory";i:1;s:9:"bcreators";}}s:38:"directory_admin_menu_manage_comparison";a:1:{s:3:"url";a:2:{i:0;s:9:"directory";i:1;s:10:"comparison";}}s:39:"directory_admin_menu_manage_transaction";a:1:{s:3:"url";a:2:{i:0;s:9:"directory";i:1;s:11:"transaction";}}s:42:"directory_admin_menu_manage_claim_requests";a:1:{s:3:"url";a:2:{i:0;s:9:"directory";i:1;s:18:"manageclaimrequest";}}s:36:"directory_admin_menu_email_templates";a:1:{s:3:"url";a:2:{i:0;s:9:"directory";i:1;s:5:"email";}}s:36:"directory_admin_menu_global_settings";a:1:{s:3:"url";a:2:{i:0;s:9:"directory";i:1;s:14:"globalsettings";}}}]]></menu>
+		<phrase_var_name>module_directories</phrase_var_name>
+		<version>4.02p5</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/09/Business-directory.png</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="directory" parent_var_name="" m_connection="main" var_name="module_menu_business" ordering="3" url_value="directory" version_id="3.4.1" disallow_access="" module="directory" mobile_icon="building" />
+		<menu module_id="directory" parent_var_name="" m_connection="directory.index" var_name="menu_directory_create_a_new_directory" ordering="133" url_value="directory.businesstype" version_id="3.4.1" disallow_access="" module="directory" />
+	</menus>
+	<settings>
+		<setting group="" module_id="directory" is_hidden="0" type="drop" var_name="directory_paging_mode" phrase_var_name="setting_directory_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:8:"loadmore";s:6:"values";a:3:{i:0;s:8:"loadmore";i:1;s:9:"next_prev";i:2;s:10:"pagination";}}]]></setting>
+		<setting group="" module_id="directory" is_hidden="0" type="drop" var_name="default_view" phrase_var_name="setting_default_views" ordering="1" version_id="3.7.7"><![CDATA[a:2:{s:7:"default";s:4:"List";s:6:"values";a:4:{i:0;s:4:"List";i:1;s:4:"Grid";i:2;s:8:"Pinboard";i:3;s:3:"Map";}}]]></setting>
+		<setting group="" module_id="directory" is_hidden="0" type="integer" var_name="max_upload_size_photos" phrase_var_name="setting_max_upload_size_photos" ordering="1" version_id="3.7.7">500</setting>
+		<setting group="" module_id="directory" is_hidden="0" type="drop" var_name="display_format_hour_of_operation" phrase_var_name="setting_display_format_hour_of_operation" ordering="1" version_id="4.2.0"><![CDATA[a:2:{s:7:"default";s:4:"AMPM";s:6:"values";a:2:{i:0;s:4:"AMPM";i:1;s:3:"24h";}}]]></setting>
+		<setting group="" module_id="directory" is_hidden="1" type="integer" var_name="categories_to_show_at_first" phrase_var_name="setting_categories_to_show_at_first" ordering="1" version_id="3.7.7">0</setting>
+		<setting group="" module_id="directory" is_hidden="1" type="string" var_name="google_api_key_location" phrase_var_name="setting_google_api_key_location" ordering="1" version_id="3.8.0" />
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="most-liked" location="3" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Most Liked</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="most-popular" location="3" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Most Viewed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="most-comment" location="3" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Most Discussed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="most-rated" location="3" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Most Rated</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="category" location="1" is_active="1" ordering="8" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="most-review" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Most Reviewed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="most-check-in" location="3" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title>Most Checked-in</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="search" location="1" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>Search</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="business-you-may-like" location="1" is_active="1" ordering="9" disallow_access="" can_move="0">
+			<title>Recommended</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="recent-reviews" location="1" is_active="1" ordering="10" disallow_access="" can_move="0">
+			<title>Recent Reviews</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="tags" location="1" is_active="1" ordering="11" disallow_access="" can_move="0">
+			<title>Tags</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="subscribe-businesses" location="1" is_active="1" ordering="12" disallow_access="" can_move="0">
+			<title>Subscribe Businesses</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.detail" module_id="directory" component="detailphotomenu" location="1" is_active="0" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.detail" module_id="directory" component="detailmenu" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.detail" module_id="directory" component="detaillikeshare" location="1" is_active="0" ordering="3" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.detail" module_id="directory" component="detailcheckinlist" location="1" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.detail" module_id="directory" component="detailannouncement" location="3" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.detail" module_id="directory" component="detailnewestitem" location="3" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.detail" module_id="directory" component="detailcover" location="2" is_active="0" ordering="8" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory" module_id="directory" component="compareitem" location="12" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.detail" module_id="directory" component="detailclaimingbutton" location="1" is_active="1" ordering="10" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.edit" module_id="directory" component="menu-edit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.insight" module_id="directory" component="menu-edit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.cover-photos" module_id="directory" component="menu-edit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.manage-pages" module_id="directory" component="menu-edit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.manage-member-roles" module_id="directory" component="menu-edit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.member-role-settings" module_id="directory" component="menu-edit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.manage-announcements" module_id="directory" component="menu-edit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.manage-modules" module_id="directory" component="menu-edit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.manage-business-theme" module_id="directory" component="menu-edit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.manage-packages" module_id="directory" component="menu-edit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="featured-slideshow" location="2" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="directory.index" module_id="directory" component="homepage" location="2" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="directory" component="directory.index" m_connection="directory.index" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="most-liked" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="most-popular" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="most-comment" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="most-rated" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="category" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="most-review" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="most-check-in" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="search" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="business-you-may-like" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="recent-reviews" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="tags" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="subscribe-businesses" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="directory.detail" m_connection="directory.detail" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="detailphotomenu" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="detailmenu" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="detaillikeshare" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="detailcheckinlist" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="detailannouncement" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="detailnewestitem" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="detailcover" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="compareitem" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="detailclaimingbutton" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="directory.edit" m_connection="directory.edit" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="directory.insight" m_connection="directory.insight" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="directory.cover-photos" m_connection="directory.cover-photos" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="directory.manage-pages" m_connection="directory.manage-pages" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="directory.manage-member-roles" m_connection="directory.manage-member-roles" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="directory.member-role-settings" m_connection="directory.member-role-settings" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="directory.manage-announcements" m_connection="directory.manage-announcements" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="directory.manage-modules" m_connection="directory.manage-modules" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="directory.manage-business-theme" m_connection="directory.manage-business-theme" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="directory.manage-packages" m_connection="directory.manage-packages" module="directory" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="directory" component="menu-edit" m_connection="" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="featured-slideshow" m_connection="directory.index" module="directory" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="directory" component="homepage" m_connection="directory.index" module="directory" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_directory" added="1564645173">Business Directory</phrase>
+		<phrase var_name="module_directories" added="1564645173">Business Directory</phrase>
+		<phrase var_name="menu_directory_create_a_new_directory" added="1564645173">Create New Business</phrase>
+		<phrase var_name="menu_directory_claim_a_business" added="1564645173">Claim A Business</phrase>
+		<phrase var_name="module_templates" added="1564645173">Business Directory</phrase>
+		<phrase var_name="module_menu_business" added="1564645173">Business Directory</phrase>
+		<phrase var_name="module_title" added="1564645173">Business Directory</phrase>
+		<phrase var_name="directory_admin_menu_add_new_category" added="1564645173">Add New Category</phrase>
+		<phrase var_name="directory_admin_menu_manage_categories" added="1564645173">Manage Categories</phrase>
+		<phrase var_name="business_category_detail" added="1564645173">Business Category Detail</phrase>
+		<phrase var_name="title" added="1564645173">Title</phrase>
+		<phrase var_name="parent_category" added="1564645173">Parent Category</phrase>
+		<phrase var_name="select" added="1564645173">Select</phrase>
+		<phrase var_name="submit" added="1564645173">Submit</phrase>
+		<phrase var_name="category_successfully_added" added="1564645173">Category successfully added.</phrase>
+		<phrase var_name="edit_a_category" added="1564645173">Edit a category</phrase>
+		<phrase var_name="create_a_new_category" added="1564645173">Create a new category</phrase>
+		<phrase var_name="parent_category_and_child_is_the_same" added="1564645173">Parent category and child category are the same. Please choose another parent category.</phrase>
+		<phrase var_name="category_successfully_updated" added="1564645173">Category successfully updated.</phrase>
+		<phrase var_name="select_a_sub_category" added="1564645173">Select a Sub-Category</phrase>
+		<phrase var_name="categories" added="1564645173">Categories</phrase>
+		<phrase var_name="update_order" added="1564645173">Update Order</phrase>
+		<phrase var_name="edit" added="1564645173">Edit</phrase>
+		<phrase var_name="delete" added="1564645173">Delete</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1564645173">Category order successfully updated.</phrase>
+		<phrase var_name="category_successfully_deleted" added="1564645173">Category successfully deleted</phrase>
+		<phrase var_name="admincp_manage_categories" added="1564645173">Manage Categories</phrase>
+		<phrase var_name="are_you_sure_this_will_delete_all_business_that_belong_to_this_category_and_cannot_be_undone" added="1564645173">Are you sure? This will delete all business that belong to this category and cannot be undone.</phrase>
+		<phrase var_name="show_custom_field_groups" added="1564645173">Show Custom Field Groups</phrase>
+		<phrase var_name="custom_field_group" added="1564645173">Custom Field Group</phrase>
+		<phrase var_name="option" added="1564645173">Option</phrase>
+		<phrase var_name="there_are_no_custom_groups_associate_with_this_category" added="1564645173">There are no custom groups associate with this category.</phrase>
+		<phrase var_name="custom_group" added="1564645173">Custom Group</phrase>
+		<phrase var_name="directory_admin_menu_add_new_package" added="1564645173">Add New Package</phrase>
+		<phrase var_name="directory_admin_menu_add_new_custom_field" added="1564645173">Add New Custom Field Groups</phrase>
+		<phrase var_name="edit_a_package" added="1564645173">Edit a Package</phrase>
+		<phrase var_name="add_new_package" added="1564645173">Add New Package</phrase>
+		<phrase var_name="valid_period" added="1564645173">Valid period</phrase>
+		<phrase var_name="package_fee" added="1564645173">Package Fee</phrase>
+		<phrase var_name="day" added="1564645173">Day</phrase>
+		<phrase var_name="week" added="1564645173">Week</phrase>
+		<phrase var_name="month" added="1564645173">Month</phrase>
+		<phrase var_name="never_expires" added="1564645173">Never Expires</phrase>
+		<phrase var_name="package_name" added="1564645173">Package Name</phrase>
+		<phrase var_name="maximum_cover_photos_can_be_displayed" added="1564645173">Maximum cover photos can be displayed</phrase>
+		<phrase var_name="all_businesses" added="1564645173">All Businesses</phrase>
+		<phrase var_name="my_favorite_businesses" added="1564645173">My Favorite</phrase>
+		<phrase var_name="my_following_businesses" added="1564645173">My Following</phrase>
+		<phrase var_name="my_businesses" added="1564645173">My Businesses</phrase>
+		<phrase var_name="none" added="1564645173">None</phrase>
+		<phrase var_name="initialized" added="1564645173">Initialized</phrase>
+		<phrase var_name="expired" added="1564645173">Expired</phrase>
+		<phrase var_name="pending" added="1564645173">Pending</phrase>
+		<phrase var_name="completed" added="1564645173">Completed</phrase>
+		<phrase var_name="canceled" added="1564645173">Canceled</phrase>
+		<phrase var_name="paypal" added="1564645173">Paypal</phrase>
+		<phrase var_name="2checkout" added="1564645173">2Checkout</phrase>
+		<phrase var_name="pay_later" added="1564645173">Pay Later</phrase>
+		<phrase var_name="pay_credit" added="1564645173">Pay Credit</phrase>
+		<phrase var_name="photos" added="1564645173">Photos</phrase>
+		<phrase var_name="videos" added="1564645173">Videos</phrase>
+		<phrase var_name="musics" added="1564645173">Musics</phrase>
+		<phrase var_name="blogs" added="1564645173">Blogs</phrase>
+		<phrase var_name="discussion" added="1564645173">Discussion</phrase>
+		<phrase var_name="polls" added="1564645173">Polls</phrase>
+		<phrase var_name="coupons" added="1564645173">Coupons</phrase>
+		<phrase var_name="events" added="1564645173">Events</phrase>
+		<phrase var_name="jobs" added="1564645173">Jobs</phrase>
+		<phrase var_name="marketplace" added="1564645173">Marketplace</phrase>
+		<phrase var_name="allow_business_owner_to_add_information_pages" added="1564645173">Allow business owner to add Information Pages</phrase>
+		<phrase var_name="allow_business_owner_to_change_orders_of_pages" added="1564645173">Allow business owner to change orders of Pages</phrase>
+		<phrase var_name="allow_users_to_join_business" added="1564645173">Allow users to join Business</phrase>
+		<phrase var_name="allow_users_to_share_business" added="1564645173">Allow users to share Business</phrase>
+		<phrase var_name="allow_users_to_invite_friends_to_business" added="1564645173">Allow users to invite friends to Business</phrase>
+		<phrase var_name="allow_business_owner_to_add_contact_form" added="1564645173">Allow business owner to add contact form</phrase>
+		<phrase var_name="allow_business_owner_to_add_more_custom_fields_to_his_business" added="1564645173">Allow business owner to add more custom fields to his Business</phrase>
+		<phrase var_name="allow_business_to_have_multiple_admins" added="1564645173">Allow business to have multiple admins</phrase>
+		<phrase var_name="create_a_new_package" added="1564645173">Create a New Package</phrase>
+		<phrase var_name="directory_admin_menu_manage_custom_fields" added="1564645173">Manage Custom Fields Groups</phrase>
+		<phrase var_name="manage_custom_field" added="1564645173">Manage Custom Field</phrase>
+		<phrase var_name="add_custom_field" added="1564645173">Add Custom Field</phrase>
+		<phrase var_name="require_field" added="1564645173">Require Field</phrase>
+		<phrase var_name="updating" added="1564645173">Updating</phrase>
+		<phrase var_name="adding" added="1564645173">Adding</phrase>
+		<phrase var_name="could_not_delete" added="1564645173">Could not Delete</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_custom_option" added="1564645173">Are you sure you want to delete this custom option?
+
+Note that anyone using this option will revert to using the default option set for this custom field.</phrase>
+		<phrase var_name="unable_to_find_the_custom_field_you_want_to_delete" added="1564645173">Unable to find the custom field you want to delete.</phrase>
+		<phrase var_name="unable_to_find_the_custom_option_you_plan_on_deleting" added="1564645173">Unable to find the custom option you plan on deleting.</phrase>
+		<phrase var_name="custom_field_name" added="1564645173">Custom Field Name</phrase>
+		<phrase var_name="custom_field_successfully_deleted" added="1564645173">Custom Field Successfully Deleted.</phrase>
+		<phrase var_name="manage_custom_field_groups" added="1564645173">Manage Custom Field Groups</phrase>
+		<phrase var_name="add_custom_field_groups" added="1564645173">Add Custom Field Groups</phrase>
+		<phrase var_name="directory_admin_menu_manage_package" added="1564645173">Manage Packages</phrase>
+		<phrase var_name="add_new_custom_field_groups" added="1564645173">Add New Custom Field Groups</phrase>
+		<phrase var_name="group_name" added="1564645173">Group Name</phrase>
+		<phrase var_name="mapping_categories" added="1564645173">Mapping Categories</phrase>
+		<phrase var_name="custom_fields" added="1564645173">Custom Fields</phrase>
+		<phrase var_name="custom_field_groups_successfully_added" added="1564645173">Custom field groups successfully added</phrase>
+		<phrase var_name="custom_field_groups_successfully_updated" added="1564645173">Custom field groups successfully updated</phrase>
+		<phrase var_name="ratings" added="1564645173">Ratings</phrase>
+		<phrase var_name="members" added="1564645173">Members</phrase>
+		<phrase var_name="follower" added="1564645173">Follower</phrase>
+		<phrase var_name="reviewers" added="1564645173">Reviewers</phrase>
+		<phrase var_name="address" added="1564645173">Address</phrase>
+		<phrase var_name="website" added="1564645173">Website</phrase>
+		<phrase var_name="phone" added="1564645173">Phone</phrase>
+		<phrase var_name="operating_hours" added="1564645173">Operating Hours</phrase>
+		<phrase var_name="custom_field" added="1564645173">Custom Field</phrase>
+		<phrase var_name="short_description" added="1564645173">Short Description</phrase>
+		<phrase var_name="reviews" added="1564645173">Reviews</phrase>
+		<phrase var_name="latest_reviews" added="1564645173">Latest Reviews</phrase>
+		<phrase var_name="monday" added="1564645173">Monday</phrase>
+		<phrase var_name="tuesday" added="1564645173">Tuesday</phrase>
+		<phrase var_name="wednesday" added="1564645173">Wednesday</phrase>
+		<phrase var_name="thursday" added="1564645173">Thursday</phrase>
+		<phrase var_name="friday" added="1564645173">Friday</phrase>
+		<phrase var_name="saturday" added="1564645173">Saturday</phrase>
+		<phrase var_name="sunday" added="1564645173">Sunday</phrase>
+		<phrase var_name="draft" added="1564645173">Draft</phrase>
+		<phrase var_name="unpaid" added="1564645173">Unpaid</phrase>
+		<phrase var_name="denied" added="1564645173">Denied</phrase>
+		<phrase var_name="running" added="1564645173">Running</phrase>
+		<phrase var_name="paused" added="1564645173">Paused</phrase>
+		<phrase var_name="deleted" added="1564645173">Deleted</phrase>
+		<phrase var_name="approved" added="1564645173">Approved</phrase>
+		<phrase var_name="no_custom_fields_have_been_added" added="1564645173">No custom fields have been added.</phrase>
+		<phrase var_name="no_custom_groups_have_been_added" added="1564645173">No custom groups have been added.</phrase>
+		<phrase var_name="add_a_new_custom_group" added="1564645173">Add a new custom group</phrase>
+		<phrase var_name="set_to_inactive" added="1564645173">Set to Inactive</phrase>
+		<phrase var_name="custom_group_successfully_deleted" added="1564645173">Custom group successfully deleted.</phrase>
+		<phrase var_name="unable_to_find_the_group_you_plan_on_deleting" added="1564645173">Unable to find the group you plan on deleting.</phrase>
+		<phrase var_name="general" added="1564645173">General</phrase>
+		<phrase var_name="unable_to_find_the_custom_group" added="1564645173">Unable to find the custom group.</phrase>
+		<phrase var_name="edit_custom_field_groups" added="1564645173">Edit Custom Field Groups</phrase>
+		<phrase var_name="group_name_cannot_be_empty" added="1564645173">Group name cannot be empty</phrase>
+		<phrase var_name="overview" added="1564645173">Overview</phrase>
+		<phrase var_name="about_us" added="1564645173">About Us</phrase>
+		<phrase var_name="activities" added="1564645173">Activities</phrase>
+		<phrase var_name="followers" added="1564645173">Followers</phrase>
+		<phrase var_name="faq" added="1564645173">FAQ</phrase>
+		<phrase var_name="contact_us" added="1564645173">Contact Us</phrase>
+		<phrase var_name="invite_member" added="1564645173">Invite member</phrase>
+		<phrase var_name="yes_members_can_invite_other_people" added="1564645173">Yes, members can invite other people</phrase>
+		<phrase var_name="setting_categories_to_show_at_first" added="1564645173"><![CDATA[<title>How many subcategories to show at first</title><info>This setting tells how many subcategories are to be shown at first. If the list of subcategories is longer than this value the extra ones will be hidden and a "View More" option will be shown instead, allowing the user to display the hidden subcategories. 
+
+A "View Less" option will be available to provide the full "accordion" effect. 
+
+If you set it to zero ("0" without quotes) it will hide every subcategory and a plus sign will show next to the category name, clicking the plus sign will show that category&#039;s subcategories.</info>]]></phrase>
+		<phrase var_name="setting_default_view" added="1564645173"><![CDATA[<title>View</title><info>Default View on Homepage</info>]]></phrase>
+		<phrase var_name="setting_default_views" added="1564645173"><![CDATA[<title>View</title><info>Default View on Homepage</info>]]></phrase>
+		<phrase var_name="setting_directory_paging_mode" added="1564645173"><![CDATA[<title>Pagination Style</title><info>Select Pagination Style at Search Page.</info>]]></phrase>
+		<phrase var_name="list" added="1564645173">List</phrase>
+		<phrase var_name="grid" added="1564645173">Grid</phrase>
+		<phrase var_name="pinboard" added="1564645173">Pinboard</phrase>
+		<phrase var_name="map" added="1564645173">Map</phrase>
+		<phrase var_name="setting_max_upload_size_photos" added="1564645173"><![CDATA[<title>Maximum Upload Size for Photos</title><info>Maximum upload size for photos(KB)</info>]]></phrase>
+		<phrase var_name="setting_max_upload_size_videos" added="1564645173"><![CDATA[<title>Maximum Upload Size for Videos</title><info>Maximum upload size for videos(KB)</info>]]></phrase>
+		<phrase var_name="setting_max_upload_size_musics" added="1564645173"><![CDATA[<title>Maximum Upload Size for Musics</title><info>Maximum upload size for musics(KB)</info>]]></phrase>
+		<phrase var_name="user_setting_can_create_business" added="1564645173">Can create business?</phrase>
+		<phrase var_name="user_setting_can_edit_business" added="1564645173">Can edit business?</phrase>
+		<phrase var_name="user_setting_can_view_business" added="1564645173">Can view business?</phrase>
+		<phrase var_name="user_setting_can_review_business" added="1564645173">Can review business?</phrase>
+		<phrase var_name="user_setting_can_delete_own_business" added="1564645173">Can delete own business?</phrase>
+		<phrase var_name="user_setting_can_delete_others_business" added="1564645173">Can delete business created by other users?</phrase>
+		<phrase var_name="user_setting_can_comment_on_business" added="1564645173">Can comment on business?</phrase>
+		<phrase var_name="user_setting_can_rate_business" added="1564645173">Can rate business?</phrase>
+		<phrase var_name="user_setting_can_create_business_for_claiming" added="1564645173">Can create business for claiming?</phrase>
+		<phrase var_name="user_setting_can_claim_business" added="1564645173">Can claim business?</phrase>
+		<phrase var_name="user_setting_can_approve_business" added="1564645173">Can approve business?</phrase>
+		<phrase var_name="user_setting_can_feature_business" added="1564645173">Can feature business?</phrase>
+		<phrase var_name="user_setting_business_created_by_user_automatically_approved" added="1564645173">Businesses created by user in this group will be automatically approved?</phrase>
+		<phrase var_name="user_setting_claim_business_created_by_user_automatically_approved" added="1564645173">Claimed businesses created by user in this group will be automatically approved?</phrase>
+		<phrase var_name="user_setting_number_business_user_can_create" added="1564645173">How many businesses that a user can create?</phrase>
+		<phrase var_name="user_setting_number_point_for_user_create_a_business" added="1564645173">How many points do the users get when they create a new business?</phrase>
+		<phrase var_name="user_setting_points_directory" added="1564645173">How many points do the users get when they create a new business?</phrase>
+		<phrase var_name="photo_creation" added="1564645173">Photo Creation</phrase>
+		<phrase var_name="yes_members_can_add_photos_albums_to_this_business" added="1564645173">Yes, members can add photos/albums to this business</phrase>
+		<phrase var_name="no_members_cannot_add_new_photos_albums" added="1564645173">No, members cannot add new photos/albums</phrase>
+		<phrase var_name="manage_own_albums" added="1564645173">Manage Own Albums</phrase>
+		<phrase var_name="yes_members_can_edit_delete_own_photos_albums" added="1564645173">Yes, members can edit/delete own photos/albums</phrase>
+		<phrase var_name="no_members_cannot_edit_delete_own_photos_albums" added="1564645173">No, members cannot edit/delete own photos/albums</phrase>
+		<phrase var_name="manage_albums_created_by_others" added="1564645173">Manage Albums Created By Others</phrase>
+		<phrase var_name="yes_members_can_edit_delete_others_photos_albums" added="1564645173">Yes, members can edit/delete others photos/albums</phrase>
+		<phrase var_name="no_members_cannot_edit_delete_others_photos_albums" added="1564645173">No, members cannot edit/delete others photos/albums</phrase>
+		<phrase var_name="approve_member" added="1564645173">Approve Member</phrase>
+		<phrase var_name="yes_members_can_join_immediately" added="1564645173">Yes, members can join immediately</phrase>
+		<phrase var_name="no_members_must_be_approved" added="1564645173">No, members must be approved</phrase>
+		<phrase var_name="view_privacy" added="1564645173">View Privacy</phrase>
+		<phrase var_name="yes_members_can_view_all_pages" added="1564645173">Yes, members can view all pages</phrase>
+		<phrase var_name="no_members_cannot_view_pages_but_general_information" added="1564645173">No, members cannot view pages but general information</phrase>
+		<phrase var_name="comment_privacy" added="1564645173">Comment Privacy</phrase>
+		<phrase var_name="yes_members_can_comment_to_this_business" added="1564645173">Yes, members can comment to this business</phrase>
+		<phrase var_name="no_members_cannot_write_any_comment" added="1564645173">No, members cannot write any comment</phrase>
+		<phrase var_name="view_dashboard" added="1564645173">View DashBoard</phrase>
+		<phrase var_name="yes_members_can_view_dashboard" added="1564645173">Yes, members can view Dashboard</phrase>
+		<phrase var_name="no_members_cannot_view_dashboard" added="1564645173">No, members cannot view Dashboard</phrase>
+		<phrase var_name="view_page_insight_dashboard" added="1564645173">View Page Insight of Dashboard</phrase>
+		<phrase var_name="yes_members_can_view_page_insight_dashboard" added="1564645173">Yes, members can View Page Insight of Dashboard</phrase>
+		<phrase var_name="no_members_cannot_view_page_insight_dashboard" added="1564645173">No, members cannot View Page Insight of Dashboard</phrase>
+		<phrase var_name="edit_business_information" added="1564645173">Edit Business Information</phrase>
+		<phrase var_name="yes_members_can_edit_business_information" added="1564645173">Yes, members can edit Business Information</phrase>
+		<phrase var_name="no_members_cannot_edit_business_information" added="1564645173">No, members cannot edit Business Information</phrase>
+		<phrase var_name="manage_cover_photos" added="1564645173">Manage Cover Photos</phrase>
+		<phrase var_name="yes_members_can_manage_cover_photos" added="1564645173">Yes, members can manage Cover Photos</phrase>
+		<phrase var_name="no_members_cannot_manage_cover_photos" added="1564645173">No, members cannot manage Cover Photos</phrase>
+		<phrase var_name="manage_pages" added="1564645173">Manage Pages</phrase>
+		<phrase var_name="yes_members_can_manage_pages" added="1564645173">Yes, members can manage Pages</phrase>
+		<phrase var_name="no_members_cannot_manage_pages" added="1564645173">No, members cannot manage Pages</phrase>
+		<phrase var_name="add_member_roles" added="1564645173">Add Member Roles</phrase>
+		<phrase var_name="yes_members_can_add_member_roles" added="1564645173">Yes, members can add Member Roles</phrase>
+		<phrase var_name="no_members_cannot_add_member_roles" added="1564645173">No, members cannot add Member Roles</phrase>
+		<phrase var_name="change_member_roles" added="1564645173">Change Member Roles</phrase>
+		<phrase var_name="yes_members_can_change_member_roles" added="1564645173">Yes, members can Change Member Roles</phrase>
+		<phrase var_name="no_members_cannot_change_member_roles" added="1564645173">No, members cannot Change Member Roles</phrase>
+		<phrase var_name="manage_announcements" added="1564645173">Manage Announcements</phrase>
+		<phrase var_name="yes_members_can_manage_announcements" added="1564645173">Yes, members can manage Announcements</phrase>
+		<phrase var_name="no_members_cannot_manage_announcements" added="1564645173">No, members cannot manage Announcements</phrase>
+		<phrase var_name="configure_setting_member_roles" added="1564645173">Configure Settings For Member Role</phrase>
+		<phrase var_name="yes_members_can_configure_setting_member_roles" added="1564645173">Yes, members can configure Settings For Member Role</phrase>
+		<phrase var_name="no_members_cannot_configure_setting_member_roles" added="1564645173">No, members cannot configure Settings For Member Role</phrase>
+		<phrase var_name="manage_modules" added="1564645173">Manage Modules</phrase>
+		<phrase var_name="yes_members_can_manage_modules" added="1564645173">Yes, members can manage Modules</phrase>
+		<phrase var_name="no_members_cannot_manage_modules" added="1564645173">No, members cannot manage Modules</phrase>
+		<phrase var_name="change_business_theme" added="1564645173">Change Business Theme</phrase>
+		<phrase var_name="yes_members_can_change_business_theme" added="1564645173">Yes, members can change Business Theme</phrase>
+		<phrase var_name="no_members_cannot_change_business_theme" added="1564645173">No, members cannot change Business Theme</phrase>
+		<phrase var_name="update_package" added="1564645173">Update Package</phrase>
+		<phrase var_name="yes_members_can_update_package" added="1564645173">Yes, members can update Package</phrase>
+		<phrase var_name="no_members_cannot_update_package" added="1564645173">No, members cannot update Package</phrase>
+		<phrase var_name="available_themes_for_this_package" added="1564645173">Available themes for this package</phrase>
+		<phrase var_name="modules_supported" added="1564645173">Modules supported</phrase>
+		<phrase var_name="features_supported" added="1564645173">Features supported</phrase>
+		<phrase var_name="name_of_package_cannot_be_empty" added="1564645173">Name of package cannot be empty.</phrase>
+		<phrase var_name="maximum_cover_photos_have_to_be_a_number" added="1564645173">Maximum cover photos have to be a number</phrase>
+		<phrase var_name="valid_period_have_to_be_a_number" added="1564645173">Valid period have to be a number</phrase>
+		<phrase var_name="package_fee_have_to_be_a_number" added="1564645173">Package Fee have to be a number</phrase>
+		<phrase var_name="package_successfully_added" added="1564645173">Package successfully added.</phrase>
+		<phrase var_name="package_successfully_updated" added="1564645173">Package successfully updated.</phrase>
+		<phrase var_name="manage_packages" added="1564645173">Manage Packages</phrase>
+		<phrase var_name="action" added="1564645173">Action</phrase>
+		<phrase var_name="day_s" added="1564645173">day(s)</phrase>
+		<phrase var_name="week_s" added="1564645173">week(s)</phrase>
+		<phrase var_name="month_s" added="1564645173">month(s)</phrase>
+		<phrase var_name="show" added="1564645173">Show</phrase>
+		<phrase var_name="hide" added="1564645173">Hide</phrase>
+		<phrase var_name="never_expired" added="1564645173">Never Expired</phrase>
+		<phrase var_name="yes" added="1564645173">Yes</phrase>
+		<phrase var_name="no" added="1564645173">No</phrase>
+		<phrase var_name="extra_approve_member" added="1564645173">When people try to join this business, should they be allowed to join immediately, or should they be forced to wait for approval?</phrase>
+		<phrase var_name="share_a_photo" added="1564645173">Share a photo</phrase>
+		<phrase var_name="view_browse_photos" added="1564645173">View/browse photos</phrase>
+		<phrase var_name="share_an_event" added="1564645173">Share an event</phrase>
+		<phrase var_name="view_browse_events" added="1564645173">View/browse events</phrase>
+		<phrase var_name="share_a_poll" added="1564645173">Share a poll</phrase>
+		<phrase var_name="view_browse_polls" added="1564645173">View/browse polls</phrase>
+		<phrase var_name="share_a_video" added="1564645173">Share a video</phrase>
+		<phrase var_name="view_browse_videos" added="1564645173">View/browse videos</phrase>
+		<phrase var_name="share_a_music" added="1564645173">Share a music</phrase>
+		<phrase var_name="view_browse_musics" added="1564645173">View/browse musics</phrase>
+		<phrase var_name="share_a_marketplace_item" added="1564645173">Share a marketplace item</phrase>
+		<phrase var_name="view_browse_marketplace_items" added="1564645173">View/browse marketplace items</phrase>
+		<phrase var_name="share_a_blog" added="1564645173">Share a blog</phrase>
+		<phrase var_name="view_browse_blogs" added="1564645173">View/browse blogs</phrase>
+		<phrase var_name="share_a_job" added="1564645173">Share a job</phrase>
+		<phrase var_name="view_browse_jobs" added="1564645173">View/browse jobs</phrase>
+		<phrase var_name="share_a_coupon" added="1564645173">Share a coupon</phrase>
+		<phrase var_name="view_browse_coupons" added="1564645173">View/browse coupons</phrase>
+		<phrase var_name="share_a_discussion" added="1564645173">Share a discussion</phrase>
+		<phrase var_name="view_browse_discussions" added="1564645173">View/browse discussions</phrase>
+		<phrase var_name="directory_admin_menu_manage_businesses" added="1564645173">Manage Businesses</phrase>
+		<phrase var_name="manage_comparison" added="1564645173">Manage Comparison</phrase>
+		<phrase var_name="field_comparison_successfully_updated" added="1564645173">Field comparison successfully updated</phrase>
+		<phrase var_name="select_the_information_you_want_to_use_to_compare_businesses" added="1564645173">Select the information you want to use to compare businesses</phrase>
+		<phrase var_name="manage_business_creators" added="1564645173">Manage Business Creators</phrase>
+		<phrase var_name="add_members_who_will_be_allowed_to_add_businesses_for_claiming" added="1564645173">Add members who will be allowed to add businesses for claiming</phrase>
+		<phrase var_name="full_name" added="1564645173">Full Name</phrase>
+		<phrase var_name="options" added="1564645173">Options</phrase>
+		<phrase var_name="remove" added="1564645173">Remove</phrase>
+		<phrase var_name="add_creator" added="1564645173">Add Creator</phrase>
+		<phrase var_name="business_creator_successfully_deleted" added="1564645173">Business creator successfully deleted</phrase>
+		<phrase var_name="business_creator_successfully_added" added="1564645173">Business creator successfully added</phrase>
+		<phrase var_name="search_friend_by_their_name" added="1564645173">Search Friend By Their Name</phrase>
+		<phrase var_name="search_user_by_their_name" added="1564645173">Search User By Their Name</phrase>
+		<phrase var_name="create_new_business" added="1564645173">Create New Business</phrase>
+		<phrase var_name="reason_for_creating_new_business" added="1564645173">Reason for creating new business</phrase>
+		<phrase var_name="for_my_personal_purpuse" added="1564645173">For my personal purpuse</phrase>
+		<phrase var_name="for_my_personal_purpose" added="1564645173">For my personal purpose</phrase>
+		<phrase var_name="for_claiming" added="1564645173">For Claiming</phrase>
+		<phrase var_name="ok" added="1564645173">OK</phrase>
+		<phrase var_name="create_a_business_step_1_select_package" added="1564645173">Create A Business Step 1: Select Package</phrase>
+		<phrase var_name="all_packages" added="1564645173">All Packages</phrase>
+		<phrase var_name="back" added="1564645173">Back</phrase>
+		<phrase var_name="price" added="1564645173">Price</phrase>
+		<phrase var_name="billing_cycle" added="1564645173">Billing Cycle</phrase>
+		<phrase var_name="duration" added="1564645173">Duration</phrase>
+		<phrase var_name="features_available" added="1564645173">Features Available</phrase>
+		<phrase var_name="modules_available" added="1564645173">Modules Available</phrase>
+		<phrase var_name="allow_business_owner_to_add_new_content_pages" added="1564645173">Allow business owner to add new Content Pages</phrase>
+		<phrase var_name="allow_users_to_confirm_working_at_the_business" added="1564645173">Allow users to confirm working at the business</phrase>
+		<phrase var_name="allow_business_owner_to_edit_contact_form" added="1564645173">Allow business owner to edit contact form</phrase>
+		<phrase var_name="allow_business_to_have_multiple_owners" added="1564645173">Allow business to have multiple owners</phrase>
+		<phrase var_name="create_a_business" added="1564645173">Create A Business</phrase>
+		<phrase var_name="nothing_item_s" added="1564645173">Nothing item(s)</phrase>
+		<phrase var_name="package_price" added="1564645173">Package Price</phrase>
+		<phrase var_name="create_a_business_step_2_select_theme" added="1564645173">Create A Business Step 2: Select Theme</phrase>
+		<phrase var_name="please_select_one_theme_for_your_business_note_that_if_this_package_allows_multiple_themes_you_can_re_select_theme_any_time_you_want_at_dashboard" added="1564645173">Please select one theme for your business. Note that if this package allows multiple themes, you can re-select theme any time you want at Dashboard</phrase>
+		<phrase var_name="create_business" added="1564645173">Create Business</phrase>
+		<phrase var_name="update_business" added="1564645173">Update Business</phrase>
+		<phrase var_name="preview" added="1564645173">Preview</phrase>
+		<phrase var_name="you_have_reached_your_creating_limit_please_contact_administrator" added="1564645173">You have reached your creating limit. Please contact administrator.</phrase>
+		<phrase var_name="directory_admin_menu_manage_claim_businesses" added="1564645173">Manage Claim Businesses</phrase>
+		<phrase var_name="directory_admin_menu_manage_businesses_creators" added="1564645173">Manage Businesses Creators</phrase>
+		<phrase var_name="directory_admin_menu_manage_comparison" added="1564645173">Manage Comparison</phrase>
+		<phrase var_name="directory_admin_menu_manage_transaction" added="1564645173">Manage Transaction</phrase>
+		<phrase var_name="directory_admin_menu_manage_claim_requests" added="1564645173">Manage Claim Requests</phrase>
+		<phrase var_name="directory_admin_menu_email_templates" added="1564645173">Email Templates</phrase>
+		<phrase var_name="directory_admin_menu_global_settings" added="1564645173">Global Settings</phrase>
+		<phrase var_name="global_settings" added="1564645173">Global Settings</phrase>
+		<phrase var_name="default_theme_for_business" added="1564645173">Default theme for business</phrase>
+		<phrase var_name="fee_to_feature_business" added="1564645173">Fee to Feature Business</phrase>
+		<phrase var_name="for_1_day" added="1564645173">for 1 day</phrase>
+		<phrase var_name="email_templates" added="1564645173">Email Templates</phrase>
+		<phrase var_name="choose_message" added="1564645173">Choose Message</phrase>
+		<phrase var_name="language_pack" added="1564645173">Language Pack</phrase>
+		<phrase var_name="your_community_has_more_than_one_language_pack_installed_please_select_the_language_pack_you_want_to_edit_right_now" added="1564645173">Your community has more than one language pack installed. Please select the language pack you want to edit right now.</phrase>
+		<phrase var_name="message_body" added="1564645173">Message Body</phrase>
+		<phrase var_name="select_a_email_template_type" added="1564645173">Select a email template type</phrase>
+		<phrase var_name="save_changes" added="1564645173">Save changes</phrase>
+		<phrase var_name="subject" added="1564645173">Subject</phrase>
+		<phrase var_name="a_new_transaction_has_been_made_send_to_admin" added="1564645173">A new transaction has been made (send to Admin)</phrase>
+		<phrase var_name="package_has_been_changed_send_to_owner" added="1564645173">Package has been changed (send to Owner)</phrase>
+		<phrase var_name="package_has_been_deleted_send_to_owner" added="1564645173">Package has been deleted (send to Owner)</phrase>
+		<phrase var_name="matched_businesses_have_been_added_send_to_registered_user" added="1564645173">Matched businesses have been added (send to Registered User)</phrase>
+		<phrase var_name="business_directory" added="1564645173">Business Directory</phrase>
+		<phrase var_name="search_business" added="1564645173">Search Business...</phrase>
+		<phrase var_name="newest" added="1564645173">Newest</phrase>
+		<phrase var_name="oldest" added="1564645173">Oldest</phrase>
+		<phrase var_name="featured" added="1564645173">Featured</phrase>
+		<phrase var_name="a_z" added="1564645173">A-Z</phrase>
+		<phrase var_name="z_a" added="1564645173">Z-A</phrase>
+		<phrase var_name="dashboard" added="1564645173">Dashboard</phrase>
+		<phrase var_name="no_businesses_found" added="1564645173">No businesses found.</phrase>
+		<phrase var_name="call_us" added="1564645173">Call Us</phrase>
+		<phrase var_name="moderate" added="1564645173">Moderate</phrase>
+		<phrase var_name="direction" added="1564645173">Get Directions</phrase>
+		<phrase var_name="email" added="1564645173">Email</phrase>
+		<phrase var_name="most_liked_businesses" added="1564645173">Most Liked</phrase>
+		<phrase var_name="most_discussed_businesses" added="1564645173">Most Discussed</phrase>
+		<phrase var_name="most_viewed_businesses" added="1564645173">Most Viewed</phrase>
+		<phrase var_name="most_rated_businesses" added="1564645173">Most Rated</phrase>
+		<phrase var_name="user_setting_can_edit_own_review" added="1564645173">Can edit own review?</phrase>
+		<phrase var_name="number_total_views" added="1564645173">{number_total} views</phrase>
+		<phrase var_name="number_total_likes" added="1564645173">{number_total} likes</phrase>
+		<phrase var_name="total_dicussions" added="1564645173">{total} dicussions</phrase>
+		<phrase var_name="total_ratings" added="1564645173">{total} ratings</phrase>
+		<phrase var_name="most_reviewed_businesses" added="1564645173">Most Reviewed</phrase>
+		<phrase var_name="most_checked_in_businesses" added="1564645173">Most Checked-in</phrase>
+		<phrase var_name="keyword" added="1564645173">Keyword</phrase>
+		<phrase var_name="location" added="1564645173">Location</phrase>
+		<phrase var_name="radius_mile" added="1564645173">Radius(mile)</phrase>
+		<phrase var_name="search" added="1564645173">Search</phrase>
+		<phrase var_name="business_you_may_like" added="1564645173">Recommended</phrase>
+		<phrase var_name="select_least_one_theme" added="1564645173">Select least one theme</phrase>
+		<phrase var_name="select_least_one_module" added="1564645173">Select least one module</phrase>
+		<phrase var_name="unable_to_view_this_item_due_to_privacy_settings" added="1564645173">Unable to view this item due to privacy settings</phrase>
+		<phrase var_name="business_name" added="1564645173">Business Name</phrase>
+		<phrase var_name="description" added="1564645173">Description</phrase>
+		<phrase var_name="locations" added="1564645173">Locations</phrase>
+		<phrase var_name="setting_directory_google_api_key" added="1564645173"><![CDATA[<title>Google API Key</title><info>Google offers many services that require an API key (like the Places service), enter your Google API key here.
+
+More information on how to get an API key can be found <a href="https://developers.google.com/maps/documentation/javascript/tutorial#api_key">here</a>.</info>]]></phrase>
+		<phrase var_name="view_map" added="1564645173">View map</phrase>
+		<phrase var_name="enter_a_location" added="1564645173">Enter a location</phrase>
+		<phrase var_name="please_contact_administrator_to_set_up_the_google_api_key" added="1564645173">Please contact administrator to set up the Google API key.</phrase>
+		<phrase var_name="please_enter_location" added="1564645173">Please enter location.</phrase>
+		<phrase var_name="general_info" added="1564645173">General Info</phrase>
+		<phrase var_name="contact_information" added="1564645173">Contact Information</phrase>
+		<phrase var_name="fax" added="1564645173">Fax</phrase>
+		<phrase var_name="city" added="1564645173">City</phrase>
+		<phrase var_name="province" added="1564645173">Province</phrase>
+		<phrase var_name="zip_code" added="1564645173">Zip code</phrase>
+		<phrase var_name="web_address" added="1564645173">Web Address</phrase>
+		<phrase var_name="country" added="1564645173">Country</phrase>
+		<phrase var_name="logo" added="1564645173">Logo</phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1564645173">You can upload a jpg , gif or png file</phrase>
+		<phrase var_name="business_sizes" added="1564645173">Business Sizes</phrase>
+		<phrase var_name="visiting_hours" added="1564645173">Visiting hours</phrase>
+		<phrase var_name="timezone" added="1564645173">Timezone</phrase>
+		<phrase var_name="check_this_to_disable_visiting_hours_and_timezone_fields" added="1564645173"><![CDATA[Check this to disable "Visiting hours" and "Timezone" fields]]></phrase>
+		<phrase var_name="founders" added="1564645173">Founders</phrase>
+		<phrase var_name="additional_information" added="1564645173">Additional Information</phrase>
+		<phrase var_name="category" added="1564645173">Category</phrase>
+		<phrase var_name="content" added="1564645173">Content</phrase>
+		<phrase var_name="main_category" added="1564645173">Main category</phrase>
+		<phrase var_name="tags" added="1564645173">Tags</phrase>
+		<phrase var_name="separate_multiple_topics_with_commas" added="1564645173">Separate multiple topics with commas.</phrase>
+		<phrase var_name="feature" added="1564645173">Feature</phrase>
+		<phrase var_name="feature_this_business_for" added="1564645173">Feature this business for</phrase>
+		<phrase var_name="day_s_with" added="1564645173">day(s) with</phrase>
+		<phrase var_name="fee_to_feature_business_feature_fee_currency_id_for_1_day" added="1564645173">Fee to feature business: {feature_fee} {currency_id} for 1 day</phrase>
+		<phrase var_name="please_fill_name_field" added="1564645173">Please fill name field</phrase>
+		<phrase var_name="please_fill_short_description_field" added="1564645173">Please fill short description field</phrase>
+		<phrase var_name="please_fill_location_field" added="1564645173">Please fill location field</phrase>
+		<phrase var_name="please_fill_phone_field" added="1564645173">Please fill phone field</phrase>
+		<phrase var_name="please_input_valid_email" added="1564645173">Please input valid email</phrase>
+		<phrase var_name="please_select_category" added="1564645173">Please select category</phrase>
+		<phrase var_name="this_field_is_required" added="1564645173">This field is required</phrase>
+		<phrase var_name="please_enter_a_valid_url_for_example_http_example_com" added="1564645173">Please enter a valid url, for example http://example.com</phrase>
+		<phrase var_name="please_enter_a_value_with_a_valid_extension" added="1564645173">Please enter a value with a valid extension</phrase>
+		<phrase var_name="please_enter_at_least_0_characters" added="1564645173">Please enter at least {0} characters.</phrase>
+		<phrase var_name="please_enter_a_value_greater_than_or_equal_to_0" added="1564645173">Please enter a value greater than or equal to {0}</phrase>
+		<phrase var_name="please_enter_a_valid_number" added="1564645173">Please enter a valid number.</phrase>
+		<phrase var_name="please_enter_no_more_than_0_characters" added="1564645173">Please enter no more than {0} characters.</phrase>
+		<phrase var_name="other" added="1564645173">Other</phrase>
+		<phrase var_name="provide_a_category_this_item_will_belong_to" added="1564645173">Provide a category this item will belong to</phrase>
+		<phrase var_name="url_format_is_not_valid" added="1564645173">Url format is not valid.</phrase>
+		<phrase var_name="number_total_reviews" added="1564645173">{number_total} reviews</phrase>
+		<phrase var_name="by" added="1564645173">by</phrase>
+		<phrase var_name="review_for_business_name" added="1564645173">Review for {business_name}</phrase>
+		<phrase var_name="subscribe" added="1564645173">Subscribe</phrase>
+		<phrase var_name="no_reviews_be_the_first" added="1564645173">No reviews. Be the first!</phrase>
+		<phrase var_name="more_info" added="1564645173">More Info</phrase>
+		<phrase var_name="write_a_review" added="1564645173">Write a review</phrase>
+		<phrase var_name="add_to_compare" added="1564645173">Add to Compare</phrase>
+		<phrase var_name="get_directions" added="1564645173">Get Directions</phrase>
+		<phrase var_name="recent_reviews" added="1564645173">Recent Reviews</phrase>
+		<phrase var_name="subscribe_businesses" added="1564645173">Subscribe Businesses</phrase>
+		<phrase var_name="some_issues_happen_please_try_again_thanks" added="1564645173">Some issues happen. Please try again. Thanks!</phrase>
+		<phrase var_name="payment_methods" added="1564645173">Payment Methods</phrase>
+		<phrase var_name="review_and_confirm_purchase" added="1564645173">Review and Confirm Purchase</phrase>
+		<phrase var_name="full_name_liked_a_comment_you_posted_on_the_business_title" added="1564645173"><![CDATA[{full_name} liked a comment you posted on the business "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_comment_a_href_link_content_a_that_you_posted_on_the_business_a_href_item_link_title_a_to_view_this_business_follow_the_link_below_a_href_link_link_a" added="1564645173"><![CDATA[{full_name} liked your comment "<a href="{link}">{content}</a>" that you posted on the business "<a href="{item_link}">{title}</a>".
+To view this business follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_liked_your_business_title" added="1564645173"><![CDATA[{full_name} liked your business "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_business_a_href_link_title_a_to_view_this_business_follow_the_link_below_a_href_link_link_a" added="1564645173"><![CDATA[{full_name} liked your business "<a href="{link}">{title}</a>"
+To view this business follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_liked_gender_own_business_title" added="1564645173"><![CDATA[{users} liked {gender} own business "{title}"]]></phrase>
+		<phrase var_name="users_liked_your_business_title" added="1564645173"><![CDATA[{users} liked your business "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_039_s_span_business_title" added="1564645173"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> business "{title}"]]></phrase>
+		<phrase var_name="created_an_business" added="1564645173">created a business.</phrase>
+		<phrase var_name="unable_to_post_a_comment_on_this_item_due_to_privacy_settings" added="1564645173">Unable to post a comment on this item due to privacy settings.</phrase>
+		<phrase var_name="full_name_commented_on_a_comment_posted_on_the_business_title" added="1564645173"><![CDATA[{full_name} commented on a comment posted on the business "{title}".]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_your_comments_you_posted_on_the_business_a_href_item_link_title_a_to_see_the_comment_thread_follow_the_link_below_a_href_link_link_a" added="1564645173"><![CDATA[{full_name} commented on one of your comments you posted on the business "<a href="{item_link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_gender_business_comments" added="1564645173">{full_name} commented on one of {gender} business comments.</phrase>
+		<phrase var_name="full_name_commented_on_one_of_gender_own_comments_on_the_business_a_href_item_link_title_a_to_see_the_comment_thread_follow_the_link_below_a_href_link_link_a" added="1564645173"><![CDATA[{full_name} commented on one of {gender} own comments on the business "<a href="{item_link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_row_full_name_s_business_comments" added="1564645173"><![CDATA[{full_name} commented on one of {row_full_name}&#039;s business comments.]]></phrase>
+		<phrase var_name="full_name_commented_on_one_of_row_full_name_s_comments_on_the_business_a_href_item_link_title_a_to_see_the_comment_thread_follow_the_link_below_a_href_link_link_a" added="1564645173"><![CDATA[{full_name} commented on one of {row_full_name}&#039;s comments on the business "<a href="{item_link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name_s_span_comment_on_the_business_title" added="1564645173"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}&#039;s</span> comment on the business "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_one_of_your_comments_on_the_business_title" added="1564645173"><![CDATA[{users} commented on one of your comments on the business "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_one_of_span_class_drop_data_user_row_full_name_s_span_comments_on_the_business_title" added="1564645173"><![CDATA[{users} commented on one of <span class="drop_data_user">{row_full_name}&#039;s</span> comments on the business "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name_s_span_business_title" added="1564645173"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}&#039;s</span> business "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_gender_own_company_title" added="1564645173"><![CDATA[{users} commented on {gender} own company "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_your_business_title" added="1564645173"><![CDATA[{users} commented on your business "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_comment_on_the_business_title" added="1564645173"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> comment on the business "{title}"]]></phrase>
+		<phrase var_name="users_liked_gender_own_comment_on_the_business_title" added="1564645173"><![CDATA[{users} liked {gender} own comment on the business "{title}"]]></phrase>
+		<phrase var_name="users_liked_one_of_your_comments_on_the_business_title" added="1564645173"><![CDATA[{users} liked one of your comments on the business "{title}"]]></phrase>
+		<phrase var_name="users_liked_one_on_span_class_drop_data_user_row_full_name_s_span_comments_on_the_business_title" added="1564645173"><![CDATA[{users} liked one on <span class="drop_data_user">{row_full_name}&#039;s</span> comments on the business "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_gender_own_business_title" added="1564645173"><![CDATA[{users} commented on {gender} own business "{title}"]]></phrase>
+		<phrase var_name="item_phrase" added="1564645173">directory</phrase>
+		<phrase var_name="businesses" added="1564645173">Businesses</phrase>
+		<phrase var_name="business_successfully_added" added="1564645173">Business successfully added</phrase>
+		<phrase var_name="from" added="1564645173">from</phrase>
+		<phrase var_name="to" added="1564645173">to</phrase>
+		<phrase var_name="subscribe_successfully" added="1564645173">Subscribe successfully</phrase>
+		<phrase var_name="you_have_to_fill_email_field" added="1564645173">You have to fill email field</phrase>
+		<phrase var_name="unfavorite" added="1564645173">Unfavorite</phrase>
+		<phrase var_name="unfollow" added="1564645173">Unfollow</phrase>
+		<phrase var_name="featured_business" added="1564645173">Featured Business</phrase>
+		<phrase var_name="delete_business" added="1564645173">Delete Business</phrase>
+		<phrase var_name="make_payment" added="1564645173">Make Payment</phrase>
+		<phrase var_name="the_business_was_added_to_your_following_list" added="1564645173">The business was added to your following list</phrase>
+		<phrase var_name="the_business_was_removed_from_your_following_list" added="1564645173">The business was removed from your following list</phrase>
+		<phrase var_name="the_directory_removed_from_your_favorite_list" added="1564645173">The directory removed from your favorite list</phrase>
+		<phrase var_name="business_deleted_successfully" added="1564645173">Business Deleted Successfully</phrase>
+		<phrase var_name="no_information" added="1564645173">No information</phrase>
+		<phrase var_name="business_privacy" added="1564645173">Business Privacy</phrase>
+		<phrase var_name="control_who_can_see_this_business" added="1564645173">Control who can see this business.</phrase>
+		<phrase var_name="businesses_successfully_deleted" added="1564645173">Businesses successfully deleted.</phrase>
+		<phrase var_name="search_photos" added="1564645173">Search Photos...</phrase>
+		<phrase var_name="sort" added="1564645173">Sort</phrase>
+		<phrase var_name="latest" added="1564645173">Latest</phrase>
+		<phrase var_name="most_viewed" added="1564645173">Most Viewed</phrase>
+		<phrase var_name="most_liked" added="1564645173">Most Liked</phrase>
+		<phrase var_name="most_discussed" added="1564645173">Most Discussed</phrase>
+		<phrase var_name="per_page" added="1564645173">{total} per page</phrase>
+		<phrase var_name="when" added="1564645173">When</phrase>
+		<phrase var_name="all_time" added="1564645173">All Time</phrase>
+		<phrase var_name="this_month" added="1564645173">This Month</phrase>
+		<phrase var_name="this_week" added="1564645173">This Week</phrase>
+		<phrase var_name="today" added="1564645173">Today</phrase>
+		<phrase var_name="upload_a_new_image" added="1564645173">Upload a New Image</phrase>
+		<phrase var_name="in_the_business_a_href_link_title_a" added="1564645173"><![CDATA[In the business <a href="{link}">{title}</a>]]></phrase>
+		<phrase var_name="photo_s" added="1564645173">Photo(s)</phrase>
+		<phrase var_name="album_s" added="1564645173">Album(s)</phrase>
+		<phrase var_name="no_item_s_found" added="1564645173">No item(s) found</phrase>
+		<phrase var_name="start_end_of_total_result_s" added="1564645173">{start}-{end} of {total} Result(s)</phrase>
+		<phrase var_name="unable_to_view_this_item_due_to_privacy_settings_please_contact_owner_business" added="1564645173">Unable to view this item due to privacy settings. Please contact owner business.</phrase>
+		<phrase var_name="update" added="1564645173">Update</phrase>
+		<phrase var_name="insight" added="1564645173">Insight</phrase>
+		<phrase var_name="edit_info" added="1564645173">Edit Info</phrase>
+		<phrase var_name="cover_photos" added="1564645173">Cover Photos</phrase>
+		<phrase var_name="business_dashboard" added="1564645173">Business DashBoard</phrase>
+		<phrase var_name="business_successfully_updated" added="1564645173">Business successfully updated</phrase>
+		<phrase var_name="select_image_s" added="1564645173">Select Image(s)</phrase>
+		<phrase var_name="the_file_size_limit_is_filesize_if_your_upload_does_not_work_try_uploading_a_smaller_picture" added="1564645173">The file size limit is {filesize}. If your upload does not work, try uploading a smaller picture.</phrase>
+		<phrase var_name="maximum_photos_imaximum" added="1564645173">Remain photos: {iMaximum}</phrase>
+		<phrase var_name="you_have_reached_your_upload_limit" added="1564645173">You have reached your upload limit.</phrase>
+		<phrase var_name="upload" added="1564645173">Upload</phrase>
+		<phrase var_name="delete_this_image" added="1564645173">Delete this image</phrase>
+		<phrase var_name="click_to_set_as_default_image" added="1564645173">Click to set as default image</phrase>
+		<phrase var_name="are_you_sure" added="1564645173">Are you sure?</phrase>
+		<phrase var_name="unable_to_find_the_image" added="1564645173">Unable to find the image.</phrase>
+		<phrase var_name="updated_cover_photos_successfully" added="1564645173">Updated cover photos successfully</phrase>
+		<phrase var_name="search_videos" added="1564645173">Search Videos...</phrase>
+		<phrase var_name="upload_share_a_video" added="1564645173">Upload/Share a Video</phrase>
+		<phrase var_name="search_songs" added="1564645173">Search Songs...</phrase>
+		<phrase var_name="upload_a_song" added="1564645173">Upload a Song</phrase>
+		<phrase var_name="search_blogs" added="1564645173">Search Blogs...</phrase>
+		<phrase var_name="add_new_blog" added="1564645173">Add New Blog</phrase>
+		<phrase var_name="search_threads" added="1564645173">Search Threads...</phrase>
+		<phrase var_name="post_a_new_thread" added="1564645173">Post a New Thread</phrase>
+		<phrase var_name="search_polls" added="1564645173">Search Polls...</phrase>
+		<phrase var_name="add_new_poll" added="1564645173">Add New Poll</phrase>
+		<phrase var_name="search_events" added="1564645173">Search Events...</phrase>
+		<phrase var_name="create_new_event" added="1564645173">Create New Event</phrase>
+		<phrase var_name="search_jobs" added="1564645173">Search Jobs...</phrase>
+		<phrase var_name="create_a_new_job" added="1564645173">Create a New Job</phrase>
+		<phrase var_name="posted_date" added="1564645173">Posted Date</phrase>
+		<phrase var_name="search_listings" added="1564645173">Search Listings...</phrase>
+		<phrase var_name="add_new_listing" added="1564645173">Add New Listing</phrase>
+		<phrase var_name="free" added="1564645173">Free</phrase>
+		<phrase var_name="search_coupons" added="1564645173">Search Coupons...</phrase>
+		<phrase var_name="create_a_new_coupon" added="1564645173">Create a New Coupon</phrase>
+		<phrase var_name="contact_description_how_can_i_help_you" added="1564645173">Contact Description. How can I help you</phrase>
+		<phrase var_name="department" added="1564645173">Department</phrase>
+		<phrase var_name="message" added="1564645173">Message</phrase>
+		<phrase var_name="send" added="1564645173">Send</phrase>
+		<phrase var_name="or" added="1564645173">or</phrase>
+		<phrase var_name="cancel" added="1564645173">Cancel</phrase>
+		<phrase var_name="if_you_want_to_ask_us_a_question_directly_please_submit_your_message_with_the_following_form_how_can_i_help_you" added="1564645173">If you want to ask us a question directly, please submit your message with the following form. How can I help you?</phrase>
+		<phrase var_name="about" added="1564645173">About</phrase>
+		<phrase var_name="unable_to_find_the_business_you_are_trying_to_comment_on" added="1564645173">Unable to find the business you are trying to comment on.</phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_business_title" added="1564645173"><![CDATA[{full_name} wrote a comment on your business "{title}".]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_business_a_href_link_title_a_to_see_the_comment_thread_follow_the_link_below_a_href_link_link_a" added="1564645173"><![CDATA[{full_name} wrote a comment on your business "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="introduce_manage_pages" added="1564645173">This is place you can manage your pages and whether they are displayed to users.</phrase>
+		<phrase var_name="page_name" added="1564645173">Page Name</phrase>
+		<phrase var_name="landing_page" added="1564645173">Landing Page</phrase>
+		<phrase var_name="edit_page" added="1564645173">Edit Page</phrase>
+		<phrase var_name="edit_form" added="1564645173">Edit Form</phrase>
+		<phrase var_name="edit_title" added="1564645173">Edit Title</phrase>
+		<phrase var_name="manage_pages_updated_successfully" added="1564645173">Manage pages updated successfully</phrase>
+		<phrase var_name="the_page_you_choose_to_be_landing_page_is_hidden" added="1564645173">The page you choose to be landing page is hidden.</phrase>
+		<phrase var_name="new_title" added="1564645173">New Title</phrase>
+		<phrase var_name="add_new_content_page" added="1564645173">Add New Content Page</phrase>
+		<phrase var_name="add_new_page" added="1564645173">Add New Page</phrase>
+		<phrase var_name="fill_in_a_title_for_your_page" added="1564645173">Fill in a title for your page</phrase>
+		<phrase var_name="add_some_content_to_your_page" added="1564645173">Add some content to your page</phrase>
+		<phrase var_name="add_faq" added="1564645173">Add FAQ</phrase>
+		<phrase var_name="current_title" added="1564645173">Current Title</phrase>
+		<phrase var_name="edit_faq" added="1564645173">Edit FAQ</phrase>
+		<phrase var_name="please_fill_input_data" added="1564645173">Please fill input data!</phrase>
+		<phrase var_name="please_enter_a_title" added="1564645173">Please enter a title!</phrase>
+		<phrase var_name="enabled_this_field" added="1564645173">Enabled this field</phrase>
+		<phrase var_name="required_this_field" added="1564645173">Required this field</phrase>
+		<phrase var_name="manage_receiver" added="1564645173">Manage Receiver</phrase>
+		<phrase var_name="contact_description" added="1564645173">Contact Description</phrase>
+		<phrase var_name="receiver" added="1564645173">Receiver</phrase>
+		<phrase var_name="delete_page" added="1564645173">Delete Page</phrase>
+		<phrase var_name="add_more_receivers" added="1564645173">Add more receivers</phrase>
+		<phrase var_name="add_page_successfully" added="1564645173">Add page successfully</phrase>
+		<phrase var_name="edit_about_us_successfully" added="1564645173">Edit About Us successfully</phrase>
+		<phrase var_name="edit_custom_page_successfully" added="1564645173">Edit Custom Page successfully</phrase>
+		<phrase var_name="edit_faqs_successfully" added="1564645173">Edit FAQs successfully</phrase>
+		<phrase var_name="edit_contact_us_successfully" added="1564645173">Edit Contact Us successfully</phrase>
+		<phrase var_name="please_fill_required_field_s" added="1564645173"><![CDATA[Please fill required field(s) (&#42;)]]></phrase>
+		<phrase var_name="send_email_successfully" added="1564645173">Send email successfully</phrase>
+		<phrase var_name="there_are_error_s_in_processing_please_try_again" added="1564645173">There are error(s) in processing. Please try again.</phrase>
+		<phrase var_name="cannot_load_google_api_library_please_reload_the_page_and_try_again" added="1564645173">Cannot load Google API library. Please reload the page and try again.</phrase>
+		<phrase var_name="compare" added="1564645173">Compare</phrase>
+		<phrase var_name="manage_member_roles" added="1564645173">Manage Member Roles</phrase>
+		<phrase var_name="introduce_manage_member_roles" added="1564645173">This is page to manage all member roles.You can add as many roles as you need.Notes that two roles Admin and Member are default and you cannot delete them.All your new members are assigned role Member and you can change later</phrase>
+		<phrase var_name="role_title" added="1564645173">Role Title</phrase>
+		<phrase var_name="add_new_role" added="1564645173">Add New Role</phrase>
+		<phrase var_name="edit_role" added="1564645173">Edit Role</phrase>
+		<phrase var_name="delete_role" added="1564645173">Delete Role</phrase>
+		<phrase var_name="confirm_delete_role_member" added="1564645173">Are you sure you want to delete this role?Member of this role will be re-assigned to default role.</phrase>
+		<phrase var_name="manage_settings" added="1564645173">Manage Settings</phrase>
+		<phrase var_name="member_role_settings" added="1564645173">Member Role Settings</phrase>
+		<phrase var_name="updated_member_role_setting_successfully" added="1564645173">Updated member role setting successfully</phrase>
+		<phrase var_name="role_member" added="1564645173">Role Member</phrase>
+		<phrase var_name="date" added="1564645173">Date</phrase>
+		<phrase var_name="post_new_announcements" added="1564645173">Post New Announcements</phrase>
+		<phrase var_name="post" added="1564645173">Post</phrase>
+		<phrase var_name="body" added="1564645173">Body</phrase>
+		<phrase var_name="add_announcements_successfully" added="1564645173">Add announcements successfully</phrase>
+		<phrase var_name="update_announcements_successfully" added="1564645173">Update announcements successfully</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_announcement" added="1564645173">Are you sure you want to delete this announcement?</phrase>
+		<phrase var_name="delete_announcement" added="1564645173">Delete Announcement</phrase>
+		<phrase var_name="total_announcement_s_total" added="1564645173">{total} announcement(s) total</phrase>
+		<phrase var_name="read_by_total_users" added="1564645173">read by {total} users</phrase>
+		<phrase var_name="please_select_more_than_one_entry_for_the_comparison" added="1564645173">Please select more than one entry for the comparison.</phrase>
+		<phrase var_name="prev" added="1564645173">Prev</phrase>
+		<phrase var_name="next" added="1564645173">Next</phrase>
+		<phrase var_name="contact_detail" added="1564645173">Contact Detail</phrase>
+		<phrase var_name="header_title" added="1564645173">HEADER TITLE</phrase>
+		<phrase var_name="member_s" added="1564645173">Member(s)</phrase>
+		<phrase var_name="follower_s" added="1564645173">Follower(s)</phrase>
+		<phrase var_name="review_s" added="1564645173">Review(s)</phrase>
+		<phrase var_name="phone_number" added="1564645173">Phone Number</phrase>
+		<phrase var_name="unable_to_find_the_business_you_wan_to_download" added="1564645173">Unable to find the business you wan to download</phrase>
+		<phrase var_name="view_overview" added="1564645173">View Overview</phrase>
+		<phrase var_name="view_about_us" added="1564645173">View About Us</phrase>
+		<phrase var_name="view_activities" added="1564645173">View Activities</phrase>
+		<phrase var_name="view_members" added="1564645173">View Members</phrase>
+		<phrase var_name="view_followers" added="1564645173">View Followers</phrase>
+		<phrase var_name="view_reviews" added="1564645173">View Reviews</phrase>
+		<phrase var_name="view_photos" added="1564645173">View Photos</phrase>
+		<phrase var_name="view_videos" added="1564645173">View Videos</phrase>
+		<phrase var_name="add_videos" added="1564645173">Add Video</phrase>
+		<phrase var_name="add_photos" added="1564645173">Add Photo</phrase>
+		<phrase var_name="view_musics" added="1564645173">View Musics</phrase>
+		<phrase var_name="add_musics" added="1564645173">Add Music</phrase>
+		<phrase var_name="view_blogs" added="1564645173">View Blogs</phrase>
+		<phrase var_name="add_blogs" added="1564645173">Add Blog</phrase>
+		<phrase var_name="view_polls" added="1564645173">View Polls</phrase>
+		<phrase var_name="add_polls" added="1564645173">Add Poll</phrase>
+		<phrase var_name="view_coupons" added="1564645173">View Coupons</phrase>
+		<phrase var_name="add_coupons" added="1564645173">Add Coupon</phrase>
+		<phrase var_name="view_events" added="1564645173">View Events</phrase>
+		<phrase var_name="add_events" added="1564645173">Add Event</phrase>
+		<phrase var_name="view_job_posting" added="1564645173">View Job Posting</phrase>
+		<phrase var_name="add_job_posting" added="1564645173">Add Job Posting</phrase>
+		<phrase var_name="view_listing" added="1564645173">View Listing</phrase>
+		<phrase var_name="add_listing" added="1564645173">Add Listing</phrase>
+		<phrase var_name="view_contact_us" added="1564645173">View Contact Us</phrase>
+		<phrase var_name="view_faq" added="1564645173">View FAQ</phrase>
+		<phrase var_name="manage_business_theme" added="1564645173">Manage Business Theme</phrase>
+		<phrase var_name="business_theme" added="1564645173">Business Theme</phrase>
+		<phrase var_name="apply_theme" added="1564645173">Apply Theme</phrase>
+		<phrase var_name="manage_themes_updated_successfully" added="1564645173">Manage themes updated successfully</phrase>
+		<phrase var_name="packages" added="1564645173">Packages</phrase>
+		<phrase var_name="manage_package_updated_successfully" added="1564645173">Manage Package updated successfully</phrase>
+		<phrase var_name="id" added="1564645173">ID</phrase>
+		<phrase var_name="your_business_is_currently_using_package_name" added="1564645173">Your business is currently using {package_name}</phrase>
+		<phrase var_name="renewal_notification" added="1564645173">Renewal Notification</phrase>
+		<phrase var_name="before" added="1564645173">before</phrase>
+		<phrase var_name="1_day" added="1564645173">1 day</phrase>
+		<phrase var_name="1_week" added="1564645173">1 week</phrase>
+		<phrase var_name="1_month" added="1564645173">1 month</phrase>
+		<phrase var_name="never_expire" added="1564645173">Never expire</phrase>
+		<phrase var_name="latest_payment" added="1564645173">Latest Payment</phrase>
+		<phrase var_name="approved_at" added="1564645173">Approved at</phrase>
+		<phrase var_name="rating" added="1564645173">Rating</phrase>
+		<phrase var_name="liked" added="1564645173">Liked</phrase>
+		<phrase var_name="commented" added="1564645173">Commented</phrase>
+		<phrase var_name="shared" added="1564645173">Shared</phrase>
+		<phrase var_name="viewed" added="1564645173">Viewed</phrase>
+		<phrase var_name="pages" added="1564645173">Pages</phrase>
+		<phrase var_name="expire" added="1564645173">Expire</phrase>
+		<phrase var_name="use_the_below_filter_to_observe_various_metrics_of_your_page_over_different_time_periods" added="1564645173">Use the below filter to observe various metrics of your page over different time periods</phrase>
+		<phrase var_name="comment" added="1564645173">Comment</phrase>
+		<phrase var_name="like" added="1564645173">Like</phrase>
+		<phrase var_name="this_year" added="1564645173">This year</phrase>
+		<phrase var_name="by_day" added="1564645173">By Day</phrase>
+		<phrase var_name="time_summary" added="1564645173">Time Summary</phrase>
+		<phrase var_name="metric" added="1564645173">Metric</phrase>
+		<phrase var_name="type" added="1564645173">Type</phrase>
+		<phrase var_name="all" added="1564645173">All</phrase>
+		<phrase var_name="cumulative" added="1564645173">Cumulative</phrase>
+		<phrase var_name="change_in" added="1564645173">Change In</phrase>
+		<phrase var_name="filter" added="1564645173">Filter</phrase>
+		<phrase var_name="yesterday" added="1564645173">Yesterday</phrase>
+		<phrase var_name="last_week" added="1564645173">Last Week</phrase>
+		<phrase var_name="range_of_dates" added="1564645173">Range of dates</phrase>
+		<phrase var_name="view_this_business" added="1564645173">View This Business</phrase>
+		<phrase var_name="edit_information" added="1564645173">Edit Information</phrase>
+		<phrase var_name="pending_for_claiming" added="1564645173">Pending for Claiming</phrase>
+		<phrase var_name="claim_businesses" added="1564645173">Claim Businesses</phrase>
+		<phrase var_name="claim_this_business" added="1564645173">Claim This Business</phrase>
+		<phrase var_name="unable_to_find_the_business" added="1564645173">Unable to find the business.</phrase>
+		<phrase var_name="the_business_is_not_for_claiming_or_claimed" added="1564645173">The business is not for claiming or claimed.</phrase>
+		<phrase var_name="you_have_just_claimed_the_business_name_successfully_please_wait_for_approval_from_administrator" added="1564645173">You have just claimed the business {name} successfully. Please wait for approval from Administrator.</phrase>
+		<phrase var_name="you_have_just_claimed_the_business_title_successfully_please_wait_for_approval_from_administrator" added="1564645173"><![CDATA[You have just claimed the business "{title}" successfully. Please wait for approval from Administrator.]]></phrase>
+		<phrase var_name="you_have_just_claimed_this_business_successfully_please_wait_for_approval_from_administrator" added="1564645173">You have just claimed this business successfully. Please wait for approval from Administrator.</phrase>
+		<phrase var_name="you_cannot_claim_this_business_because_it_is_being_claimed_by" added="1564645173">You cannot claim this business because it is being claimed by </phrase>
+		<phrase var_name="manage_claim_request" added="1564645173">Manage Claim Request</phrase>
+		<phrase var_name="search_filter" added="1564645173">Search Filter</phrase>
+		<phrase var_name="business" added="1564645173">Business</phrase>
+		<phrase var_name="claimed_by" added="1564645173">Claimed By</phrase>
+		<phrase var_name="from_date" added="1564645173">From Date</phrase>
+		<phrase var_name="to_date" added="1564645173">To Date</phrase>
+		<phrase var_name="claim_request" added="1564645173">Claim Request</phrase>
+		<phrase var_name="claimed_date" added="1564645173">Claimed Date</phrase>
+		<phrase var_name="no_requests_found" added="1564645173">No requests found.</phrase>
+		<phrase var_name="approve" added="1564645173">Approve</phrase>
+		<phrase var_name="deny" added="1564645173">Deny</phrase>
+		<phrase var_name="approve_successfully" added="1564645173">Approve successfully.</phrase>
+		<phrase var_name="deny_successfully" added="1564645173">Deny successfully.</phrase>
+		<phrase var_name="notifications_for_new_created_businesses" added="1564645173">Notifications for new created businesses</phrase>
+		<phrase var_name="notification_for_new_claimed_businesses" added="1564645173">Notification for new claimed businesses</phrase>
+		<phrase var_name="approval_of_businesses" added="1564645173">Approval of businesses</phrase>
+		<phrase var_name="denial_of_businesses" added="1564645173">Denial of businesses</phrase>
+		<phrase var_name="new_activities_on_your_own_businesses" added="1564645173">New activities on your own businesses</phrase>
+		<phrase var_name="transferring_owner_of_your_businesses" added="1564645173">Transferring owner of your businesses</phrase>
+		<phrase var_name="confirming_of_work_here" added="1564645173"><![CDATA[Confirming of "Work Here"]]></phrase>
+		<phrase var_name="expiration_of_your_businesses" added="1564645173">Expiration of your businesses</phrase>
+		<phrase var_name="changes_on_your_businesses" added="1564645173">Changes on your businesses</phrase>
+		<phrase var_name="feature_un_feature_your_businesses" added="1564645173">Feature / Un-feature your businesses</phrase>
+		<phrase var_name="new_activities_on_your_following_businesses" added="1564645173">New activities on your following businesses</phrase>
+		<phrase var_name="approval_of_claim_requests" added="1564645173">Approval of claim requests</phrase>
+		<phrase var_name="denial_of_claim_requests" added="1564645173">Denial of claim requests</phrase>
+		<phrase var_name="manage_transactions" added="1564645173">Manage Transactions</phrase>
+		<phrase var_name="package" added="1564645173">Package</phrase>
+		<phrase var_name="status" added="1564645173">Status</phrase>
+		<phrase var_name="manage_businesses" added="1564645173">Manage Businesses</phrase>
+		<phrase var_name="business_owner" added="1564645173">Business Owner</phrase>
+		<phrase var_name="creator" added="1564645173">Creator</phrase>
+		<phrase var_name="your_business_is_currently_using_package_name_quote" added="1564645173"><![CDATA[Your business is currently using "{package_name}"]]></phrase>
+		<phrase var_name="please_select_a_package_to_start_your_business" added="1564645173">Please select a package to start your business.</phrase>
+		<phrase var_name="published" added="1564645173">Published</phrase>
+		<phrase var_name="any" added="1564645173">Any</phrase>
+		<phrase var_name="not_featured" added="1564645173">Not Featured</phrase>
+		<phrase var_name="please_select_an_image_to_upload" added="1564645173">Please select an image to upload</phrase>
+		<phrase var_name="limit" added="1564645173">Limit</phrase>
+		<phrase var_name="poor" added="1564645173">Poor</phrase>
+		<phrase var_name="nothing_special" added="1564645173">Nothing Special</phrase>
+		<phrase var_name="good" added="1564645173">Good</phrase>
+		<phrase var_name="pretty_cool" added="1564645173">Pretty cool</phrase>
+		<phrase var_name="awesome" added="1564645173">Awesome</phrase>
+		<phrase var_name="cannot_rate_this_business" added="1564645173">Cannot rate this business</phrase>
+		<phrase var_name="you_cannot_rate_your_own_business" added="1564645173">You cannot rate your own business</phrase>
+		<phrase var_name="you_have_already_voted" added="1564645173">You have already voted</phrase>
+		<phrase var_name="ifollower_followers" added="1564645173">{iFollower} Followers</phrase>
+		<phrase var_name="imember_members" added="1564645173">{iMember} Members</phrase>
+		<phrase var_name="ireview_reviews" added="1564645173">{iReview} Reviews</phrase>
+		<phrase var_name="menu_directory_create_new_business_2cdc66274cd5cbacbf4be19220ff9cb1" added="1564645173">Create New Business</phrase>
+		<phrase var_name="menu_directory_claim_a_business_2cdc66274cd5cbacbf4be19220ff9cb1" added="1564645173">Claim A Business</phrase>
+		<phrase var_name="manage_business" added="1564645173">Manage Business</phrase>
+		<phrase var_name="transfer_owner" added="1564645173">Transfer Owner</phrase>
+		<phrase var_name="actions" added="1564645173">Actions</phrase>
+		<phrase var_name="valid_packages" added="1564645173">Valid Packages</phrase>
+		<phrase var_name="add_member_who_will_be_new_owner_of_the_business" added="1564645173">Add member who will be new owner of the business.</phrase>
+		<phrase var_name="payment_status" added="1564645173">Payment Status</phrase>
+		<phrase var_name="no_transactions_have_been_made" added="1564645173">No transactions have been made.</phrase>
+		<phrase var_name="transaction_id" added="1564645173">Transaction ID</phrase>
+		<phrase var_name="purchase_date" added="1564645173">Purchase Date</phrase>
+		<phrase var_name="payment_method" added="1564645173">Payment Method</phrase>
+		<phrase var_name="fee" added="1564645173">Fee</phrase>
+		<phrase var_name="buy_package" added="1564645173">Buy package</phrase>
+		<phrase var_name="and" added="1564645173">and</phrase>
+		<phrase var_name="sort_by" added="1564645173">Sort By</phrase>
+		<phrase var_name="descending" added="1564645173">Descending</phrase>
+		<phrase var_name="ascending" added="1564645173">Ascending</phrase>
+		<phrase var_name="this_business_is_currently_featured" added="1564645173">This business is currently featured for {number} more days</phrase>
+		<phrase var_name="your_business_title_has_been_approved" added="1564645173"><![CDATA[Your business "{title}" has been approved]]></phrase>
+		<phrase var_name="your_claim_request_for_title_business_has_been_approved" added="1564645173"><![CDATA[Your claim request for "{title}" business has been approved]]></phrase>
+		<phrase var_name="business_title_which_you_are_following_it_has_been_updated_information" added="1564645173"><![CDATA[Business "{title}" which you are following, it has been updated information.]]></phrase>
+		<phrase var_name="total_rating_rating_s" added="1564645173">{total_rating} Rating(s)</phrase>
+		<phrase var_name="start" added="1564645173">Start</phrase>
+		<phrase var_name="end" added="1564645173">End</phrase>
+		<phrase var_name="there_are_no_announcements" added="1564645173">There are no announcements</phrase>
+		<phrase var_name="claim_business_successfully" added="1564645173">Claim Business Successfully</phrase>
+		<phrase var_name="business_approved" added="1564645173">Business Approved</phrase>
+		<phrase var_name="claim_request_approved" added="1564645173">Claim Request Approved</phrase>
+		<phrase var_name="create_business_successfully" added="1564645173">Create Business Successfully</phrase>
+		<phrase var_name="new_item_has_been_posted_on_title_business" added="1564645173"><![CDATA[New item has been posted on "{title}" business.]]></phrase>
+		<phrase var_name="transaction" added="1564645173">Transaction(s)</phrase>
+		<phrase var_name="member" added="1564645173">Member</phrase>
+		<phrase var_name="review" added="1564645173">Review</phrase>
+		<phrase var_name="suggested_businesses" added="1564645173">Suggested Businesses</phrase>
+		<phrase var_name="mark_as_read_successfully" added="1564645173">Mark as read successfully</phrase>
+		<phrase var_name="share" added="1564645173">Share</phrase>
+		<phrase var_name="follow" added="1564645173">Follow</phrase>
+		<phrase var_name="favorite" added="1564645173">Favorite</phrase>
+		<phrase var_name="promote_business" added="1564645173">Promote Business</phrase>
+		<phrase var_name="report_business" added="1564645173">Report Business</phrase>
+		<phrase var_name="message_owner" added="1564645173">Message Owner</phrase>
+		<phrase var_name="working_here" added="1564645173">Working Here</phrase>
+		<phrase var_name="check_in_here" added="1564645173">Check-in Here</phrase>
+		<phrase var_name="the_business_was_added_to_your_favorite_list" added="1564645173">The business was added to your favorite list</phrase>
+		<phrase var_name="founder" added="1564645173">Founder</phrase>
+		<phrase var_name="mark_as_read" added="1564645173">Mark as Read</phrase>
+		<phrase var_name="please_input_name_of_field" added="1564645173">Please input name of field</phrase>
+		<phrase var_name="unlike" added="1564645173">Unlike</phrase>
+		<phrase var_name="likes" added="1564645173">Likes</phrase>
+		<phrase var_name="people_like_this" added="1564645173">people like this</phrase>
+		<phrase var_name="you_became_a_member_of_this_business" added="1564645173">You became a member of this business</phrase>
+		<phrase var_name="report" added="1564645173">Report</phrase>
+		<phrase var_name="search_followers" added="1564645173">Search Followers</phrase>
+		<phrase var_name="there_are_no_recent_reviews_yet" added="1564645173">There are no recent reviews yet</phrase>
+		<phrase var_name="no_users_found" added="1564645173">No users found</phrase>
+		<phrase var_name="search_members" added="1564645173">Search Members</phrase>
+		<phrase var_name="change_role" added="1564645173">Change Role</phrase>
+		<phrase var_name="role_of_member_has_been_changed_successfully" added="1564645173">Role of member has been changed successfully</phrase>
+		<phrase var_name="you_can_not_review_your_own_business" added="1564645173">You can not review your own business</phrase>
+		<phrase var_name="you_have_reviewed_this_business_before" added="1564645173">You have reviewed this business before</phrase>
+		<phrase var_name="rate" added="1564645173">Rate</phrase>
+		<phrase var_name="you_have_to_input_title" added="1564645173">You have to input title</phrase>
+		<phrase var_name="you_have_to_input_content" added="1564645173">You have to input content</phrase>
+		<phrase var_name="you_have_to_rate_this_business" added="1564645173">You have to rate this business</phrase>
+		<phrase var_name="show_more" added="1564645173">Show more</phrase>
+		<phrase var_name="show_less" added="1564645173">Show less</phrase>
+		<phrase var_name="newest_photo" added="1564645173">Newest Photo</phrase>
+		<phrase var_name="newest_video" added="1564645173">Newest Video</phrase>
+		<phrase var_name="newest_song" added="1564645173">Newest Song</phrase>
+		<phrase var_name="newest_blog" added="1564645173">Newest Blog</phrase>
+		<phrase var_name="newest_poll" added="1564645173">Newest Poll</phrase>
+		<phrase var_name="newest_coupon" added="1564645173">Newest Coupon</phrase>
+		<phrase var_name="newest_event" added="1564645173">Newest Event</phrase>
+		<phrase var_name="newest_job" added="1564645173">Newest Job</phrase>
+		<phrase var_name="newest_listing" added="1564645173">Newest Listing</phrase>
+		<phrase var_name="remove_from_compare" added="1564645173">Remove from Compare</phrase>
+		<phrase var_name="business_is_not_found" added="1564645173">Business is not found</phrase>
+		<phrase var_name="check_in_successfully" added="1564645173">Check-in successfully</phrase>
+		<phrase var_name="checked_in_this_business" added="1564645173">checked in this business.</phrase>
+		<phrase var_name="check_in" added="1564645173">Check-in</phrase>
+		<phrase var_name="people_check_in_here" added="1564645173">people check-in here</phrase>
+		<phrase var_name="people_who_check_in_here" added="1564645173">People who check-in here</phrase>
+		<phrase var_name="nobody_checks_in_here" added="1564645173">Nobody checks in here</phrase>
+		<phrase var_name="working_at" added="1564645173">Working At</phrase>
+		<phrase var_name="for" added="1564645173">for</phrase>
+		<phrase var_name="total_check_in" added="1564645173">{total} check-in</phrase>
+		<phrase var_name="edit_a_review" added="1564645173">Edit a review</phrase>
+		<phrase var_name="you_cannot_review_this_business" added="1564645173">You cannot review this business</phrase>
+		<phrase var_name="you_cannot_edit_review_this_business" added="1564645173">You cannot edit review this business</phrase>
+		<phrase var_name="businesses_you_may_interested_in_site_name" added="1564645173">Businesses you may interested in {site_name}</phrase>
+		<phrase var_name="dear_sir_or_madam_here_are_businesses_you_may_interested_in_site_name_data_business_regards_site_name" added="1564645173">Dear Sir or Madam, 
+
+Here are businesses you may interested in {site_name}:
+
+{data_business}
+
+Regards,
+{site_name}</phrase>
+		<phrase var_name="invite_friends" added="1564645173">Invite Friends</phrase>
+		<phrase var_name="full_name_invited_you_to_title_to_check_out_this_business_follow_the_link_below_a_href_link_link_a" added="1564645173"><![CDATA[{full_name} invited you to "{title}".
+
+To check out this business, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_invited_you_to_the_business_title" added="1564645173"><![CDATA[{full_name} invited you to the business &#039;{title}&#039;.]]></phrase>
+		<phrase var_name="invite_people_via_email" added="1564645173">Invite People via Email</phrase>
+		<phrase var_name="separate_multiple_emails_with_a_comma" added="1564645173">Separate multiple emails with a comma.</phrase>
+		<phrase var_name="add_a_personal_message" added="1564645173">Add a personal message</phrase>
+		<phrase var_name="send_invitations" added="1564645173">Send Invitations</phrase>
+		<phrase var_name="new_guest_list" added="1564645173">New Guest List</phrase>
+		<phrase var_name="select_all" added="1564645173">Select All</phrase>
+		<phrase var_name="un_select_all" added="1564645173">Un-Select All</phrase>
+		<phrase var_name="you_deleted_member_successfully" added="1564645173">You deleted member successfully</phrase>
+		<phrase var_name="comments" added="1564645173">Comments</phrase>
+		<phrase var_name="some_photos_you_uploaded_is_invalid_type_or_exceed_limited_size" added="1564645173">Some photos you uploaded is invalid type or exceed limited size.</phrase>
+		<phrase var_name="buy_new_package" added="1564645173">Buy new Package</phrase>
+		<phrase var_name="updated_setting_successfully" added="1564645173">Updated setting successfully</phrase>
+		<phrase var_name="your_business_title_which_will_expire_very_soon_please_update_new_package" added="1564645173"><![CDATA[Your business "{title}" which will expire very soon. Please update new package.]]></phrase>
+		<phrase var_name="you_do_not_have_permission_for_this_action_please_contact_administrator_for_more_details" added="1564645173">You do not have permission for this action. Please contact administrator for more details.</phrase>
+		<phrase var_name="users_business_count" added="1564645173">Users Business Count</phrase>
+		<phrase var_name="update_users_activity_business_points" added="1564645173">Update Users Activity Business Points</phrase>
+		<phrase var_name="icount_businesses" added="1564645173">{iCount} Businesses</phrase>
+		<phrase var_name="confirm_feature_business_unlimited" added="1564645173">This business is being featured. Are you sure you want to unfeature it?</phrase>
+		<phrase var_name="directory_confirm_feature_business_limited" added="1564645173">This business is being featured until {expired_date}. Are you sure you want to unfeature it?</phrase>
+		<phrase var_name="note_this_business_is_featured_until_expire_date" added="1564645173">Note: This business is featured until {expire_date}</phrase>
+		<phrase var_name="note_this_business_is_featured_unlimited_time" added="1564645173">Note: This business is featured unlimited time</phrase>
+		<phrase var_name="old_rating" added="1564645173">Old Rating</phrase>
+		<phrase var_name="feature_expiration_date" added="1564645173">Feature expiration date</phrase>
+		<phrase var_name="you_can_add_only_maximum_3_categories" added="1564645173">You can add ONLY maximum 3 categories.</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_business" added="1564645173">Are you sure you want to delete this business?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_member_of_business" added="1564645173">Are you sure you want to delete this member of business?</phrase>
+		<phrase var_name="full_name_invited_you_to_the_title" added="1564645173"><![CDATA[{full_name} invited you to "{title}".
+
+To check out this business, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="signed" added="1564645173">Signed</phrase>
+		<phrase var_name="invited" added="1564645173">Invited</phrase>
+		<phrase var_name="users_invited_you_to_the_business_title" added="1564645173"><![CDATA[{users} invited you to the business "{title}"]]></phrase>
+		<phrase var_name="leave_this_business" added="1564645173">Leave this business</phrase>
+		<phrase var_name="you_leaved_this_business" added="1564645173">You left this business</phrase>
+		<phrase var_name="unlimited" added="1564645173">Unlimited</phrase>
+		<phrase var_name="start_in_uppercase" added="1564645173">Start in</phrase>
+		<phrase var_name="left" added="1564645173">left</phrase>
+		<phrase var_name="minute" added="1564645173">minute</phrase>
+		<phrase var_name="daily" added="1564645173">Daily</phrase>
+		<phrase var_name="weekly" added="1564645173">Weekly</phrase>
+		<phrase var_name="monthly" added="1564645173">Monthly</phrase>
+		<phrase var_name="until" added="1564645173">until</phrase>
+		<phrase var_name="year" added="1564645173">year</phrase>
+		<phrase var_name="month_lower_case" added="1564645173">month</phrase>
+		<phrase var_name="day_lc" added="1564645173">day</phrase>
+		<phrase var_name="hour" added="1564645173">hour</phrase>
+		<phrase var_name="years" added="1564645173">years</phrase>
+		<phrase var_name="months" added="1564645173">months</phrase>
+		<phrase var_name="days" added="1564645173">days</phrase>
+		<phrase var_name="hours" added="1564645173">hours</phrase>
+		<phrase var_name="minutes" added="1564645173">minutes</phrase>
+		<phrase var_name="sponsored" added="1564645173">Sponsored</phrase>
+		<phrase var_name="type_upcoming" added="1564645173">Upcoming</phrase>
+		<phrase var_name="type_ongoing" added="1564645173">On Going</phrase>
+		<phrase var_name="type_past" added="1564645173">End</phrase>
+		<phrase var_name="hover_repeat" added="1564645173">Repeat</phrase>
+		<phrase var_name="hover_nst" added="1564645173">Next Start Time</phrase>
+		<phrase var_name="hover_endtime" added="1564645173">End Time</phrase>
+		<phrase var_name="hover_frompage" added="1564645173">From Page</phrase>
+		<phrase var_name="hover_owner" added="1564645173">Owner</phrase>
+		<phrase var_name="hover_starttime" added="1564645173">Start Time</phrase>
+		<phrase var_name="detail_business" added="1564645173">Detail Business</phrase>
+		<phrase var_name="list_view" added="1564645173">List View</phrase>
+		<phrase var_name="grid_view" added="1564645173">Grid View</phrase>
+		<phrase var_name="pinboard_view" added="1564645173">Pinboard View</phrase>
+		<phrase var_name="map_view" added="1564645173">Map View</phrase>
+		<phrase var_name="download_pdf" added="1564645173">Download PDF</phrase>
+		<phrase var_name="print" added="1564645173">Print</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_businesses_that_you_selected" added="1564645173">Are you sure you want to delete businesses that you selected ?</phrase>
+		<phrase var_name="announcement_detail" added="1564645173">Announcement Detail</phrase>
+		<phrase var_name="no_found_item" added="1564645173">No found item</phrase>
+		<phrase var_name="claiming" added="1564645173">Claiming</phrase>
+		<phrase var_name="icount_business" added="1564645173">{iCount} Business</phrase>
+		<phrase var_name="member_a_s" added="1564645173">Member(s)</phrase>
+		<phrase var_name="review_a_s" added="1564645173">Review(s)</phrase>
+		<phrase var_name="follower_a_s" added="1564645173">Follower(s)</phrase>
+		<phrase var_name="member_b_s" added="1564645173">Member(s)</phrase>
+		<phrase var_name="address_title" added="1564645173">Address Title</phrase>
+		<phrase var_name="enter_a_numeric_value" added="1564645173">(Enter a numeric value)</phrase>
+		<phrase var_name="enter_a_numeric_value_0_if_you_want_this_package_to_be_free" added="1564645173">(Enter a numeric value.0 if you want this package to be free)</phrase>
+		<phrase var_name="save" added="1564645173">Save</phrase>
+		<phrase var_name="address_is_required" added="1564645173"><![CDATA["Address" is required]]></phrase>
+		<phrase var_name="setting_display_format_hour_of_operation" added="1564645173"><![CDATA[<title>Format hour of operation to display</title><info>Setting to display hour of operation in 24h format or 12-AM/PM format</info>]]></phrase>
+		<phrase var_name="24h" added="1564645173">24h</phrase>
+		<phrase var_name="ampm" added="1564645173">12-AM/PM</phrase>
+		<phrase var_name="save_as_draft" added="1564645173">Save as Draft</phrase>
+		<phrase var_name="claiming_draft" added="1564645173">Claiming Draft</phrase>
+		<phrase var_name="publish" added="1564645173">Publish</phrase>
+		<phrase var_name="closed" added="1564645173">Closed</phrase>
+		<phrase var_name="close_business" added="1564645173">Close Business</phrase>
+		<phrase var_name="open_business" added="1564645173">Open Business</phrase>
+		<phrase var_name="setting_google_api_key_location" added="1564645173"><![CDATA[<title>Google API Key</title><info>Please refer to this guide to get Google API Key:
+https://developers.google.com/places/web-service/get-api-key</info>]]></phrase>
+		<phrase var_name="ultimate_videos" added="1564645173">Ultimate Videos</phrase>
+		<phrase var_name="you_can_not_delete_this_category_because_there_are_many_items_related_to_it" added="1564645173">You can not delete this category because there are many items related to it</phrase>
+		<phrase var_name="Category not found" added="1564645173" />
+		<phrase var_name="share_a_ynblog" added="1564645173">Share a Advanced Blog</phrase>
+		<phrase var_name="view_browse_ynblogs" added="1564645173">View/browse Advanced Blogs</phrase>
+		<phrase var_name="add_ynblog" added="1564645173">Add Advanced-Blog</phrase>
+		<phrase var_name="view_ynblog" added="1564645173">View Advanced-Blog</phrase>
+		<phrase var_name="Maximum cover photos have to be greater than 0" added="1564645173" />
+		<phrase var_name="Valid period have to be greater than 0" added="1564645173" />
+		<phrase var_name="Fee have to be greater than or equal to 0" added="1564645173" />
+		<phrase var_name="business_not_found" added="1564645173">Business not found</phrase>
+		<phrase var_name="video_channel" added="1564645173">Video Channel</phrase>
+		<phrase var_name="ynblog" added="1564645173">Advanced Blog</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_category_permanently" added="1564645173">Are you sure you want to delete this category permanently ?</phrase>
+		<phrase var_name="no_packages_found" added="1564645173">No packages found</phrase>
+		<phrase var_name="the_business_you_are_looking_for_either_does_not_exist_or_has_been_removed" added="1564645173">The business your are looking for either does not exist or has been removed</phrase>
+		<phrase var_name="directory_admin_menu_user_group_settings" added="1564645173">User Group Settings</phrase>
+		<phrase var_name="newest_businesses" added="1564645173">Newest Businesses</phrase>
+		<phrase var_name="select_category" added="1564645173">Select category</phrase>
+		<phrase var_name="categories_selected" added="1564645173">categories selected</phrase>
+		<phrase var_name="compares" added="1564645173">COMPARE</phrase>
+		<phrase var_name="no_review" added="1564645173">No review</phrase>
+		<phrase var_name="be_the_first" added="1564645173">Be the first!</phrase>
+		<phrase var_name="you_have_total_pending_directory" added="1564645173">You have {total} pending directory</phrase>
+		<phrase var_name="rate_this_business" added="1564645173">Rate This Business</phrase>
+		<phrase var_name="newest_ultimate_video" added="1564645173">Newest Ultimate Video</phrase>
+		<phrase var_name="newest_advanced_blog" added="1564645173">Newest Advanced Blog</phrase>
+		<phrase var_name="newest_video_channel" added="1564645173">Newest Video Channel</phrase>
+		<phrase var_name="view_lowercase" added="1564645173">view</phrase>
+		<phrase var_name="views_lowercase" added="1564645173">views</phrase>
+		<phrase var_name="vote_lowercase" added="1564645173">vote</phrase>
+		<phrase var_name="votes_lowercase" added="1564645173">votes</phrase>
+		<phrase var_name="claim_lowercase" added="1564645173">claim</phrase>
+		<phrase var_name="claims_lowercase" added="1564645173">claims</phrase>
+		<phrase var_name="following" added="1564645173">Following</phrase>
+		<phrase var_name="check_in_now" added="1564645173">Check-in now</phrase>
+		<phrase var_name="to_your_friend_know_you_have_been_here" added="1564645173"><![CDATA[to your friends know you've been here]]></phrase>
+		<phrase var_name="enter_message" added="1564645173">Enter message</phrase>
+		<phrase var_name="enter_subject" added="1564645173">Enter subject</phrase>
+		<phrase var_name="controller_directory" added="1564645173">Directory</phrase>
+		<phrase var_name="controller_directory.cover-photos" added="1564645173">Directory Cover Photos</phrase>
+		<phrase var_name="controller_directory.detail" added="1564645173">Directory Detail</phrase>
+		<phrase var_name="controller_directory.index" added="1564645173">Directory Home Page</phrase>
+		<phrase var_name="controller_directory.edit" added="1564645173">Directory Edit</phrase>
+		<phrase var_name="controller_directory.insight" added="1564645173">Directory Insight</phrase>
+		<phrase var_name="controller_directory.manage-announcements" added="1564645173">Directory Manage Announcements</phrase>
+		<phrase var_name="controller_directory.manage-business-theme" added="1564645173">Directory Manage Business Theme</phrase>
+		<phrase var_name="controller_directory.manage-member-roles" added="1564645173">Directory Manage Member Roles</phrase>
+		<phrase var_name="controller_directory.manage-modules" added="1564645173">Directory Manage Modules</phrase>
+		<phrase var_name="controller_directory.manage-packages" added="1564645173">Directory Manage Packages</phrase>
+		<phrase var_name="controller_directory.manage-pages" added="1564645173">Directory Manage Pages</phrase>
+		<phrase var_name="controller_directory.member-role-settings" added="1564645173">Directory Member Role Settings</phrase>
+		<phrase var_name="controller_directory.profile" added="1564645173">Directory Profile</phrase>
+		<phrase var_name="no_reviews_for_this_product_yet_be_the_first_to_review" added="1564645173">No reviews for this product yet. Be the first to review</phrase>
+		<phrase var_name="write_your_review" added="1564645173">Write your review</phrase>
+		<phrase var_name="you_havent_reviewed_this_product_yet_do_it_now" added="1564645173"><![CDATA[You haven't reviewed this business yet. Do it now?]]></phrase>
+		<phrase var_name="write_your_review_title" added="1564645173">Write your review title</phrase>
+		<phrase var_name="write_your_review_content" added="1564645173">Write your review content</phrase>
+		<phrase var_name="finish_upload" added="1564645173">Finish upload</phrase>
+		<phrase var_name="checked_in" added="1564645173">checked-in</phrase>
+		<phrase var_name="likes_low" added="1564645173">likes</phrase>
+		<phrase var_name="like_low" added="1564645173">like</phrase>
+		<phrase var_name="additional_infomation" added="1564645173">Additional Information</phrase>
+		<phrase var_name="one_view" added="1564645173">view</phrase>
+		<phrase var_name="views" added="1564645173">views</phrase>
+		<phrase var_name="members_up" added="1564645173">Members</phrase>
+		<phrase var_name="followers_up" added="1564645173">Followers</phrase>
+		<phrase var_name="directory_large_text_area" added="1564645173">Large Text Area</phrase>
+		<phrase var_name="directory_small_text_area_255_characters_max" added="1564645173">Small Text Area (255 Characters Max)</phrase>
+		<phrase var_name="directory_delete_member" added="1564645173">Delete Member</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="1" guest="1" staff="1" module="directory" ordering="0">can_create_business</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="1" guest="1" staff="1" module="directory" ordering="0">can_edit_business</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="1" guest="1" staff="1" module="directory" ordering="0">can_view_business</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="1" guest="1" staff="1" module="directory" ordering="0">can_delete_own_business</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="0" guest="0" staff="1" module="directory" ordering="0">can_delete_others_business</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="1" guest="1" staff="1" module="directory" ordering="0">can_comment_on_business</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="1" guest="1" staff="1" module="directory" ordering="0">can_rate_business</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="1" guest="1" staff="1" module="directory" ordering="0">can_create_business_for_claiming</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="1" guest="1" staff="1" module="directory" ordering="0">can_claim_business</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="0" guest="0" staff="1" module="directory" ordering="0">can_approve_business</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="1" guest="1" staff="1" module="directory" ordering="0">can_feature_business</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="0" guest="0" staff="1" module="directory" ordering="0">business_created_by_user_automatically_approved</setting>
+		<setting is_admin_setting="0" module_id="directory" type="integer" admin="3" user="3" guest="3" staff="3" module="directory" ordering="0">number_business_user_can_create</setting>
+		<setting is_admin_setting="0" module_id="directory" type="integer" admin="1" user="1" guest="1" staff="1" module="directory" ordering="0">points_directory</setting>
+		<setting is_admin_setting="0" module_id="directory" type="boolean" admin="1" user="1" guest="1" staff="1" module="directory" ordering="0">can_edit_own_review</setting>
+	</user_group_settings>
+</module>

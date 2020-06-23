@@ -1,0 +1,87 @@
+<!-- check number flag and add class "has-one-flag" "has-two-flag".. v.v.v -->
+<div class="p-listing-container p-feedback-listing-container {if $isSideLocation}p-list-layout p-feedback-listing-container-mini{else}p-feedback-listing-container-full{/if} " >
+    {section name=foo loop=3}
+    <div class="p-item p-feedback-item has-one-flag">
+        <div class="item-outer">
+            <div class="p-item-flag-wrapper p-feedback-item-flag-wrapper">
+                <div class="sticky-label-icon sticky-featured-icon" title="{_p var='sponsored'}">
+                    <span class="ico ico-diamond"></span>
+                    <span class="flag-style-arrow"></span>
+                </div>
+            </div>
+            <div class="p-feedback-media-wrapper">
+                <div class="p-feedback-vote-counter-item">
+                    <span class="item-number">
+                        142
+                    </span>
+                    <span class="item-text">
+                        votes
+                    </span>
+                </div>
+                <div class="p-feedback-vote-action-item">
+                    <!-- normal -->
+                    <button class="btn btn-xs btn-default btn-icon"><i class="ico ico-star-circle-o"></i>Vote</button>
+                    <!-- voted -->
+                    <button class="btn btn-xs btn-default btn-icon"><i class="ico ico-star-circle"></i>Voted</button>
+                    <!-- disable -->
+                    <button class="btn btn-xs btn-default btn-icon" disabled><i class="ico ico-star-circle-o"></i>Vote</button>
+                </div>
+            </div>
+            <div class="item-inner">
+                <div class="item-type p-feedback-hidden-mini-style">
+                    Idea
+                </div>
+                <div class="p-feedback-item-title-wrapper p-flex-wrapper">
+                    <h4 class="p-item-title">
+                        <a href="">
+                            <span class="p-feedback-title-label p-label-status solid primary p-feedback-hidden-mini-style">Answered</span>
+                            <span>Ed Sheeran - Shape of You [Official Video] </span>
+                        </a>
+                    </h4>
+                    <div class="p-ml-auto p-feedback-item-option-container">
+                        <div class="item-option-list dropdown">
+                            <span class="p-option-button dropdown-toggle" data-toggle="dropdown">
+                                <i class="ico ico-gear-o"></i>
+                            </span>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                            
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-item-minor-info p-seperate-dot-wrapper p-seperate-dot-item item-minor-info">
+                    <span class="p-seperate-dot-item item-author"><span class="p-text-capitalize">by</span> <span class="user_profile_link_span" id="js_user_name_link_admin" itemprop="author"><a href="https://product-dev.younetco.com/sonhh/fox472/index.php/admin/" rel="author">Admin</a></span></span>
+                    <span class="p-seperate-dot-item item-time">January 25, 2019</span>
+                    <span class="p-seperate-dot-item item-severity p-feedback-hidden-mini-style">
+                        <span class="item-severity-label">Severity:</span>
+                        <!-- Severity colors guide: danger (blocker, critical, major), warning (minor), info (trivial) -->
+                        <a href=""><span class="p-text-danger">major</span></a>
+                        <a href=""><span class="p-text-warning">minor</span></a>
+                        <a href=""><span class="p-text-info">trivial</span></a>
+                    </span>
+                </div>
+                <div class="p-feedback-hidden-full-style item-vote-counter-mini">
+                    <span class="p-feedback-title-label p-label-status solid primary ">Answered</span>
+                    <span class="item-vote-text">11 votes</span>
+                </div>
+                <div class="item-statistic p-item-statistic">
+                    <span>2 views</span>
+                    <span>12 comments</span>
+                </div>
+                <div class="p-item-description item-description p-feedback-hidden-mini-style">
+                    Lorem ipsum de atsimed industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                </div>
+            </div>
+        </div>
+    </div>
+    {/section}
+</div>
+
+<!-- //button fixed -->
+<div class="p-feedback-float-container">
+    <button class="btn btn-primary btn-sm btn-icon"><i class="ico ico-comment-dots-o"></i>Feedback</button>
+</div>
+<!-- config button postion left -->
+<div class="p-feedback-float-container left">
+    <button class="btn btn-primary btn-sm btn-icon"><i class="ico ico-comment-dots-o"></i>Feedback</button>
+</div>

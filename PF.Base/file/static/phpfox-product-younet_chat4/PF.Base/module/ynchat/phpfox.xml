@@ -1,0 +1,104 @@
+<module>
+	<data>
+		<module_id>ynchat</module_id>
+		<product_id>younet_chat4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:1:{s:26:"ynchat.admin_menu_ban_word";a:1:{s:3:"url";a:2:{i:0;s:6:"ynchat";i:1;s:7:"banword";}}}]]></menu>
+		<phrase_var_name>module_ynchat</phrase_var_name>
+		<version>4.02p3</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/09/chat-icon.png</apps_icon>
+	</data>
+	<settings>
+		<setting group="" module_id="ynchat" is_hidden="0" type="integer" var_name="number_of_friend_list" phrase_var_name="setting_number_of_friend_list" ordering="1" version_id="3.7.7">100</setting>
+		<setting group="" module_id="ynchat" is_hidden="0" type="integer" var_name="number_of_old_message" phrase_var_name="setting_number_of_old_message" ordering="1" version_id="3.7.7">100</setting>
+		<setting group="" module_id="ynchat" is_hidden="0" type="integer" var_name="placement_of_chat_frame" phrase_var_name="setting_placement_of_chat_frame" ordering="1" version_id="3.7.7">1</setting>
+		<setting group="" module_id="ynchat" is_hidden="0" type="string" var_name="api_embedly" phrase_var_name="setting_api_embedly" ordering="1" version_id="3.7.7">be6d523bccb746a08698c0827742c282</setting>
+		<setting group="" module_id="ynchat" is_hidden="0" type="integer" var_name="web_socket_port" phrase_var_name="setting_web_socket_port" ordering="1" version_id="3.7.7">9009</setting>
+		<setting group="" module_id="ynchat" is_hidden="0" type="integer" var_name="stunnel_port" phrase_var_name="setting_stunnel_port" ordering="1" version_id="3.7.7">9020</setting>
+		<setting group="" module_id="ynchat" is_hidden="0" type="string" var_name="ynchat_ip_public" phrase_var_name="setting_ynchat_ip_public" ordering="1" version_id="3.7.6" />
+		<setting group="" module_id="ynchat" is_hidden="0" type="integer" var_name="number_of_friend_when_searching_friend_setting" phrase_var_name="setting_number_of_friend_when_searching_friend_setting" ordering="1" version_id="3.7.7">100</setting>
+	</settings>
+	<components>
+		<component module_id="ynchat" component="maincontent" m_connection="" module="ynchat" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_templates" added="1553570468">Social Chat</phrase>
+		<phrase var_name="module_ynchat" added="1553570468">Social Chat</phrase>
+		<phrase var_name="your_browser_does_not_support_javascript" added="1553570468">Your browser does not support JavaScript!</phrase>
+		<phrase var_name="nothing_friend_s_found" added="1553570468">No friends found.</phrase>
+		<phrase var_name="connection_timed_out_please_try_again" added="1553570468">Connection timed out, please try again.</phrase>
+		<phrase var_name="setting_number_of_friend_list" added="1553570468"><![CDATA[<title>Number of friend(s) in list</title><info>Number of friend(s) in list</info>]]></phrase>
+		<phrase var_name="setting_number_of_old_message" added="1553570468"><![CDATA[<title>How many old messages will be shown on current chat box?</title><info>How many old messages will be shown on current chat box?</info>]]></phrase>
+		<phrase var_name="please_login_and_try_again" added="1553570468">Please login and try again.</phrase>
+		<phrase var_name="search" added="1553570468">Search</phrase>
+		<phrase var_name="too_big_image_file" added="1553570468">Too big image file!</phrase>
+		<phrase var_name="please_try_another_image" added="1553570468">Please try another image.</phrase>
+		<phrase var_name="upload" added="1553570468">Upload</phrase>
+		<phrase var_name="please_input_valid_link" added="1553570468">Please input valid link.</phrase>
+		<phrase var_name="add" added="1553570468">Add</phrase>
+		<phrase var_name="cannot_attach_video_link" added="1553570468">Cannot attach video link.</phrase>
+		<phrase var_name="cannot_attach_link" added="1553570468">Cannot attach link.</phrase>
+		<phrase var_name="admin_menu_ban_word" added="1553570468">Ban Word</phrase>
+		<phrase var_name="words" added="1553570468">Words</phrase>
+		<phrase var_name="add_filter" added="1553570468">Add Filter</phrase>
+		<phrase var_name="word" added="1553570468">Word</phrase>
+		<phrase var_name="replacement" added="1553570468">Replacement</phrase>
+		<phrase var_name="added_by" added="1553570468">Added By</phrase>
+		<phrase var_name="added_on" added="1553570468">Added On</phrase>
+		<phrase var_name="delete" added="1553570468">Delete</phrase>
+		<phrase var_name="are_you_sure" added="1553570468">Are you sure?</phrase>
+		<phrase var_name="manage" added="1553570468">Manage</phrase>
+		<phrase var_name="n_a" added="1553570468">N/A</phrase>
+		<phrase var_name="ban_filters" added="1553570468">Ban Filters</phrase>
+		<phrase var_name="filter_value_is_required" added="1553570468">Filter value is required.</phrase>
+		<phrase var_name="filter_replacement_is_required" added="1553570468">Filter replacement is required.</phrase>
+		<phrase var_name="you_cannot_ban_yourself" added="1553570468">You cannot ban yourself.</phrase>
+		<phrase var_name="filter_successfully_added" added="1553570468">Filter successfully added.</phrase>
+		<phrase var_name="filter_successfully_deleted" added="1553570468">Filter successfully deleted</phrase>
+		<phrase var_name="setting_placement_of_chat_frame" added="1553570468"><![CDATA[<title>Placement of chat frame</title><info>Placement of chat frame
+
+1: right side
+2: left side</info>]]></phrase>
+		<phrase var_name="view_old_conversation" added="1553570468">View old conversation</phrase>
+		<phrase var_name="yesterday" added="1553570468">Yesterday</phrase>
+		<phrase var_name="days" added="1553570468">days</phrase>
+		<phrase var_name="month" added="1553570468">months</phrase>
+		<phrase var_name="show_message_from" added="1553570468">Show messages from</phrase>
+		<phrase var_name="advanced_settings" added="1553570468">Advanced settings</phrase>
+		<phrase var_name="close_all_chat_tabs" added="1553570468">Close all chat tabs</phrase>
+		<phrase var_name="go_offline" added="1553570468">Go Offline</phrase>
+		<phrase var_name="go_online" added="1553570468">Go Online</phrase>
+		<phrase var_name="play_sound_on_new_message" added="1553570468">Play sound on new message</phrase>
+		<phrase var_name="yes" added="1553570468">Yes</phrase>
+		<phrase var_name="no" added="1553570468">No</phrase>
+		<phrase var_name="enter_name" added="1553570468">Enter name</phrase>
+		<phrase var_name="searching" added="1553570468">Searching...</phrase>
+		<phrase var_name="turn_on_chat_except" added="1553570468">Turn on chat except</phrase>
+		<phrase var_name="turn_on_chat_for_only_some_friends" added="1553570468">Turn on chat for only some friends</phrase>
+		<phrase var_name="save" added="1553570468">Save</phrase>
+		<phrase var_name="chat" added="1553570468">Chat</phrase>
+		<phrase var_name="setting_enable_https_support" added="1553570468"><![CDATA[<title>Enable HTTPS Support</title><info>Enable HTTPS Support</info>]]></phrase>
+		<phrase var_name="setting_api_embedly" added="1553570468"><![CDATA[<title>API key of embed.ly</title><info>API key of embed.ly</info>]]></phrase>
+		<phrase var_name="mobile" added="1553570468">Mobile</phrase>
+		<phrase var_name="web" added="1553570468">Web</phrase>
+		<phrase var_name="message_history" added="1553570468">Message History</phrase>
+		<phrase var_name="video" added="1553570468">Video</phrase>
+		<phrase var_name="photo" added="1553570468">Photo</phrase>
+		<phrase var_name="add_files" added="1553570468">Add file(s)</phrase>
+		<phrase var_name="upload_photo" added="1553570468">Upload Photo</phrase>
+		<phrase var_name="choose_a_sticker_or_emoticon" added="1553570468">Choose a sticker or emoticon</phrase>
+		<phrase var_name="please_try_again_make_sure_you_are_uploading_a_valid_photo" added="1553570468">Please try again. Make sure you are uploading a valid photo.</phrase>
+		<phrase var_name="unable_to_connect_to_chat_check_your_internet_connection" added="1553570468">Unable to connect to chat. Check your Internet connection.</phrase>
+		<phrase var_name="setting_web_socket_port" added="1553570468"><![CDATA[<title>Web Socket Port</title><info>Web Socket Port</info>]]></phrase>
+		<phrase var_name="setting_stunnel_port" added="1553570468"><![CDATA[<title>Stunnel Port</title><info>Stunnel Port (support SSL)</info>]]></phrase>
+		<phrase var_name="setting_ynchat_ip_public" added="1553570468"><![CDATA[<title>Your Server IP public</title><info>Your Server IP public (default is empty)
+
+Module uses domain when connecting to your site. But if it does not work, you can enter your server IP public and try again.</info>]]></phrase>
+		<phrase var_name="setting_number_of_friend_when_searching_friend_setting" added="1553570468"><![CDATA[<title>Limit the number of friend when searching friend settings</title><info>Limit the number of friend when searching friend settings</info>]]></phrase>
+	</phrases>
+</module>

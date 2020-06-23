@@ -1,0 +1,16 @@
+7395916f4b70cf63fdb5ba73b455ba48 PF.Base/module/profilecompleteness/status/css/default/default/profilecomplete.css
+c9bd82450a21f8277178f2248983cf4d PF.Base/module/profilecompleteness/phrase.json
+3727e7b199bc32deb817131513b906c2 PF.Base/module/profilecompleteness/include/service/process.class.php
+1f84f19c7350708474b9d1e8b6c7197a PF.Base/module/profilecompleteness/include/component/block/profilecompleteness.class.php
+2d054d0171fe54dbe89e1980f67d11e2 PF.Base/module/profilecompleteness/include/component/controller/admincp/weightsettings.class.php
+79d8d3388b4639be3739051fcd52dc5e PF.Base/module/profilecompleteness/include/component/controller/admincp/settings.class.php
+fd16d0ffe2de4037fe89e7dc1c19f038 PF.Base/module/profilecompleteness/include/plugin/user.component_controller_profile_clean.php
+f4b59d81527d510b834088660e184ce6 PF.Base/module/profilecompleteness/include/plugin/template_getheader.php
+c2878d4d992904e017ccae36d3bff112 PF.Base/module/profilecompleteness/template/default/block/profilecompleteness.html.php
+9ef9cf4c55232805d8ca8bc843175a22 PF.Base/module/profilecompleteness/template/default/controller/admincp/weightsettings.html.php
+2b92184a81334a712ea6e07795dff90e PF.Base/module/profilecompleteness/template/default/controller/admincp/settings.html.php
+676a76d6287beec0625edb804553ac32 PF.Base/module/profilecompleteness/install/v4.01.php
+15e928d801d119349ff89ab6e5848b65 PF.Base/module/profilecompleteness/install/v4.02.php
+9f37a9b003189141dcd438eaffaff7db PF.Base/module/profilecompleteness/phpfox.xml
+e83e9461de67b11df1c5dbafb3ce3b75 PF.Base/module/profilecompleteness/static/jscript/editor_images/color.png
+d41d8cd98f00b204e9800998ecf8427e PF.Base/module/profilecompleteness/static/css/default/default/main.less

@@ -1,0 +1,15 @@
+/* 
+    Document   : general
+    Created on : Jul 30, 2012, 4:58:24 PM
+    Author     : minhta
+    Description:
+        Purpose of the stylesheet follows.
+*/
+root {
+  display: block;
+}
+.yn_donation_currency_checkbox {
+  float: left;
+  width: 100px;
+  padding: 10px;
+}

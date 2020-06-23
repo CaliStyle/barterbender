@@ -1,0 +1,28 @@
+a:5:{s:1:"d";a:22:{s:7:"page_id";s:1:"4";s:7:"user_id";s:1:"1";s:9:"module_id";s:4:"core";s:10:"product_id";s:6:"phpfox";s:9:"is_active";s:1:"1";s:9:"is_phrase";s:1:"0";s:9:"parse_php";s:1:"1";s:12:"has_bookmark";s:1:"1";s:8:"add_view";s:1:"0";s:9:"full_size";s:1:"1";s:5:"title";s:28:"Learn How BarterBender Works";s:9:"title_url";s:28:"learn-how-barterbender-works";s:15:"disallow_access";N;s:5:"added";s:10:"1552632184";s:10:"total_view";s:1:"0";s:16:"total_attachment";s:1:"0";s:9:"total_tag";s:1:"0";s:7:"keyword";N;s:11:"description";N;s:4:"text";s:1252:"Much like other social networking sites Barterbender has all of the features and tools to advertise merchandise but in a social atmosphere where you can share, like, reach out, and group your potential customers like you would friends in a social group. You can even promote your items on other sites like Facebook, Twitter, Pinterest, and others with a single click of a button.
+
+Turn your old household items into cash
+
+
+Did you know the average home has $5,000 worth of unused items? Visit the seller information center for ideas of popular items you could sell, and discover how much money you could make selling and trading on BarterBender.
+
+We've got a few different categories you can list your items on BarterBender. The Auctions section which is like it sounds, an auction house were you can search, buy, sell and trade.
+
+The next section we have on BarterBender were you can list your items for sale is the Classifieds section. Think of the Classifieds section as the newspaper listings of the modern day-and-age.
+
+One other great section we have is the Yard Sales section, where you can not only post your sale for millions to view, but host and Barter items online before or after your sale happens.
+
+- For more information visit our Forum!";s:11:"text_parsed";s:1299:"<?php /* Cached: March 15, 2019, 6:43 am */ ?>
+Much like other social networking sites Barterbender has all of the features and tools to advertise merchandise but in a social atmosphere where you can share, like, reach out, and group your potential customers like you would friends in a social group. You can even promote your items on other sites like Facebook, Twitter, Pinterest, and others with a single click of a button.
+
+Turn your old household items into cash
+
+
+Did you know the average home has $5,000 worth of unused items? Visit the seller information center for ideas of popular items you could sell, and discover how much money you could make selling and trading on BarterBender.
+
+We've got a few different categories you can list your items on BarterBender. The Auctions section which is like it sounds, an auction house were you can search, buy, sell and trade.
+
+The next section we have on BarterBender were you can list your items for sale is the Classifieds section. Think of the Classifieds section as the newspaper listings of the modern day-and-age.
+
+One other great section we have is the Yard Sales section, where you can not only post your sale for millions to view, but host and Barter items online before or after your sale happens.
+
+- For more information visit our Forum!";s:10:"has_viewed";N;}s:1:"g";a:0:{}s:1:"e";O:8:"DateTime":3:{s:4:"date";s:26:"2019-12-08 11:04:58.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:3:"GMT";}s:1:"m";N;s:1:"c";N;}
