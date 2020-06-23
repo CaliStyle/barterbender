@@ -1,0 +1,319 @@
+/************************************/
+/*********** MOBILE VIEW ************/
+/************************************/
+body.show-ynchat-mobileview > *:not(#ynchat-iframe-container) {
+    display: none !important;
+}
+
+.ynchat-mobileview-panel{
+    bottom: 32px !important;
+}
+
+.ynchat-mobileview #ynchat-mobileview-icon {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    bottom: 60px;
+    right: 16px;
+    background-image: url("../image/icon-chat-popup.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    cursor: pointer;
+    z-index: 1;   
+}
+@media (max-width:480px){
+    .ynchat-mobileview #ynchat-mobileview-icon{
+        right: 4px;
+        bottom: 55px;
+    }
+}
+
+.ynchat-mobileview #ynchat-main-content #btn-setting-minimize {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-image: url("../image/close.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ynchat-mobileview #ynchat-main-content .headerbar .setting > a.btn-setting {
+    margin-right: 26px;
+}
+
+.ynchat-mobileview #ynchat-main-content .headerbar .setting .menu:after {
+    right: 34px;
+}
+
+.ynchat-mobileview #ynchat-main-content #ynchat-chatboxtabs > div, 
+.ynchat-mobileview #ynchat-main-content #ynchat-friend-list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: 0;
+    width: 100%;
+}
+
+.show-mobilechat #ynchat-mobileview-icon,
+.ynchat-mobileview #ynchat-main-content,
+.ynchat-mobileview #ynchat-main-content #ynchat-chatboxtabs #ynchat-hidelist {
+    display: none;
+}
+
+.ynchat-mobileview #ynchat-friend-list.ynchat-hide .setting, 
+.ynchat-mobileview #ynchat-friend-list.ynchat-hide .bodybar, 
+.ynchat-mobileview #ynchat-friend-list.ynchat-hide .footerbar, 
+.ynchat-mobileview .chatboxuser .setting, 
+.ynchat-mobileview .chatboxuser .bodybar, 
+.ynchat-mobileview .chatboxuser .footerbar, 
+.ynchat-mobileview .chatboxuser .chat-attachment {
+    display: block;   
+}
+
+.show-mobilechat #ynchat-main-content {
+    background-color: #e9eaed;
+    display: block;   
+}
+
+.ynchat-mobileview #ynchat-chatboxtabs > div .chat-attachment,
+.ynchat-box-chatting #ynchat-friend-list {
+    display: none;
+}
+
+.ynchat-mobileview #ynchat-main-content .headerbar {
+    position: relative;
+    z-index: 2001;
+    top: 0;
+    width: 100%;
+}
+
+.ynchat-mobileview #ynchat-chatboxtabs .footerbar.ynchat-box-actions {
+    position: absolute;
+    z-index: 2002;
+    bottom: 0;
+    width: 100%;
+}
+
+.ynchat-mobileview #ynchat-main-content #ynchat-friend-list .footerbar {
+    position: absolute;
+    z-index: 2000;
+    top: 26px;
+    width: 100%;
+}
+
+.ynchat-mobileview #ynchat-chatboxtabs > div .bodybar {
+    top: 26px;
+    bottom: 27px;
+    width: 100%;
+    position: absolute;
+    border: 0;
+    height: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ynchat-mobileview #ynchat-friend-list .bodybar {
+    top: 55px;
+    bottom: 0px;
+    width: 100%;
+    position: absolute;
+    border: 0;
+    height: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;   
+}
+
+.ynchat-mobileview #ynchat-chatboxtabs .footerbar.ynchat-box-actions .emoticonsticker-body {
+    position: absolute;
+    top: 40px;
+    height: auto;
+    bottom: 0;
+}
+
+.ynchat-mobileview .emoticonsticker-container:after {
+    right: 10px;
+}
+
+#ynchat-iframe-container.ynchat-mobileview .ynchat-popup { 
+    max-width: 96%;
+}
+
+.ynchat-mobileview #ynchat-chatboxtabs .footerbar.ynchat-box-actions .panel {
+    position: fixed;
+    right: 0;
+    left: 0;
+    width: 100%;
+    bottom: 26px;
+    height: 240px;
+}
+
+#ynchat-iframe-container.ynchat-mobileview .ynchat-popup .ynchat-popup-body .headeroldconversation span {
+    display: block;
+} 
+
+body.show-ynchat-mobileview {
+    padding: 0 !important;
+    margin: 0;
+}
+
+.ynchat-hide {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    #ynchat-iframe-container.ynchat-mobileview * {
+        font-size: 18px;
+    }
+
+    .ynchat-mobileview #ynchat-main-content .headerbar {
+        height: 52px;
+    }
+
+    .ynchat-mobileview #ynchat-main-content .headerbar .title {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 12px;
+        display: block;
+    }
+
+    .ynchat-mobileview #ynchat-main-content #ynchat-friend-list .footerbar {
+        top: 52px;`
+    }
+
+    .ynchat-mobileview #ynchat-chatboxtabs > div .bodybar {
+        top: 52px;
+        bottom: 52px;
+    }
+
+    .ynchat-mobileview #ynchat-friend-list .bodybar {
+        top: 104px;
+    }
+
+    .ynchat-mobileview #ynchat-main-content .headerbar .setting > a.btn-setting {
+        margin-right: 52px;
+    }
+
+    .ynchat-mobileview #ynchat-main-content .headerbar .setting > a.btn-setting {
+        margin-right: 52px;
+    }
+
+    .ynchat-mobileview #ynchat-friend-list .bodybar #as_ul li, 
+    .ynchat-mobileview #ynchat-friend-list .bodybar .default li {
+        line-height: 52px;
+        padding: 8px 10px;
+    }
+
+    .ynchat-mobileview #ynchat-friend-list .bodybar #as_ul .user-status, 
+    .ynchat-mobileview #ynchat-friend-list .bodybar .default .user-status {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    #ynchat-chatboxtabs .footerbar.ynchat-box-actions .chatting {
+        min-height: 40px;
+        line-height: 40px;
+    }
+
+    .ynchat-mobileview #ynchat-chatboxtabs .footerbar.ynchat-box-actions > div > div > .ynchat-button,
+    .ynchat-mobileview #ynchat-chatboxtabs .footerbar.ynchat-box-actions > div > div.photo,
+    .ynchat-mobileview #ynchat-chatboxtabs .footerbar.ynchat-box-actions > div > div.emoticonsticker,
+    .ynchat-mobileview #ynchat-friend-list .bodybar #as_ul .avatar img, 
+    .ynchat-mobileview #ynchat-friend-list .bodybar .default .avatar img,
+    .ynchat-mobileview #ynchat-main-content #btn-setting-minimize,
+    .ynchat-mobileview #ynchat-main-content .headerbar .ynchat-close > a,
+    .ynchat-mobileview #ynchat-main-content .headerbar .buttonbar > div,
+    .ynchat-mobileview #ynchat-main-content .headerbar .setting > a.btn-setting {
+        width: 50px;
+        height: 50px;        
+    }
+
+    .ynchat-mobileview #ynchat-main-content .headerbar .setting .menu:after,
+    .ynchat-mobileview #ynchat-main-content #ynchat-chatboxtabs .headerbar .setting .menu:after {
+        right: 72px;
+    }
+
+    .ynchat-mobileview #ynchat-main-content .headerbar .setting .menu li {
+        padding: 5px 10px;
+        font-size: 18px;
+    }
+
+    .ynchat-mobileview #ynchat-chatboxtabs .footerbar.ynchat-box-actions .panel {
+        bottom: 52px;
+    }
+
+    .ynchat-mobileview .line-message .message .message-content {
+        padding: 8px 10px;
+    }
+
+    .ynchat-mobileview #ynchat-friend-list .footerbar #searchFriend {
+        height: 52px;
+    }
+
+    .ynchat-mobileview .emoticonsticker-container:after {
+        right: 24px;
+    }
+
+    #ynchat-iframe-container.ynchat-mobileview .message-date:before {
+        padding-top: 10px;
+    }
+
+    #ynchat-iframe-container.ynchat-mobileview .message-date span {
+        font-size: 14px;
+    }
+
+    #ynchat-iframe-container.ynchat-mobileview .message-date {
+        height: 24px;
+    }
+
+    #ynchat-iframe-container.ynchat-mobileview .ynchat-popup .ynchat-popup-body .bodyoldconversation {
+        top: 62px;
+    }
+
+    #ynchat-iframe-container .line-message .message .message-break div span {
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+    }  
+
+    .ynchat-mobileview #ynchat-main-content .headerbar .setting > a.btn-setting {
+        background-image: url("../image/ipad/setting.png");
+        background-size: 80%;
+    }
+
+    .ynchat-mobileview #ynchat-main-content #btn-setting-minimize,
+    .ynchat-mobileview #ynchat-main-content .headerbar .ynchat-close > a {
+        background-image: url("../image/ipad/close.png");
+        background-size: 80%;
+    }
+
+    .ynchat-mobileview #ynchat-chatboxtabs .footerbar.ynchat-box-actions > div > div.photo {
+        background-image: url("../image/ipad/photo.png");
+        background-size: 80%;
+    }
+
+    .ynchat-mobileview #ynchat-chatboxtabs .footerbar.ynchat-box-actions > div > div.emoticonsticker {
+        background-image: url("../image/ipad/emoticon.png");
+        background-size: 80%;
+    }
+}
+div#ynchat-mobileview-icon #ynchat_number_waiting_sender > i {
+    width: 20px;
+    height: 20px;
+    background: #ba0000;
+    color: #FFF;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    font-style: normal;
+    font-size: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: -5px;
+}

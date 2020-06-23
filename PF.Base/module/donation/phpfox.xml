@@ -1,0 +1,152 @@
+<module>
+	<data>
+		<module_id>donation</module_id>
+		<product_id>younet_donation4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:4:{s:35:"donation.admin_menu_manage_donation";a:1:{s:3:"url";a:1:{i:0;s:8:"donation";}}s:36:"donation.admin_menu_add_button_image";a:1:{s:3:"url";a:2:{i:0;s:8:"donation";i:1;s:14:"addbuttonimage";}}s:37:"donation.admin_menu_manage_currencies";a:1:{s:3:"url";a:2:{i:0;s:8:"donation";i:1;s:16:"managecurrencies";}}s:42:"donation.admin_menu_manage_payment_gateway";a:1:{s:3:"url";a:2:{i:0;s:8:"donation";i:1;s:7:"gateway";}}}]]></menu>
+		<phrase_var_name>module_donation</phrase_var_name>
+		<version>4.02p1</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>https://phpfox.younetco.com/files/2015/11/donation.png</apps_icon>
+	</data>
+	<settings>
+		<setting group="" module_id="donation" is_hidden="0" type="integer" var_name="number_of_fetched_donors" phrase_var_name="setting_number_of_fetched_donors" ordering="1" version_id="3.2.0">21</setting>
+		<setting group="" module_id="donation" is_hidden="0" type="integer" var_name="max_size_for_donation_image_button" phrase_var_name="setting_max_size_for_donation_image_button" ordering="1" version_id="3.2.0">500</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="core.index-member" module_id="donation" component="donate" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Donate</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="pages.view" module_id="donation" component="donate" location="1" is_active="1" ordering="12" disallow_access="" can_move="0">
+			<title>Donate</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="donation" component="donate" m_connection="" module="donation" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_donation" added="1566448108">Donation Pages</phrase>
+		<phrase var_name="donation" added="1566448108">Donation</phrase>
+		<phrase var_name="enable_donation_on_this_page" added="1566448108">Enable Donation on this page?</phrase>
+		<phrase var_name="yes" added="1566448108">Yes</phrase>
+		<phrase var_name="no" added="1566448108">No</phrase>
+		<phrase var_name="update_completed" added="1566448108">Update completed.</phrase>
+		<phrase var_name="do_you_want_to_donate_page_name_page" added="1566448108">Do you want to donate for page: {page_name}</phrase>
+		<phrase var_name="please_login_to_donate" added="1566448108">Please login to donate.</phrase>
+		<phrase var_name="donate" added="1566448108">Donate</phrase>
+		<phrase var_name="please_input_number_delimiter_by" added="1566448108">Please input valid decimal number (Ex: 10.01$)</phrase>
+		<phrase var_name="input_your_paypal_email_account" added="1566448108">Your paypal email account</phrase>
+		<phrase var_name="update" added="1566448108">Update</phrase>
+		<phrase var_name="please_input_valid_email_address" added="1566448108">Please input valid email address.</phrase>
+		<phrase var_name="thanks_you_for_your_donation" added="1566448108">Thanks you for your donation.</phrase>
+		<phrase var_name="remove_from_list" added="1566448108">Remove from list</phrase>
+		<phrase var_name="donation_for_page_page_name" added="1566448108">Donation for page: {page_name}</phrase>
+		<phrase var_name="there_is_no_donation" added="1566448108">There is no donor.</phrase>
+		<phrase var_name="donation_lists" added="1566448108">Donors</phrase>
+		<phrase var_name="please_waiting_for_redirect_to_paypal" added="1566448108">Please waiting for redirect to paypal</phrase>
+		<phrase var_name="purpose_of_donation" added="1566448108">Purpose of Donation</phrase>
+		<phrase var_name="problem_found_can_not_update_donation_configuration" added="1566448108">Problem found can not update donation configuration</phrase>
+		<phrase var_name="donation_setting" added="1566448108">Donation Setting</phrase>
+		<phrase var_name="donation_for_name_page" added="1566448108">Donation for {page_name} page</phrase>
+		<phrase var_name="donations" added="1566448108">Donations</phrase>
+		<phrase var_name="user_setting_points_donation" added="1566448108">Specify how many points the user will receive when user donates a page.</phrase>
+		<phrase var_name="fullname_donates_a_page" added="1566448108"><![CDATA[donated to "<a href="{link}">{page_name}</a>".]]></phrase>
+		<phrase var_name="terms_and_conditions" added="1566448108">Terms and Conditions</phrase>
+		<phrase var_name="subject" added="1566448108">Subject</phrase>
+		<phrase var_name="content" added="1566448108">Content</phrase>
+		<phrase var_name="read_and_agree_to_the_terms_and_conditions" added="1566448108">I have read and agree to the terms and conditions.</phrase>
+		<phrase var_name="confirm" added="1566448108">Confirm</phrase>
+		<phrase var_name="must_agree_to_the_terms_and_conditions_to_continue" added="1566448108">You must agree to the terms and conditions to continue.</phrase>
+		<phrase var_name="email_template" added="1566448108">Email Template</phrase>
+		<phrase var_name="123_full_name_125_recipient_s_full_name" added="1566448108"><![CDATA[{FULL_NAME} => recipient&#039;s full name]]></phrase>
+		<phrase var_name="123_user_name_125_recipient_s_user_name" added="1566448108"><![CDATA[{USER_NAME} => recipient&#039;s user name]]></phrase>
+		<phrase var_name="123_site_name_125_site_s_name" added="1566448108"><![CDATA[{SITE_NAME} => site&#039;s name]]></phrase>
+		<phrase var_name="keyword_substitutions" added="1566448108">Keyword substitutions</phrase>
+		<phrase var_name="setting_paypal_is_test_mode" added="1566448108"><![CDATA[<title>Is in Paypal test mode ?</title><info>If this setting is true, we will use Paypal sandbox to simulate transaction.
+
+If it is false, we will use Paypal live mode to execute real transaction</info>]]></phrase>
+		<phrase var_name="setting_paypal_admin_email" added="1566448108"><![CDATA[<title>Paypal email</title><info>The email that represents your PayPal account.</info>]]></phrase>
+		<phrase var_name="admin_menu_manage_donation" added="1566448108">Manage Donation</phrase>
+		<phrase var_name="page_donation_title_homepage" added="1566448108">Donating for us is for you</phrase>
+		<phrase var_name="fullname_donated_to_our_website" added="1566448108">donated for our web site.</phrase>
+		<phrase var_name="user_setting_can_add_donation_on_own_page" added="1566448108">Can add donation on own page?</phrase>
+		<phrase var_name="user_setting_can_donate" added="1566448108">Can donate?</phrase>
+		<phrase var_name="donation_privacy" added="1566448108">Donation Privacy (Optional)</phrase>
+		<phrase var_name="do_not_show_name_on_donor_list" added="1566448108">Do not show name on donor list.</phrase>
+		<phrase var_name="do_not_show_donation_amount_on_donor_list" added="1566448108">Do not show donated money on donors list.</phrase>
+		<phrase var_name="do_not_show_feed" added="1566448108">Do not show feed.</phrase>
+		<phrase var_name="anonymous" added="1566448108">Anonymous</phrase>
+		<phrase var_name="currency_type" added="1566448108">USD</phrase>
+		<phrase var_name="generously" added="1566448108">generously</phrase>
+		<phrase var_name="donated" added="1566448108">donated</phrase>
+		<phrase var_name="your_name" added="1566448108">Your name</phrase>
+		<phrase var_name="guest_name_hint" added="1566448108">You can use letters, numbers, and spaces. At least 6 characters.</phrase>
+		<phrase var_name="wrong_name_format" added="1566448108">Wrong name format (You can use letters, numbers, and spaces. At least 6 characters).</phrase>
+		<phrase var_name="load_more" added="1566448108">Load more</phrase>
+		<phrase var_name="admin_menu_add_button_image" added="1566448108">Add Button Image</phrase>
+		<phrase var_name="manage_donation" added="1566448108">Manage Donation</phrase>
+		<phrase var_name="add_donation_button_image" added="1566448108">Add Donation Button Image</phrase>
+		<phrase var_name="donation_image" added="1566448108">Donation Image</phrase>
+		<phrase var_name="click_to_delete_this_image" added="1566448108"><![CDATA[Click <a href="#" onclick="{on_delete_image}">here</a> to delete this image and upload a new one in its place.]]></phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1566448108">You can upload a JPG, GIF or PNG file.</phrase>
+		<phrase var_name="the_file_size_limit_is" added="1566448108">The file size limit is {iMaxFileSize_filesize}. If your upload does not work, try uploading a smaller picture.</phrase>
+		<phrase var_name="save" added="1566448108">Save</phrase>
+		<phrase var_name="setting_max_size_for_donation_image_button" added="1566448108"><![CDATA[<title>Maximum donation button image file size</title><info>Maximum file size for uploaded donation button image in kilobits (kb). 
+(1000 kb = 1 mb) 
+For unlimited add "0" without quotes.</info>]]></phrase>
+		<phrase var_name="donation_default_image" added="1566448108">Donation Default Image</phrase>
+		<phrase var_name="use_this_image_as_default" added="1566448108">Use this image as default</phrase>
+		<phrase var_name="display_current_number_of_total_donors" added="1566448108">Displaying {current_number} of {total} donors.</phrase>
+		<phrase var_name="setting_number_of_fetched_donors" added="1566448108"><![CDATA[<title>Number of donors to fetch each time.</title><info>Define number of donors which will be fetched when click on &#039;show more&#039;.</info>]]></phrase>
+		<phrase var_name="donation_image_successfully_updated" added="1566448108">Donation button image successfully updated.</phrase>
+		<phrase var_name="donation_guest_information" added="1566448108"><![CDATA[Donor&#039;s information]]></phrase>
+		<phrase var_name="problem_this_gateway_is_temporary_disabled" added="1566448108">We are so sorry. This payment gateway is temporary disabled.</phrase>
+		<phrase var_name="do_not_have_permission_to_perform_this_action" added="1566448108">You do not have permission to perform this action.</phrase>
+		<phrase var_name="must_fill_your_name" added="1566448108">We are sorry! Your name is empty or it is too long (over 100 characters).</phrase>
+		<phrase var_name="enable_donation_on_this_site" added="1566448108">Enable Donation on this site?</phrase>
+		<phrase var_name="notice_about_sending_email" added="1566448108">If you leave both subject and content empty, email will not be sent.</phrase>
+		<phrase var_name="donors_list" added="1566448108">Donors</phrase>
+		<phrase var_name="admin_menu_manage_currencies" added="1566448108">Manage Currencies</phrase>
+		<phrase var_name="manage_currencies" added="1566448108">Manage Currencies</phrase>
+		<phrase var_name="currencies_are_updated_successfully" added="1566448108">Currencies are updated successfully.</phrase>
+		<phrase var_name="if_no_currency_is_chosen_usd_will_be_used_as_default_currency" added="1566448108">If no currency is chosen, USD will be used as default currency.</phrase>
+		<phrase var_name="notice_multi_currency_conversion" added="1566448108"><![CDATA[Notice: if your currency is different from the receiver&#039;s currency, your donation may have to wait for a period of time before appearing in donors list!]]></phrase>
+		<phrase var_name="gateways" added="1566448108">Gateways</phrase>
+		<phrase var_name="name" added="1566448108">Name</phrase>
+		<phrase var_name="active" added="1566448108">Active</phrase>
+		<phrase var_name="edit_gateway_setting" added="1566448108">Edit Gateway Setting</phrase>
+		<phrase var_name="test_mode" added="1566448108">Test Mode</phrase>
+		<phrase var_name="disable_test_mode" added="1566448108">Disable Test Mode</phrase>
+		<phrase var_name="enable_test_mode" added="1566448108">Enable Test Mode</phrase>
+		<phrase var_name="payment_gateways" added="1566448108">Payment Gateways</phrase>
+		<phrase var_name="editing" added="1566448108">Editing</phrase>
+		<phrase var_name="gateway_details" added="1566448108">Gateway Details</phrase>
+		<phrase var_name="title" added="1566448108">Title</phrase>
+		<phrase var_name="description" added="1566448108">Description</phrase>
+		<phrase var_name="gateway_successfully_updated" added="1566448108">Gateway successfully updated.</phrase>
+		<phrase var_name="provide_a_name" added="1566448108">Provide a name</phrase>
+		<phrase var_name="provide_a_description" added="1566448108">Provide a description</phrase>
+		<phrase var_name="select_if_the_gateway_is_in_test_mode" added="1566448108">Select if the gateway is in test mode</phrase>
+		<phrase var_name="select_if_the_gateway_is_active_or_not" added="1566448108">Select if the gateway is active or not</phrase>
+		<phrase var_name="admin_menu_manage_payment_gateway" added="1566448108">Manage Donation Payment</phrase>
+		<phrase var_name="payment_info" added="1566448108">If Paypal gateway is active, then user is able to donate to the page and page owner will receive the donation. If Paypal gateway is inactive, the user is not able to donate to the page.</phrase>
+		<phrase var_name="recommended_image_size_width_x_height_pixels" added="1566448108">Recommended Image Size: {width}x{height} pixels</phrase>
+		<phrase var_name="no_gateway_active" added="1566448108">You have no active gateway</phrase>
+		<phrase var_name="donated_show_money" added="1566448108">Donated {money}</phrase>
+		<phrase var_name="donated_not_show_money" added="1566448108">Donated</phrase>
+		<phrase var_name="manage_donate_payment_des" added="1566448108">Manage donate payment des</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="donation" type="integer" admin="1" user="1" guest="0" staff="1" module="donation" ordering="0">points_donation</setting>
+		<setting is_admin_setting="0" module_id="donation" type="boolean" admin="true" user="true" guest="false" staff="false" module="donation" ordering="0">can_add_donation_on_own_page</setting>
+		<setting is_admin_setting="0" module_id="donation" type="boolean" admin="true" user="true" guest="true" staff="true" module="donation" ordering="0">can_donate</setting>
+	</user_group_settings>
+</module>

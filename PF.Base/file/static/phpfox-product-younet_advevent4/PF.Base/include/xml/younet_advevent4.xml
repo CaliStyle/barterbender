@@ -1,0 +1,353 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_advevent4</product_id>
+		<is_core>0</is_core>
+		<title>YNC Advanced Event</title>
+		<description>by YouNetCo</description>
+		<version>4.02p2</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>http://phpfox.younetco.com/</url>
+		<url_version_check></url_version_check>
+		<icon>https://phpfox.younetco.com/files/2015/12/adv_event.png</icon>
+		<vendor>YouNetCo</vendor>
+	</data>
+	<installs>
+		<install>
+			<version>3.01</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent') . "` (
+  `event_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `view_id` tinyint(1) NOT NULL DEFAULT '0',
+  `is_featured` tinyint(1) NOT NULL DEFAULT '0',
+  `is_sponsor` tinyint(1) NOT NULL DEFAULT '0',
+  `privacy` tinyint(1) NOT NULL DEFAULT '0',
+  `privacy_comment` tinyint(1) NOT NULL DEFAULT '0',
+  `module_id` varchar(75) NOT NULL DEFAULT 'event',
+  `item_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `user_id` int(10) unsigned NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `country_iso` char(2) DEFAULT NULL,
+  `country_child_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `postal_code` varchar(20) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  `start_time` int(10) unsigned NOT NULL,
+  `end_time` int(10) unsigned NOT NULL,
+  `image_path` varchar(75) DEFAULT NULL,
+  `server_id` tinyint(1) NOT NULL DEFAULT '0',
+  `total_comment` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_like` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_view` int(10) NOT NULL,
+  `total_attachment` int(10) NOT NULL,
+  `mass_email` int(10) unsigned NOT NULL DEFAULT '0',
+  `start_gmt_offset` varchar(15) DEFAULT NULL,
+  `end_gmt_offset` varchar(15) DEFAULT NULL,
+  `gmap` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `lat` double NOT NULL,
+  `lng` double NOT NULL,
+  PRIMARY KEY (`event_id`),
+  KEY `module_id` (`module_id`,`item_id`),
+  KEY `user_id` (`user_id`),
+  KEY `view_id` (`view_id`,`privacy`,`item_id`,`start_time`),
+  KEY `view_id_2` (`view_id`,`privacy`,`item_id`,`user_id`,`start_time`),
+  KEY `view_id_3` (`view_id`,`privacy`,`user_id`),
+  KEY `view_id_4` (`view_id`,`privacy`,`item_id`,`title`),
+  KEY `view_id_5` (`view_id`,`privacy`,`module_id`,`item_id`,`start_time`)
+);");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_category') . "` (
+  `category_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `parent_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `is_active` tinyint(1) NOT NULL DEFAULT '0',
+  `name` varchar(255) NOT NULL,
+  `name_url` varchar(255) DEFAULT NULL,
+  `time_stamp` int(10) unsigned NOT NULL DEFAULT '0',
+  `used` int(10) unsigned NOT NULL DEFAULT '0',
+  `ordering` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`category_id`),
+  KEY `parent_id` (`parent_id`,`is_active`),
+  KEY `is_active` (`is_active`,`name_url`)
+);");
+
+$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('fevent_category') . "` VALUES ('1', '0', '1', 'Arts', null, '0', '0', '1');");
+$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('fevent_category') . "` VALUES ('2', '0', '1', 'Party', null, '0', '0', '2');");
+$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('fevent_category') . "` VALUES ('3', '0', '1', 'Comedy', null, '0', '0', '3');");
+$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('fevent_category') . "` VALUES ('4', '0', '1', 'Sports', null, '0', '0', '4');");
+$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('fevent_category') . "` VALUES ('5', '0', '1', 'Music', null, '0', '0', '5');");
+$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('fevent_category') . "` VALUES ('6', '0', '1', 'TV', null, '0', '0', '6');");
+$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('fevent_category') . "` VALUES ('7', '0', '1', 'Movies', null, '0', '0', '7');");
+$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('fevent_category') . "` VALUES ('8', '0', '1', 'Other', null, '0', '0', '8');");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_category_data') . "` (
+  `event_id` int(10) unsigned NOT NULL,
+  `category_id` int(10) unsigned NOT NULL,
+  KEY `category_id` (`category_id`),
+  KEY `event_id` (`event_id`)
+);");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_custom_field') . "` (
+  `field_id` smallint(4) unsigned NOT NULL AUTO_INCREMENT,
+  `field_name` varchar(150) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `phrase_var_name` varchar(250) NOT NULL,
+  `type_name` varchar(50) NOT NULL,
+  `var_type` varchar(20) NOT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT '1',
+  `is_required` tinyint(1) NOT NULL DEFAULT '0',
+  `ordering` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`field_id`),
+  KEY `field_id` (`field_id`)
+);");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_custom_option') . "` (
+  `option_id` smallint(4) unsigned NOT NULL AUTO_INCREMENT,
+  `field_id` smallint(4) unsigned NOT NULL,
+  `phrase_var_name` varchar(250) NOT NULL,
+  PRIMARY KEY (`option_id`),
+  KEY `field_id` (`field_id`)
+);");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_custom_value') . "` (
+  `event_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `field_id` int(11) NOT NULL,
+  `value` text NOT NULL,
+  PRIMARY KEY (`event_id`,`field_id`)
+);");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_feed') . "` (
+  `feed_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `privacy` tinyint(1) NOT NULL DEFAULT '0',
+  `privacy_comment` tinyint(1) NOT NULL DEFAULT '0',
+  `type_id` varchar(75) NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `parent_user_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `parent_module_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `item_id` int(10) unsigned NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`feed_id`),
+  KEY `parent_user_id` (`parent_user_id`)
+);");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_feed_comment') . "` (
+  `feed_comment_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `parent_user_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `privacy` tinyint(3) NOT NULL DEFAULT '0',
+  `privacy_comment` tinyint(3) NOT NULL DEFAULT '0',
+  `content` mediumtext,
+  `time_stamp` int(10) unsigned NOT NULL,
+  `total_comment` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_like` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`feed_comment_id`),
+  KEY `parent_user_id` (`parent_user_id`)
+);");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_image') . "` (
+  `image_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `event_id` int(10) unsigned NOT NULL,
+  `image_path` varchar(50) NOT NULL,
+  `server_id` tinyint(1) NOT NULL,
+  `ordering` tinyint(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`image_id`),
+  KEY `listing_id` (`event_id`)
+);");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_invite') . "` (
+  `invite_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `event_id` int(10) unsigned NOT NULL,
+  `type_id` tinyint(1) NOT NULL DEFAULT '0',
+  `rsvp_id` tinyint(1) NOT NULL DEFAULT '0',
+  `user_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `invited_user_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `invited_email` varchar(100) DEFAULT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`invite_id`),
+  KEY `event_id` (`event_id`),
+  KEY `event_id_2` (`event_id`,`invited_user_id`),
+  KEY `invited_user_id` (`invited_user_id`),
+  KEY `event_id_3` (`event_id`,`rsvp_id`,`invited_user_id`),
+  KEY `rsvp_id` (`rsvp_id`,`invited_user_id`)
+);");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_text') . "` (
+  `event_id` int(10) unsigned NOT NULL,
+  `description` mediumtext,
+  `description_parsed` mediumtext,
+  KEY `event_id` (`event_id`)
+);");
+
+if(!$this->database()->isField(Phpfox::getT('user_activity'),'activity_fevent'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('user_activity') . "`
+	ADD `activity_fevent` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0' AFTER `activity_event` ");
+}
+
+if(!$this->database()->isField(Phpfox::getT('user_field'),'total_fevent'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('user_field') . "`
+	ADD `total_fevent` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0' AFTER `total_event` ");
+}
+
+if(!$this->database()->isField(Phpfox::getT('user_space'),'space_fevent'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('user_space') . "`
+	ADD `space_fevent` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0' AFTER `space_event` ");
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.01p2</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('fevent'),'gmap_address'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('fevent') . "`
+	ADD `gmap_address` varchar(255) DEFAULT NULL AFTER `lng` ");
+}
+
+if(!$this->database()->isField(Phpfox::getT('user_count'),'fevent_invite'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('user_count') . "`
+	ADD `fevent_invite` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0' AFTER `event_invite` ");
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.02</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_setting') . "` (
+  `setting_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `default_value` varchar(255) NOT NULL,
+  PRIMARY KEY (`setting_id`)
+);");
+
+if(!$this->database()->isField(Phpfox::getT('fevent'),'isrepeat'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('fevent') . "`
+	ADD `isrepeat` int(11) DEFAULT -1 ");
+}
+
+if(!$this->database()->isField(Phpfox::getT('fevent'),'timerepeat'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('fevent') . "`
+	ADD `timerepeat` int(11) DEFAULT 0 ");
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.02p2</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('fevent'),'range_value'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('fevent') . "`
+	ADD `range_value` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0' ");
+}
+
+if(!$this->database()->isField(Phpfox::getT('fevent'),'range_type'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('fevent') . "`
+	ADD `range_type` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0' ");
+}
+
+if(!$this->database()->isField(Phpfox::getT('fevent'),'range_value_real'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('fevent') . "`
+	ADD `range_value_real` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0' ");
+}
+
+if(!$this->database()->isField(Phpfox::getT('fevent_feed'),'parent_feed_id'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('fevent_feed') . "`
+	ADD `parent_feed_id` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0' ");				 
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.02p4</version>
+			<install_code><![CDATA[if($iId = $this->database()->select("block_id")->from(Phpfox::getT("block"))->where("m_connection='fevent' AND module_id='fevent' AND component='upcoming'")->execute('getField'))
+{
+	$this->database()->delete(Phpfox::getT("block"), 'block_id='.$iId);
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('fevent_feed'),'time_update'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('fevent_feed') . "`
+	ADD `time_update` int(10) unsigned NOT NULL DEFAULT '0'");				 
+}
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('fevent_gapi') . "` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `oauth2_client_id` text COLLATE utf8_unicode_ci NOT NULL,
+  `oauth2_client_secret` text COLLATE utf8_unicode_ci NOT NULL,
+  `developer_key` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+);");
+
+if (Phpfox::isModule('socialpublisherss'))
+{
+  $aRow = $this->database()->select('*')
+    ->from(Phpfox::getT('socialpublishers_modules'))
+    ->where('product_id = "younetevent" AND module_id = "fevent"')
+    ->execute('getRow');
+
+  if(!isset($aRow) && !$aRow)
+  {
+    $this->database()->insert(Phpfox::getT('socialpublishers_modules'),
+      array(
+        'product_id' => 'younetevent',
+        'module_id' => 'fevent',
+        'title' => 'fevent.publishers_advancedevent',
+        'is_active' => 1,
+        'facebook' => 1,
+        'twitter' => 1,
+        'linkedin' => 1,
+      )
+    );
+  }
+}
+
+if(!$this->database()->isField(Phpfox::getT('fevent'), 'is_sponsor'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('fevent') . "` ADD `is_sponsor` tinyint(1) NOT NULL DEFAULT '0'");				 
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.04</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'fevent/install/v3.04.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.06</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'fevent/install/v3.06.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01p2</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'fevent/install/v4.01p2.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'fevent/install/v4.02.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02p1</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'fevent/install/v4.02p1.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02p1</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'fevent/install/v4.02p1.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+	</installs>
+	<modules>
+		<module_id>fevent</module_id>
+	</modules>
+</product>

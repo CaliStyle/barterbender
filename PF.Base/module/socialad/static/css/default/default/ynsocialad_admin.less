@@ -1,0 +1,155 @@
+/*Custom Information*/
+.ynsaCustomInforSection{background:#fff;margin-bottom:20px;}
+.ynsaCustomInforSection .ynsaCustominforView{padding:15px;}
+.ynsaCustomInforSection .ynsaContent{padding-bottom:15px;}
+
+/*tip bubble*/
+.ynsaGlossaryTip{position:relative;}
+.ynsaGlossaryTip:hover .tip{display:block;min-width:250px;}
+.ynsaGlossaryTip .tip{
+   bottom:100%;
+   display:none;
+   padding:0 0 7px;
+   position:absolute;
+   text-align:left;
+   z-index:301;
+   left:-10px;
+   background:transparent;
+   margin:0;
+   border:0 none;
+   text-transform:none;
+   font-size:12px;
+   font-weight:normal;
+}
+.ynsaGlossaryTip .tipTitle{
+   background-color:#333;
+   border:solid 1px #333;
+   border-bottom:none;
+   color:#fff !important;
+   font-weight:bold;
+   display:block;
+   left:0;
+   padding:3px 8px 4px;
+   white-space:nowrap;
+}
+.ynsaGlossaryTip .tipBody{
+   background-color:#fff;
+   border:solid 1px #999;
+   border-top:none;
+   border-bottom:solid 1px #888;
+   color:#666 !important;
+   font-weight:normal;
+   display:block;
+   left:0;
+   padding:4px 8px 6px;
+   white-space:normal;
+   -webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .1);
+}
+.ynsaGlossaryTip .tipArrow{
+   position:absolute;
+   bottom:3px;
+   left:10px;
+   width:7px;
+   height:5px;
+   //background-image:url("@{module-folder}socialad/static/image/arrow_tooltip.png");
+   background-repeat:no-repeat;
+}
+.ynsaGlossaryTip .right .tipArrow{left:auto;right:10px;}
+
+
+/*package*/
+.ynsaPackageEntry{
+   padding:15px;
+   border:1px solid #eee;
+   margin:0 0 15px;
+   background-color:#fff;
+   position:relative;
+}
+.ynsaPackageEntry .ynsaName{
+   font-size:20px;
+   margin:-16px -16px 10px;
+   padding:10px 15px;
+   color:#555;
+   background-color:#f8f8f8;
+   font-weight:300;
+   border:1px solid #eee;
+}
+.ynsaPackageEntry .ynsaPriceAndBenefit{padding-bottom:5px;}
+.ynsaChoosePackage .ynsaPriceAndBenefit,
+.ynsaChoosePackage .ynsaAttributes{margin-right:240px;}
+.ynsaChoosePackage .ynsaCreateAdButton{position:absolute;right:15px;top:65px;}
+.ynsaPackageEntry .ynsaPrice,
+.ynsaPackageEntry .ynsaBenefit{
+   font-weight:bold;
+   font-size:18px;
+   color:#0e8abe;
+}
+.ynsaPackageEntry ul{margin:10px 0;}
+.ynsaPackageEntry ul li:before{
+   content:"\f00c";
+   font-family:fontAwesome;
+   font-size:10px;
+}
+.ynsaPackageEntry .ynsaCreateAdButton .ynsaButton{display:block;}
+.ynsaPackageEntry .ynsaDescription{margin-top:10px;}
+
+/*pager*/
+.pager_ads:before,.pager_ads:after{
+   content:"";
+   display:table;
+   clear:both;
+}
+.pager_ads{padding-bottom:5px;}
+.pager_ads .result{float:left;line-height:30px;font-size:13px;}
+.pager_ads .page_list{float:right;}
+.pager_ads .page_list a{
+   display:inline-block;
+   padding:0 8px;
+   line-height:30px;
+   vertical-align:bottom;
+   border:1px solid #dbdbdb;
+   background-color:#fff;
+   font-size:11px;
+   font-weight:300;
+   text-transform:uppercase;
+   color:#666;
+   transition:all 0.5s ease 0s;
+   -moz-transition:all 0.5s ease 0s;
+   -webkit-transition:all 0.5s ease 0s;
+   -o-transition:all 0.5s ease 0s;
+}
+.pager_ads .page_list a:hover{
+   background-color:#555;
+   color:#fff;
+   border-color:#555;
+}
+.pager_ads .page_list a:before,
+.pager_ads .page_list a:after{font-family:fontAwesome;font-size:14px;}
+.pager_ads .page_list a.preview:before{content:"\f104";margin-right:5px;}
+.pager_ads .page_list a.next:after{content:"\f105";margin-left:5px;}
+
+
+#page_socialad_admincp_credit_index form .table_clear{margin:10px 0 0;}
+
+.ynsaTermAndCondition .ynsaContent, #js_ynsa_view_term_condition .ynsaContent, .ynsaManualPaymentInstruction .ynsaSectionContentPlain .ynsaLeftInnerContent {
+	white-space: pre-wrap;
+}
+.tipright2 .ynsaGlossaryTip .right {
+  left: -150px;
+  top: 11px;
+}
+
+.tipleft2 .ynsaGlossaryTip .right {
+  left: -250px;
+  top: 11px;
+}
+
+.tipmiddle2 .ynsaGlossaryTip .right {
+  left: -150px;
+  top: 11px;
+}
+
+
+.ynsaError{
+   color: @brand-danger;
+}

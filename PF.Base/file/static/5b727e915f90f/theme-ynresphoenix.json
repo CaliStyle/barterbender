@@ -1,0 +1,23 @@
+{
+    "files_path": [
+        "less\/variables.less",
+        "less\/mixins.less",
+        "less\/customize.less",
+        "theme.png",
+        "html\/layout.html",
+        "checksum",
+        "assets\/logos\/logo.png",
+        "assets\/autoload.less",
+        "assets\/autoload.js",
+        "assets\/variables_navy.less",
+        "assets\/variables_green.less",
+        "assets\/variables_red.less",
+        "assets\/variables_blue.less",
+        "assets\/variables_purple.less",
+        "assets\/variables_yellow.less",
+        "assets\/variables.less",
+        "assets\/autoload.css",
+        "assets\/variables_orange.less"
+    ],
+    "theme.json": "{\n  \"id\": \"ynresphoenix\",\n  \"name\": \"YNC Responsive Phoenix\",\n  \"vars\": {\n    \"body_bg\": {\n      \"title\": \"Body Background\",\n      \"id\": \"body\",\n      \"attr\": \"background\"\n    },\n    \"color\": {\n      \"title\": \"Color\",\n      \"id\": \"body\",\n      \"attr\": \"color\"\n    },\n    \"link\": {\n      \"title\": \"Links\",\n      \"id\": \"a\",\n      \"attr\": \"color\"\n    },\n    \"link_hover\": {\n      \"title\": \"Links Hover\",\n      \"id\": \"a:hover\",\n      \"attr\": \"color\"\n    },\n    \"big-circle-bg\":{\n      \"title\": \"Big Circle Background Color\",\n      \"id\": \"body#page_ynresphoenix_landing .ynresphoenix_home:before\",\n      \"attr\": \"background\"\n    },\n    \"sm-circle-bg\":{\n      \"title\": \"Small Circle Background Color\",\n      \"id\": \"body#page_ynresphoenix_landing .ynresphoenix_home:after\",\n      \"attr\": \"background\"\n    },\n    \"nav-color\":{\n      \"title\": \"Navigation Color\",\n      \"id\": \".ynresphoenix-navbar.navbar-default .navbar-nav > li > a\",\n      \"attr\": \"color\"\n    },\n    \"nav-color-hover\":{\n      \"title\": \"Navigation Color Hover, Active\",\n      \"id\": \".ynresphoenix-navbar.navbar-default .navbar-nav > li > a:hover, .ynresphoenix-navbar.navbar-default .navbar-nav > li > a.menu_is_selected\",\n      \"attr\": \"color\"\n    },    \n\n    \"nav-color-hover-line\":{\n      \"title\": \"Line Item Nav Color Hover, Active\",\n      \"id\": \".navbar.navbar-default.ynresphoenix-navbar .navbar-nav > li a:after\",\n      \"attr\": \"border-color\"\n    },\n    \n    \"header_bg\": {\n      \"title\": \"Header Background\",\n      \"id\": \".sticky-bar, .navbar-header\",\n      \"attr\": \"background\"\n    },\n    \"nav-bg\": {\n      \"title\": \"Navigation Background\",\n      \"id\": \".ynresphoenix-navbar.navbar-default\",\n      \"attr\": \"background\"\n    },\n    \"content_bg\": {\n      \"title\": \"Content Background\",\n      \"id\": \"#content-stage\",\n      \"attr\": \"background\"\n    },\n    \"container_width\": {\n      \"title\": \"Container Width\",\n      \"id\": \".container-fluid\",\n      \"attr\": \"max-width\"\n    },\n    \"nav_bar_bg\": {\n      \"title\": \"Navigation Background\",\n      \"id\": \".navbar-default\",\n      \"attr\": \"background\"\n    },\n    \"block_title_color\": {\n      \"title\": \"Block Title Text Color\",\n      \"id\": \".block .title\",\n      \"attr\": \"color\"\n    },\n    \"block_title_border\": {\n      \"title\": \"Block Title Border\",\n      \"id\": \".block .title\",\n      \"attr\": \"border-bottom-color\"\n    },\n    \"footer_bg\": {\n      \"title\": \"Footer Background\",\n      \"id\": \"#section-footer\",\n      \"attr\": \"background\"\n    },\n    \"footer_color\": {\n      \"title\": \"Footer Text Color\",\n      \"id\": \"footer, .footer-holder, .footer-holder a, .footer-holder a:hover\",\n      \"attr\": \"color\"\n    }\n  }\n}"
+}

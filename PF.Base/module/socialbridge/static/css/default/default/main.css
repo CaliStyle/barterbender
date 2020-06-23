@@ -1,0 +1,61 @@
+.socialpublishers_provider_content {
+  margin: 0 auto;
+  text-align: center;
+  width: 850px;
+}
+.socialpublishers_provider_content .text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+}
+.socialpublishers_provider_content .text img {
+  height: 32px;
+  width: 32px;
+}
+.socialpublishers_provider {
+  float: left;
+  margin: 10px;
+  background-color: #F5F5F5;
+  border: 1px solid #DDDDDD;
+  margin-bottom: 10px;
+  max-width: 99%;
+  padding: 4px;
+}
+.socialpublishers_provider_img {
+  width: 250px;
+  height: 80px;
+}
+#page_socialbridge_setting .page_section_menu_header .page_section_menu_link {
+  display: none;
+}
+#page_socialbridge_setting .page_section_menu {
+  border-bottom: 0;
+}
+#page_socialbridge_setting .socialbridge_provider_img {
+  width: 248px;
+  border: 1px solid #CCCCCC;
+  height: 90px;
+}
+#page_socialbridge_setting .socialbridge_provider {
+  float: left;
+  margin: 10px 15px;
+  position: relative;
+}
+#page_socialbridge_setting .socialbridge_provider .text {
+  border: 1px solid #CCCCCC;
+  display: block;
+  padding: 3px;
+  width: 249px;
+  text-align: center;
+  overflow: hidden;
+}
+#page_socialbridge_setting .form-group .table_right .form-control + .form-control {
+  border-top: 0;
+}
+#page_socialbridge_setting .form-group .table_right input {
+  margin-right: 6px;
+  margin-left: 10px;
+}
+#page_socialbridge_setting .form-group .table_right .form-control {
+  height: auto;
+}

@@ -1,0 +1,26 @@
+<div class="cal-month-day <%= cls %> <% if (events.length > 0) { %>has-event<% } %>">
+	<span class="pull-right" data-cal-date="<%= data_day %>" data-cal-view="day" data-toggle="tooltip" title="<%= tooltip %>"><%= day %></span>
+	<% if (events.length > 0) { %>
+		<div class="events-list" data-cal-start="<%= start %>" data-cal-end="<%= end %>">
+			<% _.each(events, function(event, index) { %>
+				<% if (index < 2) { %>
+					<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>" data-event-class="<%= event['class'] %>"
+						class="event <%= event['class'] %>" data-toggle="tooltip"
+						title="<%= event.title %>
+						(<%= event.time_label %>)"><% if (event.is_birthday) { %><span class="ico ico-gift p-fevent-birthday" style="margin-right: 6px;"></span><% } else { %> <span class="p-fevent-dot-status"></span><% } %><%= event.title %></a>
+				<% } %>
+				<% if (events.length == 3 && index == 2) { %>
+					<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>" data-event-class="<%= event['class'] %>"
+					   class="event <%= event['class'] %>" data-toggle="tooltip"
+					   title="<%= event.title %>
+					   (<%= event.time_label %>)"><% if (event.is_birthday) { %><span class="ico ico-gift p-fevent-birthday" style="margin-right: 6px;"></span><% } else { %> <span class="p-fevent-dot-status"></span><% } %><%= event.title %></a>
+				<% } %>
+			<% }); %>
+			<% if (events.length > 3) { %>
+				<span class="event event-more">
+				+ <%= events.length - 2 %> <%= oTranslations['others'] %>
+				</span>
+			<% } %>
+		</div>
+	<% } %>
+</div>

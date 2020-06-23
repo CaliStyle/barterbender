@@ -1,0 +1,108 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_foxfavorite4</product_id>
+		<is_core>0</is_core>
+		<title>YNC Fox Favorite</title>
+		<description>by YouNetCo</description>
+		<version>4.02p1</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>https://phpfox.younetco.com/</url>
+		<url_version_check>http://phpfox.younetco.com/</url_version_check>
+		<icon>https://phpfox.younetco.com/files/2016/02/Fox-Favorite.jpg</icon>
+		<vendor>YouNetCo</vendor>
+	</data>
+	<installs>
+		<install>
+			<version>3.01</version>
+			<install_code><![CDATA[$this->database()->query( "CREATE TABLE IF NOT EXISTS `" .PHPFOX::getT("foxfavorite") . "` (
+					 `favorite_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+                                         `type_id` varchar(75) NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `item_id` int(10) unsigned NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`favorite_id`)
+					) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;"
+				);
+
+$this->database()->query( "CREATE TABLE IF NOT EXISTS `" .PHPFOX::getT("foxfavorite_setting") . "` (
+ `module_id` varchar(75) NOT NULL,
+  `title` varchar(75) NOT NULL,
+  `product` varchar(75) NOT NULL default 'phpfox',
+  `is_active` tinyint(1) NOT NULL DEFAULT '1'
+					) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;"
+				);
+$this->database()->query("INSERT INTO `".phpfox::getT('foxfavorite_setting')."` (`module_id`, `title`, `is_active`, `product`) VALUES ('blog', 'blog', 1, 'phpfox'),
+('profile', 'profile', 1, 'phpfox'),
+('music', 'music', 1, 'phpfox'),
+('video', 'video', 1, 'phpfox'),
+('event', 'event', 1, 'phpfox'),
+('marketplace', 'marketplace', 1, 'phpfox'),
+('poll', 'poll', 1, 'phpfox'),
+('quiz', 'quiz', 1, 'phpfox'),
+('pages', 'pages', 1, 'phpfox'),
+('photo', 'photo', 1, 'phpfox'),
+('document', 'document', 0, 'younetco');
+");
+if(!$this->database()->isField(PHPFOX::getT("user_field"),'total_foxfavorite')){
+$this->database()->query("ALTER TABLE `" . PHPFOX::getT("user_field") . "` ADD COLUMN `total_foxfavorite` INTEGER(10) UNSIGNED NOT NULL default '0';");}]]></install_code>
+			<uninstall_code><![CDATA[$this->database()->query("TRUNCATE TABLE `".phpfox::getT('foxfavorite_setting')."`;");]]></uninstall_code>
+		</install>
+		<install>
+			<version>3.02</version>
+			<install_code><![CDATA[$this->database()->delete(Phpfox::getT("foxfavorite_setting"), "product='younetco'");
+
+$this->database()->query("INSERT INTO `".phpfox::getT('foxfavorite_setting')."` (`module_id`, `title`, `product`, `is_active`) VALUES
+('karaoke', 'karaoke', 'younetco', 1),
+('videochannel', 'videochannel', 'younetco', 1),
+('document', 'document', 'younetco', 1),
+('advancedmarketplace', 'advancedmarketplace', 'younetco', 1),
+('fevent', 'fevent', 'younetco', 1),
+('advancedphoto', 'advancedphoto', 'younetco', 1);
+");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.02p1</version>
+			<install_code><![CDATA[$this->database()->query("INSERT INTO `".phpfox::getT('foxfavorite_setting')."` (`module_id`, `title`, `product`, `is_active`) VALUES 
+('coupon', 'coupon', 'younetco', 1),
+('contest', 'contest', 'younetco', 1);");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS `".Phpfox::getT('foxfavorite_log')."` (
+  `log_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `type` varchar(255) NOT NULL,
+  `module` varchar(75) DEFAULT NULL,
+  `item_id` int(11) unsigned DEFAULT NULL,
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`log_id`)
+);");
+
+$this->database()->query("INSERT INTO `".Phpfox::getT('foxfavorite_setting')."` (`module_id`, `title`, `product`, `is_active`) VALUES
+('resume', 'resume', 'younetco', 1),
+('jobposting', 'jobposting', 'younetco', 1),
+('foxfeedspro', 'foxfeedspro', 'younetco', 1),
+('petition', 'petition', 'younetco', 1),
+('musicsharing', 'musicsharing', 'younetco', 1);");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03p2</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'foxfavorite/install/v3.03p2.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01p1</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'foxfavorite/install/v4.01p1.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+	</installs>
+	<modules>
+		<module_id>foxfavorite</module_id>
+	</modules>
+</product>

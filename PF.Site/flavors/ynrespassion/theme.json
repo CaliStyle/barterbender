@@ -1,0 +1,106 @@
+{
+    "id": "ynrespassion",
+    "name": "YNC Responsive Passion",
+    "vars": {
+        "body_bg": {
+            "title": "Body Background ",
+            "id": "body",
+            "attr": "background"
+        },
+        "color": {
+            "title": "Color",
+            "id": "body",
+            "attr": "color"
+        },
+        "block_landing_bg": {
+            "title": "Block Landing Background ",
+            "id": "#section-header .block .content",
+            "attr": "background"
+        },
+        "link": {
+            "title": "Links",
+            "id": "a",
+            "attr": "color"
+        },
+        "link_hover": {
+            "title": "Links Hover",
+            "id": "a:hover",
+            "attr": "color"
+        },
+        "nav-color": {
+            "title": "Navigation Color",
+            "id": ".ynrespassion-navbar.navbar-default .navbar-nav > li > a",
+            "attr": "color"
+        },
+        "nav-color-hover": {
+            "title": "Navigation Color Hover, Active",
+            "id": ".ynrespassion-navbar.navbar-default .navbar-nav > li > a:hover, .ynrespassion-navbar.navbar-default .navbar-nav > li > a.menu_is_selected",
+            "attr": "color"
+        },
+        "nav-color-hover-line": {
+            "title": "Navigation Line Color Hover, Active",
+            "id": ".navbar.navbar-default.ynrespassion-navbar .navbar-nav > li a:after",
+            "attr": "background"
+        },
+        "header_bg": {
+            "title": "Header Background",
+            "id": ".sticky-bar, .navbar-header",
+            "attr": "background"
+        },
+        "nav-bg": {
+            "title": "Navigation Background",
+            "id": ".ynrespassion-navbar.navbar-default",
+            "attr": "background"
+        },
+        "reason_block_bg": {
+            "title": "Reason Block Background",
+            "id": ".ynrespassion-reasons-ld .ynrespassion-reasons-container",
+            "attr": "background"
+        },
+        "content_bg": {
+            "title": "Content Background",
+            "id": "#content-stage",
+            "attr": "background"
+        },
+        "container_width": {
+            "title": "Container Width",
+            "id": ".container",
+            "attr": "max-width"
+        },
+        "block_bg": {
+            "title": "Block Background",
+            "id": ".block",
+            "attr": "background"
+        },
+        "block_color": {
+            "title": "Block Content Text Color",
+            "id": ".block .content, .block .content .extra_info",
+            "attr": "color"
+        },
+        "block_title_color": {
+            "title": "Block Title Text Color",
+            "id": ".block .title",
+            "attr": "color"
+        },
+        "block_title_border": {
+            "title": "Block Title Border",
+            "id": ".block .title",
+            "attr": "border-bottom-color"
+        },
+        "footer_bg": {
+            "title": "Footer Background",
+            "id": "footer, .footer-holder",
+            "attr": "background"
+        },
+        "footer_color": {
+            "title": "Footer Text Color",
+            "id": "#section-footer .footer-menu li a",
+            "attr": "color"
+        },
+        "footer_copyright_color": {
+            "title": "Footer Copyright Color",
+            "id": "#section-footer .footer-holder, #select_lang_pack",
+            "attr": "color"
+        }
+    }
+}

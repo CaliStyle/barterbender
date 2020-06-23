@@ -1,0 +1,228 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_document4</product_id>
+		<is_core>0</is_core>
+		<title>YNC Document</title>
+		<description>by YouNetCo</description>
+		<version>4.02p3</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>https://phpfox.younetco.com/</url>
+		<url_version_check></url_version_check>
+		<icon>http://phpfox.younetco.com/files/2015/10/User-Document.jpg</icon>
+		<vendor>YouNetCo</vendor>
+	</data>
+	<installs>
+		<install>
+			<version>3.01</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('document') . "` (
+  `document_id` int(10) unsigned NOT NULL auto_increment,
+  `document_file_name` varchar(255) NOT NULL,
+  `document_file_path` varchar(255) NOT NULL,
+  `doc_id` int(10) NOT NULL,
+  `access_key` varchar(45) NOT NULL,
+  `visibility` tinyint(4) NOT NULL,
+  `user_id` int(10) unsigned NOT NULL default '0',
+  `is_approved` tinyint(1) NOT NULL default '0',
+  `is_featured` tinyint(1) NOT NULL default '0',
+  `document_privacy` tinyint(4) NOT NULL,
+  `document_license` int(11) NOT NULL default '0',
+  `privacy` tinyint(1) NOT NULL default '0',
+  `module_id` varchar(75) default NULL,
+  `item_id` int(10) unsigned NOT NULL default '0',
+  `title` varchar(255) default NULL,
+  `title_url` varchar(255) default NULL,
+  `image_url` varchar(255) NOT NULL,
+  `image_url_updated_time` int(10) NOT NULL,
+  `description` mediumtext,
+  `allow_comment` tinyint(1) NOT NULL default '0',
+  `total_comment` int(10) unsigned NOT NULL default '0',
+  `total_score` decimal(4,2) NOT NULL default '0.00',
+  `total_rating` int(10) unsigned NOT NULL default '0',
+  `time_stamp` int(10) unsigned NOT NULL default '0',
+  `total_view` int(10) unsigned NOT NULL default '0',
+  `allow_rating` tinyint(4) NOT NULL,
+  `allow_download` tinyint(1) NOT NULL default '0',
+  `allow_attach` tinyint(1) NOT NULL default '0',
+  `view_id` tinyint(4) NOT NULL default '0',
+  `in_process` tinyint(4) NOT NULL default '0',
+  `privacy_comment` tinyint(4) NOT NULL default '0',
+  `total_like` int(10) unsigned NOT NULL,
+  `process_status` varchar(20) NOT NULL,
+  `page_count` int(10) NOT NULL default '0',
+  PRIMARY KEY  (`document_id`),
+  KEY `view_id` (`module_id`,`item_id`,`title_url`),
+  KEY `user_id` (`user_id`),
+  KEY `in_process` (`is_approved`),
+  KEY `document_id_2` (`document_id`,`is_approved`,`user_id`),
+  KEY `in_process_2` (`is_approved`,`module_id`,`item_id`,`user_id`),
+  KEY `in_process_3` (`is_approved`,`user_id`),
+  KEY `in_process_4` (`is_approved`,`module_id`,`item_id`),
+  KEY `in_process_5` (`is_approved`),
+  KEY `view_id_2` (`module_id`,`item_id`),
+  KEY `document_id` (`document_id`,`is_approved`,`title`),
+  KEY `document_id_3` (`document_id`,`is_approved`,`user_id`),
+  KEY `view_id_4` (`user_id`)
+)  ");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('document_category') . "` (
+ `category_id` mediumint(8) unsigned NOT NULL auto_increment,
+  `parent_id` mediumint(8) unsigned NOT NULL default '0',
+  `is_active` tinyint(1) NOT NULL default '0',
+  `name` varchar(255) NOT NULL,
+  `name_url` varchar(255) NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL default '0',
+  `used` int(10) unsigned NOT NULL default '0',
+  `ordering` int(11) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`category_id`),
+  KEY `parent_id` (`parent_id`,`is_active`),
+  KEY `is_active` (`is_active`,`name_url`)
+)");
+
+$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('document_category') . "` (`category_id`, `parent_id`, `is_active`, `name`, `name_url`, `time_stamp`, `used`, `ordering`) VALUES
+(1, 0, 1, 'Autos & Vehicles', '', 0, 0, 1),
+(2, 0, 1, 'Comedy', '', 0, 0, 2),
+(3, 0, 1, 'Education', '', 0, 0, 3),
+(4, 0, 1, 'Entertainment', '', 0, 0, 4),
+(5, 0, 1, 'Film & Animation', '', 0, 0, 5),
+(6, 0, 1, 'Gaming', '', 0, 0, 6),
+(7, 0, 1, 'Howto & Style', '', 0, 0, 7),
+(8, 0, 1, 'News & Politics', '', 0, 0, 8),
+(9, 0, 1, 'Nonprofits & Activism', '', 0, 0, 9),
+(10, 0, 1, 'People & Blogs', '', 0, 0, 10),
+(11, 0, 1, 'Pets & Animals', '', 0, 0, 11),
+(12, 0, 1, 'Science & Technology', '', 0, 0, 12),
+(13, 0, 1, 'Sports', '', 0, 0, 13),
+(14, 0, 1, 'Travel & Events', '', 0, 0, 14) ");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('document_text') . "` (
+  `document_id` int(10) NOT NULL,
+  `text` mediumtext NOT NULL,
+  `text_parsed` mediumtext NOT NULL
+)");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('document_license') . "` (
+ `license_id` int(11) NOT NULL AUTO_INCREMENT,
+  `license_name` varchar(255) NOT NULL,
+  `reference_url` varchar(255) DEFAULT NULL,
+  `image_url` varchar(255) NOT NULL,
+  `time_stamp` int(10) NOT NULL DEFAULT '0',
+  `used` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`license_id`)
+)");
+
+$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('document_license') ."` (`license_id`, `license_name`, `reference_url`, `image_url`, `time_stamp`, `used`) VALUES
+(1, 'Attribution CC BY', 'http://creativecommons.org/licenses/by/3.0', 'document/static/image/8b1b578f076907e35e5f5489bb6093bb_ccby.png', 1312517885, 0),
+(2, 'Attribution-NoDerivs CC BY-ND', 'http://creativecommons.org/licenses/by-nd/3.0', 'document/static/image/78cfae3954e62bd26e87c8685681b601_ccbynd.png', 1312517893, 0),
+(3, 'Attribution-NonCommercial CC BY-NC', 'http://creativecommons.org/licenses/by-nc/3.0', 'document/static/image/0e6b4e99d665e0841c4abdce1b2f5779_ccbync.png', 1312517904, 0),
+(4, 'Attribution-ShareAlike CC BY-SA', 'http://creativecommons.org/licenses/by-sa/3.0', 'document/static/image/8bf75fbc3523d50108e37a4a965af649_ccbysa.png', 1312517922, 0) ");
+
+$this->database()->query("INSERT IGNORE INTO `" . Phpfox::getT('block') ."` ( `title`, `type_id`, `m_connection`, `module_id`, `product_id`, `component`, `location`, `is_active`, `ordering`, `disallow_access`, `can_move`, `version_id`) VALUES
+('Profile Photo &amp; Menu', 0, 'document.profile', 'profile', 'younet_document4', 'pic', '1', 1, 1, NULL, 0, '3') ");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('document_category_data') . "` (
+  `document_id` int(10) unsigned NOT NULL,
+  `category_id` int(10) unsigned NOT NULL,
+  KEY `category_id` (`category_id`),
+  KEY `document_id` (`document_id`)
+)");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('document_embed') . "` (
+  `document_id` int(10) unsigned NOT NULL,
+  `document_url` varchar(255) NOT NULL,
+  `embed_code` mediumtext NOT NULL,
+  UNIQUE KEY `document_id` (`document_id`)
+)");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('document_rating') . "` (
+  `rate_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `item_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `rating` decimal(4,2) NOT NULL DEFAULT '0.00',
+  `time_stamp` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`rate_id`),
+  KEY `item_id` (`item_id`,`user_id`),
+  KEY `item_id_2` (`item_id`)
+)");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `" . Phpfox::getT('document_track') . "` (
+  `item_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  KEY `item_id` (`item_id`,`user_id`)
+)");
+
+if(!$this->database()->isField(Phpfox::getT('user_field'),'total_document'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('user_field') . "`
+    ADD `total_document` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0' AFTER `total_video` ");
+}
+
+if(!$this->database()->isField(Phpfox::getT('user_activity'),'activity_document'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('user_activity') . "`
+    ADD `activity_document` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0' AFTER `activity_comment` ");
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.01p1</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'document/install/v3.01.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.01p2</version>
+			<install_code><![CDATA[$this->database()->query(sprintf("DELETE FROM `%s` WHERE `module_id` = 'document';", PHPFOX::getT("block")));
+
+
+$this->database()->query(sprintf("DELETE FROM `%s` WHERE `product_id` = 'younet_document';", PHPFOX::getT("product_dependency")));
+
+$this->database()->query(sprintf("INSERT IGNORE INTO `%s`(`product_id`,`type_id`, `check_id`, `dependency_start`) VALUES
+  ('younet_document','product', 'younetcore', '3.01p2')", Phpfox::getT('product_dependency')));]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.02p1</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('document'),'total_dislike'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('document') . "`
+    ADD `total_dislike` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0' AFTER `total_like` ");
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.02p2</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('document'),'server_id'))
+{
+  $this->database()->query("ALTER TABLE `" . Phpfox::getT('document') . "`
+    ADD `server_id` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT '0' AFTER `document_file_path`");
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.02p5</version>
+			<install_code><![CDATA[$this->database()->update(Phpfox::getT('language_phrase'), array('text' => 'Are documents added by this user group automatically approved?', 'text_default' => 'Are documents added by this user group automatically approved?'), 'module_id = "document" AND product_id = "younet_document" AND text = "Should documents added by this user group be approved before they are displayed publicly?"');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03p1</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'document/install/v3.03p1.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01p8</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'document/install/v4.01p8.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'document/install/v4.02.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+	</installs>
+	<modules>
+		<module_id>document</module_id>
+	</modules>
+</product>

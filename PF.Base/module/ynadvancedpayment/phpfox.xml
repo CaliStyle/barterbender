@@ -1,0 +1,140 @@
+<module>
+	<data>
+		<module_id>ynadvancedpayment</module_id>
+		<product_id>younet_advancedpayment4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>0</is_menu>
+		<menu><![CDATA[a:1:{s:43:"ynadvancedpayment.admin_menu_manage_gateway";a:1:{s:3:"url";a:2:{i:0;s:3:"api";i:1;s:7:"gateway";}}}]]></menu>
+		<phrase_var_name>module_advpayment</phrase_var_name>
+	</data>
+	<phrases>
+		<phrase module_id="ynadvancedpayment" version_id="3.0.1" var_name="module_advpayment" added="1332812433">Advanced Payment</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.0.1" var_name="admin_menu_manage_gateway" added="1332812433">Payment Gateways</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="api_login_id" added="1399358979">API Login ID</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="the_merchant_api_login_id_is_provided_in_the_merchant_interface_and_must_be_stored_securely" added="1399359003">The merchant API Login ID is provided in the Merchant Interface and must be stored securely.</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="transaction_key" added="1399359030">Transaction Key</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="the_merchant_transaction_key_is_provided_in_the_merchant_interface_and_must_be_stored_securely" added="1399359050">The merchant Transaction Key is provided in the Merchant Interface and must be stored securely.</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="credit_card_transaction_types" added="1399359071">Credit Card Transaction Types</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="if_the_value_submitted_does_not_match_a_supported_value_the_transaction_is_rejected_if_this_field_is_not_submitted_or_the_value_is_blank_the_payment_gateway_will_process_the_transaction_as_an_authorization_and_capture_types_have_been_allowed_auth_capture_" added="1399359207"><![CDATA[If the value submitted does not match a supported value, the transaction is rejected. If this field is not submitted or the value is blank, the payment gateway will process the transaction as an "Authorization and Capture".
+
+Types have been allowed: 
+AUTH_CAPTURE : Authorization and Capture
+AUTH_ONLY : Authorization Only
+CAPTURE_ONLY : Capture Only
+CREDIT : Credit (Refund)
+PRIOR_AUTH_CAPTURE : Prior Authorization and Capture
+VOID : Void]]></phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="credit_card_transaction_types_hint" added="1399359416"><![CDATA[If the value submitted does not match a supported value, the transaction is rejected. If this field is not submitted or the value is blank, the payment gateway will process the transaction as an "Authorization and Capture".
+
+Types have been allowed: 
+AUTH_CAPTURE : Authorization and Capture
+AUTH_ONLY : Authorization Only
+CAPTURE_ONLY : Capture Only
+CREDIT : Credit (Refund)
+PRIOR_AUTH_CAPTURE : Prior Authorization and Capture
+VOID : Void]]></phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="credit_card_transaction_types_hint_2" added="1399359515"><![CDATA[If the value submitted does not match a supported value, the transaction is rejected. If this field is not submitted or the value is blank, the payment gateway will process the transaction as an "Authorization and Capture".
+<br/><br/>
+Types have been allowed: 
+<br/>AUTH_CAPTURE : Authorization and Capture
+<br/>AUTH_ONLY : Authorization Only
+<br/>CAPTURE_ONLY : Capture Only
+<br/>CREDIT : Credit (Refund)
+<br/>PRIOR_AUTH_CAPTURE : Prior Authorization and Capture
+<br/>VOID : Void]]></phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="authorize_net_billing_info" added="1399428773">Authorize.Net Billing Info</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="fill_first_name_for_billing_info" added="1399428927">Fill First Name for billing info</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="fill_first_name" added="1399429212">Fill First Name</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_fill_first_name" added="1399429322">Please fill First Name</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_fill_last_name" added="1399429423">Please fill Last Name</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_fill_address" added="1399429530">Please fill Address</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_fill_city" added="1399429546">Please fill City</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_fill_country" added="1399429570">Please fill Country</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_fill_state" added="1399429587">Please fill State</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_fill_zip_code" added="1399429600">Please fill Zip Code</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_fill_phone" added="1399429620">Please fill Phone</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_fill_email_address" added="1399429645">Please fill Email Address</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_fill_credit_card_number" added="1399429670">Please fill Credit Card Number</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_fill_card_security_code" added="1399429693">Please fill Card Security Code</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="purchase_with_authorize_net" added="1399432793">Purchase with Authorize.Net</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="billing_info" added="1399432807">Billing Info</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="additional_info" added="1399432818">Additional Info</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="credit_card_info" added="1399432831">Credit Card Info</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="first_name" added="1399432843">First Name</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="last_name" added="1399433078">Last Name</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="address" added="1399433121">Address</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="city" added="1399433162">City</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="country" added="1399433251">Country</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="state" added="1399433293">State</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="zip_code" added="1399433340">Zip Code</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="phone" added="1399433908">Phone</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="for_example_123_123_1234" added="1399433963">For example, (123)123-1234</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="email_address" added="1399434089">Email Address</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="for_example_janedoe_customer_com" added="1399434129">For example, janedoe@customer.com</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="credit_card_number" added="1399434171">Credit Card Number</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="card_security_code" added="1399434201">Card Security Code</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="expiration_month" added="1399434249">Expiration Month</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="expiration_year" added="1399434295">Expiration Year</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="confirm_payment" added="1399434377">Confirm Payment</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_enter_a_valid_phone_number" added="1399437798">Please enter a valid phone number!</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="email_format_is_not_valid" added="1399438170">Email format is not valid</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="there_has_been_a_problem_with_your_transaction_please_verify_your_payment_details_and_try_again" added="1399450462">There has been a problem with your transaction. Please verify your payment details and try again.</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="configuration" added="1399870865">Configuration</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="enable_a_href_https_account_authorize_net_target_blank_silent_post_url_a_via_account_settings_choose_silent_post_url_the_silent_post_url_feature_should_be_enabled_and_the_silent_post_url_should_be_set_to_silentpost_url" added="1399876733"><![CDATA[Enable <a href="https://account.authorize.net/" target="_blank">Silent Post URL</a> via: Account > Settings > Choose Silent Post URL. The Silent Post URL feature should be enabled, and the Silent Post URL should be set to: {silentpost_url}]]></phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="client_account_number" added="1399885560">Client Account Number</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="an_integer_value_representing_the_6_digit_client_account_number" added="1399885578">An integer value representing the 6-digit client account number.</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="client_sub_account_number" added="1399885604">Client Sub Account Number</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="an_integer_value_representing_the_4_digit_client_subaccount_number" added="1399885654">An integer value representing the 4-digit client subaccount number.</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="salt_key" added="1399886052">Salt Key</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="the_salt_value_is_used_by_ccbill_to_verify_the_hash_and_can_be_obtained_in_one_of_the_two_ways_br_1_contact_client_support_and_receive_the_salt_value_br_2_create_your_own_salt_value_up_to_32_alphanumeric_characters_and_provide_it_to_client_support" added="1399886101"><![CDATA[The salt value is used by CCBill to verify the hash and can be obtained in one of the two ways :
+<br/>1. Contact client support and receive the salt value. 
+<br/>2. Create your own salt value (up to 32 alphanumeric characters) and provide it to client support.]]></phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="form_name" added="1399886120">Form Name</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="the_name_of_the_form" added="1399886138">The name of the form.</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="company" added="1400122788">Company</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="fax" added="1400123361">Fax</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.6" var_name="please_enter_a_valid_fax_number" added="1400123540">Please enter a valid Fax number.</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="ccbill_guideline" added="1423466273">CCBill Guideline</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="ynadvancedpayment_guideline" added="1423467231"><![CDATA[&#42;&#42;&#42; DO NOT CHANGE HERE &#42;&#42;&#42;
+- Please set up Postback URL on your CCBill account.
+
+- In order to set up go to Account Info menu item / Sub Account Admin section and choose the sub account you had to create earlier. At the &#8220;Account Admin / Modify Subaccount&#8221; menu, click &#8220;Advanced&#8221; link. Once redirected, complete the following configurations on Callback.
+
+1, Configure &#8220;Success&#8221; URL:
+At the &#8220;Approval Post URL&#8221; row enter the following URL: {success_url}
+
+2. Configure &#8220;Failure&#8221; URL:
+At the &#8220;Denial Post URL&#8221; row enter the following URL: {failure_url}]]></phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="authorize_guideline" added="1423469753">Authorize Guideline</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="ynadvancedpayment_authorizenet_guideline" added="1423470146"><![CDATA[&#42;&#42;&#42; DO NOT CHANGE HERE &#42;&#42;&#42;
+
+Enable Silent Post URL at https://account.authorize.net/ via: Account > Settings > Choose Silent Post URL. The Silent Post URL feature should be enabled, and the Silent Post URL should be set to: {silentpost_url}]]></phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="ynadvancedpayment_ccbill_guideline" added="1423470350"><![CDATA[- Please set up Postback URL on your CCBill account.
+
+- In order to set up go to Account Info menu item / Sub Account Admin section and choose the sub account you had to create earlier. At the &#8220;Account Admin / Modify Subaccount&#8221; menu, click &#8220;Advanced&#8221; link. Once redirected, complete the following configurations on Callback.
+
+1, Configure &#8220;Success&#8221; URL:
+At the &#8220;Approval Post URL&#8221; row enter the following URL: {success_url}
+
+2. Configure &#8220;Failure&#8221; URL:
+At the &#8220;Denial Post URL&#8221; row enter the following URL: {failure_url}]]></phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="gopay_billing_info" added="1433815375">Gopay billing info</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="pay" added="1433893346">Pay</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="client_id" added="1434609963">Client Id</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="secure_key" added="1434609991">Secure Key</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="go_pay_id" added="1434610066">Go Pay Id</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="transaction_is_expired" added="1434613943">Transaction is expired</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="choice_of_payment_methods" added="1434613961">Choice of payment methods</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="bank_transfer" added="1434613975">Bank Transfer</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="credit_card" added="1434614111">Credit Card</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="error_from_gopay_gateway_please_try_again" added="1434624560">Error from GoPay gateway. Please try again</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="country_code" added="1434626389">Country Code</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="for_example_420777456123" added="1434626826">For example: +420777456123</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="for_example_zbynek_zak_gopay_cz" added="1434626843">For example : zbynek.zak@gopay.cz</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="gopay_getway_only_support_eur_czk" added="1434627140">GoPay getway only support EUR,CZK</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="cannot_connect_to_gopay_com_gateway" added="1434628742">Cannot connect to Gopay.com Gateway</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="purchase_with_gopay" added="1434668380">Purchase with GoPay</phrase>
+		<phrase module_id="ynadvancedpayment" version_id="3.7.7" var_name="postal_code" added="1434668419">Postal Code</phrase>
+	</phrases>
+</module>

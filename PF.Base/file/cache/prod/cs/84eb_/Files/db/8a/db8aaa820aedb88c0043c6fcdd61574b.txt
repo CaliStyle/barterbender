@@ -1,0 +1,112 @@
+a:5:{s:1:"d";a:22:{s:7:"page_id";s:1:"7";s:7:"user_id";s:1:"1";s:9:"module_id";s:4:"core";s:10:"product_id";s:6:"phpfox";s:9:"is_active";s:1:"1";s:9:"is_phrase";s:1:"0";s:9:"parse_php";s:1:"1";s:12:"has_bookmark";s:1:"1";s:8:"add_view";s:1:"0";s:9:"full_size";s:1:"1";s:5:"title";s:25:"Seller information center";s:9:"title_url";s:25:"seller-information-center";s:15:"disallow_access";N;s:5:"added";s:10:"1552632955";s:10:"total_view";s:1:"0";s:16:"total_attachment";s:1:"0";s:9:"total_tag";s:1:"0";s:7:"keyword";N;s:11:"description";N;s:4:"text";s:3809:"Seller Information Center
+
+
+Welcome to the BarterBender Seller Information Center. Below is some information that can help get you selling faster on BarterBender.
+
+How to list your Products
+
+
+We've got a few different categories you can list your items on BarterBender. The Auctions section which is like it sounds, an auction house were you can search, buy, sell and trade. The next section we have on BarterBender were you can list your items for sale is the Classifieds section. Think of the Classifieds section as the newspaper listings of the modern day-and-age. Lastly is the Yard Sales section of the website which allows you to hold an event for other to attend with your ware for sale.
+
+- Describe your item and add photos to help get it more views.
+- Start by simply telling us what you're selling. Then add up to 3 free photos.
+- Most new sellers choose auction-style to attract the most buyers. Or choose a buy now price listing to get exactly what you want for your item.
+- List your item for FREE. As soon as you click "Submit ," your item is visible to millions of buyers. It's that simple.
+- Watch a video on writing effective, detailed listings.
+- Watch a video on taking great product photos.
+- Watch a video on choosing competitive online pricing.
+
+
+The Difference between Regular Vs. Sponsored Listings
+
+
+Regular listings are FREE listings by our members while the Sponsored Listings are paid listings that members have decided they want to make it more visible for a quicker sale. Sponsored listings can be purchased for any item or event within BarterBender for a small fee based upon impressions (how many times the item is seen). On all of our sponsored listings we give back to Charity.
+
+
+How to Package your Products for Shipping
+
+
+Items should be packaged according to which postmaster standards you are shipping through. Items should also be packaged so that they are received in the condition listed during the purchase. We recommend using bubble wrap or other package supplies when shipping fragile items.
+
+
+How to Ship your Items
+
+
+Offer the shipping option that works best for you. USPS Flat Rate boxes and envelopes are easy and cost effective.
+
+
+How to Get Paid
+
+
+To ensure quick payment, use proper shipping labels and collect payments with PayPal. Payment times vary and some new sellers experience slight delays, so be sure to do the following:
+- Collect payments through PayPal. It’s the fastest, easiest, and securest way to get paid. Create a PayPal account now.
+
+How to Handle a Dispute
+
+
+Buyers and sellers share the responsibility for making sure purchases made on Barter Bender are rewarding and hassle-free. We strongly encourage buyers to work with sellers before opening a claim relating to a purchase. Buyers and sellers agree to follow the requirements of the Barter Bender Buyer Protection Policy with respect to claims made under Barter Bender's Buyer Protection Policy. Barter Bender Buyer Protection covers only claims filed in accordance with the Barter Bender Buyer Protection Policy, not claims filed with PayPal. Barter Bender Buyer Protection will not cover claims for which the buyer has initiated another form of resolution processing, including credit card chargebacks (if the buyer paid by credit card) or PayPal Buyer Protection claims (if the buyer paid by PayPal). We may suspend the Barter Bender Buyer Protection Policy without notice if we suspect abuse or interference with the proper working of the program.
+
+How to get Reviewed
+
+
+- Send the item to your buyer in the condition described and everything described.
+- Get positive feedback by completing transactions successfully and in a timely manner.
+- Be sure to ask your buyers to leave positive feedback for you as soon as payment is confirmed.
+
+For more information visit our Forum!";s:11:"text_parsed";s:3856:"<?php /* Cached: March 15, 2019, 6:55 am */ ?>
+Seller Information Center
+
+
+Welcome to the BarterBender Seller Information Center. Below is some information that can help get you selling faster on BarterBender.
+
+How to list your Products
+
+
+We've got a few different categories you can list your items on BarterBender. The Auctions section which is like it sounds, an auction house were you can search, buy, sell and trade. The next section we have on BarterBender were you can list your items for sale is the Classifieds section. Think of the Classifieds section as the newspaper listings of the modern day-and-age. Lastly is the Yard Sales section of the website which allows you to hold an event for other to attend with your ware for sale.
+
+- Describe your item and add photos to help get it more views.
+- Start by simply telling us what you're selling. Then add up to 3 free photos.
+- Most new sellers choose auction-style to attract the most buyers. Or choose a buy now price listing to get exactly what you want for your item.
+- List your item for FREE. As soon as you click "Submit ," your item is visible to millions of buyers. It's that simple.
+- Watch a video on writing effective, detailed listings.
+- Watch a video on taking great product photos.
+- Watch a video on choosing competitive online pricing.
+
+
+The Difference between Regular Vs. Sponsored Listings
+
+
+Regular listings are FREE listings by our members while the Sponsored Listings are paid listings that members have decided they want to make it more visible for a quicker sale. Sponsored listings can be purchased for any item or event within BarterBender for a small fee based upon impressions (how many times the item is seen). On all of our sponsored listings we give back to Charity.
+
+
+How to Package your Products for Shipping
+
+
+Items should be packaged according to which postmaster standards you are shipping through. Items should also be packaged so that they are received in the condition listed during the purchase. We recommend using bubble wrap or other package supplies when shipping fragile items.
+
+
+How to Ship your Items
+
+
+Offer the shipping option that works best for you. USPS Flat Rate boxes and envelopes are easy and cost effective.
+
+
+How to Get Paid
+
+
+To ensure quick payment, use proper shipping labels and collect payments with PayPal. Payment times vary and some new sellers experience slight delays, so be sure to do the following:
+- Collect payments through PayPal. It’s the fastest, easiest, and securest way to get paid. Create a PayPal account now.
+
+How to Handle a Dispute
+
+
+Buyers and sellers share the responsibility for making sure purchases made on Barter Bender are rewarding and hassle-free. We strongly encourage buyers to work with sellers before opening a claim relating to a purchase. Buyers and sellers agree to follow the requirements of the Barter Bender Buyer Protection Policy with respect to claims made under Barter Bender's Buyer Protection Policy. Barter Bender Buyer Protection covers only claims filed in accordance with the Barter Bender Buyer Protection Policy, not claims filed with PayPal. Barter Bender Buyer Protection will not cover claims for which the buyer has initiated another form of resolution processing, including credit card chargebacks (if the buyer paid by credit card) or PayPal Buyer Protection claims (if the buyer paid by PayPal). We may suspend the Barter Bender Buyer Protection Policy without notice if we suspect abuse or interference with the proper working of the program.
+
+How to get Reviewed
+
+
+- Send the item to your buyer in the condition described and everything described.
+- Get positive feedback by completing transactions successfully and in a timely manner.
+- Be sure to ask your buyers to leave positive feedback for you as soon as payment is confirmed.
+
+For more information visit our Forum!";s:10:"has_viewed";N;}s:1:"g";a:0:{}s:1:"e";O:8:"DateTime":3:{s:4:"date";s:26:"2019-12-08 09:57:43.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:3:"GMT";}s:1:"m";N;s:1:"c";N;}

@@ -1,0 +1,67 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_foxfeedspro4</product_id>
+		<is_core>0</is_core>
+		<title>YouNet FoxFeeds Pro</title>
+		<description>by YouNet Company</description>
+		<version>4.02p1</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>http://phpfox.younetco.com/</url>
+		<url_version_check></url_version_check>
+		<icon>http://phpfox.younetco.com/files/2015/09/FoxFeeds-Pro.png</icon>
+		<vendor>YouNet Company</vendor>
+	</data>
+	<installs>
+		<install>
+			<version>3.02</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'foxfeedspro/install/v3.02.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'foxfeedspro/install/v3.03.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03p2</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'foxfeedspro/install/v3.03p2.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03p4</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'foxfeedspro/install/v3.03p4.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.04</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'foxfeedspro/install/v3.04.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.05p2</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'foxfeedspro/install/v3.05p2.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'foxfeedspro/install/v4.01.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01p2</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'foxfeedspro/install/v4.01p2.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'foxfeedspro/install/v4.02.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+	</installs>
+	<modules>
+		<module_id>foxfeedspro</module_id>
+	</modules>
+</product>

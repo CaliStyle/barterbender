@@ -1,0 +1,114 @@
+
+/*=============================================
+=            FOOTER            =
+=============================================*/
+#section-footer{
+    background: @footer-bg;
+    .mt-3();
+    border-top: 1px solid @gray-light;
+    .footer-holder{
+        background: @footer-holder-bg;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .py-6();
+        @media (max-width: @screen-xs-min){
+            .py-3();
+        }
+        @media (max-width: @screen-sm-max){
+            flex-direction: column;
+        }
+
+        .copyright{
+            display: inline-flex;
+            align-items: center;
+            flex-direction: column;
+            .pb-0;
+            .site-logo{
+                margin-top: -16px;
+            }
+            .copyright-container{
+                color: @gray-dark;
+                text-transform: uppercase;
+                .fz-lh(14px);
+                font-weight: 600;
+                a{
+                    color: @gray-light;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .footer-menu{
+            margin: 0 -10px;
+            margin-top: @grid-point + @grid-point/2;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            li{
+                padding: 0;
+                &:after{
+                    content: "";
+                    width: 2px;
+                    height: 2px;
+                    display: inline-block;
+                    background-color: #fff;
+                    margin: 0 10px;
+                }
+                &:last-child{
+                    &:after{
+                        display: none;
+                    }
+                }
+                & + li{
+                    &:before{
+                        display: none;
+                    }
+                }
+
+                a{
+                    .transition(all 300ms ease);
+                    color: @gray-light;
+                    position: relative;
+                    &:after{
+                        content: "";
+                        height: 1px;
+                        left: 0;
+                        right: 0;
+                        background-color: @gray-light;
+                        position: absolute;
+                        bottom: 0;
+                        opacity: 0;
+                    }
+
+                    &:hover{
+                        color: #fff;
+                        &:after{
+                            opacity: 1;
+                        }
+                    }
+
+                    &:before{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    #page_yncphotoworld_landing &{
+        margin-top: 0;
+
+        .footer-holder{
+            margin-top: 0;
+            border-top: 0;
+
+            @media screen and (max-width: @screen-xssm-max){
+                .py-3();
+            }
+        }
+    }
+}
+/*=====  End of FOOTER  ======*/

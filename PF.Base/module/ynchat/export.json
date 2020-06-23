@@ -1,0 +1,9 @@
+{
+	"paths": {
+		"0": "PF.Base/file/pic/ynchat_emoticon",
+		"1": "PF.Base/file/pic/ynchat_sticker",
+		"2": "PF.Base/file/ynchat/index.html",
+		"3": "PF.Base/ynchat",
+		"4": "PF.Base/module/ynchat"
+	}
+}

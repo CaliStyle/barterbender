@@ -1,0 +1,35 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_auction4</product_id>
+		<is_core>0</is_core>
+		<title>YNC Auction</title>
+		<description>by YouNetCo</description>
+		<version>4.02p2</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>https://phpfox.younetco.com/</url>
+		<url_version_check></url_version_check>
+		<icon>http://phpfox.younetco.com/files/2015/09/Auction_Like_eBay.png</icon>
+		<vendor>YouNetCo</vendor>
+	</data>
+	<dependencies>
+		<dependency>
+			<type_id>product</type_id>
+			<check_id>younet_ecommerce4</check_id>
+			<dependency_start>4.01</dependency_start>
+			<dependency_end></dependency_end>
+		</dependency>
+	</dependencies>
+	<installs>
+		<install>
+			<version>4.01</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'auction/install/v4.01.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+	</installs>
+	<modules>
+		<module_id>auction</module_id>
+	</modules>
+</product>

@@ -1,0 +1,22 @@
+<span id="cal-slide-tick" style="display: none"></span>
+<div id="cal-slide-content" class="cal-event-list">
+	<div class="fevent-event-list">
+		<ul class="unstyled list-unstyled item-event-time-list">
+			<% _.each(events, function(event) { %>
+				<li class="item-event-time">
+					<span class="<% if (event.is_birthday) { %>ico ico-gift p-fevent-birthday<% } else { %>p-fevent-dot-status<% } %> <%= event.color_class %>"></span>
+					<span class="fw-bold"><%= event.time_label %></span>
+				</li>
+			<% }) %>
+		</ul>
+		<ul class="unstyled list-unstyled item-event-title-list">
+			<% _.each(events, function(event) { %>
+				<li class="item-event-title">
+					<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
+						data-event-class="<%= event['class'] %>" class="event-item">
+						<%= event.title %></a>
+				</li>
+			<% }) %>
+		</ul>
+	</div>
+</div>

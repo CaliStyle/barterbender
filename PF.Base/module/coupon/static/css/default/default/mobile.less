@@ -1,0 +1,171 @@
+.ync-mobile-item{
+	overflow:hidden;
+	margin-bottom:5px;
+}
+.ync-mobile-item + .ync-mobile-item{
+	border-top:1px solid #dfdfdf;
+	padding-top:5px;
+}
+.ync-mobile-item > a{
+	display:block;
+	float:left;
+}
+.ync-mobile-item > div{
+	margin-left:95px;
+}
+.ync-mobile-progress-meter {
+	width: 50%;
+	margin: 5px 0;
+	overflow: hidden;
+	border: 1px solid #666;
+	height: 12px;
+	display: block;
+	
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #D5D5D5 0%, #FFFFFF 100%);
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #D5D5D5 0%, #FFFFFF 100%);
+
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #D5D5D5 0%, #FFFFFF 100%);
+
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D5D5D5), color-stop(1, #FFFFFF));
+
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #D5D5D5 0%, #FFFFFF 100%);
+
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #D5D5D5 0%, #FFFFFF 100%);
+}
+.ync-mobile-progress-meter .ync-mobile-has-progress{
+	height: 12px;
+	display: block;
+	border-right: 1px solid #666;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #B5DDEC 0%, #0076A8 100%);
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #B5DDEC 0%, #0076A8 100%);
+
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #B5DDEC 0%, #0076A8 100%);
+
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #B5DDEC), color-stop(1, #0076A8));
+
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #B5DDEC 0%, #0076A8 100%);
+
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #B5DDEC 0%, #0076A8 100%);
+}
+.ync-mobile-entry{
+	overflow:hidden;
+	margin-bottom:5px;
+}
+.ync-mobile-entry + .ync-mobile-entry{
+	border-top:1px solid #dfdfdf;
+	padding-top:5px;
+}
+
+.ync-mobile-entry .ync-image-mobile-coupon{
+	height:70px;
+	width:100px;
+    position: relative;
+}
+.ync-mobile-entry .ync-image-mobile-coupon{
+	float:left;
+}
+.ync-mobile-entry .ync_title_info{
+	margin-left:105px;
+	margin-top:0;
+}
+
+.ync-mobile-entry .ync_pending_link,
+.ync-mobile-entry .ync_close_link,
+.ync-mobile-entry .ync_reached_link,
+.ync-mobile-entry .ync_pause_link,
+.ync-mobile-entry .ync_upcoming_link,
+.ync-mobile-entry .ync_featured_link,
+.ync-mobile-entry .yn_hightlight_link,
+.ync-mobile-entry .ync_ending_soon_link
+{
+	position:absolute;
+	bottom:10px;
+	left:-3px;
+	width:100%;
+	height:18px;
+	background:url("@{module-folder}coupon/static/image/default/sprites.png") no-repeat;
+    background-size: 103% 180px;
+	color:#fff;
+	text-align:center;
+	font-size:10px;
+	font-weight:bold;
+    
+	z-index:2;
+}
+.ync-mobile-entry .ync_featured_link {
+	background-position: 0 -44px;
+}
+.ync-mobile-entry .ync_ending_soon_link {
+	background-position: 0 -22px;
+}
+.ync-mobile-entry .ync_upcoming_link {
+	background-position: 0 -66px;
+}
+.ync-mobile-entry .ync_close_link {
+	background-position: 0 0;
+}
+
+/*** add for mobile default ***/
+.ync-list-block .ync th {
+    font-weight: bold;
+    text-align: left;
+}
+
+.ync-list-block .ync th,
+.ync-list-block .ync td {
+    padding: 3px 5px 3px 0;
+}
+
+/* fix fcoupon */
+.coupon\.index #mobile_content,
+.coupon\.list #mobile_content,
+.coupon\.detail #mobile_content {
+    padding: 10px;
+}
+
+.coupon\.index  #mobile_content #site_content .ync-mobile-entry {
+    overflow: visible;
+}
+
+.coupon\.list .ync { 
+    margin-top: 10px;
+}
+
+.coupon\.list .ync th { 
+    font-weight: bold; 
+    text-align: left;
+}
+
+.coupon\.list .ync th,
+.coupon\.list .ync td {
+    padding: 5px 2px; 
+}
+
+.coupon\.list .ui-datepicker {
+    z-index: 3 !important;
+}
+
+.coupon\.list .ync-list-block input[type=text] {
+    max-width: 280px;
+}
+
+.coupon\.detail .item_bar_action_holder ul li a {
+    padding: 0;
+}
+.coupon\.detail .item_bar_action_holder ul li + li a {
+    padding-left: 10px;
+}

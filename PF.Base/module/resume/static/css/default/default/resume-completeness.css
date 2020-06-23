@@ -1,0 +1,51 @@
+#js_block_border_resume_resume-completeness .content{
+	background:#FFF;
+	padding:10px;
+}
+.yns-profile-complete li{
+	margin:10px 0 0 5px;
+}
+.yns-profile-complete li sup{
+	vertical-align: sub;
+	font-style: italic;
+	color: red;
+	margin:0 4px;
+}
+.yns-profile-complete p{
+	clear:both;
+	margin:5px 0;
+}
+.yns-profile-complete p.yns-add-more{
+	font-size:11px;
+	margin-top:0;
+	color: #898B8F;
+}
+.yns-profile-complete strong{
+	font-size: 13px;
+	color: #898B8F;
+}
+.progress-meter, .progress-meter .has-progress,
+.progress-meter .no-progress{
+	height: 12px;
+	display: block;
+}
+.progress-meter {
+	border: 1px solid #666;
+	overflow: hidden;
+	background: transparent url("../../../image/sprite_progress.png") repeat-x 0 0;
+	width: 100px;
+}
+.progress .meter, .progress-meter {
+	width: 95%;
+	margin: 0 5px 3px 0;
+	float: left;
+	overflow: hidden;
+}
+.progress-meter .has-progress {
+	border-right: 1px solid #666;
+	background: transparent url("../../../image/sprite_progress.png") repeat-x 0 -50px;
+}
+.yns-viewall{
+    margin: 10px;
+	text-align:center;
+}

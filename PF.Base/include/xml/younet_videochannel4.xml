@@ -1,0 +1,245 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_videochannel4</product_id>
+		<is_core>0</is_core>
+		<title>YNC Video Channel</title>
+		<description>by YouNetCo</description>
+		<version>4.02p3</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>https://phpfox.younetco.com</url>
+		<url_version_check></url_version_check>
+		<icon>http://phpfox.younetco.com/files/2015/09/video_channel.png</icon>
+		<vendor>YouNetCo</vendor>
+	</data>
+	<installs>
+		<install>
+			<version>3.01</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('channel_category_data') ."` (`channel_id` int(10) unsigned NOT NULL,
+  `category_id` int(10) unsigned NOT NULL,
+  `video_id` int(10) unsigned NOT NULL,
+  KEY `category_id` (`category_id`),
+  KEY `channel_id` (`channel_id`),
+  KEY `video_id` (`video_id`)
+) ENGINE=InnoDB ;");
+
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('channel_channel') ."` (
+  `channel_id` int(10) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `summary` text NOT NULL,
+  `url` varchar(255) NOT NULL,
+  `site_id` varchar(50) NOT NULL,
+  `time_stamp` int(10) NOT NULL,
+  `privacy` tinyint(1) NOT NULL DEFAULT '0',
+  `privacy_comment` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`channel_id`)
+) ENGINE=InnoDB   AUTO_INCREMENT=6 ;");
+
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('channel_channel_data') ."` (
+  `video_id` int(10) NOT NULL,
+  `channel_id` int(10) NOT NULL
+) ENGINE=InnoDB ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('channel_video') ."` (
+  `video_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `in_process` tinyint(1) NOT NULL DEFAULT '0',
+  `is_stream` tinyint(1) NOT NULL DEFAULT '0',
+  `is_featured` tinyint(1) NOT NULL DEFAULT '0',
+  `is_spotlight` tinyint(1) NOT NULL DEFAULT '0',
+  `is_sponsor` tinyint(1) NOT NULL DEFAULT '0',
+  `view_id` tinyint(1) NOT NULL DEFAULT '0',
+  `module_id` varchar(75) DEFAULT NULL,
+  `item_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `privacy` tinyint(1) NOT NULL DEFAULT '0',
+  `privacy_comment` tinyint(1) NOT NULL DEFAULT '0',
+  `title` varchar(255) DEFAULT NULL,
+  `user_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `parent_user_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `destination` varchar(75) DEFAULT NULL,
+  `server_id` tinyint(1) NOT NULL DEFAULT '0',
+  `file_ext` varchar(10) DEFAULT NULL,
+  `duration` varchar(8) DEFAULT NULL,
+  `resolution_x` varchar(4) DEFAULT NULL,
+  `resolution_y` varchar(4) DEFAULT NULL,
+  `image_path` varchar(75) DEFAULT NULL,
+  `image_server_id` tinyint(1) NOT NULL DEFAULT '0',
+  `total_comment` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_like` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_score` decimal(4,2) NOT NULL DEFAULT '0.00',
+  `total_rating` int(10) unsigned NOT NULL DEFAULT '0',
+  `time_stamp` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_view` int(10) unsigned NOT NULL DEFAULT '0',
+  `is_viewed` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`video_id`),
+  KEY `in_process` (`in_process`),
+  KEY `user_id` (`user_id`),
+  KEY `view_id` (`view_id`),
+  KEY `in_process_2` (`in_process`,`view_id`,`item_id`,`privacy`),
+  KEY `in_process_3` (`in_process`,`view_id`,`item_id`,`user_id`),
+  KEY `in_process_4` (`in_process`,`view_id`,`item_id`,`privacy`,`title`),
+  KEY `in_process_5` (`in_process`,`view_id`,`item_id`,`privacy`,`user_id`),
+  KEY `in_process_6` (`in_process`,`view_id`,`privacy`,`title`)
+) ENGINE=InnoDB   AUTO_INCREMENT=30 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('channel_video_embed') ."` (
+  `video_id` int(10) unsigned NOT NULL,
+  `video_url` varchar(255) NOT NULL,
+  `embed_code` mediumtext NOT NULL,
+  UNIQUE KEY `video_id` (`video_id`)
+) ENGINE=InnoDB ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('channel_video_rating')  ."` (
+  `rate_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `item_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `rating` decimal(4,2) NOT NULL DEFAULT '0.00',
+  `time_stamp` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`rate_id`),
+  KEY `item_id` (`item_id`,`user_id`),
+  KEY `item_id_2` (`item_id`)
+) ENGINE=InnoDB   AUTO_INCREMENT=3 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('channel_video_text') ."` (
+  `video_id` int(10) unsigned NOT NULL,
+  `text` mediumtext,
+  `text_parsed` mediumtext,
+  UNIQUE KEY `video_id` (`video_id`)
+) ENGINE=InnoDB ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('channel_video_track') ."` (
+  `item_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `ip_address` varchar(15) DEFAULT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  KEY `item_id` (`item_id`,`ip_address`)
+) ENGINE=InnoDB ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS `". Phpfox::getT('channel_category')."` (
+  `category_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `parent_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `is_active` tinyint(1) NOT NULL DEFAULT '0',
+  `name` varchar(255) NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL DEFAULT '0',
+  `used` int(10) unsigned NOT NULL DEFAULT '0',
+  `ordering` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`category_id`),
+  KEY `parent_id` (`parent_id`,`is_active`),
+  KEY `is_active` (`is_active`)
+) ENGINE=InnoDB   AUTO_INCREMENT=30 ;");
+
+$this->database()->query("
+CREATE TABLE IF NOT EXISTS `". Phpfox::getT('channel_video_remove')."` (
+  `video_url` varchar(255) NOT NULL,
+  `embed_code` mediumtext NOT NULL
+) ENGINE=InnoDB ;");]]></install_code>
+			<uninstall_code><![CDATA[$this->database()->query("DELETE FROM `".Phpfox::getT('feed_share')."` WHERE `module_id` = 'videochannel'");]]></uninstall_code>
+		</install>
+		<install>
+			<version>3.01p1</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('channel_video_remove'),'remove_id'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('channel_video_remove')."` ADD  `remove_id` INT( 10 ) UNSIGNED NOT NULL AUTO_INCREMENT KEY");
+}
+
+if(!$this->database()->isField(Phpfox::getT('channel_video_remove'),'channel_id'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('channel_video_remove')."` ADD `channel_id` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('user_activity'),'activity_videochannel'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('user_activity')."` ADD  `activity_videochannel` INT( 10 ) UNSIGNED NOT NULL DEFAULT  '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('user_field'),'total_videochannel'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('user_field')."` ADD  `total_videochannel` INT( 10 ) UNSIGNED NOT NULL DEFAULT  '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('channel_category_data'),'video_id'))
+{
+   $this->database()->query("ALTER TABLE `".Phpfox::getT('channel_category_data')."` ADD `video_id` INT( 10 ) UNSIGNED NOT NULL");
+}
+
+if(!$this->database()->isField(Phpfox::getT('channel_channel'),'privacy'))
+{
+   $this->database()->query("ALTER TABLE `".Phpfox::getT('channel_channel')."` ADD `privacy` tinyint(1) NOT NULL DEFAULT '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('channel_channel'),'privacy_comment'))
+{
+   $this->database()->query("ALTER TABLE `".Phpfox::getT('channel_channel')."` ADD `privacy_comment` tinyint(1) NOT NULL DEFAULT '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('channel_video'),'privacy_comment'))
+{
+   $this->database()->query("ALTER TABLE `".Phpfox::getT('channel_video')."` ADD `privacy_comment` tinyint(1) NOT NULL DEFAULT '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('channel_video'),'total_like'))
+{
+   $this->database()->query("ALTER TABLE `".Phpfox::getT('channel_video')."` ADD `total_like` int(10) unsigned NOT NULL DEFAULT '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('channel_video_track'),'ip_address'))
+{
+   $this->database()->query("ALTER TABLE `".Phpfox::getT('channel_video_track')."` ADD `ip_address` varchar(15) DEFAULT NULL");
+}
+
+if(!$this->database()->isField(Phpfox::getT('channel_video'),'parent_user_id'))
+{
+   $this->database()->query("ALTER TABLE `".Phpfox::getT('channel_video')."` ADD `parent_user_id` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0'");
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.02</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('channel_channel'),'module_id'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('channel_channel')."` ADD  `module_id` VARCHAR( 75 ) NOT NULL DEFAULT 'videochannel'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('channel_channel'),'item_id'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('channel_channel')."` ADD  `item_id` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0'");
+}
+$this->database()->query("UPDATE `".phpfox::getT('block')."` SET `is_active`=0 WHERE `m_connection`='videochannel.index' AND `module_id`='videochannel' AND `component`='featured'");
+
+if(!$this->database()->isField(Phpfox::getT('channel_video'),'featured_time'))
+{
+$this->database()->query('ALTER TABLE `' . Phpfox::getT('channel_video') . '` ADD COLUMN `featured_time` INT(10) NOT NULL AFTER `is_featured`;');
+}
+
+]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03p2</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'videochannel/yninstall/versions/v3.03p2.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03p3</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'videochannel/yninstall/versions/v3.03p3.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'videochannel/yninstall/versions/v4.01.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02p2</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'videochannel/yninstall/versions/v4.02p2.php');]]></install_code>
+			<uninstall_code />
+		</install>
+	</installs>
+	<modules>
+		<module_id>videochannel</module_id>
+	</modules>
+</product>

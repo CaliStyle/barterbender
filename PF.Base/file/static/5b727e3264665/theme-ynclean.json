@@ -1,0 +1,18 @@
+{
+    "files_path": [
+        "assets\/autoload.css",
+        "assets\/autoload.js",
+        "assets\/autoload.less",
+        "assets\/defaults\/event_default_photo.jpg",
+        "assets\/defaults\/fevent_default_photo.jpg",
+        "assets\/logos\/logo_default.png",
+        "assets\/variables.less",
+        "checksum",
+        "html\/layout.html",
+        "less\/customize.less",
+        "less\/mixins.less",
+        "less\/variables.less",
+        "theme.png"
+    ],
+    "theme.json": "{\n    \"id\": \"ynclean\",\n    \"name\": \"YNC Clean Template\",\n    \"vars\": {\n        \"body_bg\": {\n            \"title\": \"Body Background\",\n            \"id\": \"body\",\n            \"attr\": \"background\"\n        },\n        \"color\": {\n            \"title\": \"Color\",\n            \"id\": \"body\",\n            \"attr\": \"color\"\n        },\n        \"link\": {\n            \"title\": \"Links\",\n            \"id\": \"a\",\n            \"attr\": \"color\"\n        },\n        \"link_hover\": {\n            \"title\": \"Links Hover\",\n            \"id\": \"a:hover\",\n            \"attr\": \"color\"\n        },\n        \"nav-color\":{\n            \"title\": \"Navigation Color\",\n            \"id\": \".ynclean-navbar.navbar-default .navbar-nav > li > a\",\n            \"attr\": \"color\"\n        },\n        \"nav-color-hover\":{\n            \"title\": \"Navigation Color Hover, Active\",\n            \"id\": \".ynclean-navbar.navbar-default .navbar-nav > li > a:hover, .ynclean-navbar.navbar-default .navbar-nav > li > a.menu_is_selected\",\n            \"attr\": \"color\"\n        },\n        \"header_bg\": {\n            \"title\": \"Header Background\",\n            \"id\": \".sticky-bar, .navbar-header\",\n            \"attr\": \"background\"\n        },\n        \"nav-bg\": {\n            \"title\": \"Navigation Background\",\n            \"id\": \".ynclean-navbar.navbar-default\",\n            \"attr\": \"background\"\n        },\n        \"content_bg\": {\n            \"title\": \"Content Background\",\n            \"id\": \"#content-stage\",\n            \"attr\": \"background\"\n        },\n        \"container_width\": {\n            \"title\": \"Container Width\",\n            \"id\": \".container-fluid\",\n            \"attr\": \"max-width\"\n        },\n        \"nav_bar_bg\": {\n            \"title\": \"Navigation Background\",\n            \"id\": \".navbar-default\",\n            \"attr\": \"background\"\n        },\n        \"block_bg\": {\n            \"title\": \"Block Background\",\n            \"id\": \".block\",\n            \"attr\": \"background\"\n        },\n        \"block_color\": {\n            \"title\": \"Block Content Text Color\",\n            \"id\": \".block .content, .block .content .extra_info\",\n            \"attr\": \"color\"\n        },\n        \"block_title_color\": {\n            \"title\": \"Block Title Text Color\",\n            \"id\": \".block .title\",\n            \"attr\": \"color\"\n        },\n        \"block_title_border\": {\n            \"title\": \"Block Title Border\",\n            \"id\": \".block .title\",\n            \"attr\": \"border-bottom-color\"\n        },\n        \"footer_bg\": {\n            \"title\": \"Footer Background\",\n            \"id\": \"footer, .footer-holder\",\n            \"attr\": \"background\"\n        },\n        \"footer_color\": {\n            \"title\": \"Footer Text Color\",\n            \"id\": \"footer, .footer-holder, .footer-holder a, .footer-holder a:hover\",\n            \"attr\": \"color\"\n        }\n    }\n}\n"
+}

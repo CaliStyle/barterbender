@@ -1,0 +1,610 @@
+a:5:{s:1:"d";a:22:{s:7:"page_id";s:1:"2";s:7:"user_id";s:1:"0";s:9:"module_id";s:4:"core";s:10:"product_id";s:6:"phpfox";s:9:"is_active";s:1:"1";s:9:"is_phrase";s:1:"0";s:9:"parse_php";s:1:"1";s:12:"has_bookmark";s:1:"0";s:8:"add_view";s:1:"0";s:9:"full_size";s:1:"1";s:5:"title";s:12:"Terms of Use";s:9:"title_url";s:5:"terms";s:15:"disallow_access";N;s:5:"added";s:10:"1232964954";s:10:"total_view";s:1:"0";s:16:"total_attachment";s:1:"0";s:9:"total_tag";s:1:"0";s:7:"keyword";N;s:11:"description";N;s:4:"text";s:47314:"BARTER BENDER™ USER AGREEMENT
+
+Last Updated: April 26, 2012
+
+The following describes the terms upon which Barter Bender offers you access to our sites, services and tools (including, but not limited to, web applications).
+This User Agreement (“Agreement”) governs your use of the “Barter Bender™” Website Services, and Tools (“Website”) provided by Barter Bender, LLC, its subsidiaries and contractors (“Barter Bender”).
+Your use of the Website constitutes your acceptance of the terms of this Agreement, which may be amended from time to time by Barter Bender. The most recent version of this Agreement shall always be available on the Internet at www.barterbender.com. Barter Bender reserves the right to change or modify this Agreement or any other Barter Bender policies related to the use of the Website at any time, and at its sole discretion, by posting revisions on the Internet at www.barterbender.com. Continued use of the Website following the posting of these changes or modifications will constitute acceptance of such changes or modifications.
+
+Scope.
+
+Before you may become a member of Barter Bender, you must read and accept all of the terms in, and linked to, this Agreement and the Barter Bender Privacy Policy. We strongly recommend that, as you read this Agreement, you also access and read the linked information. By accepting this Agreement, you agree that this Agreement and Privacy Policy will apply whenever you use Barter Bender sites or services, or when you use the tools that are made available to interact with Barter Bender sites and services (including, but not limited to, mobile and web applications). Some Barter Bender sites, services, and tools may have additional or other terms, agreements, or policies that govern their availability and use. Your use of and access to such sites, services, and tools are subject to any and all terms, agreements, or policies applicable to them.
+
+Using Barter Bender.
+
+While using Barter Bender sites, services, and tools, you agree:
+- to not post content or items in inappropriate categories or areas on our sites and services;
+- to respect and abide by any laws, third party rights or our policies;
+- to not use our sites, services or tools if you are not able to form legally binding contracts or are temporarily or indefinitely suspended from using our sites, services, or tools;
+- to deliver payment for items purchased by you, unless the seller has materially changed the item's description after you bid, a clear typographical error is made, or you cannot reach the seller;
+- to deliver items purchased from you, unless the buyer fails to meet the posted terms, or you cannot reach the buyer;
+- to not manipulate the price of any item or interfere with other users' listings;
+- to not circumvent or manipulate our fee structure, the billing process, or fees owed to Barter Bender;
+- to not post false, inaccurate, misleading, defamatory, or libelous content;
+- to not take any action that may undermine the feedback or ratings systems (such as displaying, importing or exporting feedback information off of the sites or using it for purposes unrelated to Barter Bender);
+- to not circumvent any Barter Bender policy or determinations about your account status such as temporary or indefinite suspensions or other account holds, limitations or restrictions;
+- to not transfer your Barter Bender account (including Feedback) and user ID to another party without our consent;
+- to not distribute or post spam, unsolicited or bulk electronic communications, chain letters, or pyramid schemes;
+- to not distribute viruses or any other technologies that may harm Barter Bender, or the interests or property of Barter Bender users;
+- to comply with the export control laws of any relevant jurisdiction and in accordance with posted rules and restrictions;
+- to not copy, modify, or distribute rights or content from the Barter Bender sites, services, or tools or Barter Bender's copyrights and trademarks; or
+- to not harvest or otherwise collect information about users, including email addresses, without their consent.
+
+Misusing Barter Bender.
+
+Barter Bender and its community of users (the "Community") work together to keep our sites, services, and tools working properly and the Community safe. Please report problems, offensive content, and policy violations to us.
+
+Barter Bender works to ensure that listed items do not infringe upon the copyright, trademark, or other intellectual property rights of third parties. If you believe that your intellectual property rights have been violated, please notify Barter Bender’s Verified Rights Owner Program at Admin@Barterbender.com and we will investigate.
+
+Without limiting other remedies, we may, in our sole discretion, limit, suspend, or terminate our services and user accounts, prohibit access to our sites, services, and tools, and their content, delay or remove hosted content, and take technical and legal steps to keep users from using our sites, services, or tools, if we think that they are creating problems or possible legal liabilities, infringing the intellectual property rights of third parties, or acting inconsistently with the letter or spirit of our policies. We also reserve the right to cancel unconfirmed accounts or accounts that have been inactive for a long time, or to modify or discontinue Barter Bender sites, services, or tools.
+
+Buyer and Seller Protection.
+
+Buyers and sellers share the responsibility for making sure purchases made on Barter Bender are rewarding and hassle-free. We strongly encourage buyers to work with sellers before opening a claim relating to a purchase. Buyers and sellers agree to follow the requirements of the Barter Bender Buyer Protection Policy with respect to claims made under Barter Bender's Buyer Protection Policy. Barter Bender Buyer Protection covers only claims filed in accordance with the Barter Bender Buyer Protection Policy, not claims filed with PayPal. Barter Bender Buyer Protection will not cover claims for which the buyer has initiated another form of resolution processing, including credit card chargebacks (if the buyer paid by credit card) or PayPal Buyer Protection claims (if the buyer paid by PayPal). We may suspend the Barter Bender Buyer Protection Policy without notice if we suspect abuse or interference with the proper working of the program.
+We require Barter Bender sellers to comply with our Buyer Protection resolution process. Buyers and sellers permit us to make a final decision, in our sole discretion, on any claim that a buyer files with Barter Bender under the Barter Bender Buyer Protection Policy. If we resolve a dispute in the buyer's favor, we will refund the buyer up to the full cost of the item (including any applicable sales taxes) and the original shipping, and we will require the seller to reimburse us for the amount due to the buyer. Without limiting the foregoing, sellers may not have to reimburse us for a Barter Bender Buyer Protection claim if they provide the documentation (for example, delivery confirmation or proof that the item was as described) indicated in the Barter Bender Buyer Protection Policy. In addition:
+Sellers must have a reimbursement method on file with Barter Bender.
+Sellers agree to allow us to remove funds from their PayPal accounts for amounts due to buyers. Sellers may change this reimbursement method by contacting Barter Bender. However, we reserve the right to continue using seller PayPal accounts for Barter Bender Buyer Protection cases associated with Barter Bender transactions paid for before the change.
+Where there are insufficient funds in PayPal accounts or where PayPal is not the reimbursement method of a seller, we will require another reimbursement method.
+Sellers agree to allow us to charge the payment method they designate for amounts due buyers.
+Changing a reimbursement method will not affect Barter Bender's use of a payment method on file for other purposes (such as payment of your Barter Bender fees). If sellers do not provide Barter Bender with a valid reimbursement method, we may collect amounts owed using other collection mechanisms, including retaining collection agencies. We may also suspend or restrict sellers from buying or selling on our sites and using our services and tools until payment is made.
+
+Correcting Mistakes in Payments to Buyers or Sellers. We reserve the right to fix any processing errors we discover. We will correct any processing errors by debiting or crediting the payment method used for the Barter Bender Buyer Protection refund or reimbursement
+
+Holds.
+
+To protect against the risk of liability, Barter Bender has at times requested, and may continue to request, that PayPal hold seller funds based on certain factors, including, but not limited to, selling history, seller performance, riskiness of the listing category, or the filing of a Barter Bender Buyer Protection claim. PayPal has held, and will continue to hold, seller funds pursuant to the terms of the PayPal User Agreement, PayPal policies and any other agreement entered into between PayPal and its users.
+
+International Trade and Language.
+
+Many of our sites, services, and tools are accessible to international sellers and buyers. We may, now or in the future, offer certain programs, tools, and site experiences of particular interest to international sellers and buyers, such as estimated local currency conversion and international shipping calculation tools.
+
+Some Barter Bender members may reside outside of the United States and some may not speak English as a primary language. To assist users who speak different languages, we may translate listings and other Barter Bender content, in whole or in part, into other languages or provide tools for doing so. If you are a seller, you may be able to opt out of our automated translation of your listings by, depending on the site, service, or tool involved, using the functionality built into such site, service, or tool. We also may provide you with access to third party tool(s) so you can request an on-demand translation of certain content on our sites, such as parts of a listing or a message from a Barter Bender user. If you request an on-demand translation from a third party tool, the accuracy or availability of the resulting translation is not guaranteed and will be your sole responsibility. In the event that any on-demand translation of a listing, message or other content conflicts with the meaning of the original text, then the original text will control as the official version of the listing, message or other content, as applicable.
+
+In some cases, you may be able to sell your items internationally by listing items for sale directly on one or more of Barter Bender’s existing or future international sites. Using various tools, services, and experiences, we may display your listing on a Barter Bender site other than the Barter Bender site where you listed your item for sale, including those situations where you choose to list items with an international shipping option (such as worldwide shipping). However, you may restrict international buyers from purchasing your items if you explicitly exclude international shipping locations from your listings by creating and applying an exclusion list to your listings. If your item is sold to a buyer on a Barter Bender site other than your Barter Bender site of registration, you agree to be subject to that other site's policies and Barter Bender’s User Agreement. You are responsible for complying with all laws and regulations applicable to the sale and shipment of items to international buyers.
+
+
+This agreement was written in English (US). To the extent any translated version of this agreement conflicts with the English version, the English version controls.
+
+Fees and Services.
+
+Joining Barter Bender and bartering on listed items is free. We do charge fees for using other services, such as placing or purchasing classified or auction items. The fees we charge for using our services are listed on our Fees schedule, which we may change at any time and at our discretion. Changes to that schedule are effective after we provide you with at least fourteen days' notice by posting the changes on www.barterbender.com. We may choose to temporarily change the fees for our services for promotional events or new services, and such changes are effective when we post the temporary promotional event or new service on the sites.
+
+Unless otherwise stated, all fees are quoted in United States Dollars. You are responsible for paying all fees and applicable taxes associated with our sites, services, and tools with a valid payment method by the payment due date. If your payment method fails or your account is past due, we may collect fees owed using other collection mechanisms. (This includes charging other payment methods on file with us, retaining collection agencies and legal counsel, and for accounts over 180 days past due, deducting the amount owed from your PayPal account balance.) In addition, you will be subject to late fees and we may suspend or restrict you from using our sites, services, and tools until full payment is made. Barter Bender, or the collection agencies we retain, may also report information about your account to credit bureaus, and as a result, late payments, missed payments, or other defaults on your account may be reflected in your credit report. If you wish to dispute the information Barter Bender reported to a credit bureau (i.e., Experian, Equifax or TransUnion) please contact us at Barter Bender, LLC, 809 E. Parkridge Avenue, Suite 102 - Corona, CA 92879. If you wish to dispute the information a collection agency reported to a credit bureau regarding your Barter Bender account, you must contact the collection agency directly.
+
+Authorization to Contact You.
+
+You authorize Barter Bender, its affiliates, agents, and independent contractors to contact you at any telephone number (including telephone numbers associated with mobile, cellular, wireless, or similar devices) you provide to us or from which you place a call to us, or any telephone number at which we reasonably believe we may reach you, using any means of communication, including, but not limited to, calls or text messages using an automatic telephone dialing system and/or prerecorded messages, even if you incur charges for receiving such communications.
+
+You understand and agree that Barter Bender may, without further notice or warning and in its discretion, monitor or record telephone conversations you or anyone acting on your behalf has with Barter Bender or its agents for quality control and training purposes or for its own protection. You acknowledge and understand that, while your communications with Barter Bender may be overheard, monitored, or recorded without further notice or warning, not all telephone lines or calls may be recorded by Barter Bender, and Barter Bender does not guarantee that recordings of any particular telephone calls will be retained or retrievable.
+
+Content.
+
+When providing us with content or posting content on Barter Bender's sites, you grant us a non-exclusive, worldwide, perpetual, irrevocable, royalty-free, sub-licensable (through multiple tiers) right to exercise any and all copyright, trademark, publicity, and database rights you have in the content, in any media known now or in the future.
+
+For the convenience of sellers, we may offer catalogs of stock images, descriptions and product specifications that are provided by third parties (including Barter Bender users). You may use catalog content solely in connection with your Barter Bender listings during the time your listings are on Barter Bender's sites.
+While we try to offer reliable data, we cannot promise that the catalogs will always be accurate and up-to-date, and you agree not to hold our catalog content providers or us responsible for inaccuracies in catalogs. If you choose to include catalog content in your listings, you continue to be fully responsible for your listings and for ensuring that your listings are accurate, do not include misleading information, and comply with this User Agreement and all Barter Bender policies. The catalogs may include copyrighted, trademarked or other proprietary materials. You agree not to remove any copyright, proprietary or identification markings included with the catalogs or create any derivative works based on catalog content (other than by including them in your listings).
+
+Consent to Collection and Use of Technical Data
+
+You agree that Barter Bender may collect and use technical data and related information, including but not limited to technical information about your device, system and application software, and peripherals, that is gathered periodically to facilitate the provision of website updates, product support and other services to you (if any) related to the Website. Barter Bender may use this information, as long as it is in a form that does not personally identify you, to improve its products or to provide services or technologies to you.
+
+Sharing Your Original Content and Information.
+
+You own all of the original content and information you post on Barter Bender (including content protected by your Intellectual Property rights), and you can control how it is shared through your privacy settings. In addition:
+
+For content that is covered by intellectual property rights, like photos and videos (IP content), you specifically give us the following permission, subject to your privacy and application settings: you grant us a non-exclusive, worldwide, perpetual, irrevocable, royalty-free, sub-licensable (through multiple tiers) right to use any IP content that you post on or in connection with Barter Bender (“IP License”). This IP License ends when you delete your IP content or your account.
+When you delete IP content, it is deleted in a manner similar to emptying the recycle bin on a computer. However, you understand that removed content may persist in backup copies for a reasonable period of time (but will not be available to others).
+When you publish content or information on Barter Bender, it means that you are allowing everyone, including people off of Barter Bender, to access and use that information, and to associate it with you (i.e., your name and profile picture).
+We always appreciate your feedback or other suggestions about Barter Bender, but you understand that we may use your feedback or suggestions without any obligation to compensate you for them (just as you have no obligation to offer them).
+
+Barter Bender’s Intellectual Property Rights.
+
+You acknowledge that no title to the patents, copyright, or trademark in or related to the Website (collectively referred to as “Barter Bender’s Intellectual Property”) is transferred to you. You further acknowledge that title and full ownership rights to the Website will remain the exclusive property of Barter Bender and/or its suppliers, and you will not acquire any rights to the Software, except as expressly set forth above. All title and Barter Bender’s Intellectual Property in and to the Software (including but not limited to any logos, names, images, photographs, animations, video, audio, music, text and “applets,” incorporated into the Website), the accompanying printed materials, and any copies of the Website, are owned by Barter Bender or its suppliers.
+This Website is protected by copyright laws, international copyright treaties, other intellectual property laws and treaties.
+All other trademarks appearing in the Websites, Services or Agreement are the property of their respective owners.
+
+Notice for Claims of Intellectual Property Violations and Copyright Infringement Pursuant to Section 512(c) of Title 17 of the United States Code.
+We respond to notices of alleged copyright infringement as required by the United States Digital Millennium Copyright Act.
+
+Limitation of Liability.
+
+We try to keep Barter Bender and its sites, services, and tools safe, secure, and functioning properly. You acknowledge that we cannot guarantee the continuous operation of or access to our sites, services, or tools. You further acknowledge that operation of and access to our sites, services, or tools may be interfered with as a result of technical issues or numerous factors outside of our control. You agree that you are making use of our sites, services, and tools at your own risk, and that they are being provided to you on an "AS IS" and "AS AVAILABLE" basis.
+
+Accordingly, to the extent permitted by applicable law, we exclude all express or implied warranties, terms and conditions including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In addition, to the extent permitted by applicable law, we are not liable, and you agree not to hold Barter Bender responsible, for any damages or losses (including, but not limited to, loss of money, goodwill or reputation, profits, or other intangible losses or any special, indirect, or consequential damages) resulting directly or indirectly from:
+
+Your use of or your inability to use our sites, services and tools;
+Delays or disruptions in our sites, services, or tools;
+Viruses or other malicious software obtained by accessing our sites, services, or tools or any site, services, or tool linked to our sites, services, or tools;
+Glitches, bugs, errors, or inaccuracies of any kind in our sites, services, and tools or in the information and graphics obtained from them;
+The content, actions, or inactions of third parties, including items listed using our sites, services, or tools or the destruction of allegedly fake items;
+A suspension or other action taken with respect to your account;
+The duration or manner in which your listings appear in search results as set forth in the Listing Conditions Section below;
+Your need to modify practices, content, or behavior or your loss of or inability to do business, as a result of changes to this User Agreement or our policies; Barter Bender reserves the right to modify its policies and this User Agreement at any time consistent with the provisions outlined herein.
+
+Some jurisdictions do not allow the disclaimer of warranties or exclusion of damages, so such disclaimers and exclusions may not apply to you.
+You acknowledge that we are not a traditional auctioneer. Instead, our sites are venues to allow users to offer merchandise for barter or trade, to sell, and to buy just about anything, at any time, from anywhere, in a variety of pricing formats and locations, fixed price formats and auction-style formats. We are not involved in the actual transaction between buyers and sellers. While we may help facilitate the resolution of disputes through various programs, we have no control over and do not guarantee the existence, quality, safety, or legality of items advertised; the truth or accuracy of users' content or listings; the ability of sellers to sell items; the ability of buyers to pay for items; or that a buyer or seller will actually complete a transaction or return an item.
+Regardless of the previous paragraphs, if we are found to be liable, our liability to you or to any third party is limited to the greater of (a) any amounts due under the Barter Bender Buyer Protection Policy up to the price the item sold for on Barter Bender (including any applicable sales tax) and its original shipping costs, (b) the amount of fees in dispute not to exceed the total fees, which you paid to us in the 12 months prior to the action giving rise to the liability, or (c) $100.
+
+Release.
+
+If you have a dispute with one or more users, you release us (and our affiliates and subsidiaries, and our and their respective officers, directors, employees, and agents) from claims, demands, and damages (actual and consequential) of every kind and nature, known and unknown, arising out of or in any way connected with such disputes. In entering into this release you expressly waive any protections (whether statutory or otherwise) that would otherwise limit the coverage of this release to include only those claims which you may know or suspect to exist in your favor at the time of agreeing to this release.
+
+Access and Interference.
+
+Information on our sites is subject to constant updates and changes. Much of the information on the sites is also proprietary or is licensed to Barter Bender by our users or third parties. You agree that you will not use any robot, spider, scraper, or other automated means to access our sites for any purpose without our express handwritten permission.
+
+Additionally, you agree that you will not:
+take any action that imposes or may impose (to be determined in our sole discretion) an unreasonable or disproportionately large load on our infrastructure;
+copy, reproduce, modify, create derivative works from, distribute, or publicly display any content (except for your information) from our sites, services, or tools without the prior express written permission of Barter Bender and the appropriate third party, as applicable;
+interfere or attempt to interfere with the proper working of our sites, services, or tools, or any activities conducted on or with our sites, services, or tools; or
+bypass measures we may use to prevent or restrict access to our sites.
+
+Listing Conditions.
+
+By listing an item on Barter Bender's sites, you agree to pay Barter Bender's fees, to assume full responsibility for the content of the listing and item offered, and to accept the following listing conditions:
+When you list an item on Barter Bender's sites, your listing will be posted on Barter Bender's sites and can be viewed in My Account. Your listing may not be immediately searchable by keyword or category for several hours (or up to 24 hours in some circumstances), so Barter Bender cannot guarantee exact listing durations. Barter Bender's duplicate listing policy may also affect whether your listing appears in search results. Where your listing appears in search and browse results may be based on certain factors including, but not limited to, listing format, title, bidding activity, end time, keywords, price and shipping cost, feedback, and detailed seller ratings. You can read more about where your listings appear in search and browse results in Barter Bender's Help Pages.
+
+Purchase Conditions.
+
+You are responsible for reading the full item listing, including any instructions the seller provides, before making a bid or commitment to buy. Unless otherwise stated, by making a bid or commitment to buy an item on Barter Bender, you are committing to buy the item from the seller listing the item. If you make a commitment to buy or your bid is the winning bid or is otherwise accepted, you enter into a legally binding contract with the seller and are obligated to purchase the item. For motor vehicles and real estate, a bid or offer initiates a non-binding transaction representing a buyer's serious expression of interest in buying the seller's item and does not create a formal contract between the buyer and the seller.
+We do not transfer legal ownership of items from the seller to the buyer. Uniform Commercial Code § 2-401(2) applies to the transfer of ownership between the buyer and the seller, unless the buyer and the seller agree otherwise.
+
+Privacy.
+
+We do not sell or rent your personal information to third parties for their marketing purposes without your explicit consent. We use your information only as described in the Barter Bender Privacy Policy. We view protection of users' privacy as a very important Community principle. We store and process your information on computers located in the United States that are protected by physical as well as technological security devices. You can access and modify the information you provide us and choose not to receive certain communications by signing in to your account.
+We use third parties to verify and certify our privacy principles. For a complete description of how we use and protect your personal information, see the Barter Bender Privacy Policy. If you object to your information being transferred or used in this way please do not use our services.
+
+Indemnity.
+
+You will indemnify and hold us (and our affiliates and subsidiaries, and our and their respective officers, directors, employees, and agents) harmless from any claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of your breach of this User Agreement, your improper use of Barter Bender's sites, services, or tools, and/or your violation of any law or the rights of a third party.
+
+No Agency.
+
+No agency, partnership, joint venture, employee-employer, or franchiser-franchisee relationship is intended or created by this User Agreement.
+
+Notices.
+
+Except as explicitly stated otherwise, legal notices shall be served on Barter Bender's national registered agent or to the email address you have designated on your account (in your case). Notice to you shall be deemed given 24 hours after the email is sent. Alternatively, we may give you legal notice by mail to the Registration Address associated with your account, as identified in your account. In such case, notice shall be deemed given three days after the date of mailing.
+
+Legal Disputes.
+
+You and Barter Bender agree that any claim or dispute at law or equity that has arisen or may arise between us will be resolved in accordance with the provisions set forth in this Legal Disputes Section. Please read this Section carefully. It affects your rights and will have a substantial impact on how claims you and we have against each other are resolved.
+
+Applicable Law.
+
+You agree that the laws of the State of California, without regard to principles of conflict of laws, will govern this User Agreement and any claim or dispute that has arisen or may arise between you and Barter Bender, except as otherwise stated in this User Agreement.
+
+Agreement to Arbitrate.
+
+You and Barter Bender each agree that any and all disputes or claims that have arisen or may arise between you and Barter Bender shall be resolved exclusively through final and binding arbitration, rather than in court, except that you may assert claims in small claims court, if your claims qualify. The Federal Arbitration Act governs the interpretation and enforcement of this Agreement to Arbitrate.
+
+Prohibition of Class and Representative Actions and Non-Individualized Relief
+
+YOU AND BARTER BENDER AGREE THAT EACH OF US MAY BRING CLAIMS AGAINST THE OTHER ONLY ON AN INDIVIDUAL BASIS AND NOT AS PART OF ANY PURPORTED CLASS OR REPRESENTATIVE ACTION OR PROCEEDING. UNLESS BOTH YOU AND BARTER BENDER AGREE OTHERWISE, THE ARBITRATOR MAY NOT CONSOLIDATE OR JOIN MORE THAN ONE PERSON'S OR PARTY'S CLAIMS, AND MAY NOT OTHERWISE PRESIDE OVER ANY FORM OF A CONSOLIDATED, REPRESENTATIVE, OR CLASS PROCEEDING. ALSO, THE ARBITRATOR MAY AWARD RELIEF (INCLUDING MONETARY, INJUNCTIVE, AND DECLARATORY RELIEF) ONLY IN FAVOR OF THE INDIVIDUAL PARTY SEEKING RELIEF AND ONLY TO THE EXTENT NECESSARY TO PROVIDE RELIEF NECESSITATED BY THAT PARTY'S INDIVIDUAL CLAIM(S). ANY RELIEF AWARDED CANNOT AFFECT OTHER BARTER BENDER USERS.
+
+Arbitration Procedures
+
+Arbitration is more informal than a lawsuit in court. Arbitration uses a neutral arbitrator instead of a judge or jury, and court review of an arbitration award is very limited. However, an arbitrator can award the same damages and relief on an individual basis that a court can award to an individual. An arbitrator also must follow the terms of this User Agreement as a court would.
+
+The arbitration will be conducted by the American Arbitration Association ("AAA") under its rules and procedures, including the AAA's Supplementary Procedures for Consumer-Related Disputes (as applicable), as modified by this Agreement to Arbitrate. The AAA's rules are available at www.adr.org. A form for initiating arbitration proceedings is available on the AAA's website at http://www.adr.org.
+
+The arbitration shall be held in the county in which you reside or at another mutually agreed location. If the value of the relief sought is $10,000 or less, you or Barter Bender may elect to have the arbitration conducted by telephone or based solely on written submissions, which election shall be binding on you and Barter Bender subject to the arbitrator's discretion to require an in-person hearing, if the circumstances warrant. Attendance at an in-person hearing may be made by telephone by you and/or Barter Bender, unless the arbitrator requires otherwise.
+
+The arbitrator will decide the substance of all claims in accordance with the laws of the State of California, including recognized principles of equity, and will honor all claims of privilege recognized by law. The arbitrator shall not be bound by rulings in prior arbitrations involving different Barter Bender users, but is bound by rulings in prior arbitrations involving the same Barter Bender user to the extent required by applicable law. The arbitrator's award shall be final and binding and judgment on the award rendered by the arbitrator may be entered in any court having jurisdiction thereof.
+
+Costs of Arbitration
+
+Payment of all filing, administration and arbitrator fees will be governed by the AAA's rules, unless otherwise stated in this Agreement to Arbitrate. If the value of the relief sought is $10,000 or less, at your request, Barter Bender will pay all filling, administration, and arbitrator fees associated with the arbitration. Any request for payment of fees by Barter Bender should be submitted by mail to the AAA along with your Demand for Arbitration and Barter Bender will make arrangements to pay all necessary fees directly to the AAA. If the value of the relief sought is more than $10,000 and you are able to demonstrate that the costs of arbitration will be prohibitive as compared to the costs of litigation, Barter Bender will pay as much of the filing, administration, and arbitrator fees as the arbitrator deems necessary to prevent the arbitration from being cost-prohibitive. In the event the arbitrator determines the claim(s) you assert in the arbitration to be frivolous, you agree to reimburse Barter Bender for all fees associated with the arbitration paid by Barter Bender on your behalf, which you otherwise would be obligated to pay under the AAA's rules.
+
+Severability
+
+With the exception of any of the provisions in Section 1 of this Agreement to Arbitrate ("Prohibition of Class and Representative Actions and Non-Individualized Relief"), if a court decides that any part of this Agreement to Arbitrate is invalid or unenforceable, the other parts of this Agreement to Arbitrate shall still apply. If a court decides that any of the provisions in Section 1 of this Agreement to Arbitrate ("Prohibition of Class and Representative Actions and Non-Individualized Relief") is invalid or unenforceable, then the entirety of this Agreement to Arbitrate shall be null and void. The remainder of the User Agreement and its Legal Disputes Section will continue to apply.
+
+Opt-Out Procedure
+
+You can choose to reject this Agreement to Arbitrate ("opt-out") by mailing us a written opt-out notice ("Opt-Out Notice"). For new Barter Bender users, the Opt-Out Notice must be postmarked no later than 30 days after the date you accept the User Agreement for the first time. If you are already a current Barter Bender user and previously accepted the User Agreement prior to the introduction of this Agreement to Arbitrate, the Opt-Out Notice must be postmarked no later than March 31, 2013. You must mail the Opt-Out Notice to Barter Bender, LLC, at 809 E. Parkridge Avenue, Suite 102 - Corona, CA 92879.
+
+The Opt-Out Notice must state that you do not agree to this Agreement to Arbitrate and must include your name, address, and the user ID(s) and email address(es) associated with the Barter Bender account(s) to which the opt-out applies. You must sign the Opt-Out Notice for it to be effective. This procedure is the only way you can opt-out of the Agreement to Arbitrate. If you opt-out of the Agreement to Arbitrate, all other parts of the User Agreement and its Legal Disputes Section will continue to apply to you. Opting out of this Agreement to Arbitrate has no effect on any previous, other, or future arbitration agreements that you may have with us.
+
+Future Changes to the Agreement to Arbitrate
+
+Notwithstanding any provision in the User Agreement to the contrary, you and we agree that if we make any change to this Agreement to Arbitrate (other than a change to any notice address or website link provided herein) in the future, that change shall not apply to any claim of which you provided Barter Bender with written notice prior to the effective date of the change. Moreover, if we seek to terminate the Agreement to Arbitrate as included in the User Agreement, any such termination shall not be effective until 30 days after the version of the User Agreement not containing the Agreement to Arbitrate is posted to www.barterbender.com, and shall not be effective as to any claim of which you provided Barter Bender with written notice prior to the date of termination.
+
+Judicial Forum for Legal Disputes
+
+Unless you and we agree otherwise, in the event that the Agreement to Arbitrate above is found not to apply to you or to a particular claim or dispute, either as a result of your decision to opt-out of the Agreement to Arbitrate or a court order, you agree that any claim or dispute that has arisen or may arise between you and Barter Bender must be resolved exclusively by a state or federal court located in Santa Ana, CA. You and Barter Bender agree to submit to the personal jurisdiction of the courts located within Santa Ana, CA for the purpose of litigating all such claims or disputes.
+
+Additional Terms.
+
+You agree to abide by all policies posted on our sites. Such policies (including, but not limited to the following) are part of this User Agreement and provide additional terms and conditions related to specific services offered on our sites:
+
+Prohibited and Restricted Items
+Rules for Listings
+How to Report Inappropriate Buying and Selling
+Rules about Intellectual Property
+Barter Bender Buyer Protection Policy
+Fees for Selling on Barter Bender
+
+The policies posted on our sites may be changed from time to time. Changes take effect when we post them on the Barter Bender sites. When using particular Barter Bender services or tools, you are subject to any posted policies or rules applicable to services or tools you use, which may be posted from time to time. All such policies or rules are hereby incorporated into this User Agreement.
+
+General.
+
+Contact Information.
+Barter Bender, LLC is located at 809 E. Parkridge Avenue, Suite 102 - Corona, CA 92879.
+
+Severability.
+
+The parties agree that each provision of this Agreement is intended to be construed to be enforceable to the fullest extent possible. If any provision or part of a provision of this Agreement is held to be unlawful, void, or unenforceable, that provision or part of the provision shall be deemed severable from this Agreement and not affect the validity and enforceability of any remaining provisions.
+
+Assignment.
+
+In our sole discretion, we may assign this User Agreement without condition, by providing notice of such assignment in accordance with the Notices Section. You may not assign your rights under this Agreement to any third party;
+
+Non-Waiver.
+
+Barter Bender’s failure to exercise or enforce any right or provision of this Agreement shall not operate as a waiver of such right or provision. Additionally, we do not guarantee we will take action against all breaches of this User Agreement.
+
+Headings.
+
+Headings are for reference purposes only and do not limit the scope or extent of such Section.
+
+Right to Amend.
+
+We may amend this User Agreement at any time by posting the amended terms on www.barterbender.com. Our right to amend the User Agreement includes the right to modify, add to, or remove terms in the User Agreement. Except as stated otherwise in this User Agreement or elsewhere, all amended terms shall automatically be effective 30 days after they are initially posted. This User Agreement may not be otherwise amended except in a writing hand signed by you and us. For purposes of this provision,”writing" does not include an email message and a signature does not include an electronic signature.
+
+Entire Agreement.
+
+This User Agreement (including incorporated policies and rules) sets forth the entire understanding and agreement between us with respect to the subject matter hereof. The following Sections survive any termination of this User Agreement: Fees and Services, Release, Content, Limitation of Liability, Indemnity and Legal Disputes. This Agreement supersedes all prior or contemporaneous oral or written agreements concerning such subject matter.
+
+Governing Law.
+
+This Agreement shall be governed in all respects by the laws of the United States of America and by the laws of the State of California, as such laws are applied to agreements entered into and to be performed entirely within California between California residents. You agree that any dispute in the meaning, effect or validity of this Agreement shall be resolved in accordance with the laws of the State of California without regard to the conflict of laws provisions thereof.
+
+Jurisdiction.
+
+You and Barter Bender each consent to the exercise of personal and subject matter jurisdiction by the courts of the State of California, including the one located in the County of Orange, City of Santa Ana and the United States Federal Court for the Central District of California – Southern Division sitting in Santa Ana, California (the “California Courts”) with respect to any disputes, suits, legal actions or proceedings (an “Action”). You and Barter Bender agree that you will not commence any Action in any court other than the California Courts.
+
+Reporting Complaints
+
+If you are a California resident, in accordance with Cal. Civ. Code §1789.3, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by contacting them in writing at 400 R Street, Sacramento, CA 95814, or by telephone at (800) 952-5210.
+
+Termination.
+
+This Agreement is effective until terminated by you or Barter Bender. Your rights under this Agreement will terminate automatically without notice from Barter Bender if you fail to comply with any term(s) of this license. Upon termination of the Agreement, you shall cease all use of the Website.
+
+Addendums:
+Prohibited and Restricted Items:
+
+Items listed below are prohibited from sale or exchange on Barterbender:
+
+Alcohol, animals (live or mounted), wildlife products such as ivory, human artifacts, service contracts, charities and fundraising, raffles and contests for chances to win a prize, used cosmetics, currency, counterfeit currency or stamps, credit cards, drugs or prescription drugs and related substances and paraphernalia, embargoed or federally prohibited items, firearms and personal defense items, electronic devices designed to defeat paid or subscription services such as TV descramblers and traffic control devices, hazardous materials, lock picking devices, lottery tickets, tiered marketing/pyramid and matrix programs, stocks, bonds, and other securities, tobacco and tobacco related products, offensive an inappropriate materials such as Nazi artifacts, adult only items, sexual or explicit photos and artwork, articles depicting profanity, morally or racially inappropriate materials, any item removed from or involved in a crime scene, stolen items with serial numbers removed. Other items may be added or removed as our policy evolves.
+
+Regulations regarding specific items vary from state to state so you should check state and federal regulations before posting items that may fall within restricted or regulated guidelines. Some items are restricted or regulated for transfer outside of the United States, you should check with one or more of the following US government agencies for more information.
+
+International Trade Administration
+US Small Business Administration (SBA)-Office of International Trade
+
+Intellectual Property of Others:
+
+It is prohibited to offer for sale any merchandise that carries the unlicensed trademark, likeness, logo, or other similar proprietary feature on Barterbender. Item with logos, trademarks, and so forth cannot be counterfeit, knock-offs, reproductions, etc. unless they are under license by the rightful owner. Further items not allowed are copies of digital media such as software, music, and other similarly licensed media. Barterbender will, at the request of the rightful owners of such advertised items, remove ads containing prohibited items and suspend or cancel memberships of any persons knowingly engaging in such activities.
+
+Basic Rules for Listing Items:
+
+In an effort to keep Barterbender free from unwanted, unfair, and inappropriate listings we ask you to follow the most basic guidelines of common sense, decency, and honesty when listing items on Barterbender. First, Barterbender is a community of users and as such we ask all users to report any listing that does not conform to these basic principles. Also consider that any user who offends others can be suspended or removed completely from our community. Repeat offenders will not be tolerated as a courtesy to our community. We offer these simple rules as a basic guide but also ask users to apply a common sense approach to each rule before posting their items.
+
+1. Use brief, accurate, and honest descriptions for you merchandise. Don't overstate the facts.
+
+2. Be fair and reasonable when placing a value on your items. Use the internet to research other similar items to accurately assess the value of your items. Other users will do the same and the care you take now will improve the way other users view your transactions (and you as a trader) which improves your chances of success in future dealings.
+
+3. Upload clear and well though-out photos of your merchandise to best portray its features.
+
+4. Never use profane or inappropriate language when describing your merchandise. Refer to a thesauras if necessary but there are lots of words that can be used to describe something without offending others.
+
+5. Do not list the same item more than once in Barterbender. If it is listed in one section, it is not allowed to be listed in another simultaneously. If it does not sell as an auction item, delete it from auctions and recreate it as a classified but don't list it at the same time. Listing the same item simultaneously is a violation of Barterbender listing policy and will result in suspension or cancellation of membership.
+
+6. Respond to the inquiries from other users promptly and courteously whenever possible. Other users may view your delayed responses as a lack of interest in dealing on Barterbender and ignore your responses. The goal of Barterbender is to create an exciting, interactive website for fast and intensive trading action. Slow responses will greatly diminish your chances at success on Barterbender.";s:11:"text_parsed";s:47361:"<?php /* Cached: March 15, 2019, 6:25 am */ ?>
+BARTER BENDER™ USER AGREEMENT
+
+Last Updated: April 26, 2012
+
+The following describes the terms upon which Barter Bender offers you access to our sites, services and tools (including, but not limited to, web applications).
+This User Agreement (“Agreement”) governs your use of the “Barter Bender™” Website Services, and Tools (“Website”) provided by Barter Bender, LLC, its subsidiaries and contractors (“Barter Bender”).
+Your use of the Website constitutes your acceptance of the terms of this Agreement, which may be amended from time to time by Barter Bender. The most recent version of this Agreement shall always be available on the Internet at www.barterbender.com. Barter Bender reserves the right to change or modify this Agreement or any other Barter Bender policies related to the use of the Website at any time, and at its sole discretion, by posting revisions on the Internet at www.barterbender.com. Continued use of the Website following the posting of these changes or modifications will constitute acceptance of such changes or modifications.
+
+Scope.
+
+Before you may become a member of Barter Bender, you must read and accept all of the terms in, and linked to, this Agreement and the Barter Bender Privacy Policy. We strongly recommend that, as you read this Agreement, you also access and read the linked information. By accepting this Agreement, you agree that this Agreement and Privacy Policy will apply whenever you use Barter Bender sites or services, or when you use the tools that are made available to interact with Barter Bender sites and services (including, but not limited to, mobile and web applications). Some Barter Bender sites, services, and tools may have additional or other terms, agreements, or policies that govern their availability and use. Your use of and access to such sites, services, and tools are subject to any and all terms, agreements, or policies applicable to them.
+
+Using Barter Bender.
+
+While using Barter Bender sites, services, and tools, you agree:
+- to not post content or items in inappropriate categories or areas on our sites and services;
+- to respect and abide by any laws, third party rights or our policies;
+- to not use our sites, services or tools if you are not able to form legally binding contracts or are temporarily or indefinitely suspended from using our sites, services, or tools;
+- to deliver payment for items purchased by you, unless the seller has materially changed the item's description after you bid, a clear typographical error is made, or you cannot reach the seller;
+- to deliver items purchased from you, unless the buyer fails to meet the posted terms, or you cannot reach the buyer;
+- to not manipulate the price of any item or interfere with other users' listings;
+- to not circumvent or manipulate our fee structure, the billing process, or fees owed to Barter Bender;
+- to not post false, inaccurate, misleading, defamatory, or libelous content;
+- to not take any action that may undermine the feedback or ratings systems (such as displaying, importing or exporting feedback information off of the sites or using it for purposes unrelated to Barter Bender);
+- to not circumvent any Barter Bender policy or determinations about your account status such as temporary or indefinite suspensions or other account holds, limitations or restrictions;
+- to not transfer your Barter Bender account (including Feedback) and user ID to another party without our consent;
+- to not distribute or post spam, unsolicited or bulk electronic communications, chain letters, or pyramid schemes;
+- to not distribute viruses or any other technologies that may harm Barter Bender, or the interests or property of Barter Bender users;
+- to comply with the export control laws of any relevant jurisdiction and in accordance with posted rules and restrictions;
+- to not copy, modify, or distribute rights or content from the Barter Bender sites, services, or tools or Barter Bender's copyrights and trademarks; or
+- to not harvest or otherwise collect information about users, including email addresses, without their consent.
+
+Misusing Barter Bender.
+
+Barter Bender and its community of users (the "Community") work together to keep our sites, services, and tools working properly and the Community safe. Please report problems, offensive content, and policy violations to us.
+
+Barter Bender works to ensure that listed items do not infringe upon the copyright, trademark, or other intellectual property rights of third parties. If you believe that your intellectual property rights have been violated, please notify Barter Bender’s Verified Rights Owner Program at Admin@Barterbender.com and we will investigate.
+
+Without limiting other remedies, we may, in our sole discretion, limit, suspend, or terminate our services and user accounts, prohibit access to our sites, services, and tools, and their content, delay or remove hosted content, and take technical and legal steps to keep users from using our sites, services, or tools, if we think that they are creating problems or possible legal liabilities, infringing the intellectual property rights of third parties, or acting inconsistently with the letter or spirit of our policies. We also reserve the right to cancel unconfirmed accounts or accounts that have been inactive for a long time, or to modify or discontinue Barter Bender sites, services, or tools.
+
+Buyer and Seller Protection.
+
+Buyers and sellers share the responsibility for making sure purchases made on Barter Bender are rewarding and hassle-free. We strongly encourage buyers to work with sellers before opening a claim relating to a purchase. Buyers and sellers agree to follow the requirements of the Barter Bender Buyer Protection Policy with respect to claims made under Barter Bender's Buyer Protection Policy. Barter Bender Buyer Protection covers only claims filed in accordance with the Barter Bender Buyer Protection Policy, not claims filed with PayPal. Barter Bender Buyer Protection will not cover claims for which the buyer has initiated another form of resolution processing, including credit card chargebacks (if the buyer paid by credit card) or PayPal Buyer Protection claims (if the buyer paid by PayPal). We may suspend the Barter Bender Buyer Protection Policy without notice if we suspect abuse or interference with the proper working of the program.
+We require Barter Bender sellers to comply with our Buyer Protection resolution process. Buyers and sellers permit us to make a final decision, in our sole discretion, on any claim that a buyer files with Barter Bender under the Barter Bender Buyer Protection Policy. If we resolve a dispute in the buyer's favor, we will refund the buyer up to the full cost of the item (including any applicable sales taxes) and the original shipping, and we will require the seller to reimburse us for the amount due to the buyer. Without limiting the foregoing, sellers may not have to reimburse us for a Barter Bender Buyer Protection claim if they provide the documentation (for example, delivery confirmation or proof that the item was as described) indicated in the Barter Bender Buyer Protection Policy. In addition:
+Sellers must have a reimbursement method on file with Barter Bender.
+Sellers agree to allow us to remove funds from their PayPal accounts for amounts due to buyers. Sellers may change this reimbursement method by contacting Barter Bender. However, we reserve the right to continue using seller PayPal accounts for Barter Bender Buyer Protection cases associated with Barter Bender transactions paid for before the change.
+Where there are insufficient funds in PayPal accounts or where PayPal is not the reimbursement method of a seller, we will require another reimbursement method.
+Sellers agree to allow us to charge the payment method they designate for amounts due buyers.
+Changing a reimbursement method will not affect Barter Bender's use of a payment method on file for other purposes (such as payment of your Barter Bender fees). If sellers do not provide Barter Bender with a valid reimbursement method, we may collect amounts owed using other collection mechanisms, including retaining collection agencies. We may also suspend or restrict sellers from buying or selling on our sites and using our services and tools until payment is made.
+
+Correcting Mistakes in Payments to Buyers or Sellers. We reserve the right to fix any processing errors we discover. We will correct any processing errors by debiting or crediting the payment method used for the Barter Bender Buyer Protection refund or reimbursement
+
+Holds.
+
+To protect against the risk of liability, Barter Bender has at times requested, and may continue to request, that PayPal hold seller funds based on certain factors, including, but not limited to, selling history, seller performance, riskiness of the listing category, or the filing of a Barter Bender Buyer Protection claim. PayPal has held, and will continue to hold, seller funds pursuant to the terms of the PayPal User Agreement, PayPal policies and any other agreement entered into between PayPal and its users.
+
+International Trade and Language.
+
+Many of our sites, services, and tools are accessible to international sellers and buyers. We may, now or in the future, offer certain programs, tools, and site experiences of particular interest to international sellers and buyers, such as estimated local currency conversion and international shipping calculation tools.
+
+Some Barter Bender members may reside outside of the United States and some may not speak English as a primary language. To assist users who speak different languages, we may translate listings and other Barter Bender content, in whole or in part, into other languages or provide tools for doing so. If you are a seller, you may be able to opt out of our automated translation of your listings by, depending on the site, service, or tool involved, using the functionality built into such site, service, or tool. We also may provide you with access to third party tool(s) so you can request an on-demand translation of certain content on our sites, such as parts of a listing or a message from a Barter Bender user. If you request an on-demand translation from a third party tool, the accuracy or availability of the resulting translation is not guaranteed and will be your sole responsibility. In the event that any on-demand translation of a listing, message or other content conflicts with the meaning of the original text, then the original text will control as the official version of the listing, message or other content, as applicable.
+
+In some cases, you may be able to sell your items internationally by listing items for sale directly on one or more of Barter Bender’s existing or future international sites. Using various tools, services, and experiences, we may display your listing on a Barter Bender site other than the Barter Bender site where you listed your item for sale, including those situations where you choose to list items with an international shipping option (such as worldwide shipping). However, you may restrict international buyers from purchasing your items if you explicitly exclude international shipping locations from your listings by creating and applying an exclusion list to your listings. If your item is sold to a buyer on a Barter Bender site other than your Barter Bender site of registration, you agree to be subject to that other site's policies and Barter Bender’s User Agreement. You are responsible for complying with all laws and regulations applicable to the sale and shipment of items to international buyers.
+
+
+This agreement was written in English (US). To the extent any translated version of this agreement conflicts with the English version, the English version controls.
+
+Fees and Services.
+
+Joining Barter Bender and bartering on listed items is free. We do charge fees for using other services, such as placing or purchasing classified or auction items. The fees we charge for using our services are listed on our Fees schedule, which we may change at any time and at our discretion. Changes to that schedule are effective after we provide you with at least fourteen days' notice by posting the changes on www.barterbender.com. We may choose to temporarily change the fees for our services for promotional events or new services, and such changes are effective when we post the temporary promotional event or new service on the sites.
+
+Unless otherwise stated, all fees are quoted in United States Dollars. You are responsible for paying all fees and applicable taxes associated with our sites, services, and tools with a valid payment method by the payment due date. If your payment method fails or your account is past due, we may collect fees owed using other collection mechanisms. (This includes charging other payment methods on file with us, retaining collection agencies and legal counsel, and for accounts over 180 days past due, deducting the amount owed from your PayPal account balance.) In addition, you will be subject to late fees and we may suspend or restrict you from using our sites, services, and tools until full payment is made. Barter Bender, or the collection agencies we retain, may also report information about your account to credit bureaus, and as a result, late payments, missed payments, or other defaults on your account may be reflected in your credit report. If you wish to dispute the information Barter Bender reported to a credit bureau (i.e., Experian, Equifax or TransUnion) please contact us at Barter Bender, LLC, 809 E. Parkridge Avenue, Suite 102 - Corona, CA 92879. If you wish to dispute the information a collection agency reported to a credit bureau regarding your Barter Bender account, you must contact the collection agency directly.
+
+Authorization to Contact You.
+
+You authorize Barter Bender, its affiliates, agents, and independent contractors to contact you at any telephone number (including telephone numbers associated with mobile, cellular, wireless, or similar devices) you provide to us or from which you place a call to us, or any telephone number at which we reasonably believe we may reach you, using any means of communication, including, but not limited to, calls or text messages using an automatic telephone dialing system and/or prerecorded messages, even if you incur charges for receiving such communications.
+
+You understand and agree that Barter Bender may, without further notice or warning and in its discretion, monitor or record telephone conversations you or anyone acting on your behalf has with Barter Bender or its agents for quality control and training purposes or for its own protection. You acknowledge and understand that, while your communications with Barter Bender may be overheard, monitored, or recorded without further notice or warning, not all telephone lines or calls may be recorded by Barter Bender, and Barter Bender does not guarantee that recordings of any particular telephone calls will be retained or retrievable.
+
+Content.
+
+When providing us with content or posting content on Barter Bender's sites, you grant us a non-exclusive, worldwide, perpetual, irrevocable, royalty-free, sub-licensable (through multiple tiers) right to exercise any and all copyright, trademark, publicity, and database rights you have in the content, in any media known now or in the future.
+
+For the convenience of sellers, we may offer catalogs of stock images, descriptions and product specifications that are provided by third parties (including Barter Bender users). You may use catalog content solely in connection with your Barter Bender listings during the time your listings are on Barter Bender's sites.
+While we try to offer reliable data, we cannot promise that the catalogs will always be accurate and up-to-date, and you agree not to hold our catalog content providers or us responsible for inaccuracies in catalogs. If you choose to include catalog content in your listings, you continue to be fully responsible for your listings and for ensuring that your listings are accurate, do not include misleading information, and comply with this User Agreement and all Barter Bender policies. The catalogs may include copyrighted, trademarked or other proprietary materials. You agree not to remove any copyright, proprietary or identification markings included with the catalogs or create any derivative works based on catalog content (other than by including them in your listings).
+
+Consent to Collection and Use of Technical Data
+
+You agree that Barter Bender may collect and use technical data and related information, including but not limited to technical information about your device, system and application software, and peripherals, that is gathered periodically to facilitate the provision of website updates, product support and other services to you (if any) related to the Website. Barter Bender may use this information, as long as it is in a form that does not personally identify you, to improve its products or to provide services or technologies to you.
+
+Sharing Your Original Content and Information.
+
+You own all of the original content and information you post on Barter Bender (including content protected by your Intellectual Property rights), and you can control how it is shared through your privacy settings. In addition:
+
+For content that is covered by intellectual property rights, like photos and videos (IP content), you specifically give us the following permission, subject to your privacy and application settings: you grant us a non-exclusive, worldwide, perpetual, irrevocable, royalty-free, sub-licensable (through multiple tiers) right to use any IP content that you post on or in connection with Barter Bender (“IP License”). This IP License ends when you delete your IP content or your account.
+When you delete IP content, it is deleted in a manner similar to emptying the recycle bin on a computer. However, you understand that removed content may persist in backup copies for a reasonable period of time (but will not be available to others).
+When you publish content or information on Barter Bender, it means that you are allowing everyone, including people off of Barter Bender, to access and use that information, and to associate it with you (i.e., your name and profile picture).
+We always appreciate your feedback or other suggestions about Barter Bender, but you understand that we may use your feedback or suggestions without any obligation to compensate you for them (just as you have no obligation to offer them).
+
+Barter Bender’s Intellectual Property Rights.
+
+You acknowledge that no title to the patents, copyright, or trademark in or related to the Website (collectively referred to as “Barter Bender’s Intellectual Property”) is transferred to you. You further acknowledge that title and full ownership rights to the Website will remain the exclusive property of Barter Bender and/or its suppliers, and you will not acquire any rights to the Software, except as expressly set forth above. All title and Barter Bender’s Intellectual Property in and to the Software (including but not limited to any logos, names, images, photographs, animations, video, audio, music, text and “applets,” incorporated into the Website), the accompanying printed materials, and any copies of the Website, are owned by Barter Bender or its suppliers.
+This Website is protected by copyright laws, international copyright treaties, other intellectual property laws and treaties.
+All other trademarks appearing in the Websites, Services or Agreement are the property of their respective owners.
+
+Notice for Claims of Intellectual Property Violations and Copyright Infringement Pursuant to Section 512(c) of Title 17 of the United States Code.
+We respond to notices of alleged copyright infringement as required by the United States Digital Millennium Copyright Act.
+
+Limitation of Liability.
+
+We try to keep Barter Bender and its sites, services, and tools safe, secure, and functioning properly. You acknowledge that we cannot guarantee the continuous operation of or access to our sites, services, or tools. You further acknowledge that operation of and access to our sites, services, or tools may be interfered with as a result of technical issues or numerous factors outside of our control. You agree that you are making use of our sites, services, and tools at your own risk, and that they are being provided to you on an "AS IS" and "AS AVAILABLE" basis.
+
+Accordingly, to the extent permitted by applicable law, we exclude all express or implied warranties, terms and conditions including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In addition, to the extent permitted by applicable law, we are not liable, and you agree not to hold Barter Bender responsible, for any damages or losses (including, but not limited to, loss of money, goodwill or reputation, profits, or other intangible losses or any special, indirect, or consequential damages) resulting directly or indirectly from:
+
+Your use of or your inability to use our sites, services and tools;
+Delays or disruptions in our sites, services, or tools;
+Viruses or other malicious software obtained by accessing our sites, services, or tools or any site, services, or tool linked to our sites, services, or tools;
+Glitches, bugs, errors, or inaccuracies of any kind in our sites, services, and tools or in the information and graphics obtained from them;
+The content, actions, or inactions of third parties, including items listed using our sites, services, or tools or the destruction of allegedly fake items;
+A suspension or other action taken with respect to your account;
+The duration or manner in which your listings appear in search results as set forth in the Listing Conditions Section below;
+Your need to modify practices, content, or behavior or your loss of or inability to do business, as a result of changes to this User Agreement or our policies; Barter Bender reserves the right to modify its policies and this User Agreement at any time consistent with the provisions outlined herein.
+
+Some jurisdictions do not allow the disclaimer of warranties or exclusion of damages, so such disclaimers and exclusions may not apply to you.
+You acknowledge that we are not a traditional auctioneer. Instead, our sites are venues to allow users to offer merchandise for barter or trade, to sell, and to buy just about anything, at any time, from anywhere, in a variety of pricing formats and locations, fixed price formats and auction-style formats. We are not involved in the actual transaction between buyers and sellers. While we may help facilitate the resolution of disputes through various programs, we have no control over and do not guarantee the existence, quality, safety, or legality of items advertised; the truth or accuracy of users' content or listings; the ability of sellers to sell items; the ability of buyers to pay for items; or that a buyer or seller will actually complete a transaction or return an item.
+Regardless of the previous paragraphs, if we are found to be liable, our liability to you or to any third party is limited to the greater of (a) any amounts due under the Barter Bender Buyer Protection Policy up to the price the item sold for on Barter Bender (including any applicable sales tax) and its original shipping costs, (b) the amount of fees in dispute not to exceed the total fees, which you paid to us in the 12 months prior to the action giving rise to the liability, or (c) $100.
+
+Release.
+
+If you have a dispute with one or more users, you release us (and our affiliates and subsidiaries, and our and their respective officers, directors, employees, and agents) from claims, demands, and damages (actual and consequential) of every kind and nature, known and unknown, arising out of or in any way connected with such disputes. In entering into this release you expressly waive any protections (whether statutory or otherwise) that would otherwise limit the coverage of this release to include only those claims which you may know or suspect to exist in your favor at the time of agreeing to this release.
+
+Access and Interference.
+
+Information on our sites is subject to constant updates and changes. Much of the information on the sites is also proprietary or is licensed to Barter Bender by our users or third parties. You agree that you will not use any robot, spider, scraper, or other automated means to access our sites for any purpose without our express handwritten permission.
+
+Additionally, you agree that you will not:
+take any action that imposes or may impose (to be determined in our sole discretion) an unreasonable or disproportionately large load on our infrastructure;
+copy, reproduce, modify, create derivative works from, distribute, or publicly display any content (except for your information) from our sites, services, or tools without the prior express written permission of Barter Bender and the appropriate third party, as applicable;
+interfere or attempt to interfere with the proper working of our sites, services, or tools, or any activities conducted on or with our sites, services, or tools; or
+bypass measures we may use to prevent or restrict access to our sites.
+
+Listing Conditions.
+
+By listing an item on Barter Bender's sites, you agree to pay Barter Bender's fees, to assume full responsibility for the content of the listing and item offered, and to accept the following listing conditions:
+When you list an item on Barter Bender's sites, your listing will be posted on Barter Bender's sites and can be viewed in My Account. Your listing may not be immediately searchable by keyword or category for several hours (or up to 24 hours in some circumstances), so Barter Bender cannot guarantee exact listing durations. Barter Bender's duplicate listing policy may also affect whether your listing appears in search results. Where your listing appears in search and browse results may be based on certain factors including, but not limited to, listing format, title, bidding activity, end time, keywords, price and shipping cost, feedback, and detailed seller ratings. You can read more about where your listings appear in search and browse results in Barter Bender's Help Pages.
+
+Purchase Conditions.
+
+You are responsible for reading the full item listing, including any instructions the seller provides, before making a bid or commitment to buy. Unless otherwise stated, by making a bid or commitment to buy an item on Barter Bender, you are committing to buy the item from the seller listing the item. If you make a commitment to buy or your bid is the winning bid or is otherwise accepted, you enter into a legally binding contract with the seller and are obligated to purchase the item. For motor vehicles and real estate, a bid or offer initiates a non-binding transaction representing a buyer's serious expression of interest in buying the seller's item and does not create a formal contract between the buyer and the seller.
+We do not transfer legal ownership of items from the seller to the buyer. Uniform Commercial Code § 2-401(2) applies to the transfer of ownership between the buyer and the seller, unless the buyer and the seller agree otherwise.
+
+Privacy.
+
+We do not sell or rent your personal information to third parties for their marketing purposes without your explicit consent. We use your information only as described in the Barter Bender Privacy Policy. We view protection of users' privacy as a very important Community principle. We store and process your information on computers located in the United States that are protected by physical as well as technological security devices. You can access and modify the information you provide us and choose not to receive certain communications by signing in to your account.
+We use third parties to verify and certify our privacy principles. For a complete description of how we use and protect your personal information, see the Barter Bender Privacy Policy. If you object to your information being transferred or used in this way please do not use our services.
+
+Indemnity.
+
+You will indemnify and hold us (and our affiliates and subsidiaries, and our and their respective officers, directors, employees, and agents) harmless from any claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of your breach of this User Agreement, your improper use of Barter Bender's sites, services, or tools, and/or your violation of any law or the rights of a third party.
+
+No Agency.
+
+No agency, partnership, joint venture, employee-employer, or franchiser-franchisee relationship is intended or created by this User Agreement.
+
+Notices.
+
+Except as explicitly stated otherwise, legal notices shall be served on Barter Bender's national registered agent or to the email address you have designated on your account (in your case). Notice to you shall be deemed given 24 hours after the email is sent. Alternatively, we may give you legal notice by mail to the Registration Address associated with your account, as identified in your account. In such case, notice shall be deemed given three days after the date of mailing.
+
+Legal Disputes.
+
+You and Barter Bender agree that any claim or dispute at law or equity that has arisen or may arise between us will be resolved in accordance with the provisions set forth in this Legal Disputes Section. Please read this Section carefully. It affects your rights and will have a substantial impact on how claims you and we have against each other are resolved.
+
+Applicable Law.
+
+You agree that the laws of the State of California, without regard to principles of conflict of laws, will govern this User Agreement and any claim or dispute that has arisen or may arise between you and Barter Bender, except as otherwise stated in this User Agreement.
+
+Agreement to Arbitrate.
+
+You and Barter Bender each agree that any and all disputes or claims that have arisen or may arise between you and Barter Bender shall be resolved exclusively through final and binding arbitration, rather than in court, except that you may assert claims in small claims court, if your claims qualify. The Federal Arbitration Act governs the interpretation and enforcement of this Agreement to Arbitrate.
+
+Prohibition of Class and Representative Actions and Non-Individualized Relief
+
+YOU AND BARTER BENDER AGREE THAT EACH OF US MAY BRING CLAIMS AGAINST THE OTHER ONLY ON AN INDIVIDUAL BASIS AND NOT AS PART OF ANY PURPORTED CLASS OR REPRESENTATIVE ACTION OR PROCEEDING. UNLESS BOTH YOU AND BARTER BENDER AGREE OTHERWISE, THE ARBITRATOR MAY NOT CONSOLIDATE OR JOIN MORE THAN ONE PERSON'S OR PARTY'S CLAIMS, AND MAY NOT OTHERWISE PRESIDE OVER ANY FORM OF A CONSOLIDATED, REPRESENTATIVE, OR CLASS PROCEEDING. ALSO, THE ARBITRATOR MAY AWARD RELIEF (INCLUDING MONETARY, INJUNCTIVE, AND DECLARATORY RELIEF) ONLY IN FAVOR OF THE INDIVIDUAL PARTY SEEKING RELIEF AND ONLY TO THE EXTENT NECESSARY TO PROVIDE RELIEF NECESSITATED BY THAT PARTY'S INDIVIDUAL CLAIM(S). ANY RELIEF AWARDED CANNOT AFFECT OTHER BARTER BENDER USERS.
+
+Arbitration Procedures
+
+Arbitration is more informal than a lawsuit in court. Arbitration uses a neutral arbitrator instead of a judge or jury, and court review of an arbitration award is very limited. However, an arbitrator can award the same damages and relief on an individual basis that a court can award to an individual. An arbitrator also must follow the terms of this User Agreement as a court would.
+
+The arbitration will be conducted by the American Arbitration Association ("AAA") under its rules and procedures, including the AAA's Supplementary Procedures for Consumer-Related Disputes (as applicable), as modified by this Agreement to Arbitrate. The AAA's rules are available at www.adr.org. A form for initiating arbitration proceedings is available on the AAA's website at http://www.adr.org.
+
+The arbitration shall be held in the county in which you reside or at another mutually agreed location. If the value of the relief sought is $10,000 or less, you or Barter Bender may elect to have the arbitration conducted by telephone or based solely on written submissions, which election shall be binding on you and Barter Bender subject to the arbitrator's discretion to require an in-person hearing, if the circumstances warrant. Attendance at an in-person hearing may be made by telephone by you and/or Barter Bender, unless the arbitrator requires otherwise.
+
+The arbitrator will decide the substance of all claims in accordance with the laws of the State of California, including recognized principles of equity, and will honor all claims of privilege recognized by law. The arbitrator shall not be bound by rulings in prior arbitrations involving different Barter Bender users, but is bound by rulings in prior arbitrations involving the same Barter Bender user to the extent required by applicable law. The arbitrator's award shall be final and binding and judgment on the award rendered by the arbitrator may be entered in any court having jurisdiction thereof.
+
+Costs of Arbitration
+
+Payment of all filing, administration and arbitrator fees will be governed by the AAA's rules, unless otherwise stated in this Agreement to Arbitrate. If the value of the relief sought is $10,000 or less, at your request, Barter Bender will pay all filling, administration, and arbitrator fees associated with the arbitration. Any request for payment of fees by Barter Bender should be submitted by mail to the AAA along with your Demand for Arbitration and Barter Bender will make arrangements to pay all necessary fees directly to the AAA. If the value of the relief sought is more than $10,000 and you are able to demonstrate that the costs of arbitration will be prohibitive as compared to the costs of litigation, Barter Bender will pay as much of the filing, administration, and arbitrator fees as the arbitrator deems necessary to prevent the arbitration from being cost-prohibitive. In the event the arbitrator determines the claim(s) you assert in the arbitration to be frivolous, you agree to reimburse Barter Bender for all fees associated with the arbitration paid by Barter Bender on your behalf, which you otherwise would be obligated to pay under the AAA's rules.
+
+Severability
+
+With the exception of any of the provisions in Section 1 of this Agreement to Arbitrate ("Prohibition of Class and Representative Actions and Non-Individualized Relief"), if a court decides that any part of this Agreement to Arbitrate is invalid or unenforceable, the other parts of this Agreement to Arbitrate shall still apply. If a court decides that any of the provisions in Section 1 of this Agreement to Arbitrate ("Prohibition of Class and Representative Actions and Non-Individualized Relief") is invalid or unenforceable, then the entirety of this Agreement to Arbitrate shall be null and void. The remainder of the User Agreement and its Legal Disputes Section will continue to apply.
+
+Opt-Out Procedure
+
+You can choose to reject this Agreement to Arbitrate ("opt-out") by mailing us a written opt-out notice ("Opt-Out Notice"). For new Barter Bender users, the Opt-Out Notice must be postmarked no later than 30 days after the date you accept the User Agreement for the first time. If you are already a current Barter Bender user and previously accepted the User Agreement prior to the introduction of this Agreement to Arbitrate, the Opt-Out Notice must be postmarked no later than March 31, 2013. You must mail the Opt-Out Notice to Barter Bender, LLC, at 809 E. Parkridge Avenue, Suite 102 - Corona, CA 92879.
+
+The Opt-Out Notice must state that you do not agree to this Agreement to Arbitrate and must include your name, address, and the user ID(s) and email address(es) associated with the Barter Bender account(s) to which the opt-out applies. You must sign the Opt-Out Notice for it to be effective. This procedure is the only way you can opt-out of the Agreement to Arbitrate. If you opt-out of the Agreement to Arbitrate, all other parts of the User Agreement and its Legal Disputes Section will continue to apply to you. Opting out of this Agreement to Arbitrate has no effect on any previous, other, or future arbitration agreements that you may have with us.
+
+Future Changes to the Agreement to Arbitrate
+
+Notwithstanding any provision in the User Agreement to the contrary, you and we agree that if we make any change to this Agreement to Arbitrate (other than a change to any notice address or website link provided herein) in the future, that change shall not apply to any claim of which you provided Barter Bender with written notice prior to the effective date of the change. Moreover, if we seek to terminate the Agreement to Arbitrate as included in the User Agreement, any such termination shall not be effective until 30 days after the version of the User Agreement not containing the Agreement to Arbitrate is posted to www.barterbender.com, and shall not be effective as to any claim of which you provided Barter Bender with written notice prior to the date of termination.
+
+Judicial Forum for Legal Disputes
+
+Unless you and we agree otherwise, in the event that the Agreement to Arbitrate above is found not to apply to you or to a particular claim or dispute, either as a result of your decision to opt-out of the Agreement to Arbitrate or a court order, you agree that any claim or dispute that has arisen or may arise between you and Barter Bender must be resolved exclusively by a state or federal court located in Santa Ana, CA. You and Barter Bender agree to submit to the personal jurisdiction of the courts located within Santa Ana, CA for the purpose of litigating all such claims or disputes.
+
+Additional Terms.
+
+You agree to abide by all policies posted on our sites. Such policies (including, but not limited to the following) are part of this User Agreement and provide additional terms and conditions related to specific services offered on our sites:
+
+Prohibited and Restricted Items
+Rules for Listings
+How to Report Inappropriate Buying and Selling
+Rules about Intellectual Property
+Barter Bender Buyer Protection Policy
+Fees for Selling on Barter Bender
+
+The policies posted on our sites may be changed from time to time. Changes take effect when we post them on the Barter Bender sites. When using particular Barter Bender services or tools, you are subject to any posted policies or rules applicable to services or tools you use, which may be posted from time to time. All such policies or rules are hereby incorporated into this User Agreement.
+
+General.
+
+Contact Information.
+Barter Bender, LLC is located at 809 E. Parkridge Avenue, Suite 102 - Corona, CA 92879.
+
+Severability.
+
+The parties agree that each provision of this Agreement is intended to be construed to be enforceable to the fullest extent possible. If any provision or part of a provision of this Agreement is held to be unlawful, void, or unenforceable, that provision or part of the provision shall be deemed severable from this Agreement and not affect the validity and enforceability of any remaining provisions.
+
+Assignment.
+
+In our sole discretion, we may assign this User Agreement without condition, by providing notice of such assignment in accordance with the Notices Section. You may not assign your rights under this Agreement to any third party;
+
+Non-Waiver.
+
+Barter Bender’s failure to exercise or enforce any right or provision of this Agreement shall not operate as a waiver of such right or provision. Additionally, we do not guarantee we will take action against all breaches of this User Agreement.
+
+Headings.
+
+Headings are for reference purposes only and do not limit the scope or extent of such Section.
+
+Right to Amend.
+
+We may amend this User Agreement at any time by posting the amended terms on www.barterbender.com. Our right to amend the User Agreement includes the right to modify, add to, or remove terms in the User Agreement. Except as stated otherwise in this User Agreement or elsewhere, all amended terms shall automatically be effective 30 days after they are initially posted. This User Agreement may not be otherwise amended except in a writing hand signed by you and us. For purposes of this provision,”writing" does not include an email message and a signature does not include an electronic signature.
+
+Entire Agreement.
+
+This User Agreement (including incorporated policies and rules) sets forth the entire understanding and agreement between us with respect to the subject matter hereof. The following Sections survive any termination of this User Agreement: Fees and Services, Release, Content, Limitation of Liability, Indemnity and Legal Disputes. This Agreement supersedes all prior or contemporaneous oral or written agreements concerning such subject matter.
+
+Governing Law.
+
+This Agreement shall be governed in all respects by the laws of the United States of America and by the laws of the State of California, as such laws are applied to agreements entered into and to be performed entirely within California between California residents. You agree that any dispute in the meaning, effect or validity of this Agreement shall be resolved in accordance with the laws of the State of California without regard to the conflict of laws provisions thereof.
+
+Jurisdiction.
+
+You and Barter Bender each consent to the exercise of personal and subject matter jurisdiction by the courts of the State of California, including the one located in the County of Orange, City of Santa Ana and the United States Federal Court for the Central District of California – Southern Division sitting in Santa Ana, California (the “California Courts”) with respect to any disputes, suits, legal actions or proceedings (an “Action”). You and Barter Bender agree that you will not commence any Action in any court other than the California Courts.
+
+Reporting Complaints
+
+If you are a California resident, in accordance with Cal. Civ. Code §1789.3, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by contacting them in writing at 400 R Street, Sacramento, CA 95814, or by telephone at (800) 952-5210.
+
+Termination.
+
+This Agreement is effective until terminated by you or Barter Bender. Your rights under this Agreement will terminate automatically without notice from Barter Bender if you fail to comply with any term(s) of this license. Upon termination of the Agreement, you shall cease all use of the Website.
+
+Addendums:
+Prohibited and Restricted Items:
+
+Items listed below are prohibited from sale or exchange on Barterbender:
+
+Alcohol, animals (live or mounted), wildlife products such as ivory, human artifacts, service contracts, charities and fundraising, raffles and contests for chances to win a prize, used cosmetics, currency, counterfeit currency or stamps, credit cards, drugs or prescription drugs and related substances and paraphernalia, embargoed or federally prohibited items, firearms and personal defense items, electronic devices designed to defeat paid or subscription services such as TV descramblers and traffic control devices, hazardous materials, lock picking devices, lottery tickets, tiered marketing/pyramid and matrix programs, stocks, bonds, and other securities, tobacco and tobacco related products, offensive an inappropriate materials such as Nazi artifacts, adult only items, sexual or explicit photos and artwork, articles depicting profanity, morally or racially inappropriate materials, any item removed from or involved in a crime scene, stolen items with serial numbers removed. Other items may be added or removed as our policy evolves.
+
+Regulations regarding specific items vary from state to state so you should check state and federal regulations before posting items that may fall within restricted or regulated guidelines. Some items are restricted or regulated for transfer outside of the United States, you should check with one or more of the following US government agencies for more information.
+
+International Trade Administration
+US Small Business Administration (SBA)-Office of International Trade
+
+Intellectual Property of Others:
+
+It is prohibited to offer for sale any merchandise that carries the unlicensed trademark, likeness, logo, or other similar proprietary feature on Barterbender. Item with logos, trademarks, and so forth cannot be counterfeit, knock-offs, reproductions, etc. unless they are under license by the rightful owner. Further items not allowed are copies of digital media such as software, music, and other similarly licensed media. Barterbender will, at the request of the rightful owners of such advertised items, remove ads containing prohibited items and suspend or cancel memberships of any persons knowingly engaging in such activities.
+
+Basic Rules for Listing Items:
+
+In an effort to keep Barterbender free from unwanted, unfair, and inappropriate listings we ask you to follow the most basic guidelines of common sense, decency, and honesty when listing items on Barterbender. First, Barterbender is a community of users and as such we ask all users to report any listing that does not conform to these basic principles. Also consider that any user who offends others can be suspended or removed completely from our community. Repeat offenders will not be tolerated as a courtesy to our community. We offer these simple rules as a basic guide but also ask users to apply a common sense approach to each rule before posting their items.
+
+1. Use brief, accurate, and honest descriptions for you merchandise. Don't overstate the facts.
+
+2. Be fair and reasonable when placing a value on your items. Use the internet to research other similar items to accurately assess the value of your items. Other users will do the same and the care you take now will improve the way other users view your transactions (and you as a trader) which improves your chances of success in future dealings.
+
+3. Upload clear and well though-out photos of your merchandise to best portray its features.
+
+4. Never use profane or inappropriate language when describing your merchandise. Refer to a thesauras if necessary but there are lots of words that can be used to describe something without offending others.
+
+5. Do not list the same item more than once in Barterbender. If it is listed in one section, it is not allowed to be listed in another simultaneously. If it does not sell as an auction item, delete it from auctions and recreate it as a classified but don't list it at the same time. Listing the same item simultaneously is a violation of Barterbender listing policy and will result in suspension or cancellation of membership.
+
+6. Respond to the inquiries from other users promptly and courteously whenever possible. Other users may view your delayed responses as a lack of interest in dealing on Barterbender and ignore your responses. The goal of Barterbender is to create an exciting, interactive website for fast and intensive trading action. Slow responses will greatly diminish your chances at success on Barterbender.";s:10:"has_viewed";N;}s:1:"g";a:0:{}s:1:"e";O:8:"DateTime":3:{s:4:"date";s:26:"2019-12-11 16:04:12.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:3:"GMT";}s:1:"m";N;s:1:"c";N;}

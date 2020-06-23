@@ -1,0 +1,981 @@
+<module>
+	<data>
+		<module_id>auction</module_id>
+		<product_id>younet_auction4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:5:{s:38:"auction.admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:7:"auction";i:1;s:19:"user-group-settings";}}s:34:"auction.admin_menu_manage_auctions";a:1:{s:3:"url";a:1:{i:0;s:7:"auction";}}s:39:"auction.admin_menu_define_bid_increment";a:1:{s:3:"url";a:2:{i:0;s:7:"auction";i:1;s:12:"bidincrement";}}s:34:"auction.admin_menu_global_settings";a:1:{s:3:"url";a:2:{i:0;s:7:"auction";i:1;s:14:"globalsettings";}}s:34:"auction.admin_menu_email_templates";a:1:{s:3:"url";a:2:{i:0;s:7:"auction";i:1;s:5:"email";}}}]]></menu>
+		<phrase_var_name>module_auction_new</phrase_var_name>
+		<version>4.02p2</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/09/Auction_Like_eBay.png</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="auction" parent_var_name="" m_connection="main" var_name="module_menu" ordering="133" url_value="auction" version_id="3.4.1" disallow_access="" module="auction" mobile_icon="gavel" />
+		<menu module_id="auction" parent_var_name="" m_connection="mobile" var_name="module_menu" ordering="135" url_value="auction" version_id="3.7.5" disallow_access="" module="auction" mobile_icon="gavel" />
+		<menu module_id="auction" parent_var_name="" m_connection="auction.index" var_name="menu_auction_create_new_auction_0a358ef5573a502549eb1c04287923d0" ordering="151" url_value="auction.add" version_id="3.7.7" disallow_access="" module="auction" />
+		<menu module_id="auction" parent_var_name="" m_connection="auction.my-bids" var_name="menu_auction_create_new_auction_10085e6b6bb8c1fea35bfd7ae519fc39" ordering="152" url_value="auction.add" version_id="3.8.0" disallow_access="" module="auction" />
+		<menu module_id="auction" parent_var_name="" m_connection="auction.my-offers" var_name="menu_auction_create_new_auction_7333d6a64738f73b53589ab7c4aceb28" ordering="153" url_value="auction.add" version_id="3.8.0" disallow_access="" module="auction" />
+		<menu module_id="auction" parent_var_name="" m_connection="auction.didnt-win" var_name="menu_auction_create_new_auction_8ce2e5eeb31f62a23503f84adadeb75d" ordering="154" url_value="auction.add" version_id="3.8.0" disallow_access="" module="auction" />
+		<menu module_id="auction" parent_var_name="" m_connection="auction.my-won-bids" var_name="menu_auction_create_new_auction_a3138479c1560cd52ddf0badfef57a07" ordering="155" url_value="auction.add" version_id="3.8.0" disallow_access="" module="auction" />
+		<menu module_id="auction" parent_var_name="" m_connection="auction.categories" var_name="menu_auction_create_new_auction_b9ee8c5b2626649fd2fd22f387dd77b7" ordering="156" url_value="auction.add" version_id="3.8.0" disallow_access="" module="auction" />
+		<menu module_id="auction" parent_var_name="" m_connection="auction.statistic" var_name="menu_auction_create_new_auction_0195b272c92424dca177e2652c9504ea" ordering="157" url_value="auction.add" version_id="3.8.0" disallow_access="" module="auction" />
+		<menu module_id="auction" parent_var_name="" m_connection="auction.manageauction" var_name="menu_auction_create_new_auction_8b5fc254a491bbf7371d354ed5c55d17" ordering="158" url_value="auction.add" version_id="3.8.0" disallow_access="" module="auction" />
+		<menu module_id="auction" parent_var_name="" m_connection="auction.settings" var_name="menu_auction_create_new_auction_1f553aec0230d4c01df1067388329922" ordering="159" url_value="auction.add" version_id="3.8.0" disallow_access="" module="auction" />
+	</menus>
+	<settings>
+		<setting group="seo" module_id="auction" is_hidden="0" type="" var_name="auction_meta_keywords" phrase_var_name="setting_auction_meta_keywords" ordering="1" version_id="4.6.0"><![CDATA[{_p var='seo_auction_meta_keywords'}]]></setting>
+		<setting group="seo" module_id="auction" is_hidden="0" type="" var_name="auction_meta_description" phrase_var_name="setting_auction_meta_description" ordering="1" version_id="4.6.0"><![CDATA[{_p var='seo_auction_meta_description'}]]></setting>
+		<setting group="" module_id="auction" is_hidden="0" type="drop" var_name="paging_mode" phrase_var_name="setting_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:9:"next_prev";s:6:"values";a:3:{i:0;s:9:"next_prev";i:1;s:8:"loadmore";i:2;s:10:"pagination";}}]]></setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_items_block_buyers_who_viewed_this_item_also_viewed" phrase_var_name="setting_max_items_block_buyers_who_viewed_this_item_also_viewed" ordering="1" version_id="3.8.0">5</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_items_block_other_auctions_from_this_seller" phrase_var_name="setting_max_items_block_other_auctions_from_this_seller" ordering="2" version_id="3.8.0">3</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_items_block_auctions_you_may_like" phrase_var_name="setting_max_items_block_auctions_you_may_like" ordering="3" version_id="3.8.0">3</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_items_block_auctions_bidden_by_my_friends" phrase_var_name="setting_max_items_block_auctions_bidden_by_my_friends" ordering="4" version_id="3.8.0">5</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_items_block_most_liked_auctions" phrase_var_name="setting_max_items_block_most_liked_auctions" ordering="5" version_id="3.8.0">5</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_items_block_upcoming_auctions" phrase_var_name="setting_max_items_block_upcoming_auctions" ordering="6" version_id="3.8.0">6</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_items_block_auctions_ending_today" phrase_var_name="setting_max_items_block_auctions_ending_today" ordering="7" version_id="3.8.0">5</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_items_block_todays_live_auctions" phrase_var_name="setting_max_items_block_todays_live_auctions" ordering="8" version_id="3.8.0">10</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_items_sub_categories_list_display" phrase_var_name="setting_max_items_sub_categories_list_display" ordering="9" version_id="3.8.0">8</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="drop" var_name="default_view" phrase_var_name="setting_default_view" ordering="10" version_id="3.8.0"><![CDATA[a:2:{s:7:"default";s:4:"List";s:6:"values";a:3:{i:0;s:4:"List";i:1;s:4:"Grid";i:2;s:8:"Pinboard";}}]]></setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_items_block_featured_auctions" phrase_var_name="setting_max_items_block_featured_auctions" ordering="11" version_id="3.8.0">5</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_items_block_weekly_hot_auctions" phrase_var_name="setting_max_items_block_weekly_hot_auctions" ordering="12" version_id="3.8.0">9</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_number_of_items_on_my_bidden_history_popup" phrase_var_name="setting_max_number_of_items_on_my_bidden_history_popup" ordering="14" version_id="3.8.0">6</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="max_number_of_items_on_my_offer_history_popup" phrase_var_name="setting_max_number_of_items_on_my_offer_history_popup" ordering="15" version_id="3.8.0">6</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="category_number" phrase_var_name="setting_category_number" ordering="1" version_id="3.8.0">10</setting>
+		<setting group="" module_id="auction" is_hidden="0" type="integer" var_name="refresh_time" phrase_var_name="setting_refresh_time" ordering="1" version_id="3.8.0">10000</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="auction.index" module_id="auction" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.categories" module_id="auction" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.index" module_id="auction" component="search" location="2" is_active="1" ordering="5" disallow_access="" can_move="1">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.index" module_id="auction" component="todays-live-auctions" location="1" is_active="1" ordering="2" disallow_access="" can_move="1">
+			<title><![CDATA[Today&#039;s Live Auctions]]></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.index" module_id="auction" component="auctions-ending-today" location="1" is_active="1" ordering="3" disallow_access="" can_move="1">
+			<title>Auctions Ending Today</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.index" module_id="auction" component="upcoming-auctions" location="1" is_active="1" ordering="4" disallow_access="" can_move="1">
+			<title>Upcoming Auctions</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.index" module_id="auction" component="auctions-bidden-by-my-friends" location="3" is_active="1" ordering="7" disallow_access="" can_move="1">
+			<title>Auctions My Friends Bid on</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.index" module_id="auction" component="most-liked-auctions" location="3" is_active="1" ordering="8" disallow_access="" can_move="1">
+			<title>Most Liked Auctions</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.detail" module_id="auction" component="category" location="1" is_active="1" ordering="5" disallow_access="" can_move="1">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.detail" module_id="auction" component="detailphotomenu" location="1" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Detail Photo Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.detail" module_id="auction" component="detailmenu" location="1" is_active="1" ordering="2" disallow_access="" can_move="1">
+			<title>Detail Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.detail" module_id="auction" component="detaillikelist" location="1" is_active="1" ordering="3" disallow_access="" can_move="1">
+			<title>Detail Like List</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.detail" module_id="auction" component="detailcheckinlist" location="1" is_active="1" ordering="4" disallow_access="" can_move="1">
+			<title>Detail Checkin List</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.detail" module_id="auction" component="buyers-also-viewed" location="1" is_active="1" ordering="6" disallow_access="" can_move="1">
+			<title>Buyers Also Viewed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.detail" module_id="auction" component="detail-header-info" location="2" is_active="1" ordering="7" disallow_access="" can_move="1">
+			<title>Detail Header Information</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-bids" module_id="auction" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-bids" module_id="auction" component="todays-live-auctions" location="1" is_active="1" ordering="2" disallow_access="" can_move="1">
+			<title><![CDATA[Today&#039;s Live Auctions]]></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-bids" module_id="auction" component="auctions-ending-today" location="1" is_active="1" ordering="3" disallow_access="" can_move="1">
+			<title>Auctions Ending Today</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-bids" module_id="auction" component="upcoming-auctions" location="1" is_active="1" ordering="4" disallow_access="" can_move="1">
+			<title>Upcoming Auctions</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-bids" module_id="auction" component="search" location="2" is_active="1" ordering="5" disallow_access="" can_move="1">
+			<title>Advanced Search Form</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-offers" module_id="auction" component="search" location="2" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Advanced Search Form</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-offers" module_id="auction" component="category" location="1" is_active="1" ordering="2" disallow_access="" can_move="1">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-offers" module_id="auction" component="todays-live-auctions" location="1" is_active="1" ordering="3" disallow_access="" can_move="1">
+			<title><![CDATA[Today&#039;s Live Auctions]]></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-offers" module_id="auction" component="auctions-ending-today" location="1" is_active="1" ordering="4" disallow_access="" can_move="1">
+			<title>Auctions Ending Today</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-offers" module_id="auction" component="upcoming-auctions" location="1" is_active="1" ordering="5" disallow_access="" can_move="1">
+			<title>Upcoming Auctions</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.didnt-win" module_id="auction" component="search" location="2" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Advanced Search Form</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.didnt-win" module_id="auction" component="category" location="1" is_active="1" ordering="2" disallow_access="" can_move="1">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.didnt-win" module_id="auction" component="todays-live-auctions" location="1" is_active="1" ordering="3" disallow_access="" can_move="1">
+			<title><![CDATA[Today&#039;s Live Auctions]]></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.didnt-win" module_id="auction" component="auctions-ending-today" location="1" is_active="1" ordering="4" disallow_access="" can_move="1">
+			<title>Auctions Ending Today</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.didnt-win" module_id="auction" component="upcoming-auctions" location="1" is_active="1" ordering="5" disallow_access="" can_move="1">
+			<title>Upcoming Auctions</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-won-bids" module_id="auction" component="search" location="2" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Advanced Search Form</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-won-bids" module_id="auction" component="category" location="1" is_active="1" ordering="2" disallow_access="" can_move="1">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-won-bids" module_id="auction" component="todays-live-auctions" location="1" is_active="1" ordering="3" disallow_access="" can_move="1">
+			<title><![CDATA[Today&#039;s Live Auctions]]></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-won-bids" module_id="auction" component="auctions-ending-today" location="1" is_active="1" ordering="4" disallow_access="" can_move="1">
+			<title>Auctions Ending Today</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.my-won-bids" module_id="auction" component="upcoming-auctions" location="1" is_active="1" ordering="5" disallow_access="" can_move="1">
+			<title>Upcoming Auctions</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.categories" module_id="auction" component="todays-live-auctions" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.categories" module_id="auction" component="auctions-ending-today" location="1" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.categories" module_id="auction" component="upcoming-auctions" location="1" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction" module_id="auction" component="compareitem" location="12" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.print" module_id="auction" component="detail-header-info" location="2" is_active="1" ordering="1" disallow_access="" can_move="1">
+			<title>Detail Header Information</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.statistic" module_id="auction" component="menu-seller" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.manageauction" module_id="auction" component="menu-seller" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.settings" module_id="auction" component="menu-seller" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ecommerce.manage-orders" module_id="auction" component="menu-seller" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ecommerce.my-requests" module_id="auction" component="menu-seller" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.edit" module_id="auction" component="menu-edit-auction-link" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.bid-history" module_id="auction" component="menu-edit-auction-link" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.offer-list" module_id="auction" component="menu-edit-auction-link" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="auction.cover-photos" module_id="auction" component="menu-edit-auction-link" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="auction" component="index" m_connection="auction.index" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="category" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="categories" m_connection="auction.categories" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="search" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="todays-live-auctions" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="auctions-ending-today" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="upcoming-auctions" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="featured-auctions" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="weekly-hot-auctions" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="auctions-bidden-by-my-friends" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="most-liked-auctions" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="detail" m_connection="auction.detail" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="detailphotomenu" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="detailmenu" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="detaillikelist" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="detailcheckinlist" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="buyers-also-viewed" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="detail-header-info" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="auctions-you-may-like" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="other-auctions-from-this-seller" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="my-bids" m_connection="auction.my-bids" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="my-offers" m_connection="auction.my-offers" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="didnt-win" m_connection="auction.didnt-win" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="my-won-bids" m_connection="auction.my-won-bids" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="compareitem" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="statistic" m_connection="auction.statistic" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="manageauction" m_connection="auction.manageauction" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="settings" m_connection="auction.settings" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="print" m_connection="auction.print" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="menu-seller" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="manage-orders" m_connection="ecommerce.manage-orders" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="my-requests" m_connection="ecommerce.my-requests" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="edit" m_connection="auction.edit" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="menu-edit-auction-link" m_connection="" module="auction" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="auction" component="cover-photos" m_connection="auction.cover-photos" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="bid-history" m_connection="auction.bid-history" module="auction" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="auction" component="offer-list" m_connection="auction.offer-list" module="auction" is_controller="1" is_block="0" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_templates" added="1565690606">YouNet Auction</phrase>
+		<phrase var_name="module_auction" added="1565690606">YouNet Auction</phrase>
+		<phrase var_name="module_menu" added="1565690606">Auction</phrase>
+		<phrase var_name="global_settings" added="1565690606">Global Settings</phrase>
+		<phrase var_name="default_theme_for" added="1565690606">Default theme for</phrase>
+		<phrase var_name="submit" added="1565690606">Submit</phrase>
+		<phrase var_name="user_setting_how_much_is_user_worth_for_auction_publishing" added="1565690606">Fee for publishing an auction listing</phrase>
+		<phrase var_name="user_setting_admin_want_auction_to_be_automatically_approved_after_published" added="1565690606">Set to True, if admin want auction to be automatically approved after published</phrase>
+		<phrase var_name="user_setting_how_much_is_user_worth_for_auction_featured" added="1565690606">Fee to feature an auction listing</phrase>
+		<phrase var_name="user_setting_can_approve_auction" added="1565690606">Can approve auction ?</phrase>
+		<phrase var_name="user_setting_can_delete_own_auction" added="1565690606">Can delete own auction ?</phrase>
+		<phrase var_name="user_setting_can_feature_auction" added="1565690606">Can feature auction ?</phrase>
+		<phrase var_name="user_setting_can_delete_auction_created_by_other_users" added="1565690606">Can delete auction created by other users ?</phrase>
+		<phrase var_name="user_setting_can_post_comments_on_auction" added="1565690606">Can post comments on auction ?</phrase>
+		<phrase var_name="user_setting_can_edit_auction_created_by_other_users" added="1565690606">Can edit auction created by other users ?</phrase>
+		<phrase var_name="user_setting_can_create_auction" added="1565690606">Can create auction ?</phrase>
+		<phrase var_name="user_setting_can_view_auction" added="1565690606">Can view auction ?</phrase>
+		<phrase var_name="user_setting_can_edit_own_auction" added="1565690606">Can edit own auction ?</phrase>
+		<phrase var_name="user_setting_can_control_if_a_user_can_add_a_comment_on_their_auction_or_simply_disable_comments" added="1565690606">Can control if a user can add a comment on their auction or simply disable comments ?</phrase>
+		<phrase var_name="user_setting_points_auction" added="1565690606">Set points for each auction this user created ?</phrase>
+		<phrase var_name="user_setting_minute_to_control_how_long_user_can_create_a_auction" added="1565690606">Set minute to control how long user can create a auction ?</phrase>
+		<phrase var_name="user_setting_can_close_own_auction" added="1565690606">Can close own auction ?</phrase>
+		<phrase var_name="user_setting_can_bid_auction" added="1565690606">Can bid auction ?</phrase>
+		<phrase var_name="user_setting_commission_for_admin_when_user_buy_auction" added="1565690606">Commission for admin when user buy auction (%)</phrase>
+		<phrase var_name="setting_group_younet_auction" added="1565690606"><![CDATA[<title>Younet Auction</title><info>Younet Auction Setting</info>]]></phrase>
+		<phrase var_name="setting_max_items_block_buyers_who_viewed_this_item_also_viewed" added="1565690606"><![CDATA[<title>Number of items on block "Buyers Who Viewed This Item Also Viewed"</title><info>Maximum number of items on block "Buyers Who Viewed This Item Also Viewed"</info>]]></phrase>
+		<phrase var_name="setting_max_items_block_other_auctions_from_this_seller" added="1565690606"><![CDATA[<title>Number of items on block "Other Auctions From This Seller"</title><info>Maximum number of items on block "Other Auctions From This Seller"</info>]]></phrase>
+		<phrase var_name="setting_max_items_block_auctions_you_may_like" added="1565690606"><![CDATA[<title>Number of items on block "Auctions You May Like"</title><info>Maximum number of items on block "Auctions You May Like"</info>]]></phrase>
+		<phrase var_name="setting_max_items_block_auctions_bidden_by_my_friends" added="1565690606"><![CDATA[<title>Number of items on block "Auctions My Friends Bid on"</title><info>Maximum number of items on block "Auctions My Friends Bid on"</info>]]></phrase>
+		<phrase var_name="setting_max_items_block_most_liked_auctions" added="1565690606"><![CDATA[<title>Number of items on block "Most Liked Auctions"</title><info>Maximum number of items on block "Most Liked Auctions"</info>]]></phrase>
+		<phrase var_name="setting_max_items_block_upcoming_auctions" added="1565690606"><![CDATA[<title>Number of items on block "Upcoming Auctions"</title><info>Maximum number of items on block "Upcoming Auctions"</info>]]></phrase>
+		<phrase var_name="setting_max_items_block_auctions_ending_today" added="1565690606"><![CDATA[<title>Number of items on block "Auctions Ending Today"</title><info>Maximum number of items on block "Auctions Ending Today"</info>]]></phrase>
+		<phrase var_name="setting_max_items_block_todays_live_auctions" added="1565690606"><![CDATA[<title>Number of items on block "Today&#039;s Live Auctions"</title><info>Maximum number of items on block "Today&#039;s Live Auctions"</info>]]></phrase>
+		<phrase var_name="admin_menu_define_bid_increasement" added="1565690606">Define Bid Increasement</phrase>
+		<phrase var_name="bid_increasement" added="1565690606">Bid Increasement</phrase>
+		<phrase var_name="select" added="1565690606">Select</phrase>
+		<phrase var_name="category" added="1565690606">Category</phrase>
+		<phrase var_name="bid_increment" added="1565690606">Bid Increment</phrase>
+		<phrase var_name="from" added="1565690606">From</phrase>
+		<phrase var_name="to" added="1565690606">To</phrase>
+		<phrase var_name="increment" added="1565690606">Increment</phrase>
+		<phrase var_name="admin_menu_define_bid_increment" added="1565690606">Define Bid Increment</phrase>
+		<phrase var_name="add_new_bid_increment" added="1565690606">Add New Bid Increment</phrase>
+		<phrase var_name="bidincrement_increment" added="1565690606">Bid Increment</phrase>
+		<phrase var_name="provide_category_for_bid_increment" added="1565690606">Provide category for bid increment</phrase>
+		<phrase var_name="provide_valid_value_for_from_field" added="1565690606">Provide valid value for From field</phrase>
+		<phrase var_name="provide_valid_value_for_to_field" added="1565690606">Provide valid value for To field</phrase>
+		<phrase var_name="provide_valid_value_for_increment_field" added="1565690606">Provide valid value for Increment field</phrase>
+		<phrase var_name="update_bid_increment_successfully" added="1565690606">Update bid increment successfully.</phrase>
+		<phrase var_name="products_by_categories" added="1565690606">Products By Categories</phrase>
+		<phrase var_name="all" added="1565690606">All</phrase>
+		<phrase var_name="all_categories" added="1565690606">All Categories</phrase>
+		<phrase var_name="categories_by" added="1565690606">Categories By</phrase>
+		<phrase var_name="setting_max_items_sub_categories_list_display" added="1565690606"><![CDATA[<title>Number of items on Sub-categories list display</title><info>Maximum mumber of items on Sub-categories list display</info>]]></phrase>
+		<phrase var_name="more_dot_dot_dot" added="1565690606">More...</phrase>
+		<phrase var_name="less" added="1565690606">Less</phrase>
+		<phrase var_name="setting_default_view" added="1565690606"><![CDATA[<title>View</title><info>Default View on Homepage and Listing Page</info>]]></phrase>
+		<phrase var_name="advanced_search" added="1565690606">Advanced Search</phrase>
+		<phrase var_name="search" added="1565690606">Search</phrase>
+		<phrase var_name="reset" added="1565690606">Reset</phrase>
+		<phrase var_name="number_per_page" added="1565690606">{number} per page</phrase>
+		<phrase var_name="sort" added="1565690606">Sort</phrase>
+		<phrase var_name="search_auctions" added="1565690606">Search Auctions</phrase>
+		<phrase var_name="newest" added="1565690606">Newest</phrase>
+		<phrase var_name="oldest" added="1565690606">Oldest</phrase>
+		<phrase var_name="a_z" added="1565690606">A-Z</phrase>
+		<phrase var_name="z_a" added="1565690606">Z-A</phrase>
+		<phrase var_name="auction" added="1565690606">Auction</phrase>
+		<phrase var_name="delete_auction" added="1565690606">Delete Auction</phrase>
+		<phrase var_name="list" added="1565690606">List</phrase>
+		<phrase var_name="grid" added="1565690606">Grid</phrase>
+		<phrase var_name="pinboard" added="1565690606">Pinboard</phrase>
+		<phrase var_name="auction_successfully_deleted" added="1565690606">Auction Successfully Deleted</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_auctions_that_you_selected" added="1565690606">Are you sure you want to delete auctions that you selected ?</phrase>
+		<phrase var_name="yes" added="1565690606">Yes</phrase>
+		<phrase var_name="no" added="1565690606">No</phrase>
+		<phrase var_name="no_auctions_found" added="1565690606">No Auctions Found</phrase>
+		<phrase var_name="icount_auction" added="1565690606">{iCount} Auction</phrase>
+		<phrase var_name="icount_auctions" added="1565690606">{iCount} Auctions</phrase>
+		<phrase var_name="list_view" added="1565690606">List View</phrase>
+		<phrase var_name="grid_view" added="1565690606">Grid View</phrase>
+		<phrase var_name="pinboard_view" added="1565690606">Pinboard View</phrase>
+		<phrase var_name="detail_auction" added="1565690606">Detail Auction</phrase>
+		<phrase var_name="more_info" added="1565690606">More Info</phrase>
+		<phrase var_name="moderate" added="1565690606">Moderate</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_auction" added="1565690606">Are you sure you want to delete this auction?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_close_this_auction_notice_it_cannot_be_re_opened" added="1565690606">Are you sure you want to close this auction? Notice: it cannot be re-opened</phrase>
+		<phrase var_name="dashboard" added="1565690606">Dashboard</phrase>
+		<phrase var_name="featured_auction" added="1565690606">Featured Auction</phrase>
+		<phrase var_name="make_payment" added="1565690606">Make Payment</phrase>
+		<phrase var_name="link" added="1565690606">Link</phrase>
+		<phrase var_name="featured" added="1565690606">Featured</phrase>
+		<phrase var_name="add_to_compare" added="1565690606">Add to Compare</phrase>
+		<phrase var_name="day" added="1565690606">day</phrase>
+		<phrase var_name="days" added="1565690606">days</phrase>
+		<phrase var_name="hour_left" added="1565690606">hour left</phrase>
+		<phrase var_name="hours_left" added="1565690606">hours left</phrase>
+		<phrase var_name="keywords" added="1565690606">Keywords</phrase>
+		<phrase var_name="keyword" added="1565690606">Keyword</phrase>
+		<phrase var_name="categories" added="1565690606">Categories</phrase>
+		<phrase var_name="todays_live_auction" added="1565690606"><![CDATA[Today&#039;s Live Auctions]]></phrase>
+		<phrase var_name="todays_live_auctions" added="1565690606"><![CDATA[Today&#039;s Live Auctions]]></phrase>
+		<phrase var_name="auctions_ending_today" added="1565690606">Auctions Ending Today</phrase>
+		<phrase var_name="upcoming_auctions" added="1565690606">Upcoming Auctions</phrase>
+		<phrase var_name="start" added="1565690606">Start</phrase>
+		<phrase var_name="view_more" added="1565690606">View More</phrase>
+		<phrase var_name="bids" added="1565690606">Bids</phrase>
+		<phrase var_name="current_bid" added="1565690606">Current Bid</phrase>
+		<phrase var_name="owner" added="1565690606">Owner</phrase>
+		<phrase var_name="setting_max_items_block_featured_auctions" added="1565690606"><![CDATA[<title>Number of items on block "Featured Auctions"</title><info>Maximum number of items on block "Featured Auctions"</info>]]></phrase>
+		<phrase var_name="featured_auctions" added="1565690606">Featured Auctions</phrase>
+		<phrase var_name="end" added="1565690606">End</phrase>
+		<phrase var_name="setting_max_items_block_weekly_hot_auctions" added="1565690606"><![CDATA[<title>Number of items on block "Hot Auctions"</title><info>Maximum number of items on block "Hot Auctions"</info>]]></phrase>
+		<phrase var_name="weekly_hot_auctions" added="1565690606">Hot Auctions</phrase>
+		<phrase var_name="auctions_bidden_by_my_friends" added="1565690606">Auctions My Friends Bid on</phrase>
+		<phrase var_name="free" added="1565690606">Free</phrase>
+		<phrase var_name="by" added="1565690606">By</phrase>
+		<phrase var_name="number_bid" added="1565690606">{number} bid</phrase>
+		<phrase var_name="number_bids" added="1565690606">{number} bids</phrase>
+		<phrase var_name="most_liked_auctions" added="1565690606">Most Liked Auctions</phrase>
+		<phrase var_name="number_like" added="1565690606">{number} like</phrase>
+		<phrase var_name="number_likes" added="1565690606">{number} likes</phrase>
+		<phrase var_name="most_liked" added="1565690606">Most Liked</phrase>
+		<phrase var_name="add_new_auction" added="1565690606">Add new auction</phrase>
+		<phrase var_name="edit_an_auction" added="1565690606">Edit an auction</phrase>
+		<phrase var_name="add" added="1565690606">Add</phrase>
+		<phrase var_name="auctions" added="1565690606">Auctions</phrase>
+		<phrase var_name="general_info" added="1565690606">General Info</phrase>
+		<phrase var_name="product_title" added="1565690606">Product Title</phrase>
+		<phrase var_name="description" added="1565690606">Description</phrase>
+		<phrase var_name="quantity" added="1565690606">Quantity</phrase>
+		<phrase var_name="addition_information" added="1565690606">Addition Information</phrase>
+		<phrase var_name="title" added="1565690606">Title</phrase>
+		<phrase var_name="tags" added="1565690606">Tags</phrase>
+		<phrase var_name="content" added="1565690606">Content</phrase>
+		<phrase var_name="separate_multiple_topics_with_commas" added="1565690606">Separate multiple topics with commas.</phrase>
+		<phrase var_name="feature" added="1565690606">Feature</phrase>
+		<phrase var_name="feature_this_auction_for" added="1565690606">Feature this auction for</phrase>
+		<phrase var_name="day_s_with" added="1565690606">day(s) with</phrase>
+		<phrase var_name="fee_to_feature_auction_feature_fee_currency_id_for_1_day" added="1565690606">Fee to feature auction: {feature_fee} {currency_id} for 1 day</phrase>
+		<phrase var_name="view_privacy" added="1565690606">View Privacy</phrase>
+		<phrase var_name="privacy" added="1565690606">Privacy</phrase>
+		<phrase var_name="control_who_can_see_this_auction" added="1565690606">Control who can see this auction.</phrase>
+		<phrase var_name="save" added="1565690606">Save</phrase>
+		<phrase var_name="publish" added="1565690606">Publish</phrase>
+		<phrase var_name="cancel" added="1565690606">Cancel</phrase>
+		<phrase var_name="uom" added="1565690606">UOM</phrase>
+		<phrase var_name="price" added="1565690606">Price</phrase>
+		<phrase var_name="reserve_price" added="1565690606">Reserve Price</phrase>
+		<phrase var_name="buy_now_price" added="1565690606">Buy Now Price</phrase>
+		<phrase var_name="hide" added="1565690606">Hide</phrase>
+		<phrase var_name="select_theme" added="1565690606">Select Theme</phrase>
+		<phrase var_name="inventory" added="1565690606">Inventory</phrase>
+		<phrase var_name="allow_to_contact_end" added="1565690606">Allow to contact end</phrase>
+		<phrase var_name="availability" added="1565690606">Availability</phrase>
+		<phrase var_name="start_date" added="1565690606">Start Date</phrase>
+		<phrase var_name="end_date" added="1565690606">End Date</phrase>
+		<phrase var_name="this_field_is_required" added="1565690606">This field is required</phrase>
+		<phrase var_name="provide_a_category_this_item_will_belong_to" added="1565690606">Provide a category this item will belong to</phrase>
+		<phrase var_name="receive_notification_when_anyone_bid_this_auction" added="1565690606">Receive notification when anyone bid this auction</phrase>
+		<phrase var_name="comment_privacy" added="1565690606">Comment Privacy</phrase>
+		<phrase var_name="photo_privacy" added="1565690606">Photo Privacy</phrase>
+		<phrase var_name="video_privacy" added="1565690606">Video Privacy</phrase>
+		<phrase var_name="control_who_can_comment_on_this_auction" added="1565690606">Control who can comment on this auction.</phrase>
+		<phrase var_name="control_who_can_see_photos_of_this_auction" added="1565690606">Control who can see photos of this auction.</phrase>
+		<phrase var_name="control_who_can_see_videos_of_this_auction" added="1565690606">Control who can see videos of this auction.</phrase>
+		<phrase var_name="please_edit_auction_end_date_after_start_date" added="1565690606">Please edit auction end date after start date</phrase>
+		<phrase var_name="please_enter_number_for_quantity" added="1565690606">Please enter number for quantity</phrase>
+		<phrase var_name="please_edit_quantity_more_than_zero" added="1565690606">Please edit your auction quantity more than zero.</phrase>
+		<phrase var_name="you_have_to_input_location" added="1565690606">You have to input location</phrase>
+		<phrase var_name="review_and_confirm_purchase" added="1565690606">Review and Confirm Purchase</phrase>
+		<phrase var_name="publishing_fee" added="1565690606">Publishing fee</phrase>
+		<phrase var_name="total_fee" added="1565690606">Total Fee</phrase>
+		<phrase var_name="payment_methods" added="1565690606">Payment Methods</phrase>
+		<phrase var_name="menu_auction_create_new_auction_0a358ef5573a502549eb1c04287923d0" added="1565690606">Create New Auction</phrase>
+		<phrase var_name="admin_menu_manage_auctions" added="1565690606">Manage Auctions</phrase>
+		<phrase var_name="search_filter" added="1565690606">Search Filter</phrase>
+		<phrase var_name="search_for_text" added="1565690606">Search For Text</phrase>
+		<phrase var_name="search_for_user" added="1565690606">Search for User</phrase>
+		<phrase var_name="display" added="1565690606">Display</phrase>
+		<phrase var_name="logo" added="1565690606">Logo</phrase>
+		<phrase var_name="name" added="1565690606">Name</phrase>
+		<phrase var_name="created_user" added="1565690606">Created By</phrase>
+		<phrase var_name="created_date" added="1565690606">Created Date</phrase>
+		<phrase var_name="product_price" added="1565690606">Product Price</phrase>
+		<phrase var_name="product_status" added="1565690606">Product Status</phrase>
+		<phrase var_name="quality" added="1565690606">Quality</phrase>
+		<phrase var_name="status" added="1565690606">Status</phrase>
+		<phrase var_name="remain" added="1565690606">Remain</phrase>
+		<phrase var_name="auctions_successfully_deleted" added="1565690606">Auctions Successfully Deleted</phrase>
+		<phrase var_name="create_time" added="1565690606">Create Time</phrase>
+		<phrase var_name="total_view" added="1565690606">Total View</phrase>
+		<phrase var_name="total_like" added="1565690606">Total Like</phrase>
+		<phrase var_name="product_quantity" added="1565690606">Product Quantity</phrase>
+		<phrase var_name="manage_auctions" added="1565690606">Manage Auctions</phrase>
+		<phrase var_name="any" added="1565690606">Any</phrase>
+		<phrase var_name="draft" added="1565690606">Draft</phrase>
+		<phrase var_name="unpaid" added="1565690606">Unpaid</phrase>
+		<phrase var_name="pending" added="1565690606">Pending</phrase>
+		<phrase var_name="denied" added="1565690606">Denied</phrase>
+		<phrase var_name="running" added="1565690606">Running</phrase>
+		<phrase var_name="paused" added="1565690606">Paused</phrase>
+		<phrase var_name="completed" added="1565690606">Completed</phrase>
+		<phrase var_name="deleted" added="1565690606">Deleted</phrase>
+		<phrase var_name="approved" added="1565690606">Approved</phrase>
+		<phrase var_name="other" added="1565690606">Other</phrase>
+		<phrase var_name="deactivate" added="1565690606">Deactivate</phrase>
+		<phrase var_name="activate" added="1565690606">Activate</phrase>
+		<phrase var_name="are_you_sure_you_want_to_deactive_this_auction" added="1565690606">Are you sure you want to deactive this auction ?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_deactivate_this_auction" added="1565690606">Are you sure you want to deactivate this auction ?</phrase>
+		<phrase var_name="not_featured" added="1565690606">Not Featured</phrase>
+		<phrase var_name="delete_selected" added="1565690606">Delete Selected</phrase>
+		<phrase var_name="no_auctions_have_been_created" added="1565690606">No auctions have been created.</phrase>
+		<phrase var_name="search_for_name" added="1565690606">Search For Name</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_these_auctions" added="1565690606">Are you sure you want to delete these auctions ?</phrase>
+		<phrase var_name="view_all_categories" added="1565690606">View All Categories</phrase>
+		<phrase var_name="seller" added="1565690606">Seller</phrase>
+		<phrase var_name="auction_name" added="1565690606">Auction Name</phrase>
+		<phrase var_name="current_bidder" added="1565690606">Current Bidder</phrase>
+		<phrase var_name="edit" added="1565690606">Edit</phrase>
+		<phrase var_name="approve" added="1565690606">Approve</phrase>
+		<phrase var_name="auction_successfully_approved" added="1565690606">Auction Successfully Approved</phrase>
+		<phrase var_name="deny" added="1565690606">Deny</phrase>
+		<phrase var_name="auctions_successfully_denied" added="1565690606">Auction Successfully Denied</phrase>
+		<phrase var_name="delete" added="1565690606">Delete</phrase>
+		<phrase var_name="your_auction_has_been_added" added="1565690606">Your auction has been added</phrase>
+		<phrase var_name="your_auction_has_been_updated" added="1565690606">Your auction has been updated</phrase>
+		<phrase var_name="note_this_auction_is_featured_until_expire_date" added="1565690606">Note: This auction is featured from {start_date} until {expire_date}</phrase>
+		<phrase var_name="update" added="1565690606">Update</phrase>
+		<phrase var_name="define_bid_increment" added="1565690606">Define Bid Increment</phrase>
+		<phrase var_name="auction_not_found" added="1565690606">Auction Not Found</phrase>
+		<phrase var_name="unable_to_view_this_item_due_to_privacy_settings" added="1565690606">Unable to view this item due to privacy settings.</phrase>
+		<phrase var_name="manage_auction" added="1565690606">Manage Auction</phrase>
+		<phrase var_name="actions" added="1565690606">Actions</phrase>
+		<phrase var_name="like" added="1565690606">Like</phrase>
+		<phrase var_name="unlike" added="1565690606">Unlike</phrase>
+		<phrase var_name="print" added="1565690606">Print</phrase>
+		<phrase var_name="monday" added="1565690606">Monday</phrase>
+		<phrase var_name="tuesday" added="1565690606">Tuesday</phrase>
+		<phrase var_name="wednesday" added="1565690606">Wednesday</phrase>
+		<phrase var_name="thursday" added="1565690606">Thursday</phrase>
+		<phrase var_name="friday" added="1565690606">Friday</phrase>
+		<phrase var_name="saturday" added="1565690606">Saturday</phrase>
+		<phrase var_name="sunday" added="1565690606">Sunday</phrase>
+		<phrase var_name="none" added="1565690606">None</phrase>
+		<phrase var_name="additional_information" added="1565690606">Additional Information</phrase>
+		<phrase var_name="suggested_auctions" added="1565690606">Suggested Auctions</phrase>
+		<phrase var_name="number_auctions" added="1565690606">{number} Auctions</phrase>
+		<phrase var_name="number_auction" added="1565690606">{number} Auction</phrase>
+		<phrase var_name="overview" added="1565690606">Overview</phrase>
+		<phrase var_name="shipping" added="1565690606"><![CDATA[Shipping & Payment]]></phrase>
+		<phrase var_name="bidhistory" added="1565690606">Bid History</phrase>
+		<phrase var_name="offerhistory" added="1565690606">Offer History</phrase>
+		<phrase var_name="chart" added="1565690606">Chart For Bidding</phrase>
+		<phrase var_name="activities" added="1565690606">Activities</phrase>
+		<phrase var_name="photos" added="1565690606">Photos</phrase>
+		<phrase var_name="videos" added="1565690606">Videos</phrase>
+		<phrase var_name="full_name_liked_your_auction_title" added="1565690606"><![CDATA[{full_name} liked your auction "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_auction_a_href_link_title_a_to_view_this_auction_follow_the_link_below_a_href_link_link_a" added="1565690606"><![CDATA[{full_name} liked your auction "<a href="{link}">{title}</a>"
+To view this auction, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="likes" added="1565690606">Likes</phrase>
+		<phrase var_name="people_like_this" added="1565690606">people like this</phrase>
+		<phrase var_name="share" added="1565690606">Share</phrase>
+		<phrase var_name="add_to_watchlist" added="1565690606">Add to Watchlist</phrase>
+		<phrase var_name="remove_from_watchlist" added="1565690606">Remove from Watchlist</phrase>
+		<phrase var_name="message_owner" added="1565690606">Message Owner</phrase>
+		<phrase var_name="buyers_who_viewed_this_item_also_viewed" added="1565690606">Buyers Who Viewed This Item Also Viewed</phrase>
+		<phrase var_name="other_auctions_from_this_seller" added="1565690606">Other Auctions From This Seller</phrase>
+		<phrase var_name="auctions_you_may_like" added="1565690606">Auctions You May Like</phrase>
+		<phrase var_name="start_time" added="1565690606">Start Time</phrase>
+		<phrase var_name="hours" added="1565690606">Hours</phrase>
+		<phrase var_name="hour" added="1565690606">Hour</phrase>
+		<phrase var_name="time_left" added="1565690606">Time Left</phrase>
+		<phrase var_name="buy_it_now" added="1565690606">Buy It Now</phrase>
+		<phrase var_name="views" added="1565690606">View(s)</phrase>
+		<phrase var_name="enter_price_or_more" added="1565690606">Enter {price} or more</phrase>
+		<phrase var_name="place_bid" added="1565690606">Place Bid</phrase>
+		<phrase var_name="make_offer" added="1565690606">Make Offer</phrase>
+		<phrase var_name="users_liked_gender_own_auction_title" added="1565690606"><![CDATA[{users} liked {gender} own auction "{title}"]]></phrase>
+		<phrase var_name="users_liked_your_auction_title" added="1565690606"><![CDATA[{users} liked your auction "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_039_s_span_auction_title" added="1565690606"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> auction "{title}"]]></phrase>
+		<phrase var_name="clone" added="1565690606">Clone</phrase>
+		<phrase var_name="close" added="1565690606">Close</phrase>
+		<phrase var_name="to_field_must_be_greater_than_from_field_in_each_rows" added="1565690606">To field must be greater than From field in each rows</phrase>
+		<phrase var_name="please_field_new_row_before_add_more" added="1565690606">Please field new row before add more</phrase>
+		<phrase var_name="auction_is_not_valid" added="1565690606">Auction is not valid!</phrase>
+		<phrase var_name="your_bid_must_be_greater_than_or_equal_to_price" added="1565690606">Your bid must be greater than or equal to {price}!</phrase>
+		<phrase var_name="your_bid_is_not_valid" added="1565690606">Your bid is not valid!</phrase>
+		<phrase var_name="your_offer_is_not_valid" added="1565690606">Your offer is not valid!</phrase>
+		<phrase var_name="seller_section" added="1565690606">Seller Section</phrase>
+		<phrase var_name="view_this_auction" added="1565690606">View This Auction</phrase>
+		<phrase var_name="option" added="1565690606">Option</phrase>
+		<phrase var_name="updated_cover_photos_successfully" added="1565690606">Updated cover photos successfully</phrase>
+		<phrase var_name="user_setting_max_upload_size_photos" added="1565690606">Maximum upload size for photos(KB)</phrase>
+		<phrase var_name="some_photos_you_uploaded_is_invalid_type_or_exceed_limited_size" added="1565690606">Some photos you uploaded is invalid type or exceed limited size.</phrase>
+		<phrase var_name="unable_to_find_the_image" added="1565690606">Unable to find the image.</phrase>
+		<phrase var_name="cover_photos" added="1565690606">Cover Photos</phrase>
+		<phrase var_name="select_image_s" added="1565690606">Select Image(s)</phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1565690606">You can upload a JPG, GIF or PNG file.</phrase>
+		<phrase var_name="the_file_size_limit_is_filesize_if_your_upload_does_not_work_try_uploading_a_smaller_picture" added="1565690606">The file size limit is {filesize}. If your upload does not work, try uploading a smaller picture.</phrase>
+		<phrase var_name="maximum_photos_imaximum" added="1565690606">Remain photos: {iMaximum}</phrase>
+		<phrase var_name="upload" added="1565690606">Upload</phrase>
+		<phrase var_name="delete_this_image" added="1565690606">Delete this image</phrase>
+		<phrase var_name="are_you_sure" added="1565690606">Are you sure?</phrase>
+		<phrase var_name="edit_info" added="1565690606">Edit Info</phrase>
+		<phrase var_name="theme" added="1565690606">Theme</phrase>
+		<phrase var_name="bid_history" added="1565690606">Bid History</phrase>
+		<phrase var_name="offer_list" added="1565690606">Offer List</phrase>
+		<phrase var_name="manage_themes_updated_successfully" added="1565690606">Manage themes updated successfully</phrase>
+		<phrase var_name="themes" added="1565690606">Themes</phrase>
+		<phrase var_name="apply_theme" added="1565690606">Apply Theme</phrase>
+		<phrase var_name="setting_max_number_cover_photos" added="1565690606"><![CDATA[<title>Maximum number of cover photos</title><info>Maximum number of cover photos</info>]]></phrase>
+		<phrase var_name="setting_max_upload_size_cover_photos" added="1565690606"><![CDATA[<title>Maximum Upload Size for Photos</title><info>Maximum Upload Size for Photos(KB)</info>]]></phrase>
+		<phrase var_name="bidder_name" added="1565690606">Bidder Name</phrase>
+		<phrase var_name="no_offer_has_been_submited" added="1565690606">No offer has been submitted.</phrase>
+		<phrase var_name="offer_amount" added="1565690606">Offer Amount</phrase>
+		<phrase var_name="time" added="1565690606">Time</phrase>
+		<phrase var_name="day_left" added="1565690606">Day Left</phrase>
+		<phrase var_name="send_message" added="1565690606">Send Message</phrase>
+		<phrase var_name="bid_amount" added="1565690606">Bid Amount</phrase>
+		<phrase var_name="no_bid_has_been_submited" added="1565690606">No bid has been submitted.</phrase>
+		<phrase var_name="go_to_chart" added="1565690606">Go to chart</phrase>
+		<phrase var_name="start_price" added="1565690606">Start Price</phrase>
+		<phrase var_name="auction_specifications" added="1565690606">Auction Specifications</phrase>
+		<phrase var_name="auction_description" added="1565690606">Auction Description</phrase>
+		<phrase var_name="shipping_and_payment" added="1565690606">Shipping and Payment</phrase>
+		<phrase var_name="shipping_payment" added="1565690606"><![CDATA[Shipping & payment]]></phrase>
+		<phrase var_name="bidder" added="1565690606">Bidder</phrase>
+		<phrase var_name="chart_for_bidding" added="1565690606">Chart For Bidding</phrase>
+		<phrase var_name="search_photos" added="1565690606">Search Photos...</phrase>
+		<phrase var_name="upload_a_new_image" added="1565690606">Upload a New Image</phrase>
+		<phrase var_name="latest" added="1565690606">Latest</phrase>
+		<phrase var_name="most_viewed" added="1565690606">Most Viewed</phrase>
+		<phrase var_name="most_discussed" added="1565690606">Most Discussed</phrase>
+		<phrase var_name="per_page" added="1565690606">{total} per page</phrase>
+		<phrase var_name="show" added="1565690606">Show</phrase>
+		<phrase var_name="when" added="1565690606">When</phrase>
+		<phrase var_name="all_time" added="1565690606">All Time</phrase>
+		<phrase var_name="this_month" added="1565690606">This month</phrase>
+		<phrase var_name="this_week" added="1565690606">This week</phrase>
+		<phrase var_name="today" added="1565690606">Today</phrase>
+		<phrase var_name="photo_s" added="1565690606">Photo(s)</phrase>
+		<phrase var_name="album_s" added="1565690606">Album(s)</phrase>
+		<phrase var_name="no_item_s_found" added="1565690606">No item(s) found</phrase>
+		<phrase var_name="start_end_of_total_result_s" added="1565690606">{start}-{end} of {total} Result(s)</phrase>
+		<phrase var_name="unable_to_view_this_item_due_to_privacy_settings_please_contact_owner_business" added="1565690606">Unable to view this item due to privacy settings. Please contact owner product.</phrase>
+		<phrase var_name="search_videos" added="1565690606">Search Videos...</phrase>
+		<phrase var_name="upload_share_a_video" added="1565690606">Upload/Share a Video</phrase>
+		<phrase var_name="buyer_section" added="1565690606">Buyer Section</phrase>
+		<phrase var_name="my_bidden_history" added="1565690606">My Bidden History</phrase>
+		<phrase var_name="setting_max_number_of_items_on_my_bidden_history_popup" added="1565690606"><![CDATA[<title>Number of items on "My Bidden History" popup.</title><info>Maximum number of items on "My Bidden History" popup.</info>]]></phrase>
+		<phrase var_name="bidders" added="1565690606">Bidders</phrase>
+		<phrase var_name="mins" added="1565690606">Mins</phrase>
+		<phrase var_name="min" added="1565690606">Min</phrase>
+		<phrase var_name="duration" added="1565690606">Duration</phrase>
+		<phrase var_name="bid_time" added="1565690606">Bid Time</phrase>
+		<phrase var_name="bid_placed_successfully" added="1565690606">Bid placed successfully.</phrase>
+		<phrase var_name="my_offer_history" added="1565690606">My Offer History</phrase>
+		<phrase var_name="my_current_offer" added="1565690606">My Current Offer</phrase>
+		<phrase var_name="bid_s" added="1565690606">Bid(s)</phrase>
+		<phrase var_name="your_offer_must_be_greater_than_or_equal_to_suggest_price" added="1565690606">Your offer must be greater than or equal to {price}</phrase>
+		<phrase var_name="left" added="1565690606">left</phrase>
+		<phrase var_name="add_to_cart" added="1565690606">Add To Cart</phrase>
+		<phrase var_name="setting_max_number_of_items_on_my_offer_history_popup" added="1565690606"><![CDATA[<title>Number of items on "My Offer History" popup.</title><info>Maximum number of items on "My Offer History" popup.</info>]]></phrase>
+		<phrase var_name="make_offer_successfully" added="1565690606">Make offer successfully.</phrase>
+		<phrase var_name="expired" added="1565690606">Expired</phrase>
+		<phrase var_name="my_offers" added="1565690606">My Offers</phrase>
+		<phrase var_name="auctions_successfully_approved" added="1565690606">Auctions successfully approved.</phrase>
+		<phrase var_name="winning_bid" added="1565690606">Winning Bid</phrase>
+		<phrase var_name="menu_auction_create_new_auction_10085e6b6bb8c1fea35bfd7ae519fc39" added="1565690606">Create New Auction</phrase>
+		<phrase var_name="menu_auction_create_new_auction_7333d6a64738f73b53589ab7c4aceb28" added="1565690606">Create New Auction</phrase>
+		<phrase var_name="menu_auction_create_new_auction_8ce2e5eeb31f62a23503f84adadeb75d" added="1565690606">Create New Auction</phrase>
+		<phrase var_name="left_for_buying" added="1565690606">left for buying</phrase>
+		<phrase var_name="menu_auction_create_new_auction_a3138479c1560cd52ddf0badfef57a07" added="1565690606">Create New Auction</phrase>
+		<phrase var_name="all_auctions" added="1565690606">All Auctions</phrase>
+		<phrase var_name="my_watch_list" added="1565690606">My Watch List</phrase>
+		<phrase var_name="auctions_bidden_by_friends" added="1565690606">Auctions Bidden By Friends</phrase>
+		<phrase var_name="auctions_won_by_friends" added="1565690606">Auctions Won By Friends</phrase>
+		<phrase var_name="friends_auctions" added="1565690606"><![CDATA[Friend&#039;s Auctions]]></phrase>
+		<phrase var_name="limit" added="1565690606">limit</phrase>
+		<phrase var_name="main_photo" added="1565690606">Main Photo</phrase>
+		<phrase var_name="auction_is_not_valid_or_it_has_been_deleted" added="1565690606">Auction is not valid or it has been deleted.</phrase>
+		<phrase var_name="you_dont_have_permission_to_delete_this_auction" added="1565690606"><![CDATA[You don&#039;t have permission to delete this auction.]]></phrase>
+		<phrase var_name="delete_auction_successfully" added="1565690606">Delete auction successfully.</phrase>
+		<phrase var_name="can_not_delete_this_auction" added="1565690606">Can not delete this auction.</phrase>
+		<phrase var_name="unable_to_find_the_auction_you_are_trying_to_edit" added="1565690606">Unable to find the auction you are trying to edit.</phrase>
+		<phrase var_name="are_you_sure_you_want_to_publish_this_auction" added="1565690606">Are you sure you want to publish this auction ?</phrase>
+		<phrase var_name="you_dont_have_permission_to_edit_this_auction" added="1565690606"><![CDATA[You don&#039;t have permission to edit this auction.]]></phrase>
+		<phrase var_name="publish_auction_successfully" added="1565690606">Publish auction successfully.</phrase>
+		<phrase var_name="can_not_publish_this_auction" added="1565690606">Can not publish this auction!</phrase>
+		<phrase var_name="user_setting_can_deny_auction" added="1565690606">Can deny auction ?</phrase>
+		<phrase var_name="you_dont_have_permission_to_publish_this_auction" added="1565690606"><![CDATA[You don&#039;t have permission to publish this auction.]]></phrase>
+		<phrase var_name="you_dont_have_permission_to_close_this_auction" added="1565690606"><![CDATA[You don&#039;t have permission to close this auction.]]></phrase>
+		<phrase var_name="close_auction_successfully" added="1565690606">Close auction successfully.</phrase>
+		<phrase var_name="can_not_close_this_auction" added="1565690606">Can not close this auction!</phrase>
+		<phrase var_name="you_dont_have_permission_to_approve_this_auction" added="1565690606"><![CDATA[You don&#039;t have permission to approve this auction.]]></phrase>
+		<phrase var_name="approve_auction_successfully" added="1565690606">Approve auction successfully.</phrase>
+		<phrase var_name="can_not_approve_this_auction" added="1565690606">Can not approve this auction!</phrase>
+		<phrase var_name="are_you_sure_you_want_to_deny_this_auction" added="1565690606">Are you sure you want to deny this auction ?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_approve_this_auction" added="1565690606">Are you sure you want to approve this auction ?</phrase>
+		<phrase var_name="you_dont_have_permission_to_deny_this_auction" added="1565690606"><![CDATA[You don&#039;t have permission to deny this auction.]]></phrase>
+		<phrase var_name="deny_auction_successfully" added="1565690606">Deny auction successfully.</phrase>
+		<phrase var_name="can_not_deny_this_auction" added="1565690606">Can not deny this auction!</phrase>
+		<phrase var_name="user_setting_can_close_auction_created_by_other_users" added="1565690606">Can close auction created by other users ?</phrase>
+		<phrase var_name="you_dont_have_permission_to_bid_auction" added="1565690606"><![CDATA[You don&#039;t have permission to bid auction!]]></phrase>
+		<phrase var_name="type_is_not_valid" added="1565690606">Type is not valid!</phrase>
+		<phrase var_name="bid_is_not_valid" added="1565690606">Bid is not valid!</phrase>
+		<phrase var_name="are_you_sure_you_want_to_close_this_auction" added="1565690606">Are you sure you want to close this auction ?</phrase>
+		<phrase var_name="statistic" added="1565690606">Statistic</phrase>
+		<phrase var_name="settings" added="1565690606">Settings</phrase>
+		<phrase var_name="users_auction_count" added="1565690606">Users Auction Count</phrase>
+		<phrase var_name="update_users_activity_auction_points" added="1565690606">Update Users Activity Auction Points</phrase>
+		<phrase var_name="you_are_posting_a_litte_too_soon" added="1565690606">You are posting a litte too soon .</phrase>
+		<phrase var_name="top_orders" added="1565690606">Top Orders</phrase>
+		<phrase var_name="s_upcoming" added="1565690606">Upcoming</phrase>
+		<phrase var_name="ending_today" added="1565690606">Ending Today</phrase>
+		<phrase var_name="create_an_auction" added="1565690606">create an auction</phrase>
+		<phrase var_name="bidden" added="1565690606">Bidden</phrase>
+		<phrase var_name="contact_seller" added="1565690606">Contact Seller</phrase>
+		<phrase var_name="seller_seller_name" added="1565690606">Seller {seller_name}</phrase>
+		<phrase var_name="add_all_to_cart_for_this_seller" added="1565690606">Add all to cart for this seller</phrase>
+		<phrase var_name="total" added="1565690606">Total</phrase>
+		<phrase var_name="who_can_share_auctions" added="1565690606">Who can share auctions?</phrase>
+		<phrase var_name="who_can_view_browse_auctions" added="1565690606">Who can view/browse auctions?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_un_feature_this_auction" added="1565690606">Are you sure you want to un-feature this auction ?</phrase>
+		<phrase var_name="please_input_uom_unit_in_admincp" added="1565690606">Please input UOM unit in AdminCP</phrase>
+		<phrase var_name="you_have_reached_your_upload_limit" added="1565690606">You have reached your upload limit</phrase>
+		<phrase var_name="compare" added="1565690606">Compare</phrase>
+		<phrase var_name="please_select_more_than_one_entry_for_the_comparison" added="1565690606">Please select more than one entry for the comparison</phrase>
+		<phrase var_name="number_of_bids" added="1565690606">Number of bids</phrase>
+		<phrase var_name="number_of_orders" added="1565690606">Number of orders</phrase>
+		<phrase var_name="number_of_views" added="1565690606">Number of views</phrase>
+		<phrase var_name="custom_field" added="1565690606">Custom Field</phrase>
+		<phrase var_name="header_title" added="1565690606">Header Title</phrase>
+		<phrase var_name="remove_from_compare" added="1565690606">Remove from Compare</phrase>
+		<phrase var_name="unwatch" added="1565690606">Unwatch</phrase>
+		<phrase var_name="success" added="1565690606">Success</phrase>
+		<phrase var_name="create_an_auction_cap" added="1565690606">Create an auction</phrase>
+		<phrase var_name="setting_category_number" added="1565690606"><![CDATA[<title>Number of items on block "Categories"</title><info>Maximum number of items on block "Categories"</info>]]></phrase>
+		<phrase var_name="menu_auction_create_new_auction_b9ee8c5b2626649fd2fd22f387dd77b7" added="1565690606">Create New Auction</phrase>
+		<phrase var_name="menu_auction_create_new_auction_0195b272c92424dca177e2652c9504ea" added="1565690606">Create New Auction</phrase>
+		<phrase var_name="menu_auction_create_new_auction_8b5fc254a491bbf7371d354ed5c55d17" added="1565690606">Create New Auction</phrase>
+		<phrase var_name="menu_auction_create_new_auction_1f553aec0230d4c01df1067388329922" added="1565690606">Create New Auction</phrase>
+		<phrase var_name="refresh" added="1565690606">Refresh</phrase>
+		<phrase var_name="setting_refresh_time" added="1565690606"><![CDATA[<title>Refresh Time Period</title><info>Period of time for refreshing auction information in detail page (in milliseconds).</info>]]></phrase>
+		<phrase var_name="you_select_it" added="1565690606">You Select It</phrase>
+		<phrase var_name="years" added="1565690606">Years</phrase>
+		<phrase var_name="months" added="1565690606">Months</phrase>
+		<phrase var_name="weeks" added="1565690606">Weeks</phrase>
+		<phrase var_name="minutes" added="1565690606">Minutes</phrase>
+		<phrase var_name="seconds" added="1565690606">Seconds</phrase>
+		<phrase var_name="year" added="1565690606">Year</phrase>
+		<phrase var_name="month" added="1565690606">Month</phrase>
+		<phrase var_name="week" added="1565690606">Week</phrase>
+		<phrase var_name="minute" added="1565690606">Minute</phrase>
+		<phrase var_name="second" added="1565690606">Second</phrase>
+		<phrase var_name="your_bid_has_reached_the_limitation" added="1565690606">Your bid has reached the limitation.</phrase>
+		<phrase var_name="bid_increment_desc" added="1565690606">The bid increment is the amount by which the current high bid is raised each time someone places a higher bid. In other words, bid increment is the amount which goes up with each bidder. For example: Starting bid is $10, and goes up by $5 increments: $15, $20, then $25, etc.</phrase>
+		<phrase var_name="day_s" added="1565690606">day(s)</phrase>
+		<phrase var_name="time_s" added="1565690606">time(s)</phrase>
+		<phrase var_name="users_has_bid_on_auction_title" added="1565690606"><![CDATA[{users} has bid on auction "{title}"]]></phrase>
+		<phrase var_name="full_name_has_bid_on_auction_title" added="1565690606"><![CDATA[{full_name} has bid on auction "{title}"]]></phrase>
+		<phrase var_name="full_name_has_bid_on_auction_a_href_link_title_a_to_view_this_auction_follow_the_link_below_a_href_link_link_a" added="1565690606"><![CDATA[{full_name} has bid on auction "<a href="{link}">{title}</a>"
+To view this auction, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_won_auction_title" added="1565690606"><![CDATA[{full_name} won auction "{title}"]]></phrase>
+		<phrase var_name="full_name_has_won_auction_a_href_link_title_a_to_view_this_auction_follow_the_link_below_a_href_link_link_a" added="1565690606"><![CDATA[{full_name} has won auction "<a href="{link}">{title}</a>"
+To view this auction, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="bidding_has_ended" added="1565690606">Bidding has Ended</phrase>
+		<phrase var_name="full_name_has_bid_on_your_auction_title" added="1565690606"><![CDATA[{full_name} has bid on your auction "{title}"]]></phrase>
+		<phrase var_name="you_have_been_outbid_on_auction_title" added="1565690606"><![CDATA[You have been outbid on auction "{title}"]]></phrase>
+		<phrase var_name="someone_start_bidding_on_your_auction" added="1565690606">Someone Start Bidding on your Auction</phrase>
+		<phrase var_name="you_have_been_outbid_bid_again_now" added="1565690606">You have been outbid. Bid again now!</phrase>
+		<phrase var_name="users_have_already_started_bidding_on_your_following_auction_message_for_more_details_view_your_auction_bid_history_at_url" added="1565690606">Users have already started bidding on your following auction:
+
+{message}
+
+For more details, view your auction Bid History at {url}</phrase>
+		<phrase var_name="auction_name_title_bidder_bidder_current_bid_symbol_currency_amount_bid_on_date_time" added="1565690606">Auction Name : {title}
+Bidder : {bidder}
+Current Bid : {symbol_currency}{amount}
+Bid on : {date_time}</phrase>
+		<phrase var_name="seller_outbid_bid_again_now" added="1565690606"><![CDATA[There&#039;s new highest bid on this item, but there&#039;s still a chance to make it yours. Increase your bid to have a chance at winning:
+
+{message}
+
+View the auction you&#039;re bidding on: {url}]]></phrase>
+		<phrase var_name="auction_name_title_seller_seller_current_bid_symbol_currency_amount_end_date_date_time" added="1565690606">Auction Name : {title}
+Seller : {seller}
+Current Bid : {symbol_currency}{amount}
+End Date : {date_time}</phrase>
+		<phrase var_name="congratulations_you_won" added="1565690606">Congratulations, you Won!</phrase>
+		<phrase var_name="full_name_has_won_your_auction_title" added="1565690606"><![CDATA[{full_name} has won your auction "{title}"]]></phrase>
+		<phrase var_name="congratulations_you_have_won_the_auction_title" added="1565690606"><![CDATA[Congratulations, you have won the auction "{title}"]]></phrase>
+		<phrase var_name="congratulations_you_have_won_the_following_auction_message" added="1565690606">Congratulations, you have won the following auction:
+
+{message}</phrase>
+		<phrase var_name="auction_name_title_by_seller_highest_bid_symbol_currency_amount_number_bids" added="1565690606">Auction Name : {title}
+By : {seller}
+Highest Bid : {symbol_currency}{amount}
+{number} bids</phrase>
+		<phrase var_name="your_auction_has_ended" added="1565690606">Your Auction has Ended</phrase>
+		<phrase var_name="your_auction_has_ended_mail_message" added="1565690606">The following auction has ended, please go to auction details page for more information:
+
+{message}</phrase>
+		<phrase var_name="auction_name_title_highest_bid_symbol_currency_amount_ended_on_date_time" added="1565690606">Auction Name : {title}
+Highest Bid : {symbol_currency}{amount}
+Ended on : {date_time}</phrase>
+		<phrase var_name="auction_end_outbid_bidder_message" added="1565690606"><![CDATA[You have been outbid on the following auction and it has been already ended:
+
+{message}
+
+For more details, please access to "Didn&#039;t win" page at : {url}]]></phrase>
+		<phrase var_name="you_ve_been_outbid_and_the_auction_title_has_ended" added="1565690606"><![CDATA[You&#039;ve been outbid and the auction {title} has ended]]></phrase>
+		<phrase var_name="auctions_my_friends_bid_on" added="1565690606">Auctions My Friends Bid on</phrase>
+		<phrase var_name="bid_on_an_auction" added="1565690606">bid on an auction</phrase>
+		<phrase var_name="has_won_the_auction" added="1565690606">has won the auction</phrase>
+		<phrase var_name="your_auction_title_has_ended" added="1565690606">Your auction {title} has ended.</phrase>
+		<phrase var_name="the_auction_title_has_ended" added="1565690606">The auction {title} has ended</phrase>
+		<phrase var_name="auction_have_been_transferred" added="1565690606">Auction have been Transferred</phrase>
+		<phrase var_name="the_following_auction_has_been_transferred_to_another_winning_bidder_message" added="1565690606"><![CDATA[The following auction has been transferred to another winning bidder:
+
+{message}
+
+Please contact the seller or access to "Didn&#039;t win" page at {url} for more details.]]></phrase>
+		<phrase var_name="auction_name_title_seller_name_seller_highest_bid_symbol_currency_amount_end_on_date_time" added="1565690606">Auction Name : {title}
+Seller Name : {seller}
+Highest Bid : {symbol_currency}{amount}
+End on : {date_time}</phrase>
+		<phrase var_name="auction_name_title_buyer_buyer_highest_bid_symbol_currency_amount_end_on_date_time" added="1565690606">Auction Name : {title}
+Buyer : {buyer}
+Highest Bid : {symbol_currency}{amount}
+End on : {date_time}</phrase>
+		<phrase var_name="the_auction_title_has_transferred_to_another_winning_bidder" added="1565690606">The auction {title} has transferred to another winning bidder</phrase>
+		<phrase var_name="offer_received" added="1565690606">Offer Received</phrase>
+		<phrase var_name="you_have_received_offer_for_the_following_auction_message_for_more_details_view_your_auction_offer_history_at_url" added="1565690606">You have received offer for the following auction:
+
+{message}
+
+For more details, view your auction Offer History at {url}</phrase>
+		<phrase var_name="auction_name_title_offer_price_symbol_currency_amount_offer_by_offer" added="1565690606">Auction Name : {title}
+Offer Price: {symbol_currency}{amount}
+Offer By : {offer}</phrase>
+		<phrase var_name="you_have_receive_offer_on_auction_title" added="1565690606">You have receive offer on auction {title}</phrase>
+		<phrase var_name="your_offer_have_been_denied" added="1565690606">Your offer have been denied</phrase>
+		<phrase var_name="your_offer_on_the_following_auction_have_been_denied_message_for_more_details_please_access_to_my_offers_page_at_url" added="1565690606"><![CDATA[Your offer on the following auction have been denied:
+
+{message}
+
+For more details, please access to "My Offers" page at {url}]]></phrase>
+		<phrase var_name="auction_name_title_by_seller_offer_price_symbol_currency_amount" added="1565690606">Auction Name : {title}
+By : {seller}
+Offer Price: {symbol_currency}{amount}</phrase>
+		<phrase var_name="you_ve_made_a_best_offer" added="1565690606"><![CDATA[You&#039;ve made a Best Offer]]></phrase>
+		<phrase var_name="you_ve_made_the_best_offer_and_your_offer_have_been_approved_on_this_following_auction_message_for_more_details_please_access_to_my_offers_page_at_url" added="1565690606"><![CDATA[You&#039;ve made the Best Offer and your offer have been approved on this following auction :
+
+{message}
+
+For more details, please access to "My Offers" page at {url}]]></phrase>
+		<phrase var_name="your_offer_has_been_approved_on_auction_title" added="1565690606">Your offer has been approved on auction {title}</phrase>
+		<phrase var_name="your_offer_has_been_denied_on_auction_title" added="1565690606">Your offer has been denied on auction {title}</phrase>
+		<phrase var_name="congratulations_your_item_sold" added="1565690606">Congratulations, your item sold!</phrase>
+		<phrase var_name="order_updated" added="1565690606">Order Updated!</phrase>
+		<phrase var_name="admin_menu_global_settings" added="1565690606">Global Settings</phrase>
+		<phrase var_name="please_input_valid_number" added="1565690606">Please input valid number.</phrase>
+		<phrase var_name="time_separator" added="1565690606">at</phrase>
+		<phrase var_name="update_content_increment_successfully" added="1565690606">Update content successfully.</phrase>
+		<phrase var_name="update_content_successfully" added="1565690606">Update content successfully.</phrase>
+		<phrase var_name="ending_today_auctions" added="1565690606">Auctions Ending Today</phrase>
+		<phrase var_name="today_live_auctions" added="1565690606"><![CDATA[Today's Live Auctions]]></phrase>
+		<phrase var_name="my_friends_bid_on" added="1565690606">Auctions My Friends Bid on</phrase>
+		<phrase var_name="buyers_also_viewed" added="1565690606">Buyers Also Viewed</phrase>
+		<phrase var_name="start_in" added="1565690606">Start in</phrase>
+		<phrase var_name="remove" added="1565690606">Remove</phrase>
+		<phrase var_name="successful" added="1565690606">Successful</phrase>
+		<phrase var_name="this_item_has_been_transfered_from_my_offers_page_to_my_cart_page_please_go_to_my_cart_for_more_information" added="1565690606"><![CDATA[This item has been transfered from &#039;My Offers&#039; page to &#039;My Cart&#039; page. Please go to &#039;My Cart&#039; for more information.]]></phrase>
+		<phrase var_name="winner" added="1565690606">Winner</phrase>
+		<phrase var_name="activity_feed" added="1565690606">Activity Feed</phrase>
+		<phrase var_name="please_input_your_paypal_email_at_account_account_settings_before_creating_auction" added="1565690606"><![CDATA[Please input your Paypal email at &#039;Account >> Account Settings&#039; prior to creating auctions.]]></phrase>
+		<phrase var_name="offer_approved" added="1565690606">Offer Approved</phrase>
+		<phrase var_name="offer_denied" added="1565690606">Offer Denied</phrase>
+		<phrase var_name="make_offer_desc" added="1565690606">You have successfully made an offer on this auction. The seller will review your offer and response to you soon.</phrase>
+		<phrase var_name="new_auctions" added="1565690606">New Auctions</phrase>
+		<phrase var_name="pending_auctions" added="1565690606">Pending Auctions</phrase>
+		<phrase var_name="email_templates" added="1565690606">Email Templates</phrase>
+		<phrase var_name="language_pack" added="1565690606">Language Pack</phrase>
+		<phrase var_name="your_community_has_more_than_one_language_pack_installed_please_select_the_language_pack_you_want_to_edit_right_now" added="1565690606">Your community has more than one language pack installed. Please select the language pack you want to edit right now.</phrase>
+		<phrase var_name="choose_message" added="1565690606">Choose Message</phrase>
+		<phrase var_name="subject" added="1565690606">Subject</phrase>
+		<phrase var_name="message_body" added="1565690606">Message Body</phrase>
+		<phrase var_name="save_changes" added="1565690606">Save changes</phrase>
+		<phrase var_name="admin_menu_email_templates" added="1565690606">Email Templates</phrase>
+		<phrase var_name="old_winner" added="1565690606">Old Winner</phrase>
+		<phrase var_name="new_winner" added="1565690606">New Winner</phrase>
+		<phrase var_name="your_auction_has_been_approved" added="1565690606">Your auction has been approved</phrase>
+		<phrase var_name="congratulation_your_auction_product_name_has_just_been_approved" added="1565690606">Congratulation! Your auction {product_name} has just been approved.</phrase>
+		<phrase var_name="your_auction_title_has_been_approved" added="1565690606">Your auction {title} has been approved.</phrase>
+		<phrase var_name="Warning!" added="1565690606" />
+		<phrase var_name="This auction has been completed" added="1565690606" />
+		<phrase var_name="auction_product" added="1565690606">Auction</phrase>
+		<phrase var_name="please_enter_reserve_price_more_than_zero" added="1565690606">Please enter reserve price more than zero</phrase>
+		<phrase var_name="please_enter_buy_now_price_more_than_zero" added="1565690606">Please enter buy now price more than zero</phrase>
+		<phrase var_name="menu_edit" added="1565690606">Menu Edit</phrase>
+		<phrase var_name="menu_seller" added="1565690606">Menu Seller</phrase>
+		<phrase var_name="successfully_set_main_photo_for_this_product" added="1565690606">Successfully set main photo for this product</phrase>
+		<phrase var_name="fail_to_delete_this_photo" added="1565690606">Fail to delete this photo</phrase>
+		<phrase var_name="set_this_photo_as_main_photo_of_this_product" added="1565690606">Set this photo as main photo of this product</phrase>
+		<phrase var_name="module_auction_new" added="1565690606">Auction</phrase>
+		<phrase var_name="admin_menu_user_group_settings" added="1565690606">User Group Settings</phrase>
+		<phrase var_name="translate_module_auction" added="1565690606">Auction</phrase>
+		<phrase var_name="seo_auction_meta_keywords" added="1565690606">auction, photo, blog, video, music</phrase>
+		<phrase var_name="seo_auction_meta_description" added="1565690606">Create Auctions for other members to participate in</phrase>
+		<phrase var_name="setting_auction_meta_keywords" added="1565690606"><![CDATA[<title>Auction Meta Keywords</title><info>Meta keywords that will be displayed on sections related to the Auction app. To edit this setting, please go to <i>AdminCP > Globalization > Phrases</i>, search and edit phrase have var name is: "seo_auction_meta_keywords" ]]></phrase>
+		<phrase var_name="setting_auction_meta_description" added="1565690606"><![CDATA[<title>Auction Meta Description</title><info>Meta description added to pages related to the Auction app. To edit this setting, please go to <i>AdminCP > Globalization > Phrases</i>, search and edit phrase have var name is: "seo_auction_meta_description" ]]></phrase>
+		<phrase var_name="are_you_sure_you_want_to_close_this_auction1" added="1565690606">Are you sure you want to close this auction?</phrase>
+		<phrase var_name="fill_a_title_for_you_auction" added="1565690606">Fill in a title for your auction</phrase>
+		<phrase var_name="publishing_fee_new" added="1565690606">Publishing fee</phrase>
+		<phrase var_name="total_fee_new" added="1565690606">Total Fee</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="auction" type="integer" admin="500" user="500" guest="500" staff="500" module="auction" ordering="0">photo_max_upload_size</setting>
+		<setting is_admin_setting="0" module_id="auction" type="integer" admin="0" user="0" guest="0" staff="0" module="auction" ordering="0">how_much_is_user_worth_for_auction_publishing</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="0" guest="" staff="" module="auction" ordering="0">admin_want_auction_to_be_automatically_approved_after_published</setting>
+		<setting is_admin_setting="0" module_id="auction" type="integer" admin="0" user="0" guest="0" staff="0" module="auction" ordering="0">how_much_is_user_worth_for_auction_featured</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="0" guest="" staff="" module="auction" ordering="0">can_approve_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="1" guest="" staff="" module="auction" ordering="0">can_delete_own_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="1" guest="1" staff="1" module="auction" ordering="0">can_feature_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="0" guest="" staff="" module="auction" ordering="0">can_delete_auction_created_by_other_users</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="1" guest="1" staff="1" module="auction" ordering="0">can_post_comments_on_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="0" guest="" staff="" module="auction" ordering="0">can_edit_auction_created_by_other_users</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="1" guest="1" staff="1" module="auction" ordering="0">can_create_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="1" guest="1" staff="1" module="auction" ordering="0">can_view_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="1" guest="1" staff="1" module="auction" ordering="0">can_edit_own_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="1" guest="1" staff="1" module="auction" ordering="0">can_control_if_a_user_can_add_a_comment_on_their_auction_or_simply_disable_comments</setting>
+		<setting is_admin_setting="0" module_id="auction" type="integer" admin="0" user="0" guest="0" staff="0" module="auction" ordering="0">points_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="integer" admin="0" user="0" guest="0" staff="0" module="auction" ordering="0">minute_to_control_how_long_user_can_create_a_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="1" guest="1" staff="1" module="auction" ordering="0">can_close_own_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="1" guest="1" staff="1" module="auction" ordering="0">can_bid_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="integer" admin="1" user="0" guest="0" staff="0" module="auction" ordering="0">commission_for_admin_when_user_buy_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="0" guest="0" staff="0" module="auction" ordering="0">can_deny_auction</setting>
+		<setting is_admin_setting="0" module_id="auction" type="boolean" admin="1" user="0" guest="" staff="" module="auction" ordering="0">can_close_auction_created_by_other_users</setting>
+	</user_group_settings>
+</module>

@@ -1,0 +1,175 @@
+/* frontend stylesheet */
+
+/* default settings for the page */
+html, body {
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	background-color: #f6f6f6;
+	scrollbar-face-color: #E5E5E5;
+	scrollbar-shadow-color: #aaaaaa;
+	scrollbar-highlight-color: #B8CFE5;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #F5F5F5;
+	scrollbar-track-color: #f7f7f7;
+	scrollbar-arrow-color: #3674B3;
+}
+
+/* Heidelpay Checkout rausnehmen*/
+.firstToThird {
+	display: none;
+}
+
+
+/* default font settings in a table cell */
+td { font-family: Tahoma, Arial, sans-serif; font-size: 11px; color: #222222; }
+
+/* default settings for all links */
+a:link {		color: #003F6B; text-decoration: none;}
+a:visited {		color: #A3A3A3;	text-decoration: none;}
+a:hover {		color: #003F6B; text-decoration: underline;}
+a:active {		color: #003F6B; text-decoration: none;}
+
+a.button {
+	font-weight: bold;
+	font-size: 9px;
+	font-family: Tahoma, Arial, sans-serif;
+	padding: 4px 8px;
+	border-top: 1px solid white;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+	text-align: center;	min-width: 75px;
+	text-transform: uppercase;
+	}
+a.button:link {
+	background-color: #dddddd;
+	color: #004080;
+	text-decoration: none;
+	}
+a.button:visited {
+	background-color: #dddddd;
+	color: #004080;
+	text-decoration: none;
+}
+a.button:hover {
+	background-color: #dddddd;
+	color: white;
+	border-color: black white white black;
+	text-decoration: none;
+}
+a.button:active {
+	background-color: #dddddd;
+	color: #004080;
+	text-decoration: none;
+}
+
+/* bar styles*/
+.bar { 
+font-family: Tahoma, Arial, sans-serif; 
+font-size: 10px; 
+background-color: #CCCCCC; 
+color: #A3A3A3;
+}
+
+.bar a:link {		color: #003F6B; text-decoration: none;}
+.bar a:visited {	color: #A3A3A3; text-decoration: none;}
+.bar a:hover {		color: #003F6B; text-decoration: underline;}
+.bar a:active {		color: #003F6B; text-decoration: none;}
+
+/* default input fields */
+input
+{
+	font-size: 8pt;
+	color: #284281;
+	font-family: tahoma, arial;	
+}
+select
+{
+    font-size: 8pt;
+    color: #284281;
+    font-family: tahoma, arial
+}
+
+/* special text styles */
+.text_bold { 	font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #222222; }
+.text_small { 	font-family: Arial, Helvetica, sans-serif; font-size: 9px; color: #222222; }
+.error { 		font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: red; }
+
+/* forms */
+.frm_box { 		border-style:ridge; border-color:black; border-width:1px; font-size: 13px;
+				background-color: #f6f6f6; font-style:normal; font-variant:normal; font-weight:normal;
+				color:#000000; margin-left:4px;margin-right:4px; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px; }
+
+/* imput buttons */
+.btn { 			border:1px ridge #999999; font-size: 11px; color: #444444;
+				background-color: #ffffff; font-style:normal; font-variant:normal; font-weight:normal; }
+	   
+/* done for links in 'WPF Light' */
+.btn_link { 
+	cursor: default;
+	border: 1px ridge #999999;
+	font-size: 11px;
+	color: #003F6B;
+	background-color: #ffffff;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	padding-right:6px;
+	padding-left:6px;
+	padding-top:1px;
+	padding-bottom:1px; }
+.btn_link:link {
+	background-color: #ffffff;
+	color: #444444;
+	text-decoration: none;
+	cursor: default;
+	}
+.btn_link:visited {
+	background-color: #ffffff;
+	color: #444444;
+	text-decoration: none;
+	cursor: default;
+}
+.btn_link:hover {
+	background-color: #ffffff;
+	color: #444444;
+	text-decoration: none;
+	cursor: default;
+}
+.btn_link:active {
+	background-color: #ffffff;
+	color: #444444;
+	text-decoration: none;
+	cursor: default;
+}
+
+#userInfoBlock{display:none;}
+/*
+#salutationRow{display:none;}
+#familyNameRow{display:none;}
+#companyNameRow{display:none;}
+*/
+
+#addressBlock{display:none;}
+/*
+#streetRow{display:none;}
+#cityRow{display:none;}
+#countryRow{display:none;}
+#stateRow{display:none;}
+*/
+
+#contactBlock{display:none;}
+/*
+#emailRow{display:none;}
+#phoneRow{display:none;}
+#mobileRow{display:none;}
+#paymentSelection{display:none;}
+*/
+
+/* #ccBlock{display:none;} */
+/* #ddBlock{display:none;}*/
+/* #notMandatoryRow{display:none;} */
+
+#spacer1,#spacer2,#spacer3{display:none;}
+.frm_box{border-width:0px;}

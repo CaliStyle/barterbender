@@ -1,0 +1,965 @@
+<module>
+	<data>
+		<module_id>fundraising</module_id>
+		<product_id>younet_fundraising4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:7:{s:42:"fundraising_admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:11:"fundraising";i:1;s:19:"user-group-settings";}}s:40:"fundraising.admin_menu_manage_categories";a:1:{s:3:"url";a:2:{i:0;s:11:"fundraising";i:1;s:8:"category";}}s:39:"fundraising.admin_menu_add_new_category";a:1:{s:3:"url";a:3:{i:0;s:11:"fundraising";i:1;s:8:"category";i:2;s:3:"add";}}s:38:"fundraising.admin_menu_manage_campaign";a:1:{s:3:"url";a:2:{i:0;s:11:"fundraising";i:1;s:9:"statistic";}}s:34:"fundraising.admin_menu_manage_help";a:1:{s:3:"url";a:2:{i:0;s:11:"fundraising";i:1;s:5:"email";}}s:39:"fundraising.admin_menu_manage_campaigns";a:1:{s:3:"url";a:1:{i:0;s:11:"fundraising";}}s:45:"fundraising.admin_menu_manage_payment_gateway";a:1:{s:3:"url";a:2:{i:0;s:11:"fundraising";i:1;s:7:"gateway";}}}]]></menu>
+		<phrase_var_name>module_fundraising_name</phrase_var_name>
+		<version>4.02p3</version>
+		<author>YouNetCo</author>
+		<vendor>http://phpfox4.demo.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/fund-raising.png</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="fundraising" parent_var_name="" m_connection="fundraising.index" var_name="menu_fundraising_create_a_campaign_3ddafd9c55c07bd8c89faba35156701f" ordering="132" url_value="fundraising.add" version_id="3.3.0" disallow_access="" module="fundraising" />
+		<menu module_id="fundraising" parent_var_name="" m_connection="main" var_name="menu_fundraising_fundraising_fad58de7366495db4650cfefac2fcd61" ordering="131" url_value="fundraising" version_id="3.3.0" disallow_access="" module="fundraising" mobile_icon="ico-money-bag-o" />
+		<menu module_id="fundraising" parent_var_name="" m_connection="mobile" var_name="menu_fundraising_fund_raising_532c28d5412dd75bf975fb951c740a30" ordering="135" url_value="fundraising" version_id="3.3.0" disallow_access="" module="fundraising" mobile_icon="ico-money-bag-o" />
+	</menus>
+	<settings>
+		<setting group="" module_id="fundraising" is_hidden="0" type="drop" var_name="fundraising_paging_mode" phrase_var_name="setting_fundraising_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:8:"loadmore";s:6:"values";a:3:{i:0;s:8:"loadmore";i:1;s:9:"next_prev";i:2;s:10:"pagination";}}]]></setting>
+		<setting group="" module_id="fundraising" is_hidden="0" type="integer" var_name="default_signature_goal" phrase_var_name="setting_default_signature_goal" ordering="4" version_id="3.0.1">1000</setting>
+		<setting group="" module_id="fundraising" is_hidden="0" type="integer" var_name="default_min_fundraising" phrase_var_name="setting_default_min_fundraising" ordering="5" version_id="3.3.0">0</setting>
+		<setting group="" module_id="fundraising" is_hidden="0" type="large_string" var_name="fundraising_meta_keywords" phrase_var_name="setting_fundraising_meta_keywords" ordering="6" version_id="3.0.1">fundraising, fundraisings, goal</setting>
+		<setting group="" module_id="fundraising" is_hidden="0" type="large_string" var_name="fundraising_meta_description" phrase_var_name="setting_fundraising_meta_description" ordering="7" version_id="3.0.1">Read up on the latest fundraisings on Site Name.</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="fundraising.index" module_id="fundraising" component="homepage.featured-slideshow" location="2" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Featured Campaigns SlideShow</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.index" module_id="fundraising" component="homepage.most-donated" location="2" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Most Donated Campaigns</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.index" module_id="fundraising" component="homepage.most-liked" location="2" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Most Liked Campaigns</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.index" module_id="fundraising" component="homepage.latest" location="2" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Latest Campaigns</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.view" module_id="fundraising" component="campaign.side-sponsor-levels" location="1" is_active="0" ordering="7" disallow_access="" can_move="0">
+			<title>Choose Sponsor Levels</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.index" module_id="fundraising" component="top-supporters" location="3" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Top Supporters</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.index" module_id="fundraising" component="stats" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Campaigns stats</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.view" module_id="fundraising" component="campaign.side-thankyou-donors" location="1" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Thank you Donors</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.index" module_id="fundraising" component="highlight-campaign" location="3" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Highlight Campaign</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.view" module_id="fundraising" component="campaign.side-supporters" location="1" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Supporters</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.index" module_id="fundraising" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.view" module_id="fundraising" component="images" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Images</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.view" module_id="fundraising" component="campaign.side-campaign-owner" location="1" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Campaign Owner</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="fundraising.index" module_id="fundraising" component="top-donors" location="3" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Top Donors</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="fundraising" component="category" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="campaign.side-supporters" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="fundraising.profile" m_connection="fundraising.profile" module="fundraising" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="fundraising" component="view" m_connection="fundraising.view" module="fundraising" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="fundraising" component="index" m_connection="fundraising.index" module="fundraising" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="fundraising" component="popular" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="top-donors" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="images" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="top-supporters" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="highlight-campaign" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="most-liked" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="campaign.side-add-this" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="most-donated" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="campaign.side-add-this" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="campaign.side-campaign-owner" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="stats" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="most-viewed" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="campaign.side-campaign-goal" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="campaign.side-sponsor-levels" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="campaign.side-supporters" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="campaign.side-sponsor-levels" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="campaign.side-thankyou-donors" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="campaign.side-thankyou-donors" m_connection="" module="fundraising" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="fundraising" component="edit" m_connection="fundraising.add" module="fundraising" is_controller="1" is_block="0" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="admin_menu_manage_categories" added="1565190041">Manage Categories</phrase>
+		<phrase var_name="admin_menu_add_new_category" added="1565190041">Add New Category</phrase>
+		<phrase var_name="admin_menu_manage_campaign" added="1565190041">Statistics</phrase>
+		<phrase var_name="module_fundraising" added="1565190041">Fund Raising</phrase>
+		<phrase var_name="module_fundraising_name" added="1565190041">Fund Raising</phrase>
+		<phrase var_name="menu_fundraising_fundraising_fad58de7366495db4650cfefac2fcd61" added="1565190041">Fund Raising</phrase>
+		<phrase var_name="categories" added="1565190041">Categories</phrase>
+		<phrase var_name="provide_fundraising_category" added="1565190041">Provide a fundraising category.</phrase>
+		<phrase var_name="category_successfully_added" added="1565190041">Category successfully added.</phrase>
+		<phrase var_name="add_category" added="1565190041">Add New Category</phrase>
+		<phrase var_name="category_details" added="1565190041">Category Details</phrase>
+		<phrase var_name="category" added="1565190041">Category</phrase>
+		<phrase var_name="search_filter" added="1565190041">Search Filter</phrase>
+		<phrase var_name="search_for_text" added="1565190041">Search For Text</phrase>
+		<phrase var_name="search_for_user" added="1565190041">Search for User</phrase>
+		<phrase var_name="created_user" added="1565190041">Created By</phrase>
+		<phrase var_name="display" added="1565190041">Display</phrase>
+		<phrase var_name="sort" added="1565190041">Sort By</phrase>
+		<phrase var_name="tip_delete_category" added="1565190041">Deleting a category will delete all fundraisings that belong to that category.</phrase>
+		<phrase var_name="no_fundraising_categories_have_been_created" added="1565190041">No fundraising categories have been created.</phrase>
+		<phrase var_name="create_one_now" added="1565190041">Create one now</phrase>
+		<phrase var_name="name" added="1565190041">Name</phrase>
+		<phrase var_name="system" added="1565190041">System</phrase>
+		<phrase var_name="created" added="1565190041">Created By</phrase>
+		<phrase var_name="total_fundraisings" added="1565190041">Total Campaigns</phrase>
+		<phrase var_name="none" added="1565190041">None</phrase>
+		<phrase var_name="delete_selected" added="1565190041">Delete Selected</phrase>
+		<phrase var_name="categories_successfully_deleted" added="1565190041">Categories successfully deleted.</phrase>
+		<phrase var_name="most_used" added="1565190041">Most Used</phrase>
+		<phrase var_name="users" added="1565190041">Users</phrase>
+		<phrase var_name="fundraising" added="1565190041">Campaign</phrase>
+		<phrase var_name="Fundraising" added="1565190041">Fund Raising</phrase>
+		<phrase var_name="all_fundraisings" added="1565190041">All Campaigns</phrase>
+		<phrase var_name="my_fundraisings" added="1565190041">My Campaigns</phrase>
+		<phrase var_name="friends_fundraisings" added="1565190041"><![CDATA[Friends&#039; Campaigns]]></phrase>
+		<phrase var_name="manager_categories" added="1565190041">Manager Categories</phrase>
+		<phrase var_name="user_setting_view_fundraisings" added="1565190041">Can browse and view the fundraising module? </phrase>
+		<phrase var_name="full_name_s_fundraisings" added="1565190041"><![CDATA[{full_name}&#039;s Campaigns]]></phrase>
+		<phrase var_name="fundraising_title" added="1565190041">Fund Raising</phrase>
+		<phrase var_name="fundraisings" added="1565190041">Fund Raising</phrase>
+		<phrase var_name="search_fundraising_dot" added="1565190041">Search Campaigns...</phrase>
+		<phrase var_name="latest" added="1565190041">Latest</phrase>
+		<phrase var_name="most_viewed" added="1565190041">Most Viewed</phrase>
+		<phrase var_name="most_liked" added="1565190041">Most Liked</phrase>
+		<phrase var_name="most_signed" added="1565190041">Most Signed</phrase>
+		<phrase var_name="most_discussed" added="1565190041">Most Discussed</phrase>
+		<phrase var_name="user_setting_can_approve_campaigns" added="1565190041">Can approve campaigns?</phrase>
+		<phrase var_name="posted_x_by_x_in_x" added="1565190041"><![CDATA[Posted {date} by <a href="{link}">{full_name}</a> in {categories}]]></phrase>
+		<phrase var_name="posted_x_by_x" added="1565190041"><![CDATA[Posted {date} by <a href="{link}">{full_name}</a>]]></phrase>
+		<phrase var_name="setting_fundraising_meta_keywords" added="1565190041"><![CDATA[<title>Campaign Meta Keywords</title><info>Meta keywords that will be displayed on sections related to the Campaign module.</info>]]></phrase>
+		<phrase var_name="setting_fundraising_meta_description" added="1565190041"><![CDATA[<title>Campaign Meta Description</title><info>Meta description added to pages related to the Campaign module.</info>]]></phrase>
+		<phrase var_name="search_fundraisings_dot" added="1565190041">Search Campaigns...</phrase>
+		<phrase var_name="setting_preview_length_in_index" added="1565190041"><![CDATA[<title>How Long is the Preview</title><info>How much of the fundraising to show on the main fundraising section?
+
+Value is in characters, i.e.:
+15 would show something like:
+"Lorem ipsum dol..."
+
+0 = No limit</info>]]></phrase>
+		<phrase var_name="delete" added="1565190041">Delete</phrase>
+		<phrase var_name="approve" added="1565190041">Approve</phrase>
+		<phrase var_name="no_fundraisings_found" added="1565190041">No campaigns found.</phrase>
+		<phrase var_name="user_setting_edit_own_campaign" added="1565190041">Can edit their own campaign?</phrase>
+		<phrase var_name="user_setting_edit_user_campaign" added="1565190041">Can edit campaign added by other users?</phrase>
+		<phrase var_name="user_setting_delete_own_campaign" added="1565190041">Can delete their own draft campaign?</phrase>
+		<phrase var_name="user_setting_delete_user_campaign" added="1565190041">Can delete draft campaign added by other users?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_fundraising" added="1565190041">Are you sure you want to delete this fundraising?</phrase>
+		<phrase var_name="delete_fundraising" added="1565190041">Delete Campaign</phrase>
+		<phrase var_name="actions" added="1565190041">Actions</phrase>
+		<phrase var_name="moderate" added="1565190041">Moderate</phrase>
+		<phrase var_name="setting_fundraising_digg_integration" added="1565190041"><![CDATA[<title>Digg Intergration</title><info>Add Digg integration.</info>]]></phrase>
+		<phrase var_name="victory_info" added="1565190041"><![CDATA[[VICTORY]]]></phrase>
+		<phrase var_name="by_full_name" added="1565190041">by {full_name}</phrase>
+		<phrase var_name="unable_to_edit_this_fundraising" added="1565190041">Unable to edit this fundraising.</phrase>
+		<phrase var_name="user_setting_add_new_campaign" added="1565190041">Can add a new campaign?</phrase>
+		<phrase var_name="fill_title_for_fundraising" added="1565190041">Fill in a title for your fundraising</phrase>
+		<phrase var_name="add_description_to_fundraising" added="1565190041">Add description to your fundraising</phrase>
+		<phrase var_name="fundraising_successfully_saved" added="1565190041">Campaign successfully saved.</phrase>
+		<phrase var_name="your_fundraising_has_been_closed" added="1565190041">Your fundraising has been closed</phrase>
+		<phrase var_name="your_fundraising_has_been_added" added="1565190041">Your fundraising has been added</phrase>
+		<phrase var_name="user_setting_flood_control_fundraising" added="1565190041"><![CDATA[How many minutes should a user wait before they can submit another fundraising?
+
+Note: Setting it to "0" (without quotes) is default and users will not have to wait.]]></phrase>
+		<phrase var_name="your_are_posting_a_little_too_soon" added="1565190041">You are posting a little too soon.</phrase>
+		<phrase var_name="fundraising_updated" added="1565190041">Campaign Updated</phrase>
+		<phrase var_name="editing_fundraising" added="1565190041">Editing Campaign</phrase>
+		<phrase var_name="adding_a_new_fundraising" added="1565190041">Start a Campaign</phrase>
+		<phrase var_name="view_fundraising" added="1565190041">View Campaign</phrase>
+		<phrase var_name="title" added="1565190041">Title</phrase>
+		<phrase var_name="description" added="1565190041">Description</phrase>
+		<phrase var_name="all" added="1565190041">All</phrase>
+		<phrase var_name="public" added="1565190041">Public</phrase>
+		<phrase var_name="personal" added="1565190041">Personal</phrase>
+		<phrase var_name="no_categories_added" added="1565190041">No categories added.</phrase>
+		<phrase var_name="add_a_new_category" added="1565190041">Add a new category...</phrase>
+		<phrase var_name="multiple_categories_with_commas" added="1565190041">Separate multiple categories with commas.</phrase>
+		<phrase var_name="user_setting_can_add_tags_on_campaigns" added="1565190041">Can add tags on campaigns?</phrase>
+		<phrase var_name="user_setting_can_set_allow_list_on_campaigns" added="1565190041">Can use Privacy setting when creating a campaign?
+
+Note: This setting will give the user the feature to add a list of users that can view their campaign.</phrase>
+		<phrase var_name="privacy" added="1565190041">Privacy</phrase>
+		<phrase var_name="control_who_can_see_this_fundraising" added="1565190041">Control who can see this fundraising.</phrase>
+		<phrase var_name="user_setting_can_control_comments_on_campaigns" added="1565190041">Can control if a user can add a comment on their campaign or simply disable comments?</phrase>
+		<phrase var_name="comment_privacy" added="1565190041">Comment Privacy</phrase>
+		<phrase var_name="control_who_can_comment_on_this_fundraising" added="1565190041">Control who can comment on this fundraising.</phrase>
+		<phrase var_name="fundraising_status" added="1565190041">Campaign Status</phrase>
+		<phrase var_name="closed" added="1565190041">Closed</phrase>
+		<phrase var_name="victory" added="1565190041">Victory</phrase>
+		<phrase var_name="update" added="1565190041">Update</phrase>
+		<phrase var_name="add" added="1565190041">Add</phrase>
+		<phrase var_name="preview" added="1565190041">Preview</phrase>
+		<phrase var_name="fundraising_preview" added="1565190041">Campaign Preview</phrase>
+		<phrase var_name="fundraising_not_found" added="1565190041">The fundraising you are looking for cannot be found.</phrase>
+		<phrase var_name="report_this_fundraising" added="1565190041">Report this fundraising</phrase>
+		<phrase var_name="fundraisings_title" added="1565190041">Campaigns</phrase>
+		<phrase var_name="by_user" added="1565190041">by {full_name}</phrase>
+		<phrase var_name="this_fundraising_is_pending_an_admins_approval" added="1565190041">Campaign is pending approval.</phrase>
+		<phrase var_name="the_fundraising_you_are_trying_to_approve_is_not_valid" added="1565190041">The fundraising you are trying to approve is not valid.</phrase>
+		<phrase var_name="fundraising_approved" added="1565190041">Campaign Approved</phrase>
+		<phrase var_name="your_fundraising_has_been_approved_on_site_title" added="1565190041">Your fundraising has been approved on {site_title}.</phrase>
+		<phrase var_name="your_fundraising_has_been_approved_on_site_title_message" added="1565190041"><![CDATA[Your fundraising has been approved on {site_title}.
+
+To view this fundraising, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="fundraising_is_approved" added="1565190041">Campaign is approved</phrase>
+		<phrase var_name="fundraising_s_successfully_approved" added="1565190041">Campaign(s) successfully approved.</phrase>
+		<phrase var_name="fundraising_s_successfully_deleted" added="1565190041">Campaign(s) successfully deleted.</phrase>
+		<phrase var_name="fundraising_deleted" added="1565190041">Campaign Deleted</phrase>
+		<phrase var_name="you_have_reached_your_limit" added="1565190041">You have reached your limit.</phrase>
+		<phrase var_name="already_a_category" added="1565190041">This category already exists.</phrase>
+		<phrase var_name="added" added="1565190041">Added</phrase>
+		<phrase var_name="fundraising_has_been_approved" added="1565190041">Campaign has been approved.</phrase>
+		<phrase var_name="pending_fundraisings" added="1565190041">Pending Campaigns</phrase>
+		<phrase var_name="user_setting_points_fundraising" added="1565190041">Specify how many points the user will receive when adding a new fundraising.</phrase>
+		<phrase var_name="your_fundraising_has_been_marked_as_spam" added="1565190041">Your fundraising has been marked as spam. It will have to be approved by an Admin before it is displayed publicly.</phrase>
+		<phrase var_name="we_do_not_allow_links_in_titles" added="1565190041">We do not allow links in titles.</phrase>
+		<phrase var_name="user_setting_approve_campaigns" added="1565190041">Approve campaign before they are publicly displayed?</phrase>
+		<phrase var_name="create_a_fundraising" added="1565190041">Create a Campaign</phrase>
+		<phrase var_name="fill_target_for_fundraising" added="1565190041">Fill in a target for your fundraising</phrase>
+		<phrase var_name="target" added="1565190041">Target</phrase>
+		<phrase var_name="enter_the_name_of_an_individual_organization_who_you_want_to_fundraising" added="1565190041">enter the name of an individual, organization who you want to fundraising.</phrase>
+		<phrase var_name="target_emails" added="1565190041">Target Emails</phrase>
+		<phrase var_name="separate_multiple_emails_with_a_comma" added="1565190041">Separate multiple emails with a comma</phrase>
+		<phrase var_name="what_do_you_want_them_to_do" added="1565190041">what do you want them to do</phrase>
+		<phrase var_name="fundraising_goal" added="1565190041">Fundraising Goal</phrase>
+		<phrase var_name="what_do_you_actually_want_the_target_to_do" added="1565190041">what do you actually want the target to do</phrase>
+		<phrase var_name="fill_in_a_fundraising_goal_for_your_fundraising" added="1565190041">Fill in a fundraising goal for your fundraising</phrase>
+		<phrase var_name="short_description" added="1565190041">Short Description</phrase>
+		<phrase var_name="provide_a_brief_info_about_this_fundraising" added="1565190041">provide a brief info about this fundraising</phrase>
+		<phrase var_name="main_description" added="1565190041">Main Description</phrase>
+		<phrase var_name="why_is_this_important" added="1565190041">why is this important</phrase>
+		<phrase var_name="signature_goal" added="1565190041">Signature Goal</phrase>
+		<phrase var_name="user_setting_can_control_donate_on_campaigns" added="1565190041">Can control if a user can donate on their campaigns?</phrase>
+		<phrase var_name="sign_privacy" added="1565190041">Sign Privacy</phrase>
+		<phrase var_name="control_who_can_sign_on_this_fundraising" added="1565190041">Control who can sign on this fundraising.</phrase>
+		<phrase var_name="create_fundraising" added="1565190041">Create Campaign</phrase>
+		<phrase var_name="fundraising_end_date" added="1565190041">Campaign End Date</phrase>
+		<phrase var_name="send_personal_thank_you_note_to_each_signer_of_this_fundraising_signature_goal" added="1565190041">Send personal thank-you note to each signer of this fundraising Signature goal</phrase>
+		<phrase var_name="yes" added="1565190041">Yes</phrase>
+		<phrase var_name="no" added="1565190041">No</phrase>
+		<phrase var_name="help" added="1565190041">Help</phrase>
+		<phrase var_name="signature_goal_must_be_a_integer_number" added="1565190041">Signature Goal must be a integer number.</phrase>
+		<phrase var_name="posted_a_comment_on_gender_fundraising_a_href_link_title_a" added="1565190041"><![CDATA[posted a comment on {gender} fundraising <a href="{link}"> {title}</a>]]></phrase>
+		<phrase var_name="posted_a_comment_on_user_name_s_fundraising_a_href_link_title_a" added="1565190041"><![CDATA[posted a comment on {user_name}'s fundraising "<a href="{link}">{title}</a>"]]></phrase>
+		<phrase var_name="posted_a_fundraising" added="1565190041">posted a campaign.</phrase>
+		<phrase var_name="full_name_liked_your_fundraising_title" added="1565190041"><![CDATA[{full_name} liked your fundraising "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_fundraising_link_title" added="1565190041"><![CDATA[{full_name} liked your fundraising "<a href="{link}">{title}</a>"
+To view this fundraising follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_liked_gender_own_fundraising_title" added="1565190041"><![CDATA[{users} liked {gender} own fundraising "{title}"]]></phrase>
+		<phrase var_name="users_liked_your_fundraising_title" added="1565190041"><![CDATA[{users} liked your fundraising "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_fundraising_title" added="1565190041"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> fundraising "{title}"]]></phrase>
+		<phrase var_name="owner_full_name_added_a_new_fundraising_a_href_title_link_title_a" added="1565190041"><![CDATA[<a href="{user_link}">{owner_full_name}</a> added a new fundraising "<a href="{title_link}">{title}</a>".]]></phrase>
+		<phrase var_name="user_added_a_new_comment_on_their_own_fundraising" added="1565190041"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on their own <a href="{title_link}">fundraising</a>.]]></phrase>
+		<phrase var_name="user_added_a_new_comment_on_your_fundraising" added="1565190041"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on your <a href="{title_link}">fundraising</a>.]]></phrase>
+		<phrase var_name="user_name_added_a_new_comment_on_item_user_name_fundraising" added="1565190041"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on <a href="{item_user_link}">{item_user_name}'s</a> <a href="{title_link}">fundraising</a>.]]></phrase>
+		<phrase var_name="user_setting_can_post_comment_on_campaign" added="1565190041">Can post comments on campaign?</phrase>
+		<phrase var_name="full_name_commented_on_your_fundraising_title" added="1565190041"><![CDATA[{full_name} commented on your fundraising "{title}".]]></phrase>
+		<phrase var_name="full_name_commented_on_your_fundraising_message" added="1565190041"><![CDATA[{full_name} commented on your fundraising "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_gender_fundraising" added="1565190041">{full_name} commented on {gender} fundraising.</phrase>
+		<phrase var_name="full_name_commented_on_gender_fundraising_message" added="1565190041"><![CDATA[{full_name} commented on {gender} fundraising "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_fundraising_full_name_s_fundraising_message" added="1565190041"><![CDATA[{full_name} commented on {fundraising_full_name}'s fundraising "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="a_href_link_on_name_s_fundraising_a" added="1565190041"><![CDATA[<a href="{link}">On {name}&#039;s fundraising</a>]]></phrase>
+		<phrase var_name="unable_to_post_a_comment_on_this_item_due_to_privacy_settings" added="1565190041">Unable to post a comment on this item due to privacy settings.</phrase>
+		<phrase var_name="no_fundraisings_have_been_added_yet" added="1565190041">No fundraisings have been added yet.</phrase>
+		<phrase var_name="be_the_first_to_create_a_fundraising" added="1565190041">Be the First to Create a Campaign.</phrase>
+		<phrase var_name="search_fundraisings" added="1565190041">Campaigns</phrase>
+		<phrase var_name="view_more_fundraisings" added="1565190041">View More Campaigns</phrase>
+		<phrase var_name="fundraising_created_on_time_stamp_by_full_name" added="1565190041"><![CDATA[<a href="{link}">Campaign</a> created on {time_stamp} by <a href="{user_link}">{full_name}</a>.]]></phrase>
+		<phrase var_name="manage_fundraisings" added="1565190041">Manage Campaigns</phrase>
+		<phrase var_name="your_fundraising_fundraising_title_has_been_approved" added="1565190041"><![CDATA[Your fundraising "{fundraising_title}" has been approved.]]></phrase>
+		<phrase var_name="users_commented_on_gender_fundraising_title" added="1565190041"><![CDATA[{users} commented on {gender} fundraising "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_your_fundraising_title" added="1565190041"><![CDATA[{users} commented on your fundraising "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name" added="1565190041"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}'s</span> fundraising "{title}"]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_fundraising_fundraising_title" added="1565190041"><![CDATA[<a href="{user_link}">{full_name}</a> wrote a comment on your fundraising "<a href="{fundraising_link}">{fundraising_title}</a>".]]></phrase>
+		<phrase var_name="fundraisings_text" added="1565190041">Campaigns Text</phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_their_own_a_href_link_fundraising_a" added="1565190041"><![CDATA[<a href="{user_link}">{full_name}</a> likes {gender} own <a href="{link}">fundraising</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_a_href_view_user_link_view_full_name_a_s_a_href_link_fundraising_a" added="1565190041"><![CDATA[<a href="{user_link}">{full_name}</a> likes <a href="{view_user_link}">{view_full_name}</a>&#039;s <a href="{link}">fundraising</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_your_a_href_link_fundraising_a" added="1565190041"><![CDATA[<a href="{user_link}">{full_name}</a> likes your <a href="{link}">fundraising</a>.]]></phrase>
+		<phrase var_name="users_fundraising_count" added="1565190041">Users Campaign Count</phrase>
+		<phrase var_name="update_tags_fundraisings" added="1565190041">Update Tags (Campaigns)</phrase>
+		<phrase var_name="update_users_activity_fundraising_points" added="1565190041">Update Users Activity Campaign Points</phrase>
+		<phrase var_name="your_fundraising_title_has_been_approved" added="1565190041"><![CDATA[Your fundraising "{title}" has been approved.]]></phrase>
+		<phrase var_name="full_name_commented_on_fundraising_full_name_s_fundraising" added="1565190041"><![CDATA[{full_name} commented on {fundraising_full_name}'s fundraising.]]></phrase>
+		<phrase var_name="search" added="1565190041">Search</phrase>
+		<phrase var_name="keywords" added="1565190041">Keywords</phrase>
+		<phrase var_name="on_going" added="1565190041">On going</phrase>
+		<phrase var_name="deadline" added="1565190041">Deadline</phrase>
+		<phrase var_name="status" added="1565190041">Status</phrase>
+		<phrase var_name="featured" added="1565190041">Featured</phrase>
+		<phrase var_name="approved" added="1565190041">Approved</phrase>
+		<phrase var_name="direct_sign" added="1565190041">Direct Sign</phrase>
+		<phrase var_name="signature" added="1565190041">Signature</phrase>
+		<phrase var_name="manage" added="1565190041">Manage</phrase>
+		<phrase var_name="pending" added="1565190041">Pending</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1565190041">Category order successfully updated.</phrase>
+		<phrase var_name="category_successfully_deleted" added="1565190041">Category successfully deleted.</phrase>
+		<phrase var_name="manage_categories" added="1565190041">Manage Categories</phrase>
+		<phrase var_name="are_you_sure_this_will_delete_all_fundraisings_that_belong_to_this_category_and_cannot_be_undone" added="1565190041">Are you sure? This will delete all fundraisings that belong to this category and cannot be undone.</phrase>
+		<phrase var_name="select_a_sub_category" added="1565190041">Select a Sub-Category</phrase>
+		<phrase var_name="select" added="1565190041">Select</phrase>
+		<phrase var_name="provide_a_category_name" added="1565190041">Provide a category name.</phrase>
+		<phrase var_name="fundraising_category_details" added="1565190041">Campaign Category Details</phrase>
+		<phrase var_name="parent_category" added="1565190041">Parent Category</phrase>
+		<phrase var_name="update_order" added="1565190041">Update Order</phrase>
+		<phrase var_name="menu_fundraising_create_a_fundraising_364d3644588809a610f1a66d5d3ec427" added="1565190041">Create a fundraising</phrase>
+		<phrase var_name="user_setting_can_feature_campaign" added="1565190041">Can feature a campaign?</phrase>
+		<phrase var_name="the_fundraising_you_are_trying_to_feature_is_not_valid" added="1565190041">The fundraising you are trying to feature is not valid.</phrase>
+		<phrase var_name="edit" added="1565190041">Edit</phrase>
+		<phrase var_name="fundraising_successfully_approved" added="1565190041">Campaign successfully approved.</phrase>
+		<phrase var_name="fundraising_successfully_deleted" added="1565190041">Campaign successfully deleted.</phrase>
+		<phrase var_name="un_feature_this_fundraising" added="1565190041">Un-Feature this fundraising.</phrase>
+		<phrase var_name="un_feature" added="1565190041">Un-Feature</phrase>
+		<phrase var_name="feature_this_fundraising" added="1565190041">Feature this fundraising.</phrase>
+		<phrase var_name="feature" added="1565190041">Feature</phrase>
+		<phrase var_name="fundraising_successfully_featured" added="1565190041">Campaign successfully featured.</phrase>
+		<phrase var_name="fundraising_successfully_un_featured" added="1565190041">Campaign successfully un-featured.</phrase>
+		<phrase var_name="created_date" added="1565190041">Created date</phrase>
+		<phrase var_name="unset_direct_sign" added="1565190041">Unset direct sign</phrase>
+		<phrase var_name="set_direct_sign" added="1565190041">Set direct sign</phrase>
+		<phrase var_name="view" added="1565190041">View</phrase>
+		<phrase var_name="view_this_fundraising" added="1565190041">View This Campaign</phrase>
+		<phrase var_name="main_info" added="1565190041">Main Info</phrase>
+		<phrase var_name="photos" added="1565190041">Photos</phrase>
+		<phrase var_name="fundraising_letter" added="1565190041">Campaign Letter</phrase>
+		<phrase var_name="user_setting_max_upload_size_fundraising" added="1565190041"><![CDATA[Max file size for fundraising photos in kilobits (kb).
+(1000 kb = 1 mb)
+For unlimited add "0" without quotes.]]></phrase>
+		<phrase var_name="select_image_s" added="1565190041">Select Image(s)</phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1565190041">You can upload a JPG, GIF or PNG file.</phrase>
+		<phrase var_name="the_file_size_limit_is_filesize_if_your_upload_does_not_work_try_uploading_a_smaller_picture" added="1565190041">The file size limit is {filesize}. If your upload does not work, try uploading a smaller picture.</phrase>
+		<phrase var_name="upload_photo" added="1565190041">Upload Photo</phrase>
+		<phrase var_name="delete_this_image" added="1565190041">Delete this image.</phrase>
+		<phrase var_name="are_you_sure" added="1565190041">Are you sure?</phrase>
+		<phrase var_name="you_do_not_have_sufficient_permission_to_modify_this_fundraising" added="1565190041">You do not have sufficient permission to modify this fundraising.</phrase>
+		<phrase var_name="click_to_set_as_default_image" added="1565190041">Click to set as default image</phrase>
+		<phrase var_name="unable_to_find_the_image" added="1565190041">Unable to find the image</phrase>
+		<phrase var_name="most_popular" added="1565190041">Most Popular</phrase>
+		<phrase var_name="from" added="1565190041">From</phrase>
+		<phrase var_name="to" added="1565190041">To</phrase>
+		<phrase var_name="popular_fundraisings" added="1565190041">Popular Campaigns</phrase>
+		<phrase var_name="by" added="1565190041">by</phrase>
+		<phrase var_name="total_sign_signatures" added="1565190041">{total_sign} signature(s)</phrase>
+		<phrase var_name="total_view_views" added="1565190041">{total_view} view(s)</phrase>
+		<phrase var_name="total_like_likes" added="1565190041">{total_like} like(s)</phrase>
+		<phrase var_name="recent_fundraisings" added="1565190041">Recent Campaigns</phrase>
+		<phrase var_name="created_by" added="1565190041">Created by</phrase>
+		<phrase var_name="provide_a_valid_email_address" added="1565190041">Provide a valid email address.</phrase>
+		<phrase var_name="invite_friends" added="1565190041">Invite Friends</phrase>
+		<phrase var_name="successfully_added_photo_s_to_your_fundraising" added="1565190041">Successfully added photo(s) to your fundraising.</phrase>
+		<phrase var_name="invite_people_via_email" added="1565190041">Invite People via Email</phrase>
+		<phrase var_name="add_a_personal_message" added="1565190041">Add a personal message</phrase>
+		<phrase var_name="send_invitations" added="1565190041">Send Invitations</phrase>
+		<phrase var_name="new_guest_list" added="1565190041">New Guest List</phrase>
+		<phrase var_name="full_name_invited_you_to_the_title" added="1565190041"><![CDATA[{full_name} invited you to "{title}".
+
+To check out this fundraising, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_added_the_following_personal_message" added="1565190041">{full_name} added the following personal message</phrase>
+		<phrase var_name="full_name_invited_you_to_the_fundraising_title" added="1565190041"><![CDATA[{full_name} invited you to the fundraising "{title}".]]></phrase>
+		<phrase var_name="invite_to_a_fundraising" added="1565190041">Invite to a Campaign</phrase>
+		<phrase var_name="users_invited_you_to_the_fundraising_title" added="1565190041"><![CDATA[{users} invited you to the fundraising "{title}"]]></phrase>
+		<phrase var_name="full_name_invited_you_to_an_fundraising" added="1565190041"><![CDATA[<a href="{user_link}">{full_name}</a> invited you to an fundraising.]]></phrase>
+		<phrase var_name="who_can_view_browse_fundraisings" added="1565190041">Who can view/browse fundraisings?</phrase>
+		<phrase var_name="who_can_share_fundraisings" added="1565190041">Who can post a fundraisings?</phrase>
+		<phrase var_name="unable_to_view_this_item_due_to_privacy_settings" added="1565190041">Unable to view this item due to privacy settings.</phrase>
+		<phrase var_name="want_to_support_this_fundraising" added="1565190041">Want to support this fundraising ?</phrase>
+		<phrase var_name="start_date" added="1565190041">Start date</phrase>
+		<phrase var_name="end_date" added="1565190041">End date</phrase>
+		<phrase var_name="in" added="1565190041">In</phrase>
+		<phrase var_name="setting_target_letter_template" added="1565190041"><![CDATA[<title>Campaign Target Letter Template</title><info>
+You can add some special keyvars:<br/>
+<strong>[title]</strong>: Campaign title<br/>
+<strong>[fundraising_url]</strong>: Campaign URL<br/>
+<strong>[full_name]</strong>: Full name of fundraising owner<br/>
+<strong>[fundraising_goal]</strong>: Campaign goal<br/>
+<strong>[short_description]</strong>: Campaign main description<br/>
+<strong>[description]</strong>: Campaign short description<br/>
+<strong>[start_time]</strong>: Campaign start date<br/>
+<strong>[end_time]</strong>: Campaign end date<br/>
+<strong>[total_sign]</strong>: Total signed<br/>
+<strong>[signature_goal]</strong>: Signature goal<br/>
+<strong>[target]</strong>: Target name<br/>
+</info>]]></phrase>
+		<phrase var_name="setting_friend_letter_template" added="1565190041"><![CDATA[<title>Campaign Friend Letter Template</title><info>
+		You can add some special keyvars:<br/>
+		<strong>[title]</strong>: Campaign title<br/>
+		<strong>[fundraising_url]</strong>: Campaign URL<br/>
+		<strong>[full_name]</strong>: Full name of fundraising owner<br/>
+		<strong>[fundraising_goal]</strong>: Campaign goal<br/>
+		<strong>[short_description]</strong>: Campaign main description<br/>
+		<strong>[description]</strong>: Campaign short description<br/>
+		<strong>[start_time]</strong>: Campaign start date<br/>
+		<strong>[end_time]</strong>: Campaign end date<br/>
+		<strong>[total_sign]</strong>: Total signed<br/>
+		<strong>[signature_goal]</strong>: Signature goal<br/>
+		<strong>[target]</strong>: Target name<br/>
+		</info>]]></phrase>
+		<phrase var_name="subject" added="1565190041">Subject</phrase>
+		<phrase var_name="message" added="1565190041">Message</phrase>
+		<phrase var_name="send_fundraising_letter_online" added="1565190041">Send fundraising letter online?</phrase>
+		<phrase var_name="signatures" added="1565190041">Signatures</phrase>
+		<phrase var_name="news" added="1565190041">News</phrase>
+		<phrase var_name="your_location" added="1565190041">Your location</phrase>
+		<phrase var_name="add_a_reason" added="1565190041">Add a reason</phrase>
+		<phrase var_name="why_are_you_signing" added="1565190041">Why are you signing</phrase>
+		<phrase var_name="sign_this_fundraising" added="1565190041">Sign this fundraising</phrase>
+		<phrase var_name="sign_fundraising" added="1565190041">Sign Campaign</phrase>
+		<phrase var_name="sign_now" added="1565190041">Sign Now</phrase>
+		<phrase var_name="thank_you_for_signing_the_fundraising" added="1565190041">Thank you for signing the fundraising</phrase>
+		<phrase var_name="ok" added="1565190041">Ok</phrase>
+		<phrase var_name="fill_in_a_location" added="1565190041">Fill in a location.</phrase>
+		<phrase var_name="fill_in_a_signature" added="1565190041">Fill in a signature.</phrase>
+		<phrase var_name="successfully_invited_users" added="1565190041">Successfully invited users.</phrase>
+		<phrase var_name="you_are_not_allowed_to_sign_this_fundraising" added="1565190041">You are not allowed to sign this fundraising.</phrase>
+		<phrase var_name="post_a_news_update" added="1565190041">Post a news update</phrase>
+		<phrase var_name="news_headline" added="1565190041">News headline</phrase>
+		<phrase var_name="link" added="1565190041">Link</phrase>
+		<phrase var_name="content" added="1565190041">Content</phrase>
+		<phrase var_name="post" added="1565190041">Post</phrase>
+		<phrase var_name="cancel" added="1565190041">Cancel</phrase>
+		<phrase var_name="news_successfully_deleted" added="1565190041">News successfully deleted.</phrase>
+		<phrase var_name="news_successfully_added" added="1565190041">News successfully added.</phrase>
+		<phrase var_name="news_successfully_updated" added="1565190041">News successfully updated.</phrase>
+		<phrase var_name="fundraisings_stats" added="1565190041">Campaigns stats</phrase>
+		<phrase var_name="stats" added="1565190041">Stats</phrase>
+		<phrase var_name="admin_menu_manage_helps" added="1565190041">Manage Helps</phrase>
+		<phrase var_name="helps" added="1565190041">Helps</phrase>
+		<phrase var_name="icon" added="1565190041">Icon</phrase>
+		<phrase var_name="there_are_no_news_update" added="1565190041">There are no news update.</phrase>
+		<phrase var_name="manage_helps" added="1565190041">Manage Helps</phrase>
+		<phrase var_name="order" added="1565190041">Order</phrase>
+		<phrase var_name="add_help" added="1565190041">Add Help</phrase>
+		<phrase var_name="no_helps_have_been_added_yet" added="1565190041">No helps have been added yet.</phrase>
+		<phrase var_name="fill_in_a_title_for_help" added="1565190041">Fill in a title for help</phrase>
+		<phrase var_name="fill_in_a_content_for_your_help" added="1565190041">Fill in a content for your help</phrase>
+		<phrase var_name="fundraising_help_has_been_updated" added="1565190041">Campaign help has been updated.</phrase>
+		<phrase var_name="fundraising_help_successfully_deleted" added="1565190041">Campaign help successfully deleted.</phrase>
+		<phrase var_name="featured_fundraisings" added="1565190041">Featured Campaigns</phrase>
+		<phrase var_name="fundraising_letter_successfully_updated" added="1565190041">Campaign letter successfully updated.</phrase>
+		<phrase var_name="send_fundraising_to_target" added="1565190041">Send Campaign to Target</phrase>
+		<phrase var_name="members" added="1565190041">Members</phrase>
+		<phrase var_name="why_they_are_signing" added="1565190041">Why they are signing</phrase>
+		<phrase var_name="on" added="1565190041">on</phrase>
+		<phrase var_name="at" added="1565190041">at</phrase>
+		<phrase var_name="out_of" added="1565190041">out of</phrase>
+		<phrase var_name="more_at" added="1565190041">More at</phrase>
+		<phrase var_name="no_helps_found" added="1565190041">No helps found.</phrase>
+		<phrase var_name="please_add_a_reason" added="1565190041">Please add a reason.</phrase>
+		<phrase var_name="signed" added="1565190041">Signed</phrase>
+		<phrase var_name="invited" added="1565190041">Invited</phrase>
+		<phrase var_name="you_have_already_signed_this_fundraising" added="1565190041"><![CDATA[You have already "signed" this fundraising.]]></phrase>
+		<phrase var_name="are_you_sure_you_want_to_sent_fundraising_letter_to_target" added="1565190041">Are you sure you want to sent fundraising letter to target?</phrase>
+		<phrase var_name="fundraising_letter_was_successfully_sent_to_target" added="1565190041">Campaign letter was successfully sent to target.</phrase>
+		<phrase var_name="an_error_occurred_and_fundraising_letter_could_not_be_sent_to_target_please_try_again" added="1565190041">An error occurred and fundraising letter could not be sent to target. Please try again.</phrase>
+		<phrase var_name="just_signed_this_fundraising_and_i_want_to_send_the_letter_again" added="1565190041">just signed this fundraising and I want to send the letter again.</phrase>
+		<phrase var_name="you_can_add_some_special_keyvars" added="1565190041">You can add some special keyvars</phrase>
+		<phrase var_name="special_keyvars" added="1565190041"><![CDATA[[title],[full_name], [fundraising_goal], [short_description], [description], [start_time], [end_time], [total_sign], [signature_goal], [target]]]></phrase>
+		<phrase var_name="full_name_s_fundraisings_on_site_title" added="1565190041"><![CDATA[{full_name}&#039;s fundraisings on {site_title}.]]></phrase>
+		<phrase var_name="unable_to_find_the_fundraising_you_are_trying_to_edit" added="1565190041">Unable to find the fundraising you are trying to edit.</phrase>
+		<phrase var_name="an_error_occurred_and_fundraising_letter_could_not_be_sent_to_target_fundraising_letter_may_be_blank" added="1565190041">An error occurred and fundraising letter could not be sent to target. Campaign letter may be blank.</phrase>
+		<phrase var_name="please_edit_fundraising_end_date_before_update_fundraising_status" added="1565190041">End Date must be equal or later than current date.</phrase>
+		<phrase var_name="set_direct_sign_successfully" added="1565190041">Set direct sign successfully.</phrase>
+		<phrase var_name="unset_direct_sign_successfully" added="1565190041">Unset direct sign successfully.</phrase>
+		<phrase var_name="deadline_has_been_reached" added="1565190041">Deadline has been reached</phrase>
+		<phrase var_name="the_fundraising_help_you_are_looking_for_cannot_be_found" added="1565190041">The fundraising help you are looking for cannot be found.</phrase>
+		<phrase var_name="setting_help_icon_file_size_limit" added="1565190041"><![CDATA[<title>File size of uploaded Help Icon</title><info>When users upload an help icon this will be the maximum file size for that picture.</info>]]></phrase>
+		<phrase var_name="required_fields" added="1565190041">Required Fields</phrase>
+		<phrase var_name="submit" added="1565190041">Submit</phrase>
+		<phrase var_name="reset" added="1565190041">Reset</phrase>
+		<phrase var_name="save" added="1565190041">Save</phrase>
+		<phrase var_name="please_provide_a_valid_url" added="1565190041">Please provide a valid URL. Begin with http:// or https://</phrase>
+		<phrase var_name="example_http_www_yourwebsite_com" added="1565190041">Example: http://www.yourwebsite.com/</phrase>
+		<phrase var_name="clear" added="1565190041">Clear</phrase>
+		<phrase var_name="select_all" added="1565190041">Select All</phrase>
+		<phrase var_name="un_select_all" added="1565190041">Un-Select All</phrase>
+		<phrase var_name="view_more" added="1565190041">View More</phrase>
+		<phrase var_name="views" added="1565190041">Views</phrase>
+		<phrase var_name="likes" added="1565190041">Likes</phrase>
+		<phrase var_name="any" added="1565190041">Any</phrase>
+		<phrase var_name="search_by_date" added="1565190041">Search by end date</phrase>
+		<phrase var_name="an_error_occurred_and_invited_message_could_not_be_sent" added="1565190041">An error occurred and invited message could not be sent.</phrase>
+		<phrase var_name="you_have_reached_your_upload_limit" added="1565190041">You have reached your upload limit.</phrase>
+		<phrase var_name="maximum_photos_imaximum" added="1565190041">Remain photos: {iMaximum}</phrase>
+		<phrase var_name="user_setting_total_photo_upload_limit" added="1565190041"><![CDATA[Control how many photos a user can upload to a campaign.
+
+Slideshow when viewing a campaign only shows 1 video and 7 first images in campaign&#039;s image list, so we recommend to set 7 here.]]></phrase>
+		<phrase var_name="unable_to_find_the_fundraising_you_are_trying_to_delete" added="1565190041">
+Unable to find the fundraising you are trying to delete.
+</phrase>
+		<phrase var_name="view_all" added="1565190041">View All</phrase>
+		<phrase var_name="fundraising_end_date_is_just_available_from_current_date_to_the_final_date_of_next_year" added="1565190041">Campaign End Date is just available from current date to the final date of next year.</phrase>
+		<phrase var_name="invalid_files" added="1565190041">Invalid file(s):</phrase>
+		<phrase var_name="setting_default_signature_goal" added="1565190041"><![CDATA[<title>Default Campaign Goal</title><info>Default Campaign Goal</info>]]></phrase>
+		<phrase var_name="notice" added="1565190041">Notice</phrase>
+		<phrase var_name="topic_s" added="1565190041">Topics</phrase>
+		<phrase var_name="page" added="1565190041">Page</phrase>
+		<phrase var_name="click_on_image_to_set_it_as_default" added="1565190041">Click on image to set it as default.</phrase>
+		<phrase var_name="loading" added="1565190041">Loading...</phrase>
+		<phrase var_name="close" added="1565190041">Close</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_news" added="1565190041">Are you sure you want to delete this news?</phrase>
+		<phrase var_name="full_name_tagged_you_in_a_comment_in_a_fundraising" added="1565190041">{full_name} tagged you in a comment in a fundraising</phrase>
+		<phrase var_name="top_donors" added="1565190041">Top Donors</phrase>
+		<phrase var_name="top_supporters" added="1565190041">Top Supporters</phrase>
+		<phrase var_name="highlight_campaign" added="1565190041">Highlight Campaign</phrase>
+		<phrase var_name="most_donated" added="1565190041">Most Donated</phrase>
+		<phrase var_name="menu_fundraising_create_a_campaign_3ddafd9c55c07bd8c89faba35156701f" added="1565190041">Create A Campaign</phrase>
+		<phrase var_name="predefined_add" added="1565190041">Add more predefined</phrase>
+		<phrase var_name="predefined_delete" added="1565190041">Delete this predefined</phrase>
+		<phrase var_name="minimum_donation" added="1565190041">Minimum donation amount (optional)</phrase>
+		<phrase var_name="allow_anonymous" added="1565190041">Allow anonymous donation? if donor select anonymous donation then his name and photo are hidden from public</phrase>
+		<phrase var_name="country" added="1565190041">Country</phrase>
+		<phrase var_name="add_city_zip" added="1565190041">Add city/zip/country</phrase>
+		<phrase var_name="location_venue" added="1565190041">Location/Venue</phrase>
+		<phrase var_name="address" added="1565190041">Address</phrase>
+		<phrase var_name="city" added="1565190041">City</phrase>
+		<phrase var_name="zip_postal_code" added="1565190041">Zip/Postal Code</phrase>
+		<phrase var_name="donate_privacy" added="1565190041">Donate privacy</phrase>
+		<phrase var_name="control_who_can_donate_on_this_fundraising" added="1565190041">Control who can donate on this campaign</phrase>
+		<phrase var_name="campaign_name" added="1565190041">Campaign Name</phrase>
+		<phrase var_name="expired_date" added="1565190041">Expired date</phrase>
+		<phrase var_name="you_can_set_expired_date" added="1565190041">You can set expired date for your campaign , otherwise checking the unlimited box to make this campaign never expired</phrase>
+		<phrase var_name="list_predefine" added="1565190041">List predefined</phrase>
+		<phrase var_name="enter_up_to_preselect" added="1565190041">(enter up to preselected 5 donation amounts to available on the page)</phrase>
+		<phrase var_name="refresh_map" added="1565190041">Refresh map</phrase>
+		<phrase var_name="you_must_have_a_minimum_of_total_predefined" added="1565190041">You must have a minimum of {total} predefined.</phrase>
+		<phrase var_name="you_reach_the_maximum_of_total_predefined" added="1565190041">You have reached a maximum of {total} predefined.</phrase>
+		<phrase var_name="setting_default_min_fundraising" added="1565190041"><![CDATA[<title>Default Minimum Donation Amount</title><info>Set the Default of minimum donation amount</info>]]></phrase>
+		<phrase var_name="gallery" added="1565190041">Gallery</phrase>
+		<phrase var_name="sponsor_levels" added="1565190041">Sponsor Levels</phrase>
+		<phrase var_name="contact_information" added="1565190041">Contact Information</phrase>
+		<phrase var_name="email_and_conditions" added="1565190041">Email And Conditions</phrase>
+		<phrase var_name="financial_configuration" added="1565190041">Financial Configuration</phrase>
+		<phrase var_name="campaign_owner" added="1565190041">Campaign Owner</phrase>
+		<phrase var_name="add_this" added="1565190041">Add This</phrase>
+		<phrase var_name="supporters" added="1565190041">Supporters</phrase>
+		<phrase var_name="campaign_goal" added="1565190041">Goal of Campaign</phrase>
+		<phrase var_name="choose_sponsor_levels" added="1565190041">Choose Sponsor Levels</phrase>
+		<phrase var_name="thankyou_donors" added="1565190041">Thank You, Donors</phrase>
+		<phrase var_name="total_donor" added="1565190041">{total_donor} Donor(s)</phrase>
+		<phrase var_name="total_like_liked" added="1565190041">{total_like} liked</phrase>
+		<phrase var_name="total_view_viewed" added="1565190041">{total_view} viewed</phrase>
+		<phrase var_name="donate" added="1565190041">Donate</phrase>
+		<phrase var_name="donated" added="1565190041">Donated</phrase>
+		<phrase var_name="month_left" added="1565190041">{month} Months</phrase>
+		<phrase var_name="days_left" added="1565190041">{days} Days left</phrase>
+		<phrase var_name="funded" added="1565190041">FUNDED</phrase>
+		<phrase var_name="raised" added="1565190041">RAISED</phrase>
+		<phrase var_name="goal" added="1565190041">GOAL</phrase>
+		<phrase var_name="donations" added="1565190041">Donations</phrase>
+		<phrase var_name="about_me" added="1565190041">About me</phrase>
+		<phrase var_name="follow_tooltip" added="1565190041">Click on this link to follow this campaign</phrase>
+		<phrase var_name="fundraising_statistic" added="1565190041">Fundraising Statistics</phrase>
+		<phrase var_name="why_they_are_donated" added="1565190041">Why they are donated</phrase>
+		<phrase var_name="there_are_no_fundraising_donation" added="1565190041">There are no fundraising donations</phrase>
+		<phrase var_name="add_video" added="1565190041">Add Video</phrase>
+		<phrase var_name="video_gallery" added="1565190041">Video Gallery</phrase>
+		<phrase var_name="please_enter_a_youtube_video_url" added="1565190041">Please enter a YouTube video URL</phrase>
+		<phrase var_name="unable_to_embed_this_video_due_to_privacy_settings" added="1565190041">Unable to embed this video due to privacy settings</phrase>
+		<phrase var_name="not_a_valid_site_valid_sites_asites" added="1565190041">Not a valid site. Valid sites: {aSites}</phrase>
+		<phrase var_name="full_name" added="1565190041">Full name</phrase>
+		<phrase var_name="email" added="1565190041">Email address</phrase>
+		<phrase var_name="state" added="1565190041">State</phrase>
+		<phrase var_name="street" added="1565190041">Street</phrase>
+		<phrase var_name="phone" added="1565190041">Phone number</phrase>
+		<phrase var_name="donation_detail" added="1565190041">{donor} just donated {amount}{currency}</phrase>
+		<phrase var_name="support_detail" added="1565190041">{support} became a supporter</phrase>
+		<phrase var_name="hide_add_city_zip" added="1565190041">Hide city/zip/country</phrase>
+		<phrase var_name="your_paypal_account" added="1565190041">Your Paypal Email Account</phrase>
+		<phrase var_name="fill_in_your_paypal_account_for_your_fundraising" added="1565190041">Fill in your paypal account for your campaign</phrase>
+		<phrase var_name="select_an_amount" added="1565190041">Select An Amount</phrase>
+		<phrase var_name="campaigns_that_i_donated" added="1565190041">Campaigns that I donated</phrase>
+		<phrase var_name="reached_campaigns" added="1565190041">Reached Campaigns</phrase>
+		<phrase var_name="expired_campaigns" added="1565190041">Expired Campaigns</phrase>
+		<phrase var_name="closed_campaigns" added="1565190041">Closed Campaigns</phrase>
+		<phrase var_name="featured_campaigns" added="1565190041">Featured Campaigns</phrase>
+		<phrase var_name="reached" added="1565190041">Reached</phrase>
+		<phrase var_name="expired" added="1565190041">Expired</phrase>
+		<phrase var_name="personal_information" added="1565190041">Personal Information</phrase>
+		<phrase var_name="add_level" added="1565190041">Add another level</phrase>
+		<phrase var_name="user_setting_can_highlight_campaign" added="1565190041">Can highlight a campaign?</phrase>
+		<phrase var_name="un_highlight_this_campaign" added="1565190041">Un-Highlight this campaign</phrase>
+		<phrase var_name="un_highlight" added="1565190041">Un-Highlight</phrase>
+		<phrase var_name="highlight_this_campaign" added="1565190041">Highlight this campaign</phrase>
+		<phrase var_name="highlight" added="1565190041">Highlight</phrase>
+		<phrase var_name="campaign_is_successfully_highlighted" added="1565190041">Campaign is successfully highlighted.</phrase>
+		<phrase var_name="campaign_is_successfully_un_highlighted" added="1565190041">Campaign is successfully un-highlighted</phrase>
+		<phrase var_name="no_user_found" added="1565190041">No User Found.</phrase>
+		<phrase var_name="search_donors_dot" added="1565190041">Search Donors...</phrase>
+		<phrase var_name="search_supporters_dot" added="1565190041">Search Supporters...</phrase>
+		<phrase var_name="promote_campaign" added="1565190041">Promote Campaign</phrase>
+		<phrase var_name="follow" added="1565190041">Follow</phrase>
+		<phrase var_name="you_have_already_voted" added="1565190041">You have already voted.</phrase>
+		<phrase var_name="you_cannot_rate_your_own_campaign" added="1565190041">you cannot rate your own campaign.</phrase>
+		<phrase var_name="total_rating_ratings" added="1565190041">{total_rating} Ratings</phrase>
+		<phrase var_name="poor" added="1565190041">Poor</phrase>
+		<phrase var_name="nothing_special" added="1565190041">Nothing Special</phrase>
+		<phrase var_name="worth_donating" added="1565190041">Worth Donating</phrase>
+		<phrase var_name="pretty_cool" added="1565190041">Pretty Cool</phrase>
+		<phrase var_name="awesome" added="1565190041">Awesome</phrase>
+		<phrase var_name="rate" added="1565190041">rate</phrase>
+		<phrase var_name="rates" added="1565190041">rates</phrase>
+		<phrase var_name="you_must_login_to_rate" added="1565190041">You must log in to rate.</phrase>
+		<phrase var_name="you_need_to_donate_to_this_campaign_before_rating" added="1565190041">You need to donate to this campaign before rating</phrase>
+		<phrase var_name="you_can_not_rate_this" added="1565190041">You cannot rate this.</phrase>
+		<phrase var_name="un_follow" added="1565190041">Un-Follow</phrase>
+		<phrase var_name="follow_this_campaign" added="1565190041">Follow this campaign.</phrase>
+		<phrase var_name="un_follow_this_campaign" added="1565190041">Un-Follow this campaign.</phrase>
+		<phrase var_name="campaign_is_successfully_followed" added="1565190041">Campaign is successfully followed.</phrase>
+		<phrase var_name="campaign_is_successfully_un_followed" added="1565190041">Campaign is successfully un-followed.</phrase>
+		<phrase var_name="close_this_campaign" added="1565190041">Close this campaign.</phrase>
+		<phrase var_name="user_setting_can_close_campaign" added="1565190041">Can close campaign?</phrase>
+		<phrase var_name="reason" added="1565190041">Reason</phrase>
+		<phrase var_name="send_reason_notice" added="1565190041">This reason will be sent to the owner to notify why the campaign was closed.</phrase>
+		<phrase var_name="are_you_sure_info" added="1565190041">Are you sure? Once a campaign is close, it can not be opened again.</phrase>
+		<phrase var_name="please_enter_the_reason" added="1565190041">Please enter the reason</phrase>
+		<phrase var_name="campaign_is_successfully_closed" added="1565190041">Campaign is successfully closed.</phrase>
+		<phrase var_name="save_draft" added="1565190041">Save draft</phrase>
+		<phrase var_name="publish" added="1565190041">Publish</phrase>
+		<phrase var_name="thanks_donor" added="1565190041">Thanks Donor</phrase>
+		<phrase var_name="term_condition" added="1565190041">Terms and Conditions</phrase>
+		<phrase var_name="donors_lower" added="1565190041">donors</phrase>
+		<phrase var_name="likes_lower" added="1565190041">likes</phrase>
+		<phrase var_name="views_lower" added="1565190041">views</phrase>
+		<phrase var_name="m" added="1565190041">m</phrase>
+		<phrase var_name="w" added="1565190041">w</phrase>
+		<phrase var_name="left" added="1565190041">left</phrase>
+		<phrase var_name="d" added="1565190041">d</phrase>
+		<phrase var_name="h" added="1565190041">h</phrase>
+		<phrase var_name="make_donation_anonymous" added="1565190041">Make Donation Anonymous</phrase>
+		<phrase var_name="leave_your_message" added="1565190041">Leave your message</phrase>
+		<phrase var_name="leave_message_extra_info" added="1565190041">Let them know why you donated, honor a loved one, or send words of encouragement. Your comment will appear on their campaign activity.</phrase>
+		<phrase var_name="campaign_s_terms_and_conditions" added="1565190041"><![CDATA[Campaign&#039;s terms and conditions]]></phrase>
+		<phrase var_name="i_have_read_and_agreed_with_all_terms_and_conditions" added="1565190041">I have read and agreed with all terms and conditions</phrase>
+		<phrase var_name="total_amount_raised_of_financial_goal_goal" added="1565190041">{total_amount} Raised of {financial_goal} Goal</phrase>
+		<phrase var_name="raised_upper" added="1565190041">Raised</phrase>
+		<phrase var_name="of" added="1565190041">of</phrase>
+		<phrase var_name="goal_upper" added="1565190041">Goal</phrase>
+		<phrase var_name="statistics" added="1565190041">Statistics</phrase>
+		<phrase var_name="statistic_campaigns" added="1565190041">Campaigns</phrase>
+		<phrase var_name="campaign_upper" added="1565190041">Campaign</phrase>
+		<phrase var_name="donated_in_total_donate_campaigns" added="1565190041">Donated in {total_donate} campaign(s).</phrase>
+		<phrase var_name="shares_lower" added="1565190041">share(s)</phrase>
+		<phrase var_name="share_lower" added="1565190041">share</phrase>
+		<phrase var_name="share_s_lower" added="1565190041">shares</phrase>
+		<phrase var_name="currency" added="1565190041">Currency</phrase>
+		<phrase var_name="level_name" added="1565190041">Level name</phrase>
+		<phrase var_name="amount" added="1565190041">Amount</phrase>
+		<phrase var_name="save_as_draft" added="1565190041">Save as draft</phrase>
+		<phrase var_name="sponsor_level_successfully_updated" added="1565190041">dsadasd</phrase>
+		<phrase var_name="contact_information_successfully_updated" added="1565190041">Contact information successfully update</phrase>
+		<phrase var_name="email_conditions_successfully_updated" added="1565190041"><![CDATA[Email & Conditions Successfully Updated]]></phrase>
+		<phrase var_name="please_edit_fundraising_end_date_before_update_status" added="1565190041">Please edit fundraising end date before update status</phrase>
+		<phrase var_name="donate_box_code" added="1565190041">Donate Box Code</phrase>
+		<phrase var_name="option_to_show" added="1565190041">Options to show</phrase>
+		<phrase var_name="donate_button" added="1565190041">Donate Button</phrase>
+		<phrase var_name="donors_upper" added="1565190041">Donors</phrase>
+		<phrase var_name="admin_menu_manage_help" added="1565190041">Manage Email Templates</phrase>
+		<phrase var_name="create_a_new_category" added="1565190041">Create a new category</phrase>
+		<phrase var_name="campaign_category_detail" added="1565190041">Campaign Category Detail</phrase>
+		<phrase var_name="select_form_select" added="1565190041">Select</phrase>
+		<phrase var_name="you_must_fill_all_required_field" added="1565190041">You must fill all required field</phrase>
+		<phrase var_name="fill_in_campaign_location" added="1565190041">You must fill in a campaign location</phrase>
+		<phrase var_name="set_0_for_unlimit_goal" added="1565190041">You can set campaign goal to 0 for unlimited goal</phrase>
+		<phrase var_name="edit_a_category" added="1565190041">Edit a category</phrase>
+		<phrase var_name="setting_keep_campaign_after_category_delete" added="1565190041"><![CDATA[<title>Keep campaign after category is deleted</title><info>Specific whether you want to keep campaign when a category is deleted.</info>]]></phrase>
+		<phrase var_name="parent_category_and_child_is_the_same" added="1565190041">Parent category and child category are the same. Please choose another parent category.</phrase>
+		<phrase var_name="successfully_added_video_to_your_campaign" added="1565190041">Successfully added video to your campaign.</phrase>
+		<phrase var_name="provide_a_category_this_campaign_will_belong_to" added="1565190041">Provide a category this campaign will belong to.</phrase>
+		<phrase var_name="thank_you_for_helping_out" added="1565190041">Thank you for helping out</phrase>
+		<phrase var_name="your_donation" added="1565190041">Your Donation</phrase>
+		<phrase var_name="draft" added="1565190041">Draft</phrase>
+		<phrase var_name="anonymous_donate" added="1565190041">An Anonymous donor just gave {amount}</phrase>
+		<phrase var_name="user_donate" added="1565190041">{name} donated {amount}</phrase>
+		<phrase var_name="admin_menu_manage_campaigns" added="1565190041">Manage Campaigns</phrase>
+		<phrase var_name="campaign_is_published" added="1565190041">Campaign is published.</phrase>
+		<phrase var_name="donated_upper" added="1565190041">Donated</phrase>
+		<phrase var_name="other_upper" added="1565190041">Other</phrase>
+		<phrase var_name="this_field_is_required" added="1565190041">This field is required.</phrase>
+		<phrase var_name="please_enter_a_valid_number" added="1565190041">Please enter a valid number.</phrase>
+		<phrase var_name="please_enter_a_valid_email" added="1565190041">Please enter a valid email.</phrase>
+		<phrase var_name="please_enter_a_valid_url" added="1565190041">Please enter a valid URL.</phrase>
+		<phrase var_name="email_templates" added="1565190041">Email templates</phrase>
+		<phrase var_name="email_templates_types" added="1565190041">Email templates types</phrase>
+		<phrase var_name="save_now" added="1565190041">Save now</phrase>
+		<phrase var_name="create_campaign_successfull_owner" added="1565190041">Create Campaign Successful ( Send to Owner )</phrase>
+		<phrase var_name="thank_donor" added="1565190041">Thank Donor ( Send to Donor )</phrase>
+		<phrase var_name="update_donor_owner" added="1565190041">Update Donor ( Send to Owner )</phrase>
+		<phrase var_name="campaign_expired_owner" added="1565190041">Campaign Expired ( Send to Owner )</phrase>
+		<phrase var_name="campaign_expired" added="1565190041">Campaign Expired ( Send to Donor)</phrase>
+		<phrase var_name="campaign_closed_due_to_reach_owner" added="1565190041">Campaign closed due to reaching fundraising goal ( Send to Owner )</phrase>
+		<phrase var_name="campaign_closed_due_to_reach" added="1565190041">Campaign closed due to reaching fundraising goal ( Send to Donor )</phrase>
+		<phrase var_name="campaign_closed_owner" added="1565190041">Campaign closed ( Send to Owner )</phrase>
+		<phrase var_name="select_a_email_template_type" added="1565190041">Select a email template type</phrase>
+		<phrase var_name="manage_campaigns" added="1565190041">Manage Campaigns</phrase>
+		<phrase var_name="view_statistics" added="1565190041">View Statistics</phrase>
+		<phrase var_name="no_campaigns_found" added="1565190041">No campaigns found.</phrase>
+		<phrase var_name="invalid_permission_or_closed_campaign" added="1565190041">This campaign is closed or you do not have permission to edit this campaign. Please contact administrators for more detail.</phrase>
+		<phrase var_name="unlimited_upper" added="1565190041">Unlimited</phrase>
+		<phrase var_name="can_not_edit_currency_ongoing_campaign" added="1565190041">You can not edit currency of an ongoing campaign.</phrase>
+		<phrase var_name="from_date" added="1565190041">From date</phrase>
+		<phrase var_name="to_date" added="1565190041">To date</phrase>
+		<phrase var_name="keyword" added="1565190041">Keyword</phrase>
+		<phrase var_name="date" added="1565190041">Date</phrase>
+		<phrase var_name="donor" added="1565190041">Donor</phrase>
+		<phrase var_name="email_address" added="1565190041">Email address</phrase>
+		<phrase var_name="option" added="1565190041">Option</phrase>
+		<phrase var_name="view_funds" added="1565190041">View Funds</phrase>
+		<phrase var_name="view_details" added="1565190041">View Details</phrase>
+		<phrase var_name="campaign" added="1565190041">Campaign</phrase>
+		<phrase var_name="owner" added="1565190041">Owner</phrase>
+		<phrase var_name="statistic" added="1565190041">Statistics</phrase>
+		<phrase var_name="filter" added="1565190041">Filter</phrase>
+		<phrase var_name="there_are_no_transaction" added="1565190041">There are no transaction match</phrase>
+		<phrase var_name="transaction_id" added="1565190041">Transaction ID</phrase>
+		<phrase var_name="invite_friend_letter_template" added="1565190041">Invite Friend Letter Template</phrase>
+		<phrase var_name="add_a_subject" added="1565190041">Add a subject</phrase>
+		<phrase var_name="keyword_substitutions" added="1565190041">Keyword Subtitutions</phrase>
+		<phrase var_name="users_changed_some_information_in_title_campaign" added="1565190041"><![CDATA[{users} changed some information in "{title}" campaign.]]></phrase>
+		<phrase var_name="full_name_changed_some_information_in_title_campaign" added="1565190041"><![CDATA[{full_name} updated {item_type} in campaign "{title}":
+
+{link}]]></phrase>
+		<phrase var_name="send_mail_to_all_donors" added="1565190041">Email To All Donors</phrase>
+		<phrase var_name="please_enter_both_subject_and_message" added="1565190041">Please enter both subject and message.</phrase>
+		<phrase var_name="send_upper" added="1565190041">Send</phrase>
+		<phrase var_name="message_is_successfully_sent" added="1565190041">Message is successfully sent.</phrase>
+		<phrase var_name="set_to_unlimit_time" added="1565190041">Set this to unlimited time</phrase>
+		<phrase var_name="campaign_s" added="1565190041">campaign(s)</phrase>
+		<phrase var_name="setting_statistic_time_stamp" added="1565190041"><![CDATA[<title>Statistic Time Stamp</title><info>This is the variable show up the time stamp in statistic view</info>]]></phrase>
+		<phrase var_name="anonymous_upper" added="1565190041">Anonymous</phrase>
+		<phrase var_name="donated_to_campaign_title_link" added="1565190041"><![CDATA[donated to campaign: "<a href="{link}">{title}</a>".]]></phrase>
+		<phrase var_name="donors_with_upper" added="1565190041">DONOR(S) WITH</phrase>
+		<phrase var_name="supporters_with_upper" added="1565190041">SUPPORTER(S) WITH</phrase>
+		<phrase var_name="view_donors_and_supporters" added="1565190041"><![CDATA[View Donors & Supporters]]></phrase>
+		<phrase var_name="insert_your_addthis_username" added="1565190041">Insert your Addthis account username</phrase>
+		<phrase var_name="username" added="1565190041">Username</phrase>
+		<phrase var_name="insert_your_addthis_pasword" added="1565190041">Insert your Addthis account password</phrase>
+		<phrase var_name="password" added="1565190041">Password</phrase>
+		<phrase var_name="insert_your_addthis_pubid" added="1565190041">Insert your Addthis account pubid</phrase>
+		<phrase var_name="addthis_pubid" added="1565190041">Profile ID</phrase>
+		<phrase var_name="insert_your_domain" added="1565190041">Insert your domain</phrase>
+		<phrase var_name="domain" added="1565190041">Domain</phrase>
+		<phrase var_name="period" added="1565190041">Period</phrase>
+		<phrase var_name="day" added="1565190041">Day</phrase>
+		<phrase var_name="week" added="1565190041">Week</phrase>
+		<phrase var_name="month" added="1565190041">Month</phrase>
+		<phrase var_name="setting_addthis_username" added="1565190041"><![CDATA[<title>insert addthis username</title><info>Insert your Addthis account username</info>]]></phrase>
+		<phrase var_name="setting_addthis_password" added="1565190041"><![CDATA[<title>Insert Addthis password</title><info>Insert your addthis account password</info>]]></phrase>
+		<phrase var_name="setting_addthis_pubid" added="1565190041"><![CDATA[<title>addthis profile ID</title><info>Insert your Addthis pubid</info>]]></phrase>
+		<phrase var_name="setting_addthis_domain" added="1565190041"><![CDATA[<title>domain for addthis</title><info>Insert your domain for Addthis</info>]]></phrase>
+		<phrase var_name="setting_addthis_period" added="1565190041"><![CDATA[<title>chose your period</title><info>Chose your period for addthis</info>]]></phrase>
+		<phrase var_name="setting_numer_of_donors_on_top_donors_block" added="1565190041"><![CDATA[<title>Number of Donors on Top Donors Block</title><info>Number of Donors on Top Donors Block</info>]]></phrase>
+		<phrase var_name="minimum_amount_upper" added="1565190041">Minimum Amount</phrase>
+		<phrase var_name="please_enter_an_amount_greater_or_equal" added="1565190041">Please enter an amount greater or equal</phrase>
+		<phrase var_name="confirm_publish_campaign" added="1565190041">Are you sure you want to publish this campaign? Once the campaign is published, its currency cannot be edited and you cannot delete it.</phrase>
+		<phrase var_name="transaction_detail" added="1565190041">Transaction Detail</phrase>
+		<phrase var_name="order_detail" added="1565190041">Order detail</phrase>
+		<phrase var_name="member" added="1565190041">Member</phrase>
+		<phrase var_name="donate_date" added="1565190041">Donate date</phrase>
+		<phrase var_name="payment_detail" added="1565190041">Payment detail</phrase>
+		<phrase var_name="donation_amount" added="1565190041">Donation amount</phrase>
+		<phrase var_name="gateway_transaction_id" added="1565190041">Gateway transaction ID</phrase>
+		<phrase var_name="back" added="1565190041">Back</phrase>
+		<phrase var_name="keywordsub_title" added="1565190041">Campaign Title</phrase>
+		<phrase var_name="keywordsub_campaign_url" added="1565190041">Campaign URL</phrase>
+		<phrase var_name="keywordsub_financial_goal" added="1565190041">Campaign Goal</phrase>
+		<phrase var_name="keywordsub_description" added="1565190041">Campaign Description</phrase>
+		<phrase var_name="keywordsub_start_time" added="1565190041">Start Time</phrase>
+		<phrase var_name="keywordsub_end_time" added="1565190041">End Time</phrase>
+		<phrase var_name="keywordsub_total_amount" added="1565190041">Current amount</phrase>
+		<phrase var_name="keywordsub_owner_name" added="1565190041">Campaign Owner Name</phrase>
+		<phrase var_name="keywordsub_donor_name" added="1565190041">Donor Name</phrase>
+		<phrase var_name="keywordsub_inviter_name" added="1565190041">Name of Inviter</phrase>
+		<phrase var_name="keywordsub_site_name" added="1565190041">Name of This Site</phrase>
+		<phrase var_name="keywordsub_short_description" added="1565190041">Campaign Short Description</phrase>
+		<phrase var_name="save_video_photo" added="1565190041">Save Video and Photos</phrase>
+		<phrase var_name="campaign_goal_financial_goal" added="1565190041">Goal of Campaign (Financial Goal)</phrase>
+		<phrase var_name="raised_amount_entry_block" added="1565190041">Raised {total_amount}</phrase>
+		<phrase var_name="unlimited_time_upper" added="1565190041">Unlimited Time</phrase>
+		<phrase var_name="about_us" added="1565190041">About Us</phrase>
+		<phrase var_name="be_the_first_donor_of_this_campaign" added="1565190041">Be the first donor of this campaign</phrase>
+		<phrase var_name="sponsor_form_notice" added="1565190041"><![CDATA[Adding sponsor levels within donors&#039; benefits will encourage everyone to donate your fundraising.]]></phrase>
+		<phrase var_name="sponsor_level_successfully_updated_2" added="1565190041">Sponsor level successfully updated.</phrase>
+		<phrase var_name="photos_and_video_successfully_updated" added="1565190041">Photos and video successfully updated.</phrase>
+		<phrase var_name="my_donated_campaigns" added="1565190041">My Donated Campaigns</phrase>
+		<phrase var_name="you_can_enter_maximum_number_characters" added="1565190041">You can enter maximum {number} characters.</phrase>
+		<phrase var_name="maximum_number_of_characters_for_this_field_is_semicolon" added="1565190041">Maximum number of characters for this field is</phrase>
+		<phrase var_name="some_infomation" added="1565190041">some information</phrase>
+		<phrase var_name="full_name_updated_item_type_in_campaign_title_link" added="1565190041"><![CDATA[{full_name} updated {item_type} in campaign "{title}".
+
+{link}]]></phrase>
+		<phrase var_name="news_lower" added="1565190041">news</phrase>
+		<phrase var_name="video_lower" added="1565190041">video</phrase>
+		<phrase var_name="images_lower" added="1565190041">images</phrase>
+		<phrase var_name="campaign_title_has_been_close_link" added="1565190041"><![CDATA[Campaign "{title}" has been closed.
+{link}]]></phrase>
+		<phrase var_name="campaign_title_has_reached_its_goal" added="1565190041">Campaign {title} has reached its goal.
+{link}</phrase>
+		<phrase var_name="campaign_title_has_expired" added="1565190041"><![CDATA[Campaign "{title}" has expired.
+{link}]]></phrase>
+		<phrase var_name="full_name_donated_to_campaign_title_link" added="1565190041"><![CDATA[{full_name} donated to campaign "{title}".
+{link}]]></phrase>
+		<phrase var_name="can_not_rate_this_campaign" added="1565190041">Can not rate this campaign.</phrase>
+		<phrase var_name="user_setting_can_close_own_campaign" added="1565190041">Can close their own campaign?</phrase>
+		<phrase var_name="user_setting_can_close_campaign_added_by_other_users" added="1565190041">Can close campaign added by other users?</phrase>
+		<phrase var_name="user_setting_can_upload_video" added="1565190041">Can upload video?</phrase>
+		<phrase var_name="do_not_have_permission" added="1565190041">You do not have permission to do this action.</phrase>
+		<phrase var_name="anonymous_tooltip" added="1565190041">This will hide your name and donating information from all public activity feeds, however the campaign still receive your donating information.</phrase>
+		<phrase var_name="setting_short_date_time_format" added="1565190041"><![CDATA[<title>Short Date Time Format</title><info>Only used for format date time in adminCP</info>]]></phrase>
+		<phrase var_name="must_greater_than_minimum" added="1565190041">This field must be greater than minimum value</phrase>
+		<phrase var_name="please_fill_your_address_here" added="1565190041">Please fill your address here (You should fill the address correctly or the location when viewing a campaign may be displayed incorrectly).</phrase>
+		<phrase var_name="location_upper" added="1565190041">Location</phrase>
+		<phrase var_name="remove_upper" added="1565190041">Remove</phrase>
+		<phrase var_name="click_to_donate" added="1565190041">(Click to donate)</phrase>
+		<phrase var_name="initialized_upper" added="1565190041">Initialized</phrase>
+		<phrase var_name="successed_upper" added="1565190041">Successed</phrase>
+		<phrase var_name="pending_upper" added="1565190041">Pending</phrase>
+		<phrase var_name="denied_upper" added="1565190041">Denied</phrase>
+		<phrase var_name="who_can_share_campaigns" added="1565190041">Who can share campaigns?</phrase>
+		<phrase var_name="who_can_view_browse_campaigns" added="1565190041">Who can view/browse campaigns?</phrase>
+		<phrase var_name="you_will_receive_updated_information" added="1565190041">You will receive updated information from this campaign.</phrase>
+		<phrase var_name="shares_upper" added="1565190041">Shares</phrase>
+		<phrase var_name="clicks_upper" added="1565190041">Clicks</phrase>
+		<phrase var_name="viral_lift" added="1565190041">Viral Lift</phrase>
+		<phrase var_name="started_date" added="1565190041">Started Date</phrase>
+		<phrase var_name="share_this_page_now" added="1565190041">Share this page now</phrase>
+		<phrase var_name="total_shares_for_this_time_period" added="1565190041">Total shares for this time period</phrase>
+		<phrase var_name="total_traffic_back_from_shares_for_this_time_period" added="1565190041">Total traffic back from shares for this time period</phrase>
+		<phrase var_name="percentage_increase_in_traffic_due_to_shares_and_clicks" added="1565190041">Percentage increase in traffic due to shares and clicks</phrase>
+		<phrase var_name="save_gallery" added="1565190041">Save Gallery</phrase>
+		<phrase var_name="next" added="1565190041">Next</phrase>
+		<phrase var_name="total_upper" added="1565190041">Total</phrase>
+		<phrase var_name="result_s" added="1565190041">Result(s)</phrase>
+		<phrase var_name="menu_fundraising_fund_raising_532c28d5412dd75bf975fb951c740a30" added="1565190041">Fund Raising</phrase>
+		<phrase var_name="menu_add_new_fundraising" added="1565190041">Create a Campaign</phrase>
+		<phrase var_name="s_u_active" added="1565190041">Active</phrase>
+		<phrase var_name="user_setting_can_active_campaign" added="1565190041">Can active a campaign?</phrase>
+		<phrase var_name="s_inactive" added="1565190041">Inactive</phrase>
+		<phrase var_name="s_active" added="1565190041">Active</phrase>
+		<phrase var_name="setactive_title" added="1565190041">Your fundraising has been set ACTIVE on {site_title}.</phrase>
+		<phrase var_name="setactive_message" added="1565190041"><![CDATA[Your fundraising has been set ACTIVE on {site_title}.
+
+To view this fundraising, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="fundraising_is_set_active" added="1565190041">Campaign is set active</phrase>
+		<phrase var_name="setinactive_title" added="1565190041">Your fundraising has been set INACTIVE on {site_title}.</phrase>
+		<phrase var_name="setinactive_message" added="1565190041"><![CDATA[Your fundraising has been set INACTIVE on {site_title}.
+
+To view this fundraising, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="fundraising_is_set_inactive" added="1565190041">Campaign is set inactive</phrase>
+		<phrase var_name="your_fundraising_title_has_been_setactive" added="1565190041"><![CDATA[Your fundraising "{title}" has been set active.]]></phrase>
+		<phrase var_name="your_fundraising_title_has_been_setinactive" added="1565190041"><![CDATA[Your fundraising "{title}" has been set inactive.]]></phrase>
+		<phrase var_name="s_f_u_active" added="1565190041">Active</phrase>
+		<phrase var_name="campaign_is_successfully_active" added="1565190041">Campaign is successfully activated.</phrase>
+		<phrase var_name="campaign_is_successfully_inactive" added="1565190041">Campaign is successfully inactivated.</phrase>
+		<phrase var_name="active_before_approve" added="1565190041">The fundraising should activate before approving.</phrase>
+		<phrase var_name="cannot_publish_because_inactive" added="1565190041">The fundraising cannot be published because it is inactive.</phrase>
+		<phrase var_name="cannot_view_because_inactive" added="1565190041">You cannot view this fundraising because it is inactive.</phrase>
+		<phrase var_name="confirm_delete_category_of_fundraising" added="1565190041"><![CDATA[Are you sure you want to delete this category? All campaigns belong to this category will be moved to default category "None" and you have to update category for each campaign later]]></phrase>
+		<phrase var_name="manage_donate_payment_des" added="1565190041">If Paypal gateway is active, then user is able to donate to the campaign and campaign owner will receive the donation. If paypal gateway is inactive, the user is not able to donate to the campaign</phrase>
+		<phrase var_name="active" added="1565190041">Active</phrase>
+		<phrase var_name="edit_gateway_setting" added="1565190041">Edit Gateway Setting</phrase>
+		<phrase var_name="test_mode" added="1565190041">Test Mode</phrase>
+		<phrase var_name="disable_test_mode" added="1565190041">Disable Test Mode</phrase>
+		<phrase var_name="enable_test_mode" added="1565190041">Enable Test Mode</phrase>
+		<phrase var_name="payment_gateways" added="1565190041">Payment Gateways</phrase>
+		<phrase var_name="editing" added="1565190041">Editing</phrase>
+		<phrase var_name="gateway_details" added="1565190041">Gateway Details</phrase>
+		<phrase var_name="gateway_successfully_updated" added="1565190041">Gateway successfully updated.</phrase>
+		<phrase var_name="provide_a_name" added="1565190041">Provide a name</phrase>
+		<phrase var_name="provide_a_description" added="1565190041">Provide a description</phrase>
+		<phrase var_name="select_if_the_gateway_is_in_test_mode" added="1565190041">Select if the gateway is in test mode</phrase>
+		<phrase var_name="select_if_the_gateway_is_active_or_not" added="1565190041">Select if the gateway is active or not</phrase>
+		<phrase var_name="admin_menu_manage_payment_gateway" added="1565190041">Manage Donation Payment</phrase>
+		<phrase var_name="user_setting_can_add_donation_on_own_page" added="1565190041">Can add donation on own page?</phrase>
+		<phrase var_name="user_setting_can_donate" added="1565190041">Can donate?</phrase>
+		<phrase var_name="setting_addthis_pub_id" added="1565190041"><![CDATA[<title>Insert your Addthis Profile ID</title><info>Insert your Addthis Profile ID</info>]]></phrase>
+		<phrase var_name="add_terms_and_conditions_to_your_campaign" added="1565190041">Add Terms and Conditions to your campaign</phrase>
+		<phrase var_name="category_language_name_must_be_less_than_limit" added="1565190041"><![CDATA[Category name in "{language_name}" must be less than {limit} characters length]]></phrase>
+		<phrase var_name="fundraising_admin_menu_user_group_settings" added="1565190041">User Group Settings</phrase>
+		<phrase var_name="donated_to_campaign_title" added="1565190041">donated to campaign: {title}.</phrase>
+		<phrase var_name="setting_fundraising_paging_mode" added="1565190041"><![CDATA[<title>Pagination Style</title><info>Select Pagination Style at Search Page.</info>]]></phrase>
+		<phrase var_name="video_url" added="1565190041">Video Url</phrase>
+		<phrase var_name="controller_fundraising.index" added="1565190041">Fundraising Home Page</phrase>
+		<phrase var_name="controller_fundraising.profile" added="1565190041">Fundraising Profile Page</phrase>
+		<phrase var_name="controller_fundraising.view" added="1565190041">Fundraising Detail</phrase>
+		<phrase var_name="view_this_campaign" added="1565190041">View This Campaign</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="true" user="false" guest="false" staff="false" module="fundraising" ordering="0">can_highlight_campaign</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="integer" admin="0" user="0" guest="0" staff="0" module="fundraising" ordering="19">flood_control_fundraising</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="1" user="0" guest="0" staff="1" module="fundraising" ordering="15">can_feature_campaign</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="1" user="0" guest="0" staff="1" module="fundraising" ordering="17">can_approve_campaigns</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="1" user="1" guest="0" staff="1" module="fundraising" ordering="1">add_new_campaign</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="integer" admin="7" user="7" guest="0" staff="7" module="fundraising" ordering="13">total_photo_upload_limit</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="1" user="0" guest="0" staff="1" module="fundraising" ordering="4">edit_user_campaign</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="true" user="true" guest="false" staff="true" module="fundraising" ordering="0">can_upload_video</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="1" user="1" guest="1" staff="1" module="fundraising" ordering="0">view_fundraisings</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="1" user="1" guest="0" staff="1" module="fundraising" ordering="10">can_post_comment_on_campaign</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="integer" admin="1" user="1" guest="1" staff="1" module="fundraising" ordering="18">points_fundraising</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="0" user="0" guest="0" staff="0" module="fundraising" ordering="16">approve_campaigns</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="1" user="1" guest="0" staff="1" module="fundraising" ordering="5">delete_own_campaign</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="1" user="1" guest="0" staff="1" module="fundraising" ordering="3">edit_own_campaign</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="1" user="1" guest="0" staff="1" module="fundraising" ordering="9">can_control_donate_on_campaigns</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="integer" admin="500" user="500" guest="0" staff="500" module="fundraising" ordering="12">max_upload_size_fundraising</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="true" user="false" guest="false" staff="false" module="fundraising" ordering="0">can_close_campaign_added_by_other_users</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="1" user="0" guest="0" staff="1" module="fundraising" ordering="6">delete_user_campaign</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="1" user="1" guest="0" staff="1" module="fundraising" ordering="7">can_set_allow_list_on_campaigns</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="true" user="true" guest="false" staff="true" module="fundraising" ordering="0">can_close_own_campaign</setting>
+		<setting is_admin_setting="0" module_id="fundraising" type="boolean" admin="true" user="false" guest="false" staff="false" module="fundraising" ordering="0">can_active_campaign</setting>
+	</user_group_settings>
+</module>

@@ -1,0 +1,29 @@
+<div class="cal-week-box">
+	<div class="cal-offset1 cal-column"></div>
+	<div class="cal-offset2 cal-column"></div>
+	<div class="cal-offset3 cal-column"></div>
+	<div class="cal-offset4 cal-column"></div>
+	<div class="cal-offset5 cal-column"></div>
+	<div class="cal-offset6 cal-column"></div>
+	<div class="cal-row-fluid cal-row-head">
+		<% _.each(days_name, function(name, index) { %>
+			<div class="cal-cell1 <%= cal._getDayClass('week', start) %>" data-toggle="tooltip" title="<%= cal._getHolidayName(start) %>">
+				<span class="item-date-header-full">
+					<%= name %><br>
+				</span>
+				<span class="item-date-header-small">
+					<%= days_name_short[index] %><br>
+				</span>
+				<small>
+					<span data-cal-date="<%= start.getFullYear() %>-<%= start.getMonthFormatted() %>-<%= start.getDateFormatted() %>" data-cal-view="day">
+						<span><%= start.getDate() %></span>
+						<span><%= cal.locale['ms' + start.getMonth()] %></span>
+					</span>
+				</small>
+			</div>
+			<% start.setDate(start.getDate() + 1); %>
+		<% }) %>
+	</div>
+	<hr>
+	<%= cal._week() %>
+</div>

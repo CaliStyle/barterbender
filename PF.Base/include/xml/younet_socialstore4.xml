@@ -1,0 +1,60 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_socialstore4</product_id>
+		<is_core>0</is_core>
+		<title>YNC Social Store</title>
+		<description>by YouNetCo</description>
+		<version>4.02p6</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>https://phpfox.younetco.com</url>
+		<url_version_check></url_version_check>
+		<icon>https://static.younetco.com/ynicons/fox4/social_store.png</icon>
+		<vendor>YouNetCo</vendor>
+	</data>
+	<dependencies>
+		<dependency>
+			<type_id>product</type_id>
+			<check_id>younet_ecommerce4</check_id>
+			<dependency_start>4.02</dependency_start>
+			<dependency_end></dependency_end>
+		</dependency>
+	</dependencies>
+	<installs>
+		<install>
+			<version>4.01</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'ynsocialstore/install/v4.01.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01p1</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'ynsocialstore/install/v4.01p1.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01p2</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'ynsocialstore/install/v4.01p2.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'ynsocialstore/install/v4.02.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02p3</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'ynsocialstore/install/v4.02p3.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02p5</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'ynsocialstore/install/v4.02p5.php');]]></install_code>
+			<uninstall_code />
+		</install>
+	</installs>
+	<modules>
+		<module_id>ynsocialstore</module_id>
+	</modules>
+</product>

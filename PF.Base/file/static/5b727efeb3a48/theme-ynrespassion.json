@@ -1,0 +1,25 @@
+{
+    "files_path": [
+        "less\/variables.less",
+        "less\/customize.less",
+        "theme.png",
+        "html\/core.block.template-notification-sm.html.php",
+        "html\/core.block.template-menu.html.php",
+        "html\/layout.html",
+        "html\/core.block.template-notification-xs.html.php",
+        "html\/core.block.template-menufooter.html.php",
+        "html\/core.block.template-logo.html.php",
+        "html\/core.block.template-notification.html.php",
+        "checksum",
+        "assets\/logos\/53ed8b5a76145c5f5e658012a55c108d.jpg",
+        "assets\/logos\/logo.png",
+        "assets\/logos\/2fb40a5c0443c7e0782f715e806a6c4f.jpg",
+        "assets\/logos\/logo_default.png",
+        "assets\/autoload.less",
+        "assets\/autoload.js",
+        "assets\/banners\/26904072_525246121194537_4991297344712733918_n.jpg",
+        "assets\/variables.less",
+        "assets\/autoload.css"
+    ],
+    "theme.json": "{\n  \"id\": \"ynrespassion\",\n  \"name\": \"YNC Responsive Passion\",\n  \"vars\": {\n    \"body_bg\": {\n      \"title\": \"Body Background \",\n      \"id\": \"body\",\n      \"attr\": \"background\"\n    },\n    \"color\": {\n      \"title\": \"Color\",\n      \"id\": \"body\",\n      \"attr\": \"color\"\n    },\n    \"block_landing_bg\": {\n      \"title\": \"Block Landing Background \",\n      \"id\": \"#section-header .block .content\",\n      \"attr\": \"background\"\n    },\n    \"link\": {\n      \"title\": \"Links\",\n      \"id\": \"a\",\n      \"attr\": \"color\"\n    },\n    \"link_hover\": {\n      \"title\": \"Links Hover\",\n      \"id\": \"a:hover\",\n      \"attr\": \"color\"\n    },\n    \"nav-color\":{\n      \"title\": \"Navigation Color\",\n      \"id\": \".ynrespassion-navbar.navbar-default .navbar-nav > li > a\",\n      \"attr\": \"color\"\n    },\n    \"nav-color-hover\":{\n      \"title\": \"Navigation Color Hover, Active\",\n      \"id\": \".ynrespassion-navbar.navbar-default .navbar-nav > li > a:hover, .ynrespassion-navbar.navbar-default .navbar-nav > li > a.menu_is_selected\",\n      \"attr\": \"color\"\n    },\n    \"nav-color-hover-line\":{\n      \"title\": \"Navigation Line Color Hover, Active\",\n      \"id\": \".navbar.navbar-default.ynrespassion-navbar .navbar-nav > li a:after\",\n      \"attr\": \"background\"\n    },\n    \"header_bg\": {\n      \"title\": \"Header Background\",\n      \"id\": \".sticky-bar, .navbar-header\",\n      \"attr\": \"background\"\n    },\n    \"nav-bg\": {\n      \"title\": \"Navigation Background\",\n      \"id\": \".ynrespassion-navbar.navbar-default\",\n      \"attr\": \"background\"\n    },\n    \"reason_block_bg\": {\n      \"title\": \"Reason Block Background\",\n      \"id\": \".ynrespassion-reasons-ld .ynrespassion-reasons-container\",\n      \"attr\": \"background\"\n    },\n    \"content_bg\": {\n      \"title\": \"Content Background\",\n      \"id\": \"#content-stage\",\n      \"attr\": \"background\"\n    },\n    \"container_width\": {\n      \"title\": \"Container Width\",\n      \"id\": \".container\",\n      \"attr\": \"max-width\"\n    },\n    \"block_bg\": {\n      \"title\": \"Block Background\",\n      \"id\": \".block\",\n      \"attr\": \"background\"\n    },\n    \"block_color\": {\n      \"title\": \"Block Content Text Color\",\n      \"id\": \".block .content, .block .content .extra_info\",\n      \"attr\": \"color\"\n    },\n    \"block_title_color\": {\n      \"title\": \"Block Title Text Color\",\n      \"id\": \".block .title\",\n      \"attr\": \"color\"\n    },\n    \"block_title_border\": {\n      \"title\": \"Block Title Border\",\n      \"id\": \".block .title\",\n      \"attr\": \"border-bottom-color\"\n    },\n    \"footer_bg\": {\n      \"title\": \"Footer Background\",\n      \"id\": \"footer, .footer-holder\",\n      \"attr\": \"background\"\n    },\n    \"footer_color\": {\n      \"title\": \"Footer Text Color\",\n      \"id\": \"#section-footer .footer-menu li a\",\n      \"attr\": \"color\"\n    },\n    \"footer_copyright_color\": {\n      \"title\": \"Footer Copyright Color\",\n      \"id\": \"#section-footer .footer-holder, #select_lang_pack\",\n      \"attr\": \"color\"\n    }\n  }\n}"
+}

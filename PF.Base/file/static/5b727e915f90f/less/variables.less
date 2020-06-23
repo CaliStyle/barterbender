@@ -1,0 +1,191 @@
+@import '../../../../PF.Base/less/variables';
+
+@use-border-radius: false;
+@use-block-box: true;
+@hover-categories: false;
+@border-radius-base: 0;
+@border-radius-large: 0;
+@border-radius-small: 0;
+@btn-border-radius-large: 0;
+@btn-border-radius-base: 0;
+@btn-border-radius-small: 0;
+@use-form-control-focus: true;
+@use-form-control-shadown: false;
+@border-color: @block-border;
+
+@grid-gutter-width: 2*@block-content-padding;
+//@padding-base-horizontal: 20px;
+//@padding-base-vertical: 20px;
+
+@padding-large-vertical: 14px;
+@padding-large-horizontal: @block-content-padding;
+@padding-base-vertical: 9px;
+
+@link-hover-decoration: none;
+@dropdown-link-color: @block-color;
+@font-size-large: @font-size-base;
+@navbar-default-bg: #feffff;
+@navbar-default-link-active-bg: #848586;
+@navbar-default-link-active-color: white;
+@navbar-default-link-hover-bg: #f4f5f6;
+
+@grid-float-breakpoint: @screen-md-min;
+
+@navbar-default-toggle-border-color: transparent;
+@navbar-default-toggle-icon-bar-bg: white;
+
+@dropdown-line-height: 40px;
+@dropdown-link-active-bg: darken(@dropdown-link-hover-bg, 10%);
+@dropdown-link-active-color: @text-color;
+
+//@btn-default-border: @btn-default-bg;
+@btn-danger-border: @btn-danger-color;
+@btn-primary-border: @btn-primary-bg;
+@btn-success-border: @btn-success-bg;
+@btn-info-border: @btn-info-bg;
+@btn-warning-border: @btn-warning-bg;
+
+@list-group-border: @block-border;
+@btn-border-focus-revelant: 0;
+@btn-border-hover-revelant: 0;
+@header-height: 40px;
+@header-font-size: @font-size-base - 1;
+@menu-action-line-height: 50px;
+@row-border-color: darken(@block-bg, 6%);
+
+//Clean Template
+
+
+@import url(//fonts.googleapis.com/css?family=Poppins:300,400,600,700,800);
+
+@gray-base:              #555; // hide
+@gray-darker:            #888; // !hide
+@gray-dark:              #999;   // !hide
+
+@gray:                   #ccc; // !hide
+@gray-light:             #eee; // !hide
+@gray-lighter:           #f8f8f8; // !hide
+
+
+//== Main
+@logoUrl: ''; // Logo
+
+
+//== Containers
+@container-max-width: 920px; // Container/Holder width !hide
+@container-max-width-full: 1190px; // Max Width
+@container-bg:              transparent; // Background color for container | color !hide
+@content-width: 600px; // !hide
+
+////== Helpers
+@transition:                all 0.50s ease; // !hide
+@border-radius-base:        0; // !hide
+@separator: "\00b7";  // !hide
+@box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2); //!hide
+
+//== Links
+@link-color: @brand-primary;
+@link-hover-color:           darken(@link-color, 15%);
+
+@link-focus: #222;
+@link-focus-hover: @brand-primary;
+
+
+//== Brand
+@brand-primary-color: #fff;
+
+@brand-primary-light:   #ff840e;
+@brand-primary:         #ff5a00; // Brand primary
+@brand-primary-dark: 	#ea5300;
+
+@brand-success-light:   #9ee948;
+@brand-success:         #7acb1d;
+@brand-success-dark:    #63b506;
+@brand-info:            #5bc0de;
+@brand-warning-light:   #ffd800;
+@brand-warning:         #ffc000;
+@brand-warning-dark:    #f5a100;
+
+@brand-danger-light:    #ff6f6f;
+@brand-danger:          #f44336;
+@brand-danger-dark:     #d43226;
+
+@font-family-base:          'Poppins', sans-serif;// Font family
+@font-size-base:            14px; // Base font size | size
+@input-color: #555;
+@input-height-base:40px;
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+@body-bg:               #e4e8eb;
+//** Global text color on `<body>`.
+@text-color:            #364347;
+
+@block-title-color: #555;
+
+//** Global textual link color.
+@link-color:            @brand-primary;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      @brand-primary-dark;
+//** Link hover decoration.
+@link-hover-decoration: none;
+
+@block-border: #ccc;
+///== Columns
+@column-left-width: 250px; //!hide
+@column-width: 300px; //!hide
+
+//== Navs
+@nav-bg: @brand-primary;
+@nav-color: #fff;
+@nav-width: 200px; // !hide
+
+
+
+//== Header
+@header-color: #e5e5e5;
+
+//== Blocks
+@block-bg:                  #fff;
+@block-color:               #555;
+@block-radius: @border-radius-base; //!hide
+@block-margin-bottom:       20px;
+@block-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4); // !hide
+@block-box-shadow-light: 0 0 20px 0 rgba(0, 0, 0, 0.2);// !hide
+
+
+@block-title-padding: 10px;// !hide
+@block-title-bg: #555; // block title color
+@block-title-size: 22px;
+@block-title-font-weight: 400; // block title font weight
+
+@block-content-padding: 20px;
+@block-content-size: @font-size-base; // !hide
+@hover-categories: true; // !hide
+//== Forms
+@form-bg: @block-bg; // !hide
+@form-color: @block-color; // !hide
+@form-border: 1px transparent solid; // !hide
+
+@row-border-color: #eee;
+@input-border: #ccc;
+@use-block-box: 		true; // !hide
+@use-border-radius: false; // !hide
+@use-input-outline: false; // !hide
+@form-control-border: 1px solid @input-border; // !hide
+
+
+@footer-bg: #5e6969;
+@footer-holder-bg: @footer-bg;
+@footer-color: #FFF;
+@footer-hover-color: @body-bg;
+@dropdown-line-height: 40px;
+/** START CSS */
+
+
+//==Reponsive Business
+@disable-border: #ddd;
+//==Input textarea selectbox focus
+@box-focus: @brand-primary;

@@ -1,0 +1,116 @@
+<module>
+	<data>
+		<module_id>socialbridge</module_id>
+		<product_id>socialbridge</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:1:{s:46:"socialbridge.admin_menu_manage_social_api_keys";a:1:{s:3:"url";a:2:{i:0;s:12:"socialbridge";i:1;s:9:"providers";}}}]]></menu>
+		<phrase_var_name>module_socialbridge</phrase_var_name>
+		<version>4.02p5</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>https://phpfox.younetco.com/files/2016/03/Social-Bridge.jpg</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="socialbridge" parent_var_name="menu_settings" m_connection="" var_name="menu_socialbridge_manage_social_accounts_a4d91de34ac868ffc9869b826f2e135f" ordering="105" url_value="socialbridge.setting" version_id="3.2.0" disallow_access="" module="socialbridge" />
+	</menus>
+	<phrases>
+		<phrase var_name="admin_menu_manage_social_api_keys" added="1557718951">Manage Social API Keys</phrase>
+		<phrase var_name="module_socialbridge" added="1557718951">Social Bridge - Manage Social API Keys</phrase>
+		<phrase var_name="update_successfully" added="1557718951">Update Successfully</phrase>
+		<phrase var_name="manage_social_api_keys" added="1557718951">Manage Social API Keys</phrase>
+		<phrase var_name="error" added="1557718951">Error</phrase>
+		<phrase var_name="view" added="1557718951">View</phrase>
+		<phrase var_name="hide" added="1557718951">Hide</phrase>
+		<phrase var_name="tutorial_how_to_get_facebook_api_key" added="1557718951"><![CDATA[tutorial "How to get Facebook Api Key"]]></phrase>
+		<phrase var_name="to_get_your_facebook_api_id" added="1557718951"><![CDATA[<li>To get your <strong>"Facebook API ID"</strong> and <strong>"Facebook App Secret"</strong> strings, go to the following URL:
+    				<div class="p_4"><a href="http://developers.facebook.com/setup/" target="_blank">Make application</a></div>
+    			</li>]]></phrase>
+		<phrase var_name="for_site_url_you_should_use_this_url" added="1557718951"><![CDATA[For "Site URL" you should use this URL:]]></phrase>
+		<phrase var_name="do_follow_facebook_steps_to_complete_create_new_application" added="1557718951">Do follow Facebook steps to complete create new application.</phrase>
+		<phrase var_name="tutorial_how_to_get_twitter_api_key" added="1557718951"><![CDATA[tutorial "How to get Twitter Api Key"]]></phrase>
+		<phrase var_name="to_get_your_twitter_api" added="1557718951"><![CDATA[<li>To get your <strong>"Twitter Consumer Key"</strong> and <strong>"Twitter Consumer Secret"</strong> strings, go to the following URL:
+    				<div class="p_4"><a href="https://dev.twitter.com/apps" target="_blank">Make application</a></div>
+    			</li>
+    			<li>
+    				Click to "Create new application" button.
+    			</li>]]></phrase>
+		<phrase var_name="for_website_you_should_use_this_url" added="1557718951"><![CDATA[For "WebSite" you should use this URL:]]></phrase>
+		<phrase var_name="for_callback_url_must_use" added="1557718951"><![CDATA[For "Callback URL" must use:]]></phrase>
+		<phrase var_name="do_follow_twitter_steps_to_complete_create_new_application" added="1557718951"><![CDATA[<li>Do follow Twitter steps to complete create new application.</li>
+    			<li>Go to tab "Settings" of your application.</li>
+    			<li>Change "Access level" to <strong>"Read and write"</strong></li>]]></phrase>
+		<phrase var_name="tutorial_how_to_get_linkedin_api_key" added="1557718951"><![CDATA[tutorial "How to get Linkedin Api Key"]]></phrase>
+		<phrase var_name="to_get_your_linkedin_api_key" added="1557718951"><![CDATA[<li>To get your <strong>"Linkedin API Key"</strong> and <strong>"Linkedin Secret Key"</strong> strings, go to the following URL:
+    				<div class="p_4"><a href="https://www.linkedin.com/secure/developer?newapp=" target="_blank">Make application</a></div>
+    			</li>]]></phrase>
+		<phrase var_name="do_follow_linkedin_steps_to_complete_create_new_application" added="1557718951"><![CDATA[<li>
+    				<div class="p_4">For "Application Type" you should use this URL: <strong>Web Application</strong></div>
+    				<div class="p_4">For "Live Status" should be: <strong style="color:red;">Live</strong></div>
+    				
+    			</li>
+    			<li>Do follow Linkedin steps to complete create new application.</li>]]></phrase>
+		<phrase var_name="setting" added="1557718951">Settings</phrase>
+		<phrase var_name="facebook_secret" added="1557718951">Facebook Secret</phrase>
+		<phrase var_name="application_id" added="1557718951">Application ID</phrase>
+		<phrase var_name="enable_facebook_connect" added="1557718951">Enable Facebook Connect:</phrase>
+		<phrase var_name="consumer_key" added="1557718951">Consumer Key</phrase>
+		<phrase var_name="consumer_secret" added="1557718951">Consumer Secret</phrase>
+		<phrase var_name="enable_twitter_connect" added="1557718951">Enable Twitter Connect:</phrase>
+		<phrase var_name="api_key" added="1557718951">API Key</phrase>
+		<phrase var_name="secret_key" added="1557718951">Secret Key</phrase>
+		<phrase var_name="enable_linkedin_connect" added="1557718951">Enable Linkedin Connect</phrase>
+		<phrase var_name="migrate_settings" added="1557718951">Migrate Settings</phrase>
+		<phrase var_name="migrate" added="1557718951">Migrate</phrase>
+		<phrase var_name="to_upgrade_new_settings_from_social_connect_or_social_publishers_settings_please_click_to_migrate" added="1557718951"><![CDATA[To upgrade new settings from Social Connect or Social Publishers Settings, please click to "migrate" button .]]></phrase>
+		<phrase var_name="migrate_from" added="1557718951">Migrate from</phrase>
+		<phrase var_name="social_connect" added="1557718951">Social Connect</phrase>
+		<phrase var_name="social_publishers" added="1557718951">Social Publishers</phrase>
+		<phrase var_name="if_both_social_connect_and_social_publlishers_settings_are_configured_after_upgrading_the_new_se" added="1557718951"><![CDATA[If both Social Connect and Social Publlishers' settings  are configured, after upgrading, the new settings would be Social Connect settings only]]></phrase>
+		<phrase var_name="no_selected_migrate_options" added="1557718951">No selected Migrate Options</phrase>
+		<phrase var_name="for_twitter_api_settings_strong_must_change_callback_url_to_strong" added="1557718951"><![CDATA[For Twitter API Settings: <strong>must change CallBack URL to: </strong>]]></phrase>
+		<phrase var_name="go_to_the_following_url_select_your_app_and_edit" added="1557718951"><![CDATA[Go to the following URL, select your app and edit: <div class="p_4">
+<a href="http://developers.facebook.com/apps/" target="_blank">Edit application</a>
+</div>]]></phrase>
+		<phrase var_name="social_bridge_settings" added="1557718951">Social Bridge Settings</phrase>
+		<phrase var_name="connected_as" added="1557718951">Connected as</phrase>
+		<phrase var_name="are_you_sure_you_want_to_disconnect_this_account" added="1557718951">Are you sure you want to disconnect this account?</phrase>
+		<phrase var_name="click_here" added="1557718951">Click here</phrase>
+		<phrase var_name="to" added="1557718951">to</phrase>
+		<phrase var_name="disconnect" added="1557718951">disconnect</phrase>
+		<phrase var_name="connect" added="1557718951">connect</phrase>
+		<phrase var_name="view_your_settings" added="1557718951">View your settings</phrase>
+		<phrase var_name="update_unsuccessful" added="1557718951">Update Unsuccessfully</phrase>
+		<phrase var_name="supported_modules" added="1557718951">Supported modules</phrase>
+		<phrase var_name="menu_socialbridge_manage_social_accounts_a4d91de34ac868ffc9869b826f2e135f" added="1557718951">Manage Social Accounts</phrase>
+		<phrase var_name="there_are_no_social_providers_were_enable_please_contact_to_admin_site_to_get_more_information" added="1557718951">There are no social providers were enable. Please contact to admin site to get more information.</phrase>
+		<phrase var_name="connections" added="1557718951">Connections</phrase>
+		<phrase var_name="you_are_not_connected_to_any_providers" added="1557718951">You are not connected to any providers.</phrase>
+		<phrase var_name="none" added="1557718951">None</phrase>
+		<phrase var_name="manage_social_accounts" added="1557718951">Manage Social Accounts</phrase>
+		<phrase var_name="for_website_url_you_should_use_this_url" added="1557718951"><![CDATA[For "Website URL:" you should use this URL:]]></phrase>
+		<phrase var_name="for_live_status_should_be_live" added="1557718951"><![CDATA[For "Live Status" should be: <strong style="color:red;">Live</strong>]]></phrase>
+		<phrase var_name="do_follow_linkedin_steps_to_complete_create_new_application2" added="1557718951">Do follow Linkedin steps to complete create new application</phrase>
+		<phrase var_name="picture_show_on_facebook" added="1557718951">Default Picture show on Facebook.</phrase>
+		<phrase var_name="for_website_url_you_should_use_this_url_2" added="1557718951"><![CDATA[For "Website URL:" you should use this URL:]]></phrase>
+		<phrase var_name="for_application_use_should_be_strong_style_color_red_social_aggregation_strong" added="1557718951"><![CDATA[For "Application Use" should be: <strong style="color:red;">Social Aggregation</strong>]]></phrase>
+		<phrase var_name="please_enter_your_api" added="1557718951">Please enter your API.</phrase>
+		<phrase var_name="please_enter_your_linkedin_api" added="1557718951">Please enter your Linkedin API.</phrase>
+		<phrase var_name="redirect_loop_msg" added="1557718951">There are some problems when connecting to this account. Please try to connect again.</phrase>
+		<phrase var_name="maximum_invite_per_day" added="1557718951">Maximum Allowed Invitations Per Day</phrase>
+		<phrase var_name="description_facebook_maximum_invite_per_day" added="1557718951">The maximum number of messages will be sent per day for 1 account (Enter a number between 1 and 20)</phrase>
+		<phrase var_name="viewmore_facebook_maximum_invite_per_day" added="1557718951"><![CDATA[More Info: <a href="http://developers.facebook.com/docs/chat/" target="_blank">Facebook Chat API</a>]]></phrase>
+		<phrase var_name="description_twtitter_maximum_invite_per_day" added="1557718951">The maximum number of messages will be sent per day for 1 account (Enter a number between 1 and 250)</phrase>
+		<phrase var_name="viewmore_twtitter_maximum_invite_per_day" added="1557718951"><![CDATA[More Info: <a href="https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following" target="_blank">About Twitter Limits</a>]]></phrase>
+		<phrase var_name="description_linkedin_maximum_invite_per_day" added="1557718951">The maximum number of messages will be sent per day for 1 account (Enter a number between 1 and 10)</phrase>
+		<phrase var_name="viewmore_linkedin_maximum_invite_per_day" added="1557718951"><![CDATA[More Info: <a href="http://developer.linkedin.com/documents/throttle-limits" target="_blank">Throttle Limits</a>]]></phrase>
+		<phrase var_name="fill_max_invite_for_facebook" added="1557718951">The maximum number of messages be sent per day for 1 account on Facebook is a number between 1 and 20.</phrase>
+		<phrase var_name="fill_max_invite_for_linkedin" added="1557718951">The maximum number of messages be sent per day for 1 account on LinkedIn is a number between 1 and 10.</phrase>
+		<phrase var_name="fill_max_invite_for_twitter" added="1557718951">The maximum number of messages be sent per day for 1 account on Twitter is a number between 1 and 250.</phrase>
+		<phrase var_name="max_invite_is_numberic" added="1557718951">Maximum allowed invitations is a numerical value.</phrase>
+		<phrase var_name="in_authentication_section_find_authorized_redirect_urls_and_add_link" added="1557718951"><![CDATA[In "Authentication" section, find "Authorized Redirect URLs" and add link]]></phrase>
+		<phrase var_name="add_oauth_redirect_uri" added="1557718951"><![CDATA[In product section which is on the left, you need to set up Facebook login. It is very important for you to find "OAuth Redirect URI" and add link: {link}.]]></phrase>
+	</phrases>
+</module>

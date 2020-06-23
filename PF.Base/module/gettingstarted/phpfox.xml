@@ -1,0 +1,312 @@
+<module>
+	<data>
+		<module_id>gettingstarted</module_id>
+		<product_id>younet_gettingstarted4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:9:{s:39:"gettingstarted.admin_menu_add_scheduled";a:1:{s:3:"url";a:2:{i:0;s:14:"gettingstarted";i:1;s:16:"addscheduledmail";}}s:37:"gettingstarted.admin_menu_manage_mail";a:1:{s:3:"url";a:2:{i:0;s:14:"gettingstarted";i:1;s:10:"managemail";}}s:37:"gettingstarted.admin_menu_add_article";a:1:{s:3:"url";a:2:{i:0;s:14:"gettingstarted";i:1;s:10:"addarticle";}}s:40:"gettingstarted.admin_menu_manage_article";a:1:{s:3:"url";a:2:{i:0;s:14:"gettingstarted";i:1;s:13:"managearticle";}}s:38:"gettingstarted.admin_menu_add_todolist";a:1:{s:3:"url";a:2:{i:0;s:14:"gettingstarted";i:1;s:11:"addtodolist";}}s:41:"gettingstarted.admin_menu_manage_todolist";a:1:{s:3:"url";a:2:{i:0;s:14:"gettingstarted";i:1;s:14:"managetodolist";}}s:48:"gettingstarted.admin_menu_add_article_categories";a:1:{s:3:"url";a:2:{i:0;s:14:"gettingstarted";i:1;s:18:"addarticlecategory";}}s:49:"gettingstarted.admin_menu_manage_article_category";a:1:{s:3:"url";a:2:{i:0;s:14:"gettingstarted";i:1;s:21:"managearticlecategory";}}s:45:"gettingstarted.admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:14:"gettingstarted";i:1;s:19:"user-group-settings";}}}]]></menu>
+		<phrase_var_name>module_gettingstarted</phrase_var_name>
+		<version>4.02p2</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/getting_started.jpg</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="gettingstarted" parent_var_name="" m_connection="main" var_name="menu_gettingstarted_knowledge_base_fad58de7366495db4650cfefac2fcd61" ordering="127" url_value="gettingstarted" version_id="3.0.0beta3" disallow_access="" module="gettingstarted" mobile_icon="info" />
+	</menus>
+	<settings>
+		<setting group="" module_id="gettingstarted" is_hidden="0" type="drop" var_name="gettingstarted_paging_mode" phrase_var_name="setting_paging_mode" ordering="1" version_id="4.02"><![CDATA[a:2:{s:7:"default";s:8:"loadmore";s:6:"values";a:3:{i:0;s:8:"loadmore";i:1;s:9:"next_prev";i:2;s:10:"pagination";}}]]></setting>
+		<setting group="" module_id="gettingstarted" is_hidden="0" type="boolean" var_name="active_knowledge_base" phrase_var_name="setting_active_knowledge_base" ordering="1" version_id="2.1.0">1</setting>
+		<setting group="" module_id="gettingstarted" is_hidden="0" type="integer" var_name="letter_limit_will_be_sent_in_one_time" phrase_var_name="setting_letter_limit_will_be_sent_in_one_time" ordering="1" version_id="2.1.0">10</setting>
+		<setting group="" module_id="gettingstarted" is_hidden="0" type="integer" var_name="number_of_limit_most_view_articles" phrase_var_name="setting_number_of_limit_most_view_articles" ordering="1" version_id="3.0.1">10</setting>
+		<setting group="" module_id="gettingstarted" is_hidden="0" type="boolean" var_name="active_email_remainder" phrase_var_name="setting_active_email_remainder" ordering="1" version_id="2.1.0">1</setting>
+		<setting group="" module_id="gettingstarted" is_hidden="0" type="boolean" var_name="active_getting_started" phrase_var_name="setting_active_getting_started" ordering="1" version_id="2.1.0">1</setting>
+		<setting group="" module_id="gettingstarted" is_hidden="0" type="string" var_name="display_time_stamp" phrase_var_name="setting_display_time_stamp" ordering="1" version_id="3.0.0rc1">F j, Y</setting>
+		<setting group="" module_id="gettingstarted" is_hidden="0" type="integer" var_name="article_limit" phrase_var_name="setting_article_limit" ordering="1" version_id="2.1.0">10</setting>
+		<setting group="" module_id="gettingstarted" is_hidden="0" type="integer" var_name="number_of_limit_featured_articles" phrase_var_name="setting_number_of_limit_featured_articles" ordering="1" version_id="3.2.0">10</setting>
+		<setting group="" module_id="gettingstarted" is_hidden="0" type="integer" var_name="number_of_limit_latest_articles" phrase_var_name="setting_number_of_limit_latest_articles" ordering="1" version_id="3.2.0">10</setting>
+		<setting group="" module_id="gettingstarted" is_hidden="0" type="integer" var_name="number_of_limit_related_articles" phrase_var_name="setting_number_of_limit_related_articles" ordering="1" version_id="3.2.0">10</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="gettingstarted.article" module_id="gettingstarted" component="categories" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>ArticleCategories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="gettingstarted.article" module_id="gettingstarted" component="mostview" location="1" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>MostView</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="gettingstarted.article" module_id="gettingstarted" component="latestarticles" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>LatestArticle</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="gettingstarted.article" module_id="gettingstarted" component="articledetail" location="1" is_active="0" ordering="5" disallow_access="" can_move="0">
+			<title>articledetail</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="gettingstarted.index" module_id="gettingstarted" component="categories" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="gettingstarted.index" module_id="gettingstarted" component="latestarticles" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>latestarticles</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="gettingstarted.index" module_id="gettingstarted" component="featuredarticle" location="1" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>FeatureArticle</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="gettingstarted.index" module_id="gettingstarted" component="mostview" location="1" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>MostViewArticle</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="gettingstarted.article" module_id="gettingstarted" component="featuredarticle" location="1" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Featured Article</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="gettingstarted" component="mostview" m_connection="" module="gettingstarted" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="gettingstarted" component="articledetail" m_connection="gettingstarted.article" module="gettingstarted" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="gettingstarted" component="featuredarticle" m_connection="" module="gettingstarted" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="gettingstarted" component="latestarticles" m_connection="" module="gettingstarted" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="gettingstarted" component="index" m_connection="gettingstarted.index" module="gettingstarted" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="gettingstarted" component="categories" m_connection="" module="gettingstarted" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="gettingstarted" component="category" m_connection="gettingstarted.category" module="gettingstarted" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="gettingstarted" component="email-settings" m_connection="" module="gettingstarted" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="gettingstarted" component="article" m_connection="gettingstarted.article" module="gettingstarted" is_controller="1" is_block="0" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="admin_menu_add_scheduled" added="1564714127">Add Email</phrase>
+		<phrase var_name="admin_menu_manage_category" added="1564714127">Manage Categories</phrase>
+		<phrase var_name="module_gettingstarted" added="1564714127">Getting Started</phrase>
+		<phrase var_name="admin_menu_manage_mail" added="1564714127">Manage Emails</phrase>
+		<phrase var_name="module_Gettingstarted" added="1564714127">Getting Started</phrase>
+		<phrase var_name="manage_mails" added="1564714127">Manage Emails</phrase>
+		<phrase var_name="name" added="1564714127">Name</phrase>
+		<phrase var_name="module" added="1564714127">Module</phrase>
+		<phrase var_name="time" added="1564714127">Reminder Time</phrase>
+		<phrase var_name="message" added="1564714127">Message</phrase>
+		<phrase var_name="active" added="1564714127">Active</phrase>
+		<phrase var_name="edit_schedule_mail" added="1564714127">Edit Email</phrase>
+		<phrase var_name="scheduled_name" added="1564714127">Scheduled Name</phrase>
+		<phrase var_name="scheduled_category" added="1564714127">Module</phrase>
+		<phrase var_name="create_schedule_mail" added="1564714127">Create schedule mail</phrase>
+		<phrase var_name="scheduled_mail_successfully_deleted" added="1564714127">Email(s) successfully deleted.</phrase>
+		<phrase var_name="edit_scheduled_mail_successfully" added="1564714127">Email successfully edited.</phrase>
+		<phrase var_name="id_not_found" added="1564714127">id not found</phrase>
+		<phrase var_name="add_scheduled_mail_false_because_time_that_you_add_it_has_existed_before" added="1564714127">Add email false because time that you add, it has existed before.</phrase>
+		<phrase var_name="add_scheduled_mail_successfully" added="1564714127">Email successfully added.</phrase>
+		<phrase var_name="time_has_to_be_larger_or_equal_0" added="1564714127">Time has to be larger or equal 0</phrase>
+		<phrase var_name="time_has_to_be_numberic" added="1564714127">Time has to be numberic.</phrase>
+		<phrase var_name="time_is_not_allowed_empty" added="1564714127">Fill in a time for your email.</phrase>
+		<phrase var_name="message_is_not_allowed_empty" added="1564714127">Fill in a message for your email.</phrase>
+		<phrase var_name="subtitle" added="1564714127">Subject</phrase>
+		<phrase var_name="admin_menu_add_article" added="1564714127">Add Article</phrase>
+		<phrase var_name="admin_menu_manage_article" added="1564714127">Manage Articles</phrase>
+		<phrase var_name="admin_menu_add_todolist" added="1564714127">Add Todo List</phrase>
+		<phrase var_name="admin_menu_manage_todolist" added="1564714127">Manage Todo Lists</phrase>
+		<phrase var_name="active_mail_remainder" added="1564714127">Active Email Remainder:</phrase>
+		<phrase var_name="active_base_knowledge" added="1564714127">Active Knowledge Base:</phrase>
+		<phrase var_name="search_filters" added="1564714127">Search Filters</phrase>
+		<phrase var_name="manage_mail_categories" added="1564714127">Manage Email Categories</phrase>
+		<phrase var_name="add_knowledge_base_category" added="1564714127">Add a New Knowledge Base Category</phrase>
+		<phrase var_name="add_knowledge_base_article" added="1564714127">Add a New Knowledge Base Article</phrase>
+		<phrase var_name="knowledge_base_article" added="1564714127">Knowledge Base Articles</phrase>
+		<phrase var_name="no_search_results_found" added="1564714127">No search results found.</phrase>
+		<phrase var_name="time_is_invalid" added="1564714127">Time is invalid.</phrase>
+		<phrase var_name="active_getting_started" added="1564714127">Active Getting Started:</phrase>
+		<phrase var_name="no_articles" added="1564714127">No Articles.</phrase>
+		<phrase var_name="no_articles_in_this_category" added="1564714127">No articles in this categories.</phrase>
+		<phrase var_name="keyword" added="1564714127">Keywords:</phrase>
+		<phrase var_name="no_knowledge_base_categories_have_been_created" added="1564714127">No Knowledge Base Categories have been created.</phrase>
+		<phrase var_name="description" added="1564714127">Description</phrase>
+		<phrase var_name="title" added="1564714127">Title</phrase>
+		<phrase var_name="knowledge_base_categories" added="1564714127">Knowledge Base Categories</phrase>
+		<phrase var_name="number_of_articles_on_each_categories" added="1564714127">Number of Articles on each Categories:</phrase>
+		<phrase var_name="number_of_articles" added="1564714127">Number of articles:</phrase>
+		<phrase var_name="number_of_letters" added="1564714127">Number of Letters:</phrase>
+		<phrase var_name="how_many_letter_will_be_sent_in_one_time" added="1564714127">How many emails will be sent in one time.</phrase>
+		<phrase var_name="when_you_begin_to_create_a_account_it_will_send_to_you_a_private_message" added="1564714127">When user creates an account, your site will send to that user a notice message.</phrase>
+		<phrase var_name="this_message_will_be_sent_when_you_log_out_for_a_long_time" added="1564714127">When user logs out for a long time and not log in again, your site will send a notice message to that user.</phrase>
+		<phrase var_name="if_you_do_not_post_a_blog_for_a_long_time_it_will_notice_to_you" added="1564714127">If user does not post a blog for a long time, your site will send a notice message to that user.</phrase>
+		<phrase var_name="if_you_do_not_post_a_video_for_a_long_time_it_will_notice_to_you" added="1564714127">If user does not post a video for a long time, your site will send a notice message to that user.</phrase>
+		<phrase var_name="if_you_do_not_post_a_poll_for_a_long_time_it_will_notice_to_you" added="1564714127">If user does not post a poll for a long time, your site will send a notice message to that user.</phrase>
+		<phrase var_name="add_a_new_schedule_mail" added="1564714127">Add a New Email</phrase>
+		<phrase var_name="add_a_new_todo_list" added="1564714127">Add a New Todo List</phrase>
+		<phrase var_name="caterories" added="1564714127">Categories:</phrase>
+		<phrase var_name="no_articles_have_been_added_yet" added="1564714127">No articles have been added yet.</phrase>
+		<phrase var_name="define_the_limit_of_how_many_articles_can_be_displayed_on" added="1564714127">Define the limit of how many articles can be displayed on browse articles page</phrase>
+		<phrase var_name="define_the_limit_of_how_many_articles_for_each_category" added="1564714127">Define the limit of how many articles for each category.</phrase>
+		<phrase var_name="define_the_limit_of_how_many_letters_will_be_sent_in_one_time" added="1564714127">Define the limit of how many emails will be sent in one time.</phrase>
+		<phrase var_name="setting_article_limit" added="1564714127"><![CDATA[<title>Articles Limit for each Category</title><info>Define the limit of how many articles for each category.</info>]]></phrase>
+		<phrase var_name="setting_active_getting_started" added="1564714127"><![CDATA[<title>Active Getting Started</title><info>Set to True in order to enable Getting Started</info>]]></phrase>
+		<phrase var_name="setting_active_email_remainder" added="1564714127"><![CDATA[<title>Active Email Reminder</title><info>Set to True in order to enable Email Reminder.</info>]]></phrase>
+		<phrase var_name="setting_active_knowledge_base" added="1564714127"><![CDATA[<title>Active Knowledge Base</title><info>Set to True in order to enable Knowledge Base</info>]]></phrase>
+		<phrase var_name="setting_letter_limit_will_be_sent_in_one_time" added="1564714127"><![CDATA[<title>Email Limit will be sent in one time</title><info>Define the limit of how many emails will be sent in one time.</info>]]></phrase>
+		<phrase var_name="setting_articles_limit_can_be_displayed" added="1564714127"><![CDATA[<title>Articles Limit can be displayed on browse Article Page</title><info>Define the limit of how many articles can be displayed on browse articles page.</info>]]></phrase>
+		<phrase var_name="if_you_do_not_post_a_photo_for_a_long_time_it_will_notice_to_you" added="1564714127">If user does not post a photo for a long time, your site will send a notice message to that user.</phrase>
+		<phrase var_name="no_articles_have_been_created" added="1564714127">No Articles have been created.</phrase>
+		<phrase var_name="subtitle_is_not_allowed_empty" added="1564714127">Fill in a subject for your email.</phrase>
+		<phrase var_name="no_mails_have_been_created" added="1564714127">No Emails have been created.</phrase>
+		<phrase var_name="no_todo_lists_have_been_created" added="1564714127">No Todo Lists have been created.</phrase>
+		<phrase var_name="uncategorized" added="1564714127">Uncategorized</phrase>
+		<phrase var_name="no_knowledge_base_articles_have_been_created" added="1564714127">No Knowledge Base Articles have been created.</phrase>
+		<phrase var_name="gettingstarted_full_name_sent_you_a_message_subject_without_unsubscribe" added="1564714127"><![CDATA[{message}
+--------------------
+
+To reply to this message, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="gettingstarted_gettingstarted_full_name_sent_you_a_message_subject_with_unsubscribe" added="1564714127"><![CDATA[{message}
+--------------------
+
+To reply to this message, follow the link below:
+<a href="{link}">{link}</a>
+To unsubscribe this message, follow the link below:
+<a href="{unsublink}">Unsubscribe</a>]]></phrase>
+		<phrase var_name="todo_list" added="1564714127">Todo List</phrase>
+		<phrase var_name="edit_todo_list" added="1564714127">Edit Todo List</phrase>
+		<phrase var_name="todo_list_successfully_edited" added="1564714127">Todo List successfully edited</phrase>
+		<phrase var_name="todo_list_successfully_added" added="1564714127">Todo List successfully added.</phrase>
+		<phrase var_name="todo_list_successfully_deleted" added="1564714127">Todo List(s) successfully deleted.</phrase>
+		<phrase var_name="edit_knowledge_base_article" added="1564714127">Edit Knowledge Base Article</phrase>
+		<phrase var_name="edit_knowledge_base_category" added="1564714127">Edit Knowledge Base Category</phrase>
+		<phrase var_name="menu_gettingstarted_knowledge_base_fad58de7366495db4650cfefac2fcd61" added="1564714127">Knowledge Base</phrase>
+		<phrase var_name="user_setting_can_post_comment_on_article" added="1564714127">Can post comment on article?</phrase>
+		<phrase var_name="allow_users_to_unsubscribe_this_email" added="1564714127">Allow users to unsubscribe this email</phrase>
+		<phrase var_name="todo_list_successfully_edite" added="1564714127">Todo List successfully edited</phrase>
+		<phrase var_name="knowledge_base_category_is_not_allowed_empty" added="1564714127">Fill in a title for your article category.</phrase>
+		<phrase var_name="fill_in_a_title_for_your_todo_list" added="1564714127">Fill in a title for your Todo List</phrase>
+		<phrase var_name="fill_in_a_description_for_your_todo_list" added="1564714127">Fill in a description for your Todo list</phrase>
+		<phrase var_name="fill_in_a_title_for_your_knowledgebase_article" added="1564714127">Fill in a title for your knowledge base article</phrase>
+		<phrase var_name="fill_in_a_description_for_your_knowledgebase_article" added="1564714127">Fill in a description for your knowledge base article</phrase>
+		<phrase var_name="search_articles_dot" added="1564714127">Search Articles...</phrase>
+		<phrase var_name="add_email" added="1564714127">Add Email</phrase>
+		<phrase var_name="manage_articles_categories" added="1564714127">Manage Articles Categories</phrase>
+		<phrase var_name="add_articles" added="1564714127">Add Article</phrase>
+		<phrase var_name="no_articles_found" added="1564714127">No articles found.</phrase>
+		<phrase var_name="manage_articles" added="1564714127">Manage Articles</phrase>
+		<phrase var_name="add_todo_list" added="1564714127">Add Todo List</phrase>
+		<phrase var_name="manage_todo_lists" added="1564714127">Manage Todo Lists</phrase>
+		<phrase var_name="you_have_already_voted" added="1564714127">You have already voted on this item.</phrase>
+		<phrase var_name="you_cannot_rate_your_own_article" added="1564714127">You cannot rate your own article.</phrase>
+		<phrase var_name="setting_display_time_stamp" added="1564714127"><![CDATA[<title>Getting Started</title><info>Controls time stamps for articles.
+
+If using the default setting and the default template the time stamp will appear under each article title and will look similar to:
+
+Posted June 22, 2008</info>]]></phrase>
+		<phrase var_name="do_not_show_it_again" added="1564714127"><![CDATA[Don't show it again]]></phrase>
+		<phrase var_name="show_more" added="1564714127">Show More</phrase>
+		<phrase var_name="show_less" added="1564714127">Show Less</phrase>
+		<phrase var_name="latest_articles" added="1564714127">Latest Articles</phrase>
+		<phrase var_name="article_not_found" added="1564714127">The article you are looking for does not exist or has been removed.</phrase>
+		<phrase var_name="poor" added="1564714127">Poor</phrase>
+		<phrase var_name="nothing_special" added="1564714127">Nothing Special</phrase>
+		<phrase var_name="worth_watching" added="1564714127">Worth Watching</phrase>
+		<phrase var_name="pretty_cool" added="1564714127">Pretty Cool</phrase>
+		<phrase var_name="awesome" added="1564714127">Awesome</phrase>
+		<phrase var_name="knowledge_base" added="1564714127">Knowledge Base</phrase>
+		<phrase var_name="added" added="1564714127">Added:</phrase>
+		<phrase var_name="categories" added="1564714127">Categories</phrase>
+		<phrase var_name="sub_categories" added="1564714127">Sub-Categories</phrase>
+		<phrase var_name="posted_on_post_time" added="1564714127">Posted on {post_time}</phrase>
+		<phrase var_name="knowledge_base_article_successfully_added" added="1564714127">Knowledge Base Article successfully added.</phrase>
+		<phrase var_name="knowledge_base_category_successfully_added" added="1564714127">Knowledge Base Category successfully added.</phrase>
+		<phrase var_name="knowledge_base_category_name_has_existed" added="1564714127">Knowledge Base Category Name has existed.</phrase>
+		<phrase var_name="edit_knowledge_base_category_successfully" added="1564714127">Edit Knowledge Base Category successfully.</phrase>
+		<phrase var_name="knowledge_base_category_successfully_edited" added="1564714127">Knowledge Base Category successfully edited.</phrase>
+		<phrase var_name="knowledge_base_category_successfully_deleted" added="1564714127">Knowledge Base Category successfully deleted.</phrase>
+		<phrase var_name="close" added="1564714127">Close</phrase>
+		<phrase var_name="create_one_now" added="1564714127">Create one now.</phrase>
+		<phrase var_name="delete_selected" added="1564714127">Delete Selected</phrase>
+		<phrase var_name="comment_s" added="1564714127">Comment(s)</phrase>
+		<phrase var_name="total_rating_ratings" added="1564714127">{total_rating} Ratings</phrase>
+		<phrase var_name="activate" added="1564714127">Activate</phrase>
+		<phrase var_name="deactivate" added="1564714127">Deactivate</phrase>
+		<phrase var_name="any" added="1564714127">Any</phrase>
+		<phrase var_name="month" added="1564714127">month</phrase>
+		<phrase var_name="week" added="1564714127">week</phrase>
+		<phrase var_name="day" added="1564714127">day</phrase>
+		<phrase var_name="hour" added="1564714127">hour</phrase>
+		<phrase var_name="default_hour" added="1564714127">default : hour</phrase>
+		<phrase var_name="fullname" added="1564714127">full name</phrase>
+		<phrase var_name="user_name" added="1564714127">username</phrase>
+		<phrase var_name="user_name_tagged_you_in_a_article" added="1564714127">{user_name} tagged you in a article</phrase>
+		<phrase var_name="language" added="1564714127">Language</phrase>
+		<phrase var_name="admin_menu_add_article_categories" added="1564714127">Add Article Category</phrase>
+		<phrase var_name="admin_menu_manage_article_category" added="1564714127">Manage Articles Categories</phrase>
+		<phrase var_name="featured" added="1564714127">Featured</phrase>
+		<phrase var_name="unfeatured" added="1564714127">Unfeatured</phrase>
+		<phrase var_name="article_successfully_edit" added="1564714127">Knowledge Base Article successfully edited.</phrase>
+		<phrase var_name="featured_articles" added="1564714127">Featured Articles</phrase>
+		<phrase var_name="most_view" added="1564714127">Most Viewed Articles</phrase>
+		<phrase var_name="related_entries" added="1564714127">Related Entries</phrase>
+		<phrase var_name="define_the_limit_of_how_many_most_view_articles_in_block" added="1564714127">Define the limit of how many most view articles in Most_View_Articles block</phrase>
+		<phrase var_name="setting_number_of_limit_most_view_articles" added="1564714127"><![CDATA[<title>Number of limit most view articles</title><info>Set number of limit articles in Most View block</info>]]></phrase>
+		<phrase var_name="you_can_not_see_it_again" added="1564714127">You can not see it again. Thanks!</phrase>
+		<phrase var_name="previous" added="1564714127">Previous</phrase>
+		<phrase var_name="next" added="1564714127">Next</phrase>
+		<phrase var_name="done" added="1564714127">Done</phrase>
+		<phrase var_name="edit" added="1564714127">Edit</phrase>
+		<phrase var_name="posted_a_comment_on_gender_article_a_href_link_title_a" added="1564714127"><![CDATA[posted a comment on {gender} knowledge base article <a href="{link}"> {title}</a>]]></phrase>
+		<phrase var_name="posted_a_comment_on_user_name_s_article_a_href_link_title_a" added="1564714127"><![CDATA[posted a comment on {user_name}&#039;s knowledge base article "<a href="{link}">{title}</a>"]]></phrase>
+		<phrase var_name="related_articles" added="1564714127">Related Articles</phrase>
+		<phrase var_name="category" added="1564714127">Category</phrase>
+		<phrase var_name="edit_articles_categories" added="1564714127">Edit Article Category</phrase>
+		<phrase var_name="add_articles_categories" added="1564714127">Add Article Category</phrase>
+		<phrase var_name="edit_a_new_todo_list" added="1564714127">Edit a Todo List</phrase>
+		<phrase var_name="edit_article" added="1564714127">Edit Article</phrase>
+		<phrase var_name="category_does_not_exist" added="1564714127">The category does not exist or have been removed</phrase>
+		<phrase var_name="article_category_added_fail" added="1564714127">Article category added fail</phrase>
+		<phrase var_name="setting_number_of_limit_featured_articles" added="1564714127"><![CDATA[<title>Number of limit featured articles</title><info>Set number of limit articles in Featured Articles block</info>]]></phrase>
+		<phrase var_name="setting_number_of_limit_latest_articles" added="1564714127"><![CDATA[<title>Number of limit latest articles</title><info>Set number of limit articles in Latest Article block</info>]]></phrase>
+		<phrase var_name="setting_number_of_limit_related_articles" added="1564714127"><![CDATA[<title>Number of limit related articles</title><info>Set number of limit articles in Related Articles block</info>]]></phrase>
+		<phrase var_name="posted_an_article" added="1564714127">posted an article</phrase>
+		<phrase var_name="user_name_tagged_you_in_an_article" added="1564714127">{user_name} tagged you in an article</phrase>
+		<phrase var_name="error_please_provide_a_category_dot" added="1564714127">Error! Please provide a category.</phrase>
+		<phrase var_name="knowledge_base_articles_successfully_deleted" added="1564714127">Knowledge Base Articles successfully deleted.</phrase>
+		<phrase var_name="parent_category" added="1564714127">Parent Category</phrase>
+		<phrase var_name="article_category_name_is_already_exists" added="1564714127">Article category name is already exists.</phrase>
+		<phrase var_name="update_article_category_fail" added="1564714127">Update article category fail.</phrase>
+		<phrase var_name="please_input_article_category_name" added="1564714127">Please input article category name.</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1564714127">Category order successfully updated</phrase>
+		<phrase var_name="category_successfully_deleted" added="1564714127">Category successfully deleted</phrase>
+		<phrase var_name="manage_categories" added="1564714127">Manage Categories</phrase>
+		<phrase var_name="are_you_sure_this_will_delete_all_categories_that_belong_to_this_category_and_cannot_be_undone" added="1564714127">Are you sure?
+This will delete all categories that belong to this category and cannot be undone.</phrase>
+		<phrase var_name="delete" added="1564714127">Delete</phrase>
+		<phrase var_name="update_order" added="1564714127">Update Order</phrase>
+		<phrase var_name="do_not_have_any_category_in_this_language" added="1564714127">Do not have any category in this language.</phrase>
+		<phrase var_name="in" added="1564714127">in</phrase>
+		<phrase var_name="view_more" added="1564714127">View more</phrase>
+		<phrase var_name="search_more_in" added="1564714127">Search more in</phrase>
+		<phrase var_name="no_result_for_title_search" added="1564714127"><![CDATA[No result for "{title_search}".]]></phrase>
+		<phrase var_name="your_search_filter" added="1564714127"> your search filter.</phrase>
+		<phrase var_name="there_is_no_articles" added="1564714127"> There is no article.</phrase>
+		<phrase var_name="actions" added="1564714127">Actions</phrase>
+		<phrase var_name="do_not_have_todo_list_in_this_language" added="1564714127">Do not have todo list in this language.</phrase>
+		<phrase var_name="delete_all" added="1564714127">Delete all</phrase>
+		<phrase var_name="drag_to_change_order" added="1564714127">Drag to change order</phrase>
+		<phrase var_name="todo_item_has_been_deleted" added="1564714127">Todo item has been deleted.</phrase>
+		<phrase var_name="todo_list_has_been_deleted" added="1564714127">Todo list has been deleted.</phrase>
+		<phrase var_name="are_you_sure_to_delete_all_items_in_this_language" added="1564714127">Are you sure to delete all items in this language?</phrase>
+		<phrase var_name="select" added="1564714127">Select</phrase>
+		<phrase var_name="view" added="1564714127">view</phrase>
+		<phrase var_name="views" added="1564714127">views</phrase>
+		<phrase var_name="admin_menu_user_group_settings" added="1564714127">User Group Settings</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="gettingstarted" type="boolean" admin="true" user="true" guest="true" staff="true" module="gettingstarted" ordering="0">can_post_comment_on_article</setting>
+	</user_group_settings>
+</module>

@@ -1,0 +1,772 @@
+<module>
+	<data>
+		<module_id>contest</module_id>
+		<product_id>younet_contest4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:6:{s:38:"contest_admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:7:"contest";i:1;s:19:"user-group-settings";}}s:34:"contest.admin_menu_manage_category";a:1:{s:3:"url";a:2:{i:0;s:7:"contest";i:1;s:8:"category";}}s:31:"contest.admin_menu_add_category";a:1:{s:3:"url";a:3:{i:0;s:7:"contest";i:1;s:8:"category";i:2;s:3:"add";}}s:33:"contest.admin_menu_manage_contest";a:1:{s:3:"url";a:1:{i:0;s:7:"contest";}}s:41:"contest.admin_menu_manage_email_templates";a:1:{s:3:"url";a:2:{i:0;s:7:"contest";i:1;s:5:"email";}}s:38:"contest.admin_menu_manage_transactions";a:1:{s:3:"url";a:2:{i:0;s:7:"contest";i:1;s:11:"transaction";}}}]]></menu>
+		<phrase_var_name>module_contest</phrase_var_name>
+		<version>4.02p3</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/contest.png</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="contest" parent_var_name="" m_connection="main" var_name="menu_contest_contest_fad58de7366495db4650cfefac2fcd61" ordering="14" url_value="contest" version_id="3.4.0" disallow_access="" module="contest" mobile_icon="fa fa-flag-checkered" />
+		<menu module_id="contest" parent_var_name="" m_connection="contest.index" var_name="menu_contest_create_a_new_contest_671ab26927735a75b6680422c8579e66" ordering="134" url_value="contest.add" version_id="3.4.0" disallow_access="" module="contest" />
+		<menu module_id="contest" parent_var_name="" m_connection="contest.entry.index" var_name="menu_contest_create_a_new_contest_671ab26927735a75b6680422c8579e66" ordering="134" url_value="contest.add" version_id="3.4.0" disallow_access="" module="contest" />
+		<menu module_id="contest" parent_var_name="" m_connection="contest.view" var_name="menu_contest_create_a_new_contest_671ab26927735a75b6680422c8579e66" ordering="134" url_value="contest.add" version_id="3.4.0" disallow_access="" module="contest" />
+	</menus>
+	<settings>
+		<setting group="seo" module_id="contest" is_hidden="0" type="" var_name="contest_meta_keywords" phrase_var_name="setting_contest_meta_keywords" ordering="1" version_id="4.6.0"><![CDATA[{_p var='seo_contest_meta_keywords'}]]></setting>
+		<setting group="seo" module_id="contest" is_hidden="0" type="" var_name="contest_meta_description" phrase_var_name="setting_contest_meta_description" ordering="1" version_id="4.6.0"><![CDATA[{_p var='seo_contest_meta_description'}]]></setting>
+		<setting group="" module_id="contest" is_hidden="0" type="drop" var_name="contest_paging_mode" phrase_var_name="setting_paging_mode" ordering="1" version_id="4.02"><![CDATA[a:2:{s:7:"default";s:9:"next_prev";s:6:"values";a:3:{i:0;s:9:"next_prev";i:1;s:8:"loadmore";i:2;s:10:"pagination";}}]]></setting>
+		<setting group="" module_id="contest" is_hidden="0" type="drop" var_name="ending_soon_setting" phrase_var_name="setting_ending_soon_setting" ordering="1" version_id="3.5.0rc1"><![CDATA[a:2:{s:7:"default";s:14:"End of Contest";s:6:"values";a:2:{i:0;s:14:"End of Contest";i:1;s:17:"End of Submission";}}]]></setting>
+		<setting group="" module_id="contest" is_hidden="0" type="integer" var_name="ending_soon_before" phrase_var_name="setting_ending_soon_before" ordering="1" version_id="3.5.0rc1">30</setting>
+		<setting group="" module_id="contest" is_hidden="0" type="integer" var_name="number_of_contest_block_home_page" phrase_var_name="setting_number_of_contest_block_home_page" ordering="1" version_id="3.5.0rc1">3</setting>
+		<setting group="" module_id="contest" is_hidden="0" type="integer" var_name="number_of_contest_featured_block_home_page" phrase_var_name="setting_number_of_contest_featured_block_home_page" ordering="1" version_id="3.5.0rc1">5</setting>
+		<setting group="" module_id="contest" is_hidden="0" type="integer" var_name="number_of_entries_block_most_voted_most_viewed" phrase_var_name="setting_number_of_entries_block_most_voted_most_viewed" ordering="1" version_id="3.5.0">4</setting>
+		<setting group="" module_id="contest" is_hidden="0" type="boolean" var_name="contest_autorun_featured_slideshow" phrase_var_name="setting_contest_autorun_featured_slideshow" ordering="11" version_id="3.6.0">1</setting>
+		<setting group="" module_id="contest" is_hidden="0" type="integer" var_name="contest_featured_slideshow_speed" phrase_var_name="setting_contest_featured_slideshow_speed" ordering="12" version_id="3.6.0">7000</setting>
+		<setting group="" module_id="contest" is_hidden="1" type="string" var_name="contest_short_date_time_format" phrase_var_name="setting_contest_short_date_time_format" ordering="1" version_id="3.4.0">m-j, Y</setting>
+		<setting group="" module_id="contest" is_hidden="1" type="string" var_name="contest_time_stamp_announcement" phrase_var_name="setting_contest_time_stamp_announcement" ordering="1" version_id="3.4.0">F j, Y</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="contest.index" module_id="contest" component="statistic" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Statistics</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.view" module_id="contest" component="contest.participant" location="3" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title>Participant</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.index" module_id="contest" component="premium-contest" location="3" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Premium Contest</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.view" module_id="contest" component="contest.winning-entry" location="3" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Winning Entries</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.index" module_id="contest" component="top-contest" location="3" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Top Contests</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.entry.index" module_id="contest" component="popular-contest" location="3" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Popular Contests</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.index" module_id="contest" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.index" module_id="contest" component="popular-contest" location="3" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Popular Contests</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.view" module_id="contest" component="contest.contest-photo" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Contest Photo</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.entry.index" module_id="contest" component="premium-contest" location="3" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Premium Contests</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.entry.index" module_id="contest" component="top-contest" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Top Contests</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.view" module_id="contest" component="contest.duration" location="1" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Duration</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.view" module_id="contest" component="entry.most-voted" location="3" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>Most Voted</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.view" module_id="contest" component="entry.most-viewed" location="3" is_active="1" ordering="8" disallow_access="" can_move="0">
+			<title>Most Viewed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="contest.view" module_id="contest" component="contest.statistics" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Statistics</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="contest" component="statistic" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="entry.invite-friend" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="index" m_connection="contest.index" module="contest" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="contest" component="contest.profile" m_connection="contest.profile" module="contest" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="contest" component="category" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="Entry" m_connection="contest.entry.index" module="contest" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="contest" component="contest.participant" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="top-contest" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="view" m_connection="contest.view" module="contest" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="contest" component="premium-contest" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="who-vote-entry" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="contest.contest-photo" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="popular-contest" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="contest.winning-entry" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="contest.duration" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="entry.most-voted" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="entry.most-viewed" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="contest" component="contest.statistics" m_connection="" module="contest" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="admin_menu_manage_category" added="1565346434">Manage Categories</phrase>
+		<phrase var_name="module_contest" added="1565346434">Contest</phrase>
+		<phrase var_name="all_contests" added="1565346434">All Contests</phrase>
+		<phrase var_name="my_contests" added="1565346434">My Contests</phrase>
+		<phrase var_name="friends_contests" added="1565346434"><![CDATA[Friends&#039; Contests]]></phrase>
+		<phrase var_name="pending_contests" added="1565346434">Pending Contests</phrase>
+		<phrase var_name="featured_contests" added="1565346434">Featured Contests</phrase>
+		<phrase var_name="premium_contests" added="1565346434">Premium Contests</phrase>
+		<phrase var_name="ending_soon_contests" added="1565346434">Ending Soon Contests</phrase>
+		<phrase var_name="closed_contests" added="1565346434">Closed Contests</phrase>
+		<phrase var_name="my_following_contests" added="1565346434">My Following Contests</phrase>
+		<phrase var_name="my_entries" added="1565346434">My Entries</phrase>
+		<phrase var_name="pending_entries" added="1565346434">Pending Entries</phrase>
+		<phrase var_name="user_setting_can_approve_contest" added="1565346434">Can approve contests?</phrase>
+		<phrase var_name="categories" added="1565346434">Categories</phrase>
+		<phrase var_name="statistics" added="1565346434">Statistics</phrase>
+		<phrase var_name="menu_contest_contest_fad58de7366495db4650cfefac2fcd61" added="1565346434">Contests</phrase>
+		<phrase var_name="top_entries" added="1565346434">Top Entries</phrase>
+		<phrase var_name="recent_entries" added="1565346434">Recent Entries</phrase>
+		<phrase var_name="recent_winners" added="1565346434">Recent Winners</phrase>
+		<phrase var_name="submit_an_entry" added="1565346434">Submit An Entry</phrase>
+		<phrase var_name="menu_contest_create_a_new_contest_671ab26927735a75b6680422c8579e66" added="1565346434">Create a New Contest</phrase>
+		<phrase var_name="contest" added="1565346434">Contests</phrase>
+		<phrase var_name="contest_name" added="1565346434">Contest Name</phrase>
+		<phrase var_name="you_can_enter_maximum_number_characters" added="1565346434">You can enter maximum {number} characters.</phrase>
+		<phrase var_name="this_field_is_required" added="1565346434">This field is required</phrase>
+		<phrase var_name="publish" added="1565346434">Publish</phrase>
+		<phrase var_name="contest_type" added="1565346434">Contest Type</phrase>
+		<phrase var_name="blog" added="1565346434">Blog</phrase>
+		<phrase var_name="photo" added="1565346434">Photo</phrase>
+		<phrase var_name="video" added="1565346434">Video</phrase>
+		<phrase var_name="short_description" added="1565346434">Short Description</phrase>
+		<phrase var_name="please_enter_an_amount_greater_or_equal" added="1565346434">Please enter an amount greater or equal</phrase>
+		<phrase var_name="maximum_number_of_characters_for_this_field_is" added="1565346434">Maximum number of characters for this field is</phrase>
+		<phrase var_name="must_greater_than_minimum" added="1565346434">This field must be greater than minimum value</phrase>
+		<phrase var_name="main_description" added="1565346434">Main Description</phrase>
+		<phrase var_name="award" added="1565346434">Award</phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1565346434">You can upload a JPG, GIF or PNG file.</phrase>
+		<phrase var_name="the_file_size_limit_is_filesize_if_your_upload_does_not_work_try_uploading_a_smaller_picture" added="1565346434">The file size limit is {filesize}. If your upload does not work, try uploading a smaller picture.</phrase>
+		<phrase var_name="search_contests" added="1565346434">Search Contests</phrase>
+		<phrase var_name="lastest" added="1565346434">Lastest</phrase>
+		<phrase var_name="most_voted" added="1565346434">Most Voted</phrase>
+		<phrase var_name="most_viewed" added="1565346434">Most Viewed</phrase>
+		<phrase var_name="most_favorited" added="1565346434">Most Favorited</phrase>
+		<phrase var_name="most_liked" added="1565346434">Most Liked</phrase>
+		<phrase var_name="no_contest_found" added="1565346434">No Contests found!</phrase>
+		<phrase var_name="most_participants" added="1565346434">Most Participants</phrase>
+		<phrase var_name="time_separator" added="1565346434">at</phrase>
+		<phrase var_name="start_submitting_entries_on" added="1565346434">Start Submitting Entries On</phrase>
+		<phrase var_name="stop_submitting_entries_on" added="1565346434">Stop Submitting Entries On</phrase>
+		<phrase var_name="end_contest_on" added="1565346434">End Contest On</phrase>
+		<phrase var_name="set_0_for_unlimited_entries" added="1565346434">Set 0 for unlimited entries</phrase>
+		<phrase var_name="privacy" added="1565346434">Privacy</phrase>
+		<phrase var_name="control_who_can_see_this_contest" added="1565346434">Control who can see this contest</phrase>
+		<phrase var_name="comment_privacy" added="1565346434">Comment Privacy</phrase>
+		<phrase var_name="control_who_can_comment_on_this_contest" added="1565346434">Control who can comment on this contest</phrase>
+		<phrase var_name="if_you_do_not_have_any_items_link_create_here" added="1565346434"><![CDATA[If you do not have any items or want to make a new item, <a href="{link}"> create here </a>]]></phrase>
+		<phrase var_name="you_have_no_item" added="1565346434">You have no item</phrase>
+		<phrase var_name="search_entries" added="1565346434">Search Entries</phrase>
+		<phrase var_name="no_entry_found" added="1565346434">No Entries found!</phrase>
+		<phrase var_name="report_this_contest_entry" added="1565346434">Report this entry</phrase>
+		<phrase var_name="create_by" added="1565346434">Created by</phrase>
+		<phrase var_name="status" added="1565346434">Status</phrase>
+		<phrase var_name="promote_entry" added="1565346434">Promote Entry</phrase>
+		<phrase var_name="vote" added="1565346434">Vote</phrase>
+		<phrase var_name="posted_a_entry" added="1565346434">posted an entry.</phrase>
+		<phrase var_name="users_liked_gender_own_entry_title" added="1565346434"><![CDATA[{users} liked {gender} own entry "{title}"]]></phrase>
+		<phrase var_name="users_liked_your_entry_title" added="1565346434"><![CDATA[{users} liked your entry "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_entry_title" added="1565346434"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> entry "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_entry_title" added="1565346434"><![CDATA[{full_name} liked your entry "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_entry_link_title" added="1565346434"><![CDATA[{full_name} liked your entry "<a href="{link}">{title}</a>"
+To view this entry follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_commented_on_your_entry_title" added="1565346434"><![CDATA[{users} commented on your entry "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name" added="1565346434"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}&#039;s</span> entry "{title}"]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_entry_entry_title" added="1565346434"><![CDATA[<a href="{user_link}">{full_name}</a> wrote a comment on your entry "<a href="{entry_link}">{entry_title}</a>".]]></phrase>
+		<phrase var_name="posted_a_comment_on_gender_entry_a_href_link_title_a" added="1565346434"><![CDATA[posted a comment on {gender} entry <a href="{link}"> {title}</a>]]></phrase>
+		<phrase var_name="posted_a_comment_on_user_name_s_entry_a_href_link_title_a" added="1565346434"><![CDATA[posted a comment on {user_name}&#039;s entry "<a href="{link}">{title}</a>"]]></phrase>
+		<phrase var_name="votes" added="1565346434">Vote(s)</phrase>
+		<phrase var_name="approved" added="1565346434">Approved</phrase>
+		<phrase var_name="pending" added="1565346434">Pending</phrase>
+		<phrase var_name="denied" added="1565346434">Denied</phrase>
+		<phrase var_name="un_vote" added="1565346434">Un-Vote</phrase>
+		<phrase var_name="summary" added="1565346434">Summary</phrase>
+		<phrase var_name="submit_date" added="1565346434">Submit date</phrase>
+		<phrase var_name="approved_date" added="1565346434">Approved date</phrase>
+		<phrase var_name="view_s" added="1565346434">View(s)</phrase>
+		<phrase var_name="thanks_for_submitting" added="1565346434">Thanks for submitting</phrase>
+		<phrase var_name="maxium_entries_a_participant_can_submit" added="1565346434">Maximum entries a participant can submit</phrase>
+		<phrase var_name="save_as_draft" added="1565346434">Save as Draft</phrase>
+		<phrase var_name="cancel" added="1565346434">Cancel</phrase>
+		<phrase var_name="or_lower_case" added="1565346434">or</phrase>
+		<phrase var_name="editing_contest" added="1565346434">Editing Contest</phrase>
+		<phrase var_name="start_a_contest" added="1565346434">Start A Contest</phrase>
+		<phrase var_name="contests" added="1565346434">Contests</phrase>
+		<phrase var_name="please_enter_a_value_with_a_valid_extension" added="1565346434">Please enter a value with a valid extension.</phrase>
+		<phrase var_name="title" added="1565346434">Title</phrase>
+		<phrase var_name="preview" added="1565346434">Preview</phrase>
+		<phrase var_name="submit" added="1565346434">Submit</phrase>
+		<phrase var_name="entry_preview" added="1565346434">Entry Preview</phrase>
+		<phrase var_name="user_setting_max_upload_size_contest" added="1565346434"><![CDATA[Max file size for contest photos in kilobits (kb). 
+(1000 kb = 1 mb) 
+For unlimited add "0" without quotes.]]></phrase>
+		<phrase var_name="user_setting_contest_ending_soon_fee" added="1565346434">Fee For a Contest to Appear in Ending Soon List</phrase>
+		<phrase var_name="user_setting_contest_feature_fee" added="1565346434">Fee For a Contest to Appear in Featured List</phrase>
+		<phrase var_name="user_setting_contest_premium_fee" added="1565346434">Fee For a Contest to Appear in Premium List</phrase>
+		<phrase var_name="publish_contest" added="1565346434">Publish Contest</phrase>
+		<phrase var_name="publish_contest_money" added="1565346434">Publish Contest {money_text}</phrase>
+		<phrase var_name="register_service_feature_contest_money" added="1565346434">Register Service Feature Contest {money_text}</phrase>
+		<phrase var_name="register_service_ending_soon_contest_money" added="1565346434">Register Service Ending Soon Contest {money_text}</phrase>
+		<phrase var_name="register_service_premium_contest_money" added="1565346434">Register Service Premium Contest {money_text}</phrase>
+		<phrase var_name="total_fee" added="1565346434">Total Fee</phrase>
+		<phrase var_name="main_info" added="1565346434">Main Info</phrase>
+		<phrase var_name="email_and_conditions" added="1565346434">Email And Conditions</phrase>
+		<phrase var_name="invite_friends" added="1565346434">Invite Friends</phrase>
+		<phrase var_name="settings" added="1565346434">Settings</phrase>
+		<phrase var_name="view_this_contest" added="1565346434">View This Contest</phrase>
+		<phrase var_name="subject" added="1565346434">Subject</phrase>
+		<phrase var_name="thanks_participant" added="1565346434">Thanks Participant</phrase>
+		<phrase var_name="message" added="1565346434">Message</phrase>
+		<phrase var_name="terms_and_conditions" added="1565346434">Terms And Conditions</phrase>
+		<phrase var_name="save" added="1565346434">Save</phrase>
+		<phrase var_name="number_of_winning_entries" added="1565346434">Number of Winning Entries</phrase>
+		<phrase var_name="must_be_greater_or_equal_0" added="1565346434"><![CDATA[Must be >= 0]]></phrase>
+		<phrase var_name="invite_people_via_email" added="1565346434">Invite People via Email</phrase>
+		<phrase var_name="separate_multiple_emails_with_a_comma" added="1565346434">Separate Multiple Emails With a Comma</phrase>
+		<phrase var_name="send_invitations" added="1565346434">Send Invitations</phrase>
+		<phrase var_name="new_guest_list" added="1565346434">New Guest List</phrase>
+		<phrase var_name="user_setting_contest_publish_fee" added="1565346434">Fee to Publish a Contest</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1565346434">Category order successfully updated.</phrase>
+		<phrase var_name="category_successfully_deleted" added="1565346434">Category successfully deleted.</phrase>
+		<phrase var_name="manage_categories" added="1565346434">Manage Categories</phrase>
+		<phrase var_name="are_you_sure_this_will_delete_all_contests_that_belong_to_this_category_and_cannot_be_undone" added="1565346434">Are you sure? This will delete all contests that belong to this category and cannot be undone.</phrase>
+		<phrase var_name="select_a_sub_category" added="1565346434">Select a Sub-Category</phrase>
+		<phrase var_name="select" added="1565346434">Select</phrase>
+		<phrase var_name="admin_menu_add_category" added="1565346434">Add Category</phrase>
+		<phrase var_name="category_successfully_updated" added="1565346434">Category successfully updated</phrase>
+		<phrase var_name="category_successfully_added" added="1565346434">Category successfully added</phrase>
+		<phrase var_name="edit_a_category" added="1565346434">Edit a Category</phrase>
+		<phrase var_name="create_a_new_category" added="1565346434">Create a New Category</phrase>
+		<phrase var_name="edit" added="1565346434">Edit</phrase>
+		<phrase var_name="delete" added="1565346434">Delete</phrase>
+		<phrase var_name="update_order" added="1565346434">Update Order</phrase>
+		<phrase var_name="contest_category_detail" added="1565346434">Contest Category Detail</phrase>
+		<phrase var_name="parent_category" added="1565346434">Parent Category</phrase>
+		<phrase var_name="parent_category_and_child_is_the_same" added="1565346434">Parent category and child category are the same. Please choose another parent category.</phrase>
+		<phrase var_name="select_form_select" added="1565346434">Select</phrase>
+		<phrase var_name="admin_menu_manage_contest" added="1565346434">Manage Contests</phrase>
+		<phrase var_name="contest_successfully_approved" added="1565346434">Contest successfully approved</phrase>
+		<phrase var_name="contest_successfully_deleted" added="1565346434">Contest successfully deleted</phrase>
+		<phrase var_name="end_date" added="1565346434">End Date</phrase>
+		<phrase var_name="any" added="1565346434">Any</phrase>
+		<phrase var_name="manage_contests" added="1565346434">Manage Contests</phrase>
+		<phrase var_name="who_voted_this_entry" added="1565346434">Who voted this entry</phrase>
+		<phrase var_name="next" added="1565346434">Next</phrase>
+		<phrase var_name="start" added="1565346434">Start</phrase>
+		<phrase var_name="end" added="1565346434">End</phrase>
+		<phrase var_name="entries" added="1565346434">Entries</phrase>
+		<phrase var_name="search_filter" added="1565346434">Search Filter</phrase>
+		<phrase var_name="search_for_text" added="1565346434">Search For Text</phrase>
+		<phrase var_name="search_for_user" added="1565346434">Search For User</phrase>
+		<phrase var_name="featured" added="1565346434">Featured</phrase>
+		<phrase var_name="page" added="1565346434">Page</phrase>
+		<phrase var_name="display" added="1565346434">Display</phrase>
+		<phrase var_name="sort" added="1565346434">Sort</phrase>
+		<phrase var_name="reset" added="1565346434">Reset</phrase>
+		<phrase var_name="created_user" added="1565346434">Created User</phrase>
+		<phrase var_name="manage" added="1565346434">Manage</phrase>
+		<phrase var_name="draft" added="1565346434">Draft</phrase>
+		<phrase var_name="on_going" added="1565346434">On Going</phrase>
+		<phrase var_name="premium" added="1565346434">Premium</phrase>
+		<phrase var_name="ending_soon" added="1565346434">Ending Soon</phrase>
+		<phrase var_name="setting_contest_short_date_time_format" added="1565346434"><![CDATA[<title>Short Date Time Format</title><info>Short Date Time Format</info>]]></phrase>
+		<phrase var_name="total" added="1565346434">Total</phrase>
+		<phrase var_name="results" added="1565346434">Results</phrase>
+		<phrase var_name="view" added="1565346434">View</phrase>
+		<phrase var_name="admin_menu_manage_email_templates" added="1565346434">Manage Email Templates</phrase>
+		<phrase var_name="admin_menu_manage_transactions" added="1565346434">Manage Transactions</phrase>
+		<phrase var_name="manage_email_templates" added="1565346434">Manage Email Templates</phrase>
+		<phrase var_name="email_templates" added="1565346434">Email Templates</phrase>
+		<phrase var_name="email_templates_types" added="1565346434">Email Template Types</phrase>
+		<phrase var_name="content" added="1565346434">Content</phrase>
+		<phrase var_name="keyword_substitutions" added="1565346434">Keyword Substitutions</phrase>
+		<phrase var_name="save_now" added="1565346434">Save Now</phrase>
+		<phrase var_name="email_template_create_contest_successfully" added="1565346434">Create Contest Successfully (Send to Owner)</phrase>
+		<phrase var_name="email_template_thanks_participant" added="1565346434">Thanks Participant (Send to Participants when joining a contest)</phrase>
+		<phrase var_name="email_template_thanks_for_submitting_entry" added="1565346434">Thanks for Submitting Entry (Send to participant who submitting entry)</phrase>
+		<phrase var_name="email_template_contest_closed" added="1565346434">Contest Closed (Send To Owner)</phrase>
+		<phrase var_name="email_template_contest_approved" added="1565346434">Contest Approved (Send to Owner)</phrase>
+		<phrase var_name="email_template_contest_denied" added="1565346434">Contest Denied (Send to Owner)</phrase>
+		<phrase var_name="email_template_invite_friend_letter" added="1565346434">Invite Friend Letter</phrase>
+		<phrase var_name="manage_transactions" added="1565346434">Manage Transactions</phrase>
+		<phrase var_name="service_type" added="1565346434">Service Type</phrase>
+		<phrase var_name="registered_date" added="1565346434">Registered Date</phrase>
+		<phrase var_name="fee" added="1565346434">Fee</phrase>
+		<phrase var_name="note" added="1565346434">Note</phrase>
+		<phrase var_name="feature" added="1565346434">Feature</phrase>
+		<phrase var_name="category" added="1565346434">Category</phrase>
+		<phrase var_name="provide_a_category_this_contest_will_belong_to" added="1565346434">Provide a category this contest will belong to</phrase>
+		<phrase var_name="participant" added="1565346434">Participant</phrase>
+		<phrase var_name="winning_entries" added="1565346434">Winning Entries</phrase>
+		<phrase var_name="participants" added="1565346434">Participants</phrase>
+		<phrase var_name="views" added="1565346434">Views</phrase>
+		<phrase var_name="likes" added="1565346434">Likes</phrase>
+		<phrase var_name="currently_there_is_not_any_winning_entries" added="1565346434"><![CDATA[Currently there is not any winning entries. <a href="{link}">Update here</a>]]></phrase>
+		<phrase var_name="stop_time_must_be_greater_than_current_time" added="1565346434">Stop time must be greater than current time</phrase>
+		<phrase var_name="stop_time_must_be_greater_than_start_time" added="1565346434">Stop time must be greater than start time</phrase>
+		<phrase var_name="end_time_must_be_graeter_or_equal_stop_time" added="1565346434">End time must be greater or equal stop time</phrase>
+		<phrase var_name="please_wait_for_redirecting_to_paypal" added="1565346434">Please wait for redirecting to Paypal</phrase>
+		<phrase var_name="request_a_service" added="1565346434">Request a Service</phrase>
+		<phrase var_name="you_are_not_required_to_pay_any_fee_to_publish_this_contest" added="1565346434">You are not required to pay any fee to publish this contest</phrase>
+		<phrase var_name="contest_successfully_updated" added="1565346434">Contest successfully updated</phrase>
+		<phrase var_name="contest_successfully_published" added="1565346434">Contest successfully published</phrase>
+		<phrase var_name="user_setting_approve_contests" added="1565346434">Approve contest before they are publicly displayed?</phrase>
+		<phrase var_name="email_and_conditions_successfully_updated" added="1565346434">Email and conditions successfully updated</phrase>
+		<phrase var_name="you_can_not_delete_this_category_because_there_are_many_items_related_to_it" added="1565346434">You can not delete this category because there are many items related to it</phrase>
+		<phrase var_name="friend_invitations_successfully_sent" added="1565346434">Friend invitations successfully sent</phrase>
+		<phrase var_name="setting_successfully_updated" added="1565346434">Settings successfully updated</phrase>
+		<phrase var_name="add_a_personal_message" added="1565346434">Add a personal message</phrase>
+		<phrase var_name="fill_headline_for_announcement" added="1565346434">Fill in a headline for your announcement</phrase>
+		<phrase var_name="add_content_to_announcement" added="1565346434">Add content to Announcement</phrase>
+		<phrase var_name="news_headline" added="1565346434">News Headline</phrase>
+		<phrase var_name="link" added="1565346434">Link</phrase>
+		<phrase var_name="example_http_www_yourwebsite_com" added="1565346434">Example: http://www.yourwebsite.com/</phrase>
+		<phrase var_name="required_fields" added="1565346434">Required Fields</phrase>
+		<phrase var_name="post" added="1565346434">Post</phrase>
+		<phrase var_name="announcement" added="1565346434">Announcement</phrase>
+		<phrase var_name="premium_contest" added="1565346434">Premium Contests</phrase>
+		<phrase var_name="top_contests" added="1565346434">Top Contests</phrase>
+		<phrase var_name="popular_contests" added="1565346434">Popular Contests</phrase>
+		<phrase var_name="statistic" added="1565346434">Statistic</phrase>
+		<phrase var_name="blog_contest" added="1565346434">Blog Contest</phrase>
+		<phrase var_name="video_contest" added="1565346434">Video Contest</phrase>
+		<phrase var_name="photo_contest" added="1565346434">Photo Contest</phrase>
+		<phrase var_name="created_by" added="1565346434">Created by</phrase>
+		<phrase var_name="expired" added="1565346434">Expired</phrase>
+		<phrase var_name="recent_contests" added="1565346434">Recent Contests</phrase>
+		<phrase var_name="search_items" added="1565346434">Search Items</phrase>
+		<phrase var_name="action" added="1565346434">Action</phrase>
+		<phrase var_name="actions" added="1565346434">Actions</phrase>
+		<phrase var_name="user_setting_can_feature_contest" added="1565346434">Can feature a contest?</phrase>
+		<phrase var_name="un_feature_this_contest" added="1565346434">Un-Feature This Contest</phrase>
+		<phrase var_name="un_feature" added="1565346434">Un-Feature</phrase>
+		<phrase var_name="feature_this_contest" added="1565346434">Feature This Contest</phrase>
+		<phrase var_name="un_premium_this_contest" added="1565346434">Un-Premium This Contest</phrase>
+		<phrase var_name="un_premium" added="1565346434">Un-Premium</phrase>
+		<phrase var_name="premium_this_contest" added="1565346434">Premium This Contest</phrase>
+		<phrase var_name="un_ending_soon_this_contest" added="1565346434">Un-Ending-Soon This Contest</phrase>
+		<phrase var_name="un_ending_soon" added="1565346434">Un-Ending-Soon</phrase>
+		<phrase var_name="ending_soon_this_contest" added="1565346434">Ending-Soon This Contest</phrase>
+		<phrase var_name="user_setting_can_premium_contest" added="1565346434">Can Premium Contest?</phrase>
+		<phrase var_name="user_setting_can_ending_soon_contest" added="1565346434">Can Ending Soon Contest?</phrase>
+		<phrase var_name="user_setting_can_close_contest_added_by_other_users" added="1565346434">Can close contest added by other users?</phrase>
+		<phrase var_name="user_setting_can_close_own_contest" added="1565346434">Can close their own contest?</phrase>
+		<phrase var_name="close_this_contest" added="1565346434">Close This Contest</phrase>
+		<phrase var_name="are_you_sure_info" added="1565346434">Are you sure?</phrase>
+		<phrase var_name="close" added="1565346434">Close</phrase>
+		<phrase var_name="delete_this_contest" added="1565346434">Delete This Contest</phrase>
+		<phrase var_name="publish_this_contest" added="1565346434">Publish This Contest</phrase>
+		<phrase var_name="register_services" added="1565346434">Register Services</phrase>
+		<phrase var_name="invite" added="1565346434">Invite</phrase>
+		<phrase var_name="follow" added="1565346434">Follow</phrase>
+		<phrase var_name="favourite" added="1565346434">Favourite</phrase>
+		<phrase var_name="leave" added="1565346434">Leave</phrase>
+		<phrase var_name="promote" added="1565346434">Promote</phrase>
+		<phrase var_name="contest_owner" added="1565346434">Contest Owner</phrase>
+		<phrase var_name="description" added="1565346434">Description</phrase>
+		<phrase var_name="wining_entries" added="1565346434">Winning Entries</phrase>
+		<phrase var_name="by" added="1565346434">By</phrase>
+		<phrase var_name="price" added="1565346434">Price</phrase>
+		<phrase var_name="prize" added="1565346434">Prize</phrase>
+		<phrase var_name="like" added="1565346434">Like</phrase>
+		<phrase var_name="featured_contest" added="1565346434">Featured Contest</phrase>
+		<phrase var_name="upcoming" added="1565346434">Upcoming</phrase>
+		<phrase var_name="keywordsub_contest_name" added="1565346434">Contest Title</phrase>
+		<phrase var_name="keywordsub_contest_url" added="1565346434">Contest URL</phrase>
+		<phrase var_name="keywordsub_short_description" added="1565346434">Contest Short Description</phrase>
+		<phrase var_name="keywordsub_description" added="1565346434">Contest Description</phrase>
+		<phrase var_name="keywordsub_start_time" added="1565346434">Start Time</phrase>
+		<phrase var_name="keywordsub_end_time" added="1565346434">End Time</phrase>
+		<phrase var_name="keywordsub_stop_time" added="1565346434">Stop Time</phrase>
+		<phrase var_name="keywordsub_owner_name" added="1565346434">Contest Owner Name</phrase>
+		<phrase var_name="keywordsub_inviter_name" added="1565346434">Name Of Inviter</phrase>
+		<phrase var_name="keywordsub_site_name" added="1565346434">Name Of This Site</phrase>
+		<phrase var_name="keywordsub_award" added="1565346434">Award</phrase>
+		<phrase var_name="full_name_invited_you_to_the_title" added="1565346434"><![CDATA[{full_name} invited you to "{title}".
+
+To check out this contest, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_invited_you_to_the_contest_title" added="1565346434"><![CDATA[{full_name} invited you to the contest "{title}".]]></phrase>
+		<phrase var_name="users_invited_you_to_the_contest_title" added="1565346434"><![CDATA[{users} invited you to the contest "{title}"]]></phrase>
+		<phrase var_name="joined" added="1565346434">Joined</phrase>
+		<phrase var_name="invited" added="1565346434">Invited</phrase>
+		<phrase var_name="join" added="1565346434">Join</phrase>
+		<phrase var_name="join_this_contest" added="1565346434">Join This Contest</phrase>
+		<phrase var_name="leave_this_contest" added="1565346434">Leave This Contest</phrase>
+		<phrase var_name="joined_contest_successfully" added="1565346434">Joined Contest Successfully</phrase>
+		<phrase var_name="left_contest_successfully" added="1565346434">Left Contest Successfully</phrase>
+		<phrase var_name="i_agree" added="1565346434">I agree</phrase>
+		<phrase var_name="you_must_agree_with_terms_and_conditions_to_join_this_contest" added="1565346434">You must agree with terms and conditions to join this contest.</phrase>
+		<phrase var_name="invitation_successfully_sent" added="1565346434">Invitations Successfully Sent</phrase>
+		<phrase var_name="you_can_not_perform_this_action" added="1565346434">You can not perform this action!</phrase>
+		<phrase var_name="select_all" added="1565346434">Select All</phrase>
+		<phrase var_name="un_select_all" added="1565346434">Un-Select All</phrase>
+		<phrase var_name="follow_this_contest" added="1565346434">Follow This Contest</phrase>
+		<phrase var_name="previous" added="1565346434">Previous</phrase>
+		<phrase var_name="previous_entry" added="1565346434">Previous Entry</phrase>
+		<phrase var_name="next_entry" added="1565346434">Next Entry</phrase>
+		<phrase var_name="un_follow_this_contest" added="1565346434">Un-Follow This Contest</phrase>
+		<phrase var_name="un_follow" added="1565346434">Un-Follow</phrase>
+		<phrase var_name="contest_is_successfully_followed" added="1565346434">Contest is successfully followed</phrase>
+		<phrase var_name="contest_is_successfully_un_followed" added="1565346434">Contest is successfully un-followed</phrase>
+		<phrase var_name="favorite_this_contest" added="1565346434">Favorite This Contest</phrase>
+		<phrase var_name="favorite" added="1565346434">Favorite</phrase>
+		<phrase var_name="un_favorite_this_contest" added="1565346434">Un-Favorite This Contest</phrase>
+		<phrase var_name="un_favorite" added="1565346434">Un-Favorite</phrase>
+		<phrase var_name="contest_is_successfully_favorited" added="1565346434">Contest is successfully favorited</phrase>
+		<phrase var_name="contest_is_successfully_un_favorited" added="1565346434">Contest is successfully un-favorited</phrase>
+		<phrase var_name="closed_contest_successfully" added="1565346434">Closed contest successfully</phrase>
+		<phrase var_name="add" added="1565346434">Add</phrase>
+		<phrase var_name="moderate" added="1565346434">Moderate</phrase>
+		<phrase var_name="approve" added="1565346434">Approve</phrase>
+		<phrase var_name="set_as_winning_entries" added="1565346434">Set as Winning Entries</phrase>
+		<phrase var_name="deny" added="1565346434">Deny</phrase>
+		<phrase var_name="contest_s_successfully_approved" added="1565346434">Contests successfully approved</phrase>
+		<phrase var_name="contest_s_successfully_denied" added="1565346434">Contests successfully denied</phrase>
+		<phrase var_name="entries_successfully_set_as_winning" added="1565346434">Entries successfully set as winnng</phrase>
+		<phrase var_name="entries_successfully_approved" added="1565346434">Entries successfully approved</phrase>
+		<phrase var_name="entries_successfully_denied" added="1565346434">Entries successfully denied</phrase>
+		<phrase var_name="promote_contest" added="1565346434">Promote Contest</phrase>
+		<phrase var_name="or_choose_from_existing_photos_below" added="1565346434">Or choose from existing items below</phrase>
+		<phrase var_name="please_select_an_item" added="1565346434">Please select an item!</phrase>
+		<phrase var_name="title_and_summary_are_required" added="1565346434">Title and summary are required</phrase>
+		<phrase var_name="user_setting_add_new_contest" added="1565346434">Can add a new contest?</phrase>
+		<phrase var_name="invalid_permission" added="1565346434">Invalid Permission</phrase>
+		<phrase var_name="user_setting_edit_own_contest" added="1565346434">Can edit their own contest?</phrase>
+		<phrase var_name="user_setting_edit_user_contest" added="1565346434">Can edit contest added by other users?</phrase>
+		<phrase var_name="setting_admin_paypal_email" added="1565346434"><![CDATA[<title>Paypal Email</title><info>Email represents for Admin Paypal Account</info>]]></phrase>
+		<phrase var_name="currency_is_not_supported" added="1565346434">Currency {currency} is not supported by Paypal, please contact admin for more detail.</phrase>
+		<phrase var_name="admin_no_fill_paypal_email" added="1565346434">Transaction can not be processed because Admin has not provided Paypal account. Please contact Admin for more detail.</phrase>
+		<phrase var_name="approve_this_contest" added="1565346434">Approve this contest</phrase>
+		<phrase var_name="deny_this_contest" added="1565346434">Deny this contest</phrase>
+		<phrase var_name="contest_successfully_denied" added="1565346434">Contest successfully denied</phrase>
+		<phrase var_name="this_contest_is_pending_an_admins_approval" added="1565346434">Contest is pending approval.</phrase>
+		<phrase var_name="this_contest_was_denied" added="1565346434">This contest was denied</phrase>
+		<phrase var_name="rand" added="1565346434">Rand</phrase>
+		<phrase var_name="ok" added="1565346434">OK</phrase>
+		<phrase var_name="keywordsub_participant_name" added="1565346434">Name of Participant</phrase>
+		<phrase var_name="email_template_entry_denied" added="1565346434">Entry Denied</phrase>
+		<phrase var_name="keywordsub_entry_owner_name" added="1565346434">Name of Entry Owner</phrase>
+		<phrase var_name="posted_a_contest" added="1565346434">posted a contest</phrase>
+		<phrase var_name="contest_successfully_featured" added="1565346434">Contest successfully featured</phrase>
+		<phrase var_name="contest_successfully_ending_sooned" added="1565346434">Contest successfully ending sooned</phrase>
+		<phrase var_name="contest_successfully_premiumed" added="1565346434">Contest successfully premiumed</phrase>
+		<phrase var_name="contest_successfully_premium" added="1565346434">Contest successfully premium</phrase>
+		<phrase var_name="contest_successfully_ending_soon" added="1565346434">Contest successfully ending soon</phrase>
+		<phrase var_name="user_setting_points_contest" added="1565346434">Specify how many points the user will receive when adding a new contest.</phrase>
+		<phrase var_name="more_at" added="1565346434">More at</phrase>
+		<phrase var_name="m" added="1565346434">m</phrase>
+		<phrase var_name="w" added="1565346434">w</phrase>
+		<phrase var_name="h" added="1565346434">h</phrase>
+		<phrase var_name="left" added="1565346434">left</phrase>
+		<phrase var_name="d" added="1565346434">d</phrase>
+		<phrase var_name="view_more" added="1565346434">View more</phrase>
+		<phrase var_name="all_types" added="1565346434">All Types</phrase>
+		<phrase var_name="full_name_commented_on_your_entry_title" added="1565346434"><![CDATA[{full_name} commented on your entry "{title}".]]></phrase>
+		<phrase var_name="full_name_commented_on_your_entry_message" added="1565346434"><![CDATA[{full_name} commented on your entry "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_gender_entry" added="1565346434">{full_name} commented on {gender} entry.</phrase>
+		<phrase var_name="full_name_commented_on_gender_entry_message" added="1565346434"><![CDATA[{full_name} commented on {gender} entry "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_entry_full_name_s_entry" added="1565346434"><![CDATA[{full_name} commented on {entry_full_name}&#039;s entry.]]></phrase>
+		<phrase var_name="full_name_commented_on_entry_full_name_s_entry_message" added="1565346434"><![CDATA[{full_name} commented on {entry_full_name}&#039;s entry "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_voted_on_your_entry_title" added="1565346434"><![CDATA[{full_name} voted on your entry "{title}".]]></phrase>
+		<phrase var_name="full_name_voted_on_your_entry_message" added="1565346434"><![CDATA[{full_name} voted on your entry "<a href="{link}">{title}</a>".
+To see the vote thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_voted_on_gender_entry" added="1565346434">{full_name} voted on {gender} entry.</phrase>
+		<phrase var_name="full_name_voted_on_gender_entry_message" added="1565346434"><![CDATA[{full_name} voted on {gender} entry "<a href="{link}">{title}</a>".
+To see the vote thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_voted_on_entry_full_name_s_entry" added="1565346434"><![CDATA[{full_name} voted on {entry_full_name}&#039;s entry.]]></phrase>
+		<phrase var_name="full_name_voted_full_name_s_entr_on_entryy_message" added="1565346434"><![CDATA[{full_name} voted on {entry_full_name}&#039;s entry "<a href="{link}">{title}</a>".
+To see the vote thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_voted_gender_own_entry_title" added="1565346434"><![CDATA[{users} voted {gender} own entry "{title}"]]></phrase>
+		<phrase var_name="users_voted_your_entry_title" added="1565346434"><![CDATA[{users} voted your entry "{title}"]]></phrase>
+		<phrase var_name="users_voted_span_class_drop_data_user_row_full_name_s_span_entry_title" added="1565346434"><![CDATA[{users} voted <span class="drop_data_user">{row_full_name}&#039;s</span> entry "{title}"]]></phrase>
+		<phrase var_name="created_on" added="1565346434">Created on</phrase>
+		<phrase var_name="no_participant_found" added="1565346434">No participant found!</phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_contest_contest_title" added="1565346434"><![CDATA[<a href="{user_link}">{full_name}</a> wrote a comment on your contest "<a href="{contest_link}">{contest_title}</a>".]]></phrase>
+		<phrase var_name="users_commented_on_gender_entry_title" added="1565346434"><![CDATA[{users} commented on {gender} entry "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_gender_contest_title" added="1565346434"><![CDATA[{users} commented on {gender} contest "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_your_contest_title" added="1565346434"><![CDATA[{users} commented on your contest "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name_contest" added="1565346434"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}&#039;s</span> contest "{title}"]]></phrase>
+		<phrase var_name="full_name_commented_on_your_contest_title" added="1565346434"><![CDATA[{full_name} commented on your contest "{title}".]]></phrase>
+		<phrase var_name="full_name_commented_on_your_contest_message" added="1565346434"><![CDATA[{full_name} commented on your contest "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_gender_contest" added="1565346434">{full_name} commented on {gender} contest.</phrase>
+		<phrase var_name="full_name_commented_on_gender_contest_message" added="1565346434"><![CDATA[{full_name} commented on {gender} contest "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_contest_full_name_s_contest" added="1565346434"><![CDATA[{full_name} commented on {contest_full_name}&#039;s contest.]]></phrase>
+		<phrase var_name="full_name_commented_on_contest_full_name_s_contest_message" added="1565346434"><![CDATA[{full_name} commented on {contest_full_name}&#039;s contest "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_liked_gender_own_contest_title" added="1565346434"><![CDATA[{users} liked {gender} own contest "{title}"]]></phrase>
+		<phrase var_name="users_liked_your_contest_title" added="1565346434"><![CDATA[{users} liked your contest "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_contest_title" added="1565346434"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> contest "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_contest_title" added="1565346434"><![CDATA[{full_name} liked your contest "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_contest_link_title" added="1565346434"><![CDATA[{full_name} liked your contest "<a href="{link}">{title}</a>"
+To view this contest follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="set_entries_automatically_approved" added="1565346434">Set entries automatically approved</phrase>
+		<phrase var_name="invite_friends_to_view_this_campaign" added="1565346434">Invite Friends to View This Entry</phrase>
+		<phrase var_name="email_template_invite_friend_view_entry_letter" added="1565346434">Invite Friends to view entry</phrase>
+		<phrase var_name="keywordsub_entry_name" added="1565346434">Entry Name</phrase>
+		<phrase var_name="entry_url" added="1565346434">Entry URL</phrase>
+		<phrase var_name="keywordsub_entry_url" added="1565346434">Entry URL</phrase>
+		<phrase var_name="you_vote_successfully" added="1565346434">Voted successfully</phrase>
+		<phrase var_name="you_un_vote_successfully" added="1565346434">Un-Voted successfully</phrase>
+		<phrase var_name="approve_entries_successfully" added="1565346434">Entries successfully approved</phrase>
+		<phrase var_name="deny_entries_successfully" added="1565346434">Entries successfully denied</phrase>
+		<phrase var_name="set_winning_entries_successfully" added="1565346434">Set winning entries successfully</phrase>
+		<phrase var_name="delete_winning_entries_successfully" added="1565346434">Winning entries successfully deleted</phrase>
+		<phrase var_name="you_have_reached_limit_for_this_contest" added="1565346434"><![CDATA[You have reached limit for this contest, If you want to remove old winners and choose again, please click at <a href="{link}">here</a>.]]></phrase>
+		<phrase var_name="contest_not_start" added="1565346434">It is {count_down_time} until this contest starts. Currently you cannot submit entry into this contest. Please join it first.</phrase>
+		<phrase var_name="s" added="1565346434">s</phrase>
+		<phrase var_name="contest_stop_warning" added="1565346434">This contest is end of submitting entry, you cannot submit entry into this contest.</phrase>
+		<phrase var_name="contest_title_has_been_close_link" added="1565346434"><![CDATA[Contest "{title}" has been closed.
+{link}]]></phrase>
+		<phrase var_name="full_name_joined_contest_title_link" added="1565346434"><![CDATA[{full_name} joined contest "{title}".
+{link}]]></phrase>
+		<phrase var_name="users_joined_your_contest_title" added="1565346434"><![CDATA[{users} joined your contest "{title}"]]></phrase>
+		<phrase var_name="your_contest_title_has_been_approved" added="1565346434"><![CDATA[Your contest "{title}" has been approved]]></phrase>
+		<phrase var_name="your_contest_title_has_been_denied" added="1565346434"><![CDATA[Your contest "{title}" has been denied]]></phrase>
+		<phrase var_name="your_entry_title_in_contest_title_has_been_approved" added="1565346434"><![CDATA[Your entry "{title}" in contest "{contest_title}" has been approved]]></phrase>
+		<phrase var_name="your_entry_title_in_contest_title_has_been_denied" added="1565346434"><![CDATA[Your entry "{title}" in contest "{contest_title}" has been denied]]></phrase>
+		<phrase var_name="users_left_your_contest_title" added="1565346434"><![CDATA[{users} left your contest "{title}"]]></phrase>
+		<phrase var_name="users_favorited_your_contest_title" added="1565346434"><![CDATA[{users} favorited your contest "{title}"]]></phrase>
+		<phrase var_name="user_submitted_an_entry_title" added="1565346434"><![CDATA[{users} submitted an entry "{title}"]]></phrase>
+		<phrase var_name="full_name_submitted_an_entry_title_link" added="1565346434"><![CDATA[{full_name} submitted an entry "{title}".
+{link}]]></phrase>
+		<phrase var_name="your_contest_title_has_been_featured_link" added="1565346434"><![CDATA[Your contest "{title}" has been featured
+{link}]]></phrase>
+		<phrase var_name="your_contest_title_has_been_premiumed_link" added="1565346434"><![CDATA[Your contest "{title}" has been premiumed
+{link}]]></phrase>
+		<phrase var_name="your_contest_title_has_been_set_ending_soon_link" added="1565346434"><![CDATA[Your contest "{title}" has been set ending-soon
+{link}
+
+It will be marked and displayed as Ending Soon contest {num_of_day} days before {criteria}.]]></phrase>
+		<phrase var_name="user_setting_can_publish_contest" added="1565346434">Can publish a contest immediately?</phrase>
+		<phrase var_name="request" added="1565346434">Request</phrase>
+		<phrase var_name="you_do_not_need_to_pay_for_publishing_this_contest" added="1565346434">You do not need to pay for publishing this contest</phrase>
+		<phrase var_name="email_template_inform_winning_entries" added="1565346434">Inform winning entries (sent to participants, followers)</phrase>
+		<phrase var_name="contest_title_has_chosen_winners" added="1565346434"><![CDATA[Contest "{title}" has chosen winners.]]></phrase>
+		<phrase var_name="user_setting_can_delete_own_contest" added="1565346434">Can delete their own contest?</phrase>
+		<phrase var_name="user_setting_can_delete_other_contests" added="1565346434">Can delete contests added by others?</phrase>
+		<phrase var_name="user_setting_view_contests" added="1565346434">Can browse and view contest module?</phrase>
+		<phrase var_name="closed" added="1565346434">Closed</phrase>
+		<phrase var_name="no_contests_found" added="1565346434">No Contests Found</phrase>
+		<phrase var_name="contest_successfully_un_featured" added="1565346434">Contest successfully un-featured</phrase>
+		<phrase var_name="contest_successfully_un_premium" added="1565346434">Contest successfully un-premium</phrase>
+		<phrase var_name="contest_successfully_un_ending_soon" added="1565346434">Contest successfully un-ending-soon</phrase>
+		<phrase var_name="success" added="1565346434">Success</phrase>
+		<phrase var_name="initialized" added="1565346434">Initialized</phrase>
+		<phrase var_name="user_setting_can_join_contest" added="1565346434">Can join a contest?</phrase>
+		<phrase var_name="user_setting_can_submit_entry_for_contest" added="1565346434">Can submit entry for a contest?</phrase>
+		<phrase var_name="user_setting_can_vote_entry" added="1565346434">Can vote entry?</phrase>
+		<phrase var_name="contest_pending" added="1565346434">Your contest is pending approval so you cannot edit it at this time.</phrase>
+		<phrase var_name="no_announcement_found" added="1565346434">No Announcement found!</phrase>
+		<phrase var_name="user_setting_max_upload_image_size_contest" added="1565346434"><![CDATA[Max file size for contest photos in kilobits (kb). 
+(1000 kb = 1 mb) 
+For unlimited add "0" without quotes.]]></phrase>
+		<phrase var_name="invalid_image" added="1565346434">Contest image is invalid. Please read the requirement carefully and upload another image.</phrase>
+		<phrase var_name="setting_number_of_contest_block_home_page" added="1565346434"><![CDATA[<title>Number of Contests on Premium Contests, Top Contests, Popular Contests Block</title><info>Number of Contests on Premium Contests, Top Contests, Popular Contests Block</info>]]></phrase>
+		<phrase var_name="setting_number_of_contest_featured_block_home_page" added="1565346434"><![CDATA[<title>Number of Contests on Featured Contest Slideshow</title><info>Number of Contests on Featured Contest Slideshow</info>]]></phrase>
+		<phrase var_name="setting_ending_soon_setting" added="1565346434"><![CDATA[<title>Ending Soon Settings</title><info>Ending Soon Settings</info>]]></phrase>
+		<phrase var_name="setting_ending_soon_before" added="1565346434"><![CDATA[<title>Ending Soon before (days)</title><info>This value is applied for Ending Soon Settings</info>]]></phrase>
+		<phrase var_name="end_of_contest" added="1565346434">End of Contest</phrase>
+		<phrase var_name="end_of_submitting_entry" added="1565346434">End of Submitting Entry</phrase>
+		<phrase var_name="this_contest_is_closed" added="1565346434">This contest is closed</phrase>
+		<phrase var_name="setting_contest_time_stamp_announcement" added="1565346434"><![CDATA[<title>Date time format for announcement</title><info>Date time format for announcement</info>]]></phrase>
+		<phrase var_name="posted_an_entry_in_contest_title" added="1565346434"><![CDATA[posted an entry in contest <a href="{link}"> "{title}" </a>]]></phrase>
+		<phrase var_name="warning_before_publishing" added="1565346434">Note! When the contest is published, you can NOT edit any information. You should choose Save As A Draft to make sure that all other information and settings in all tabs are correct before publishing.</phrase>
+		<phrase var_name="view_winning_entries" added="1565346434">View Winning Entries</phrase>
+		<phrase var_name="deny_date" added="1565346434">Deny Date</phrase>
+		<phrase var_name="set_as_winning_entry" added="1565346434">Set as Winning Entry</phrase>
+		<phrase var_name="end_of_submission" added="1565346434">End of Submission</phrase>
+		<phrase var_name="rank" added="1565346434">Rank</phrase>
+		<phrase var_name="loading" added="1565346434">Loading</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_announcement" added="1565346434">Are you sure you want to delete this announcement?</phrase>
+		<phrase var_name="update" added="1565346434">Update</phrase>
+		<phrase var_name="announcement_added_successfully" added="1565346434">Announcement successfully added</phrase>
+		<phrase var_name="announcement_successfully_updated" added="1565346434">Announcement successfully updated</phrase>
+		<phrase var_name="announcement_successfully_deleted" added="1565346434">Announcement successfully deleted</phrase>
+		<phrase var_name="your_remaining_submit_entry_times_is_number" added="1565346434">Your remaining submit entry times is {number}</phrase>
+		<phrase var_name="you_can_submit_number_entry_more" added="1565346434"><![CDATA[You can submit <b>{number}</b> entries more.]]></phrase>
+		<phrase var_name="you_can_not_submit_you_have_reached_maximum_number_of_submitted_entry_number" added="1565346434"><![CDATA[You cannot submit entry anymore because you have reached maximum number of submitted entry of this contest (<b>{number}</b>).]]></phrase>
+		<phrase var_name="must_be_greater_or_equal_1" added="1565346434"><![CDATA[Must be >= 1]]></phrase>
+		<phrase var_name="latest" added="1565346434">Latest</phrase>
+		<phrase var_name="like_s" added="1565346434">Like(s)</phrase>
+		<phrase var_name="maxium_number_of_characters_for_title_is" added="1565346434">Maximum number of characters for title is</phrase>
+		<phrase var_name="invite_friends_to_this_contest" added="1565346434">Invite friends to this contest</phrase>
+		<phrase var_name="promote_this_contest" added="1565346434">Promote this contest</phrase>
+		<phrase var_name="in" added="1565346434">in</phrase>
+		<phrase var_name="please_enter_a_valid_url" added="1565346434">Please enter a valid URL.</phrase>
+		<phrase var_name="users_followed_your_contest_title" added="1565346434"><![CDATA[{users} followed your contest "{title}"]]></phrase>
+		<phrase var_name="contest_ending_soon_email_subject" added="1565346434"><![CDATA[Your contest "{title}" has been set ending-soon]]></phrase>
+		<phrase var_name="remove_from_winning_list" added="1565346434">Remove from Winning List</phrase>
+		<phrase var_name="entry_successfully_removed_from_winning_list" added="1565346434">Entry successfully removed from winning list</phrase>
+		<phrase var_name="voting_deadline" added="1565346434">Voting Deadline</phrase>
+		<phrase var_name="voting_deadline_must_be_greater_than_or_equal_stop_time" added="1565346434">Voting deadline must be greater than or equal stop time</phrase>
+		<phrase var_name="voting_deadline_must_be_smaller_than_end_time" added="1565346434">Voting deadline must be smaller than end time</phrase>
+		<phrase var_name="this_file_do_not_exist" added="1565346434">This file do not exist</phrase>
+		<phrase var_name="music" added="1565346434">Music</phrase>
+		<phrase var_name="music_contest" added="1565346434">Music Contest</phrase>
+		<phrase var_name="full_name_voted_on_the_entry_title" added="1565346434"><![CDATA[{full_name} voted on the entry "{title}".]]></phrase>
+		<phrase var_name="full_name_voted_on_the_entry_message" added="1565346434"><![CDATA[{full_name} voted on the entry "<a href="{link}">{title}</a>".
+To see the vote thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="contest_duration" added="1565346434">Contest Duration</phrase>
+		<phrase var_name="submit_entries_duration" added="1565346434">Submit Entries Duration</phrase>
+		<phrase var_name="voting_duration" added="1565346434">Voting Duration</phrase>
+		<phrase var_name="the_start_time_of_submitting_must_be_greater_than_or_equal_to_the_start_time_of_contest" added="1565346434">The start time of submitting must be greater than or equal to the start time of contest.</phrase>
+		<phrase var_name="the_end_time_of_submitting_must_be_greater_than_the_start_time_of_it" added="1565346434">The end time of submitting must be greater than the start time of it.</phrase>
+		<phrase var_name="the_end_time_of_submitting_must_be_greater_than_current_time" added="1565346434">The end time of submitting must be greater than current time.</phrase>
+		<phrase var_name="the_end_time_of_voting_must_be_greater_than_the_start_time_of_it" added="1565346434">The end time of voting must be greater than the start time of it.</phrase>
+		<phrase var_name="the_end_time_of_voting_must_be_greater_than_or_equal_to_the_end_time_of_submitting" added="1565346434">The end time of voting must be greater than or equal to the end time of submitting.</phrase>
+		<phrase var_name="the_end_time_of_contest_must_be_greater_than_or_equal_to_the_end_time_of_voting" added="1565346434">The end time of contest must be greater than or equal to the end time of voting.</phrase>
+		<phrase var_name="filter" added="1565346434">Filter</phrase>
+		<phrase var_name="type" added="1565346434">Type</phrase>
+		<phrase var_name="setting_number_of_entries_block_most_voted_most_viewed" added="1565346434"><![CDATA[<title>Number of Entries in "Most Voted Entries" and "Most Viewed Entries" blocks</title><info>Number of Entries in "Most Voted Entries" and "Most Viewed Entries" blocks</info>]]></phrase>
+		<phrase var_name="year" added="1565346434">year</phrase>
+		<phrase var_name="month" added="1565346434">month</phrase>
+		<phrase var_name="day" added="1565346434">day</phrase>
+		<phrase var_name="years" added="1565346434">years</phrase>
+		<phrase var_name="months" added="1565346434">months</phrase>
+		<phrase var_name="days" added="1565346434">days</phrase>
+		<phrase var_name="submit_entries" added="1565346434">Submit Entries</phrase>
+		<phrase var_name="opening" added="1565346434">Opening</phrase>
+		<phrase var_name="voting" added="1565346434">Voting</phrase>
+		<phrase var_name="this_contest_will_start_on_begin_time_please_revisit_later" added="1565346434"><![CDATA[This contest will start on <b>{begin_time}</b>. Please revisit later.]]></phrase>
+		<phrase var_name="most_voted_entries_in_this_contest" added="1565346434">Most Voted Entries In This Contest</phrase>
+		<phrase var_name="most_viewed_entries_in_this_contest" added="1565346434">Most Viewed Entries In This Contest</phrase>
+		<phrase var_name="posted_by" added="1565346434">Posted by</phrase>
+		<phrase var_name="vote_for_this_entry" added="1565346434">Vote for this Entry</phrase>
+		<phrase var_name="view_original_photo" added="1565346434">View Original Photo</phrase>
+		<phrase var_name="download_photo" added="1565346434">Download Photo</phrase>
+		<phrase var_name="title_and_description_are_required" added="1565346434">Title and description are required</phrase>
+		<phrase var_name="contest_statistics" added="1565346434">Contest Statistics</phrase>
+		<phrase var_name="contest_s_successfully_deleted" added="1565346434">Contest(s) successfully deleted.</phrase>
+		<phrase var_name="setting_contest_buttons_bgcolor_1" added="1565346434"><![CDATA[<title>Contest buttons background color 1</title><info>Gradient background color 1 of Submit Entry, Join, Promote contest buttons.<br /><br />Default: #50A1FF</info>]]></phrase>
+		<phrase var_name="setting_contest_buttons_bgcolor_2" added="1565346434"><![CDATA[<title>Contest buttons background color 2</title><info>Gradient background color 2 of Submit Entry, Join, Promote contest buttons.<br /><br />Default: #2289FF</info>]]></phrase>
+		<phrase var_name="setting_contest_buttons_text_color" added="1565346434"><![CDATA[<title>Contest buttons text color</title><info>Text color of Submit Entry, Join, Promote contest buttons.<br /><br />Default: #FFFFFF</info>]]></phrase>
+		<phrase var_name="show_photo" added="1565346434">Show Photo</phrase>
+		<phrase var_name="show_description" added="1565346434">Show Description</phrase>
+		<phrase var_name="email" added="1565346434">Email</phrase>
+		<phrase var_name="email_successfully_updated" added="1565346434">Email successfully updated.</phrase>
+		<phrase var_name="download" added="1565346434">Download</phrase>
+		<phrase var_name="view_full_size" added="1565346434">View Full Size</phrase>
+		<phrase var_name="most_viewed_entries" added="1565346434">Most Viewed Entries</phrase>
+		<phrase var_name="most_voted_entries" added="1565346434">Most Voted Entries</phrase>
+		<phrase var_name="un_vote_this_entry" added="1565346434">Un-vote this Entry</phrase>
+		<phrase var_name="photo_entries" added="1565346434">Photo Entries</phrase>
+		<phrase var_name="video_entries" added="1565346434">Video Entries</phrase>
+		<phrase var_name="blog_entries" added="1565346434">Blog Entries</phrase>
+		<phrase var_name="music_entries" added="1565346434">Music Entries</phrase>
+		<phrase var_name="my_favorite_contests" added="1565346434">My Favorite Contests</phrase>
+		<phrase var_name="allow_other_members_to_vote_for_an_entry_without_joining_the_contest" added="1565346434">Allow other members to vote for an entry without joining the contest</phrase>
+		<phrase var_name="setting_contest_autorun_featured_slideshow" added="1565346434"><![CDATA[<title>Auto running Featured slideshow</title><info>Animate Featured slideshow automatically</info>]]></phrase>
+		<phrase var_name="setting_contest_featured_slideshow_speed" added="1565346434"><![CDATA[<title>Featured slideshow speed (milliseconds)</title><info>Set the speed of the Featured slideshow cycling, in milliseconds</info>]]></phrase>
+		<phrase var_name="active" added="1565346434">Active</phrase>
+		<phrase var_name="inactive" added="1565346434">Inactive</phrase>
+		<phrase var_name="contest_inactive_email_subject" added="1565346434"><![CDATA[Your contest "{title}" has been set Inactive]]></phrase>
+		<phrase var_name="your_contest_title_has_been_set_inactive_link" added="1565346434"><![CDATA[Your contest "{title}" has been set inactive
+{link}
+
+It will be marked and don&#039;t display everywhere.]]></phrase>
+		<phrase var_name="contest_successfully_active" added="1565346434">Contest successfully active</phrase>
+		<phrase var_name="contest_successfully_in_active" added="1565346434">Contest successfully in-active</phrase>
+		<phrase var_name="contest_title_has_been_inactive_link" added="1565346434"><![CDATA[Contest "{title}" has been inactive.
+{link}]]></phrase>
+		<phrase var_name="my_inactive_contests" added="1565346434">My inactive Contests</phrase>
+		<phrase var_name="please_select_a_friend" added="1565346434">Please select a friend.</phrase>
+		<phrase var_name="payment_methods" added="1565346434">Payment Methods</phrase>
+		<phrase var_name="review_and_confirm_purchase" added="1565346434">Review and Confirm Purchase</phrase>
+		<phrase var_name="please_waiting_for_processing_transaction" added="1565346434">Please waiting for processing transaction</phrase>
+		<phrase var_name="show_short_description" added="1565346434">Show Short Description</phrase>
+		<phrase var_name="manage_sub_categories" added="1565346434">Manage Sub-categories</phrase>
+		<phrase var_name="in_the_contest_a_href_link_title_a" added="1565346434"><![CDATA[In the contest <a href="{link}">{title}</a>]]></phrase>
+		<phrase var_name="Search Items" added="1565346434" />
+		<phrase var_name="Ultimate Videos" added="1565346434" />
+		<phrase var_name="Video Channel" added="1565346434" />
+		<phrase var_name="Core Videos" added="1565346434" />
+		<phrase var_name="Notice" added="1565346434">Notice</phrase>
+		<phrase var_name="main_information_successfully_updated" added="1565346434">Main information successfully updated.</phrase>
+		<phrase var_name="contest_admin_menu_user_group_settings" added="1565346434">User Group Settings</phrase>
+		<phrase var_name="translate_module_contest" added="1565346434">Contest</phrase>
+		<phrase var_name="seo_contest_meta_keywords" added="1565346434">contest, photo, blog, video, music</phrase>
+		<phrase var_name="seo_contest_meta_description" added="1565346434">Create Blog – Music – Photo – Video (if your site already have the Video Channel of YouNet) contests for other members to participate in</phrase>
+		<phrase var_name="setting_contest_meta_keywords" added="1565346434"><![CDATA[<title>Contest Meta Keywords</title><info>Meta keywords that will be displayed on sections related to the Contest app. To edit this setting, please go to <i>AdminCP > Globalization > Phrases</i>, search and edit phrase have var name is: "seo_contest_meta_keywords" ]]></phrase>
+		<phrase var_name="setting_contest_meta_description" added="1565346434"><![CDATA[<title>Contest Meta Description</title><info>Meta description added to pages related to the Contest app. To edit this setting, please go to <i>AdminCP > Globalization > Phrases</i>, search and edit phrase have var name is: "seo_contest_meta_description" ]]></phrase>
+		<phrase var_name="controller_contest.entry.index" added="1565346434">Contest Entry Page</phrase>
+		<phrase var_name="controller_contest.index" added="1565346434">Home Page</phrase>
+		<phrase var_name="controller_contest.profile" added="1565346434">Profile Page</phrase>
+		<phrase var_name="controller_contest.view" added="1565346434">Contest Detail Page</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="false" guest="false" staff="false" module="contest" ordering="0">can_close_contest_added_by_other_users</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="false" user="false" guest="false" staff="false" module="contest" ordering="0">approve_contests</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="true" guest="false" staff="false" module="contest" ordering="0">add_new_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="true" guest="false" staff="true" module="contest" ordering="0">edit_own_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="false" guest="false" staff="false" module="contest" ordering="0">edit_user_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="false" guest="false" staff="false" module="contest" ordering="0">can_delete_other_contests</setting>
+		<setting is_admin_setting="0" module_id="contest" type="integer" admin="1" user="1" guest="0" staff="1" module="contest" ordering="0">contest_ending_soon_fee</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="true" guest="false" staff="true" module="contest" ordering="0">can_vote_entry</setting>
+		<setting is_admin_setting="0" module_id="contest" type="integer" admin="1" user="1" guest="0" staff="1" module="contest" ordering="0">contest_publish_fee</setting>
+		<setting is_admin_setting="0" module_id="contest" type="integer" admin="1000" user="1000" guest="0" staff="0" module="contest" ordering="0">max_upload_size_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="integer" admin="1" user="1" guest="0" staff="1" module="contest" ordering="0">contest_premium_fee</setting>
+		<setting is_admin_setting="0" module_id="contest" type="integer" admin="1" user="1" guest="0" staff="1" module="contest" ordering="0">points_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="false" guest="false" staff="false" module="contest" ordering="0">can_approve_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="false" guest="false" staff="false" module="contest" ordering="0">can_premium_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="true" guest="false" staff="true" module="contest" ordering="0">can_close_own_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="false" guest="false" staff="false" module="contest" ordering="0">can_ending_soon_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="false" guest="false" staff="false" module="contest" ordering="0">can_feature_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="true" guest="false" staff="true" module="contest" ordering="0">can_delete_own_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="true" guest="false" staff="true" module="contest" ordering="0">can_join_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="integer" admin="1" user="1" guest="0" staff="1" module="contest" ordering="0">contest_feature_fee</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="false" guest="false" staff="false" module="contest" ordering="0">can_publish_contest</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="true" guest="true" staff="true" module="contest" ordering="0">view_contests</setting>
+		<setting is_admin_setting="0" module_id="contest" type="boolean" admin="true" user="true" guest="false" staff="true" module="contest" ordering="0">can_submit_entry_for_contest</setting>
+	</user_group_settings>
+</module>

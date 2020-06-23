@@ -1,0 +1,23 @@
+<module>
+	<data>
+		<module_id>core</module_id>
+		<product_id>phpfox</product_id>
+		<is_core>1</is_core>
+		<is_active>1</is_active>
+		<is_menu>0</is_menu>
+		<menu />
+		<phrase_var_name />
+		<version>4.7.4</version>
+		<author>phpFox</author>
+		<vendor>https://store.phpfox.com/</vendor>
+		<description>phpFox default app</description>
+		<apps_icon />
+	</data>
+	<blocks>
+		<block type_id="2" m_connection="jobposting.index" module_id="core" component="" location="1" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>Promote job</title>
+			<source_code><![CDATA[<iframe src="https://product-qc.younetco.com/thuyth/phpfox4/474x2/PF.Base/module/jobposting/static/php/promotejob.php?id=1&en_photo=1&en_description=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:360px;" allowTransparency="true">;</iframe>]]></source_code>
+			<source_parsed><![CDATA[<iframe src="https://product-qc.younetco.com/thuyth/phpfox4/474x2/PF.Base/module/jobposting/static/php/promotejob.php?id=1&en_photo=1&en_description=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:360px;" allowTransparency="true">;</iframe>]]></source_parsed>
+		</block>
+	</blocks>
+</module>

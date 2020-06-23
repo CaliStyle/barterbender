@@ -1,0 +1,1238 @@
+<module>
+	<data>
+		<module_id>ynsocialstore</module_id>
+		<product_id>younet_socialstore4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:6:{s:44:"ynsocialstore.admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:13:"ynsocialstore";i:1;s:19:"user-group-settings";}}s:38:"ynsocialstore.admin_menu_manage_stores";a:1:{s:3:"url";a:2:{i:0;s:13:"ynsocialstore";i:1;s:11:"managestore";}}s:40:"ynsocialstore.admin_menu_manage_products";a:1:{s:3:"url";a:2:{i:0;s:13:"ynsocialstore";i:1;s:13:"manageproduct";}}s:40:"ynsocialstore.admin_menu_add_new_package";a:1:{s:3:"url";a:3:{i:0;s:13:"ynsocialstore";i:1;s:7:"package";i:2;s:3:"add";}}s:40:"ynsocialstore.admin_menu_manage_packages";a:1:{s:3:"url";a:2:{i:0;s:13:"ynsocialstore";i:1;s:7:"package";}}s:42:"ynsocialstore.admin_menu_manage_comparison";a:1:{s:3:"url";a:2:{i:0;s:13:"ynsocialstore";i:1;s:10:"comparison";}}}]]></menu>
+		<phrase_var_name>module_ynsocialstore</phrase_var_name>
+		<version>4.02p6</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>https://static.younetco.com/ynicons/fox4/social_store.png</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="ynsocialstore" parent_var_name="" m_connection="main" var_name="menu_ynsocialstore_social_store_fad58de7366495db4650cfefac2fcd61" ordering="131" url_value="ynsocialstore" version_id="3.9.0" disallow_access="" module="ynsocialstore" />
+	</menus>
+	<settings>
+		<setting group="" module_id="ynsocialstore" is_hidden="0" type="drop" var_name="ynstore_paging_mode" phrase_var_name="setting_ynstore_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:8:"loadmore";s:6:"values";a:3:{i:0;s:8:"loadmore";i:1;s:9:"next_prev";i:2;s:10:"pagination";}}]]></setting>
+		<setting group="" module_id="ynsocialstore" is_hidden="0" type="drop" var_name="ynstore_product_paging_mode" phrase_var_name="setting_ynstore_product_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:8:"loadmore";s:6:"values";a:3:{i:0;s:8:"loadmore";i:1;s:9:"next_prev";i:2;s:10:"pagination";}}]]></setting>
+		<setting group="" module_id="ynsocialstore" is_hidden="0" type="boolean" var_name="what_did_friend_buy" phrase_var_name="setting_what_did_friend_buy" ordering="1" version_id="3.9.0">1</setting>
+		<setting group="" module_id="ynsocialstore" is_hidden="0" type="string" var_name="max_item_block_new_stores" phrase_var_name="setting_max_item_block_new_stores" ordering="1" version_id="3.9.0">6</setting>
+		<setting group="" module_id="ynsocialstore" is_hidden="0" type="boolean" var_name="allow_user_edit_review_stores" phrase_var_name="setting_allow_user_edit_review_stores" ordering="1" version_id="3.9.0">1</setting>
+		<setting group="" module_id="ynsocialstore" is_hidden="0" type="boolean" var_name="allow_user_edit_review_products" phrase_var_name="setting_allow_user_edit_review_products" ordering="1" version_id="3.9.0">1</setting>
+		<setting group="" module_id="ynsocialstore" is_hidden="0" type="boolean" var_name="allow_user_delete_their_review_stores" phrase_var_name="setting_allow_user_delete_their_review_stores" ordering="1" version_id="3.9.0">1</setting>
+		<setting group="" module_id="ynsocialstore" is_hidden="0" type="boolean" var_name="allow_user_delete_their_review_products" phrase_var_name="setting_allow_user_delete_their_review_products" ordering="1" version_id="3.9.0">1</setting>
+		<setting group="" module_id="ynsocialstore" is_hidden="0" type="boolean" var_name="allow_owner_store_delete_review_on_their_stores" phrase_var_name="setting_allow_owner_store_delete_review_on_their_stores" ordering="1" version_id="3.9.0">1</setting>
+		<setting group="" module_id="ynsocialstore" is_hidden="0" type="boolean" var_name="allow_owner_store_delete_review_on_their_products" phrase_var_name="setting_allow_owner_store_delete_review_on_their_products" ordering="1" version_id="3.9.0">1</setting>
+		<setting group="" module_id="ynsocialstore" is_hidden="0" type="drop" var_name="default_distance_measurement_unit" phrase_var_name="setting_default_distance_measurement_unit" ordering="1" version_id="3.9.0"><![CDATA[a:2:{s:7:"default";s:2:"mi";s:6:"values";a:2:{i:0;s:2:"mi";i:1;s:2:"km";}}]]></setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="ynsocialstore.store" module_id="ynsocialstore" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.detail" module_id="ynsocialstore" component="store.logo" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.detail" module_id="ynsocialstore" component="store.profilemenu" location="9" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.detail" module_id="ynsocialstore" component="store.detailcover" location="7" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.add" module_id="ynsocialstore" component="store.menuedit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.insight" module_id="ynsocialstore" component="store.menuedit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.manage-packages" module_id="ynsocialstore" component="store.menuedit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.manage-products" module_id="ynsocialstore" component="store.menuedit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.sale-of-store" module_id="ynsocialstore" component="store.menuedit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.manage-faqs" module_id="ynsocialstore" component="store.menuedit" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store" module_id="ynsocialstore" component="store.mostfollowed" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Most Followed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store" module_id="ynsocialstore" component="superdeal" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Super Deal</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store" module_id="ynsocialstore" component="store.mostfavorite" location="9" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Most Favorite</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore" module_id="ynsocialstore" component="compare" location="12" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Compare</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.statistic" module_id="ynsocialstore" component="menu-seller" location="9" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Seller Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.manage-store" module_id="ynsocialstore" component="menu-seller" location="9" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Seller Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.detail" module_id="ynsocialstore" component="category" location="9" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.index" module_id="ynsocialstore" component="superdeal" location="3" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Super Deal</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.index" module_id="ynsocialstore" component="product.mostliked" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Most Liked Products</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.product.detail" module_id="ynsocialstore" component="product.store-info" location="3" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Store Info</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.product.detail" module_id="ynsocialstore" component="product.store-moreinfo" location="3" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Store More Infomation</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.product.detail" module_id="ynsocialstore" component="category" location="1" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title><![CDATA[Store&#039;s Categories]]></title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.product.detail" module_id="ynsocialstore" component="product.statistic" location="7" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Product Statistic</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.product.detail" module_id="ynsocialstore" component="product.images" location="2" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title>Product Images</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.index" module_id="ynsocialstore" component="category" location="1" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.index" module_id="ynsocialstore" component="product.recently-viewed" location="1" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Recently Viewed Products</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.product-sales" module_id="ynsocialstore" component="product.dashboard" location="2" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Product Dashboard</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.add" module_id="ynsocialstore" component="product.dashboard" location="2" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Product Dashboard</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.manage-attributes" module_id="ynsocialstore" component="product.dashboard" location="2" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Product Dashboard</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.manage-photos" module_id="ynsocialstore" component="product.dashboard" location="2" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Product Dashboard</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.manage-photos" module_id="ynsocialstore" component="menu-seller" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Menu Seller</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.add" module_id="ynsocialstore" component="menu-seller" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Menu Seller</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.manage-attributes" module_id="ynsocialstore" component="menu-seller" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Menu Seller</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.product-sales" module_id="ynsocialstore" component="menu-seller" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Menu Seller</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.my-cart" module_id="ynsocialstore" component="menu-buyer" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Menu Buyer</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.my-wishlist" module_id="ynsocialstore" component="menu-buyer" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Menu Buyer</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.my-orders" module_id="ynsocialstore" component="menu-buyer" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Menu Buyer</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.product.detail" module_id="ynsocialstore" component="product.friend-bought-this" location="1" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>Also Bought By Friends</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.index" module_id="ynsocialstore" component="product.bought-by-friends" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Bought By Friends</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.product.detail" module_id="ynsocialstore" component="product.others-product" location="3" is_active="1" ordering="8" disallow_access="" can_move="0">
+			<title>Others Product</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.product.detail" module_id="ynsocialstore" component="product.related-products" location="1" is_active="1" ordering="9" disallow_access="" can_move="0">
+			<title>Related Products</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.detail" module_id="ynsocialstore" component="product.you-may-like" location="9" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>You May Like</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.detail" module_id="ynsocialstore" component="store.detailcover-2" location="11" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Detail Cover</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store" module_id="ynsocialstore" component="product.mostliked" location="3" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Most Liked Products</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store" module_id="ynsocialstore" component="product.bought-by-friends" location="3" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Bought By Friends</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ecommerce.my-orders" module_id="ynsocialstore" component="menu-buyer" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Store Buyer Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ecommerce.order-detail" module_id="ynsocialstore" component="menu-buyer" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Store Buyer Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ecommerce.my-requests" module_id="ynsocialstore" component="menu-seller" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Store Seller Menu</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore" module_id="ynsocialstore" component="my-cart" location="12" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>My Cart</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.checkout" module_id="ynsocialstore" component="menu-buyer" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Menu Buyer</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ecommerce.order-detail" module_id="ynsocialstore" component="menu-seller" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Store Menu Seller</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ecommerce.manage-orders" module_id="ynsocialstore" component="menu-seller" location="1" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Store Menu Seller</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ecommerce.manage-orders" module_id="ynsocialstore" component="store.menuedit" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Store Dashboard</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.index" module_id="ynsocialstore" component="product.new-arrivals" location="2" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>New Arrivals</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.index" module_id="ynsocialstore" component="product.weekly-hot-selling" location="2" is_active="1" ordering="8" disallow_access="" can_move="0">
+			<title>Weekly Hot Selling</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.index" module_id="ynsocialstore" component="product.featured" location="2" is_active="1" ordering="9" disallow_access="" can_move="0">
+			<title>Featured Products</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.detail" module_id="ynsocialstore" component="store.featured-products" location="2" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title>Featured Products</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.detail" module_id="ynsocialstore" component="superdeal" location="2" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>Super Deal</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.detail" module_id="ynsocialstore" component="product.new-arrivals" location="2" is_active="1" ordering="8" disallow_access="" can_move="0">
+			<title>New Products</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store.detail" module_id="ynsocialstore" component="product.weekly-hot-selling" location="2" is_active="1" ordering="9" disallow_access="" can_move="0">
+			<title>Weekly Hot Selling</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store" module_id="ynsocialstore" component="store.featured" location="2" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title>Featured Stores</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store" module_id="ynsocialstore" component="store.weekly-hot-seller" location="2" is_active="1" ordering="7" disallow_access="" can_move="0">
+			<title>Weekly Hot Seller</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="ynsocialstore.store" module_id="ynsocialstore" component="store.neweststore" location="2" is_active="1" ordering="8" disallow_access="" can_move="0">
+			<title>New Stores</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="ynsocialstore" component="index" m_connection="ynsocialstore.index" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="detailproduct" m_connection="ynsocialstore.product.detail" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="detailstore" m_connection="ynsocialstore.store.detail" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="statistic" m_connection="ynsocialstore.statistic" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="manage-store" m_connection="ynsocialstore.manage-store" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="my-requests" m_connection="ynsocialstore.my-requests" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="all-salses" m_connection="ynsocialstore.all-salses" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="category" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="store" m_connection="ynsocialstore.store" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="store.logo" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="store.profilemenu" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="store.neweststore" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="store.detailcover" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="store.menuedit" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="store.add" m_connection="ynsocialstore.store.add" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="store.insight" m_connection="ynsocialstore.store.insight" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="store.manage-faqs" m_connection="ynsocialstore.store.manage-faqs" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="store.manage-packages" m_connection="ynsocialstore.store.manage-packages" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="store.manage-products" m_connection="ynsocialstore.store.manage-products" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="store.sale-of-store" m_connection="ynsocialstore.store.sale-of-store" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="store.mostfollowed" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="superdeal" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="store.featured" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="store.mostfavorite" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="compare" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="menu-seller" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="detailproduct" m_connection="ynsocialstore.product.detail" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="superdeal" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.mostliked" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.store-info" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.store-moreinfo" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.statistic" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.images" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.recently-viewed" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="add" m_connection="ynsocialstore.add" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="manage-photos" m_connection="ynsocialstore.manage-photos" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="manage-attributes" m_connection="ynsocialstore.manage-attributes" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="product-sales" m_connection="ynsocialstore.product-sales" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="product.dashboard" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="menu-buyer" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="my-cart" m_connection="ynsocialstore.my-cart" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="my-wishlist" m_connection="ynsocialstore.my-wishlist" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="my-orders" m_connection="ynsocialstore.my-orders" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="product.friend-bought-this" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.bought-by-friends" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.others-product" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.related-products" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.you-may-like" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="store.weekly-hot-seller" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="store.detailcover-2" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="my-cart" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="checkout" m_connection="ynsocialstore.checkout" module="ynsocialstore" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="ynsocialstore" component="product.new-arrivals" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.weekly-hot-selling" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="product.featured" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="ynsocialstore" component="store.featured-products" m_connection="" module="ynsocialstore" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="admin_menu_manage_stores" added="1565349306">Manage Stores</phrase>
+		<phrase var_name="admin_menu_user_group_settings" added="1565349306">User Group Settings</phrase>
+		<phrase var_name="admin_menu_manage_products" added="1565349306">Manage Products</phrase>
+		<phrase var_name="admin_menu_add_new_package" added="1565349306">Add New Package</phrase>
+		<phrase var_name="admin_menu_manage_packages" added="1565349306">Manage Packages</phrase>
+		<phrase var_name="admin_menu_manage_comparison" added="1565349306">Manage Comparison</phrase>
+		<phrase var_name="module_ynsocialstore" added="1565349306">Social Store</phrase>
+		<phrase var_name="setting_what_did_friend_buy" added="1565349306"><![CDATA[<title>Enable "What did friends buy"?</title><info>If yes then the menu "What did friend buy" and all information about buying actions of friends on some items shown, else they will be hidden</info>]]></phrase>
+		<phrase var_name="setting_allow_user_edit_review_stores" added="1565349306"><![CDATA[<title>Allow users to edit their rating and review on Stores?</title><info></info>]]></phrase>
+		<phrase var_name="setting_allow_user_edit_review_products" added="1565349306"><![CDATA[<title>Allow users to edit their rating and review on Products?</title><info></info>]]></phrase>
+		<phrase var_name="setting_allow_user_delete_their_review_stores" added="1565349306"><![CDATA[<title>Allow users to delete their rating and review on Stores?</title><info></info>]]></phrase>
+		<phrase var_name="setting_allow_user_delete_their_review_products" added="1565349306"><![CDATA[<title>Allow users to delete their rating and review on Products?</title><info></info>]]></phrase>
+		<phrase var_name="setting_allow_owner_store_delete_review_on_their_stores" added="1565349306"><![CDATA[<title>Allow owners of Stores to delete rating and review on their Stores?</title><info></info>]]></phrase>
+		<phrase var_name="setting_allow_owner_store_delete_review_on_their_products" added="1565349306"><![CDATA[<title>Allow owners of Stores to delete rating and review on Products in their Stores?</title><info></info>]]></phrase>
+		<phrase var_name="setting_max_item_block_new_stores" added="1565349306"><![CDATA[<title>How many New Stores items (All Store)?</title><info>This setting tells how many stores will be shown in the New Stores block. Default is 6.</info>]]></phrase>
+		<phrase var_name="user_setting_product_commit_fee" added="1565349306">Product commission fee (percent of sale)</phrase>
+		<phrase var_name="user_setting_auto_approved_store" added="1565349306">Set to Yes, if admin want store to be automatically approved after published.</phrase>
+		<phrase var_name="user_setting_auto_approved_product" added="1565349306">Set to Yes, if admin want product to be automatically approved after published.</phrase>
+		<phrase var_name="user_setting_can_delete_own_store" added="1565349306">Can delete own store?</phrase>
+		<phrase var_name="user_setting_can_delete_other_user_store" added="1565349306">Can delete store created by other users?</phrase>
+		<phrase var_name="user_setting_can_edit_own_store" added="1565349306">Can edit own store?</phrase>
+		<phrase var_name="user_setting_can_edit_other_user_store" added="1565349306">Can edit store created by other users?</phrase>
+		<phrase var_name="user_setting_can_create_store" added="1565349306">Can create store?</phrase>
+		<phrase var_name="user_setting_can_approve_store" added="1565349306">Can approve stores?</phrase>
+		<phrase var_name="user_setting_can_feature_store" added="1565349306">Can feature any store?</phrase>
+		<phrase var_name="user_setting_can_feature_own_store" added="1565349306">Can feature their own stores?</phrase>
+		<phrase var_name="user_setting_can_view_store" added="1565349306">Can view store?</phrase>
+		<phrase var_name="user_setting_can_post_comment_on_product" added="1565349306">Can post comment on product?</phrase>
+		<phrase var_name="user_setting_can_edit_product_of_other_users" added="1565349306">Can edit product created by other users?</phrase>
+		<phrase var_name="user_setting_can_edit_own_product" added="1565349306">Can edit own product?</phrase>
+		<phrase var_name="user_setting_can_approve_product" added="1565349306">Can approve products?</phrase>
+		<phrase var_name="user_setting_can_feature_product" added="1565349306">Can feature any product?</phrase>
+		<phrase var_name="user_setting_can_feature_own_product" added="1565349306">Can feature their own products?</phrase>
+		<phrase var_name="user_setting_can_view_product" added="1565349306">Can view product?</phrase>
+		<phrase var_name="user_setting_can_delete_own_product" added="1565349306">Can delete own product?</phrase>
+		<phrase var_name="user_setting_can_delete_product_of_other_users" added="1565349306">Can delete products created by other users?</phrase>
+		<phrase var_name="user_setting_points_ynsocialstore_store" added="1565349306">Set points for each store this user created</phrase>
+		<phrase var_name="user_setting_points_ynsocialstore_product" added="1565349306">Set points for each product this user created</phrase>
+		<phrase var_name="menu_ynsocialstore_social_store_fad58de7366495db4650cfefac2fcd61" added="1565349306">Social Store</phrase>
+		<phrase var_name="menu_ynsocialstore_sell_new_product_4e4995678c4ffc394078afa1abde1310" added="1565349306">Sell New Product</phrase>
+		<phrase var_name="menu_ynsocialstore_open_new_store_4e4995678c4ffc394078afa1abde1310" added="1565349306">Open New Store</phrase>
+		<phrase var_name="menu_ynsocialstore_sell_new_product_fe4662f4e2355b10cfc95a27d5c391b2" added="1565349306">Sell New Product</phrase>
+		<phrase var_name="menu_ynsocialstore_open_new_store_fe4662f4e2355b10cfc95a27d5c391b2" added="1565349306">Open New Store</phrase>
+		<phrase var_name="social_store" added="1565349306">Social Store</phrase>
+		<phrase var_name="all_products" added="1565349306">All Products</phrase>
+		<phrase var_name="all_stores" added="1565349306">All Stores</phrase>
+		<phrase var_name="store_of_friends" added="1565349306">Store Of Friends</phrase>
+		<phrase var_name="favourite_stores" added="1565349306">My Favourite Stores</phrase>
+		<phrase var_name="following_stores" added="1565349306">My Following Stores</phrase>
+		<phrase var_name="what_did_friends_buy" added="1565349306">What Did Friends Buy</phrase>
+		<phrase var_name="seller_section" added="1565349306">Seller Section</phrase>
+		<phrase var_name="buyer_section" added="1565349306">Buyer Section</phrase>
+		<phrase var_name="pending_stores" added="1565349306">Pending Stores</phrase>
+		<phrase var_name="pending_products" added="1565349306">Pending Products</phrase>
+		<phrase var_name="package_name" added="1565349306">Package Name</phrase>
+		<phrase var_name="valid_period" added="1565349306">Valid period</phrase>
+		<phrase var_name="enter_a_numeric_value" added="1565349306">Enter a numeric value</phrase>
+		<phrase var_name="day" added="1565349306">Day</phrase>
+		<phrase var_name="week" added="1565349306">Week(s)</phrase>
+		<phrase var_name="name_of_package_can_not_be_empty" added="1565349306">Name of package can not be empty</phrase>
+		<phrase var_name="package_successfully_updated" added="1565349306">Package successfully updated</phrase>
+		<phrase var_name="package_successfully_added" added="1565349306">Package successfully added</phrase>
+		<phrase var_name="edit_a_package" added="1565349306">Edit a Package</phrase>
+		<phrase var_name="create_a_new_package" added="1565349306">Create a new Package</phrase>
+		<phrase var_name="add_new_package" added="1565349306">Add new Package</phrase>
+		<phrase var_name="day_s" added="1565349306">Day(s)</phrase>
+		<phrase var_name="week_s" added="1565349306">Week(s)</phrase>
+		<phrase var_name="month_s" added="1565349306">Month(s)</phrase>
+		<phrase var_name="never_expired" added="1565349306">Never Expired</phrase>
+		<phrase var_name="package_fee" added="1565349306">Package Fee</phrase>
+		<phrase var_name="enter_a_numeric_value_0_if_you_want_this_package_to_be_free" added="1565349306">Enter a numeric value. 0 if you want this package to be free</phrase>
+		<phrase var_name="maximum_cover_photos_can_be_displayed" added="1565349306">Maximum cover photos can be displayed</phrase>
+		<phrase var_name="available_themes_for_this_package" added="1565349306">Available themes for this package</phrase>
+		<phrase var_name="maximum_number_of_product_allowed_to_create" added="1565349306">Maximum number of product allowed to create</phrase>
+		<phrase var_name="if_blank_or_set_to_0_the_number_of_product_is_unlimited" added="1565349306">If blank or set to 0, the number of product is unlimited.</phrase>
+		<phrase var_name="if_blank_or_set_to_0_the_number_of_photos_is_unlimited" added="1565349306">If blank or set to 0, the number of photos is unlimited.</phrase>
+		<phrase var_name="support_activities_feed_in_store" added="1565349306">Support activities feed in store?</phrase>
+		<phrase var_name="feature_store_for_free_after_apply_this_package" added="1565349306">Feature store for free after apply this package</phrase>
+		<phrase var_name="hour_s" added="1565349306">Hour(s)</phrase>
+		<phrase var_name="fee_for_feature_store" added="1565349306">Fee for feature store</phrase>
+		<phrase var_name="module_supported" added="1565349306">Module supported</phrase>
+		<phrase var_name="allow_changing_store_theme" added="1565349306">Allow changing store theme?</phrase>
+		<phrase var_name="allow_add_attribute_to_products_in_store" added="1565349306">Allow add attribute to products in store?</phrase>
+		<phrase var_name="save" added="1565349306">Save</phrase>
+		<phrase var_name="select_all" added="1565349306">Select all</phrase>
+		<phrase var_name="event" added="1565349306">Event</phrase>
+		<phrase var_name="photo" added="1565349306">Photo</phrase>
+		<phrase var_name="video" added="1565349306">Video</phrase>
+		<phrase var_name="fee_for_featuring_products_in_store" added="1565349306">Fee for featuring products in store</phrase>
+		<phrase var_name="modules_supported" added="1565349306">Modules supported</phrase>
+		<phrase var_name="videos" added="1565349306">Video</phrase>
+		<phrase var_name="product" added="1565349306">Product</phrase>
+		<phrase var_name="valid_period_have_to_be_a_number_and_at_least_0" added="1565349306">Valid period have to be a number and at least 0</phrase>
+		<phrase var_name="package_fee_have_to_be_a_number_and_at_least_0" added="1565349306">Package Fee have to be a number and at least 0</phrase>
+		<phrase var_name="maximum_cover_photo_have_to_be_a_number_and_at_least_0" added="1565349306">Maximum cover photo have to be a number and at least 0</phrase>
+		<phrase var_name="select_at_least_one_theme" added="1565349306">Select at least one theme</phrase>
+		<phrase var_name="select_at_least_one_module" added="1565349306">Select at least one module</phrase>
+		<phrase var_name="feature_store_for_free_after_have_to_be_a_number_and_at_least_0" added="1565349306">Feature store for free after have to be a number and at least 0</phrase>
+		<phrase var_name="fee_for_feature_store_have_to_be_a_number_and_at_least_0" added="1565349306">Fee for feature store have to be a number and at least 0</phrase>
+		<phrase var_name="feature_products_fee_have_to_be_a_number_and_at_least_0" added="1565349306">Feature products fee have to be a number and at least 0</phrase>
+		<phrase var_name="manage_packages" added="1565349306">Manage Packages</phrase>
+		<phrase var_name="action" added="1565349306">Action</phrase>
+		<phrase var_name="show" added="1565349306">Show</phrase>
+		<phrase var_name="hide" added="1565349306">Hide</phrase>
+		<phrase var_name="edit" added="1565349306">Edit</phrase>
+		<phrase var_name="delete" added="1565349306">Delete</phrase>
+		<phrase var_name="yes" added="1565349306">Yes</phrase>
+		<phrase var_name="no" added="1565349306">No</phrase>
+		<phrase var_name="are_you_sure" added="1565349306">Are you sure?</phrase>
+		<phrase var_name="fields_comparison_successfully_updated" added="1565349306">Fields comparison successfully updated</phrase>
+		<phrase var_name="manage_comparison" added="1565349306">Manage Comparison</phrase>
+		<phrase var_name="name_of_package_cannot_be_empty" added="1565349306">Name of package cannot be empty.</phrase>
+		<phrase var_name="which_information_about_products_you_want_to_help_your_to_members_compare" added="1565349306">Which information about products you want to help your members to compare?</phrase>
+		<phrase var_name="comparision_store_name" added="1565349306">Store Name</phrase>
+		<phrase var_name="comparision_product_name" added="1565349306">Name</phrase>
+		<phrase var_name="comparision_store_rating" added="1565349306">Rating</phrase>
+		<phrase var_name="comparision_product_rating" added="1565349306">Rating</phrase>
+		<phrase var_name="comparision_store_main_categories" added="1565349306">Main Categories</phrase>
+		<phrase var_name="comparision_product_price" added="1565349306">Price</phrase>
+		<phrase var_name="comparision_product_total_orders" added="1565349306">Number of orders</phrase>
+		<phrase var_name="comparision_product_total_reviews" added="1565349306">Number of reviews</phrase>
+		<phrase var_name="comparision_product_total_views" added="1565349306">Number of views</phrase>
+		<phrase var_name="comparision_product_seller" added="1565349306">Seller</phrase>
+		<phrase var_name="comparision_product_custom_fields" added="1565349306">Custom fields</phrase>
+		<phrase var_name="comparision_product_description" added="1565349306">Description</phrase>
+		<phrase var_name="comparision_store_total_products" added="1565349306">Number of products</phrase>
+		<phrase var_name="comparision_store_total_orders" added="1565349306">Number of orders</phrase>
+		<phrase var_name="comparision_store_total_views" added="1565349306">Number of views</phrase>
+		<phrase var_name="comparision_store_total_reviews" added="1565349306">Number of reviews</phrase>
+		<phrase var_name="comparision_store_shiping_and_payment_info" added="1565349306">Shipping and payment info</phrase>
+		<phrase var_name="comparision_store_policy" added="1565349306">Return Policy</phrase>
+		<phrase var_name="comparision_store_buyer_protection" added="1565349306">Buyer Protection</phrase>
+		<phrase var_name="which_information_about_stores_you_want_to_help_your_to_members_compare" added="1565349306">Which information about stores you want to help your members to compare?</phrase>
+		<phrase var_name="manage_product_comparison" added="1565349306">Manage Product Comparison</phrase>
+		<phrase var_name="manage_store_comparison" added="1565349306">Manage Store Comparison</phrase>
+		<phrase var_name="store_title" added="1565349306">Title</phrase>
+		<phrase var_name="store_owner" added="1565349306">Owner</phrase>
+		<phrase var_name="featured" added="1565349306">Featured</phrase>
+		<phrase var_name="not_featured" added="1565349306">Not Featured</phrase>
+		<phrase var_name="any" added="1565349306">Any</phrase>
+		<phrase var_name="approve_only" added="1565349306">Approve Only</phrase>
+		<phrase var_name="deny_only" added="1565349306">Deny Only</phrase>
+		<phrase var_name="search" added="1565349306">Search</phrase>
+		<phrase var_name="approve" added="1565349306">Approve</phrase>
+		<phrase var_name="status" added="1565349306">Status</phrase>
+		<phrase var_name="categories" added="1565349306">Categories</phrase>
+		<phrase var_name="package" added="1565349306">Package</phrase>
+		<phrase var_name="search_filter" added="1565349306">Search Filter</phrase>
+		<phrase var_name="stores" added="1565349306">Stores</phrase>
+		<phrase var_name="main_categories" added="1565349306">Main Categories</phrase>
+		<phrase var_name="name" added="1565349306">Name</phrase>
+		<phrase var_name="delete_selected" added="1565349306">Delete Selected</phrase>
+		<phrase var_name="reopen" added="1565349306">Reopen</phrase>
+		<phrase var_name="close" added="1565349306">Close</phrase>
+		<phrase var_name="featured_stores" added="1565349306">Featured Stores</phrase>
+		<phrase var_name="featured_products" added="1565349306">Featured Products</phrase>
+		<phrase var_name="stores_of_friends" added="1565349306">Stores Of Friends</phrase>
+		<phrase var_name="user_setting_number_store_user_can_create" added="1565349306">How many stores that a user can create?</phrase>
+		<phrase var_name="you_have_reached_your_creating_store_limit_please_contact_administrator" added="1565349306">You have reached your creating store limit. Please contact administrator.</phrase>
+		<phrase var_name="you_do_not_have_permission_to_create_a_store_please_contact_administrator" added="1565349306">You do not have permission to create a store. Please contact administrator.</phrase>
+		<phrase var_name="no_packages_found" added="1565349306">No packages found.</phrase>
+		<phrase var_name="all_packages" added="1565349306">All Packages</phrase>
+		<phrase var_name="open_new_store_step_1_choose_package" added="1565349306">Open New Store / Step 1: Choose Package</phrase>
+		<phrase var_name="open_new_store" added="1565349306">Open New Store</phrase>
+		<phrase var_name="draft" added="1565349306">Draft</phrase>
+		<phrase var_name="pending" added="1565349306">Pending</phrase>
+		<phrase var_name="published" added="1565349306">Published</phrase>
+		<phrase var_name="denied" added="1565349306">Denied</phrase>
+		<phrase var_name="closed" added="1565349306">Closed</phrase>
+		<phrase var_name="other" added="1565349306">Other</phrase>
+		<phrase var_name="deny" added="1565349306">Deny</phrase>
+		<phrase var_name="deleted" added="1565349306">Deleted</phrase>
+		<phrase var_name="no_results" added="1565349306">No results</phrase>
+		<phrase var_name="package_price" added="1565349306">Package Price</phrase>
+		<phrase var_name="events" added="1565349306">Events</phrase>
+		<phrase var_name="duration" added="1565349306">Duration</phrase>
+		<phrase var_name="choose_this_package" added="1565349306">Choose This Package</phrase>
+		<phrase var_name="package_support" added="1565349306">Package Support</phrase>
+		<phrase var_name="products_can_be_created" added="1565349306">products can be created</phrase>
+		<phrase var_name="support_activity_feed" added="1565349306">Support activity feed</phrase>
+		<phrase var_name="fee_for_featuring_store" added="1565349306">Fee for featuring store</phrase>
+		<phrase var_name="please_enter_location" added="1565349306">Please enter location.</phrase>
+		<phrase var_name="this_field_is_required" added="1565349306">This field is required</phrase>
+		<phrase var_name="please_enter_a_valid_url_for_example_http_example_com" added="1565349306">Please enter a valid url, for example http://example.com</phrase>
+		<phrase var_name="please_enter_a_value_with_a_valid_extension" added="1565349306">Please enter a value with a valid extension</phrase>
+		<phrase var_name="please_enter_at_least_0_characters" added="1565349306">Please enter at least {0} characters.</phrase>
+		<phrase var_name="please_enter_a_value_greater_than_or_equal_to_0" added="1565349306">Please enter a value greater than or equal to {0}</phrase>
+		<phrase var_name="please_enter_a_valid_number" added="1565349306">Please enter a valid number.</phrase>
+		<phrase var_name="please_enter_no_more_than_0_characters" added="1565349306">Please enter no more than {0} characters.</phrase>
+		<phrase var_name="category" added="1565349306">Category</phrase>
+		<phrase var_name="short_description" added="1565349306">Short Description</phrase>
+		<phrase var_name="contact_information" added="1565349306">Contact Information</phrase>
+		<phrase var_name="branches" added="1565349306">Branches</phrase>
+		<phrase var_name="description" added="1565349306">Description</phrase>
+		<phrase var_name="from" added="1565349306">from</phrase>
+		<phrase var_name="to" added="1565349306">to</phrase>
+		<phrase var_name="get_directions" added="1565349306">Get Directions</phrase>
+		<phrase var_name="cannot_load_google_api_library_please_reload_the_page_and_try_again" added="1565349306">Cannot load Google API library. Please reload the page and try again.</phrase>
+		<phrase var_name="compare" added="1565349306">Compare</phrase>
+		<phrase var_name="please_select_more_than_one_entry_for_the_comparison" added="1565349306">Please select more than one entry for the comparison.</phrase>
+		<phrase var_name="add_to_compare" added="1565349306">Add to Compare</phrase>
+		<phrase var_name="remove_from_compare" added="1565349306">Remove from Compare</phrase>
+		<phrase var_name="phone" added="1565349306">Phone</phrase>
+		<phrase var_name="fax" added="1565349306">Fax</phrase>
+		<phrase var_name="email" added="1565349306">Email</phrase>
+		<phrase var_name="website" added="1565349306">Website</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_store" added="1565349306">Are you sure you want to delete this store? This action can not be reverted and all products in store will be lost!</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_product" added="1565349306">Are you sure you want to delete this product?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_stores_that_you_selected" added="1565349306">Are you sure you want to delete stores that you selected ?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_products_that_you_selected" added="1565349306">Are you sure you want to delete products that you selected ?</phrase>
+		<phrase var_name="address_is_required" added="1565349306"><![CDATA["Address" is required]]></phrase>
+		<phrase var_name="information" added="1565349306">Infomation</phrase>
+		<phrase var_name="view_all_categories" added="1565349306">View all categories</phrase>
+		<phrase var_name="all_categories" added="1565349306">All categories</phrase>
+		<phrase var_name="support_attribute_to_product_in_store" added="1565349306">Support attribute to product in store</phrase>
+		<phrase var_name="support_changing_store_theme" added="1565349306">Support changing store theme</phrase>
+		<phrase var_name="number_of_product_is_unlimited" added="1565349306">Number of product is unlimited</phrase>
+		<phrase var_name="open_new_store_step_2_input_information" added="1565349306">Open New Store / Step 2 - Input Information</phrase>
+		<phrase var_name="payment_methods" added="1565349306">Payment Methods</phrase>
+		<phrase var_name="please_select_one_theme_for_your_store_note_that_if_this_package_supports_multiple_and_changeable_themes_you_can_re_select_theme_any_time_you_want_at_dashboard" added="1565349306">Please select one theme for your store. Note that if this package supports multiple and changeable themes, you can re-select theme any time you want at Dashboard</phrase>
+		<phrase var_name="general_info" added="1565349306">General Info</phrase>
+		<phrase var_name="store_name" added="1565349306">Store Name</phrase>
+		<phrase var_name="business_type" added="1565349306">Business Type</phrase>
+		<phrase var_name="shipping_and_payment_infomation" added="1565349306">Shipping and payment infomation</phrase>
+		<phrase var_name="return_policy" added="1565349306">Return Policy</phrase>
+		<phrase var_name="buyer_protection" added="1565349306">Buyer Protection</phrase>
+		<phrase var_name="tax" added="1565349306">Tax</phrase>
+		<phrase var_name="branch_name" added="1565349306">Branch Name</phrase>
+		<phrase var_name="address" added="1565349306">Address</phrase>
+		<phrase var_name="enter_a_location" added="1565349306">Enter a location</phrase>
+		<phrase var_name="view_map" added="1565349306">View map</phrase>
+		<phrase var_name="country" added="1565349306">Country</phrase>
+		<phrase var_name="city" added="1565349306">City</phrase>
+		<phrase var_name="province" added="1565349306">Province</phrase>
+		<phrase var_name="zip_code" added="1565349306">Zip code</phrase>
+		<phrase var_name="web_address" added="1565349306">Web Address</phrase>
+		<phrase var_name="logo" added="1565349306">Logo</phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1565349306">You can upload a JPG, GIF or PNG file.</phrase>
+		<phrase var_name="cover" added="1565349306">Cover</phrase>
+		<phrase var_name="additional_information" added="1565349306">Additional Information</phrase>
+		<phrase var_name="title" added="1565349306">Title</phrase>
+		<phrase var_name="content" added="1565349306">Content</phrase>
+		<phrase var_name="store_publishing_fee_depend_on_what_package_you_choose_at_step_1" added="1565349306">Store publishing fee depend on what package you choose at step 1</phrase>
+		<phrase var_name="publish_fee" added="1565349306">Publish Fee</phrase>
+		<phrase var_name="feature_this_store_for" added="1565349306">Feature this store for</phrase>
+		<phrase var_name="feature" added="1565349306">Feature</phrase>
+		<phrase var_name="day_s_with" added="1565349306">day(s) with</phrase>
+		<phrase var_name="fee_to_feature_store_feature_fee_currency_id_for_1_day" added="1565349306">Fee to feature store: {feature_fee} {currency_id} for 1 day</phrase>
+		<phrase var_name="control_who_can_see_this_store" added="1565349306">Control who can see this store.</phrase>
+		<phrase var_name="control_who_can_see_this_product" added="1565349306">Control who can see this product.</phrase>
+		<phrase var_name="save_as_draft" added="1565349306">Save As Draft</phrase>
+		<phrase var_name="open_store" added="1565349306">Open Store</phrase>
+		<phrase var_name="back" added="1565349306">Back</phrase>
+		<phrase var_name="privacy" added="1565349306">Privacy</phrase>
+		<phrase var_name="0_means_never_expired" added="1565349306">0 means never expired</phrase>
+		<phrase var_name="valid_period_cannot_be_empty" added="1565349306">Valid period cannot be empty</phrase>
+		<phrase var_name="package_fee_cannot_be_empty" added="1565349306">Package Fee cannot be empty</phrase>
+		<phrase var_name="maximum_number_of_product_cannot_be_empty" added="1565349306">Maximum number of product cannot be empty</phrase>
+		<phrase var_name="year_established" added="1565349306">Year Established</phrase>
+		<phrase var_name="sole_proprietor" added="1565349306">Sole proprietor</phrase>
+		<phrase var_name="partnership" added="1565349306">Partnership</phrase>
+		<phrase var_name="company" added="1565349306">Company</phrase>
+		<phrase var_name="franchise" added="1565349306">Franchise</phrase>
+		<phrase var_name="limited_liability" added="1565349306">Limited liability</phrase>
+		<phrase var_name="others" added="1565349306">Others</phrase>
+		<phrase var_name="select" added="1565349306">Select</phrase>
+		<phrase var_name="price" added="1565349306">Price</phrase>
+		<phrase var_name="please_enter_a_valid_email_address" added="1565349306">Please enter a valid email address</phrase>
+		<phrase var_name="provide_a_category_this_item_will_belong_to" added="1565349306">Provide a category this item will belong to</phrase>
+		<phrase var_name="please_select_an_image_to_upload" added="1565349306">Please select an image to upload</phrase>
+		<phrase var_name="about_us" added="1565349306">About Us</phrase>
+		<phrase var_name="reviews" added="1565349306">Reviews</phrase>
+		<phrase var_name="photos" added="1565349306">Photos</phrase>
+		<phrase var_name="activities" added="1565349306">Activities</phrase>
+		<phrase var_name="home" added="1565349306">Home</phrase>
+		<phrase var_name="shipping_and_payment" added="1565349306">Shipping and Payment</phrase>
+		<phrase var_name="enter_a_numeric_value_0_means_never_expired" added="1565349306">Enter a numeric value. 0 means never expired</phrase>
+		<phrase var_name="message_seller" added="1565349306">Message Seller</phrase>
+		<phrase var_name="new_stores" added="1565349306">New Stores</phrase>
+		<phrase var_name="store_successfully_added" added="1565349306">Store successfully added</phrase>
+		<phrase var_name="some_issues_happen_please_try_again_thanks" added="1565349306">Some issues happen. Please try again, thanks</phrase>
+		<phrase var_name="unable_to_find_the_store_you_are_looking_for" added="1565349306">Unable to find the store you are looking for.</phrase>
+		<phrase var_name="you_do_not_have_permission_to_edit_this_store" added="1565349306">You do not have permission to edit this store.</phrase>
+		<phrase var_name="store_successfully_updated" added="1565349306">Store successfully updated</phrase>
+		<phrase var_name="upload_a_new_image" added="1565349306">Upload a New Image</phrase>
+		<phrase var_name="photo_s" added="1565349306">Photo(s)</phrase>
+		<phrase var_name="album_s" added="1565349306">Album(s)</phrase>
+		<phrase var_name="upload_cover" added="1565349306">Upload Cover</phrase>
+		<phrase var_name="cover_photo" added="1565349306">Cover Photo</phrase>
+		<phrase var_name="location" added="1565349306">Location</phrase>
+		<phrase var_name="edit_information" added="1565349306">Edit Information</phrase>
+		<phrase var_name="insight" added="1565349306">Insight</phrase>
+		<phrase var_name="edit_info" added="1565349306">Edit Info</phrase>
+		<phrase var_name="manage_products" added="1565349306">Manage Products</phrase>
+		<phrase var_name="sale_of_store" added="1565349306">Sale Of Store</phrase>
+		<phrase var_name="manage_faqs" added="1565349306">Manage FAQs</phrase>
+		<phrase var_name="view_this_store" added="1565349306">View This Store</phrase>
+		<phrase var_name="dashboard" added="1565349306">Dashboard</phrase>
+		<phrase var_name="open" added="1565349306">Open</phrase>
+		<phrase var_name="public" added="1565349306">Public</phrase>
+		<phrase var_name="publish" added="1565349306">Publish</phrase>
+		<phrase var_name="expired" added="1565349306">Expired</phrase>
+		<phrase var_name="setting_default_distance_measurement_unit" added="1565349306"><![CDATA[<title>Distance Measurement Unit</title><info>Select default distance Measurement Unit.</info>]]></phrase>
+		<phrase var_name="mi" added="1565349306">Mile (Mi)</phrase>
+		<phrase var_name="km" added="1565349306">Kilometer (Km)</phrase>
+		<phrase var_name="view_more_abouts_us" added="1565349306">View more about us</phrase>
+		<phrase var_name="keywords" added="1565349306">Keywords</phrase>
+		<phrase var_name="price_from" added="1565349306">Price (from)</phrase>
+		<phrase var_name="price_to" added="1565349306">Price (to)</phrase>
+		<phrase var_name="sort_by" added="1565349306">Sort by</phrase>
+		<phrase var_name="latest" added="1565349306">Latest</phrase>
+		<phrase var_name="newest" added="1565349306">Newest</phrase>
+		<phrase var_name="most_liked" added="1565349306">Most Liked</phrase>
+		<phrase var_name="most_following" added="1565349306">Most Following</phrase>
+		<phrase var_name="a_z" added="1565349306">A-Z</phrase>
+		<phrase var_name="z_a" added="1565349306">Z-A</phrase>
+		<phrase var_name="reset" added="1565349306">Reset</phrase>
+		<phrase var_name="advanced_search" added="1565349306">Adv. Search</phrase>
+		<phrase var_name="note_this_store_is_featured_unlimited_time" added="1565349306">Note: This store is featured unlimited time</phrase>
+		<phrase var_name="note_this_store_is_featured_until_expire_date" added="1565349306">Note: This store is featured until {expire_date}</phrase>
+		<phrase var_name="update" added="1565349306">Update</phrase>
+		<phrase var_name="un_featured" added="1565349306">Un-Featured</phrase>
+		<phrase var_name="radius_km" added="1565349306">Radius (kilometer)</phrase>
+		<phrase var_name="radius_mi" added="1565349306">Radius (mile)</phrase>
+		<phrase var_name="categories_by" added="1565349306">Categories By</phrase>
+		<phrase var_name="all" added="1565349306">All</phrase>
+		<phrase var_name="more_dot_dot_dot" added="1565349306">More...</phrase>
+		<phrase var_name="less" added="1565349306">Less</phrase>
+		<phrase var_name="search_store" added="1565349306">Search Store...</phrase>
+		<phrase var_name="search_store_dot" added="1565349306">Search Store...</phrase>
+		<phrase var_name="most_purchased" added="1565349306">Most Purchased</phrase>
+		<phrase var_name="most_favorited" added="1565349306">Most Favorited</phrase>
+		<phrase var_name="contact_detail" added="1565349306">Contact detail</phrase>
+		<phrase var_name="view_full_map_direction" added="1565349306">View full map direction</phrase>
+		<phrase var_name="created_on" added="1565349306">Created on</phrase>
+		<phrase var_name="by" added="1565349306">by</phrase>
+		<phrase var_name="are_you_sure_want_to_delete_these_stores_this_action_cannot_be_reverted_and_all_products_in_these_stores_will_be_lost" added="1565349306">Are you sure want to delete these stores ? This action cannot be reverted and all products in these stores will be lost!</phrase>
+		<phrase var_name="are_you_sure_want_to_delete_this_store_this_action_cannot_be_reverted_and_all_products_in_store_will_be_lost" added="1565349306">Are you sure want to delete this store ? This action cannot be reverted and all products in store will be lost!</phrase>
+		<phrase var_name="faqs" added="1565349306">FAQs</phrase>
+		<phrase var_name="expand_all" added="1565349306">Expand all</phrase>
+		<phrase var_name="collapse_all" added="1565349306">Collapse all</phrase>
+		<phrase var_name="you_do_not_have_permission_to_feature_this_store" added="1565349306">You do not have permission to feature this store.</phrase>
+		<phrase var_name="you_can_not_close_this_store" added="1565349306">You can not close this store.</phrase>
+		<phrase var_name="you_can_not_reopen_this_store" added="1565349306">You can not reopen this store.</phrase>
+		<phrase var_name="update_store" added="1565349306">Update Store</phrase>
+		<phrase var_name="created_on_time_stamp_by_user_info" added="1565349306">Created on {time_stamp} by {user_info}</phrase>
+		<phrase var_name="follow" added="1565349306">Follow</phrase>
+		<phrase var_name="follows" added="1565349306">Follows</phrase>
+		<phrase var_name="favorite" added="1565349306">Favorite</phrase>
+		<phrase var_name="favorites" added="1565349306">Favorites</phrase>
+		<phrase var_name="order" added="1565349306">Order</phrase>
+		<phrase var_name="orders" added="1565349306">Orders</phrase>
+		<phrase var_name="choose_from_gallery" added="1565349306">Choose from gallery</phrase>
+		<phrase var_name="other_albums" added="1565349306">Other albums</phrase>
+		<phrase var_name="ok" added="1565349306">OK</phrase>
+		<phrase var_name="cancel" added="1565349306">Cancel</phrase>
+		<phrase var_name="no_friends_found" added="1565349306">No friends found.</phrase>
+		<phrase var_name="favorited_by_users" added="1565349306">Favorited by users</phrase>
+		<phrase var_name="following_by_users" added="1565349306">Following by users</phrase>
+		<phrase var_name="all_albums" added="1565349306">All albums</phrase>
+		<phrase var_name="united_album" added="1565349306">United Album</phrase>
+		<phrase var_name="all_photos" added="1565349306">All photos</phrase>
+		<phrase var_name="favorited" added="1565349306">Favorited</phrase>
+		<phrase var_name="following" added="1565349306">Following</phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_store_title" added="1565349306"><![CDATA[{full_name} wrote a comment on your store "{title}".]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_store_message" added="1565349306"><![CDATA[{full_name} wrote a comment on your store "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="unable_to_find_the_store_you_are_trying_to_comment_on" added="1565349306">Unable to find the store you are trying to comment on.</phrase>
+		<phrase var_name="followers" added="1565349306">followers</phrase>
+		<phrase var_name="at" added="1565349306">at</phrase>
+		<phrase var_name="follower" added="1565349306">follower</phrase>
+		<phrase var_name="view_more" added="1565349306">View more</phrase>
+		<phrase var_name="products" added="1565349306">Products</phrase>
+		<phrase var_name="no_stores_found" added="1565349306">No stores found.</phrase>
+		<phrase var_name="featured_store" added="1565349306">Featured Store</phrase>
+		<phrase var_name="manage_stores" added="1565349306">Manage Stores</phrase>
+		<phrase var_name="statistics" added="1565349306">Statistics</phrase>
+		<phrase var_name="settings" added="1565349306">Settings</phrase>
+		<phrase var_name="most_favorite" added="1565349306">Most Favorite</phrase>
+		<phrase var_name="edit_faq" added="1565349306">Edit FAQ</phrase>
+		<phrase var_name="store_name_is_now_temporarily_closed" added="1565349306"><![CDATA[Store "{store_name}" is now temporarily closed.]]></phrase>
+		<phrase var_name="store_name_is_now_reopened" added="1565349306"><![CDATA[Store "{store_name}" is now reopened.]]></phrase>
+		<phrase var_name="user_name_favourited_your_store_store_name" added="1565349306"><![CDATA[{user_name} favourited your store "{store_name}".]]></phrase>
+		<phrase var_name="user_name_followed_your_store_store_name" added="1565349306"><![CDATA[{user_name} followed your store "{store_name}".]]></phrase>
+		<phrase var_name="your_store_store_name_is_approved_by_sender" added="1565349306"><![CDATA[Your store "{store_name}" is approved by {sender}]]></phrase>
+		<phrase var_name="your_store_store_name_is_denied_by_sender" added="1565349306"><![CDATA[Your store "{store_name}" is denied by {sender}]]></phrase>
+		<phrase var_name="your_store_store_name_is_approved_by_sender_for_more_detail_please_view_this_link_link" added="1565349306"><![CDATA[Your store "{store_name}" is approved by {sender}. For more detail, please view this link: {link}]]></phrase>
+		<phrase var_name="your_store_store_name_is_denied_by_sender_for_more_detail_please_view_this_link_link" added="1565349306"><![CDATA[Your store "{store_name}" is denied by {sender}. For more detail, please view this link: {link}]]></phrase>
+		<phrase var_name="your_store_in_site_name_site_is_approved" added="1565349306"><![CDATA[Your store in "{site_name}" site is approved.]]></phrase>
+		<phrase var_name="your_store_in_site_name_site_is_denied" added="1565349306"><![CDATA[Your store in "{site_name}" site is denied.]]></phrase>
+		<phrase var_name="store_store_name_in_site_name_site_is_now_reopened" added="1565349306"><![CDATA[Store "{store_name}" in "{site_name}" site is now reopened.]]></phrase>
+		<phrase var_name="store_store_name_in_site_name_site_is_now_temporarily_closed" added="1565349306"><![CDATA[Store "{store_name}" in "{site_name}" site is now temporarily closed.]]></phrase>
+		<phrase var_name="store_store_name_in_site_name_site_is_now_temporarily_closed_for_more_detail_please_view_this_link_link" added="1565349306"><![CDATA[Store "{store_name}" in "{site_name}" site is now temporarily closed. For more detail, please view this link: {link}]]></phrase>
+		<phrase var_name="store_store_name_in_site_name_site_is_now_reopened_for_more_detail_please_view_this_link_link" added="1565349306"><![CDATA[Store "{store_name}" in "{site_name}" site is now reopened. For more detail, please view this link: {link}]]></phrase>
+		<phrase var_name="buy_new_package" added="1565349306">Buy New Package</phrase>
+		<phrase var_name="1_day" added="1565349306">1 Day</phrase>
+		<phrase var_name="1_week" added="1565349306">1 Week</phrase>
+		<phrase var_name="1_month" added="1565349306">1 Month</phrase>
+		<phrase var_name="don_t_receive" added="1565349306"><![CDATA[Don&#039;t Receive]]></phrase>
+		<phrase var_name="load_more" added="1565349306">Load More</phrase>
+		<phrase var_name="there_are_nothing_to_show" added="1565349306">There are nothing to show.</phrase>
+		<phrase var_name="num_favorite" added="1565349306">favorite</phrase>
+		<phrase var_name="num_favorites" added="1565349306">favorites</phrase>
+		<phrase var_name="warning_package" added="1565349306">We find that your new choice is more limited than the last package. If you still want to choose this package, some pieces of your data will be hidden.
+
+			Although your data can be restore if you reuse the old package later, we recommend using the same package again or use the full-services packages.</phrase>
+		<phrase var_name="warning" added="1565349306">Warning!</phrase>
+		<phrase var_name="continue" added="1565349306">Continue</phrase>
+		<phrase var_name="menu_seller" added="1565349306">Menu Seller</phrase>
+		<phrase var_name="view" added="1565349306">View</phrase>
+		<phrase var_name="views" added="1565349306">Views</phrase>
+		<phrase var_name="share" added="1565349306">Share</phrase>
+		<phrase var_name="shares" added="1565349306">Shares</phrase>
+		<phrase var_name="add_product" added="1565349306">Add Product</phrase>
+		<phrase var_name="no_item_s_found" added="1565349306">No item(s) found</phrase>
+		<phrase var_name="stores_successfully_deleted" added="1565349306">Stores successfully deleted</phrase>
+		<phrase var_name="compare_stores" added="1565349306">Compare Stores</phrase>
+		<phrase var_name="no_stores_to_compare" added="1565349306">No Stores To Compare.</phrase>
+		<phrase var_name="email_content_going_to_expire" added="1565349306"><![CDATA[Your store "{store_name}" package will expire on {date}. Please check and pay for renewal on time or all trading activities of the store will be suspended until you buy new.<br/><a href="{link}">Check now</a>]]></phrase>
+		<phrase var_name="your_store_store_name_package_is_going_to_expire" added="1565349306"><![CDATA[Your store "{store_name}" package is going to expire]]></phrase>
+		<phrase var_name="unfavorite_all_selected" added="1565349306">UnFavorite all selected</phrase>
+		<phrase var_name="unfollow_all_selected" added="1565349306">UnFollow All Selected</phrase>
+		<phrase var_name="stores_successfully_approved" added="1565349306">Stores successfully approved</phrase>
+		<phrase var_name="stores_successfully_featured" added="1565349306">Stores successfully featured</phrase>
+		<phrase var_name="stores_successfully_un_favorite" added="1565349306">Stores successfully un-favorite</phrase>
+		<phrase var_name="stores_successfully_un_follow" added="1565349306">Stores successfully un-follow</phrase>
+		<phrase var_name="stores_successfully_denied" added="1565349306">Stores Successfully Denied</phrase>
+		<phrase var_name="stores_successfully_un_featured" added="1565349306">Stores Successfully Un - Featured</phrase>
+		<phrase var_name="package_applied_at" added="1565349306">Package Applied At</phrase>
+		<phrase var_name="package_expired_at" added="1565349306">Package Expired At</phrase>
+		<phrase var_name="receive_renewal_notification_before_the_exp" added="1565349306">Receive Renewal Notification Before the EXP</phrase>
+		<phrase var_name="you_cannot_post_a_review_without_rating" added="1565349306">You cannot post a review without rating.</phrase>
+		<phrase var_name="shipping_and_payments" added="1565349306">Shipping and Payments</phrase>
+		<phrase var_name="no_albums_found" added="1565349306">No albums found</phrase>
+		<phrase var_name="album_s_successfully_deleted" added="1565349306">Album(s) successfully deleted</phrase>
+		<phrase var_name="receive_renewal_notification_successfully_updated" added="1565349306">Receive Renewal Notification successfully updated</phrase>
+		<phrase var_name="users_liked_gender_own_comment_on_the_store_title" added="1565349306"><![CDATA[{users} liked {gender} own comment on the store "{title}"]]></phrase>
+		<phrase var_name="users_liked_one_of_your_comments_on_the_store_title" added="1565349306"><![CDATA[{users} liked one of your comments on the store "{title}"]]></phrase>
+		<phrase var_name="users_liked_one_on_span_class_drop_data_user_row_full_name_s_span_comments_on_the_store_title" added="1565349306"><![CDATA[{users} liked one on <span class="drop_data_user">{row_full_name}&#039;s</span> comments on the store "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_a_comment_you_made_on_the_store_name" added="1565349306"><![CDATA[{full_name} liked a comment you made on the store "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_comment_on_the_store_title" added="1565349306"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> comment on the store "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_a_comment_you_made_on_the_store_name_to_view_the_comment_thread_follow_the_link_below_a_href_link_link_a" added="1565349306"><![CDATA[{full_name} liked a comment you made on the store "{title}".
+			To view the comment thread follow the link below:
+			<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name_s_span_store_title" added="1565349306"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}&#039;s</span> store "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_gender_own_store_title" added="1565349306"><![CDATA[{users} commented on {gender} own store "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_your_store_title" added="1565349306"><![CDATA[{users} commented on your store "{title}"]]></phrase>
+		<phrase var_name="product_name" added="1565349306">Product Name</phrase>
+		<phrase var_name="store_status" added="1565349306">Store Status</phrase>
+		<phrase var_name="store" added="1565349306">Store</phrase>
+		<phrase var_name="are_you_sure_want_to_delete_this_product_this_action_cannot_be_reverted" added="1565349306">Are you sure want to delete this product. This action cannot be reverted</phrase>
+		<phrase var_name="are_you_sure_want_to_delete_these_products_this_action_cannot_be_reverted" added="1565349306">Are you sure want to delete these products. This action cannot be reverted</phrase>
+		<phrase var_name="you_cannot_close_this_product" added="1565349306">You cannot close this product</phrase>
+		<phrase var_name="you_do_not_have_permission_to_feature_this_product" added="1565349306">You do not have permission to feature this product</phrase>
+		<phrase var_name="paused" added="1565349306">Closed</phrase>
+		<phrase var_name="add_new_product" added="1565349306">Add New Product</phrase>
+		<phrase var_name="you_have_reached_your_creating_product_limit_with_current_your_store_package_please_upgrade_to_other_package" added="1565349306">You have reached your creating product limit with current your store package. Please upgrade to other package.</phrase>
+		<phrase var_name="you_do_not_have_permission_to_create_product_in_this_store" added="1565349306">You do not have permission to create product in this store.</phrase>
+		<phrase var_name="product_type" added="1565349306">Product Type</phrase>
+		<phrase var_name="physical_product" added="1565349306">Physical Product</phrase>
+		<phrase var_name="digital_product" added="1565349306">Digital Product</phrase>
+		<phrase var_name="product_title" added="1565349306">Product Title</phrase>
+		<phrase var_name="uom" added="1565349306">UOM</phrase>
+		<phrase var_name="price_discounts" added="1565349306"><![CDATA[Price & Discounts]]></phrase>
+		<phrase var_name="discount_0_or_blank_mean_no_discount" added="1565349306"><![CDATA[Discount ("0" or blank mean no discount)]]></phrase>
+		<phrase var_name="fixed_amount" added="1565349306">Fixed amount</phrase>
+		<phrase var_name="percentage" added="1565349306">Percentage</phrase>
+		<phrase var_name="enable_inventory" added="1565349306">Enable inventory?</phrase>
+		<phrase var_name="inventory" added="1565349306">Inventory</phrase>
+		<phrase var_name="minimum_order_quantity" added="1565349306">Minimum Order Quantity</phrase>
+		<phrase var_name="discount_period" added="1565349306">Discount Period</phrase>
+		<phrase var_name="no_definition" added="1565349306">No definition</phrase>
+		<phrase var_name="your_store_store_name_is_featured_unlimited_time_by_sender" added="1565349306"><![CDATA[Your store "{store_name}" is featured unlimited time by {sender}]]></phrase>
+		<phrase var_name="your_store_store_name_is_un_featured_by_sender" added="1565349306"><![CDATA[Your store "{store_name}" is un-featured by {sender}]]></phrase>
+		<phrase var_name="maximum_order_quantity_per_user" added="1565349306">Maximum Order Quantity Per User</phrase>
+		<phrase var_name="in_stock_quantity" added="1565349306">In Stock Quantity</phrase>
+		<phrase var_name="auto_temporarily_close_product_when_out_of_stock" added="1565349306">Auto temporarily close product when out of stock</phrase>
+		<phrase var_name="link_download" added="1565349306">Link download</phrase>
+		<phrase var_name="feature_this_product_for" added="1565349306">Feature this product for</phrase>
+		<phrase var_name="fee_to_feature_product_feature_fee_currency_id_for_1_day" added="1565349306">Fee to feature product: {feature_fee} {currency_id} for 1 day</phrase>
+		<phrase var_name="super_deal" added="1565349306">Super Deal</phrase>
+		<phrase var_name="most_liked_products" added="1565349306">Most Liked</phrase>
+		<phrase var_name="like" added="1565349306">Like</phrase>
+		<phrase var_name="liked" added="1565349306">Liked</phrase>
+		<phrase var_name="likes" added="1565349306">Likes</phrase>
+		<phrase var_name="there_are_no_categories" added="1565349306">There are no categories.</phrase>
+		<phrase var_name="comments" added="1565349306">Comments</phrase>
+		<phrase var_name="comment" added="1565349306">Comment</phrase>
+		<phrase var_name="the_product" added="1565349306">The product</phrase>
+		<phrase var_name="please_input_uom_unit_in_admincp" added="1565349306">Please input UOM unit in AdminCP</phrase>
+		<phrase var_name="please_edit_discount_end_date_after_start_date" added="1565349306">Please edit discount end date after start date</phrase>
+		<phrase var_name="recently_viewed_products" added="1565349306">Recently Viewed</phrase>
+		<phrase var_name="un_like" added="1565349306">Un-Like</phrase>
+		<phrase var_name="view_all_deals" added="1565349306">View all deals</phrase>
+		<phrase var_name="product_successfully_added" added="1565349306">Product successfully added</phrase>
+		<phrase var_name="unable_to_find_the_product_you_are_looking_for" added="1565349306">Unable to find the product you are looking for.</phrase>
+		<phrase var_name="you_do_not_have_permission_to_edit_this_product" added="1565349306">You do not have permission to edit this product.</phrase>
+		<phrase var_name="note_this_product_is_featured_unlimited_time" added="1565349306">Note: This product is featured unlimited time</phrase>
+		<phrase var_name="note_this_product_is_featured_until_expire_date" added="1565349306">Note: This product is featured until {expire_date}</phrase>
+		<phrase var_name="product_successfully_updated" added="1565349306">Product successfully updated</phrase>
+		<phrase var_name="your_product_in_site_name_site_is_approved" added="1565349306"><![CDATA[Your product in "{site_name}" site is approved.]]></phrase>
+		<phrase var_name="your_product_product_name_is_approved_by_sender_for_more_detail_please_view_this_link_link" added="1565349306"><![CDATA[Your product "{product_name}" is approved by {sender}. For more detail, please view this link: {link}]]></phrase>
+		<phrase var_name="price_increase" added="1565349306">Price (increase)</phrase>
+		<phrase var_name="price_decrease" added="1565349306">Price (decrease)</phrase>
+		<phrase var_name="added_a_new_product" added="1565349306">added a new product.</phrase>
+		<phrase var_name="discount_price_must_be_less_than_or_equal_to_product_price" added="1565349306">Discount price must be less than or equal to product price.</phrase>
+		<phrase var_name="discount_percentage_must_be_less_than_or_equal_to_100_percent" added="1565349306">Discount percentage must be less than or equal to 100 percent.</phrase>
+		<phrase var_name="from_store" added="1565349306">From</phrase>
+		<phrase var_name="at_store" added="1565349306">At</phrase>
+		<phrase var_name="review" added="1565349306">review</phrase>
+		<phrase var_name="you_do_not_have_permission_to_view_this_product" added="1565349306">You do not have permission to view this product.</phrase>
+		<phrase var_name="no_products_found" added="1565349306">No products found.</phrase>
+		<phrase var_name="most_viewed" added="1565349306">Most Viewed</phrase>
+		<phrase var_name="search_product" added="1565349306">Search Product...</phrase>
+		<phrase var_name="product_dashboard" added="1565349306">Product Dashboard</phrase>
+		<phrase var_name="manage_photos" added="1565349306">Manage Photos</phrase>
+		<phrase var_name="manage_attributes" added="1565349306">Manage Attributes</phrase>
+		<phrase var_name="sales" added="1565349306">Sales</phrase>
+		<phrase var_name="view_this_product" added="1565349306">View This Product</phrase>
+		<phrase var_name="tip_add_store_logo" added="1565349306">Tips: To make your logo look good, we recommend a square/nearly square image with resolution higher than 320 x 320 pixels.</phrase>
+		<phrase var_name="feature_this_product" added="1565349306">Feature This Product</phrase>
+		<phrase var_name="social_store_product" added="1565349306">Social Store (Product)</phrase>
+		<phrase var_name="social_store_store" added="1565349306">Social Store (Store)</phrase>
+		<phrase var_name="overview" added="1565349306">Overview</phrase>
+		<phrase var_name="specifications" added="1565349306">Specifications</phrase>
+		<phrase var_name="click_on_stars_for_rating" added="1565349306">Click on stars for rating</phrase>
+		<phrase var_name="write_your_message" added="1565349306">write your message...</phrase>
+		<phrase var_name="remaining_characters" added="1565349306">Remaining characters</phrase>
+		<phrase var_name="edit_your_review" added="1565349306">Edit your review</phrase>
+		<phrase var_name="post_a_review" added="1565349306">Post a review</phrase>
+		<phrase var_name="thank_you_for_your_review" added="1565349306">Thank You for Your Review</phrase>
+		<phrase var_name="submit_review" added="1565349306">Submit review</phrase>
+		<phrase var_name="all_sales" added="1565349306">All sales</phrase>
+		<phrase var_name="my_stores" added="1565349306">My Stores</phrase>
+		<phrase var_name="no_more_reviews_to_show" added="1565349306">No more reviews to show.</phrase>
+		<phrase var_name="user_name_reviewed_your_store_store_name" added="1565349306"><![CDATA[{user_name} reviewed your store "{store_name}".]]></phrase>
+		<phrase var_name="user_name_reviewed_your_product_store_name" added="1565349306"><![CDATA[{user_name} reviewed your product "{product_name}".]]></phrase>
+		<phrase var_name="no_store_to_compare" added="1565349306">No store to compare</phrase>
+		<phrase var_name="no_product_to_compare" added="1565349306">No product to compare</phrase>
+		<phrase var_name="max_characters" added="1565349306">Max characters</phrase>
+		<phrase var_name="maximum_number_of_photo_can_add_to_each_product" added="1565349306">Maximum number of photo can add to each product</phrase>
+		<phrase var_name="wishlist" added="1565349306">Wishlist</phrase>
+		<phrase var_name="menu_buyer" added="1565349306">Menu Buyer</phrase>
+		<phrase var_name="my_cart" added="1565349306">My Cart</phrase>
+		<phrase var_name="my_wishlist" added="1565349306">My Wishlist</phrase>
+		<phrase var_name="my_orders" added="1565349306">My Orders</phrase>
+		<phrase var_name="upload_photos" added="1565349306">Upload photos</phrase>
+		<phrase var_name="delete_this_image" added="1565349306">Delete This Image</phrase>
+		<phrase var_name="remain_photos_imaximum" added="1565349306">Remain photos: {iMaximum}</phrase>
+		<phrase var_name="the_file_size_limit_is_filesize_if_your_upload_does_not_work_try_uploading_a_smaller_picture" added="1565349306">The file size limit is {filesize}. If your upload does not work, try uploading a smaller picture.</phrase>
+		<phrase var_name="select_image_s" added="1565349306">Select Image(s)</phrase>
+		<phrase var_name="successfully_deleted_photo" added="1565349306">Successfully deleted photo</phrase>
+		<phrase var_name="allow_adding_at_most_imaximum_photos" added="1565349306">Allow adding at most {iMaximum} photos</phrase>
+		<phrase var_name="successfully_set_main_photo_for_this_product" added="1565349306">Successfully set main photo for this product</phrase>
+		<phrase var_name="set_this_photo_as_main_photo_of_this_product" added="1565349306">Set this photo as main photo of this product</phrase>
+		<phrase var_name="new_products" added="1565349306">New Products</phrase>
+		<phrase var_name="others_from_this_store" added="1565349306">Others from this store</phrase>
+		<phrase var_name="related_products" added="1565349306">Related products</phrase>
+		<phrase var_name="user_name_favorited_your_product_product_name" added="1565349306"><![CDATA[{user_name} favorited your product "{product_name}"]]></phrase>
+		<phrase var_name="store_name_sell_a_new_product" added="1565349306">{store_name} sell a new product.</phrase>
+		<phrase var_name="sell_new_product_text" added="1565349306"><![CDATA[Store <a target="_blank" href="{store_link}">{store_name}</a> sell a new product:<div style="max-width: 600px; height: 100px; margin-top:10px"><div style="max-width: 100px; float:left;margin-right:10px"><a target="_blank" href="{product_link}" ><img style="max-width: 100px" src="{product_image}"/><a></div><div style="max-width: 500px"><a target="_blank" href="{product_link}" style="display:block">{product_name}</a><br/>{product_price}</div></div>]]></phrase>
+		<phrase var_name="your_product_product_name_is_approved_by_sender" added="1565349306"><![CDATA[Your product "{product_name}" is approved by {sender}]]></phrase>
+		<phrase var_name="your_product_product_name_is_denied_by_sender_for_more_detail_please_view_this_link_link" added="1565349306"><![CDATA[Your product "{product_name}" is denied by {sender}. For more detail, please view this link: {link}]]></phrase>
+		<phrase var_name="your_product_in_site_name_site_is_denied" added="1565349306"><![CDATA[Your product in "{site_name}" site is denied.]]></phrase>
+		<phrase var_name="your_product_product_name_is_denied_by_sender" added="1565349306"><![CDATA[Your product "{product_name}" is denied by {sender}]]></phrase>
+		<phrase var_name="profile_menu" added="1565349306">Profile Menu</phrase>
+		<phrase var_name="total_results_results_founds" added="1565349306">{total_results} results  founds</phrase>
+		<phrase var_name="attribute_title" added="1565349306">Attribute Title</phrase>
+		<phrase var_name="maximum_limit_characters" added="1565349306">maximum {limit} characters</phrase>
+		<phrase var_name="color_size_options" added="1565349306">Color, size, options...</phrase>
+		<phrase var_name="style_to_show" added="1565349306">Style to show</phrase>
+		<phrase var_name="text_only" added="1565349306">Text only</phrase>
+		<phrase var_name="show_attributes_as_text_ex_red_green" added="1565349306">show attributes as text. Ex: red, green...</phrase>
+		<phrase var_name="image_only" added="1565349306">Image only</phrase>
+		<phrase var_name="show_each_option_for_an_image_if_the_image_is_not_available_it_s_be_shown_with_default_image" added="1565349306"><![CDATA[show each option for an image, if the image is not available, it&#039;s be shown with default image]]></phrase>
+		<phrase var_name="image_with_text" added="1565349306">Image with text</phrase>
+		<phrase var_name="create_attribute" added="1565349306">Create attribute</phrase>
+		<phrase var_name="add_an_element" added="1565349306">Add an Element</phrase>
+		<phrase var_name="invalid_param" added="1565349306">Invalid param</phrase>
+		<phrase var_name="print" added="1565349306">Print</phrase>
+		<phrase var_name="remaining" added="1565349306">Remaining</phrase>
+		<phrase var_name="sold" added="1565349306">Sold</phrase>
+		<phrase var_name="unlimited" added="1565349306">Unlimited</phrase>
+		<phrase var_name="physical_products" added="1565349306">Physical Products</phrase>
+		<phrase var_name="digital_products" added="1565349306">Digital Products</phrase>
+		<phrase var_name="num_more_other_friends" added="1565349306">+{num_more} other friends</phrase>
+		<phrase var_name="also_bought_by_friends" added="1565349306">Also bought by friends</phrase>
+		<phrase var_name="no_users_found" added="1565349306">No users found</phrase>
+		<phrase var_name="start_compare_product" added="1565349306">Start Compare Product</phrase>
+		<phrase var_name="start_compare_store" added="1565349306">Start Compare Store</phrase>
+		<phrase var_name="remove_all_stores_from_compare" added="1565349306">Remove all stores from compare</phrase>
+		<phrase var_name="compare_products" added="1565349306">Compare Products</phrase>
+		<phrase var_name="are_you_sure_to_remove_this_group_and_its_items" added="1565349306">Are you sure to remove this group and its items?</phrase>
+		<phrase var_name="are_you_sure_to_remove_all_stores_from_compare_list" added="1565349306">Are you sure to remove all stores from compare list?</phrase>
+		<phrase var_name="total_price" added="1565349306">Total price</phrase>
+		<phrase var_name="buy_now" added="1565349306">Buy Now</phrase>
+		<phrase var_name="feature_this_product_symbol_feature_fee_day" added="1565349306">Feature this product? ({symbol}{feature_fee}/day)</phrase>
+		<phrase var_name="need_at_least_2_products_to_compare" added="1565349306">Need at least 2 products to compare</phrase>
+		<phrase var_name="minimum_order_quantity_must_be_less_than_or_equal_to_maximum_order_quantity" added="1565349306">Minimum order quantity must be less than or equal to maximum order quantity.</phrase>
+		<phrase var_name="l_day" added="1565349306">day</phrase>
+		<phrase var_name="l_day_s" added="1565349306">days</phrase>
+		<phrase var_name="reviews_product" added="1565349306">reviews</phrase>
+		<phrase var_name="review_product" added="1565349306">review</phrase>
+		<phrase var_name="submit" added="1565349306">Submit</phrase>
+		<phrase var_name="your_email" added="1565349306">Your email</phrase>
+		<phrase var_name="sorry_this_item_is_temporarily_closed_because_it_s_out_of_stock_or_by_some_reasons_leave_your_email_contact_to_be_notified_as_soon_as_it_come_back" added="1565349306"><![CDATA[Sorry! This item is temporarily closed because it&#039;s out of stock or by some reasons.
+Leave your email contact to be notified as soon as it come back]]></phrase>
+		<phrase var_name="un_favorite" added="1565349306">Un-Favorite</phrase>
+		<phrase var_name="un_follow" added="1565349306">Un-Follow</phrase>
+		<phrase var_name="new_arrivals" added="1565349306">New Arrivals</phrase>
+		<phrase var_name="stores_successfully_opened" added="1565349306">Stores successfully opened</phrase>
+		<phrase var_name="stores_successfully_closed" added="1565349306">Stores successfully closed</phrase>
+		<phrase var_name="photos_can_add_to_each_product" added="1565349306">photos can add to each product</phrase>
+		<phrase var_name="number_of_photo_can_add_to_each_product_is_unlimited" added="1565349306">Number of photo can add to each product is unlimited</phrase>
+		<phrase var_name="you_can_not_reopen_this_product" added="1565349306">You can not reopen this product</phrase>
+		<phrase var_name="products_successfully_deleted" added="1565349306">Products successfully deleted</phrase>
+		<phrase var_name="products_successfully_approved" added="1565349306">Products successfully approved</phrase>
+		<phrase var_name="products_successfully_denied" added="1565349306">Products successfully denied</phrase>
+		<phrase var_name="products_successfully_un_featured" added="1565349306">Products successfully un-featured</phrase>
+		<phrase var_name="noti_about_inventory_enable" added="1565349306"><![CDATA[Eventhough the inventory is enable, it only actually work if you don&#039;t have any attribute plan. The plan for attributes will be defined later, at Manage Attributes section.]]></phrase>
+		<phrase var_name="off" added="1565349306">OFF</phrase>
+		<phrase var_name="available_in_stock" added="1565349306">AVAILABLE IN STOCK</phrase>
+		<phrase var_name="remain" added="1565349306">Remain</phrase>
+		<phrase var_name="please_enter_a_value_less_than_or_equal_to_0_total_quantity_of_elements_can_not_exceed_available_in_stock" added="1565349306">Please enter a value less than or equal to {0}. Total quantity of elements can not exceed available in stock</phrase>
+		<phrase var_name="attribute_plan_might_override_your_stock_inventory_that_you_provided_before_at_create_section" added="1565349306">Attribute plan might override your stock inventory that you provided before at create section.</phrase>
+		<phrase var_name="you_may_like" added="1565349306">You May Like</phrase>
+		<phrase var_name="weekly_hot_sellers" added="1565349306">Weekly Hot Sellers</phrase>
+		<phrase var_name="weekly_hot_selling" added="1565349306">Weekly Hot Selling</phrase>
+		<phrase var_name="selling_price" added="1565349306">Selling Price</phrase>
+		<phrase var_name="you_already_added_this_digital_product_to_your_cart" added="1565349306">You already added this digital product to your cart.</phrase>
+		<phrase var_name="you_can_not_add_more_this_item_to_cart_cause_reason" added="1565349306">You can not add more item to cart because it has reached maximum order quantity.</phrase>
+		<phrase var_name="0_or_blank_mean_unlimited" added="1565349306"><![CDATA[Note: "0" or blank mean unlimited]]></phrase>
+		<phrase var_name="add_to_cart" added="1565349306">Add To Cart</phrase>
+		<phrase var_name="attributes" added="1565349306">Attributes</phrase>
+		<phrase var_name="item_price" added="1565349306">Item Price</phrase>
+		<phrase var_name="from_s" added="1565349306">From</phrase>
+		<phrase var_name="buy_all_from_this_store" added="1565349306">Buy all from this store</phrase>
+		<phrase var_name="update_cart" added="1565349306">Update Cart</phrase>
+		<phrase var_name="warning_when_edit_stock_quantity_of_product" added="1565349306"><![CDATA[Stock quantity must be greater than or equal to total quantity of attributes ({total}) or 0 for unlimited. If you want to update quantity of attributes, please follow this <a class="no_ajax" target="_blank" href="{link}">link</a>.]]></phrase>
+		<phrase var_name="warning_change_stock_quantity_have_unlimited_attribute" added="1565349306"><![CDATA[Stock quantity must be 0 or blank for unlimited cause this product have an attribute with unlimited quantity. If you want to update quantity of attributes, please follow this <a class="no_ajax" target="_blank" href="{link}">link</a>.]]></phrase>
+		<phrase var_name="your_store_store_name_package_has_expired" added="1565349306"><![CDATA[Your store "{store_name}" package has expired.]]></phrase>
+		<phrase var_name="email_content_store_is_expired" added="1565349306"><![CDATA[Your store "{store_name}" package has just expired, so its status is changed to Expired. All trading activities of the store will be suspended until you buy a new. <a href={link}>Check now</a>]]></phrase>
+		<phrase var_name="you_select_it" added="1565349306">You Select It</phrase>
+		<phrase var_name="sub_total" added="1565349306">Sub total</phrase>
+		<phrase var_name="are_you_sure_want_to_remove_this_item" added="1565349306">Are you sure want to remove this item?</phrase>
+		<phrase var_name="are_you_sure_want_to_remove_all_items" added="1565349306">Are you sure want to remove all items?</phrase>
+		<phrase var_name="you_already_bought_this_digital_product_please_go_to_detail_of_this_product_to_get_download_link" added="1565349306">You already bought this digital product. Please go to detail of this product to get download link.</phrase>
+		<phrase var_name="download" added="1565349306">Download</phrase>
+		<phrase var_name="product_name_has_minimum_order_is_min_order" added="1565349306"><![CDATA[Product "{product_name}" has minimum order is {min_order}]]></phrase>
+		<phrase var_name="you_do_not_have_permission_to_manage_orders_this_store" added="1565349306">You do not have permission to manage orders this store.</phrase>
+		<phrase var_name="product_product_name_is_now_reopen_to_buy" added="1565349306"><![CDATA[Product "{product_name}" is now reopen to buy.]]></phrase>
+		<phrase var_name="product_product_name_is_now_reopen_and_allow_to_buy_let_s_come_and_get_it_please_follow_this_link_link" added="1565349306"><![CDATA[Product "{product_name}" is now reopen and allow to buy. Let&#039;s come and get it, please follow this link: {link}]]></phrase>
+		<phrase var_name="product_name_is_now_temporarily_closed" added="1565349306"><![CDATA[Product "{product_name}" is now temporarily closed.]]></phrase>
+		<phrase var_name="you_can_add_maximum_quantity_item_s_for_this_product" added="1565349306">You can add maximum {quantity} item(s) for this product.</phrase>
+		<phrase var_name="include_tax_tax" added="1565349306">{tax}% tax incl.</phrase>
+		<phrase var_name="from_l" added="1565349306">From</phrase>
+		<phrase var_name="buy_current_packages_and_publish" added="1565349306">Buy Current Package and Publish</phrase>
+		<phrase var_name="ynsocialstore_product" added="1565349306">Product</phrase>
+		<phrase var_name="your_product_product_name_is_feature_unlimited_by_sender" added="1565349306"><![CDATA[Your product "{product_name}" is feature unlimited by {sender}]]></phrase>
+		<phrase var_name="your_product_product_name_is_un_feature_by_sender" added="1565349306"><![CDATA[Your product "{product_name}" is un-feature by {sender}]]></phrase>
+		<phrase var_name="user_name_commented_gender_own_product" added="1565349306"><![CDATA[{user_name} commented {gender} own product "{title}"]]></phrase>
+		<phrase var_name="user_name_commented_on_your_product_title" added="1565349306"><![CDATA[{user_name} commented on your product "{title}"]]></phrase>
+		<phrase var_name="store_store_name_sell_new_product_product_name" added="1565349306"><![CDATA[Store "{store_name}" sell new product "{product_name}"]]></phrase>
+		<phrase var_name="ynsocialstore_warning_when_not_supported_atrribute" added="1565349306"><![CDATA[This store belong to package which not supported attributes. You can change package of "{store_name}" to another to supported this featured]]></phrase>
+		<phrase var_name="Please fill input data" added="1565349306" />
+		<phrase var_name="You do not have permission on this action" added="1565349306" />
+		<phrase var_name="An element has been successfully deleted" added="1565349306" />
+		<phrase var_name="An element not found or you do not have permission to deleted this element" added="1565349306" />
+		<phrase var_name="Your cart updated successfully" added="1565349306" />
+		<phrase var_name="Bought By Friends" added="1565349306" />
+		<phrase var_name="Cannot review your own product" added="1565349306" />
+		<phrase var_name="Store Info" added="1565349306" />
+		<phrase var_name="Shipping and Payment info" added="1565349306" />
+		<phrase var_name="Cannot review your own store" added="1565349306" />
+		<phrase var_name="Can not find this cart. Please check your cart!" added="1565349306" />
+		<phrase var_name="The number of receivers in this transaction must not exceed 4. Please reduce the amount of stores in your shopping cart to process this payment in one single pay request." added="1565349306" />
+		<phrase var_name="Your orders is successfully" added="1565349306" />
+		<phrase var_name="Payment failed. Please check your cart" added="1565349306" />
+		<phrase var_name="Digital product does not support attributes" added="1565349306" />
+		<phrase var_name="Product Sales" added="1565349306" />
+		<phrase var_name="Your email submitted successfully" added="1565349306" />
+		<phrase var_name="Report this product" added="1565349306" />
+		<phrase var_name="You don't have permission to view this store." added="1565349306" />
+		<phrase var_name="Unable to view this item due to privacy settings" added="1565349306" />
+		<phrase var_name="Sell New Product" added="1565349306" />
+		<phrase var_name="Cannot display this section due to privacy." added="1565349306" />
+		<phrase var_name="opened a new store" added="1565349306" />
+		<phrase var_name="Search products" added="1565349306" />
+		<phrase var_name="View more products" added="1565349306" />
+		<phrase var_name="Social Store (Stores)" added="1565349306" />
+		<phrase var_name="Social Store (Products)" added="1565349306" />
+		<phrase var_name="Users Social Store Count" added="1565349306" />
+		<phrase var_name="Update Users Activity Social Store Points" added="1565349306" />
+		<phrase var_name="Who can open new store?" added="1565349306" />
+		<phrase var_name="Who can view stores?" added="1565349306" />
+		<phrase var_name="Package is not valid" added="1565349306" />
+		<phrase var_name="You do not have permission to edit your review." added="1565349306" />
+		<phrase var_name="Please input an valid email." added="1565349306" />
+		<phrase var_name="This email already submitted to this product." added="1565349306" />
+		<phrase var_name="Please enter a value less than or equal to 9999999999.99" added="1565349306" />
+		<phrase var_name="Attribute title have maximum 16 characters" added="1565349306" />
+		<phrase var_name="Your Cart" added="1565349306" />
+		<phrase var_name="View My Cart" added="1565349306" />
+		<phrase var_name="Remove all item from my cart" added="1565349306" />
+		<phrase var_name="Upload an image" added="1565349306" />
+		<phrase var_name="Quantity" added="1565349306" />
+		<phrase var_name="Number of item with this attribute that you want to sell" added="1565349306" />
+		<phrase var_name="Amount number" added="1565349306" />
+		<phrase var_name="Price Affect" added="1565349306" />
+		<phrase var_name="You have already purchased for this product" added="1565349306" />
+		<phrase var_name="There are no reviews yet" added="1565349306" />
+		<phrase var_name="Show more" added="1565349306" />
+		<phrase var_name="View less" added="1565349306" />
+		<phrase var_name="Hide this FAQ" added="1565349306" />
+		<phrase var_name="Save Change" added="1565349306" />
+		<phrase var_name="Copy code" added="1565349306" />
+		<phrase var_name="Update cover" added="1565349306" />
+		<phrase var_name="Total amount charged by site" added="1565349306" />
+		<phrase var_name="Something you want to tell about this element. Example: Red, Long, Big,... or a code" added="1565349306" />
+		<phrase var_name="If you want to show image for attribute, then upload an image then check the box &quot;Show image&quot;" added="1565349306" />
+		<phrase var_name="Number of item with this certain attribute that you want to sell" added="1565349306" />
+		<phrase var_name="Offer a different price for items with this certain attribute" added="1565349306" />
+		<phrase var_name="Remaining Qty / Total Qty" added="1565349306" />
+		<phrase var_name="Name / Description" added="1565349306" />
+		<phrase var_name="Image / Color" added="1565349306" />
+		<phrase var_name="Affect Price" added="1565349306" />
+		<phrase var_name="item found in" added="1565349306" />
+		<phrase var_name="my cart" added="1565349306" />
+		<phrase var_name="Total quantity" added="1565349306" />
+		<phrase var_name="Total sales" added="1565349306" />
+		<phrase var_name="Total orders" added="1565349306" />
+		<phrase var_name="Total items sold" added="1565349306" />
+		<phrase var_name="Go Back" added="1565349306" />
+		<phrase var_name="Total amount charged" added="1565349306" />
+		<phrase var_name="Followers" added="1565349306" />
+		<phrase var_name="Total sale" added="1565349306" />
+		<phrase var_name="Products sold" added="1565349306" />
+		<phrase var_name="Rating" added="1565349306" />
+		<phrase var_name="No FAQs found." added="1565349306" />
+		<phrase var_name="Add FAQs" added="1565349306" />
+		<phrase var_name="Color" added="1565349306" />
+		<phrase var_name="Question" added="1565349306" />
+		<phrase var_name="Answer" added="1565349306" />
+		<phrase var_name="Embed" added="1565349306" />
+		<phrase var_name="None" added="1565349306" />
+		<phrase var_name="Name/Text/Description" added="1565349306" />
+		<phrase var_name="please_enter_only_digits" added="1565349306">Please enter only digits</phrase>
+		<phrase var_name="fail_to_delete_this_photo" added="1565349306">Fail to delete this photo</phrase>
+		<phrase var_name="setting_ynstore_paging_mode" added="1565349306"><![CDATA[<title>Pagination Style (All Stores)</title><info>Select Pagination Style at Search Stores Page.</info>]]></phrase>
+		<phrase var_name="setting_ynstore_product_paging_mode" added="1565349306"><![CDATA[<title>Pagination Style (All Products)</title><info>Select Pagination Style at Search Products Page.</info>]]></phrase>
+		<phrase var_name="translate_module_ynsocialstore" added="1565349306">Social Store</phrase>
+		<phrase var_name="ynsocialstore_default_photo" added="1565349306">Default photo</phrase>
+		<phrase var_name="change_logo" added="1565349306">Change Logo</phrase>
+		<phrase var_name="controller_ynsocialstore" added="1565349306">Social Store Product</phrase>
+		<phrase var_name="controller_ynsocialstore.index" added="1565349306">Social Store Home</phrase>
+		<phrase var_name="controller_ynsocialstore.add" added="1565349306">Social Store Add New</phrase>
+		<phrase var_name="controller_ynsocialstore.store.sale-of-store" added="1565349306">Social Store Sale</phrase>
+		<phrase var_name="controller_ynsocialstore.store.manage-packages" added="1565349306">Social Store Manage Packages</phrase>
+		<phrase var_name="controller_ynsocialstore.store.insight" added="1565349306">Social Store Insight</phrase>
+		<phrase var_name="controller_ynsocialstore.store" added="1565349306">Social Store Store</phrase>
+		<phrase var_name="controller_ynsocialstore.checkout" added="1565349306">Social Store Checkout</phrase>
+		<phrase var_name="controller_ynsocialstore.my-requests" added="1565349306">Social Store My Requests</phrase>
+		<phrase var_name="controller_ynsocialstore.my-wishlist" added="1565349306">Social Store My Wishlist</phrase>
+		<phrase var_name="controller_ynsocialstore.statistic" added="1565349306">Social Store Statistic</phrase>
+		<phrase var_name="controller_ynsocialstore.product-sales" added="1565349306">Social Store Product Sales</phrase>
+		<phrase var_name="controller_ynsocialstore.product.detail" added="1565349306">Social Store Product Detail</phrase>
+		<phrase var_name="controller_ynsocialstore.manage-photos" added="1565349306">Social Store Manage Photos</phrase>
+		<phrase var_name="controller_ynsocialstore.store.manage-products" added="1565349306">Social Store Manage Products</phrase>
+		<phrase var_name="controller_ynsocialstore.store.manage-faqs" added="1565349306">Social Store Manage FAQs</phrase>
+		<phrase var_name="controller_ynsocialstore.store.add" added="1565349306">Social Store Add New Store</phrase>
+		<phrase var_name="controller_ynsocialstore.all-salses" added="1565349306">Social Store All Salses</phrase>
+		<phrase var_name="controller_ynsocialstore.my-orders" added="1565349306">Social Store My Orders</phrase>
+		<phrase var_name="controller_ynsocialstore.manage-store" added="1565349306">Social Store Manage Store</phrase>
+		<phrase var_name="controller_ynsocialstore.my-cart" added="1565349306">Social Store My Cart</phrase>
+		<phrase var_name="controller_ynsocialstore.store.detail" added="1565349306">Social Store Store Detail</phrase>
+		<phrase var_name="controller_ynsocialstore.manage-attributes" added="1565349306">Social Store Manage Attributes</phrase>
+		<phrase var_name="feature_this_store" added="1565349306">Feature This Store</phrase>
+		<phrase var_name="sale_new_product_in_store" added="1565349306">sell new product in store {link}.</phrase>
+		<phrase var_name="ynsocialstore_sell_new_product" added="1565349306">Sell New Product</phrase>
+		<phrase var_name="ynsocialstore_open_new_store" added="1565349306">Open New Store</phrase>
+		<phrase var_name="ynsocialstore_stores" added="1565349306">Store(s)</phrase>
+		<phrase var_name="ynsocialstore_products" added="1565349306">Product(s)</phrase>
+		<phrase var_name="ynsocialstore_buyer" added="1565349306">Buyer</phrase>
+		<phrase var_name="ynsocialstore_customer_reviews" added="1565349306"><![CDATA[Customer's Reviews]]></phrase>
+		<phrase var_name="ynsocialstore_viewed" added="1565349306">Viewed</phrase>
+		<phrase var_name="ynsocialstore_unfollow" added="1565349306">Unfollow</phrase>
+		<phrase var_name="ynsocialstore_new_arrivals_limit" added="1565349306">New Arrivals/Products Limit</phrase>
+		<phrase var_name="ynsocialstore_new_arrivals_limit_description" added="1565349306">Define the limit of how many new arrivals/products can be displayed. Set 0 will hide this block.</phrase>
+		<phrase var_name="ynsocialstore_new_arrivals_limit_validation" added="1565349306"><![CDATA["New Arrivals/Products Limit" must be greater than or equal to 0.]]></phrase>
+		<phrase var_name="ynsocialstore_weekly_hot_selling_limit" added="1565349306">Weekly Hot Selling Products Limit</phrase>
+		<phrase var_name="ynsocialstore_weekly_hot_selling_limit_description" added="1565349306">Define the limit of how many weekly hot selling products can be displayed.</phrase>
+		<phrase var_name="ynsocialstore_weekly_hot_selling_limit_validation" added="1565349306"><![CDATA["Weekly Hot Selling Products Limit" must be greater than or equal to 0.]]></phrase>
+		<phrase var_name="ynsocialstore_featured_limit" added="1565349306">Featured Products Limit</phrase>
+		<phrase var_name="ynsocialstore_featured_limit_description" added="1565349306">Define the limit of how many featured products can be displayed.</phrase>
+		<phrase var_name="ynsocialstore_featured_limit_validation" added="1565349306"><![CDATA["Featured Products Limit" must be greater than or equal to 0.]]></phrase>
+		<phrase var_name="ynsocialstore_view_product_detail" added="1565349306">View Product Detail</phrase>
+		<phrase var_name="ynsocialstore_featured_stores_limit" added="1565349306">Featured Stores Limit</phrase>
+		<phrase var_name="ynsocialstore_featured_stores_limit_description" added="1565349306">Define the limit of how many featured stores can be displayed.</phrase>
+		<phrase var_name="ynsocialstore_featured_stores_limit_validation" added="1565349306"><![CDATA["Featured Stores Limit" must be greater than or equal to 0.]]></phrase>
+		<phrase var_name="ynsocialstore_weekly_hot_seller_limit" added="1565349306">Weekly Hot Seller Limit</phrase>
+		<phrase var_name="ynsocialstore_weekly_hot_seller_limit_description" added="1565349306">Define the limit of how many weekly hot seller can be displayed.</phrase>
+		<phrase var_name="ynsocialstore_weekly_hot_seller_limit_validation" added="1565349306"><![CDATA["Weekly Hot Seller Limit" must be greater than or equal to 0.]]></phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="string" admin="10" user="10" guest="10" staff="10" module="ynsocialstore" ordering="0">product_commit_fee</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="1" guest="0" staff="0" module="ynsocialstore" ordering="0">auto_approved_store</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="1" guest="0" staff="0" module="ynsocialstore" ordering="0">auto_approved_product</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="1" guest="0" staff="1" module="ynsocialstore" ordering="0">can_delete_own_store</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="0" guest="0" staff="0" module="ynsocialstore" ordering="0">can_delete_other_user_store</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="1" guest="0" staff="1" module="ynsocialstore" ordering="0">can_edit_own_store</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="0" guest="0" staff="0" module="ynsocialstore" ordering="0">can_edit_other_user_store</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="1" guest="0" staff="1" module="ynsocialstore" ordering="0">can_create_store</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="0" guest="0" staff="0" module="ynsocialstore" ordering="0">can_approve_store</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="0" guest="0" staff="0" module="ynsocialstore" ordering="0">can_feature_store</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="0" guest="0" staff="0" module="ynsocialstore" ordering="0">can_feature_own_store</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="1" guest="1" staff="1" module="ynsocialstore" ordering="0">can_view_store</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="1" guest="0" staff="1" module="ynsocialstore" ordering="0">can_post_comment_on_product</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="0" guest="0" staff="0" module="ynsocialstore" ordering="0">can_edit_product_of_other_users</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="1" guest="0" staff="1" module="ynsocialstore" ordering="0">can_edit_own_product</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="0" guest="0" staff="0" module="ynsocialstore" ordering="0">can_approve_product</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="0" guest="0" staff="0" module="ynsocialstore" ordering="0">can_feature_product</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="0" guest="0" staff="0" module="ynsocialstore" ordering="0">can_feature_own_product</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="1" guest="1" staff="1" module="ynsocialstore" ordering="0">can_view_product</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="1" guest="0" staff="1" module="ynsocialstore" ordering="0">can_delete_own_product</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="boolean" admin="1" user="0" guest="0" staff="0" module="ynsocialstore" ordering="0">can_delete_product_of_other_users</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="string" admin="1" user="1" guest="0" staff="1" module="ynsocialstore" ordering="0">points_ynsocialstore_store</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="string" admin="1" user="1" guest="0" staff="1" module="ynsocialstore" ordering="0">points_ynsocialstore_product</setting>
+		<setting is_admin_setting="0" module_id="ynsocialstore" type="string" admin="5" user="5" guest="0" staff="5" module="ynsocialstore" ordering="0">number_store_user_can_create</setting>
+	</user_group_settings>
+</module>

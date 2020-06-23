@@ -1,0 +1,453 @@
+#yntour_admin_position_form {
+	width: 100%;
+}
+#yntour_admin_draggable_wrapper {
+	background: #ccc;
+	height: 500px;
+	position: relative;
+}
+#yntour_admin_draggable_button {
+	background: #c63929;
+	color: white;
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	line-height: 27px;
+	text-align: center;
+	border: 1px solid white;
+	vertical-align: middle;
+	cursor: pointer;
+	display: none;
+}
+
+.yntourguidetooltip {
+	position: absolute;
+	max-width: 450px;
+	min-width: 350px;
+	left: 0;
+	top: 0;
+	background-color: black;
+	color: white;
+	z-index: 9991;
+}
+
+.yntourguidetooltip p {
+	padding: 10px;
+	font-size: 14px;
+	text-shadow: none;
+	font-style: italic;
+}
+
+.yntourguidetooltip_arrow {
+	position: absolute;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+.yntourguidetooltip_arrow_T,
+.yntourguidetooltip_arrow_B,
+.yntourguidetooltip_arrow_TL,
+.yntourguidetooltip_arrow_TR,
+.yntourguidetooltip_arrow_BL,
+.yntourguidetooltip_arrow_BR {
+	width: 13px;
+	height: 7px;
+}
+
+.yntourguidetooltip_arrow_L,
+.yntourguidetooltip_arrow_R,
+.yntourguidetooltip_arrow_LT,
+.yntourguidetooltip_arrow_LB,
+.yntourguidetooltip_arrow_RT,
+.yntourguidetooltip_arrow_RB {
+	width: 7px;
+	height: 13px;
+}
+
+.yntourguidetooltip_arrow_T {
+	background-position: 0px -7px;
+	top: -7px;
+	left: 50%;
+	margin-left: -3.5px;
+}
+
+.yntourguidetooltip_arrow_TL {
+	background-position: 0px -7px;
+	top: -7px;
+	left: 5px;
+}
+
+.yntourguidetooltip_arrow_TR {
+	background-position: 0px -7px;
+	top: -7px;
+	right: 5px;
+}
+
+.yntourguidetooltip_arrow_B {
+	background-position: 0px 0px;
+	bottom: -7px;
+	left: 50%;
+	margin-left: -3.5px;
+}
+
+.yntourguidetooltip_arrow_BL {
+	background-position: 0px 0px;
+	bottom: -7px;
+	left: 5px;
+}
+
+.yntourguidetooltip_arrow_BR {
+	background-position: 0px 0px;
+	bottom: -7px;
+	right: 5px;
+}
+
+.yntourguidetooltip_arrow_L {
+	background-position: -7px 0px;
+	top: 50%;
+	margin-top: -6.5px;
+	left: -7px;
+}
+
+.yntourguidetooltip_arrow_LT {
+	background-position: -7px 0px;
+	top: 5px;
+	left: -7px;
+}
+
+.yntourguidetooltip_arrow_LB {
+	background-position: -7px 0px;
+	bottom: 5px;
+	left: -7px;
+}
+
+.yntourguidetooltip_arrow_R {
+	background-position: 0px 0px;
+	top: 50%;
+	margin-top: -6.5px;
+	right: -7px;
+}
+
+.yntourguidetooltip_arrow_RT {
+	background-position: 0px 0px;
+	top: 5px;
+	right: -7px;
+}
+
+.yntourguidetooltip_arrow_RB {
+	background-position: 0px 0px;
+	bottom: 5px;
+	right: -7px;
+}
+
+.yntourguideoverlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background: #CFCFCF;
+	opacity: 0.2;
+	z-index: 9990;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+
+.yntourguidetourcontrols {
+	position: fixed;
+	top: 20px;
+	right: -300px;
+	background: #616161;
+	color: #fff;
+	text-shadow: 0px 0px 1px #fff;
+	font-size: 14px;
+    padding: 5px 10px 10px 10px;
+/*	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-weight: bold;*/
+	z-index: 9999;
+	opacity: 1;
+}
+
+.yntourguidetourcontrols a,
+.yntour_control_bars a {
+	font-size: 11px;
+	color: #f0f0f0;
+	cursor: pointer;
+	font-weight: normal;
+	text-decoration: underline;
+	margin: 10px;
+}
+
+.yntourguidetourcontrols a:hover {
+	color: #fff;
+}
+
+.yntourguideclose {
+	position: absolute;
+	top: 10px;
+	right: 7px;
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+.yntourguidetourcontrols #activatetourtitle{
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+
+.yntourguidebutton {
+	white-space: nowrap;
+	display: block;
+	float: left;
+	/*margin: 5px 0px 5px 5px;*/
+	cursor: pointer;
+	background: #c63929;
+	border: none;
+	/*background: -moz-linear-gradient(0% 100% 90deg, #891100 0%, #B51700 50%, #c63929 50%, #EE432E 100%);
+	background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #ee432e), color-stop(0.5, #c63929), color-stop(0.5, #b51700), color-stop(1, #891100));
+	border: 1px solid #951100;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333;
+	-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333;
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333;*/
+	color: #fff;
+	font-size: 11px;
+	/*font-weight: bold;*/
+	/*letter-spacing: 1px;*/
+	line-height: 1;
+	padding: 10px 20px;
+	text-align: center;
+	/*text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);*/
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.yntourguidebutton:hover {
+	background: #cb0500;
+	/*background: -moz-linear-gradient(0% 100% 90deg, #a20601 0%, #cb0500 50%, #db504d 50%, #f37873 100%);*/
+	/*background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #f37873), color-stop(0.5, #db504d), color-stop(0.5, #cb0500), color-stop(1, #a20601));*/
+}
+
+.yntourguidebutton:active {
+	background: #b30300;
+	/*background: -moz-linear-gradient(0% 100% 90deg, #700d00 0%, #9c1500 50%, #ad3224 50%, #d43c28 100%);*/
+	/*background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #d43c28), color-stop(0.5, #ad3224), color-stop(0.5, #9c1500), color-stop(1, #700d00));*/
+	/*-moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4);*/
+	/*-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4);*/
+	/*box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4);*/
+}
+
+.yntourguidenav {
+	clear: both;
+	width: 100%;
+	float: left;
+}
+
+#yn_jtour_form_add_slide textarea {
+	width: 100%;
+	z-index: 1001;
+	box-sizing: border-box;
+}
+
+#yn_jtour_form_add_slide div.title {
+	width: 98%;
+	/*margin: 3px 5px 7px 5px;*/
+	margin-bottom: 10px;
+}
+
+#yn_jtour_form_add_slide {
+	text-shadow: none;
+	font-size: 12px;
+}
+
+#yn_jtour_form_add_slide .extra_info {
+	font-size: 12px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.yntour_already_created_step {
+	/*border: 1px solid #951100 !important;*/
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 0 0 3px 3px #951100 !important;
+	-moz-box-shadow: 0 0 3px 3px #951100 !important;
+	box-shadow: 0 0 3px 3px #951100 !important;
+}
+
+.yntour_mouse_active {
+	/*border: 1px solid lightblue !important;*/
+	cursor: crosshair !important;
+	-webkit-box-shadow: 0 0 3px 3px lightblue !important;
+	-moz-box-shadow: 0 0 3px 3px lightblue !important;
+	box-shadow: 0 0 3px 3px lightblue !important;
+}
+
+.yntour_border_active {
+	/*border: 1px solid red !important;*/
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 0 0 3px 3px #951100 !important;
+	-moz-box-shadow: 0 0 3px 3px #951100 !important;
+	box-shadow: 0 0 3px 3px #951100 !important;
+}
+
+.yntour_step_number {
+	background: none repeat scroll 0 0 #951100 !important;
+	color: #FFFFFF !important;
+	cursor: pointer !important;
+	display: block !important;
+	font-weight: bold !important;
+	font-size: 11px !important;
+	left: -1px !important;
+	line-height: 22px !important;
+	padding: 0 7px !important;
+	position: absolute !important;
+	top: -12px !important;
+	z-index: 8888 !important;
+}
+
+.yntour_controll_number {
+	position: relative !important;
+}
+
+.yntourguidetourcontrols title {
+	margin-left: 5px;
+}
+
+.yntourguidetourcontrols input {
+	margin-right: 5px;
+}
+
+div.yntour_control_bars {
+	float: right;
+}
+
+span.yntour_icon{
+	margin-right: 5px;
+}
+div.yntour_control_bars span.yntour_icon img,
+.yntour_control_end a img {
+	width: 20px;
+	margin: 0 1px;
+}
+
+div.yntour_control_bars span.yntour_icon img:hover {
+	cursor: pointer;
+}
+
+.yntour_control_end {
+	float: right;
+}
+
+.yntour_control_end a {
+	font-size: 11px;
+	color: #f0f0f0;
+	cursor: pointer;
+	font-weight: normal;
+	text-decoration: underline;
+	margin-right: 5px;
+}
+
+.yntour_span_color {
+	float: left;
+	width: 125px;
+}
+
+.yntour_bgcolor {
+	height: 12px;
+	width: 12px;
+	margin-left: 4px;
+	float: left;
+}
+
+.yntourguidetourcontrols .extra_info {
+	clear: both;
+	color: white;
+}
+
+.yntour_color_selected,
+div.yntour_bgcolor:hover {
+	border: 1px inset solid lightblue !important;
+	cursor: pointer !important;
+	-webkit-box-shadow: 0 0 2px 2px lightblue !important;
+	-moz-box-shadow: 0 0 2px 2px lightblue !important;
+	box-shadow: 0 0 2px 2px lightblue !important;
+}
+
+.yntour_description_tip {
+	padding: 10px;
+	border-bottom: 1px solid #dedede !important;
+	margin-bottom: 5px;	
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+#tour_tooltip img {
+	max-width: 430px;
+}
+
+.yn_tour_create_new input[type="checkbox"]{
+	margin-bottom: 10px !important; 
+	position: relative;
+	top: 2px;
+}
+
+#createnew_tourguides .title,
+.yntourguidetourcontrols .title{
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.yntourguidebutton#cancelcreatetour{
+	margin-left: 5px;
+}
+
+.yntourguidetourcontrols #yntour_delay{
+	padding: 2px;
+}
+
+.yntg_number:before{
+	display: none;
+}
+
+body.yntour_disable_scroll .yntg_number:before{
+    position: absolute;
+    width: 30px !important;
+    height: 30px !important;
+    background-color: #EC4938 !important;
+    color: #FFF !important;
+    text-indent: 0 !important;
+    line-height: 30px !important;
+    text-align: center;
+    z-index: 999 !important;
+    display: block;
+}
+
+body.yntour_disable_scroll span.yntour_already_created_step.yntg_number{
+	display: block;
+}
+
+body.yntour_disable_scroll{
+	height: 100%;
+	overflow: hidden;
+}
+.yntourguidetourcontrols input[type="text"]{
+    min-height: 40px;
+}
+.yntourguidetourcontrols input[type="text"],
+.yntourguidetourcontrols select,
+.yntourguidetourcontrols textarea{
+        color: #808080;
+        font-size: 14px;
+    
+}
+@media screen and (max-width:1024px){
+    .yntourguidetourcontrols{
+        display:none !important;
+    }
+}

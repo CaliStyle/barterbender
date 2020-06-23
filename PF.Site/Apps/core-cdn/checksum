@@ -1,0 +1,12 @@
+0df10edce0da0f1418643cef22ddfe4a PF.Site/Apps/core-cdn/server/phpfox-cdn-setting.php.new
+824ee6b6f536af32fad9a8a447fb5f48 PF.Site/Apps/core-cdn/server/phpfox-cdn.php
+91d7c035784052517f56d3d2c0f1551e PF.Site/Apps/core-cdn/changelog.md
+6cf4547609938116ef77b31211e98169 PF.Site/Apps/core-cdn/phrase.json
+cc96e8bd8bd5869aa41c79b3cf66ebf2 PF.Site/Apps/core-cdn/hooks/phpfox_assign_ajax_browsing.php
+baf8012e46371b5b7a71c87581937f6f PF.Site/Apps/core-cdn/README.md
+adc99c75fd3b71326c01e9ce3915be63 PF.Site/Apps/core-cdn/Model/CDN.php
+f987a9e31e2657dbb9846e99fe9d3750 PF.Site/Apps/core-cdn/start.php
+030835aaa30f41cfce36de3a385ff993 PF.Site/Apps/core-cdn/views/admincp.html
+3870d581bd0ca2316cfcec85bce21ae0 PF.Site/Apps/core-cdn/views/admincp_server.html
+9770741a53e09d21a89f117404c23f5f PF.Site/Apps/core-cdn/icon.png
+9ec033c946bd8b8ef11bd36643e63df9 PF.Site/Apps/core-cdn/Install.php

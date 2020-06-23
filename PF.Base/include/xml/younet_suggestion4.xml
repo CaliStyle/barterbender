@@ -1,0 +1,93 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_suggestion4</product_id>
+		<is_core>0</is_core>
+		<title>YNC Friend Suggestion and Recommendation</title>
+		<description>by YouNetCo</description>
+		<version>4.02p1</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>https://phpfox.younetco.com/</url>
+		<url_version_check>http://phpfox4.demo.younetco.com/suggestion/</url_version_check>
+		<icon>https://phpfox.younetco.com/files/2015/11/Recommendation-Suggestion.jpg</icon>
+		<vendor>YouNetCo</vendor>
+	</data>
+	<installs>
+		<install>
+			<version>3.01</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('suggestion')." (
+  `suggestion_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `module_id` varchar(512) NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `friend_user_id` int(10) unsigned NOT NULL,
+  `item_id` int(10) unsigned NOT NULL,
+  `processed` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0: no processed; 1:approve; 2:ignore',
+  `url` varchar(512) DEFAULT NULL,
+  `title` varchar(250) DEFAULT NULL,
+  `message` varchar(250) DEFAULT NULL,
+  `time_stamp` int(10) unsigned NOT NULL DEFAULT '0',
+  `prefix` varchar(255) DEFAULT NULL COMMENT 'prefix of feed: pages_ or not',
+  PRIMARY KEY (`suggestion_id`),
+  KEY `time_stamp` (`time_stamp`),
+  KEY `item_id` (`item_id`),
+  KEY `module_id` (`module_id`),
+  KEY `user_id` (`user_id`),
+  KEY `friend_user_id` (`friend_user_id`),
+  KEY `processed` (`processed`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('suggestion_notification')." (
+  `notification_id` int(11) NOT NULL AUTO_INCREMENT,
+  `item_id` int(11) NOT NULL,
+  `module_id` varchar(512) NOT NULL,
+  `suggestion_id` int(11) NOT NULL,
+  PRIMARY KEY (`notification_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.01p3</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('suggestion_setting')." (
+  `user_id` int(10) unsigned NOT NULL,
+  `user_notification` varchar(100) NOT NULL,
+  KEY `user_id` (`user_id`,`user_notification`),
+  KEY `user_id_2` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;");
+
+		$aRows=phpfox::getLib("database")->select('*')->from(phpfox::getT('user_notification'))
+->where('user_notification="'."suggestion.enable_content_suggestion_popup".'" or user_notification="'."suggestion.enable_system_recommendation".'" or user_notification="'."suggestion.enable_system_suggestion".'"')
+->execute('getSlaveRows');
+foreach($aRows as $aRow)
+{
+				phpfox::getLib("database")->insert(phpfox::getT('suggestion_setting'),$aRow);
+				phpfox::getLib("database")->delete(phpfox::getT('user_notification'),'user_id='.$aRow["user_id"].' and user_notification="'.$aRow["user_notification"].'"');
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03</version>
+			<install_code><![CDATA[Phpfox::getLib('database')->query('ALTER TABLE `' . Phpfox::getT('suggestion') . '` CHANGE COLUMN `message` `message` TEXT NULL AFTER `title`;');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.04</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'suggestion/install/version/v3.04.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01p6</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'suggestion/install/version/v4.01p6.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01p7</version>
+			<install_code><![CDATA[include (PHPFOX_DIR_MODULE . 'suggestion/install/version/v4.01p7.php');]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+	</installs>
+	<modules>
+		<module_id>suggestion</module_id>
+	</modules>
+</product>

@@ -1,0 +1,292 @@
+a:5:{s:1:"d";a:22:{s:7:"page_id";s:1:"1";s:7:"user_id";s:1:"0";s:9:"module_id";s:4:"core";s:10:"product_id";s:6:"phpfox";s:9:"is_active";s:1:"1";s:9:"is_phrase";s:1:"0";s:9:"parse_php";s:1:"1";s:12:"has_bookmark";s:1:"0";s:8:"add_view";s:1:"0";s:9:"full_size";s:1:"1";s:5:"title";s:7:"Privacy";s:9:"title_url";s:6:"policy";s:15:"disallow_access";N;s:5:"added";s:10:"1231339063";s:10:"total_view";s:1:"0";s:16:"total_attachment";s:1:"0";s:9:"total_tag";s:1:"0";s:7:"keyword";N;s:11:"description";N;s:4:"text";s:18699:"Privacy Policy
+
+Effective Date: June/1/2014
+
+This privacy policy applies to www.barterbender.com owned and operated by Barter Bender, LLC (“Barter Bender”, “We”, “Us”). This privacy policy describes how Barter Bender collects and uses the personal information you provide on our www.barterbender.com website, applications, services, and tools where this policy is referenced, regardless of how you access or use them. It also describes the choices available to you regarding our use of your personal information and how you can access and update this information.
+By using Barter Bender.com, applications, services and tools and/or registering for a Barter Bender account, you expressly consent to our collection, use, disclosure, and retention of your personal information as described in this Privacy Policy and in our User Agreement.
+
+
+
+U.S.—E.U. Safe Harbor
+
+Barter Bender, LLC complies with the U.S. – E.U. Safe Harbor framework and the U.S. - Swiss Safe Harbor framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal data from European Union member countries and Switzerland. Barter Bender has certified that it adheres to the Safe Harbor Privacy Principles of notice, choice, onward transfer, security, data integrity, access, and enforcement. To learn more about the Safe Harbor program, and to view Barter Bender’s certification, please visithttp://www.export.gov/safeharbor/
+
+1. Information Collection and Use
+
+You can browse our website without telling us who you are or revealing any personal information about yourself. If you register an account with us, you give us your personal information, and therefore you are not anonymous to us. If you choose to provide us with personal information, you consent to the transfer and storage of that information on our servers located in the United States and elsewhere in the world where our facilities are located.
+When you visit our website or use our applications, services, or tools, we collect information sent to us by your computer, mobile phone, or other access device. This information is not associated with you personally unless you sign in as a registered user.
+The following types of personal information is collected from you in order to provide you with the use and access to our website, applications, services and tools:
+• name, email address, phone number, mobile telephone number, physical contact information, and (depending on the service used) financial information, such as credit card or PayPal account numbers
+• transactional information based on your activities on the sites (such as bidding, buying, selling, item and content you generate or that relates to your account), shipping, billing, and other information you provide to purchase or ship an item
+• personal information provided by you to us through correspondence, chats, dispute resolution, or shared by you from other social applications, services, or websites
+• other supplemental information obtained from third parties such as demographic and navigation data; and credit check information, and additional information about you from a credit bureau, as permitted by law
+• information from your interaction with our sites, services, content and advertising, including, but not limited to, device ID, device type, geo-location information, computer and connection information, statistics on page views, traffic to and from the sites, ad data, IP address and standard web log information
+
+How We Use Your Information
+
+Our primary purpose in collecting personal information is to provide you with access to our sites and our services, and provide you with a safe, smooth, efficient, and customized experience. You agree that we may use your personal information to:
+• provide access to the site and the services and customer support you request;
+• resolve disputes, collect fees, and troubleshoot problems;
+• prevent, detect, and investigate potentially prohibited or illegal activities, and enforce our User Agreement;
+• customize, measure, and improve our services, content, and advertising;
+• tell you about our services, deliver targeted marketing, service updates, and promotional offers based on your communication preferences;
+• compare information for accuracy, and verify it with third parties;
+• Contact you at telephone numbers we have collected, by placing a voice call or through text (SMS) or email messaging, as authorized by our User Agreement;
+• provide you other services requested by you as described when we collect the information
+
+2. Information Sharing
+
+We will share your personal information with third parties only in the ways that are described in this privacy policy. We do not distribute your personal information to third parties without your explicit consent.
+
+Your User ID is displayed throughout Barter Bender (and so available to the public), and is connected to all of your Barter Bender activities. Other people can see your bids, purchases, and items for sale, your Garage, Feedback, ratings and associated comments. Notices sent to other community members about suspicious activity and policy violations on our sites refer to User IDs and specific items. So if you associate your name with your User ID, the people to whom you have revealed your name will be able to personally identify your Barter Bender activities.
+
+The profile you create on our site will be publically accessible unless you indicate otherwise when you register your account. You may change the privacy settings of your profile through your account portal at any time.
+
+If you access our sites from a shared computer or a computer in an Internet café, certain information about you, such as your User ID, activity, or reminders from Barter Bender, may also be visible to other individuals who use the computer after you.
+
+Using Information from Barter Bender
+
+Barter Bender enables you to share personal and financial information to complete transactions and collect payments. We encourage you to disclose your privacy practices and respect the privacy of other users. We cannot guarantee the privacy or security of your information and therefore we encourage you to evaluate the privacy and security settings of your trading partner before entering into a transaction and choosing to share your information. To help protect your privacy, we allow only limited access to other users' contact, shipping and financial information to facilitate your transactions and collect payments. When users are involved in a transaction, they may have access to each other's name, User ID, email address and other contact and shipping information. In all cases, you must give other users a chance to remove themselves from your database and a chance to review what information you have collected about them.
+
+You agree to use user information only for:
+
+• Barter Bender transaction-related purposes that are not unsolicited commercial messages;
+• using services offered through Barter Bender (such as escrow, shipping, and fraud complaints), or
+• other purposes to which a user expressly consents.
+
+Our Disclosure of Your Information
+
+We disclose personal information to respond to legal requirements, enforce our policies, respond to claims that a listing or other content violates the rights of others, or protect anyone's rights, property, or safety. Such information will be disclosed in accordance with applicable laws and regulations.
+We may share your information with:
+• Service providers under contract who help with our business operations (such as , fraud investigations, bill collection, site operations and providing customer service). These companies are authorized to use your personal information only as necessary to provide these services to us.
+• Law enforcement, governmental agencies, or authorized third-parties, in response to a verified request, such as a subpoena relating to a criminal investigation or alleged illegal activity or any other activity that may expose us, you, or any other Barter Bender user to legal liability. In such events, we will disclose information relevant and necessary to the investigation or inquiry, such as name, city, state, ZIP code, telephone number, email address, User ID history, IP address, fraud complaints, bidding and listing history, and anything else we may deem relevant to the investigation.
+• Credit bureaus. We may report information about your account to credit bureaus. Late payments, missed payments, or other defaults on your account may be reflected in your credit report.
+• Other business entities, should we plan to merge with or be acquired by that business entity. (Should such a combination occur, we will require that the new combined entity follow this Privacy Policy with respect to your personal information. If your personal information will be used contrary to this policy, you will be notified via email and/or a prominent notice on our Web site of any change in ownership or uses of your personal information, as well as any choices you may have regarding your personal information
+
+Without limiting the above, in an effort to respect your privacy and our ability to keep the community free from bad actors, we will not otherwise disclose your personal information to law enforcement, other government officials, or other third parties without a subpoena, court order or substantially similar legal procedure, except when we believe in good faith that the disclosure of information is necessary to prevent imminent physical harm or financial loss or to report suspected illegal activity.
+
+3. User Access and Choice
+
+If your personal information changes, or if you no longer desire our service, you may correct, update, amend, or delete/remove it by making the change on your user account settings page, by emailing our Customer Support at assistance@barterbender.com or by contacting us by telephone or postal mail at the contact information listed below. We will respond to your request to access within 30 days.
+We will retain your information for as long as your account is active or as needed to provide you services. We will retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.
+
+Opt-out Preferences
+
+If you wish to subscribe to our newsletter(s), during, before or after registration, we will use your name and email address to send a newsletter and other related marketing and promotional emails to you. Out of respect for your privacy, you may choose to stop receiving our newsletter or marketing emails by following the unsubscribe instructions included in these emails, accessing the email preferences in your account settings page or you can contact us at assistance@barterbender.com
+
+We may provide you the opportunity to participate in contests. If you participate, we may request certain personally identifiable information from you. Participation in these contests is completely voluntary and you therefore have a choice whether or not to disclose this information. The requested information typically includes contact information (such as name and shipping address). We use this information to notify contest winners and award prizes.
+
+We may also conduct anonymous surveys to collect user feedback about the site’s features and functionality
+
+4. Tracking Technologies / Cookies
+
+We use "cookies" (small data files placed within your computing device) on certain of our pages to help analyze our web page flow; customize our services, content and advertising; measure promotional effectiveness, and promote trust and safety.
+A few important things you should know about our use of these technologies are:
+• We offer certain features that are available only through the use of cookies.
+• We use cookies to help identify you and maintain your signed-in status.
+• Most cookies are "session cookies," meaning that they are automatically deleted from your hard drive at the end of a session.
+• You can remove persistent cookies by following directions provided in your Internet browser’s “help” directory. You are always free to decline our cookies if your browser permits, although doing so may interfere with your use of some of our sites or services.
+• You may encounter cookies from third parties, known as service providers that we have allowed on our site that assist us with various aspects of our web site operations and services.
+
+Web Beacons / Gifs
+
+We employ a software technology called clear gifs (a.k.a. Web Beacons), that help us better manage content on our site by informing us what content is effective. Clear gifs are tiny graphics with a unique identifier, similar in function to cookies, and are used to track the online movements of Web users. In contrast to cookies, which are stored on a user’s computer hard drive, clear gifs are embedded invisibly on Web pages and are about the size of the period at the end of this sentence. We do not tie the information gathered by clear gifs to our customers’ personal information.
+
+3rd Party Tracking
+
+The use of tracking technologies by our service providers, technology partners or other 3rd party assets (such as social media) on the site is not covered by our privacy policy. These 3rd parties may use cookies, clear gifs, images, and scripts to help them better manage their content on our site. We do not have access or control over these technologies. We do not tie the information gathered to our Customers’ or Users’ personal information information.
+
+Analytics/Log Files
+
+As is true of most web sites, we gather certain information automatically and store it in log files. This information includes internet protocol (IP) addresses, browser type, internet service provider (ISP), referring/exit pages, operating system, date/time stamp, and clickstream data. We use this information, which does not identify individual users, to analyze trends, to administer the site, to track users’ movements around the site and to gather demographic information about our user base as a whole.
+
+We do not link this automatically-collected data to personal information. The presence of log-file based anonymous tracking, analytics programs or JavaScript’s, (such as Google Analytics) requires this disclosure.
+
+Behavioral Targeting / Advertising
+
+We partner with a third party ad network to either display advertising on our Web site or to manage our advertising on other sites. Our ad network partner uses cookies and Web beacons to collect non-personal information about your activities on this and other Web sites to provide you targeted advertising based upon your interests. If you wish to not have this information used for the purpose of serving you targeted ads, you may opt-out by clicking Here. Please note this does not opt you out of being served advertising. You will continue to receive generic ads.
+
+When you view or click on an ad a cookie will be set to help better provide advertisements that may be of interest to you on this and other Web sites. You may opt-out of the use of this cookie by visiting Google’s Advertising and Privacy page.
+
+5. Security
+
+The security of your personal information is important to us. When you enter sensitive information (such as a credit card number) on our order forms, we encrypt the transmission of that information using secure socket layer technology (SSL).
+We follow generally accepted standards to protect the personal information submitted to us, both during transmission and once we receive it. No method of transmission over the Internet, or method of electronic storage, is 100% secure, however. Therefore, we cannot guarantee its absolute security. If you have any questions about security on our Web site, you can contact us at assistance@barterbender.com
+
+6. Additional Information
+
+Links to 3rd Party Sites
+
+Our Site includes links to other Web sites whose privacy practices may differ from those of Barter Bender. If you submit personal information to any of those sites, your information is governed by their privacy policies. We encourage you to carefully read the privacy policy of any Web site you visit.
+
+Referrals
+
+If you chose to use our “Yard Sale” service, you can promote your event by sending emails to friends. If you choose to tell a friend about your event, we will ask you for your friend’s name and email address. We will automatically send your friend a one-time email promoting your event. Barter Bender does not store this information, the sole purpose for which is sending this one-time email.
+Your friend may contact us at assistance@barterbender.com to request that we remove this information from our database.
+
+Social Media Widgets
+
+Our Web site includes Social Media Features, such as the Facebook Like button, Facebook Plug-in, links to our social media pages and Widgets, such as the Share this button or interactive mini-programs that run on our site. These Features may collect your IP address, which page you are visiting on our site, and may set a cookie to enable the Feature to function properly. Social Media Features and Widgets are either hosted by a third party or hosted directly on our Site. Your interactions with these Features are governed by the privacy policy of the company providing it.
+
+Single Sign-On
+
+Barter Bender offers sign-on services that allow you to use third party login credentials to register with the Barter Bender website. We also offer services that allow you to share information with third party social media websites such as Facebook, Google Plus, Twitter, Linked-in, and others.
+You may choose to provide us with access to certain personal information stored by such third party websites. The personal information we have access to varies by website and is controlled by your privacy settings on that website and your consent. By associating an account managed by a third party with your Barter Bender account and authorizing Barter Bender to have access to this information, you agree that Barter Bender may collect, use and store information from these websites in accordance with this Privacy Policy.
+
+Changes To This Policy
+
+We may update this privacy policy to reflect changes to our information practices. If we make any material changes we will notify you by email (sent to the e-mail address specified in your account) or by means of a notice on this Site prior to the change becoming effective. We encourage you to periodically review this page for the latest information on our privacy practices.
+
+7. Contact Us
+
+Barter Bender, LLC
+809 E. Parkridge Ave. Suite 102
+Corona, CA 92879
+Phone (951) 582-3184
+assistance@barterbender.com";s:11:"text_parsed";s:18746:"<?php /* Cached: March 15, 2019, 6:21 am */ ?>
+Privacy Policy
+
+Effective Date: June/1/2014
+
+This privacy policy applies to www.barterbender.com owned and operated by Barter Bender, LLC (“Barter Bender”, “We”, “Us”). This privacy policy describes how Barter Bender collects and uses the personal information you provide on our www.barterbender.com website, applications, services, and tools where this policy is referenced, regardless of how you access or use them. It also describes the choices available to you regarding our use of your personal information and how you can access and update this information.
+By using Barter Bender.com, applications, services and tools and/or registering for a Barter Bender account, you expressly consent to our collection, use, disclosure, and retention of your personal information as described in this Privacy Policy and in our User Agreement.
+
+
+
+U.S.—E.U. Safe Harbor
+
+Barter Bender, LLC complies with the U.S. – E.U. Safe Harbor framework and the U.S. - Swiss Safe Harbor framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal data from European Union member countries and Switzerland. Barter Bender has certified that it adheres to the Safe Harbor Privacy Principles of notice, choice, onward transfer, security, data integrity, access, and enforcement. To learn more about the Safe Harbor program, and to view Barter Bender’s certification, please visithttp://www.export.gov/safeharbor/
+
+1. Information Collection and Use
+
+You can browse our website without telling us who you are or revealing any personal information about yourself. If you register an account with us, you give us your personal information, and therefore you are not anonymous to us. If you choose to provide us with personal information, you consent to the transfer and storage of that information on our servers located in the United States and elsewhere in the world where our facilities are located.
+When you visit our website or use our applications, services, or tools, we collect information sent to us by your computer, mobile phone, or other access device. This information is not associated with you personally unless you sign in as a registered user.
+The following types of personal information is collected from you in order to provide you with the use and access to our website, applications, services and tools:
+• name, email address, phone number, mobile telephone number, physical contact information, and (depending on the service used) financial information, such as credit card or PayPal account numbers
+• transactional information based on your activities on the sites (such as bidding, buying, selling, item and content you generate or that relates to your account), shipping, billing, and other information you provide to purchase or ship an item
+• personal information provided by you to us through correspondence, chats, dispute resolution, or shared by you from other social applications, services, or websites
+• other supplemental information obtained from third parties such as demographic and navigation data; and credit check information, and additional information about you from a credit bureau, as permitted by law
+• information from your interaction with our sites, services, content and advertising, including, but not limited to, device ID, device type, geo-location information, computer and connection information, statistics on page views, traffic to and from the sites, ad data, IP address and standard web log information
+
+How We Use Your Information
+
+Our primary purpose in collecting personal information is to provide you with access to our sites and our services, and provide you with a safe, smooth, efficient, and customized experience. You agree that we may use your personal information to:
+• provide access to the site and the services and customer support you request;
+• resolve disputes, collect fees, and troubleshoot problems;
+• prevent, detect, and investigate potentially prohibited or illegal activities, and enforce our User Agreement;
+• customize, measure, and improve our services, content, and advertising;
+• tell you about our services, deliver targeted marketing, service updates, and promotional offers based on your communication preferences;
+• compare information for accuracy, and verify it with third parties;
+• Contact you at telephone numbers we have collected, by placing a voice call or through text (SMS) or email messaging, as authorized by our User Agreement;
+• provide you other services requested by you as described when we collect the information
+
+2. Information Sharing
+
+We will share your personal information with third parties only in the ways that are described in this privacy policy. We do not distribute your personal information to third parties without your explicit consent.
+
+Your User ID is displayed throughout Barter Bender (and so available to the public), and is connected to all of your Barter Bender activities. Other people can see your bids, purchases, and items for sale, your Garage, Feedback, ratings and associated comments. Notices sent to other community members about suspicious activity and policy violations on our sites refer to User IDs and specific items. So if you associate your name with your User ID, the people to whom you have revealed your name will be able to personally identify your Barter Bender activities.
+
+The profile you create on our site will be publically accessible unless you indicate otherwise when you register your account. You may change the privacy settings of your profile through your account portal at any time.
+
+If you access our sites from a shared computer or a computer in an Internet café, certain information about you, such as your User ID, activity, or reminders from Barter Bender, may also be visible to other individuals who use the computer after you.
+
+Using Information from Barter Bender
+
+Barter Bender enables you to share personal and financial information to complete transactions and collect payments. We encourage you to disclose your privacy practices and respect the privacy of other users. We cannot guarantee the privacy or security of your information and therefore we encourage you to evaluate the privacy and security settings of your trading partner before entering into a transaction and choosing to share your information. To help protect your privacy, we allow only limited access to other users' contact, shipping and financial information to facilitate your transactions and collect payments. When users are involved in a transaction, they may have access to each other's name, User ID, email address and other contact and shipping information. In all cases, you must give other users a chance to remove themselves from your database and a chance to review what information you have collected about them.
+
+You agree to use user information only for:
+
+• Barter Bender transaction-related purposes that are not unsolicited commercial messages;
+• using services offered through Barter Bender (such as escrow, shipping, and fraud complaints), or
+• other purposes to which a user expressly consents.
+
+Our Disclosure of Your Information
+
+We disclose personal information to respond to legal requirements, enforce our policies, respond to claims that a listing or other content violates the rights of others, or protect anyone's rights, property, or safety. Such information will be disclosed in accordance with applicable laws and regulations.
+We may share your information with:
+• Service providers under contract who help with our business operations (such as , fraud investigations, bill collection, site operations and providing customer service). These companies are authorized to use your personal information only as necessary to provide these services to us.
+• Law enforcement, governmental agencies, or authorized third-parties, in response to a verified request, such as a subpoena relating to a criminal investigation or alleged illegal activity or any other activity that may expose us, you, or any other Barter Bender user to legal liability. In such events, we will disclose information relevant and necessary to the investigation or inquiry, such as name, city, state, ZIP code, telephone number, email address, User ID history, IP address, fraud complaints, bidding and listing history, and anything else we may deem relevant to the investigation.
+• Credit bureaus. We may report information about your account to credit bureaus. Late payments, missed payments, or other defaults on your account may be reflected in your credit report.
+• Other business entities, should we plan to merge with or be acquired by that business entity. (Should such a combination occur, we will require that the new combined entity follow this Privacy Policy with respect to your personal information. If your personal information will be used contrary to this policy, you will be notified via email and/or a prominent notice on our Web site of any change in ownership or uses of your personal information, as well as any choices you may have regarding your personal information
+
+Without limiting the above, in an effort to respect your privacy and our ability to keep the community free from bad actors, we will not otherwise disclose your personal information to law enforcement, other government officials, or other third parties without a subpoena, court order or substantially similar legal procedure, except when we believe in good faith that the disclosure of information is necessary to prevent imminent physical harm or financial loss or to report suspected illegal activity.
+
+3. User Access and Choice
+
+If your personal information changes, or if you no longer desire our service, you may correct, update, amend, or delete/remove it by making the change on your user account settings page, by emailing our Customer Support at assistance@barterbender.com or by contacting us by telephone or postal mail at the contact information listed below. We will respond to your request to access within 30 days.
+We will retain your information for as long as your account is active or as needed to provide you services. We will retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.
+
+Opt-out Preferences
+
+If you wish to subscribe to our newsletter(s), during, before or after registration, we will use your name and email address to send a newsletter and other related marketing and promotional emails to you. Out of respect for your privacy, you may choose to stop receiving our newsletter or marketing emails by following the unsubscribe instructions included in these emails, accessing the email preferences in your account settings page or you can contact us at assistance@barterbender.com
+
+We may provide you the opportunity to participate in contests. If you participate, we may request certain personally identifiable information from you. Participation in these contests is completely voluntary and you therefore have a choice whether or not to disclose this information. The requested information typically includes contact information (such as name and shipping address). We use this information to notify contest winners and award prizes.
+
+We may also conduct anonymous surveys to collect user feedback about the site’s features and functionality
+
+4. Tracking Technologies / Cookies
+
+We use "cookies" (small data files placed within your computing device) on certain of our pages to help analyze our web page flow; customize our services, content and advertising; measure promotional effectiveness, and promote trust and safety.
+A few important things you should know about our use of these technologies are:
+• We offer certain features that are available only through the use of cookies.
+• We use cookies to help identify you and maintain your signed-in status.
+• Most cookies are "session cookies," meaning that they are automatically deleted from your hard drive at the end of a session.
+• You can remove persistent cookies by following directions provided in your Internet browser’s “help” directory. You are always free to decline our cookies if your browser permits, although doing so may interfere with your use of some of our sites or services.
+• You may encounter cookies from third parties, known as service providers that we have allowed on our site that assist us with various aspects of our web site operations and services.
+
+Web Beacons / Gifs
+
+We employ a software technology called clear gifs (a.k.a. Web Beacons), that help us better manage content on our site by informing us what content is effective. Clear gifs are tiny graphics with a unique identifier, similar in function to cookies, and are used to track the online movements of Web users. In contrast to cookies, which are stored on a user’s computer hard drive, clear gifs are embedded invisibly on Web pages and are about the size of the period at the end of this sentence. We do not tie the information gathered by clear gifs to our customers’ personal information.
+
+3rd Party Tracking
+
+The use of tracking technologies by our service providers, technology partners or other 3rd party assets (such as social media) on the site is not covered by our privacy policy. These 3rd parties may use cookies, clear gifs, images, and scripts to help them better manage their content on our site. We do not have access or control over these technologies. We do not tie the information gathered to our Customers’ or Users’ personal information information.
+
+Analytics/Log Files
+
+As is true of most web sites, we gather certain information automatically and store it in log files. This information includes internet protocol (IP) addresses, browser type, internet service provider (ISP), referring/exit pages, operating system, date/time stamp, and clickstream data. We use this information, which does not identify individual users, to analyze trends, to administer the site, to track users’ movements around the site and to gather demographic information about our user base as a whole.
+
+We do not link this automatically-collected data to personal information. The presence of log-file based anonymous tracking, analytics programs or JavaScript’s, (such as Google Analytics) requires this disclosure.
+
+Behavioral Targeting / Advertising
+
+We partner with a third party ad network to either display advertising on our Web site or to manage our advertising on other sites. Our ad network partner uses cookies and Web beacons to collect non-personal information about your activities on this and other Web sites to provide you targeted advertising based upon your interests. If you wish to not have this information used for the purpose of serving you targeted ads, you may opt-out by clicking Here. Please note this does not opt you out of being served advertising. You will continue to receive generic ads.
+
+When you view or click on an ad a cookie will be set to help better provide advertisements that may be of interest to you on this and other Web sites. You may opt-out of the use of this cookie by visiting Google’s Advertising and Privacy page.
+
+5. Security
+
+The security of your personal information is important to us. When you enter sensitive information (such as a credit card number) on our order forms, we encrypt the transmission of that information using secure socket layer technology (SSL).
+We follow generally accepted standards to protect the personal information submitted to us, both during transmission and once we receive it. No method of transmission over the Internet, or method of electronic storage, is 100% secure, however. Therefore, we cannot guarantee its absolute security. If you have any questions about security on our Web site, you can contact us at assistance@barterbender.com
+
+6. Additional Information
+
+Links to 3rd Party Sites
+
+Our Site includes links to other Web sites whose privacy practices may differ from those of Barter Bender. If you submit personal information to any of those sites, your information is governed by their privacy policies. We encourage you to carefully read the privacy policy of any Web site you visit.
+
+Referrals
+
+If you chose to use our “Yard Sale” service, you can promote your event by sending emails to friends. If you choose to tell a friend about your event, we will ask you for your friend’s name and email address. We will automatically send your friend a one-time email promoting your event. Barter Bender does not store this information, the sole purpose for which is sending this one-time email.
+Your friend may contact us at assistance@barterbender.com to request that we remove this information from our database.
+
+Social Media Widgets
+
+Our Web site includes Social Media Features, such as the Facebook Like button, Facebook Plug-in, links to our social media pages and Widgets, such as the Share this button or interactive mini-programs that run on our site. These Features may collect your IP address, which page you are visiting on our site, and may set a cookie to enable the Feature to function properly. Social Media Features and Widgets are either hosted by a third party or hosted directly on our Site. Your interactions with these Features are governed by the privacy policy of the company providing it.
+
+Single Sign-On
+
+Barter Bender offers sign-on services that allow you to use third party login credentials to register with the Barter Bender website. We also offer services that allow you to share information with third party social media websites such as Facebook, Google Plus, Twitter, Linked-in, and others.
+You may choose to provide us with access to certain personal information stored by such third party websites. The personal information we have access to varies by website and is controlled by your privacy settings on that website and your consent. By associating an account managed by a third party with your Barter Bender account and authorizing Barter Bender to have access to this information, you agree that Barter Bender may collect, use and store information from these websites in accordance with this Privacy Policy.
+
+Changes To This Policy
+
+We may update this privacy policy to reflect changes to our information practices. If we make any material changes we will notify you by email (sent to the e-mail address specified in your account) or by means of a notice on this Site prior to the change becoming effective. We encourage you to periodically review this page for the latest information on our privacy practices.
+
+7. Contact Us
+
+Barter Bender, LLC
+809 E. Parkridge Ave. Suite 102
+Corona, CA 92879
+Phone (951) 582-3184
+assistance@barterbender.com";s:10:"has_viewed";N;}s:1:"g";a:0:{}s:1:"e";O:8:"DateTime":3:{s:4:"date";s:26:"2019-12-11 05:44:38.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:3:"GMT";}s:1:"m";N;s:1:"c";N;}

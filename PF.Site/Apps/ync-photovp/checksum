@@ -1,0 +1,17 @@
+ad667c50d0e2c0ad137143f15bc41cae PF.Site/Apps/ync-photovp/icon.png
+b6ece61b646f78daa2463d92f968c7fd PF.Site/Apps/ync-photovp/Install.php
+0d7b71f10a46e5c6643d2813539df7aa PF.Site/Apps/ync-photovp/phrase.json
+90d4ad92072a8c4dd4449d38af6f5f2d PF.Site/Apps/ync-photovp/Controller/ViewController.php
+d41d8cd98f00b204e9800998ecf8427e PF.Site/Apps/ync-photovp/README.md
+7bc4e369762e34a26cee0aa454ada58e PF.Site/Apps/ync-photovp/hooks/template_getheader_end.php
+853d18706d0cba871fc75118472dc087 PF.Site/Apps/ync-photovp/hooks/bundle__start.php
+96398a37e00444709166fbec31ccd6c7 PF.Site/Apps/ync-photovp/views/controller/view.html.php
+a6fb7c71fff765e0e4de1f4f3fa756af PF.Site/Apps/ync-photovp/views/block/menu.html.php
+aeca64f79459b1c86d70ffe50a61277b PF.Site/Apps/ync-photovp/assets/images/arrow-collapse.svg
+da91ed3f084bb7a9f308dbd362098d17 PF.Site/Apps/ync-photovp/assets/images/arrow-expand.svg
+f3fee4f35cb108c8187062e386985fe7 PF.Site/Apps/ync-photovp/assets/jscript/screenfull.js
+0bb37cf5ffdeffdf3258c7885b2702ea PF.Site/Apps/ync-photovp/assets/jscript/screenfull.min.js
+672a6a2c616216e121839f9d312263e9 PF.Site/Apps/ync-photovp/assets/autoload.js
+e2480ceda37a39ace033e413d7e6890d PF.Site/Apps/ync-photovp/assets/main.less
+70b00f5b1f06bd806299ff1a44511b67 PF.Site/Apps/ync-photovp/Ajax/Ajax.php
+526e49ed3ff57544aeb281b07843050a PF.Site/Apps/ync-photovp/start.php

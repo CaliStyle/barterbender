@@ -1,0 +1,1 @@
+a:5:{s:1:"d";a:4:{s:4:"shit";s:4:"poop";s:4:"fuck";s:4:"duck";s:7:"fucking";s:7:"ducking";s:3:"ass";s:6:"donkey";}s:1:"g";a:0:{}s:1:"e";O:8:"DateTime":3:{s:4:"date";s:26:"2020-06-05 06:03:36.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:3:"GMT";}s:1:"m";N;s:1:"c";N;}

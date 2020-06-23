@@ -1,0 +1,583 @@
+<module>
+	<data>
+		<module_id>petition</module_id>
+		<product_id>younet_petition4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:4:{s:37:"petition.admin_menu_manage_categories";a:1:{s:3:"url";a:2:{i:0;s:8:"petition";i:1;s:8:"category";}}s:36:"petition.admin_menu_add_new_category";a:1:{s:3:"url";a:3:{i:0;s:8:"petition";i:1;s:8:"category";i:2;s:3:"add";}}s:28:"petition.admin_menu_petition";a:1:{s:3:"url";a:1:{i:0;s:8:"petition";}}s:32:"petition.admin_menu_manage_helps";a:1:{s:3:"url";a:2:{i:0;s:8:"petition";i:1;s:4:"help";}}}]]></menu>
+		<phrase_var_name>module_petition</phrase_var_name>
+		<version>4.01p6</version>
+		<author>YouNet Company</author>
+		<vendor>https://phpfox.younetco.com</vendor>
+		<description>by YouNet Company</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/Petition.jpg</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="petition" parent_var_name="" m_connection="mobile" var_name="menu_petition_petition_532c28d5412dd75bf975fb951c740a30" ordering="139" url_value="petition" version_id="3.3.0" disallow_access="" module="petition" mobile_icon="small_petition.png" />
+		<menu module_id="petition" parent_var_name="" m_connection="petition.index" var_name="menu_petition_create_a_petition_364d3644588809a610f1a66d5d3ec427" ordering="114" url_value="petition.add" version_id="3.0.0" disallow_access="a:1:{i:0;s:1:&quot;3&quot;;}" module="petition" />
+		<menu module_id="petition" parent_var_name="" m_connection="main" var_name="menu_petition_petition_fad58de7366495db4650cfefac2fcd61" ordering="113" url_value="petition" version_id="3.0.1" disallow_access="" module="petition" mobile_icon="pencil" />
+	</menus>
+	<settings>
+		<setting group="" module_id="petition" is_hidden="0" type="integer" var_name="default_signature_goal" phrase_var_name="setting_default_signature_goal" ordering="7" version_id="3.0.1">1000</setting>
+		<setting group="" module_id="petition" is_hidden="0" type="large_string" var_name="friend_letter_template" phrase_var_name="setting_friend_letter_template" ordering="1" version_id="3.0.1"><![CDATA[Friends,
+
+I just created a petition: [title], because I care deeply about this very important issue.
+
+I'm trying to collect [signature_goal] signatures, and I could really use your help.
+
+To read more about what I'm trying to do and to sign my petition, click here:
+[petition_url]
+
+It'll just take a minute!
+
+Once you're done, please ask your friends to sign the petition as well. Grassroots movements succeed because people like you are willing to spread the word!
+
+Thanks]]></setting>
+		<setting group="" module_id="petition" is_hidden="0" type="large_string" var_name="petition_meta_description" phrase_var_name="setting_petition_meta_description" ordering="4" version_id="3.0.1">Read up on the latest petitions on Site Name.</setting>
+		<setting group="" module_id="petition" is_hidden="0" type="large_string" var_name="petition_meta_keywords" phrase_var_name="setting_petition_meta_keywords" ordering="5" version_id="3.0.1">petition, petitions, signatures</setting>
+		<setting group="" module_id="petition" is_hidden="0" type="large_string" var_name="target_letter_template" phrase_var_name="setting_target_letter_template" ordering="2" version_id="3.0.1"><![CDATA[Greetings,
+
+[description]
+
+Sincerely,
+[full_name]]]></setting>
+		<setting group="" module_id="petition" is_hidden="0" type="integer" var_name="preview_length_in_index" phrase_var_name="setting_preview_length_in_index" ordering="6" version_id="3.0.1">200</setting>
+		<setting group="" module_id="petition" is_hidden="0" type="string" var_name="petition_time_stamp" phrase_var_name="setting_petition_time_stamp" ordering="8" version_id="3.0.1">F j, Y</setting>
+		<setting group="" module_id="petition" is_hidden="1" type="boolean" var_name="petition_digg_integration" phrase_var_name="setting_petition_digg_integration" ordering="3" version_id="3.0.1">1</setting>
+		<setting group="" module_id="petition" is_hidden="1" type="integer" var_name="help_icon_file_size_limit" phrase_var_name="setting_help_icon_file_size_limit" ordering="1" version_id="3.0.1">200</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="petition.index" module_id="petition" component="search" location="1" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Search</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="petition.help" module_id="petition" component="direct" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Direct Sign In Help</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="petition.profile" module_id="petition" component="category" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="petition.index" module_id="petition" component="popular" location="3" is_active="1" ordering="5" disallow_access="" can_move="1">
+			<title>Most Popular</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="petition.help" module_id="petition" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Category In Help</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="petition.index" module_id="petition" component="category" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="petition.index" module_id="petition" component="direct" location="3" is_active="1" ordering="4" disallow_access="" can_move="1">
+			<title>Direct Sign</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="petition.index" module_id="petition" component="signed" location="3" is_active="1" ordering="7" disallow_access="" can_move="1">
+			<title>Most Signed</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="petition.index" module_id="petition" component="recent" location="3" is_active="1" ordering="6" disallow_access="" can_move="1">
+			<title>Recent Petitions</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="petition.index" module_id="petition" component="stats" location="1" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Petitions Statistics</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="petition.add" module_id="petition" component="menu_add" location="1" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title></title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="petition" component="index" m_connection="petition.index" module="petition" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="petition" component="popular" m_connection="" module="petition" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="petition" component="images" m_connection="" module="petition" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="petition" component="signed" m_connection="" module="petition" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="petition" component="signnow" m_connection="" module="petition" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="petition" component="help.view" m_connection="petition.help.view" module="petition" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="petition" component="help" m_connection="petition.help" module="petition" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="petition" component="helplogo" m_connection="" module="petition" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="petition" component="petition.profile" m_connection="petition.profile" module="petition" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="petition" component="featured" m_connection="" module="petition" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="petition" component="view" m_connection="petition.view" module="petition" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="petition" component="recent" m_connection="" module="petition" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="petition" component="category" m_connection="" module="petition" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="petition" component="description" m_connection="p" module="petition" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="petition" component="direct" m_connection="" module="petition" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="petition" component="search" m_connection="" module="petition" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="petition" component="stats" m_connection="" module="petition" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="admin_menu_manage_categories" added="1481862378">Manage Categories</phrase>
+		<phrase var_name="admin_menu_add_new_category" added="1481862378">Add New Category</phrase>
+		<phrase var_name="admin_menu_petition" added="1481862378">Manage Petitions</phrase>
+		<phrase var_name="module_petition" added="1481862378">Petition</phrase>
+		<phrase var_name="menu_petition_petition_fad58de7366495db4650cfefac2fcd61" added="1481862378">Petitions</phrase>
+		<phrase var_name="categories" added="1481862378">Categories</phrase>
+		<phrase var_name="provide_petition_category" added="1481862378">Provide a petition category.</phrase>
+		<phrase var_name="category_successfully_added" added="1481862378">Category successfully added.</phrase>
+		<phrase var_name="add_category" added="1481862378">Add New Category</phrase>
+		<phrase var_name="category_details" added="1481862378">Category Details</phrase>
+		<phrase var_name="category" added="1481862378">Category</phrase>
+		<phrase var_name="search_filter" added="1481862378">Search Filter</phrase>
+		<phrase var_name="search_for_text" added="1481862378">Search For Text</phrase>
+		<phrase var_name="search_for_user" added="1481862378">Search for User</phrase>
+		<phrase var_name="created_user" added="1481862378">Created By</phrase>
+		<phrase var_name="display" added="1481862378">Display</phrase>
+		<phrase var_name="sort" added="1481862378">Sort By</phrase>
+		<phrase var_name="tip_delete_category" added="1481862378">Deleting a category will delete all petitions that belong to that category.</phrase>
+		<phrase var_name="no_petition_categories_have_been_created" added="1481862378">No petition categories have been created.</phrase>
+		<phrase var_name="create_one_now" added="1481862378">Create one now</phrase>
+		<phrase var_name="name" added="1481862378">Name</phrase>
+		<phrase var_name="system" added="1481862378">System</phrase>
+		<phrase var_name="created" added="1481862378">Created By</phrase>
+		<phrase var_name="total_petitions" added="1481862378">Total Petitions</phrase>
+		<phrase var_name="none" added="1481862378">None</phrase>
+		<phrase var_name="delete_selected" added="1481862378">Delete Selected</phrase>
+		<phrase var_name="categories_successfully_deleted" added="1481862378">Categories successfully deleted.</phrase>
+		<phrase var_name="most_used" added="1481862378">Most Used</phrase>
+		<phrase var_name="users" added="1481862378">Users</phrase>
+		<phrase var_name="petition" added="1481862378">Petition</phrase>
+		<phrase var_name="all_petitions" added="1481862378">All Petitions</phrase>
+		<phrase var_name="my_petitions" added="1481862378">My Petitions</phrase>
+		<phrase var_name="friends_petitions" added="1481862378"><![CDATA[Friends&#039; Petitions]]></phrase>
+		<phrase var_name="manager_categories" added="1481862378">Manager Categories</phrase>
+		<phrase var_name="user_setting_view_petitions" added="1481862378">Can browse and view the petition module? </phrase>
+		<phrase var_name="full_name_s_petitions" added="1481862378"><![CDATA[{full_name}&#039;s Petitions]]></phrase>
+		<phrase var_name="petition_title" added="1481862378">Petitions</phrase>
+		<phrase var_name="petitions" added="1481862378">Petitions</phrase>
+		<phrase var_name="search_petition_dot" added="1481862378">Search Petitions...</phrase>
+		<phrase var_name="latest" added="1481862378">Latest</phrase>
+		<phrase var_name="most_viewed" added="1481862378">Most Viewed</phrase>
+		<phrase var_name="most_liked" added="1481862378">Most Liked</phrase>
+		<phrase var_name="most_signed" added="1481862378">Most Signed</phrase>
+		<phrase var_name="most_discussed" added="1481862378">Most Discussed</phrase>
+		<phrase var_name="user_setting_can_approve_petitions" added="1481862378">Can approve petitions?</phrase>
+		<phrase var_name="posted_x_by_x_in_x" added="1481862378"><![CDATA[Posted {date} by <a href="{link}">{full_name}</a> in {categories}]]></phrase>
+		<phrase var_name="setting_petition_time_stamp" added="1481862378"><![CDATA[<title>Petition Time Stamp</title><info>Controls time stamps for petition entries.
+
+If using the default setting and the default template the time stamp will appear under each petition title and will look similar to:
+
+Posted June 22, 2008 by Raymond Benc</info>]]></phrase>
+		<phrase var_name="posted_x_by_x" added="1481862378"><![CDATA[Posted {date} by <a href="{link}">{full_name}</a>]]></phrase>
+		<phrase var_name="setting_petition_meta_keywords" added="1481862378"><![CDATA[<title>Petition Meta Keywords</title><info>Meta keywords that will be displayed on sections related to the Petition module.</info>]]></phrase>
+		<phrase var_name="setting_petition_meta_description" added="1481862378"><![CDATA[<title>Petition Meta Description</title><info>Meta description added to pages related to the Petition module.</info>]]></phrase>
+		<phrase var_name="search_petitions_dot" added="1481862378">Search Petitions...</phrase>
+		<phrase var_name="setting_preview_length_in_index" added="1481862378"><![CDATA[<title>How Long is the Preview</title><info>How much of the petition to show on the main petition section?
+
+Value is in characters, i.e.:
+15 would show something like:
+"Lorem ipsum dol..."
+
+0 = No limit</info>]]></phrase>
+		<phrase var_name="delete" added="1481862378">Delete</phrase>
+		<phrase var_name="approve" added="1481862378">Approve</phrase>
+		<phrase var_name="no_petitions_found" added="1481862378">No petitions found.</phrase>
+		<phrase var_name="user_setting_edit_own_petition" added="1481862378">Can edit their own petitions?</phrase>
+		<phrase var_name="user_setting_edit_user_petition" added="1481862378">Can edit petitions added by other users?</phrase>
+		<phrase var_name="user_setting_delete_own_petition" added="1481862378">Can delete their own petition?</phrase>
+		<phrase var_name="user_setting_delete_user_petition" added="1481862378">Can delete petitions added by other users?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_petition" added="1481862378">Are you sure you want to delete this petition?</phrase>
+		<phrase var_name="delete_petition" added="1481862378">Delete Petition</phrase>
+		<phrase var_name="actions" added="1481862378">Actions</phrase>
+		<phrase var_name="moderate" added="1481862378">Moderate</phrase>
+		<phrase var_name="setting_petition_digg_integration" added="1481862378"><![CDATA[<title>Digg Intergration</title><info>Add Digg integration.</info>]]></phrase>
+		<phrase var_name="victory_info" added="1481862378"><![CDATA[[VICTORY]]]></phrase>
+		<phrase var_name="by_full_name" added="1481862378">by {full_name}</phrase>
+		<phrase var_name="unable_to_edit_this_petition" added="1481862378">Unable to edit this petition.</phrase>
+		<phrase var_name="user_setting_add_new_petition" added="1481862378">Can add a new petition?</phrase>
+		<phrase var_name="fill_title_for_petition" added="1481862378">Fill in a title for your petition</phrase>
+		<phrase var_name="add_description_to_petition" added="1481862378">Add description to your petition</phrase>
+		<phrase var_name="petition_successfully_saved" added="1481862378">Petition successfully saved.</phrase>
+		<phrase var_name="your_petition_has_been_closed" added="1481862378">Your petition has been closed</phrase>
+		<phrase var_name="your_petition_has_been_added" added="1481862378">Your petition has been added</phrase>
+		<phrase var_name="user_setting_flood_control_petition" added="1481862378"><![CDATA[How many minutes should a user wait before they can submit another petition?
+
+Note: Setting it to "0" (without quotes) is default and users will not have to wait.]]></phrase>
+		<phrase var_name="your_are_posting_a_little_too_soon" added="1481862378">You are posting a little too soon.</phrase>
+		<phrase var_name="petition_updated" added="1481862378">Petition Updated</phrase>
+		<phrase var_name="editing_petition" added="1481862378">Editing Petition</phrase>
+		<phrase var_name="adding_a_new_petition" added="1481862378">Start a Petition</phrase>
+		<phrase var_name="view_petition" added="1481862378">View Petition</phrase>
+		<phrase var_name="title" added="1481862378">Title</phrase>
+		<phrase var_name="description" added="1481862378">Description</phrase>
+		<phrase var_name="all" added="1481862378">All</phrase>
+		<phrase var_name="public" added="1481862378">Public</phrase>
+		<phrase var_name="personal" added="1481862378">Personal</phrase>
+		<phrase var_name="no_categories_added" added="1481862378">No categories added.</phrase>
+		<phrase var_name="add_a_new_category" added="1481862378">Add a new category...</phrase>
+		<phrase var_name="multiple_categories_with_commas" added="1481862378">Separate multiple categories with commas.</phrase>
+		<phrase var_name="user_setting_can_add_tags_on_petitions" added="1481862378">Can add tags on petitions?</phrase>
+		<phrase var_name="user_setting_can_set_allow_list_on_petitions" added="1481862378"><![CDATA[Can set an "Allow List" when adding a new petition?
+
+Note: This setting will give the user the feature to add a list of users that can view their petition.]]></phrase>
+		<phrase var_name="privacy" added="1481862378">Privacy</phrase>
+		<phrase var_name="control_who_can_see_this_petition" added="1481862378">Control who can see this petition.</phrase>
+		<phrase var_name="user_setting_can_control_comments_on_petitions" added="1481862378">Can control if a user can add a comment on their petition or simply disable comments?</phrase>
+		<phrase var_name="comment_privacy" added="1481862378">Comment Privacy</phrase>
+		<phrase var_name="control_who_can_comment_on_this_petition" added="1481862378">Control who can comment on this petition.</phrase>
+		<phrase var_name="petition_status" added="1481862378">Petition Status</phrase>
+		<phrase var_name="closed" added="1481862378">Closed</phrase>
+		<phrase var_name="victory" added="1481862378">Victory</phrase>
+		<phrase var_name="update" added="1481862378">Update</phrase>
+		<phrase var_name="add" added="1481862378">Add</phrase>
+		<phrase var_name="preview" added="1481862378">Preview</phrase>
+		<phrase var_name="petition_preview" added="1481862378">Petition Preview</phrase>
+		<phrase var_name="petition_not_found" added="1481862378">The petition you are looking for cannot be found.</phrase>
+		<phrase var_name="report_this_petition" added="1481862378">Report this petition</phrase>
+		<phrase var_name="petitions_title" added="1481862378">Petitions</phrase>
+		<phrase var_name="by_user" added="1481862378">by {full_name}</phrase>
+		<phrase var_name="this_petition_is_pending_an_admins_approval" added="1481862378">This petition is pending an Admins approval.</phrase>
+		<phrase var_name="the_petition_you_are_trying_to_approve_is_not_valid" added="1481862378">The petition you are trying to approve is not valid.</phrase>
+		<phrase var_name="petition_approved" added="1481862378">Petition Approved</phrase>
+		<phrase var_name="your_petition_has_been_approved_on_site_title" added="1481862378">Your petition has been approved on {site_title}.</phrase>
+		<phrase var_name="your_petition_has_been_approved_on_site_title_message" added="1481862378"><![CDATA[Your petition has been approved on {site_title}.
+
+To view this petition, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="petition_is_approved" added="1481862378">Petition is approved</phrase>
+		<phrase var_name="petition_s_successfully_approved" added="1481862378">Petition(s) successfully approved.</phrase>
+		<phrase var_name="petition_s_successfully_deleted" added="1481862378">Petition(s) successfully deleted.</phrase>
+		<phrase var_name="petition_deleted" added="1481862378">Petition Deleted</phrase>
+		<phrase var_name="you_have_reached_your_limit" added="1481862378">You have reached your limit.</phrase>
+		<phrase var_name="already_a_category" added="1481862378">This category already exists.</phrase>
+		<phrase var_name="added" added="1481862378">Added</phrase>
+		<phrase var_name="petition_has_been_approved" added="1481862378">Petition has been approved.</phrase>
+		<phrase var_name="pending_petitions" added="1481862378">Pending Petitions</phrase>
+		<phrase var_name="user_setting_points_petition" added="1481862378">Specify how many points the user will receive when adding a new petition.</phrase>
+		<phrase var_name="your_petition_has_been_marked_as_spam" added="1481862378">Your petition has been marked as spam. It will have to be approved by an Admin before it is displayed publicly.</phrase>
+		<phrase var_name="we_do_not_allow_links_in_titles" added="1481862378">We do not allow links in titles.</phrase>
+		<phrase var_name="user_setting_approve_petitions" added="1481862378">Approve petitions before they are publicly displayed?</phrase>
+		<phrase var_name="create_a_petition" added="1481862378">Create a Petition</phrase>
+		<phrase var_name="fill_target_for_petition" added="1481862378">Fill in a target for your petition</phrase>
+		<phrase var_name="target" added="1481862378">Target</phrase>
+		<phrase var_name="enter_the_name_of_an_individual_organization_who_you_want_to_petition" added="1481862378">enter the name of an individual, organization who you want to petition.</phrase>
+		<phrase var_name="target_emails" added="1481862378">Target Emails</phrase>
+		<phrase var_name="separate_multiple_emails_with_a_comma" added="1481862378">Separate multiple emails with a comma</phrase>
+		<phrase var_name="what_do_you_want_them_to_do" added="1481862378">what do you want them to do</phrase>
+		<phrase var_name="petition_goal" added="1481862378">Petition Goal</phrase>
+		<phrase var_name="what_do_you_actually_want_the_target_to_do" added="1481862378">what do you actually want the target to do</phrase>
+		<phrase var_name="fill_in_a_petition_goal_for_your_petition" added="1481862378">Fill in a petition goal for your petition</phrase>
+		<phrase var_name="short_description" added="1481862378">Short Description</phrase>
+		<phrase var_name="provide_a_brief_info_about_this_petition" added="1481862378">provide a brief info about this petition</phrase>
+		<phrase var_name="main_description" added="1481862378">Main Description</phrase>
+		<phrase var_name="why_is_this_important" added="1481862378">why is this important</phrase>
+		<phrase var_name="signature_goal" added="1481862378">Signature Goal</phrase>
+		<phrase var_name="user_setting_can_control_sign_on_petitions" added="1481862378">Can control if a user can sign on their petitions?</phrase>
+		<phrase var_name="sign_privacy" added="1481862378">Sign Privacy</phrase>
+		<phrase var_name="control_who_can_sign_on_this_petition" added="1481862378">Control who can sign on this petition.</phrase>
+		<phrase var_name="create_petition" added="1481862378">Create Petition</phrase>
+		<phrase var_name="petition_end_date" added="1481862378">Petition End Date</phrase>
+		<phrase var_name="send_personal_thank_you_note_to_each_signer_of_this_petition_signature_goal" added="1481862378">Send personal thank-you note to each signer of this petition Signature goal</phrase>
+		<phrase var_name="yes" added="1481862378">Yes</phrase>
+		<phrase var_name="no" added="1481862378">No</phrase>
+		<phrase var_name="help" added="1481862378">Help</phrase>
+		<phrase var_name="signature_goal_must_be_a_integer_number" added="1481862378">Signature Goal must be a integer number.</phrase>
+		<phrase var_name="posted_a_comment_on_gender_petition_a_href_link_title_a" added="1481862378"><![CDATA[posted a comment on {gender} petition <a href="{link}"> {title}</a>]]></phrase>
+		<phrase var_name="posted_a_comment_on_user_name_s_petition_a_href_link_title_a" added="1481862378"><![CDATA[posted a comment on {user_name}'s petition "<a href="{link}">{title}</a>"]]></phrase>
+		<phrase var_name="posted_a_petition" added="1481862378">posted a petition.</phrase>
+		<phrase var_name="full_name_liked_your_petition_title" added="1481862378"><![CDATA[{full_name} liked your petition "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_petition_link_title" added="1481862378"><![CDATA[{full_name} liked your petition "<a href="{link}">{title}</a>"
+To view this petition follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_liked_gender_own_petition_title" added="1481862378"><![CDATA[{users} liked {gender} own petition "{title}"]]></phrase>
+		<phrase var_name="users_liked_your_petition_title" added="1481862378"><![CDATA[{users} liked your petition "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_petition_title" added="1481862378"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}'s</span> petition "{title}"]]></phrase>
+		<phrase var_name="owner_full_name_added_a_new_petition_a_href_title_link_title_a" added="1481862378"><![CDATA[<a href="{user_link}">{owner_full_name}</a> added a new petition "<a href="{title_link}">{title}</a>".]]></phrase>
+		<phrase var_name="user_added_a_new_comment_on_their_own_petition" added="1481862378"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on their own <a href="{title_link}">petition</a>.]]></phrase>
+		<phrase var_name="user_added_a_new_comment_on_your_petition" added="1481862378"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on your <a href="{title_link}">petition</a>.]]></phrase>
+		<phrase var_name="user_name_added_a_new_comment_on_item_user_name_petition" added="1481862378"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on <a href="{item_user_link}">{item_user_name}'s</a> <a href="{title_link}">petition</a>.]]></phrase>
+		<phrase var_name="user_setting_can_post_comment_on_petition" added="1481862378">Can post comments on petitions?</phrase>
+		<phrase var_name="full_name_commented_on_your_petition_title" added="1481862378"><![CDATA[{full_name} commented on your petition "{title}".]]></phrase>
+		<phrase var_name="full_name_commented_on_your_petition_message" added="1481862378"><![CDATA[{full_name} commented on your petition "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_gender_petition" added="1481862378">{full_name} commented on {gender} petition.</phrase>
+		<phrase var_name="full_name_commented_on_gender_petition_message" added="1481862378"><![CDATA[{full_name} commented on {gender} petition "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_petition_full_name_s_petition_message" added="1481862378"><![CDATA[{full_name} commented on {petition_full_name}'s petition "<a href="{link}">{title}</a>".
+To see the comment thread, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="a_href_link_on_name_s_petition_a" added="1481862378"><![CDATA[<a href="{link}">On {name}'s petition</a>]]></phrase>
+		<phrase var_name="unable_to_post_a_comment_on_this_item_due_to_privacy_settings" added="1481862378">Unable to post a comment on this item due to privacy settings.</phrase>
+		<phrase var_name="no_petitions_have_been_added_yet" added="1481862378">No petitions have been added yet.</phrase>
+		<phrase var_name="be_the_first_to_create_a_petition" added="1481862378">Be the First to Create a Petition.</phrase>
+		<phrase var_name="search_petitions" added="1481862378">Petitions</phrase>
+		<phrase var_name="view_more_petitions" added="1481862378">View More Petitions</phrase>
+		<phrase var_name="petition_created_on_time_stamp_by_full_name" added="1481862378"><![CDATA[<a href="{link}">Petition</a> created on {time_stamp} by <a href="{user_link}">{full_name}</a>.]]></phrase>
+		<phrase var_name="manage_petitions" added="1481862378">Manage Petitions</phrase>
+		<phrase var_name="your_petition_petition_title_has_been_approved" added="1481862378"><![CDATA[Your petition "{petition_title}" has been approved.]]></phrase>
+		<phrase var_name="users_commented_on_gender_petition_title" added="1481862378"><![CDATA[{users} commented on {gender} petition "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_your_petition_title" added="1481862378"><![CDATA[{users} commented on your petition "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name" added="1481862378"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}'s</span> petition "{title}"]]></phrase>
+		<phrase var_name="full_name_wrote_a_comment_on_your_petition_petition_title" added="1481862378"><![CDATA[<a href="{user_link}">{full_name}</a> wrote a comment on your petition "<a href="{petition_link}">{petition_title}</a>".]]></phrase>
+		<phrase var_name="petitions_text" added="1481862378">Petitions Text</phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_their_own_a_href_link_petition_a" added="1481862378"><![CDATA[<a href="{user_link}">{full_name}</a> likes {gender} own <a href="{link}">petition</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_a_href_view_user_link_view_full_name_a_s_a_href_link_petition_a" added="1481862378"><![CDATA[<a href="{user_link}">{full_name}</a> likes <a href="{view_user_link}">{view_full_name}</a>'s <a href="{link}">petition</a>.]]></phrase>
+		<phrase var_name="a_href_user_link_full_name_a_likes_your_a_href_link_petition_a" added="1481862378"><![CDATA[<a href="{user_link}">{full_name}</a> likes your <a href="{link}">petition</a>.]]></phrase>
+		<phrase var_name="users_petition_count" added="1481862378">Users Petition Count</phrase>
+		<phrase var_name="update_tags_petitions" added="1481862378">Update Tags (Petitions)</phrase>
+		<phrase var_name="update_users_activity_petition_points" added="1481862378">Update Users Activity Petition Points</phrase>
+		<phrase var_name="your_petition_title_has_been_approved" added="1481862378"><![CDATA[Your petition "{title}" has been approved.]]></phrase>
+		<phrase var_name="full_name_commented_on_petition_full_name_s_petition" added="1481862378"><![CDATA[{full_name} commented on {petition_full_name}'s petition.]]></phrase>
+		<phrase var_name="search" added="1481862378">Search</phrase>
+		<phrase var_name="keywords" added="1481862378">Keywords</phrase>
+		<phrase var_name="on_going" added="1481862378">On going</phrase>
+		<phrase var_name="deadline" added="1481862378">Deadline</phrase>
+		<phrase var_name="status" added="1481862378">Status</phrase>
+		<phrase var_name="featured" added="1481862378">Featured</phrase>
+		<phrase var_name="approved" added="1481862378">Approved</phrase>
+		<phrase var_name="direct_sign" added="1481862378">Direct Sign</phrase>
+		<phrase var_name="signature" added="1481862378">Signature</phrase>
+		<phrase var_name="manage" added="1481862378">Manage</phrase>
+		<phrase var_name="pending" added="1481862378">Pending</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1481862378">Category order successfully updated.</phrase>
+		<phrase var_name="category_successfully_deleted" added="1481862378">Category successfully deleted.</phrase>
+		<phrase var_name="manage_categories" added="1481862378">Manage Categories</phrase>
+		<phrase var_name="are_you_sure_this_will_delete_all_petitions_that_belong_to_this_category_and_cannot_be_undone" added="1481862378">Are you sure? This will delete all petitions that belong to this category and cannot be undone.</phrase>
+		<phrase var_name="select_a_sub_category" added="1481862378">Select a Sub-Category</phrase>
+		<phrase var_name="select" added="1481862378">Select</phrase>
+		<phrase var_name="provide_a_category_name" added="1481862378">Provide a category name.</phrase>
+		<phrase var_name="petition_category_details" added="1481862378">Petition Category Details</phrase>
+		<phrase var_name="parent_category" added="1481862378">Parent Category</phrase>
+		<phrase var_name="update_order" added="1481862378">Update Order</phrase>
+		<phrase var_name="menu_petition_create_a_petition_364d3644588809a610f1a66d5d3ec427" added="1481862378">Create a petition</phrase>
+		<phrase var_name="user_setting_can_feature_petition" added="1481862378">Can feature a petition?</phrase>
+		<phrase var_name="the_petition_you_are_trying_to_feature_is_not_valid" added="1481862378">The petition you are trying to feature is not valid.</phrase>
+		<phrase var_name="edit" added="1481862378">Edit</phrase>
+		<phrase var_name="petition_successfully_approved" added="1481862378">Petition successfully approved.</phrase>
+		<phrase var_name="petition_successfully_deleted" added="1481862378">Petition successfully deleted.</phrase>
+		<phrase var_name="un_feature_this_petition" added="1481862378">Un-Feature this petition.</phrase>
+		<phrase var_name="un_feature" added="1481862378">Un-Feature</phrase>
+		<phrase var_name="feature_this_petition" added="1481862378">Feature this petition.</phrase>
+		<phrase var_name="feature" added="1481862378">Feature</phrase>
+		<phrase var_name="petition_successfully_featured" added="1481862378">Petition successfully featured.</phrase>
+		<phrase var_name="petition_successfully_un_featured" added="1481862378">Petition successfully un-featured.</phrase>
+		<phrase var_name="created_date" added="1481862378">Created date</phrase>
+		<phrase var_name="unset_direct_sign" added="1481862378">Unset direct sign</phrase>
+		<phrase var_name="set_direct_sign" added="1481862378">Set direct sign</phrase>
+		<phrase var_name="view" added="1481862378">View</phrase>
+		<phrase var_name="view_this_petition" added="1481862378">View This Petition</phrase>
+		<phrase var_name="main_info" added="1481862378">Main Info</phrase>
+		<phrase var_name="photos" added="1481862378">Photos</phrase>
+		<phrase var_name="petition_letter" added="1481862378">Petition Letter</phrase>
+		<phrase var_name="user_setting_max_upload_size_petition" added="1481862378"><![CDATA[Max file size for petition photos in kilobits (kb).
+(1000 kb = 1 mb)
+For unlimited add "0" without quotes.]]></phrase>
+		<phrase var_name="select_image_s" added="1481862378">Select Image(s)</phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1481862378">You can upload a JPG, GIF or PNG file.</phrase>
+		<phrase var_name="the_file_size_limit_is_filesize_if_your_upload_does_not_work_try_uploading_a_smaller_picture" added="1481862378">The file size limit is {filesize} kb. If your upload does not work, try uploading a smaller picture.</phrase>
+		<phrase var_name="upload_photo" added="1481862378">Upload Photo</phrase>
+		<phrase var_name="delete_this_image" added="1481862378">Delete this image.</phrase>
+		<phrase var_name="are_you_sure" added="1481862378">Are you sure?</phrase>
+		<phrase var_name="you_do_not_have_sufficient_permission_to_modify_this_petition" added="1481862378">You do not have sufficient permission to modify this petition.</phrase>
+		<phrase var_name="click_to_set_as_default_image" added="1481862378">Click to set as default image</phrase>
+		<phrase var_name="unable_to_find_the_image" added="1481862378">Unable to find the image</phrase>
+		<phrase var_name="most_popular" added="1481862378">Most Popular</phrase>
+		<phrase var_name="from" added="1481862378">From</phrase>
+		<phrase var_name="to" added="1481862378">To</phrase>
+		<phrase var_name="popular_petitions" added="1481862378">Popular Petitions</phrase>
+		<phrase var_name="by" added="1481862378">by</phrase>
+		<phrase var_name="total_sign_signatures" added="1481862378">{total_sign} signature(s)</phrase>
+		<phrase var_name="total_view_views" added="1481862378">{total_view} view(s)</phrase>
+		<phrase var_name="total_like_likes" added="1481862378">{total_like} like(s)</phrase>
+		<phrase var_name="recent_petitions" added="1481862378">Recent Petitions</phrase>
+		<phrase var_name="created_by" added="1481862378">Created by</phrase>
+		<phrase var_name="provide_a_valid_email_address" added="1481862378">Provide a valid email address.</phrase>
+		<phrase var_name="invite_friends" added="1481862378">Invite Friends</phrase>
+		<phrase var_name="successfully_added_photo_s_to_your_petition" added="1481862378">Successfully added photo(s) to your petition.</phrase>
+		<phrase var_name="invite_people_via_email" added="1481862378">Invite People via Email</phrase>
+		<phrase var_name="add_a_personal_message" added="1481862378">Add a personal message</phrase>
+		<phrase var_name="send_invitations" added="1481862378">Send Invitations</phrase>
+		<phrase var_name="new_guest_list" added="1481862378">New Guest List</phrase>
+		<phrase var_name="full_name_invited_you_to_the_title" added="1481862378"><![CDATA[{full_name} invited you to "{title}".
+
+To check out this petition, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_added_the_following_personal_message" added="1481862378">{full_name} added the following personal message</phrase>
+		<phrase var_name="full_name_invited_you_to_the_petition_title" added="1481862378"><![CDATA[{full_name} invited you to the petition "{title}".]]></phrase>
+		<phrase var_name="invite_to_a_petition" added="1481862378">Invite to a Petition</phrase>
+		<phrase var_name="users_invited_you_to_the_petition_title" added="1481862378"><![CDATA[{users} invited you to the petition "{title}"]]></phrase>
+		<phrase var_name="full_name_invited_you_to_an_petition" added="1481862378"><![CDATA[<a href="{user_link}">{full_name}</a> invited you to an petition.]]></phrase>
+		<phrase var_name="who_can_view_browse_petitions" added="1481862378">Who can view/browse petitions?</phrase>
+		<phrase var_name="who_can_share_petitions" added="1481862378">Who can post a petitions?</phrase>
+		<phrase var_name="unable_to_view_this_item_due_to_privacy_settings" added="1481862378">Unable to view this item due to privacy settings.</phrase>
+		<phrase var_name="want_to_support_this_petition" added="1481862378">Want to support this petition ?</phrase>
+		<phrase var_name="start_date" added="1481862378">Start date</phrase>
+		<phrase var_name="end_date" added="1481862378">End date</phrase>
+		<phrase var_name="in" added="1481862378">In</phrase>
+		<phrase var_name="setting_target_letter_template" added="1481862378"><![CDATA[<title>Petition Target Letter Template</title><info>
+You can add some special keyvars:<br/>
+<strong>[title]</strong>: Petition title<br/>
+<strong>[petition_url]</strong>: Petition URL<br/>
+<strong>[full_name]</strong>: Full name of petition owner<br/>
+<strong>[petition_goal]</strong>: Petition goal<br/>
+<strong>[short_description]</strong>: Petition main description<br/>
+<strong>[description]</strong>: Petition short description<br/>
+<strong>[start_time]</strong>: Petition start date<br/>
+<strong>[end_time]</strong>: Petition end date<br/>
+<strong>[total_sign]</strong>: Total signed<br/>
+<strong>[signature_goal]</strong>: Signature goal<br/>
+<strong>[target]</strong>: Target name<br/>
+</info>]]></phrase>
+		<phrase var_name="setting_friend_letter_template" added="1481862378"><![CDATA[<title>Petition Friend Letter Template</title><info>
+		You can add some special keyvars:<br/>
+		<strong>[title]</strong>: Petition title<br/>
+		<strong>[petition_url]</strong>: Petition URL<br/>
+		<strong>[full_name]</strong>: Full name of petition owner<br/>
+		<strong>[petition_goal]</strong>: Petition goal<br/>
+		<strong>[short_description]</strong>: Petition main description<br/>
+		<strong>[description]</strong>: Petition short description<br/>
+		<strong>[start_time]</strong>: Petition start date<br/>
+		<strong>[end_time]</strong>: Petition end date<br/>
+		<strong>[total_sign]</strong>: Total signed<br/>
+		<strong>[signature_goal]</strong>: Signature goal<br/>
+		<strong>[target]</strong>: Target name<br/>
+		</info>]]></phrase>
+		<phrase var_name="subject" added="1481862378">Subject</phrase>
+		<phrase var_name="message" added="1481862378">Message</phrase>
+		<phrase var_name="send_petition_letter_online" added="1481862378">Send petition letter online?</phrase>
+		<phrase var_name="signatures" added="1481862378">Signatures</phrase>
+		<phrase var_name="news" added="1481862378">News</phrase>
+		<phrase var_name="your_location" added="1481862378">Your location</phrase>
+		<phrase var_name="add_a_reason" added="1481862378">Add a reason</phrase>
+		<phrase var_name="why_are_you_signing" added="1481862378">Why are you signing</phrase>
+		<phrase var_name="sign_this_petition" added="1481862378">Sign this petition</phrase>
+		<phrase var_name="sign_petition" added="1481862378">Sign Petition</phrase>
+		<phrase var_name="sign_now" added="1481862378">Sign Now</phrase>
+		<phrase var_name="thank_you_for_signing_the_petition" added="1481862378">Thank you for signing the petition</phrase>
+		<phrase var_name="ok" added="1481862378">Ok</phrase>
+		<phrase var_name="fill_in_a_location" added="1481862378">Fill in a location.</phrase>
+		<phrase var_name="fill_in_a_signature" added="1481862378">Fill in a signature.</phrase>
+		<phrase var_name="successfully_invited_users" added="1481862378">Successfully invited users.</phrase>
+		<phrase var_name="you_are_not_allowed_to_sign_this_petition" added="1481862378">You are not allowed to sign this petition.</phrase>
+		<phrase var_name="post_a_news_update" added="1481862378">Post a news update</phrase>
+		<phrase var_name="news_headline" added="1481862378">News headline</phrase>
+		<phrase var_name="link" added="1481862378">Link</phrase>
+		<phrase var_name="content" added="1481862378">Content</phrase>
+		<phrase var_name="post" added="1481862378">Post</phrase>
+		<phrase var_name="cancel" added="1481862378">Cancel</phrase>
+		<phrase var_name="news_successfully_deleted" added="1481862378">News successfully deleted.</phrase>
+		<phrase var_name="news_successfully_added" added="1481862378">News successfully added.</phrase>
+		<phrase var_name="news_successfully_updated" added="1481862378">News successfully updated.</phrase>
+		<phrase var_name="petitions_stats" added="1481862378">Petitions Statistics</phrase>
+		<phrase var_name="stats" added="1481862378">Stats</phrase>
+		<phrase var_name="admin_menu_manage_helps" added="1481862378">Manage Helps</phrase>
+		<phrase var_name="helps" added="1481862378">Helps</phrase>
+		<phrase var_name="icon" added="1481862378">Icon</phrase>
+		<phrase var_name="there_are_no_news_update" added="1481862378">There are no news update.</phrase>
+		<phrase var_name="there_are_no_petition_signatures" added="1481862378">There are no petition signatures.</phrase>
+		<phrase var_name="manage_helps" added="1481862378">Manage Helps</phrase>
+		<phrase var_name="order" added="1481862378">Order</phrase>
+		<phrase var_name="add_help" added="1481862378">Add Help</phrase>
+		<phrase var_name="no_helps_have_been_added_yet" added="1481862378">No helps have been added yet.</phrase>
+		<phrase var_name="fill_in_a_title_for_help" added="1481862378">Fill in a title for help</phrase>
+		<phrase var_name="fill_in_a_content_for_your_help" added="1481862378">Fill in a content for your help</phrase>
+		<phrase var_name="petition_help_has_been_updated" added="1481862378">Petition help has been updated.</phrase>
+		<phrase var_name="petition_help_successfully_deleted" added="1481862378">Petition help successfully deleted.</phrase>
+		<phrase var_name="featured_petitions" added="1481862378">Featured Petitions</phrase>
+		<phrase var_name="petition_letter_successfully_updated" added="1481862378">Petition letter successfully updated.</phrase>
+		<phrase var_name="send_petition_to_target" added="1481862378">Send Petition to Target</phrase>
+		<phrase var_name="members" added="1481862378">Members</phrase>
+		<phrase var_name="why_they_are_signing" added="1481862378">Why they are signing</phrase>
+		<phrase var_name="on" added="1481862378">on</phrase>
+		<phrase var_name="at" added="1481862378">at</phrase>
+		<phrase var_name="out_of" added="1481862378">out of</phrase>
+		<phrase var_name="more_at" added="1481862378">More at</phrase>
+		<phrase var_name="no_helps_found" added="1481862378">No helps found.</phrase>
+		<phrase var_name="please_add_a_reason" added="1481862378">Please add a reason.</phrase>
+		<phrase var_name="signed" added="1481862378">Signed</phrase>
+		<phrase var_name="invited" added="1481862378">Invited</phrase>
+		<phrase var_name="you_have_already_signed_this_petition" added="1481862378"><![CDATA[You have already "signed" this petition.]]></phrase>
+		<phrase var_name="are_you_sure_you_want_to_sent_petition_letter_to_target" added="1481862378">Are you sure you want to sent petition letter to target?</phrase>
+		<phrase var_name="petition_letter_was_successfully_sent_to_target" added="1481862378">Petition letter was successfully sent to target.</phrase>
+		<phrase var_name="an_error_occurred_and_petition_letter_could_not_be_sent_to_target_please_try_again" added="1481862378">An error occurred and petition letter could not be sent to target. Please try again.</phrase>
+		<phrase var_name="just_signed_this_petition_and_i_want_to_send_the_letter_again" added="1481862378">just signed this petition and I want to send the letter again.</phrase>
+		<phrase var_name="you_can_add_some_special_keyvars" added="1481862378">You can add some special keyvars</phrase>
+		<phrase var_name="special_keyvars" added="1481862378"><![CDATA[[title],[full_name], [petition_goal], [short_description], [description], [start_time], [end_time], [total_sign], [signature_goal], [target]]]></phrase>
+		<phrase var_name="full_name_s_petitions_on_site_title" added="1481862378"><![CDATA[{full_name}&#039;s petitions on {site_title}.]]></phrase>
+		<phrase var_name="unable_to_find_the_petition_you_are_trying_to_edit" added="1481862378">Unable to find the petition you are trying to edit.</phrase>
+		<phrase var_name="an_error_occurred_and_petition_letter_could_not_be_sent_to_target_petition_letter_may_be_blank" added="1481862378">An error occurred and petition letter could not be sent to target. Petition letter may be blank.</phrase>
+		<phrase var_name="please_edit_petition_end_date_before_update_petition_status" added="1481862378">End Date must be equal or later than current date.</phrase>
+		<phrase var_name="set_direct_sign_successfully" added="1481862378">Set direct sign successfully.</phrase>
+		<phrase var_name="unset_direct_sign_successfully" added="1481862378">Unset direct sign successfully.</phrase>
+		<phrase var_name="deadline_has_been_reached" added="1481862378">Deadline has been reached</phrase>
+		<phrase var_name="the_petition_help_you_are_looking_for_cannot_be_found" added="1481862378">The petition help you are looking for cannot be found.</phrase>
+		<phrase var_name="setting_help_icon_file_size_limit" added="1481862378"><![CDATA[<title>File size of uploaded Help Icon</title><info>When users upload an help icon this will be the maximum file size for that picture.</info>]]></phrase>
+		<phrase var_name="required_fields" added="1481862378">Required Fields</phrase>
+		<phrase var_name="submit" added="1481862378">Submit</phrase>
+		<phrase var_name="reset" added="1481862378">Reset</phrase>
+		<phrase var_name="save" added="1481862378">Save</phrase>
+		<phrase var_name="please_provide_a_valid_url" added="1481862378">Please provide a valid URL. Begin with http:// or https://</phrase>
+		<phrase var_name="example_http_www_yourwebsite_com" added="1481862378">Example: http://www.yourwebsite.com/</phrase>
+		<phrase var_name="clear" added="1481862378">Clear</phrase>
+		<phrase var_name="select_all" added="1481862378">Select All</phrase>
+		<phrase var_name="un_select_all" added="1481862378">Un-Select All</phrase>
+		<phrase var_name="view_more" added="1481862378">View More</phrase>
+		<phrase var_name="views" added="1481862378">Views</phrase>
+		<phrase var_name="likes" added="1481862378">Likes</phrase>
+		<phrase var_name="any" added="1481862378">Any</phrase>
+		<phrase var_name="search_by_date" added="1481862378">Search by end date</phrase>
+		<phrase var_name="an_error_occurred_and_invited_message_could_not_be_sent" added="1481862378">An error occurred and invited message could not be sent.</phrase>
+		<phrase var_name="you_have_reached_your_upload_limit" added="1481862378">You have reached your upload limit.</phrase>
+		<phrase var_name="maximum_photos_imaximum" added="1481862378">Maximum photos: {iMaximum}</phrase>
+		<phrase var_name="user_setting_total_photo_upload_limit" added="1481862378">Control how many photos a user can upload to a petition.</phrase>
+		<phrase var_name="unable_to_find_the_petition_you_are_trying_to_delete" added="1481862378">
+Unable to find the petition you are trying to delete.
+</phrase>
+		<phrase var_name="view_all" added="1481862378">View All</phrase>
+		<phrase var_name="petition_end_date_is_just_available_from_current_date_to_the_final_date_of_next_year" added="1481862378">Petition End Date is just available from current date to the final date of next year.</phrase>
+		<phrase var_name="invalid_files" added="1481862378">Invalid file(s):</phrase>
+		<phrase var_name="setting_default_signature_goal" added="1481862378"><![CDATA[<title>Default Signature Goal</title><info>Default Signature Goal</info>]]></phrase>
+		<phrase var_name="notice" added="1481862378">Notice</phrase>
+		<phrase var_name="topic_s" added="1481862378">Topics</phrase>
+		<phrase var_name="page" added="1481862378">Page</phrase>
+		<phrase var_name="click_on_image_to_set_it_as_default" added="1481862378">Click on image to set it as default.</phrase>
+		<phrase var_name="loading" added="1481862378">Loading...</phrase>
+		<phrase var_name="close" added="1481862378">Close</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_news" added="1481862378">Are you sure you want to delete this news?</phrase>
+		<phrase var_name="full_name_tagged_you_in_a_comment_in_a_petition" added="1481862378">{full_name} tagged you in a comment in a petition</phrase>
+		<phrase var_name="publishers_petition" added="1481862378">Petition</phrase>
+		<phrase var_name="menu_petition_petition_532c28d5412dd75bf975fb951c740a30" added="1481862378">Petition</phrase>
+		<phrase var_name="menu_add_new_petition" added="1481862378">Create a Petition</phrase>
+		<phrase var_name="signature_goal_must_be_less_than_4294967295" added="1481862378">Signature goal must be less than 4,294,967,295</phrase>
+		<phrase var_name="category_successfully_updated" added="1481862378">Category successfully updated.</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="petition" type="integer" admin="0" user="0" guest="0" staff="0" module="petition" ordering="19">flood_control_petition</setting>
+		<setting is_admin_setting="0" module_id="petition" type="integer" admin="5" user="5" guest="0" staff="5" module="petition" ordering="13">total_photo_upload_limit</setting>
+		<setting is_admin_setting="0" module_id="petition" type="integer" admin="500" user="500" guest="0" staff="500" module="petition" ordering="12">max_upload_size_petition</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="0" guest="0" staff="1" module="petition" ordering="15">can_feature_petition</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="1" guest="0" staff="1" module="petition" ordering="9">can_control_sign_on_petitions</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="1" guest="0" staff="1" module="petition" ordering="7">can_set_allow_list_on_petitions</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="1" guest="0" staff="1" module="petition" ordering="3">edit_own_petition</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="0" guest="0" staff="1" module="petition" ordering="6">delete_user_petition</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="1" guest="0" staff="1" module="petition" ordering="10">can_post_comment_on_petition</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="1" guest="0" staff="1" module="petition" ordering="5">delete_own_petition</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="0" guest="0" staff="1" module="petition" ordering="4">edit_user_petition</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="1" guest="0" staff="1" module="petition" ordering="1">add_new_petition</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="0" user="0" guest="0" staff="0" module="petition" ordering="16">approve_petitions</setting>
+		<setting is_admin_setting="0" module_id="petition" type="integer" admin="1" user="1" guest="1" staff="1" module="petition" ordering="18">points_petition</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="1" guest="1" staff="1" module="petition" ordering="0">view_petitions</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="1" guest="0" staff="1" module="petition" ordering="8">can_control_comments_on_petitions</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="1" guest="0" staff="1" module="petition" ordering="14">can_add_tags_on_petitions</setting>
+		<setting is_admin_setting="0" module_id="petition" type="boolean" admin="1" user="0" guest="0" staff="1" module="petition" ordering="17">can_approve_petitions</setting>
+	</user_group_settings>
+</module>

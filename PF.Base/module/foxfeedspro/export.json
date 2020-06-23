@@ -1,0 +1,12 @@
+{
+	"paths": {
+		"0": "PF.Base/theme/frontend/default/style/default/image/feed/foxfeedspro.png",
+		"1": "PF.Base/theme/frontend/default/style/default/image/module/foxfeedspro.png",
+		"2": "PF.Base/theme/frontend/default/style/default/image/mobile/foxfeedspro.png",
+		"3": "PF.Base/file/static/themes/modern",
+		"4": "PF.Base/file/static/skins/lightgray",
+		"5": "PF.Base/file/static/plugins",
+		"6": "PF.Base/file/static/langs/readme.md",
+		"7": "PF.Base/module/foxfeedspro"
+	}
+}

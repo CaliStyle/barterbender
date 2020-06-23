@@ -1,0 +1,643 @@
+<module>
+	<data>
+		<module_id>coupon</module_id>
+		<product_id>younet_coupon4</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:11:{s:37:"coupon.admin_menu_user_group_settings";a:1:{s:3:"url";a:2:{i:0;s:6:"coupon";i:1;s:19:"user-group-settings";}}s:32:"coupon.admin_menu_manage_coupons";a:1:{s:3:"url";a:2:{i:0;s:6:"coupon";i:1;s:6:"coupon";}}s:37:"coupon.admin_menu_manage_transactions";a:1:{s:3:"url";a:2:{i:0;s:6:"coupon";i:1;s:11:"transaction";}}s:34:"coupon.admin_menu_add_new_category";a:1:{s:3:"url";a:3:{i:0;s:6:"coupon";i:1;s:8:"category";i:2;s:3:"add";}}s:35:"coupon.admin_menu_manage_categories";a:1:{s:3:"url";a:2:{i:0;s:6:"coupon";i:1;s:8:"category";}}s:31:"coupon.admin_menu_add_new_faq_s";a:1:{s:3:"url";a:3:{i:0;s:6:"coupon";i:1;s:3:"faq";i:2;s:3:"add";}}s:30:"coupon.admin_menu_manage_faq_s";a:1:{s:3:"url";a:2:{i:0;s:6:"coupon";i:1;s:3:"faq";}}s:39:"coupon.admin_menu_manage_email_template";a:1:{s:3:"url";a:2:{i:0;s:6:"coupon";i:1;s:5:"email";}}s:36:"coupon.admin_menu_add_print_template";a:1:{s:3:"url";a:3:{i:0;s:6:"coupon";i:1;s:8:"template";i:2;s:3:"add";}}s:40:"coupon.admin_menu_manage_print_templates";a:1:{s:3:"url";a:2:{i:0;s:6:"coupon";i:1;s:8:"template";}}s:37:"coupon.admin_menu_manage_custom_field";a:1:{s:3:"url";a:2:{i:0;s:6:"coupon";i:1;s:11:"customfield";}}}]]></menu>
+		<phrase_var_name>module_coupon_low</phrase_var_name>
+		<version>4.02p4</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/10/coupon.jpg</apps_icon>
+	</data>
+	<menus>
+		<menu module_id="coupon" parent_var_name="" m_connection="coupon" var_name="menu_coupon_create_a_new_coupon_1e814c9c7e7f6102ce74fe1cd53bdc48" ordering="134" url_value="coupon.add" version_id="3.4.1" disallow_access="" module="coupon" />
+		<menu module_id="coupon" parent_var_name="" m_connection="main" var_name="menu_coupon_coupon_fad58de7366495db4650cfefac2fcd61" ordering="133" url_value="coupon" version_id="3.4.1" disallow_access="" module="coupon" mobile_icon="cart-arrow-down" />
+		<menu module_id="coupon" parent_var_name="" m_connection="mobile" var_name="menu_coupon_coupon_532c28d5412dd75bf975fb951c740a30" ordering="135" url_value="coupon" version_id="3.7.5" disallow_access="" module="coupon" mobile_icon="coupon.png" />
+	</menus>
+	<settings>
+		<setting group="" module_id="coupon" is_hidden="0" type="drop" var_name="paging_mode" phrase_var_name="setting_paging_mode" ordering="1" version_id="4.6.0"><![CDATA[a:2:{s:7:"default";s:10:"pagination";s:6:"values";a:3:{i:0;s:10:"pagination";i:1;s:9:"next_prev";i:2;s:8:"loadmore";}}]]></setting>
+		<setting group="" module_id="coupon" is_hidden="0" type="integer" var_name="max_upload_image_size" phrase_var_name="setting_max_upload_image_size" ordering="1" version_id="3.4.1">500</setting>
+		<setting group="" module_id="coupon" is_hidden="0" type="integer" var_name="number_of_latest_coupon_of_member" phrase_var_name="setting_number_of_latest_coupon_of_member" ordering="1" version_id="3.4.1">5</setting>
+		<setting group="" module_id="coupon" is_hidden="0" type="large_string" var_name="coupon_meta_description" phrase_var_name="setting_coupon_meta_description" ordering="1" version_id="3.4.1">Read up on the latest coupons on Site Name.</setting>
+		<setting group="" module_id="coupon" is_hidden="0" type="integer" var_name="number_of_suggestions" phrase_var_name="setting_number_of_suggestions" ordering="1" version_id="3.4.1">5</setting>
+		<setting group="" module_id="coupon" is_hidden="0" type="integer" var_name="number_of_claimers" phrase_var_name="setting_number_of_claimers" ordering="1" version_id="3.4.1">10</setting>
+		<setting group="" module_id="coupon" is_hidden="0" type="string" var_name="ending_soon_settings" phrase_var_name="setting_ending_soon_settings" ordering="1" version_id="3.4.1">3</setting>
+		<setting group="" module_id="coupon" is_hidden="0" type="string" var_name="coupon_view_time_stamp" phrase_var_name="setting_coupon_view_time_stamp" ordering="1" version_id="3.4.1">F j, Y</setting>
+		<setting group="" module_id="coupon" is_hidden="0" type="large_string" var_name="coupon_meta_keywords" phrase_var_name="setting_coupon_meta_keywords" ordering="1" version_id="3.4.1">Coupon, Coupons, Free, Claims</setting>
+		<setting group="" module_id="coupon" is_hidden="0" type="integer" var_name="number_of_featured_coupons" phrase_var_name="setting_number_of_featured_coupons" ordering="1" version_id="3.5.0rc1">5</setting>
+		<setting group="" module_id="coupon" is_hidden="0" type="integer" var_name="coupon_subcategories_to_show_at_first" phrase_var_name="setting_subcategories_to_show_at_first" ordering="1" version_id="3.5.0rc1">10</setting>
+		<setting group="" module_id="coupon" is_hidden="0" type="integer" var_name="limit_of_coupon_in_a_block" phrase_var_name="setting_limit_of_coupon_in_a_block" ordering="1" version_id="3.5.0rc1">5</setting>
+	</settings>
+	<blocks>
+		<block type_id="0" m_connection="coupon.index" module_id="coupon" component="category" location="1" is_active="1" ordering="4" disallow_access="" can_move="0">
+			<title>Categories</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="coupon.detail" module_id="coupon" component="latest-of-this-member" location="3" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Latest Coupons Of This Member</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="coupon.detail" module_id="coupon" component="suggestions" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Suggestions</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="coupon.detail" module_id="coupon" component="latest-claimers" location="1" is_active="1" ordering="6" disallow_access="" can_move="0">
+			<title>Latest Claimers</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="coupon.index" module_id="coupon" component="latest" location="3" is_active="1" ordering="1" disallow_access="" can_move="0">
+			<title>Latest Coupons</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="coupon.index" module_id="coupon" component="most-popular" location="3" is_active="1" ordering="2" disallow_access="" can_move="0">
+			<title>Most Popular Coupon</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="coupon.index" module_id="coupon" component="most-liked" location="3" is_active="1" ordering="3" disallow_access="" can_move="0">
+			<title>Most Liked</title>
+			<source_code />
+			<source_parsed />
+		</block>
+		<block type_id="0" m_connection="coupon.index" module_id="coupon" component="search" location="1" is_active="1" ordering="5" disallow_access="" can_move="0">
+			<title>Search</title>
+			<source_code />
+			<source_parsed />
+		</block>
+	</blocks>
+	<components>
+		<component module_id="coupon" component="coupon.detail" m_connection="coupon.detail" module="coupon" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="coupon" component="category" m_connection="" module="coupon" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="coupon" component="suggestions" m_connection="" module="coupon" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="coupon" component="latest-of-this-member" m_connection="" module="coupon" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="coupon" component="photo-and-menu" m_connection="" module="coupon" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="coupon" component="detail-graph" m_connection="" module="coupon" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="coupon" component="latest-claimers" m_connection="" module="coupon" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="coupon" component="most-liked" m_connection="" module="coupon" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="coupon" component="most-claimed" m_connection="" module="coupon" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="coupon" component="most-popular" m_connection="" module="coupon" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="coupon" component="coupon.index" m_connection="coupon.index" module="coupon" is_controller="1" is_block="0" is_active="1" />
+		<component module_id="coupon" component="latest" m_connection="" module="coupon" is_controller="0" is_block="1" is_active="1" />
+		<component module_id="coupon" component="search" m_connection="" module="coupon" is_controller="0" is_block="1" is_active="1" />
+	</components>
+	<phrases>
+		<phrase var_name="module_coupon" added="1565348919">Coupon</phrase>
+		<phrase var_name="module_coupon_low" added="1565348919">Coupon</phrase>
+		<phrase var_name="menu_coupon_coupon_fad58de7366495db4650cfefac2fcd61" added="1565348919">Coupons</phrase>
+		<phrase var_name="menu_coupon_create_a_new_coupon_1e814c9c7e7f6102ce74fe1cd53bdc48" added="1565348919">Create a New Coupon</phrase>
+		<phrase var_name="delete" added="1565348919">Delete</phrase>
+		<phrase var_name="most_liked" added="1565348919">Most Liked</phrase>
+		<phrase var_name="user_setting_can_view_coupon" added="1565348919">Can view coupon</phrase>
+		<phrase var_name="user_setting_can_create_coupon" added="1565348919">Can create coupon</phrase>
+		<phrase var_name="user_setting_can_edit_own_coupon" added="1565348919">Can edit own coupon</phrase>
+		<phrase var_name="user_setting_can_delete_own_coupon" added="1565348919">Can delete own coupon</phrase>
+		<phrase var_name="user_setting_can_delete_other_user_coupon" added="1565348919">Can delete coupon created by other users</phrase>
+		<phrase var_name="user_setting_can_add_comment_on_coupon" added="1565348919">Can add comment on coupon</phrase>
+		<phrase var_name="user_setting_can_feature_coupon" added="1565348919">Can feature coupon</phrase>
+		<phrase var_name="user_setting_can_approve_coupon" added="1565348919">Can approve coupon</phrase>
+		<phrase var_name="user_setting_can_email_to_users" added="1565348919">Can email to users</phrase>
+		<phrase var_name="user_setting_how_much_user_publish_coupon" added="1565348919">Fee to publish coupon</phrase>
+		<phrase var_name="user_setting_auto_approve_after_publish" added="1565348919">Set to True, if admin want coupon to be automatically approved after published</phrase>
+		<phrase var_name="user_setting_how_much_user_feature_coupon" added="1565348919">Fee to feature coupon</phrase>
+		<phrase var_name="user_setting_auto_approve_after_feature" added="1565348919">Set to True, if admin want to coupon be featured automatically after purchasing</phrase>
+		<phrase var_name="setting_ending_soon_settings" added="1565348919"><![CDATA[<title>Ending Soon Setting</title><info>Set ending soon , when ending before</info>]]></phrase>
+		<phrase var_name="user_setting_can_edit_other_user_coupon" added="1565348919">Can edit coupon created by other users</phrase>
+		<phrase var_name="are_you_sure_this_will_delete_all_coupons_that_belong_to_this_category_and_cannot_be_undone" added="1565348919">Are you sure? This will delete all coupons that belong to this category and cannot be undone.</phrase>
+		<phrase var_name="parent_category_and_child_is_the_same" added="1565348919">Parent category and child category are the same. Please choose another parent category.</phrase>
+		<phrase var_name="select" added="1565348919">Select</phrase>
+		<phrase var_name="select_a_sub_category" added="1565348919">Select a Sub-Category</phrase>
+		<phrase var_name="admincp_manage_categories" added="1565348919">Manage Categories</phrase>
+		<phrase var_name="categories" added="1565348919">Categories</phrase>
+		<phrase var_name="update_order" added="1565348919">Update Order</phrase>
+		<phrase var_name="edit" added="1565348919">Edit</phrase>
+		<phrase var_name="category_order_successfully_updated" added="1565348919">Category order successfully updated.</phrase>
+		<phrase var_name="category_successfully_deleted" added="1565348919">Category successfully deleted.</phrase>
+		<phrase var_name="edit_a_category" added="1565348919">Edit a category</phrase>
+		<phrase var_name="create_a_new_category" added="1565348919">Create a new category</phrase>
+		<phrase var_name="coupon_category_detail" added="1565348919">Coupon Category Detail</phrase>
+		<phrase var_name="title" added="1565348919">Title</phrase>
+		<phrase var_name="parent_category" added="1565348919">Parent Category</phrase>
+		<phrase var_name="select_form_select" added="1565348919">Select</phrase>
+		<phrase var_name="submit" added="1565348919">Submit</phrase>
+		<phrase var_name="admin_menu_add_new_category" added="1565348919">Add New Category</phrase>
+		<phrase var_name="admin_menu_add_new_faq_s" added="1565348919">Add New FAQs</phrase>
+		<phrase var_name="admin_menu_manage_coupons" added="1565348919">Manage Coupons</phrase>
+		<phrase var_name="admin_menu_manage_transactions" added="1565348919">Manage Transactions</phrase>
+		<phrase var_name="admin_menu_manage_categories" added="1565348919">Manage Categories</phrase>
+		<phrase var_name="admin_menu_manage_faq_s" added="1565348919">Manage FAQs</phrase>
+		<phrase var_name="admin_menu_manage_email_template" added="1565348919">Manage Email Templates</phrase>
+		<phrase var_name="category_successfully_added" added="1565348919">Category successfully added.</phrase>
+		<phrase var_name="category_successfully_updated" added="1565348919">Category successfully updated.</phrase>
+		<phrase var_name="select_a_email_template_type" added="1565348919">Select a email template type</phrase>
+		<phrase var_name="email_templates" added="1565348919">Email templates</phrase>
+		<phrase var_name="email_templates_types" added="1565348919">Choose Email Template</phrase>
+		<phrase var_name="subject" added="1565348919">Subject</phrase>
+		<phrase var_name="content" added="1565348919">Content</phrase>
+		<phrase var_name="save_now" added="1565348919">Save</phrase>
+		<phrase var_name="createcouponsuccessful_owner" added="1565348919">Create Coupon successful (sent to Owner)</phrase>
+		<phrase var_name="couponpublished_owner" added="1565348919">Coupon Published (sent to Owner)</phrase>
+		<phrase var_name="couponfeatured_onwer" added="1565348919">Coupon Featured (send to Onwer)</phrase>
+		<phrase var_name="couponfeatured_owner" added="1565348919">Coupon Featured (sent to Owner)</phrase>
+		<phrase var_name="startrunnningcoupon_owner" added="1565348919">Start runnning Coupon (send to Owner)</phrase>
+		<phrase var_name="startrunningcoupon_owner" added="1565348919">Start running Coupon (sent to Owner)</phrase>
+		<phrase var_name="couponexpired_owner" added="1565348919">Coupon Expired (send to Owner)</phrase>
+		<phrase var_name="deletecoupon_owner" added="1565348919">Delete Coupon (send to Owner)</phrase>
+		<phrase var_name="couponclaimed_owner" added="1565348919">Coupon Claimed (sent to Owner)</phrase>
+		<phrase var_name="couponclaimed_claimer" added="1565348919">Coupon Claimed (sent to Claimer)</phrase>
+		<phrase var_name="deletecoupon_claimer" added="1565348919">Delete Coupon (send to Claimer)</phrase>
+		<phrase var_name="couponexpired_claimer" added="1565348919">Coupon Expired (send to Claimer)</phrase>
+		<phrase var_name="keyword_substitutions" added="1565348919">Keyword Subtitutions</phrase>
+		<phrase var_name="keywordsub_owner_name" added="1565348919">Coupon Owner Name</phrase>
+		<phrase var_name="keywordsub_site_name" added="1565348919">Name of This Site</phrase>
+		<phrase var_name="couponclosed_owner" added="1565348919">Coupon Closed (sent to Owner)</phrase>
+		<phrase var_name="social_network_site" added="1565348919">Name of This Social Network Site</phrase>
+		<phrase var_name="coupon_name" added="1565348919">Coupon Name</phrase>
+		<phrase var_name="coupon_link" added="1565348919">Coupon URL</phrase>
+		<phrase var_name="start_date" added="1565348919">Start Date</phrase>
+		<phrase var_name="claimer_name" added="1565348919">Claimer Name</phrase>
+		<phrase var_name="claimer_email" added="1565348919">Claimer Email</phrase>
+		<phrase var_name="coupon_code" added="1565348919">Coupon Code</phrase>
+		<phrase var_name="coupon_address" added="1565348919">Coupon Address</phrase>
+		<phrase var_name="keywordsub_social_network_site" added="1565348919">Name of This Social Network Site</phrase>
+		<phrase var_name="keywordsub_coupon_name" added="1565348919">Coupon Name</phrase>
+		<phrase var_name="keywordsub_coupon_link" added="1565348919">Coupon URL</phrase>
+		<phrase var_name="keywordsub_start_date" added="1565348919">Start Date</phrase>
+		<phrase var_name="keywordsub_expired_date" added="1565348919">Expired Date</phrase>
+		<phrase var_name="keywordsub_claimer_name" added="1565348919">Claimer Name</phrase>
+		<phrase var_name="keywordsub_claimer_email" added="1565348919">Claimer Email</phrase>
+		<phrase var_name="keywordsub_coupon_code" added="1565348919">Coupon Code</phrase>
+		<phrase var_name="keywordsub_coupon_address" added="1565348919">Coupon Address</phrase>
+		<phrase var_name="provide_question_content" added="1565348919">Provide question content.</phrase>
+		<phrase var_name="provide_answer_content" added="1565348919">Provide answer content.</phrase>
+		<phrase var_name="total_claims" added="1565348919">{total_claims} Claims</phrase>
+		<phrase var_name="total_likes" added="1565348919">{total_likes} Likes</phrase>
+		<phrase var_name="total_rates" added="1565348919">{total_rates} Rates</phrase>
+		<phrase var_name="most_rated" added="1565348919">Most Rated</phrase>
+		<phrase var_name="admincp_manage_faqs" added="1565348919">Manage FAQs</phrase>
+		<phrase var_name="faqs" added="1565348919">FAQs</phrase>
+		<phrase var_name="all_coupons" added="1565348919">All Coupons</phrase>
+		<phrase var_name="my_coupons" added="1565348919">My Coupons</phrase>
+		<phrase var_name="my_claim_coupons" added="1565348919">My Claimed Coupons</phrase>
+		<phrase var_name="friend_s_coupons" added="1565348919"><![CDATA[Friends&#039; Coupons]]></phrase>
+		<phrase var_name="my_favorite_coupon" added="1565348919">My Favorited Coupons</phrase>
+		<phrase var_name="upcoming_coupon" added="1565348919">Upcoming Coupons</phrase>
+		<phrase var_name="ending_soon_coupon" added="1565348919">Ending soon Coupons</phrase>
+		<phrase var_name="faq_s" added="1565348919">FAQs</phrase>
+		<phrase var_name="created_by" added="1565348919">Created by</phrase>
+		<phrase var_name="expired_date" added="1565348919">Expired date</phrase>
+		<phrase var_name="discount" added="1565348919">Discount</phrase>
+		<phrase var_name="view_more" added="1565348919">View More</phrase>
+		<phrase var_name="coupon" added="1565348919">Coupons</phrase>
+		<phrase var_name="latest" added="1565348919">Latest</phrase>
+		<phrase var_name="latest_coupons" added="1565348919">Latest Coupons</phrase>
+		<phrase var_name="faq_order_success_updated" added="1565348919">FAQ order successfully updated.</phrase>
+		<phrase var_name="faq_success_deleted" added="1565348919">FAQ successfully deleted.</phrase>
+		<phrase var_name="faq_success_updated" added="1565348919">FAQ successfully updated.</phrase>
+		<phrase var_name="faq_success_added" added="1565348919">FAQ successfully added.</phrase>
+		<phrase var_name="faq_edit_title" added="1565348919">Edit FAQ</phrase>
+		<phrase var_name="posted_date" added="1565348919">Posted date :</phrase>
+		<phrase var_name="setting_coupon_view_time_stamp" added="1565348919"><![CDATA[<title>Coupon view timestamp</title><info>Change to sync coupon module timestamp</info>]]></phrase>
+		<phrase var_name="most_popular" added="1565348919">Most Popular</phrase>
+		<phrase var_name="most_claimed" added="1565348919">Most Claimed</phrase>
+		<phrase var_name="search_coupons_dot" added="1565348919">Search Coupons...</phrase>
+		<phrase var_name="setting_coupon_meta_keywords" added="1565348919"><![CDATA[<title>Coupon Meta Keywords</title><info>Meta keywords that will be displayed on sections related to the Coupon module.</info>]]></phrase>
+		<phrase var_name="setting_coupon_meta_description" added="1565348919"><![CDATA[<title>Coupon Meta Description</title><info>Meta description added to pages related to the Coupon module.</info>]]></phrase>
+		<phrase var_name="no_coupons_found" added="1565348919">No Coupons Found.</phrase>
+		<phrase var_name="manage_coupons" added="1565348919">Manage Coupons</phrase>
+		<phrase var_name="search_filter" added="1565348919">Search Filter</phrase>
+		<phrase var_name="username" added="1565348919">Username</phrase>
+		<phrase var_name="from" added="1565348919">From</phrase>
+		<phrase var_name="to" added="1565348919">To</phrase>
+		<phrase var_name="location" added="1565348919">Location</phrase>
+		<phrase var_name="status" added="1565348919">Status</phrase>
+		<phrase var_name="running" added="1565348919">Running</phrase>
+		<phrase var_name="pending" added="1565348919">Pending</phrase>
+		<phrase var_name="paused" added="1565348919">Paused</phrase>
+		<phrase var_name="ending_soon" added="1565348919">Ending Soon</phrase>
+		<phrase var_name="closed" added="1565348919">Closed</phrase>
+		<phrase var_name="upcoming" added="1565348919">Upcoming</phrase>
+		<phrase var_name="publish" added="1565348919">Publish</phrase>
+		<phrase var_name="featured" added="1565348919">Featured</phrase>
+		<phrase var_name="all" added="1565348919">All</phrase>
+		<phrase var_name="unfeatured" added="1565348919">Unfeatured</phrase>
+		<phrase var_name="coupon_listing" added="1565348919">Coupon Listing</phrase>
+		<phrase var_name="search" added="1565348919">Search</phrase>
+		<phrase var_name="reset" added="1565348919">Reset</phrase>
+		<phrase var_name="draft" added="1565348919">Draft</phrase>
+		<phrase var_name="any" added="1565348919">Any</phrase>
+		<phrase var_name="category" added="1565348919">Category</phrase>
+		<phrase var_name="end_date" added="1565348919">End Date</phrase>
+		<phrase var_name="published" added="1565348919">Published</phrase>
+		<phrase var_name="user_setting_can_set_allow_list_on_coupons" added="1565348919" />
+		<phrase var_name="user_setting_can_control_comments_on_coupons" added="1565348919">Can control if a user can add a comment on their coupon or simply disable comments?</phrase>
+		<phrase var_name="user_setting_can_control_claim_coupons" added="1565348919">Can control if a user can claim on their coupon?</phrase>
+		<phrase var_name="description" added="1565348919">Description</phrase>
+		<phrase var_name="image" added="1565348919">Image</phrase>
+		<phrase var_name="set_to_unlimit_time" added="1565348919">Set this to unlimited time</phrase>
+		<phrase var_name="location_venue" added="1565348919">Location venue</phrase>
+		<phrase var_name="add_city_zip" added="1565348919">Add address/city/zip</phrase>
+		<phrase var_name="city" added="1565348919">City</phrase>
+		<phrase var_name="zip_postal_code" added="1565348919">Zip / Postal Code</phrase>
+		<phrase var_name="country" added="1565348919">Country</phrase>
+		<phrase var_name="quantity" added="1565348919">Quantity</phrase>
+		<phrase var_name="set_to_unlimit_quantity" added="1565348919">Set to unlimited quantity</phrase>
+		<phrase var_name="set_auto_generate" added="1565348919">Auto generate the unique code for each coupon</phrase>
+		<phrase var_name="term_condition" added="1565348919"><![CDATA[Term & Condition]]></phrase>
+		<phrase var_name="term_conditions" added="1565348919"><![CDATA[Term & Conditions]]></phrase>
+		<phrase var_name="privacy" added="1565348919">Privacy</phrase>
+		<phrase var_name="control_who_can_see_this_coupon" added="1565348919">Control who can see this coupon</phrase>
+		<phrase var_name="comment_privacy" added="1565348919">Comment privacy</phrase>
+		<phrase var_name="control_who_can_comment_on_this_coupon" added="1565348919">Control who can comment on this coupon</phrase>
+		<phrase var_name="claims_privacy" added="1565348919">Claims privacy</phrase>
+		<phrase var_name="control_who_can_claims_on_this_coupon" added="1565348919">Control who can claims on this coupon</phrase>
+		<phrase var_name="publishing_fee" added="1565348919">Publishing fee : {symbol_currency_fee}{publish_fee}</phrase>
+		<phrase var_name="total_fee" added="1565348919">Total fee : {symbol_currency_fee}{total_fee}</phrase>
+		<phrase var_name="delete_selected" added="1565348919">Delete Selected</phrase>
+		<phrase var_name="the_selected_coupons_had_been_deleted_successfully" added="1565348919">The selected coupon(s) had been deleted successfully.</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_coupon" added="1565348919">Are you sure you want to delete this coupon?</phrase>
+		<phrase var_name="approve" added="1565348919">Approve</phrase>
+		<phrase var_name="deny" added="1565348919">Deny</phrase>
+		<phrase var_name="resume" added="1565348919">Resume</phrase>
+		<phrase var_name="pause" added="1565348919">Pause</phrase>
+		<phrase var_name="close" added="1565348919">Close</phrase>
+		<phrase var_name="are_you_sure_you_want_to_pause_this_coupon" added="1565348919">Are you sure you want to pause this coupon?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_resume_this_coupon" added="1565348919">Are you sure you want to resume this coupon?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_approve_this_coupon" added="1565348919">Are you sure you want to approve this coupon?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_deny_this_coupon" added="1565348919">Are you sure you want to deny this coupon?</phrase>
+		<phrase var_name="are_you_sure_you_want_to_close_this_coupon" added="1565348919">Are you sure you want to close this coupon?</phrase>
+		<phrase var_name="user_setting_flood_control_coupon" added="1565348919">How many minutes should a user wait before they can submit another coupon?</phrase>
+		<phrase var_name="fill_title_for_coupon" added="1565348919">Fill title for coupon</phrase>
+		<phrase var_name="fill_in_coupon_location" added="1565348919">Fill in coupon location</phrase>
+		<phrase var_name="fill_in_a_discount_value_for_coupon" added="1565348919">Fill in a discount value or special price for coupon</phrase>
+		<phrase var_name="fill_in_a_valid_discount_value_for_coupon" added="1565348919">Fill in a valid discount value or special price for coupon</phrase>
+		<phrase var_name="adding_a_new_coupon" added="1565348919">Add new coupon</phrase>
+		<phrase var_name="coupons" added="1565348919">Coupons</phrase>
+		<phrase var_name="features_this_coupon" added="1565348919">Features this coupon : {symbol_currency_fee}{feature_fee}</phrase>
+		<phrase var_name="confirm_publish_coupon" added="1565348919">Are you sure you want to publish this coupon with total {symbol_currency_fee}{total_fee}?</phrase>
+		<phrase var_name="endingsoon" added="1565348919">Ending Soon</phrase>
+		<phrase var_name="save_as_draft" added="1565348919">Save as draft</phrase>
+		<phrase var_name="approve_selected" added="1565348919">Approve Selected</phrase>
+		<phrase var_name="the_selected_coupons_had_been_approved" added="1565348919">The selected coupon(s) approved.</phrase>
+		<phrase var_name="denied" added="1565348919">Denied</phrase>
+		<phrase var_name="we_do_not_allow_links_in_titles" added="1565348919">We do not allow links in title</phrase>
+		<phrase var_name="provide_a_category_this_coupon_will_belong_to" added="1565348919">Provide a category this coupon will belong to</phrase>
+		<phrase var_name="please_edit_coupon_start_date_before_update_status" added="1565348919">Please edit coupon start date before update status</phrase>
+		<phrase var_name="please_edit_coupon_end_date_bigger_than_start_date" added="1565348919">Please edit coupon end date after start date</phrase>
+		<phrase var_name="please_edit_coupon_end_date_before_update_status" added="1565348919">Please edit coupon end date before update status</phrase>
+		<phrase var_name="please_edit_coupon_expire_date_bigger_than_end_date" added="1565348919">please edit coupon expire date bigger than end date</phrase>
+		<phrase var_name="please_edit_coupon_expire_date_before_update_status" added="1565348919">please edit coupon expire date before update status</phrase>
+		<phrase var_name="payment_type" added="1565348919">Payment Type</phrase>
+		<phrase var_name="publishing_coupon" added="1565348919">Publishing Coupon</phrase>
+		<phrase var_name="featuring_coupon" added="1565348919">Featuring Coupon</phrase>
+		<phrase var_name="publishing_and_featuring_coupon" added="1565348919">Publishing and Featuring Coupon</phrase>
+		<phrase var_name="manage_transactions" added="1565348919">Manage Transactions</phrase>
+		<phrase var_name="payer" added="1565348919">Payer</phrase>
+		<phrase var_name="purchased_date" added="1565348919">Purchased Date</phrase>
+		<phrase var_name="amount" added="1565348919">Amount</phrase>
+		<phrase var_name="tracking_id" added="1565348919">Tracking Id</phrase>
+		<phrase var_name="transactions" added="1565348919">Transactions</phrase>
+		<phrase var_name="no_transaction_had_been_made" added="1565348919">No transaction was made.</phrase>
+		<phrase var_name="coupon_not_found" added="1565348919">Coupon not found.</phrase>
+		<phrase var_name="hide_add_city_zip" added="1565348919">Hide address/city/zip</phrase>
+		<phrase var_name="refresh_map" added="1565348919">Refresh map</phrase>
+		<phrase var_name="coupon_detail" added="1565348919">Coupon detail</phrase>
+		<phrase var_name="view_this_coupon" added="1565348919">View this coupon</phrase>
+		<phrase var_name="editing_coupon" added="1565348919">Editing coupon</phrase>
+		<phrase var_name="none" added="1565348919">None</phrase>
+		<phrase var_name="claims" added="1565348919">Claim(s)</phrase>
+		<phrase var_name="setting_number_of_claimers" added="1565348919"><![CDATA[<title>Number of Claimers</title><info>Number of claimers that will be displayed on "Latest Claimer" block.</info>]]></phrase>
+		<phrase var_name="setting_number_of_suggestions" added="1565348919"><![CDATA[<title>Number of Suggestions</title><info>Number of suggestions will be display in the "Suggestion" block on Coupon Detail page.</info>]]></phrase>
+		<phrase var_name="setting_number_of_latest_coupon_of_member" added="1565348919"><![CDATA[<title>Number of Latest Coupon Of This Member</title><info>Number of items that will be displayed in "Latest Coupon of This Member" block in Coupon Detail page.</info>]]></phrase>
+		<phrase var_name="suggestions" added="1565348919">Suggestions</phrase>
+		<phrase var_name="publish_featured_coupon" added="1565348919">Publish and Featured coupon</phrase>
+		<phrase var_name="publish_coupon" added="1565348919">Publish coupon</phrase>
+		<phrase var_name="initialized_upper" added="1565348919">Initialized</phrase>
+		<phrase var_name="successed_upper" added="1565348919">Successed</phrase>
+		<phrase var_name="pending_upper" added="1565348919">Pending</phrase>
+		<phrase var_name="denied_upper" added="1565348919">Denied</phrase>
+		<phrase var_name="start" added="1565348919">Start date</phrase>
+		<phrase var_name="expire" added="1565348919">Expire</phrase>
+		<phrase var_name="you_can_upload_a_jpg_gif_or_png_file" added="1565348919">You can upload a jpg , gif or png file</phrase>
+		<phrase var_name="update" added="1565348919">Update</phrase>
+		<phrase var_name="latest_coupons_of_this_member" added="1565348919">Latest coupons of this member</phrase>
+		<phrase var_name="setting_max_upload_image_size" added="1565348919"><![CDATA[<title>Max file size for photos upload</title><info>Max file size for photos upload in kilobytes (kb). (1024 kb = 1 mb). For unlimited add "0" without quotes.</info>]]></phrase>
+		<phrase var_name="report_this_coupon" added="1565348919">Report this coupon</phrase>
+		<phrase var_name="unable_to_post_a_comment_on_this_item_due_to_privacy_settings" added="1565348919">Unable to post a comment on this item due to privacy settings.</phrase>
+		<phrase var_name="please_select_an_image_to_upload" added="1565348919">Please select an image to upload</phrase>
+		<phrase var_name="full_name_commented_on_your_coupon_title" added="1565348919"><![CDATA[{full_name} commented on your coupon '{title}']]></phrase>
+		<phrase var_name="full_name_commented_on_your_coupon_message" added="1565348919"><![CDATA[{full_name} commented on your coupon '<a href="{link}">{title}</a>'. To see the comment thread, follow the link below: <a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_gender_coupon_title" added="1565348919"><![CDATA[{full_name} commented on {gender} coupon "{title}"]]></phrase>
+		<phrase var_name="full_name_commented_on_coupon_full_name_s_coupon" added="1565348919"><![CDATA[{full_name} commented on {coupon_full_name}&#039;s coupon]]></phrase>
+		<phrase var_name="full_name_commented_on_gender_coupon_message" added="1565348919"><![CDATA[{full_name} commented on {gender} coupon "<a href="{link}">{title}</a>". To see the comment thread, follow the link below: <a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_commented_on_coupon_full_name_s_coupon_message" added="1565348919"><![CDATA[{full_name} commented on {coupon_full_name}&#039;s coupon "<a href="{link}">{title}</a>". To see the comment thread, follow the link below: <a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="setting_subcategory_to_show_at_first" added="1565348919"><![CDATA[<title>Sub category show at first</title><info>control how many sub category will show at first</info>]]></phrase>
+		<phrase var_name="user_full_name_added_a_new_coupon_a_href_title_link_title_a" added="1565348919"><![CDATA[<a href="{user_link}">{user_full_name}</a> added a new coupon "<a href="{title_link}">{title}</a>".]]></phrase>
+		<phrase var_name="user_added_a_new_comment_on_their_own_coupon" added="1565348919"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on their own <a href="{title_link}">coupon</a>.]]></phrase>
+		<phrase var_name="user_added_a_new_comment_on_your_coupon" added="1565348919"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on your <a href="{title_link}">coupon</a>.]]></phrase>
+		<phrase var_name="user_name_added_a_new_comment_on_item_user_name_coupon" added="1565348919"><![CDATA[<a href="{user_link}">{user_name}</a> added a new comment on <a href="{item_user_link}">{item_user_name}&#039;s</a> <a href="{title_link}">coupon</a>.]]></phrase>
+		<phrase var_name="users_coupon_count" added="1565348919">Users Coupon Count</phrase>
+		<phrase var_name="update_users_activity_coupon_points" added="1565348919">Update Users Activity Coupon Points</phrase>
+		<phrase var_name="user_setting_points_coupon" added="1565348919">Set points for each coupon this user created</phrase>
+		<phrase var_name="unable_to_find_the_coupon_you_are_trying_to_edit" added="1565348919">Unable to find the coupon you are trying to edit</phrase>
+		<phrase var_name="coupon_updates" added="1565348919">Coupon successfully updated</phrase>
+		<phrase var_name="you_do_not_have_permission_to_edit" added="1565348919">You do not have permission to edit this coupon</phrase>
+		<phrase var_name="your_coupon_has_been_added" added="1565348919">Your coupon has been added</phrase>
+		<phrase var_name="total_rating_ratings" added="1565348919">{total_rating} Rating(s)</phrase>
+		<phrase var_name="poor" added="1565348919">Poor</phrase>
+		<phrase var_name="your_are_posting_a_little_too_soon" added="1565348919">You are posting a litte too soon .</phrase>
+		<phrase var_name="nothing_special" added="1565348919">Nothing Special</phrase>
+		<phrase var_name="good" added="1565348919">Good</phrase>
+		<phrase var_name="pretty_cool" added="1565348919">Pretty Cool</phrase>
+		<phrase var_name="awesome" added="1565348919">Awesome</phrase>
+		<phrase var_name="you_have_already_voted" added="1565348919">You have already voted</phrase>
+		<phrase var_name="you_cannot_rate_your_own_coupon" added="1565348919">You cannot rate your own coupon</phrase>
+		<phrase var_name="posted_a_comment_on_gender_coupon_a_href_link_title_a" added="1565348919"><![CDATA[posted a comment on {gender} coupon <a href="{link}"> {title}</a>]]></phrase>
+		<phrase var_name="posted_a_comment_on_user_name_s_coupon_a_href_link_title_a" added="1565348919"><![CDATA[posted a comment on {user_name}&#039;s coupon "<a href="{link}">{title}</a>"]]></phrase>
+		<phrase var_name="posted_a_coupon" added="1565348919">posted a coupon.</phrase>
+		<phrase var_name="add_to_your_favorite" added="1565348919">Add to your favorite</phrase>
+		<phrase var_name="favorite" added="1565348919">Favorite</phrase>
+		<phrase var_name="unfavorite" added="1565348919">Unfavorite</phrase>
+		<phrase var_name="there_are_no_new_coupon" added="1565348919">There are no new coupons.</phrase>
+		<phrase var_name="most_comment" added="1565348919">Most Commented</phrase>
+		<phrase var_name="remove_from_your_favorite" added="1565348919">Remove from your favorite</phrase>
+		<phrase var_name="follow_this_coupon" added="1565348919">Follow this coupon</phrase>
+		<phrase var_name="unfollow_this_coupon" added="1565348919">Unfollow this coupon</phrase>
+		<phrase var_name="follow" added="1565348919">Follow</phrase>
+		<phrase var_name="unfollow" added="1565348919">Unfollow</phrase>
+		<phrase var_name="no_faq_available" added="1565348919">No FAQ available.</phrase>
+		<phrase var_name="the_coupon_had_been_removed_from_your_favorite_list" added="1565348919">The coupon removed from your favorite list</phrase>
+		<phrase var_name="your_coupon_coupon_title_has_been_approved" added="1565348919"><![CDATA[Your coupon "{coupon_title}" has been approved.]]></phrase>
+		<phrase var_name="the_coupon_had_been_added_to_your_following_list" added="1565348919">The coupon was added to your following list</phrase>
+		<phrase var_name="the_coupon_had_been_removed_from_your_following_list" added="1565348919">The coupon was removed from your following list</phrase>
+		<phrase var_name="sign_this_coupon" added="1565348919">Sign this coupon</phrase>
+		<phrase var_name="separate_multiple_emails_with_a_comma" added="1565348919">Separate multiple emails with a comma</phrase>
+		<phrase var_name="invite_people_via_email" added="1565348919">Invite People via Email</phrase>
+		<phrase var_name="invite_friends" added="1565348919">Invite Friends</phrase>
+		<phrase var_name="add_a_personal_message" added="1565348919">Add a personal message</phrase>
+		<phrase var_name="message" added="1565348919">Message</phrase>
+		<phrase var_name="send_invitations" added="1565348919">Send Invitations</phrase>
+		<phrase var_name="new_guest_list" added="1565348919">New Guest List</phrase>
+		<phrase var_name="select_all" added="1565348919">Select All</phrase>
+		<phrase var_name="un_select_all" added="1565348919">Un-select All</phrase>
+		<phrase var_name="full_name_s_coupons" added="1565348919"><![CDATA[{full_name}&#039;s Coupon]]></phrase>
+		<phrase var_name="full_name_s_coupons_on_site_title" added="1565348919"><![CDATA[{full_name}&#039;s coupons on {site_title}.]]></phrase>
+		<phrase var_name="full_name_invited_you_to_the_title" added="1565348919"><![CDATA[{full_name} invited you to "{title}".
+
+To check out this coupon, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="full_name_invited_you_to_the_coupon_title" added="1565348919"><![CDATA[{full_name} invited you to the coupon '{title}'.]]></phrase>
+		<phrase var_name="full_name_added_the_following_personal_message" added="1565348919">{full_name} added the following personal message</phrase>
+		<phrase var_name="unlimited_time_upper" added="1565348919">Unlimited Time</phrase>
+		<phrase var_name="my_following_coupon" added="1565348919">My Following Coupons</phrase>
+		<phrase var_name="pending_coupon" added="1565348919">Pending Coupons</phrase>
+		<phrase var_name="get_code" added="1565348919">Get Code</phrase>
+		<phrase var_name="claimed" added="1565348919">Claimed</phrase>
+		<phrase var_name="users_commented_on_gender_coupon_title" added="1565348919"><![CDATA[{users} commented on {gender} coupon "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_your_coupon_title" added="1565348919"><![CDATA[{users} commented on your coupon "{title}"]]></phrase>
+		<phrase var_name="users_commented_on_span_class_drop_data_user_row_full_name_coupon_title" added="1565348919"><![CDATA[{users} commented on <span class="drop_data_user">{row_full_name}&#039;s</span> coupon "{title}"]]></phrase>
+		<phrase var_name="full_name_liked_your_coupon_link_title" added="1565348919"><![CDATA[{full_name} liked your coupon "{title}"
+
+To view this coupon, follow the link below:
+<a href="{link}">{link}</a>]]></phrase>
+		<phrase var_name="users_liked_gender_own_coupon_title" added="1565348919"><![CDATA[{users} liked {gender} own coupon "{title}"]]></phrase>
+		<phrase var_name="users_liked_your_coupon_title" added="1565348919"><![CDATA[{users} liked your coupon "{title}"]]></phrase>
+		<phrase var_name="users_liked_span_class_drop_data_user_row_full_name_s_span_coupon_title" added="1565348919"><![CDATA[{users} liked <span class="drop_data_user">{row_full_name}&#039;s</span> coupon "{title}"]]></phrase>
+		<phrase var_name="print_code" added="1565348919">Print Code</phrase>
+		<phrase var_name="short_description" added="1565348919">Short Description</phrase>
+		<phrase var_name="remaining" added="1565348919">Remaining</phrase>
+		<phrase var_name="who_can_share_coupons" added="1565348919">Who can share coupons?</phrase>
+		<phrase var_name="who_can_view_browse_coupons" added="1565348919">Who can view/browse coupons?</phrase>
+		<phrase var_name="create_a_coupon" added="1565348919">Create a New Coupon</phrase>
+		<phrase var_name="please_edit_coupon_code_right_format_with_8_character" added="1565348919">Please edit your coupon code right format with 8 characters and only alpha-numeric characters</phrase>
+		<phrase var_name="please_edit_quantity_more_than_zero" added="1565348919">Please edit your coupon quantity more than zero.</phrase>
+		<phrase var_name="unlimited_remain" added="1565348919">Unlimited Remain</phrase>
+		<phrase var_name="claims_remain" added="1565348919">Claim(s) Remain</phrase>
+		<phrase var_name="left" added="1565348919">left</phrase>
+		<phrase var_name="h" added="1565348919">h</phrase>
+		<phrase var_name="w" added="1565348919">w</phrase>
+		<phrase var_name="d" added="1565348919">d</phrase>
+		<phrase var_name="m" added="1565348919">m</phrase>
+		<phrase var_name="the_coupon_you_are_looking_for_either_does_not_exist_or_has_been_removed" added="1565348919">The coupon you are looking for either does not exist or has been removed.</phrase>
+		<phrase var_name="print" added="1565348919">Print</phrase>
+		<phrase var_name="link" added="1565348919">Link</phrase>
+		<phrase var_name="publish_this_coupon" added="1565348919">Publish this coupon</phrase>
+		<phrase var_name="information" added="1565348919">Information</phrase>
+		<phrase var_name="admin_set_featured_gender_own_coupon_title" added="1565348919"><![CDATA[Admin set {gender} own coupon "{title}" as featured coupon]]></phrase>
+		<phrase var_name="admin_set_featured_your_coupon_title" added="1565348919"><![CDATA[Admin set your coupon "{title}" as featured coupon]]></phrase>
+		<phrase var_name="admin_set_featured_span_class_drop_data_user_row_full_name_s_span_coupon_title" added="1565348919"><![CDATA[Admin set <span class="drop_data_user">{row_full_name}&#039;s</span> coupon "{title}" as featured coupon]]></phrase>
+		<phrase var_name="approve_this_coupon" added="1565348919">Approved this coupon</phrase>
+		<phrase var_name="approved" added="1565348919">Approved</phrase>
+		<phrase var_name="denied_this_coupon" added="1565348919">Denied this coupon</phrase>
+		<phrase var_name="coupon_s_successfully_approved" added="1565348919">Coupon(s) successfully approved.</phrase>
+		<phrase var_name="coupon_s_successfully_denied" added="1565348919">Coupon(s) successfully denied</phrase>
+		<phrase var_name="admin_had_denied_gender_own_coupon_title" added="1565348919"><![CDATA[Admin denied {gender} own coupon "{title}". Please update some information on it for the next approval.]]></phrase>
+		<phrase var_name="admin_had_denied_your_coupon_title" added="1565348919"><![CDATA[Admin denied your coupon "{title}". Please update some information on it for the next approval.]]></phrase>
+		<phrase var_name="admin_had_denied_span_class_drop_data_user_row_full_name_s_span_coupon_title" added="1565348919"><![CDATA[Admin denied <span class="drop_data_user">{row_full_name}&#039;s</span> coupon "{title}". Please update some information on it for the next approval.]]></phrase>
+		<phrase var_name="admin_had_approved_gender_own_coupon_title" added="1565348919"><![CDATA[Admin approved {gender} own coupon "{title}".]]></phrase>
+		<phrase var_name="admin_had_approved_your_coupon_title" added="1565348919"><![CDATA[Admin approved your coupon "{title}".]]></phrase>
+		<phrase var_name="admin_had_approved_span_class_drop_data_user_row_full_name_s_span_coupon_title" added="1565348919"><![CDATA[Admin approved <span class="drop_data_user">{row_full_name}&#039;s</span> coupon "{title}".]]></phrase>
+		<phrase var_name="confirm_publish_again" added="1565348919">Confirm to publish this coupon again.</phrase>
+		<phrase var_name="admin_had_paused_gender_own_coupon_title" added="1565348919"><![CDATA[Admin paused {gender} own coupon "{title}".]]></phrase>
+		<phrase var_name="admin_had_paused_your_coupon_title" added="1565348919"><![CDATA[Admin paused your coupon "{title}".]]></phrase>
+		<phrase var_name="admin_had_paused_span_class_drop_data_user_row_full_name_s_span_coupon_title" added="1565348919"><![CDATA[Admin paused <span class="drop_data_user">{row_full_name}&#039;s</span> coupon "{title}".]]></phrase>
+		<phrase var_name="admin_had_resumed_gender_own_coupon_title" added="1565348919"><![CDATA[Admin resumed {gender} own coupon "{title}".]]></phrase>
+		<phrase var_name="admin_had_resumed_your_coupon_title" added="1565348919"><![CDATA[Admin resumed your coupon "{title}".]]></phrase>
+		<phrase var_name="admin_had_resumed_span_class_drop_data_user_row_full_name_s_span_coupon_title" added="1565348919"><![CDATA[Admin resumed <span class="drop_data_user">{row_full_name}&#039;s</span> coupon "{title}".]]></phrase>
+		<phrase var_name="the_coupon_title_had_been_closed_since_it_was_ended_or_reached_maximum_claims" added="1565348919"><![CDATA[The coupon "{title}" was closed since it ended or reached maximum claims]]></phrase>
+		<phrase var_name="the_coupon_title_had_started_running" added="1565348919"><![CDATA[The coupon "{title}" started running]]></phrase>
+		<phrase var_name="keywordsub_end_date" added="1565348919">End Date</phrase>
+		<phrase var_name="users_had_claimed_gender_own_coupon_title" added="1565348919"><![CDATA[{users} claimed {gender} own coupon "{title}"]]></phrase>
+		<phrase var_name="users_had_claimed_your_coupon_title" added="1565348919"><![CDATA[{users} claimed your coupon "{title}"]]></phrase>
+		<phrase var_name="users_had_claimed_span_class_drop_data_user_row_full_name_s_span_coupon_title" added="1565348919"><![CDATA[{users} claimed <span class="drop_data_user">{row_full_name}&#039;s</span> coupon "{title}".]]></phrase>
+		<phrase var_name="actions" added="1565348919">Actions</phrase>
+		<phrase var_name="coupon_statistics" added="1565348919">Coupon Statistics</phrase>
+		<phrase var_name="can_not_find_selected_coupon_to_delete" added="1565348919">Can not find selected coupon to delete.</phrase>
+		<phrase var_name="feature_this_coupon" added="1565348919">Feature this coupon</phrase>
+		<phrase var_name="feature" added="1565348919">Feature</phrase>
+		<phrase var_name="coupon_deleted_successfully" added="1565348919">Coupon Deleted Successfully</phrase>
+		<phrase var_name="coupon_successfully_featured" added="1565348919">Coupon has successfully featured</phrase>
+		<phrase var_name="coupon_successfully_un_featured" added="1565348919">Coupon has successfully unfeatured</phrase>
+		<phrase var_name="claimer" added="1565348919">Claimer</phrase>
+		<phrase var_name="unfeature" added="1565348919">Unfeatured</phrase>
+		<phrase var_name="claim_s_time" added="1565348919"><![CDATA[Claim&#039;s time]]></phrase>
+		<phrase var_name="there_are_no_claims_yet" added="1565348919">There are no claims yet.</phrase>
+		<phrase var_name="total" added="1565348919">Total</phrase>
+		<phrase var_name="unfeature_this_coupon" added="1565348919">Unfeature this coupon</phrase>
+		<phrase var_name="unlimited" added="1565348919">Unlimited</phrase>
+		<phrase var_name="left_upper" added="1565348919">Left</phrase>
+		<phrase var_name="anonymous_upper" added="1565348919">Anonymous</phrase>
+		<phrase var_name="latest_claimers" added="1565348919">Latest Claimers</phrase>
+		<phrase var_name="feature_coupon" added="1565348919">Feature coupon</phrase>
+		<phrase var_name="users_had_set_favorite_gender_own_coupon_title" added="1565348919"><![CDATA[{users} set "{title}" as favorite {gender} own coupon]]></phrase>
+		<phrase var_name="users_had_set_favorite_your_coupon_title" added="1565348919"><![CDATA[{users} set "{title}" as favorite coupon]]></phrase>
+		<phrase var_name="users_had_set_favorite_span_class_drop_data_user_row_full_name_s_span_coupon_title" added="1565348919"><![CDATA[{users} set "{title}" as favorite <span class="drop_data_user">{row_full_name}&#039;s</span> coupon]]></phrase>
+		<phrase var_name="this_coupon_had_been_closed" added="1565348919">This coupon had been closed.</phrase>
+		<phrase var_name="percentage" added="1565348919">Percentage</phrase>
+		<phrase var_name="price" added="1565348919">Price</phrase>
+		<phrase var_name="please_enter_number_for_quantity" added="1565348919">Please enter number for quantity</phrase>
+		<phrase var_name="coupon_deleted" added="1565348919">Coupon deleted</phrase>
+		<phrase var_name="cancel" added="1565348919">Cancel</phrase>
+		<phrase var_name="please_chose_coupon_category" added="1565348919">Please chose coupon category</phrase>
+		<phrase var_name="setting_number_of_featured_coupons" added="1565348919"><![CDATA[<title>Number of Featured Coupons</title><info>Number of coupons that will be displayed on "Featured Coupons" block.</info>]]></phrase>
+		<phrase var_name="featured_coupon" added="1565348919">Featured Coupons</phrase>
+		<phrase var_name="full_name_liked_your_coupon_title" added="1565348919"><![CDATA[{full_name} liked your coupon "{title}"]]></phrase>
+		<phrase var_name="setting_limit_of_coupon_in_a_block" added="1565348919"><![CDATA[<title>Number of coupons on Latest Coupon , Most Like , Most Popular blocks</title><info>Number of coupons that will be display on Latest Coupons , Most Liked , Most Popular blocks</info>]]></phrase>
+		<phrase var_name="users_invited_you_to_the_coupon_title" added="1565348919"><![CDATA[{users} invited you to the coupon "{title}"]]></phrase>
+		<phrase var_name="setting_subcategories_to_show_at_first" added="1565348919"><![CDATA[<title>How many subcategories to show at first</title><info>This setting tells how many subcategories are to be shown at first. If the list of subcategories is longer than this value the extra ones will be hidden and a "View More" option will be shown instead, allowing the user to display the hidden subcategories. 
+
+a "View Less" option will be available to provide the full "accordion" effect. 
+
+If you set it to zero ("0" without quotes) it will hide every subcategory and a plus sign will show next to the category name, clicking the plus sign will show that category&#039;s subcategories.</info>]]></phrase>
+		<phrase var_name="editing_faq_s" added="1565348919">Editing FAQs</phrase>
+		<phrase var_name="add_faq_s" added="1565348919">Add FAQs</phrase>
+		<phrase var_name="question" added="1565348919">Question</phrase>
+		<phrase var_name="answer" added="1565348919">Answer</phrase>
+		<phrase var_name="this_field_required_8_character_and_only_alpha_numeric_characters" added="1565348919">This field format with 8 characters and only alpha-numeric characters</phrase>
+		<phrase var_name="add_new_faq" added="1565348919">Add new FAQ</phrase>
+		<phrase var_name="invited" added="1565348919">Invited</phrase>
+		<phrase var_name="signed" added="1565348919">Signed</phrase>
+		<phrase var_name="you_can_not_rate_this_coupon" added="1565348919">You can not rate this coupon</phrase>
+		<phrase var_name="you_must_login_to_rate" added="1565348919">You must login to rate</phrase>
+		<phrase var_name="moderate" added="1565348919">Moderate</phrase>
+		<phrase var_name="end" added="1565348919">End date</phrase>
+		<phrase var_name="item_phrase" added="1565348919">coupon</phrase>
+		<phrase var_name="dislike" added="1565348919">Dislike</phrase>
+		<phrase var_name="disliked" added="1565348919">disliked</phrase>
+		<phrase var_name="user_setting_can_post_comment_on_coupon" added="1565348919">Can post comments on coupon?</phrase>
+		<phrase var_name="can_not_rate_this_coupon" added="1565348919">Cannot rate this coupon</phrase>
+		<phrase var_name="user_name_tagged_you_in_a_comment_in_a_coupon" added="1565348919">{user_name} tagged you in a comment in a coupon</phrase>
+		<phrase var_name="please_add_your_paypal_account" added="1565348919">Please add your paypal account</phrase>
+		<phrase var_name="address" added="1565348919">Address</phrase>
+		<phrase var_name="i_have_read_and_agreed_with_the_terms_and_conditions" added="1565348919">I have read and agreed with the terms and conditions</phrase>
+		<phrase var_name="you_must_agree_with_the_terms_and_conditions_before_getting_code" added="1565348919">You must agree with the terms and conditions before getting code</phrase>
+		<phrase var_name="menu_add_new_coupon" added="1565348919">Create a New Coupon</phrase>
+		<phrase var_name="8_30_alphanumeric_characters" added="1565348919">8-30 alphanumeric characters</phrase>
+		<phrase var_name="coupon_code_must_be_8_30_alphanumeric_characters" added="1565348919">Coupon code must be 8-30 alphanumeric characters.</phrase>
+		<phrase var_name="auto_generate_8_character_with_only_alpha_numeric_characters" added="1565348919">Auto generate 8 characters with only alpha and numeric characters</phrase>
+		<phrase var_name="1_30_alphanumeric_characters" added="1565348919">1-30 alphanumeric characters</phrase>
+		<phrase var_name="coupon_code_must_be_1_30_alphanumeric_characters" added="1565348919">Coupon code must be 1-30 alphanumeric characters.</phrase>
+		<phrase var_name="site_url" added="1565348919">Site Url</phrase>
+		<phrase var_name="site_url_format_is_not_valid" added="1565348919">Site url format is not valid.</phrase>
+		<phrase var_name="key_word" added="1565348919">Key word</phrase>
+		<phrase var_name="customize_print_layout" added="1565348919">Customize print layout</phrase>
+		<phrase var_name="print_layout" added="1565348919">Print Layout</phrase>
+		<phrase var_name="themes" added="1565348919">Themes</phrase>
+		<phrase var_name="customize_themes" added="1565348919">Customize Themes</phrase>
+		<phrase var_name="off" added="1565348919">off</phrase>
+		<phrase var_name="never_expire" added="1565348919">Never expire</phrase>
+		<phrase var_name="coupon_code_must_be_1_30_characters" added="1565348919">Coupon code must be 1-30 characters.</phrase>
+		<phrase var_name="1_30_characters" added="1565348919">1-30 characters</phrase>
+		<phrase var_name="auto_generate_8_alpha_numeric_characters" added="1565348919">Auto generate 8 alpha-numeric characters</phrase>
+		<phrase var_name="admin_menu_add_print_template" added="1565348919">Add Print Template</phrase>
+		<phrase var_name="admin_menu_manage_print_templates" added="1565348919">Manage Print Templates</phrase>
+		<phrase var_name="print_template_updated_successfully" added="1565348919">Print template updated successfully.</phrase>
+		<phrase var_name="print_template_added_successfully" added="1565348919">Print template added successfully.</phrase>
+		<phrase var_name="add_print_template" added="1565348919">Add Print Template</phrase>
+		<phrase var_name="print_template_has_been_deleted" added="1565348919">Print template has been deleted.</phrase>
+		<phrase var_name="manage_print_templates" added="1565348919">Manage Print Templates</phrase>
+		<phrase var_name="template_name_is_required" added="1565348919">Template Name is required.</phrase>
+		<phrase var_name="font_size_is_required" added="1565348919">Font size is required.</phrase>
+		<phrase var_name="invalid_font_size" added="1565348919">Invalid font size.</phrase>
+		<phrase var_name="invalid_color_code" added="1565348919">Invalid color code.</phrase>
+		<phrase var_name="block_position_can_not_duplicate" added="1565348919">Block Position can not duplicate.</phrase>
+		<phrase var_name="order_in_group_can_not_duplicate" added="1565348919">Order in Group can not duplicate.</phrase>
+		<phrase var_name="template_details" added="1565348919">Template Details</phrase>
+		<phrase var_name="template_name" added="1565348919">Template Name</phrase>
+		<phrase var_name="item" added="1565348919">Item</phrase>
+		<phrase var_name="order_in_group" added="1565348919">Order in Group</phrase>
+		<phrase var_name="0_not_used" added="1565348919">(0: not used)</phrase>
+		<phrase var_name="block_position" added="1565348919">Block Position</phrase>
+		<phrase var_name="font_size" added="1565348919">Font Size</phrase>
+		<phrase var_name="px" added="1565348919">px</phrase>
+		<phrase var_name="text_color" added="1565348919">Text Color</phrase>
+		<phrase var_name="coupon_photo" added="1565348919">Coupon Photo</phrase>
+		<phrase var_name="discount_value" added="1565348919">Discount Value</phrase>
+		<phrase var_name="preview" added="1565348919">Preview</phrase>
+		<phrase var_name="save" added="1565348919">Save</phrase>
+		<phrase var_name="print_templates" added="1565348919">Print Templates</phrase>
+		<phrase var_name="template" added="1565348919">Template</phrase>
+		<phrase var_name="action" added="1565348919">Action</phrase>
+		<phrase var_name="no_template_found" added="1565348919">No template found.</phrase>
+		<phrase var_name="show_photo" added="1565348919">Show Photo</phrase>
+		<phrase var_name="show_site_url" added="1565348919">Show Site Url</phrase>
+		<phrase var_name="show_location" added="1565348919">Show Location</phrase>
+		<phrase var_name="show_category" added="1565348919">Show Category</phrase>
+		<phrase var_name="administrator_does_not_setting_payment_email_please_try_again_later" added="1565348919">Administrator does not setting payment email. Please try again later.</phrase>
+		<phrase var_name="show_map" added="1565348919">Show Map</phrase>
+		<phrase var_name="special_price" added="1565348919">Special Price</phrase>
+		<phrase var_name="coupon_type" added="1565348919">Coupon Type</phrase>
+		<phrase var_name="user_setting_coupon_sponsor_price" added="1565348919">How much is the sponsor space worth for coupons? 
+This works in a CPM basis.</phrase>
+		<phrase var_name="user_setting_can_pause_own_coupon" added="1565348919">Can delete pause coupon</phrase>
+		<phrase var_name="user_setting_can_close_own_coupon" added="1565348919">Can close own coupon</phrase>
+		<phrase var_name="user_setting_can_resume_own_coupon" added="1565348919">Can resume own coupon</phrase>
+		<phrase var_name="coupon_pause_successfully" added="1565348919">Coupon Paused Successfully</phrase>
+		<phrase var_name="coupon_resume_successfully" added="1565348919">Coupon Resumed Successfully</phrase>
+		<phrase var_name="coupon_closed_successfully" added="1565348919">Coupon Closed Successfully</phrase>
+		<phrase var_name="custom_field_successfully_deleted" added="1565348919">Custom Field Successfully Deleted.</phrase>
+		<phrase var_name="manage_custom_field" added="1565348919">Manage Custom Field.</phrase>
+		<phrase var_name="add_field_question" added="1565348919">Add Field Question.</phrase>
+		<phrase var_name="require_field" added="1565348919">Require Field.</phrase>
+		<phrase var_name="updating" added="1565348919">Updating</phrase>
+		<phrase var_name="adding" added="1565348919">Adding</phrase>
+		<phrase var_name="are_you_sure_you_want_to_delete_this_custom_option" added="1565348919">Are you sure you want to delete this custom option?
+
+Note that anyone using this option will revert to using the default option set for this custom field.</phrase>
+		<phrase var_name="could_not_delete" added="1565348919">Could not Delete</phrase>
+		<phrase var_name="unable_to_find_the_custom_field_you_want_to_delete" added="1565348919">Unable to find the custom field you want to delete.</phrase>
+		<phrase var_name="unable_to_find_the_custom_option_you_plan_on_deleting" added="1565348919">Unable to find the custom option you plan on deleting.</phrase>
+		<phrase var_name="custom_field_is_required" added="1565348919"><![CDATA["{custom_field}" is required.]]></phrase>
+		<phrase var_name="admin_menu_manage_custom_field" added="1565348919">Manage Custom Field</phrase>
+		<phrase var_name="menu_coupon_coupon_532c28d5412dd75bf975fb951c740a30" added="1565348919">Coupon</phrase>
+		<phrase var_name="coupon_close_successfully" added="1565348919">Coupon Close Successfully</phrase>
+		<phrase var_name="features_this_coupon_multi_currency" added="1565348919">Features this coupon : {symbol_currency_fee}{feature_fee}</phrase>
+		<phrase var_name="confirm_publish_coupon_multi_currency" added="1565348919">Are you sure you want to publish this coupon with total {symbol_currency_fee}{total_fee}?</phrase>
+		<phrase var_name="publishing_fee_multi_currency" added="1565348919">Publishing fee : {symbol_currency_fee}{publish_fee}</phrase>
+		<phrase var_name="total_fee_multi_currency" added="1565348919">Total fee : {symbol_currency_fee}{total_fee}</phrase>
+		<phrase var_name="featured_coupons" added="1565348919">Featured Coupons</phrase>
+		<phrase var_name="successfully_added_to_your_favorites" added="1565348919">Successfully added to your favorites.</phrase>
+		<phrase var_name="view_your_favorites" added="1565348919">View your Favorites</phrase>
+		<phrase var_name="view_your_following" added="1565348919">View your Following</phrase>
+		<phrase var_name="no_available_payment_methods" added="1565348919">No available payment methods</phrase>
+		<phrase var_name="place_order" added="1565348919">Place Order</phrase>
+		<phrase var_name="discount_percent_must_be_equal_to_or_less_than_100" added="1565348919">Discount percent must be equal to or less than 100</phrase>
+		<phrase var_name="others_of_this_member" added="1565348919">Others of this member</phrase>
+		<phrase var_name="admin_menu_user_group_settings" added="1565348919">User Group Settings</phrase>
+		<phrase var_name="coupon_large_text_area" added="1565348919">Large Text Area</phrase>
+		<phrase var_name="coupon_small_text_area_255_characters_max" added="1565348919">Small Text Area (255 Characters Max)</phrase>
+		<phrase var_name="controller_coupon.index" added="1565348919">Home page</phrase>
+		<phrase var_name="controller_coupon.detail" added="1565348919">Detail page</phrase>
+		<phrase var_name="controller_coupon.profile" added="1565348919">Profile page</phrase>
+	</phrases>
+	<user_group_settings>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="0" staff="0" module="coupon" ordering="0">can_control_comments_on_coupons</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="0" staff="0" module="coupon" ordering="0">can_control_claim_coupons</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="1" staff="1" module="coupon" ordering="0">can_view_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="0" staff="1" module="coupon" ordering="0">can_edit_own_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="0" staff="1" module="coupon" ordering="0">can_create_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="0" guest="0" staff="0" module="coupon" ordering="0">can_edit_other_user_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="0" staff="1" module="coupon" ordering="0">can_rate_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="0" guest="0" staff="0" module="coupon" ordering="0">can_delete_other_user_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="0" staff="1" module="coupon" ordering="0">can_post_comment_on_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="0" staff="1" module="coupon" ordering="0">can_delete_own_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="0" guest="0" staff="0" module="coupon" ordering="0">can_feature_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="0" guest="0" staff="0" module="coupon" ordering="0">can_approve_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="integer" admin="10" user="10" guest="10" staff="10" module="coupon" ordering="0">how_much_user_feature_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="0" staff="0" module="coupon" ordering="0">auto_approve_after_publish</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="integer" admin="10" user="10" guest="10" staff="10" module="coupon" ordering="0">how_much_user_publish_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="integer" admin="5" user="5" guest="0" staff="5" module="coupon" ordering="0">points_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="integer" admin="0" user="1" guest="1" staff="1" module="coupon" ordering="0">flood_control_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="0" staff="0" module="coupon" ordering="0">can_pause_own_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="0" staff="0" module="coupon" ordering="0">can_close_own_coupon</setting>
+		<setting is_admin_setting="0" module_id="coupon" type="boolean" admin="1" user="1" guest="0" staff="0" module="coupon" ordering="0">can_resume_own_coupon</setting>
+	</user_group_settings>
+</module>

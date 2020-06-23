@@ -1,0 +1,267 @@
+@import "variables";
+.button_hover(@bgbox, @start-color,@end-color) {
+   background-image: -moz-linear-gradient( 0deg, @start-color 0%, @end-color 100%);
+   background-image: -webkit-linear-gradient( 0deg, @start-color 0%, @end-color 100%);
+   background-image: -ms-linear-gradient( 0deg ,@start-color 0%, @end-color 100%);
+   .shadow_thick(@bgbox);
+}
+
+.shadow_thick(@bg){
+  box-shadow: 0px 2px 5px 0px @bg;
+}
+.shadow_thick_hover(@bg){
+  box-shadow: 0px 5px 10px 0px @bg;
+}
+
+body {
+  background:@body_bg;
+  color:@color;
+}
+
+a, a:hover {
+  color:@link;
+}
+
+a:hover {
+  color:@link_hover;
+}
+
+.breadcrumbs-top {
+  border-bottom-color:@border;
+}
+
+.navbar-default {
+  background:@nav_bar_bg;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover {
+  color: @nav-color;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  background:@nav_bar_bg_hover;
+  color:@nav_bar_color_hover;
+}
+
+.sticky-bar {
+  background:@header_bg;
+}
+
+.navbar.navbar-default.ynrespassion-navbar{
+  background: @nav-bg;
+}
+.ynrespassion-navbar.navbar-default{
+  background: @nav-bg;
+}
+@media (max-width: 992px){
+  .navbar-header{
+    background-color: @brand_primary;
+  }
+}
+
+#js_block_border_core_menusub ul.action > li.active > a, #js_block_border_core_menusub ul.action > li.active > a:hover, #js_block_border_core_menusub ul.action > li.active > a:focus {
+  border-left-color:@brand_primary_border;
+  background:@section_menu_active_bg;
+  color:@section_menu_active_color;
+}
+
+#content-stage {
+  background:@content_bg;
+}
+
+.container-fluid {
+  max-width:@container_width;
+}
+
+footer, .footer-holder {
+  background:@footer_bg;
+  color:@footer_color;
+}
+
+#section-footer .footer-menu li a{
+  color:@footer_color;
+}
+
+.btn-success{
+  background:@brand_success;
+  color:@brand_success_color;
+  border-color:@brand_success_border;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active  {
+  /* .button_hover(rgba(122, 203, 29, 0.5),@brand-success-light,@brand_success); */
+
+}
+
+.form-control, .edit_menu_container {
+  border-color:@form_border;
+  background:@form_bg;
+  color:@form_color;
+}
+
+.form-control:focus {
+  box-shadow:@form_focus_box_shadow !important;
+  border-color:@form_focus_border;
+  color: @form_focus_color;
+}
+
+
+#header_search_form span.form-control-feedback {
+  background:@search_button_bg !important;
+  color:@search_button_color !important;
+}
+
+ul.action > li {
+  border-bottom-color:@block_title_border !important;
+}
+
+ul.action > li > a, ul.action > li > a:hover {
+  color:@block_color !important;
+}
+
+ul.action > li > a:hover {
+  color:@link_hover !important;
+}
+
+.block {
+  background:@block_bg !important;
+
+  .title {
+    color:@block_title_color !important;
+    border-bottom-color:@block_title_border !important;
+    font-size:@block_title_size !important;
+  }
+
+  .content {
+    color:@block_color !important;
+
+    .extra_info, .extra_info_link {
+      color:@block_color !important;
+    }
+  }
+}
+
+#header_search_form input.form-control {
+  background:@search_bg;
+  color:@search_color;
+}
+
+.item_selection_not_active .item_is_not_active, 
+.item_selection_active .item_is_active, 
+.page_section_menu ul li.active a {
+  color:@button_color !important;
+  border-color:@button_border !important;
+  background: @button_bg !important;
+}
+
+.page_section_menu ul li.active a:hover{
+  color:@button_color !important;
+  border-color:@button_border !important;
+}
+
+.feed_comment_share_holder a:hover, .feed_like_link a.js_like_link_toggle:hover, .feed_options_holder a.feed_options:hover {
+  color:@button_color;
+}
+
+.feed_like_link a.js_like_link_toggle.liked {
+  color:@brand_primary;
+}
+
+
+.page_breadcrumbs_menu .btn-success:hover{
+  /* .button_hover(rgba(122, 203, 29, 0.5),@brand-success-light, @brand_success); */
+
+}
+
+
+.page_breadcrumbs_menu > a > span:before {
+  content: ' ';
+  display:inline-block;
+  padding-right:5px;
+}
+
+a.activity_feed_content_link_title, a.activity_feed_content_link_title:hover, #content div.row_title_info h1 a.link, #content div.row_title_info h1 a.link:hover {
+  color:@link_focus !important;
+}
+
+a.activity_feed_content_link_title:hover, #content div.row_title_info h1 a.link:hover {
+  color:@link_focus_hover !important;
+}
+
+.header_filter_holder .btn:focus{
+  border-color: @form_focus_border !important;
+  .shadow_thick(rgba(23, 148, 255, 0.3)) !important;
+  background-color: @form_bg !important;
+  color: @form_focus_color;
+}
+
+
+.header-right-menu li.open .btn-abr, ._moderator a.moderate_link_active i::before, ._moderator a.moderate_link_active:hover i::before {
+  color:@brand_primary;
+}
+
+.profile_menu_is_fixed .profiles_menu {
+  background:@brand_primary;
+}
+
+.profile_menu_is_fixed .profiles_menu > ul > li > a, .profile_menu_is_fixed .profiles_menu > ul > li > a:hover {
+  color:@header_color;
+}
+
+.profile_menu_is_fixed .profiles_menu > ul > li > a:hover {
+  opacity:0.6;
+}
+
+.feed_is_child {
+  display:inline-block;
+
+  div.row1, div.row2 {
+    background:darken(@feed_bg, 5%);
+    margin:0;
+  }
+
+  .js_feed_comment_border {
+    display:none;
+  }
+}
+
+#right #js_block_border_user_register {
+  background:fade(#0c0c0c, 85%) !important;
+
+  .table_left {
+    color:#fff !important;
+  }
+
+  .extra_info {
+    color:#fff !important;
+  }
+}
+
+.ynrespassion-navbar.navbar-default .navbar-nav > li > a{
+  color: @nav-color;
+}
+.ynrespassion-navbar.navbar-default .navbar-nav > li > a:hover, .ynrespassion-navbar.navbar-default .navbar-nav > li > a.menu_is_selected{
+  color: @nav-color-hover;
+}
+.navbar.navbar-default.ynrespassion-navbar .navbar-nav > li a:after{
+  background: @nav-color-hover-line;
+}
+body#page_ynrespassion_landing{
+  .ynrespassion_home{
+      &:before{
+          background: @big-circle-bg;
+      }
+      &:after{
+          background: @sm-circle-bg;
+      }
+  }
+}
+.ynrespassion-reasons-ld .ynrespassion-reasons-container{
+  background: @reason_block_bg;
+}
+#section-footer .footer-holder, #select_lang_pack{
+  color: @footer_copyright_color;
+}
+#section-header .block .content{
+  background: @block_landing_bg;
+}

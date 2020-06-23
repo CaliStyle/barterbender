@@ -1,0 +1,190 @@
+
+/*=============================================
+=            STRUCTURE LAYOUT            =
+=============================================*/
+@media (min-width: @screen-lg-min){
+	.container {
+		width: 1200px;
+	}
+}
+
+//Remove padding when max-width 480px
+@media (max-width: @screen-xs-min){
+	#main{
+		.container{
+			.pl-0;
+			.pr-0;
+
+			.row{
+				.ml-0;
+				.mr-0;
+			}
+		}
+	}
+}
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+	.container{
+		width: auto;
+		max-width: 100%;
+	}
+}
+//Variable of width column left and column right: ;
+@with-col-lr: @grid-point*29;
+.layout-main{
+	.clearfix;
+
+	#yncfbclone-left.yncfbclone-layout-left {
+		width: @with-col-lr;
+		float: left;
+		display: none;
+		html[dir='rtl'] &{
+			float: right;
+		}
+	}
+
+	#content-holder.layout-middle{
+		width: calc(100% ~"-" @with-col-lr + @grid-point*2);
+		.mr-2;
+		.mb-2;
+		float: left;
+		html[dir='rtl'] &{
+			float: right;
+		}
+		@media (min-width:@screen-sm-min) and (max-width:@screen-sm-max){
+			.mb-0;
+		}
+	}
+
+	#left.layout-left{
+		width: @with-col-lr;
+		.mb-2;
+		float: right;
+		html[dir='rtl'] &{
+			float: left;
+			padding: 0;
+		}
+	}
+
+	#right.layout-right{
+		width: @with-col-lr;
+		float: right;
+		clear: right;
+		html[dir='rtl'] &{
+			float: left;
+			clear: left;
+			padding: 0;
+		}
+	}
+
+	#yncfbclone-right.yncfbclone-layout-right {
+		float: right;
+		clear: right;
+		html[dir='rtl'] &{
+			float: left;
+			clear: left;
+		}
+	}
+
+	//Layout when on mobile < 768px
+	@media (max-width:@screen-xs-max){
+		display: flex;
+		flex-direction: column;
+
+		#content-holder.layout-middle{
+			width: 100%;
+			order: -1;
+			margin-right: 0!important;
+		}
+
+		#left.layout-left,
+		#right.layout-right{
+			width: 100%;
+		}
+	}
+}
+
+//When empty layout right
+.empty-right{
+	.layout-main #left.layout-left,
+	.layout-main #right.layout-right {
+		.mb-0;
+	}
+
+	.layout-main #content-holder.layout-middle{
+		.ml-0;
+		@media (max-width: @screen-sm-max){
+			.mr-2;
+			html[dir='rtl'] &{
+				.mr-0;
+				.ml-2;
+			}
+		}
+	}
+}
+
+//When empty layout left
+.empty-left{
+	.layout-main #left.layout-left{
+		.mb-0;
+	}
+
+	.layout-main #content-holder.layout-middle{
+		.ml-0;
+		@media (max-width: @screen-sm-max){
+			.mr-2;
+		}
+	}
+}
+
+.empty-left.has-move-left:not(.empty-right) {
+	.layout-main #left.layout-left {
+		.mb-2;
+	}
+}
+
+//When empty layout left and layout right
+.empty-right.empty-left{
+	.layout-main #content-holder.layout-middle{
+		width: 100%;
+		.m-0;
+		float: none;
+	}
+}
+
+
+.yncfbclone-has-left-menu {
+	@media (min-width: @screen-md-min) {
+		#yncfbclone-left.yncfbclone-layout-left {
+			display: block !important;
+		}
+
+		.layout-main #content-holder.layout-middle {
+			.ml-2;
+			width: calc(100%~"-"@with-col-lr * 2 + @grid-point * 4);
+		}
+
+		&:not(.yncfbclone-has-right-column) {
+			.layout-main #content-holder.layout-middle {
+				width: calc(100%~"-"@with-col-lr + @grid-point * 2);
+				.mr-0;
+				float: left;
+			}
+		}
+
+		.has-empty-left {
+			.layout-main #left.layout-left {
+				.mb-0;
+			}
+		}
+	}
+}
+
+body:not(.yncfbclone-has-left-menu) {
+	.layout-main #content-holder.layout-middle{
+		@media (min-width:@screen-sm-min) {
+			.mb-0;
+		}
+	}
+}
+
+/*=====  End of STRUCTURE LAYOUT  ======*/

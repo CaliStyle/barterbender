@@ -1,0 +1,24 @@
+2018-04-26 08:46:22:rmWqJoPz
+error: stream_socket_server(): unable to connect to tcp://0.0.0.0:9009 (Address already in use) (2)
+file: /home/product-dev/public_html/minhnc/fox461/PF.Base/ynchat/vendor/react/socket/src/Server.php (26)
+trace: 
+#0 vendor/react/socket/src/Server.php(26): stream_socket_server('tcp://0.0.0.0:9009', 0, '')
+#1 vendor/cboden/ratchet/src/Ratchet/Server/IoServer.php(70): React\Socket\Server->listen(9009, '0.0.0.0')
+#2 ynserver.php(21): Ratchet\Server\IoServer::factory(Ratchet\Http\HttpServer, 9009)
+#3 {main}
+2018-04-26 08:46:29:oK3kylE5
+error: stream_socket_server(): unable to connect to tcp://0.0.0.0:9009 (Address already in use) (2)
+file: /home/product-dev/public_html/minhnc/fox461/PF.Base/ynchat/vendor/react/socket/src/Server.php (26)
+trace: 
+#0 vendor/react/socket/src/Server.php(26): stream_socket_server('tcp://0.0.0.0:9009', 0, '')
+#1 vendor/cboden/ratchet/src/Ratchet/Server/IoServer.php(70): React\Socket\Server->listen(9009, '0.0.0.0')
+#2 ynserver.php(21): Ratchet\Server\IoServer::factory(Ratchet\Http\HttpServer, 9009)
+#3 {main}
+2018-04-26 08:46:33:VObYtgBY
+error: stream_socket_server(): unable to connect to tcp://0.0.0.0:9009 (Address already in use) (2)
+file: /home/product-dev/public_html/minhnc/fox461/PF.Base/ynchat/vendor/react/socket/src/Server.php (26)
+trace: 
+#0 vendor/react/socket/src/Server.php(26): stream_socket_server('tcp://0.0.0.0:9009', 0, '')
+#1 vendor/cboden/ratchet/src/Ratchet/Server/IoServer.php(70): React\Socket\Server->listen(9009, '0.0.0.0')
+#2 ynserver.php(21): Ratchet\Server\IoServer::factory(Ratchet\Http\HttpServer, 9009)
+#3 {main}

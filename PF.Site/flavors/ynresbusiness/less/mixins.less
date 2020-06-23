@@ -1,0 +1,49 @@
+.transition(@transition){
+	 -webkit-transition: @transition;
+    transition: @transition;
+}
+.button(@bg , @color) {
+    display: block;
+    text-align: center;
+    border: 1px @bg solid;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: (@font-size-base - 1) !important;
+    letter-spacing: 1px;
+    color: @color;
+    box-shadow: 0px 2px 5px 0px @bg, 0.3;
+}
+
+.button_hover(@bg , @color) {
+    border-color: darken(@bg, 10%);
+    color: @color;
+    transition: @transition;
+    background-image: -moz-linear-gradient( 0deg, @brand-success-light 0%, @brand-success 100%);
+	background-image: -webkit-linear-gradient( 0deg, @brand-success-light 0%, @brand-success 100%);
+	background-image: -ms-linear-gradient( 0deg, @brand-success-light 0%, @brand-success 100%);
+}
+.shadow_thick(@bg){
+	background: @bg;
+	box-shadow: 0px 2px 5px 0px @bg;
+}
+.shadow_thick_hover(){
+	box-shadow: 0px 5px 10px 0px @bg;
+}
+
+.shadow_thin(@bg){
+	background: @bg;
+	box-shadow: 0px 2px 2px 0px @bg;
+}
+.shadow_thin_hover(@bg){
+	box-shadow: 0px 2px 3px 0px @bg;
+}
+
+.icon_center() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}

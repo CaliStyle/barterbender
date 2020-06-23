@@ -1,0 +1,76 @@
+<module>
+	<data>
+		<module_id>opensocialconnect</module_id>
+		<product_id>younet_socialconnect</product_id>
+		<is_core>0</is_core>
+		<is_active>1</is_active>
+		<is_menu>1</is_menu>
+		<menu><![CDATA[a:2:{s:45:"opensocialconnect.admin_menu_manage_providers";a:1:{s:3:"url";a:2:{i:0;s:17:"opensocialconnect";i:1;s:9:"providers";}}s:39:"opensocialconnect.admin_menu_statistics";a:1:{s:3:"url";a:2:{i:0;s:17:"opensocialconnect";i:1;s:4:"stat";}}}]]></menu>
+		<phrase_var_name>module_opensocialconnect</phrase_var_name>
+		<version>4.02p1</version>
+		<author>YouNetCo</author>
+		<vendor>https://phpfox.younetco.com/</vendor>
+		<description>by YouNetCo</description>
+		<apps_icon>http://phpfox.younetco.com/files/2015/07/social_connect_icon.png</apps_icon>
+	</data>
+	<settings>
+		<setting group="" module_id="opensocialconnect" is_hidden="0" type="integer" var_name="margin_top" phrase_var_name="setting_margin_top" ordering="3" version_id="3.5.0">0</setting>
+		<setting group="" module_id="opensocialconnect" is_hidden="0" type="integer" var_name="margin_left" phrase_var_name="setting_margin_left" ordering="4" version_id="3.5.0">-13</setting>
+		<setting group="" module_id="opensocialconnect" is_hidden="0" type="integer" var_name="limit_providers_view_on_login_header" phrase_var_name="setting_limit_providers_view_on_login_header" ordering="1" version_id="3.0.0">7</setting>
+		<setting group="" module_id="opensocialconnect" is_hidden="0" type="integer" var_name="size_of_icon_in_pixel" phrase_var_name="setting_size_of_icon_in_pixel" ordering="2" version_id="3.5.0">24</setting>
+		<setting group="" module_id="opensocialconnect" is_hidden="0" type="boolean" var_name="allow_user_to_input_their_password" phrase_var_name="setting_allow_user_to_input_their_password" ordering="1" version_id="3.7.7">1</setting>
+		<setting group="" module_id="opensocialconnect" is_hidden="0" type="boolean" var_name="allow_user_account_to_be_approved_automatically" phrase_var_name="setting_allow_user_account_to_be_approved_automatically" ordering="1" version_id="3.7.7">1</setting>
+	</settings>
+	<phrases>
+		<phrase var_name="admin_menu_manage_providers" added="1539934106">Manage Providers</phrase>
+		<phrase var_name="module_opensocialconnect" added="1539934106">Social Connect</phrase>
+		<phrase var_name="translate_module_opensocialconnect" added="1539934106">Social Connect</phrase>
+		<phrase var_name="providers_successfully_deleted" added="1539934106">Providers successfully deleted.</phrase>
+		<phrase var_name="mange_social_providers" added="1539934106">Mange Social Providers</phrase>
+		<phrase var_name="title" added="1539934106">Title</phrase>
+		<phrase var_name="name" added="1539934106">Name</phrase>
+		<phrase var_name="not_a_valid_request" added="1539934106">Not a valid request.</phrase>
+		<phrase var_name="invalid_security_problem" added="1539934106">Invalid security problem.</phrase>
+		<phrase var_name="synchronize" added="1539934106">Synchronize</phrase>
+		<phrase var_name="this_email_already_exists_do_you_want_to_synchronize_with_this_account" added="1539934106"><![CDATA[This email <strong>{email}</strong> already exists. Do you want to synchronize with this account?]]></phrase>
+		<phrase var_name="welcome_email_content_sign_up" added="1539934106">Thanks for joining our community! Your Account Info:
+Email: {email}
+Password: {password}
+You can login by using above info or using social connect to login.</phrase>
+		<phrase var_name="you_registered_an_account_on_site_title_before_being_able_to_use_your_account_you_need_to_verify_tha" added="1539934106"><![CDATA[You registered an account on {site_title}, before being able to use your account you need to verify that this is your email address by clicking here:
+<a href="{link}">{link}</a>
+Email: {email}
+Password: {password}
+You can login by using above info or using social connect to login.]]></phrase>
+		<phrase var_name="facebook_secret" added="1539934106">Facebook Secret</phrase>
+		<phrase var_name="application_id" added="1539934106">Application ID</phrase>
+		<phrase var_name="overwrite_default_facebook_settings" added="1539934106">Overwrite default Facebook settings</phrase>
+		<phrase var_name="update_successfully" added="1539934106">Update Successfully</phrase>
+		<phrase var_name="invalid_facebook_api" added="1539934106">Invalid Facebook API</phrase>
+		<phrase var_name="auto_generate_password" added="1539934106">Auto generate password.</phrase>
+		<phrase var_name="secret_key" added="1539934106">Secret Key</phrase>
+		<phrase var_name="api_key" added="1539934106">API Key</phrase>
+		<phrase var_name="consumer_key" added="1539934106">Consumer Key</phrase>
+		<phrase var_name="consumer_secret" added="1539934106">Consumer Secret</phrase>
+		<phrase var_name="setting_limit_providers_view_on_login_header" added="1539934106"><![CDATA[<title>Limit providers view on login header</title><info>The number providers can view on login section.</info>]]></phrase>
+		<phrase var_name="by_using" added="1539934106">by using</phrase>
+		<phrase var_name="please_install_social_bridge_plugin_first" added="1539934106">Please install Social Bridge plugin first</phrase>
+		<phrase var_name="all_social_api_keys_configuration_was_setup_in" added="1539934106">All social API Keys Configuration was setup in:</phrase>
+		<phrase var_name="admin_menu_statistics" added="1539934106">Statistics</phrase>
+		<phrase var_name="statistics" added="1539934106">Statistics</phrase>
+		<phrase var_name="no_providers_found" added="1539934106">No providers found.</phrase>
+		<phrase var_name="provider" added="1539934106">Provider</phrase>
+		<phrase var_name="total_signup" added="1539934106">Total Signup</phrase>
+		<phrase var_name="total_login" added="1539934106">Total Login</phrase>
+		<phrase var_name="setting_size_of_icon_in_pixel" added="1539934106"><![CDATA[<title>Size of provider icon (px)</title><info>Size in pixel of each provider icon on front-end.</info>]]></phrase>
+		<phrase var_name="setting_margin_left" added="1539934106"><![CDATA[<title>Margin left (px)</title><info>Pixel distance from the provider block to the left side of the web page.</info>]]></phrase>
+		<phrase var_name="setting_margin_top" added="1539934106"><![CDATA[<title>Margin top (px)</title><info>Pixel distance from the provider block to the top of the web page.</info>]]></phrase>
+		<phrase var_name="profile_questions_synchronization" added="1539934106">Profile Questions Synchronization</phrase>
+		<phrase var_name="option" added="1539934106">Option</phrase>
+		<phrase var_name="provider_to_profile_questions" added="1539934106">{provider} to Profile Questions</phrase>
+		<phrase var_name="set_none_value_if_you_do_not_need_to_map_provider_fields" added="1539934106"><![CDATA[Set "None" value if you do not need to map {provider} fields.]]></phrase>
+		<phrase var_name="setting_allow_user_to_input_their_password" added="1539934106"><![CDATA[<title>Allow user to input their password</title><info>Allow user to input their password</info>]]></phrase>
+		<phrase var_name="system_will_automatically_send_generate_password_to_your_email_after_you_sign_up" added="1539934106">System will automatically send generate password to your email after you sign up</phrase>
+		<phrase var_name="setting_allow_user_account_to_be_approved_automatically" added="1539934106"><![CDATA[<title>Allow user account to be approved immediately</title><info>Allow user account to be approved immediately</info>]]></phrase>
+	</phrases>
+</module>

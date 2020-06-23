@@ -1,0 +1,223 @@
+
+
+#introFlash{
+	width: 500px;
+	height: 544px;
+	overflow: hidden;
+	margin: auto;
+	/*opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);*/
+	background-color: #FFFFFF;
+	display:none;
+} 
+
+#introFlash ul.paginator{
+	bottom: 0;
+	height: 20px;
+	left: 0;
+	margin: 0;
+	padding: 15px 28px 15px 34px;
+	position: absolute;
+}
+
+#introFlash ul.paginator li {
+	display: inline-block;
+	float: left;
+	height: 20px;
+	margin: 0;
+	padding: 0 6px;
+	width: 8px;
+}
+
+#introFlash ul.paginator li a {
+	background: url("@{module-folder}petition/static/images/paginative.gif") no-repeat scroll 0 50% transparent;
+	display: block;
+	height: 8px;
+	margin: 0;
+	opacity: 0.5;
+	overflow: hidden;
+	padding: 0;
+	text-align: left;
+	text-indent: -9999em;
+	width: 8px;
+	outline: none;
+	margin-top: 8px;
+}
+
+#introFlash ul.paginator li.current a {
+	background: url("@{module-folder}petition/static/images/paginative.gif") no-repeat scroll -8px 50% transparent;
+	display: block;
+	height: 8px;
+	margin: 0;
+	opacity: 0.5;
+	overflow: hidden;
+	padding: 0;
+	text-align: left;
+	text-indent: -9999em;
+	width: 8px;
+	float: left;
+	margin-top: 8px;
+}
+
+#introFlash ul.paginator li.prev{
+	bottom: 15px;
+	float: left;
+	height: 20px;
+	left: 8px;
+	position: absolute;
+	right: auto;
+	width: 20px;
+}
+
+#introFlash ul.paginator li.next{
+	height: 20px;
+	padding-left: 0;
+	right: 8px;
+	width: 20px;
+}
+
+#introFlash ul.paginator li.prev a{
+	background: url("@{module-folder}petition/static/images/paginator.gif") no-repeat scroll 0 0 transparent;
+	height: 20px;
+	left: 15px;
+	right: auto;
+	padding-right: 5px;
+	top: 16px;
+	width: 20px;
+	margin: 0;
+}
+
+#introFlash ul.paginator li.next a{
+	background: url("@{module-folder}petition/static/images/paginator.gif") no-repeat scroll 100% 50% transparent;
+	height: 20px;
+	left: 14px;
+	padding-right: 5px;
+	right: auto;
+	top: 16px;
+	width: 14px;
+	margin: 0;
+}
+
+#introFlash ul.slider{
+	left: 0;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 9999em;
+}
+
+#introFlash ul.slider li{
+	background: none no-repeat scroll 0 0 transparent;
+	display: inline;
+	float: left;
+	height: 544px;
+	padding: 0px;
+	margin: 0px;
+	width: 500px;
+}
+
+.cell-container{
+	width: 500px;
+	height: 544px;
+	position: relative;
+}
+
+.cell-container .sub-wrapp{
+	bottom: 0;
+	height: 115px;
+	left: 0;
+	position: absolute;
+	width: 500px;
+}
+
+.cell-container .sub-wrapp .swbackground{
+	height: 115px;
+	width: 500px;
+	bottom: 0;
+	left: 0;
+	background-color: #000;
+	opacity: 0.7;
+	-moz-opacity: 0.7;
+	filter: alpha(opacity=70);
+	position: absolute;
+}
+
+.cell-container .sub-wrapp .swcontent{
+	bottom: 0;
+	color: #FFFFFF;
+	float: left;
+	font-family: Helvetica Neue,Helvetica,Verdana,Arial,Tahoma,Times New Roman;
+	height: 115px;
+	left: 0;
+	position: absolute;
+	text-align: left;
+	width: 500px;
+}
+
+.cell-container .sub-wrapp .swcontent div.title{
+	width: 308px;
+	float: left;
+	text-align: left;
+	padding-top: 10px;
+	padding-left: 8px;
+	color: #FFFFFF;
+}
+
+.cell-container .sub-wrapp .swcontent div.title h3{
+	color: #FFFFFF;
+	font-size: 22px;
+	line-height: 26px;
+	white-space: normal;
+}
+
+.cell-container .sub-wrapp .swcontent div.content{
+	color: #FFFFFF;
+	float: right;
+	height: 90px;
+	padding-right: 140px;
+	padding-top: 10px;
+	position: relative;
+	text-align: left;
+	width: 400px;
+}
+
+.cell-container .sub-wrapp .swcontent div.content p{
+	color: #FFFFFF;
+	font-family: Helvetica Neue,Helvetica,Verdana,Arial,Tahoma,Times New Roman;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.cell-container .sub-wrapp .swcontent div.content a.more{
+	bottom: 0;
+	color: #27CED6;
+	display: block;
+	font-family: Helvetica Neue,Helvetica,Verdana,Arial,Tahoma,Times New Roman;
+	font-size: 14px;
+	left: 0;
+	position: absolute;
+}
+
+.hide{
+	display: none!important;
+}
+
+.stypibdiv{
+	bottom: 14px;
+	left: 350px;
+	position: absolute;
+	color: #27CED6;
+	display: block;
+	font-family: Helvetica Neue,Helvetica,Verdana,Arial,Tahoma,Times New Roman;
+	font-size: 14px;
+	display:none;
+}
+
+.stypibdiv a{
+	color: #27CED6;
+	display: block;
+	font-family: Helvetica Neue,Helvetica,Verdana,Arial,Tahoma,Times New Roman;
+	font-size: 14px;
+}

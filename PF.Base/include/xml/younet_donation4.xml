@@ -1,0 +1,259 @@
+<product>
+	<data>
+		<store_id />
+		<product_id>younet_donation4</product_id>
+		<is_core>0</is_core>
+		<title>YNC Donation</title>
+		<description>by YouNetCo</description>
+		<version>4.02p1</version>
+		<latest_version></latest_version>
+		<last_check>0</last_check>
+		<is_active>1</is_active>
+		<url>https://phpfox.younetco.com/</url>
+		<url_version_check>http://phpfox4.demo.younetco.com/</url_version_check>
+		<icon>https://phpfox.younetco.com/files/2015/11/donation.png</icon>
+		<vendor>YouNetCo</vendor>
+	</data>
+	<installs>
+		<install>
+			<version>3.01</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_config')." (
+  `donation_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `page_id` int(11) NOT NULL,
+  `is_active` tinyint(1) NOT NULL,
+  `email` varchar(75) NOT NULL,
+  `content` mediumtext,
+  `content_parsed` mediumtext,
+  `time_stamp` int(11) NOT NULL,
+  PRIMARY KEY (`donation_id`)
+) ENGINE=MyISAM  AUTO_INCREMENT=1 ;");
+
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_pages')." (
+  `donation_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `page_id` int(11) NOT NULL,
+  `quanlity` decimal(10,0) NOT NULL,
+  `purchased` tinyint(1) NOT NULL DEFAULT '1',
+  `approve` tinyint(1) NOT NULL DEFAULT '1',
+  `time_stamp` int(11) NOT NULL,
+  PRIMARY KEY (`donation_id`,`user_id`,`page_id`),
+  KEY `approve` (`approve`),
+  KEY `user_id` (`user_id`,`page_id`)
+) ENGINE=MyISAM   AUTO_INCREMENT=1 ;");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.02</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('donation_config'),'term_of_service'))
+{
+$this->database()->query("ALTER TABLE `" . Phpfox::getT('donation_config') . "` ADD COLUMN term_of_service mediumtext ");
+}
+
+if(!$this->database()->isField(Phpfox::getT('donation_config'),'term_of_service_parsed'))
+{
+$this->database()->query("ALTER TABLE `" . Phpfox::getT('donation_config') . "` ADD COLUMN term_of_service_parsed mediumtext ");
+}
+
+if(!$this->database()->isField(Phpfox::getT('donation_pages'),'module_id'))
+{
+$this->database()->query("ALTER TABLE `" . Phpfox::getT('donation_pages') . "` ADD COLUMN module_id varchar(75) default NULL ");
+}
+
+if(!$this->database()->isField(Phpfox::getT('user_activity'),'activity_donation'))
+{
+$this->database()->query("ALTER TABLE `" . PHPFOX::getT("user_activity") . "` ADD COLUMN `activity_donation` INTEGER(10) UNSIGNED NOT NULL default '0';");
+}
+
+if(!$this->database()->isField(Phpfox::getT('user_field'),'total_donation'))
+{
+$this->database()->query("ALTER TABLE `" . PHPFOX::getT("user_field") . "` ADD COLUMN `total_donation` INTEGER(10) UNSIGNED NOT NULL default '0';");
+}
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_email')." (
+  `donation_id` int(10) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `content` mediumtext NOT NULL,
+  `content_parsed` mediumtext,
+  PRIMARY KEY (`donation_id`)
+) ENGINE=MyISAM  AUTO_INCREMENT=1 ;");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('donation_pages'),'not_show_name'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('donation_pages')."` ADD `not_show_name` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('donation_pages'),'is_guest'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('donation_pages')."` ADD `is_guest` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('donation_pages'),'not_show_money'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('donation_pages')."` ADD `not_show_money` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT '0'");
+}
+
+$this->database()->query("ALTER TABLE  `".Phpfox::getT('donation_pages')."` CHANGE `quanlity`  `quanlity` DECIMAL(10,2) NOT NULL");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_guest_donation')." (
+  `donation_id` int(11) NOT NULL AUTO_INCREMENT,
+  `guest_name` varchar(100) NOT NULL,
+  `page_id` int(11) NOT NULL,
+  `quanlity` decimal(10,2) NOT NULL,
+  `purchased` tinyint(1) NOT NULL DEFAULT '1',
+  `approve` tinyint(1) NOT NULL DEFAULT '1',
+  `time_stamp` int(11) NOT NULL,
+  `module_id` varchar(75) DEFAULT NULL,
+  `not_show_name` tinyint(1) NOT NULL DEFAULT '0',
+  `not_show_money` tinyint(1) NOT NULL DEFAULT '0',
+  `is_guest` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`donation_id`)
+) ENGINE=MyISAM   AUTO_INCREMENT=1 ;");
+
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_image')."(
+  `image_id` int(20) NOT NULL AUTO_INCREMENT,
+  `server_id` tinyint(3) NOT NULL,
+  `image_path` varchar(255) DEFAULT NULL,
+  `time_stamp` int(10) DEFAULT NULL,
+  `is_default` tinyint(1) DEFAULT NULL,
+  `type` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`image_id`)
+) ENGINE=MyISAM   AUTO_INCREMENT=1 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_invoice')." (
+  `invoice_id` int(10) unsigned NOT NULL auto_increment,
+  `invoice_content` mediumtext NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  `time_stamp_paid` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`invoice_id`)
+) ENGINE=MyISAM   AUTO_INCREMENT=1 ;");
+
+$this->database()->query("INSERT IGNORE INTO ".Phpfox::getT('donation_image'). "(`image_id`, `server_id`, `image_path`, `is_default`, `type`) VALUES
+(1, 0, 'module/donation/static/image/donate_button.gif', 1, 'default_button'),
+(2, 0, '', 0, 'admin_button');");
+;]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03p1</version>
+			<install_code><![CDATA[if(!$this->database()->isField(Phpfox::getT('donation_pages'),'not_show_name'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('donation_pages')."` ADD `not_show_name` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('donation_pages'),'is_guest'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('donation_pages')."` ADD `is_guest` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT '0'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('donation_pages'),'not_show_money'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('donation_pages')."` ADD `not_show_money` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT '0'");
+}
+
+$this->database()->query("ALTER TABLE  `".Phpfox::getT('donation_pages')."` CHANGE `quanlity`  `quanlity` DECIMAL(10,2) NOT NULL");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_guest_donation')." (
+  `donation_id` int(11) NOT NULL AUTO_INCREMENT,
+  `guest_name` varchar(100) NOT NULL,
+  `page_id` int(11) NOT NULL,
+  `quanlity` decimal(10,2) NOT NULL,
+  `purchased` tinyint(1) NOT NULL DEFAULT '1',
+  `approve` tinyint(1) NOT NULL DEFAULT '1',
+  `time_stamp` int(11) NOT NULL,
+  `module_id` varchar(75) DEFAULT NULL,
+  `not_show_name` tinyint(1) NOT NULL DEFAULT '0',
+  `not_show_money` tinyint(1) NOT NULL DEFAULT '0',
+  `is_guest` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`donation_id`)
+) ENGINE=MyISAM   AUTO_INCREMENT=1 ;");
+
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_image')."(
+  `image_id` int(20) NOT NULL AUTO_INCREMENT,
+  `server_id` tinyint(3) NOT NULL,
+  `image_path` varchar(255) DEFAULT NULL,
+  `time_stamp` int(10) DEFAULT NULL,
+  `is_default` tinyint(1) DEFAULT NULL,
+  `type` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`image_id`)
+) ENGINE=MyISAM   AUTO_INCREMENT=1 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_invoice')." (
+  `invoice_id` int(10) unsigned NOT NULL auto_increment,
+  `invoice_content` mediumtext NOT NULL,
+  `time_stamp` int(10) unsigned NOT NULL,
+  `time_stamp_paid` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`invoice_id`)
+) ENGINE=MyISAM   AUTO_INCREMENT=1 ;");
+
+$this->database()->query("INSERT IGNORE INTO ".Phpfox::getT('donation_image'). "(`image_id`, `server_id`, `image_path`, `is_default`, `type`) VALUES
+(1, 0, 'module/donation/static/image/donate_button.gif', 1, 'default_button'),
+(2, 0, '', 0, 'admin_button');");
+;]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>3.03p3</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_gateway_setting')." (
+  `setting_id` int(11) NOT NULL AUTO_INCREMENT,
+  `type_id` varchar(255) NOT NULL,
+  `data` mediumtext NOT NULL,
+  `time_stamp` int(11) NOT NULL,
+  PRIMARY KEY (`setting_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;");
+
+if(!$this->database()->isField(Phpfox::getT('donation_pages'),'currency'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('donation_pages')."` ADD `currency` VARCHAR(10) NOT NULL DEFAULT 'USD'");
+}
+
+if(!$this->database()->isField(Phpfox::getT('donation_guest_donation'),'currency'))
+{
+  $this->database()->query("ALTER TABLE  `".Phpfox::getT('donation_guest_donation')."` ADD `currency` VARCHAR(10) NOT NULL DEFAULT 'USD'");
+}]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.01</version>
+			<install_code><![CDATA[$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_gateway_log'). "(
+  `log_id` int(1) NOT NULL AUTO_INCREMENT,
+  `gateway_id` varchar(75) DEFAULT NULL,
+  `log_data` mediumtext NOT NULL,
+  `ip_address` varchar(15) DEFAULT NULL,
+  `time_stamp` int(10) NOT NULL,
+  PRIMARY KEY (`log_id`)
+) ENGINE=InnoDB   AUTO_INCREMENT=3 ;");
+
+$this->database()->query("CREATE TABLE IF NOT EXISTS ".Phpfox::getT('donation_gatewayapi'). " (
+  `gateway_id` varchar(45) NOT NULL DEFAULT '',
+  `title` varchar(150) NOT NULL,
+  `description` mediumtext,
+  `is_active` tinyint(1) DEFAULT NULL,
+  `is_test` tinyint(2) DEFAULT NULL,
+  `setting` mediumtext,
+  PRIMARY KEY (`gateway_id`)
+) ENGINE=InnoDB ;");
+
+$this->database()->query("
+INSERT IGNORE INTO ".Phpfox::getT('donation_gatewayapi'). " (`gateway_id`, `title`, `description`, `is_active`, `is_test`, `setting`) VALUES
+('paypal', 'Paypal', 'Add some information about Paypal gateway', 1, 1, NULL);
+");]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+		<install>
+			<version>4.02</version>
+			<install_code><![CDATA[$this->database()->update(Phpfox::getT('feed'), ['parent_user_id' => 0], ['type_id' => 'donation']);
+$this->database()->delete(Phpfox::getT('language_phrase'), ['var_name' => 'are_you_sure', 'text_default' => 'Are you sure want to remove this donor?']);]]></install_code>
+			<uninstall_code></uninstall_code>
+		</install>
+	</installs>
+	<modules>
+		<module_id>donation</module_id>
+	</modules>
+</product>
